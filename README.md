@@ -20,6 +20,7 @@
 - 以現代化靜態網站取代既有官網，改善可維護性、載入效能與手機體驗
 - 保留既有商務資訊與產品結構精神，視覺與資訊架構可依討論結果調整
 - 以 **ProCleaning** 為版型起點，替換成集集電的品牌、文案與產品內容
+- 整合 **LINE 官方帳號**（加好友／諮詢按鈕導向，不需自建後端）
 - 全站以靜態檔案部署，不需常駐應用伺服器
 
 ---
@@ -33,6 +34,7 @@
 | 主題  | **ProCleaning**        | 起點範本，見下方說明                                          |
 | 樣式  | Tailwind CSS + DaisyUI | 依 ProCleaning 既有堆疊；主色與元件可再自訂                        |
 | 內容  | Markdown / MDX         | ProCleaning 支援 content collections（服務、團隊、blog 等）    |
+| 聯絡／LINE | **按鈕導向 LINE 官方帳號** | 一期不做 Messaging API；見「LINE 官方帳號整合計畫」 |
 | 多語系 | 待定（見下方討論）              | 對應繁中 / 英 / 日（theme 預設未必有 i18n，需另行規劃）                |
 | 部署  | 待定                     | 靜態主機、GitHub Pages、Cloudflare Pages、Netlify、Vercel 等 |
 
@@ -134,6 +136,7 @@ npm create astro@latest . -- --template anastasiiaxfr/ProCleaning
 | 樣式底層 | Tailwind CSS + DaisyUI |
 | Theme 選型列表 | [Astro Themes · Free](https://astro.build/themes/2/?search=&price%5B%5D=free) |
 | **商品型錄** | **要做**（細節見 Q2～Q2-3：上架欄位、圖檔等） |
+| **LINE 官方帳號** | **要整合**（一期採 **按鈕／連結導向**，見下方「LINE 整合計畫」與 Q19-1） |
 
 ---
 
@@ -150,7 +153,9 @@ npm create astro@latest . -- --template anastasiiaxfr/ProCleaning
 - [ ] 市場服務
 - [ ] 合作廠商／夥伴（見 Q4-2）
 - [ ] 聯絡我們
+- [ ] LINE 加好友／諮詢按鈕（**已規劃**；連結與擺放位置見 Q19-1）
 - [ ] 其他：____________
+
 
 **答案／補充：**  
 > 
@@ -497,18 +502,54 @@ npm create astro@latest . -- --template anastasiiaxfr/ProCleaning
 
 ### 5. 功能與技術（用客戶語言）
 
-**Q19. 「聯絡我們」希望如何收到訊息？**
+**Q19. 「聯絡我們」希望如何收到訊息？**（可複選；與 LINE 可並存）
 
 - [ ] A. 點了直接開 Email（mailto）
 - [ ] B. 網頁表單，寄到指定信箱：____________
-- [ ] C. 表單 + 通知 LINE／其他：____________
-- [ ] D. 只要顯示電話、地址、Email 即可
+- [ ] C. **LINE 加好友／開啟聊天**（按鈕導向；見 Q19-1，**計畫內定會做**）
+- [ ] D. 表單送出後自動通知到 LINE／系統（**不在一期**；需後端／API，另行報價）
+- [ ] E. 只要顯示電話、地址、Email 即可（另是否仍放 LINE 按鈕：是 / 否）
 
 **答案／補充：**  
+> 
 
+
+**Q19-1. LINE 官方帳號：連結與擺放**（整合方式：**按鈕導向**，不加 Messaging API）
+
+> 技術做法見本檔「LINE 官方帳號整合計畫」。客戶只需提供連結／ID／QR。
+
+**是否有 LINE 官方帳號？**
+
+- [ ] 有，且會上官網
+- [ ] 有，但一期不上
+- [ ] 沒有／之後再建
+- [ ] 不確定
+
+**請提供（有則填）：**
+
+| 項目 | 填寫 |
+|------|------|
+| 官方帳號 Basic ID（`@xxxxx`） | ____________ |
+| 加好友連結（後台複製最準） | ____________ |
+| QR Code 圖檔可否提供 | 是 / 否；交付日：____ |
+| 按鈕文案偏好 | 例：LINE 諮詢 / 加入官方帳號 / 其他：____ |
+
+**希望按鈕／入口出現在哪？**（可複選）
+
+- [ ] 全站頁尾
+- [ ] 全站固定側邊／浮動鈕（FAB）
+- [ ] 聯絡我們頁
+- [ ] 首頁 CTA 區
+- [ ] 產品／型錄頁「詢價」
+- [ ] 僅手機版顯示
+- [ ] 其他：____________
+
+**答案／補充：**  
+> 
 
 
 **Q20. 是否需要「加到手機主畫面／離線」這類 App 感功能（PWA）？**
+
 
 - [ ] A. 不需要（一般官網即可）
 - [ ] B. 需要
@@ -725,6 +766,7 @@ npm create astro@latest . -- --template anastasiiaxfr/ProCleaning
 | [ ] | 品牌素材與交付日（Q5）已記錄 |
 | [ ] | 語系（Q11–Q12）已勾選 |
 | [ ] | 聯絡方式與網域窗口（Q19、Q24–Q25）已記錄 |
+| [ ] | **LINE 官方帳號（Q19-1）**：@ID 或加好友連結、按鈕位置已記錄 |
 | [ ] | 上線日（Q35）與驗收人（Q36）已記錄 |
 | [ ] | 無法當場決定的題號：____________  約再確認日：____________ |
 
@@ -739,16 +781,64 @@ npm create astro@latest . -- --template anastasiiaxfr/ProCleaning
 
 | 階段 | 內容 | 備註 |
 |------|------|------|
-| 0 | 客戶訪談定案（含型錄欄位／圖檔、實績專欄、合作廠商） | 填完 Q2、Q4 系列再動工結構 |
-| 1 | 以 **ProCleaning** 初始化、換品牌與導覽、首頁／關於／聯絡 | |
+| 0 | 客戶訪談定案（含型錄、實績、合作廠商、**LINE 連結**） | 填完 Q2、Q4、**Q19-1** 再動工 |
+| 1 | 以 **ProCleaning** 初始化、換品牌與導覽、首頁／關於／聯絡 | **含 LINE 按鈕元件與入口配置** |
 | 2 | 商品型錄 content 結構 + 工程實績照片專欄 +（若有）合作廠商 | 依訪談表上架 |
 | 3 | 多語系（若需要）+ 型錄補齊深度 | 依範圍裁切 |
 | 4 | SEO、轉址、部署上線 | |
 
-
 ---
 
-## 本機開發（初始化後）
+## LINE 官方帳號整合計畫
+
+### 一期做法（已訂）
+
+採 **按鈕／連結導向**，不做 LINE Login、不做 Messaging API Webhook。
+
+| 項目 | 說明 |
+|------|------|
+| 行為 | 使用者點按鈕 → 開啟 LINE 加好友或聊天 |
+| 連結 | 優先使用 [LINE Official Account Manager](https://manager.line.biz/) 後台複製的「加好友」連結；或 `https://line.me/R/ti/p/@BasicID` |
+| 實作 | 靜態 `<a href="...">`（可加 `target="_blank"`、`rel="noopener noreferrer"`）；可選 QR 圖放 `public/` |
+| 部署影響 | **無需後端**，符合靜態站 |
+| 設定集中 | 建議單一設定（如 site config 的 `lineUrl` / `lineId`），全站按鈕共用，避免到處硬編 |
+
+### 建議放置位置（訪談 Q19-1 可勾；預設草案）
+
+1. **聯絡我們**頁：與電話、Email 並列  
+2. **全站頁尾**常駐入口  
+3. （可選）浮動「LINE 諮詢」鈕、產品頁「詢價」副 CTA  
+
+### 客戶需提供
+
+- [ ] Basic ID（`@xxxxx`）或完整加好友 URL  
+- [ ]（可選）官方 QR Code 圖  
+- [ ] 按鈕顯示文案（繁中；多語系時另備英／日）
+
+### 明確不在一期
+
+| 項目 | 原因 |
+|------|------|
+| Messaging API／聊天機器人 | 需 Channel、伺服器或 Serverless 收 Webhook |
+| 表單送出自動推播到 LINE | 需後端或第三方 + 金鑰，不可寫在前端 |
+| LINE Login 會員 | 與靜態型錄官網非必要 |
+
+若之後要做「官網表單 → 通知業務 LINE」，另開階段與報價。
+
+### 實作備註（開發時）
+
+```html
+<!-- 概念：連結以客戶提供為準 -->
+<a href="https://line.me/R/ti/p/@EXAMPLE"
+   target="_blank"
+   rel="noopener noreferrer">
+  LINE 諮詢
+</a>
+```
+
+- 手機通常喚醒 LINE App；桌機多半開 line.me 網頁  
+- 文案寫清楚用途（諮詢／加好友），避免只有圖示  
+-（可選）點擊可接 GA／分析事件，方便追蹤 CTA 成效  
 
 > 下列指令以 [ProCleaning](https://github.com/anastasiiaxfr/ProCleaning) 的 README 為準；專案實際初始化後若有差異再改此節。
 
@@ -816,6 +906,11 @@ ccelect/
 - Astro 官方文件：[https://docs.astro.build/](https://docs.astro.build/)
 - Astro 部署指南：[https://docs.astro.build/en/guides/deploy/](https://docs.astro.build/en/guides/deploy/)
 
+### LINE
+
+- LINE Official Account Manager（取加好友連結／QR）：[https://manager.line.biz/](https://manager.line.biz/)
+- 本專案整合方式：按鈕導向（見「LINE 官方帳號整合計畫」）
+
 ---
 
 ## 貢獻與授權
@@ -835,6 +930,7 @@ ccelect/
 | 2026-08-04 | 起點主題訂為 **ProCleaning**；選型列表為 [Astro Themes Free](https://astro.build/themes/2/?search=&price%5B%5D=free) | 尚未 clone／create |
 | 2026-08-04 | 「待討論」改為客戶訪談問卷（Q1–Q37 問題＋答案欄）                                                                             | 可現場勾選填寫         |
 | 2026-08-04 | 型錄確定要做；問卷強化：圖檔／上架欄位、合作廠商名單、工程實績照片專欄                                                          | Q2-1～2-3、Q4-1、Q4-2 |
+| 2026-08-04 | **LINE 官方帳號**納入計畫：一期按鈕／連結導向；訪談 Q19-1；另立整合計畫章節 | 不做 Messaging API |
 |            |                                                                                                          |                 |
 
 
