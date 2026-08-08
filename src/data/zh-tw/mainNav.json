@@ -1,0 +1,52 @@
+{
+  "logoSource": "/src/assets/images/jetstream-logo.svg",
+  "logoAlternateSource": "/src/assets/images/jetstream-dark-theme.svg",
+  "logoAlt": "集集電工業",
+  "themeToggle": true,
+  "navData": [
+    {
+      "name": "業務項目",
+      "path": "/pricing/",
+      "children": []
+    },
+    {
+      "name": "技術訊息",
+      "path": "/blog/",
+      "children": []
+    },
+    {
+      "name": "關於我們",
+      "path": "/about/",
+      "children": []
+    },
+    {
+      "name": "聯絡我們",
+      "path": "/contact/",
+      "children": []
+    }
+  ],
+  "buttonSections": [
+    {
+      "_component": "building-blocks/core-elements/button",
+      "text": "搜尋",
+      "hideText": true,
+      "link": "/search/",
+      "iconName": "magnifying-glass",
+      "iconColor": "default",
+      "iconPosition": "before",
+      "variant": "secondary",
+      "size": "md"
+    },
+    {
+      "_component": "building-blocks/core-elements/button",
+      "text": "聯絡我們",
+      "hideText": false,
+      "link": "/contact/",
+      "iconName": "arrow-right",
+      "iconColor": "default",
+      "iconPosition": "after",
+      "variant": "primary",
+      "size": "md"
+    }
+  ]
+}

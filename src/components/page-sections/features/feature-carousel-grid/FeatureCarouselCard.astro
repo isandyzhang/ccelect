@@ -1,0 +1,131 @@
+---
+import Heading from "@core-elements/heading/Heading.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
+import Text from "@core-elements/text/Text.astro";
+import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
+import Card from "@wrappers/card/Card.astro";
+
+const {
+  backgroundColor = "base",
+  border = true,
+  eyebrowIcon = {},
+  eyebrowText = "",
+  heading = "",
+  text = "",
+  columnSpan,
+  rowSpan,
+  _component,
+  useDefaultEditableBinding = false,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<BentoBoxGridItem
+  columnSpan={columnSpan}
+  rowSpan={rowSpan}
+>
+  <Card
+    class:list={["feature-carousel-card"]}
+    paddingHorizontal="lg"
+    paddingVertical="lg"
+    rounded
+    border={border}
+    backgroundColor={backgroundColor}
+    {...htmlAttributes}
+  >
+    {
+      eyebrowIcon?.name && (
+        <Icon
+          {...eyebrowIcon}
+          alignmentHorizontal="start"
+        />
+      )
+    }
+    {
+      eyebrowText && (
+        <SimpleText
+          class="eyebrow"
+          data-prop="eyebrowText"
+        >
+          {eyebrowText}
+        </SimpleText>
+      )
+    }
+    {
+      heading && (
+        <Heading
+          class="feature-slide-heading"
+          level="h3"
+          size="md"
+          alignmentHorizontal="start"
+          data-prop="heading"
+        >
+          {heading}
+        </Heading>
+      )
+    }
+    {
+      text && (
+        <Text
+          class="feature-slide-text"
+          alignmentHorizontal="start"
+          data-prop="text"
+          text={text}
+        />
+      )
+    }
+  </Card>
+</BentoBoxGridItem>
+
+<style is:global>
+  @layer page-sections {
+    .feature-carousel-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 200px;
+
+      &.border {
+        border: 1px solid transparent;
+        box-shadow: 0px 10px 15px -3px #1118271a;
+      }
+
+      &.border::before {
+        --angle: 0deg;
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        margin: -2px;
+        border-radius: calc(var(--radius-md) + 2px);
+        background: conic-gradient(
+          from var(--angle),
+          var(--color-bg-brand),
+          var(--color-bg-inverse),
+          var(--color-bg-brand)
+        );
+        animation: rotate-angle 2s linear infinite;
+      }
+
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+      }
+
+      .eyebrow {
+        margin: 0;
+        font-size: var(--font-size-sm);
+      }
+
+      .feature-slide-heading {
+        margin: 0;
+      }
+
+      .feature-slide-text {
+        margin: 0;
+      }
+    }
+  }
+</style>

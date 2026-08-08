@@ -1,0 +1,82 @@
+id:
+  type: text
+  comment: Unique identifier for the section which can be used as an anchor link.
+heading:
+  type: text
+  comment: Headline for the CTA.
+subtext:
+  type: markdown
+  comment: Supporting copy beneath the headline.
+  options:
+    blockquote: false
+    bold: true
+    format:
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+imageSource:
+  type: image
+  comment: Image displayed alongside the CTA content.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageAlt:
+  type: text
+  comment: Alt text describing the CTA image.
+buttonSections:
+  type: array
+  comment: Buttons for calls-to-action.
+  options:
+    structures: _structures.buttonSections
+reverse:
+  type: switch
+  comment: Reverse the order so buttons appear before the copy.
+colorScheme:
+  type: select
+  comment: Color scheme theme for the CTA.
+  options:
+    values:
+      - id: inherit
+        name: Inherit
+      - id: light
+        name: Light
+      - id: dark
+        name: Dark
+backgroundColor:
+  type: select
+  comment: Background color for the CTA.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: highlight-grid
+        name: Highlight Grid
+      - id: surface-linear-gradient
+        name: Surface Linear Gradient
+      - id: brand-linear-gradient-reverse
+        name: Brand Linear Gradient Reverse
+      - id: brand-linear-gradient
+        name: Brand Linear Gradient
+      - id: brand-linear-gradient-muted
+        name: Brand Linear Gradient Muted
+      - id: highlight-linear-gradient
+        name: Highlight Linear Gradient
+      - id: highlight-radial-gradient
+        name: Highlight Radial Gradient
+rounded:
+  type: switch
+  comment: Add rounded corners to the CTA section.

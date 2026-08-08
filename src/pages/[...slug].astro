@@ -1,0 +1,44 @@
+---
+import Page from "@layouts/Page.astro";
+import { parseLocaleId, pageSlugParam, defaultLocale } from "@i18n/config";
+import { getCollection, render, type CollectionEntry } from "astro:content";
+
+export interface Props {
+  page: CollectionEntry<"pages">;
+  locale: import("@i18n/config").Locale;
+  pageKey: string;
+}
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+
+  return pages
+    .filter((page) => {
+      const { rest } = parseLocaleId(page.id);
+      if (rest === "blog" || rest.endsWith("/blog")) return false;
+      if (rest === "404" || rest.endsWith("/404")) return false;
+      return true;
+    })
+    .map((page) => {
+      const { locale, rest } = parseLocaleId(page.id);
+      const pageKey = rest.replace(/\/index$/, "").replace(/^index$/, "");
+      const slug = pageSlugParam(locale, rest);
+
+      return {
+        params: { slug },
+        props: { page, locale, pageKey },
+      };
+    });
+}
+
+const { page, locale = defaultLocale, pageKey = "" } = Astro.props;
+const { Content } = await render(page);
+---
+
+<Page
+  frontmatter={page.data}
+  locale={locale}
+  pageKey={pageKey}
+>
+  <Content />
+</Page>

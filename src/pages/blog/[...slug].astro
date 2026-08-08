@@ -1,0 +1,251 @@
+---
+import Button from "@core-elements/button/Button.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
+import type { Locale } from "@i18n/config";
+import { blogListHref, blogPostHref, defaultLocale, parseLocaleId } from "@i18n/config";
+import { dateLocale, t } from "@i18n/ui";
+import Page from "@layouts/Page.astro";
+import CustomSection from "@page-sections/builders/custom-section/CustomSection.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+import Card from "@wrappers/card/Card.astro";
+import Split from "@wrappers/split/Split.astro";
+import { getCollection, render, type CollectionEntry } from "astro:content";
+
+const buildingBlocksImports = import.meta.glob("../../components/building-blocks/**/*.astro", {
+  eager: true,
+});
+const pageSectionsImports = import.meta.glob("../../components/page-sections/**/*.astro", {
+  eager: true,
+});
+const componentImports = { ...buildingBlocksImports, ...pageSectionsImports };
+const mdxComponents: Record<string, any> = {};
+Object.entries(componentImports).forEach(([path, module]) => {
+  const fileName = path.split("/").pop()?.replace(".astro", "") || "";
+  mdxComponents[fileName] = (module as any).default;
+});
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  const locale: Locale = "zh-tw";
+  return posts
+    .filter((post) => parseLocaleId(post.id).locale === locale)
+    .map((post: CollectionEntry<"blog">) => {
+      const { rest } = parseLocaleId(post.id);
+      return {
+        params: { slug: rest },
+        props: { post, locale },
+      };
+    });
+}
+
+interface Props {
+  post: CollectionEntry<"blog">;
+  locale: Locale;
+}
+
+const { post, locale = "zh-tw" as Locale } = Astro.props;
+const { Content } = await render(post);
+const date = post.data.date.toLocaleDateString(dateLocale(locale), {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+
+const allPosts = await getCollection("blog");
+const recentPosts = allPosts
+  .filter((p) => parseLocaleId(p.id).locale === locale && p.id !== post.id)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
+
+const team = await getCollection("team");
+const author = team.find((m: any) => m.data.uuid === post.data.author);
+const article = {
+  publishedTime: post.data.date.toISOString(),
+  author: author?.data.name,
+  tags: post.data.tag ? [post.data.tag] : undefined,
+};
+const listHref = blogListHref(locale);
+---
+
+<Page
+  title={post.data.title}
+  description={post.data.description}
+  keywords={post.data.keywords}
+  image={post.data.image}
+  type="article"
+  article={article}
+  locale={locale}
+  pageKey="blog"
+>
+  <CustomSection
+    class:list={["hero-feature"]}
+    maxContentWidth="2xl"
+    paddingHorizontal="lg"
+    paddingVertical="4xl"
+    colorScheme="inherit"
+    backgroundColor="highlight-grid"
+    contentBackground="true"
+    verticalOffset={{ size: "nav-height", direction: "back" }}
+  >
+    <div class="breadcrumb">
+      <a class="blog-link" href={listHref}>{listHref.includes("/en/") ? "Technical Notes" : listHref.includes("/ja/") ? "技術情報" : "技術訊息"}</a>
+      {
+        post.data.tag && (
+          <>
+            <span> / </span>
+            <span class="tag">{post.data.tag}</span>
+          </>
+        )
+      }
+    </div>
+    <Heading level="h1" size="2xl" text={post.data.title.replace(/<[^>]*>/g, "")} editable={false} />
+    <SimpleText size="md" class="description" editable={false}>
+      {post.data.description}
+    </SimpleText>
+    <SimpleText size="sm" class="author" editable={false}>
+      {author?.data.name || ""} · {date}
+    </SimpleText>
+    {
+      post.data.image && (
+        <Image
+          source={post.data.image}
+          alt={post.data.image_alt}
+          class="hero-image"
+          aspectRatio="landscape"
+          rounded={true}
+          editable={false}
+          style="margin-top: var(--spacing-2xl); max-height: 420px; width: 100%;"
+        />
+      )
+    }
+  </CustomSection>
+
+  <CustomSection maxContentWidth="2xl" paddingHorizontal="lg" paddingVertical="2xl" colorScheme="light" backgroundColor="base">
+    <Split columnsDesktop="2fr 1fr" gap="2xl" alignItems="start">
+      <div slot="first">
+        <div class="prose">
+          <Content components={mdxComponents} />
+        </div>
+        <div class="share-section" style="margin-top: var(--spacing-2xl);">
+          <SimpleText size="md" style="font-weight: var(--font-weight-bold); margin: 0;" editable={false}>
+            {t(locale, "shareArticle")}
+          </SimpleText>
+          <ButtonGroup style="margin-top: var(--spacing-md);">
+            <Button
+              link={`mailto:?subject=${encodeURIComponent(post.data.title)}&body=${encodeURIComponent(String(Astro.url))}`}
+              variant="secondary"
+              size="lg"
+              iconName="envelope"
+              hideText={true}
+              text={t(locale, "shareEmail")}
+              style="border-radius: var(--radius-full);"
+            />
+            <Button
+              variant="secondary"
+              size="lg"
+              iconName="link"
+              hideText={true}
+              text={t(locale, "copyLink")}
+              class="copy-link-btn"
+              style="border-radius: var(--radius-full);"
+              data-original-text={t(locale, "copyLink")}
+            />
+          </ButtonGroup>
+        </div>
+      </div>
+      <div class="sidebar" slot="second">
+        <SimpleText
+          size="sm"
+          style="border-bottom: 2px solid var(--color-border-subtle); color: var(--color-text-brand); font-weight: var(--font-weight-bold);"
+          editable={false}
+        >
+          {t(locale, "latestNews")}
+        </SimpleText>
+        {
+          recentPosts.map((recentPost) => {
+            const { rest } = parseLocaleId(recentPost.id);
+            const postDate = recentPost.data.date.toLocaleDateString(dateLocale(locale), {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            });
+            return (
+              <Card
+                link={blogPostHref(locale, rest)}
+                rounded={true}
+                border={false}
+                backgroundColor="accent"
+                paddingVertical="sm"
+                paddingHorizontal="sm"
+                editable={false}
+                style="margin-top: var(--spacing-md);"
+              >
+                {recentPost.data.image && (
+                  <Image
+                    source={recentPost.data.image}
+                    alt={recentPost.data.image_alt}
+                    aspectRatio="landscape"
+                    editable={false}
+                    rounded={true}
+                    style="max-height: 150px; width: 100%;"
+                  />
+                )}
+                <SimpleText
+                  size="xs"
+                  style="color: var(--color-text-brand); font-weight: var(--font-weight-bold); margin-top: var(--spacing-sm);"
+                  editable={false}
+                >
+                  {recentPost.data.tag}
+                </SimpleText>
+                <Heading
+                  level="h3"
+                  size="xs"
+                  style="margin-top: var(--spacing-xs);"
+                  editable={false}
+                  text={recentPost.data.title.replace(/<[^>]*>/g, "")}
+                />
+                <SimpleText size="sm" style="color: var(--color-text-muted); font-weight: var(--font-weight-bold);" editable={false}>
+                  {postDate}
+                </SimpleText>
+              </Card>
+            );
+          })
+        }
+      </div>
+    </Split>
+  </CustomSection>
+</Page>
+
+<script>
+  document.querySelectorAll(".copy-link-btn").forEach((btn) => {
+    btn.addEventListener("click", async (e) => {
+      e.preventDefault();
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+      } catch {}
+    });
+  });
+</script>
+
+<style is:global>
+  @layer page-sections {
+    .hero-feature .breadcrumb {
+      color: var(--color-text-brand);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-md);
+    }
+    .hero-feature .blog-link {
+      text-decoration: none;
+      color: var(--color-text-brand);
+    }
+    .prose {
+      max-width: 65ch;
+      line-height: 1.7;
+    }
+    .prose :where(h2, h3) {
+      margin-top: 1.5em;
+    }
+  }
+</style>

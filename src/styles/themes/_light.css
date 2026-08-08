@@ -1,0 +1,59 @@
+/* Light theme — 集集電 */
+[data-theme="light"] {
+  color-scheme: light;
+
+  --color-brand: var(--palette-brand);
+  --color-brand-muted: var(--palette-brand-bright);
+  --color-brand-subtle: var(--purple-2);
+  --color-brand-on: var(--palette-brand-bg-dark);
+
+  --color-accent: var(--palette-accent);
+  --color-earth: var(--palette-earth);
+
+  --color-text: var(--palette-text);
+  --color-text-strong: var(--palette-text);
+  --color-text-muted: var(--palette-text-muted);
+  --color-text-on-muted: var(--palette-text);
+  --color-text-on-brand: var(--gray-0);
+  --color-text-inverse: var(--gray-0);
+  --color-link: var(--palette-brand);
+  --color-link-hover: var(--palette-brand-bright);
+  --color-text-brand: var(--color-brand);
+
+  --color-bg: var(--palette-page);
+  --color-bg-primary: var(--palette-brand-deep);
+  --color-bg-surface: var(--gray-0);
+  --color-bg-muted: var(--purple-1);
+  --color-bg-accent: var(--purple-0);
+  --color-bg-highlight: var(--purple-3);
+  --color-bg-brand: var(--color-brand);
+  --color-bg-brand-muted: var(--purple-2);
+  /* 深色區塊用工業深藍；閃電黃留給 CTA 強調，避免大面積黃底白字 */
+  --color-bg-inverse: var(--palette-brand-bg-dark);
+  --color-bg-inverse-highlight: var(--palette-brand-bright);
+  --color-bg-inverse-muted: var(--palette-brand-deep);
+
+  --color-border: var(--palette-border);
+  --color-border-inputs: var(--gray-5);
+  --color-border-strong: var(--palette-brand);
+  --color-border-subtle: var(--gray-2);
+
+  --color-state-hover: var(--color-bg);
+  --color-state-active: color-mix(in srgb, var(--palette-brand) 8%, transparent);
+  --color-overlay: color-mix(in srgb, var(--palette-page) 85%, transparent);
+  --color-shadow: color-mix(in srgb, var(--palette-brand-bg-dark) 12%, transparent);
+
+  --color-focus-ring: color-mix(in srgb, var(--palette-brand) 40%, transparent);
+  --color-disabled-bg: var(--gray-4);
+
+  --color-danger: #dc2626;
+  --color-danger-hover: #b91c1c;
+  --color-danger-bg-subtle: #fef2f2;
+  --color-danger-border-subtle: #fca5a5;
+  --color-info: var(--palette-brand-bright);
+  --color-info-bg-subtle: var(--purple-0);
+  --color-info-border-subtle: var(--purple-3);
+  --color-success: var(--palette-earth);
+  --color-success-bg-subtle: color-mix(in srgb, var(--palette-earth) 18%, white);
+  --color-error: var(--color-danger);
+}

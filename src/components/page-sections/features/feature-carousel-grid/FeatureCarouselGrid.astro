@@ -1,0 +1,172 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
+import Text from "@core-elements/text/Text.astro";
+import FeatureCarouselSlide from "@features/feature-carousel-grid/FeatureCarouselSlide.astro";
+import Carousel from "@wrappers/carousel/Carousel.astro";
+
+const {
+  id = "",
+  eyebrowIcon = {},
+  eyebrowText = "",
+  heading = "",
+  subtext = "",
+  slides = [],
+  maxContentWidth = "3xl",
+  paddingVertical = "4xl",
+  colorScheme = "inherit",
+  backgroundColor,
+  backgroundColorHeight = "header",
+  contentBackground = false,
+  verticalOffset = {},
+  rounded = false,
+  class: className,
+  _component,
+  useDefaultEditableBinding = false,
+  ...htmlAttributes
+} = Astro.props;
+
+// Create mobile slides: flatten all non-decorative cards from all slides
+const mobileSlides = slides.flatMap(
+  (slide: any) =>
+    slide.cards
+      ?.filter((card: any) => !card.decorative)
+      .map((card: any) => ({
+        cards: [card],
+      })) || []
+);
+---
+
+<CustomSection
+  class:list={["feature-carousel-grid", className]}
+  maxContentWidth=""
+  paddingHorizontal=""
+  paddingVertical=""
+  rounded={rounded}
+  colorScheme={colorScheme}
+  contentBackground={contentBackground}
+  rounded={rounded}
+  verticalOffset={verticalOffset}
+  id={id}
+  backgroundColor={backgroundColorHeight === "full" ? backgroundColor : ""}
+  {...htmlAttributes}
+>
+  <CustomSection
+    class:list={["feature-carousel-grid-content", className]}
+    maxContentWidth="lg"
+    paddingHorizontal=""
+    paddingVertical={paddingVertical}
+    rounded={rounded}
+    colorScheme={colorScheme}
+    verticalOffset={verticalOffset}
+    contentBackground={backgroundColorHeight === "header" ? contentBackground : false}
+    backgroundColor={backgroundColorHeight === "header" ? backgroundColor : ""}
+  >
+    <Icon
+      {...eyebrowIcon}
+      alignmentHorizontal="center"
+    />
+    <SimpleText
+      alignmentHorizontal="center"
+      class="eyebrow"
+      data-prop="eyebrowText"
+    >
+      {eyebrowText}
+    </SimpleText>
+    <Heading
+      level="h2"
+      size="lg"
+      alignmentHorizontal="center"
+      data-prop="heading"
+      text={heading}
+    />
+    <Text
+      class="feature-carousel-grid-subtext"
+      alignmentHorizontal="center"
+      data-prop="subtext"
+      text={subtext}
+    />
+  </CustomSection>
+
+  <CustomSection
+    class:list={["feature-carousel-grid-container"]}
+    maxContentWidth={maxContentWidth}
+    paddingHorizontal="xs"
+    paddingVertical={paddingVertical}
+    rounded={false}
+    colorScheme={colorScheme}
+    backgroundColor=""
+  >
+    {/* Desktop carousel - show full grid slides */}
+    <Carousel
+      label="Feature carousel grid"
+      slideWidthPercent={100}
+      minSlideWidth={0}
+      autoPlay={false}
+      autoScroll={false}
+      data-children-prop="slides"
+      class="desktop-carousel"
+    >
+      {
+        slides.map((slide: any, index: number) => (
+          <FeatureCarouselSlide
+            aria-label={`Slide ${index + 1} of ${slides.length}`}
+            data-editable="array-item"
+            data-id="page-sections/features/feature-carousel-grid/feature-carousel-slide"
+            {...slide}
+            class="feature-carousel-grid-slide"
+          />
+        ))
+      }
+    </Carousel>
+
+    {/* Mobile carousel - show one card per slide, no decorative */}
+    <Carousel
+      label="Feature carousel grid"
+      slideWidthPercent={100}
+      minSlideWidth={0}
+      autoPlay={false}
+      autoScroll={false}
+      class="mobile-carousel"
+    >
+      {
+        mobileSlides.map((slide: any, index: number) => (
+          <FeatureCarouselSlide
+            {...slide}
+            class="feature-carousel-grid-slide-mobile"
+          />
+        ))
+      }
+    </Carousel>
+  </CustomSection>
+</CustomSection>
+
+<style is:global>
+  @layer page-sections {
+    .feature-carousel-grid-content .content {
+      padding-bottom: var(--spacing-md);
+    }
+    .feature-carousel-grid-container {
+      .content {
+        padding-top: 0;
+      }
+      .desktop-carousel {
+        display: none;
+
+        @media (width >= 768px) {
+          display: block;
+        }
+      }
+
+      .mobile-carousel {
+        display: block;
+
+        @media (width >= 768px) {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

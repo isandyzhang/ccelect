@@ -1,0 +1,34 @@
+label: Testimonial Section
+icon: format_quote
+description: Section displaying a customer testimonial with author information.
+value:
+  _component: page-sections/people/testimonial-section
+  id:
+  text: Testimonial text placeholder.
+  authorName: Author
+  authorDescription: Author Role
+  authorImage: https://placehold.co/80x80
+  maxContentWidth: xl
+  paddingVertical: sm
+  colorScheme: inherit
+  backgroundColor: surface
+  background:
+    type: image
+    positionVertical: top
+    positionHorizontal: center
+    priority: false
+    imageSource: ""
+    imageAlt: ""
+    videoSource: null
+    overlay: 0
+preview:
+  text:
+    - Testimonial Section
+  subtext:
+    - key: authorName
+  icon: format_quote
+picker_preview:
+  text: Testimonial Section
+  subtext: Section with customer testimonial and author details.
+_inputs_from_glob:
+  - /src/components/page-sections/people/testimonial-section/testimonial-section.cloudcannon.inputs.yml

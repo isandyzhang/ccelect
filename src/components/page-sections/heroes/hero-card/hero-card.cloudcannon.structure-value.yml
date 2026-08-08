@@ -1,0 +1,18 @@
+label: Hero Card
+icon: add
+description: Description for Hero Card component.
+value:
+  _component: page-sections/heroes/hero-card
+  id:
+  eyebrowIcon: {}
+  heading: "Card Hero Heading"
+  subtext: "Card Hero Subtext"
+  card: {}
+  maxContentWidth: "2xl"
+  paddingVertical: "4xl"
+  colorScheme: light
+  backgroundColor: base
+  verticalOffset: {}
+  rounded: false
+_inputs_from_glob:
+  - /src/components/page-sections/heroes/hero-card/hero-card.cloudcannon.inputs.yml

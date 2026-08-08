@@ -1,0 +1,20 @@
+label: Tabbed Content
+icon: view_sidebar
+description: Description for Tabbed Content component.
+value:
+  _component: page-sections/info-blocks/tabbed-content
+  id:
+  eyebrowIcon: {}
+  eyebrowText: Eyebrow placeholder
+  heading: "Tabbed Content Heading"
+  subtext: Subtext placeholder
+  tabs: []
+  navigationPosition: top
+  maxContentWidth: "2xl"
+  paddingVertical: "4xl"
+  colorScheme: "light"
+  backgroundColor: "base"
+  verticalOffset: {}
+  rounded: false
+_inputs_from_glob:
+  - /src/components/page-sections/info-blocks/tabbed-content/tabbed-content.cloudcannon.inputs.yml

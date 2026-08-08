@@ -1,0 +1,64 @@
+---
+import Button from "@components/building-blocks/core-elements/button/Button.astro";
+import Icon from "@components/building-blocks/core-elements/icon/Icon.astro";
+import Page from "@layouts/Page.astro";
+import "@page-sections/ctas/cta-center/CtaCenter.astro";
+import "@components/building-blocks/core-elements/heading/Heading.astro";
+import { getEntry } from "astro:content";
+import { defaultLocale } from "@i18n/config";
+
+const pageData = await getEntry("pages", `${defaultLocale}/404`);
+const page = pageData?.data || {
+  title: "找不到頁面",
+  description: "您所尋找的頁面不存在。",
+  cta: {
+    heading: "找不到頁面",
+    subtext: "此頁面不存在或連結已失效。",
+    buttonSections: [{ text: "返回首頁", link: "/", variant: "ghost", iconName: "arrow-long-left", iconPosition: "before", hideText: false, size: "md" }],
+    eyebrowIcon: { name: "exclamation-triangle", size: "2xl", color: "default", background: false },
+  },
+};
+---
+
+<Page
+  title={page.title}
+  description={page.description}
+  locale={defaultLocale}
+  pageKey="404"
+>
+  <section
+    class="custom-section cta-center cta-center-rounded"
+    style="--max-width: var(--content-width-xl)"
+  >
+    <div
+      class="outer-content"
+      data-theme="dark"
+    >
+      <div class="background bg-highlight-radial-gradient"></div>
+      <div class="content pad-x-md pad-y-4xl max-width-xl">
+        <Icon {...(page.cta?.eyebrowIcon || {})} />
+        <h1 class="heading">
+          <span class="heading-inner size-xl align-center">
+            <span class="heading-text" set:html={page.cta?.heading} />
+          </span>
+        </h1>
+        <div class="text">
+          <div class="text-inner align-center">
+            <p set:html={page.cta?.subtext} />
+          </div>
+        </div>
+        <div class="button-group buttons">
+          <div class="button-group__items row align-center">
+            {
+              (page.cta?.buttonSections || []).map((button: any) => (
+                <span class="button">
+                  <Button {...button} />
+                </span>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Page>

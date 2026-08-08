@@ -1,0 +1,57 @@
+---
+import type { Locale } from "@i18n/config";
+import { defaultLocale, localeLabels, locales, localizedHref } from "@i18n/config";
+
+interface Props {
+  locale?: Locale;
+  /** Page key without locale: '', 'about', 'pricing', 'blog', ... */
+  pageKey?: string;
+}
+
+const { locale = defaultLocale, pageKey = "" } = Astro.props as Props;
+---
+
+<nav
+  class="lang-switcher"
+  aria-label="Language"
+>
+  {
+    locales.map((loc) => (
+      <a
+        href={localizedHref(loc, pageKey)}
+        class:list={[{ "is-active": loc === locale }]}
+        hreflang={loc === "zh-tw" ? "zh-Hant" : loc}
+        lang={loc === "zh-tw" ? "zh-Hant" : loc}
+      >
+        {localeLabels[loc]}
+      </a>
+    ))
+  }
+</nav>
+
+<style>
+  .lang-switcher {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.5rem;
+    font-size: var(--font-size-sm);
+    pointer-events: auto;
+  }
+
+  .lang-switcher a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    padding: 0.15rem 0.35rem;
+    border-radius: 0.25rem;
+  }
+
+  .lang-switcher a:hover {
+    color: var(--color-brand);
+  }
+
+  .lang-switcher a.is-active {
+    color: var(--color-brand);
+    font-weight: var(--font-weight-semibold);
+  }
+</style>

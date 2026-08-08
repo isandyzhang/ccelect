@@ -1,0 +1,73 @@
+@keyframes grow-out {
+  0% {
+    opacity: 0.3;
+    transform: translateY(-5%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes grow-out-centered {
+  0% {
+    opacity: 0.3;
+    transform: translateX(-50%) translateY(-5%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0%);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-angle {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* Used for the rotate-angle keyframe - must be at root */
+@property --angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: "<angle>";
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
+@keyframes flatten {
+  to {
+    transform: perspective(500px) rotateX(0deg);
+  }
+}
+
+@keyframes slide-mask {
+  from {
+    x: -100%;
+  }
+
+  to {
+    x: 100%;
+  }
+}

@@ -1,0 +1,59 @@
+/* Dark theme — 集集電 */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-brand: var(--palette-brand-bright);
+  --color-brand-muted: var(--purple-4);
+  --color-brand-subtle: var(--purple-9);
+  --color-brand-on: var(--purple-2);
+
+  --color-accent: var(--palette-accent);
+  --color-earth: var(--palette-earth);
+
+  --color-text: #e8edf4;
+  --color-text-strong: #ffffff;
+  --color-text-muted: #a8b3c4;
+  --color-text-on-muted: #ffffff;
+  --color-text-on-brand: #ffffff;
+  --color-text-inverse: #ffffff;
+  --color-link: var(--purple-3);
+  --color-link-hover: var(--palette-brand-bright);
+  --color-text-brand: var(--color-brand);
+
+  --color-bg: #0b1220;
+  --color-bg-primary: var(--palette-brand);
+  --color-bg-surface: var(--purple-10);
+  --color-bg-muted: var(--purple-9);
+  --color-bg-accent: var(--purple-11);
+  --color-bg-highlight: var(--purple-7);
+  --color-bg-brand: var(--color-brand);
+  --color-bg-brand-muted: var(--purple-8);
+  /* 反色區仍用深藍，閃電黃由 --color-accent 提供（黃底勿配白字） */
+  --color-bg-inverse: var(--palette-brand-bg-dark);
+  --color-bg-inverse-highlight: var(--palette-brand-bright);
+  --color-bg-inverse-muted: var(--palette-brand-deep);
+
+  --color-border: var(--purple-8);
+  --color-border-inputs: var(--gray-7);
+  --color-border-strong: var(--palette-brand-bright);
+  --color-border-subtle: var(--purple-10);
+
+  --color-state-hover: color-mix(in srgb, white 4%, transparent);
+  --color-state-active: color-mix(in srgb, white 8%, transparent);
+  --color-overlay: color-mix(in srgb, black 70%, transparent);
+  --color-shadow: color-mix(in srgb, black 40%, transparent);
+
+  --color-focus-ring: color-mix(in srgb, var(--palette-brand-bright) 45%, transparent);
+  --color-disabled-bg: var(--gray-7);
+
+  --color-danger: #f87171;
+  --color-danger-hover: #ef4444;
+  --color-danger-bg-subtle: color-mix(in srgb, #ef4444 12%, transparent);
+  --color-danger-border-subtle: color-mix(in srgb, #ef4444 40%, transparent);
+  --color-info: var(--palette-brand-bright);
+  --color-info-bg-subtle: color-mix(in srgb, var(--palette-brand-bright) 12%, transparent);
+  --color-info-border-subtle: color-mix(in srgb, var(--palette-brand-bright) 40%, transparent);
+  --color-success: var(--palette-earth);
+  --color-success-bg-subtle: color-mix(in srgb, var(--palette-earth) 15%, transparent);
+  --color-error: var(--color-danger);
+}

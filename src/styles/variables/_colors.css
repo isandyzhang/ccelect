@@ -1,0 +1,60 @@
+/* Palette scales — 集集電品牌色（docs/brand-colors.md）
+   保留 --purple-* / --pink-* 變數名以相容模板元件；數值改為藍系與強調色。 */
+:where(:root) {
+  /* 冷灰藍（對齊主要文字 / 邊框 / 頁面底） */
+  --gray-0: #ffffff;
+  --gray-1: #f4f7fb;
+  --gray-2: #e8edf4;
+  --gray-3: #d9e2ee;
+  --gray-4: #c5cedb;
+  --gray-5: #9aa3b2;
+  --gray-6: #7a8494;
+  --gray-7: #5e6878;
+  --gray-8: #4a5363;
+  --gray-9: #2d3645;
+  --gray-10: #172234;
+  --gray-11: #0f1620;
+  --gray-12: #0a0e14;
+
+  /* 強調階（原 pink）— 閃電黃 #FCF002 及鄰近色 */
+  --pink-0: #fffef0;
+  --pink-1: #fffce0;
+  --pink-2: #fff9c2;
+  --pink-3: #fef49a;
+  --pink-4: #fef066;
+  --pink-5: #fced33;
+  --pink-6: #fcf002;
+  --pink-7: #d4c800;
+  --pink-8: #a89e00;
+  --pink-9: #7a7400;
+  --pink-10: #524e00;
+  --pink-11: #2e2c00;
+  --pink-12: #1a1900;
+
+  /* 品牌藍階（原 purple）— 電力藍 / 科技藍 / 工業深藍 */
+  --purple-0: #f0f6fc;
+  --purple-1: #e3eef9;
+  --purple-2: #d0e2f4;
+  --purple-3: #a8c8e8;
+  --purple-4: #6ba3d4;
+  --purple-5: #2596d1; /* 科技藍 */
+  --purple-6: #265ca6; /* 電力藍 · 企業主色 */
+  --purple-7: #2b3a95; /* 深靛藍 */
+  --purple-8: #193773; /* 工業深藍 */
+  --purple-9: #142c5c;
+  --purple-10: #0f2147;
+  --purple-11: #0a1630;
+  --purple-12: #050b18;
+
+  /* 命名對照（語意別名，供文件與後續擴充） */
+  --palette-brand: #265ca6;
+  --palette-brand-deep: #2b3a95;
+  --palette-brand-bright: #2596d1;
+  --palette-brand-bg-dark: #193773;
+  --palette-accent: #fcf002;
+  --palette-earth: #a6cc36;
+  --palette-page: #f4f7fb;
+  --palette-text: #172234;
+  --palette-text-muted: #5e6878;
+  --palette-border: #d9e2ee;
+}

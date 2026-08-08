@@ -1,0 +1,155 @@
+---
+import RenderBlock from "@components/utils/renderBlock.astro";
+import Button from "@core-elements/button/Button.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Pagination from "@core-elements/pagination/Pagination.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
+import type { Locale } from "@i18n/config";
+import { blogListHref, blogPostHref, defaultLocale, parseLocaleId } from "@i18n/config";
+import { dateLocale, t } from "@i18n/ui";
+import Page from "@layouts/Page.astro";
+import CustomSection from "@page-sections/builders/custom-section/CustomSection.astro";
+import BentoBoxGrid from "@wrappers/bento-box-grid/BentoBoxGrid.astro";
+import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+import Card from "@wrappers/card/Card.astro";
+import { getCollection } from "astro:content";
+
+
+export async function getStaticPaths({ paginate }) {
+  const locale: Locale = "zh-tw";
+  const blogPosts = (await getCollection("blog"))
+    .filter((p) => parseLocaleId(p.id).locale === locale)
+    .sort((a: any, b: any) => b.data.date.getTime() - a.data.date.getTime());
+
+  const allTags = Array.from(
+    new Set(blogPosts.map((post: any) => post.data.tag).filter(Boolean))
+  ).sort() as string[];
+
+  return allTags.flatMap((tag: string) => {
+    const filteredPosts = blogPosts.filter((post: any) => post.data.tag === tag);
+    return paginate(filteredPosts, {
+      pageSize: 8,
+      params: { tag },
+      props: { selectedTag: tag, allTags, locale },
+    });
+  });
+}
+
+const { page } = Astro.props;
+const selectedTag = Astro.props.selectedTag;
+const allTags = Astro.props.allTags || [];
+const locale: Locale = Astro.props.locale || "zh-tw";
+
+let blogPage: any;
+try {
+  const pages = await getCollection("pages");
+  blogPage = pages.find((p: any) => p.id === `${locale}/blog`);
+} catch {}
+
+const pageTitle = blogPage?.data?.title ?? t(locale, "recentPosts");
+const pageDescription = blogPage?.data?.description ?? "";
+const heroSections = blogPage?.data?.heroSections ?? [];
+const ctaSections = blogPage?.data?.ctaSections ?? [];
+const team = await getCollection("team");
+const listBase = blogListHref(locale);
+---
+
+<Page title={pageTitle} description={pageDescription} locale={locale} pageKey="blog">
+  <RenderBlock contentSections={heroSections} />
+  <CustomSection
+    id="posts"
+    maxContentWidth="2xl"
+    paddingHorizontal="lg"
+    paddingVertical="2xl"
+    colorScheme="light"
+    backgroundColor="highlight-grid"
+  >
+    <ButtonGroup>
+      <Button
+        link={`${listBase}#posts`}
+        variant={selectedTag === "all" ? "secondary" : "base"}
+        text={t(locale, "allTags")}
+        editable={false}
+      />
+      {
+        allTags.map((tag: string) => (
+          <Button
+            link={`${listBase}tag/${encodeURIComponent(tag)}/#posts`}
+            variant={selectedTag === tag ? "secondary" : "base"}
+            text={tag}
+            editable={false}
+          />
+        ))
+      }
+    </ButtonGroup>
+    <BentoBoxGrid
+      gap="sm"
+      layout="start"
+      minItemWidth="320"
+      maxItemWidth="400"
+      style="margin-top: var(--spacing-2xl)"
+      editable={false}
+      class="blog-grid"
+    >
+      {
+        page.data.map((post: any, index: number) => {
+          const { rest } = parseLocaleId(post.id);
+          const pubDate = post.data.date.toLocaleDateString(dateLocale(locale), {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          });
+          const columnSpan = index === 0 ? 7 : index === 1 ? 5 : 4;
+          const author = team.find((m: any) => m.data.uuid === post.data.author);
+          return (
+            <BentoBoxGridItem columnSpan={columnSpan} editable={false}>
+              <Card
+                link={blogPostHref(locale, rest)}
+                rounded={true}
+                border={false}
+                backgroundColor="accent"
+                paddingVertical="md"
+                paddingHorizontal="md"
+                editable={false}
+              >
+                {post.data.image && (
+                  <Image
+                    source={post.data.image}
+                    alt={post.data.image_alt}
+                    aspectRatio="landscape"
+                    editable={false}
+                    rounded={true}
+                    style="max-height: 230px; width: 100%;"
+                  />
+                )}
+                <SimpleText
+                  size="sm"
+                  style="color: var(--color-text-brand); font-weight: var(--font-weight-bold);"
+                  editable={false}
+                >
+                  {post.data.tag}
+                </SimpleText>
+                <Heading
+                  level="h3"
+                  size="md"
+                  editable={false}
+                  text={post.data.title.replace(/<[^>]*>/g, "")}
+                />
+                <SimpleText size="md" editable={false}>
+                  {post.data.description}
+                </SimpleText>
+                <SimpleText size="sm" style="color: var(--color-text-muted); font-weight: bold;" editable={false}>
+                  {author?.data.name || ""} | {pubDate}
+                </SimpleText>
+              </Card>
+            </BentoBoxGridItem>
+          );
+        })
+      }
+    </BentoBoxGrid>
+    <Pagination page={page} showArrows={true} anchor="posts" style="margin-top: var(--spacing-2xl);" />
+  </CustomSection>
+  <RenderBlock contentSections={ctaSections} />
+</Page>

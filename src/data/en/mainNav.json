@@ -1,0 +1,52 @@
+{
+  "logoSource": "/src/assets/images/jetstream-logo.svg",
+  "logoAlternateSource": "/src/assets/images/jetstream-dark-theme.svg",
+  "logoAlt": "CCElect",
+  "themeToggle": true,
+  "navData": [
+    {
+      "name": "Capabilities",
+      "path": "/en/pricing/",
+      "children": []
+    },
+    {
+      "name": "Technical Notes",
+      "path": "/en/blog/",
+      "children": []
+    },
+    {
+      "name": "About",
+      "path": "/en/about/",
+      "children": []
+    },
+    {
+      "name": "Contact",
+      "path": "/en/contact/",
+      "children": []
+    }
+  ],
+  "buttonSections": [
+    {
+      "_component": "building-blocks/core-elements/button",
+      "text": "Search",
+      "hideText": true,
+      "link": "/en/search/",
+      "iconName": "magnifying-glass",
+      "iconColor": "default",
+      "iconPosition": "before",
+      "variant": "secondary",
+      "size": "md"
+    },
+    {
+      "_component": "building-blocks/core-elements/button",
+      "text": "Contact us",
+      "hideText": false,
+      "link": "/en/contact/",
+      "iconName": "arrow-right",
+      "iconColor": "default",
+      "iconPosition": "after",
+      "variant": "primary",
+      "size": "md"
+    }
+  ]
+}

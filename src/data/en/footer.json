@@ -1,0 +1,14 @@
+{
+  "logoSource": "/src/assets/images/jetstream-logo.svg",
+  "logoAlternateSource": "/src/assets/images/jetstream-dark-theme.svg",
+  "logoAlt": "CCElect",
+  "links": [
+    { "name": "Home", "path": "/en/" },
+    { "name": "Capabilities", "path": "/en/pricing/" },
+    { "name": "Technical Notes", "path": "/en/blog/" },
+    { "name": "About", "path": "/en/about/" },
+    { "name": "Contact", "path": "/en/contact/" }
+  ],
+  "socials": [],
+  "footerText": "© CCElect Industrial Co., Ltd. All rights reserved."
+}
