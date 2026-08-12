@@ -9,49 +9,201 @@ interface Props {
 }
 
 const { locale = defaultLocale, pageKey = "" } = Astro.props as Props;
+
+const localeNames: Record<Locale, string> = {
+  "zh-tw": "繁體中文",
+  en: "English",
+  ja: "日本語",
+};
 ---
 
 <nav
   class="lang-switcher"
   aria-label="Language"
 >
-  {
-    locales.map((loc) => (
-      <a
-        href={localizedHref(loc, pageKey)}
-        class:list={[{ "is-active": loc === locale }]}
-        hreflang={loc === "zh-tw" ? "zh-Hant" : loc}
-        lang={loc === "zh-tw" ? "zh-Hant" : loc}
+  <details>
+    <summary aria-label={`Language: ${localeNames[locale]}`}>
+      <svg
+        class="language-icon"
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
       >
-        {localeLabels[loc]}
-      </a>
-    ))
-  }
+        <circle
+          cx="12"
+          cy="12"
+          r="9"
+        ></circle>
+        <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path>
+      </svg>
+      <span>{localeLabels[locale]}</span>
+      <svg
+        class="chevron"
+        aria-hidden="true"
+        viewBox="0 0 20 20"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="m6 8 4 4 4-4"></path>
+      </svg>
+    </summary>
+
+    <div class="language-menu">
+      {
+        locales.map((loc) => (
+          <a
+            href={localizedHref(loc, pageKey)}
+            class:list={[{ "is-active": loc === locale }]}
+            aria-current={loc === locale ? "page" : undefined}
+            hreflang={loc === "zh-tw" ? "zh-Hant" : loc}
+            lang={loc === "zh-tw" ? "zh-Hant" : loc}
+          >
+            <span
+              class="check"
+              aria-hidden="true"
+            >
+              {loc === locale ? "✓" : ""}
+            </span>
+            <span>{localeNames[loc]}</span>
+          </a>
+        ))
+      }
+    </div>
+  </details>
 </nav>
+
+<script>
+  document.querySelectorAll<HTMLDetailsElement>(".lang-switcher details").forEach((details) => {
+    document.addEventListener("click", (event) => {
+      if (!details.contains(event.target as Node)) details.removeAttribute("open");
+    });
+
+    details.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        details.removeAttribute("open");
+        details.querySelector("summary")?.focus();
+      }
+    });
+  });
+</script>
 
 <style>
   .lang-switcher {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.35rem 0.5rem;
+    flex: 0 0 auto;
     font-size: var(--font-size-sm);
     pointer-events: auto;
+    white-space: nowrap;
   }
 
-  .lang-switcher a {
-    color: var(--color-text-muted);
-    text-decoration: none;
-    padding: 0.15rem 0.35rem;
-    border-radius: 0.25rem;
+  .lang-switcher details {
+    position: relative;
   }
 
-  .lang-switcher a:hover {
+  .lang-switcher summary {
+    align-items: center;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-strong);
+    cursor: pointer;
+    display: flex;
+    gap: 0.4rem;
+    line-height: 1;
+    list-style: none;
+    padding: 0.55rem 0.65rem;
+    transition:
+      border-color 150ms ease,
+      color 150ms ease;
+    user-select: none;
+  }
+
+  .lang-switcher summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .lang-switcher summary:hover,
+  .lang-switcher details[open] summary {
+    border-color: var(--color-brand);
     color: var(--color-brand);
   }
 
-  .lang-switcher a.is-active {
+  .lang-switcher summary:focus-visible {
+    box-shadow: 0 0 0 3px var(--color-focus-ring);
+    outline: none;
+  }
+
+  .language-icon {
+    height: 1.05rem;
+    width: 1.05rem;
+  }
+
+  .chevron {
+    height: 0.9rem;
+    transition: transform 150ms ease;
+    width: 0.9rem;
+  }
+
+  details[open] .chevron {
+    transform: rotate(180deg);
+  }
+
+  .language-menu {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 12px 32px var(--color-shadow);
+    display: grid;
+    gap: 0.2rem;
+    inset-inline-end: 0;
+    min-width: 10rem;
+    padding: 0.35rem;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    z-index: var(--layer-3);
+  }
+
+  .language-menu a {
+    align-items: center;
+    border-radius: var(--radius-xs);
+    color: var(--color-text);
+    display: grid;
+    gap: 0.45rem;
+    grid-template-columns: 1rem 1fr;
+    padding: 0.6rem 0.65rem;
+    text-decoration: none;
+    transition:
+      background-color 150ms ease,
+      color 150ms ease;
+  }
+
+  .language-menu a:hover {
+    background: var(--color-bg-muted);
+    color: var(--color-brand);
+  }
+
+  .language-menu a.is-active {
+    background: var(--color-bg-brand-muted);
     color: var(--color-brand);
     font-weight: var(--font-weight-semibold);
+  }
+
+  .language-menu a:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-focus-ring) inset;
+    outline: none;
+  }
+
+  .check {
+    text-align: center;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lang-switcher summary,
+    .chevron,
+    .language-menu a {
+      transition: none;
+    }
   }
 </style>
