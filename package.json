@@ -3,13 +3,7 @@
   "type": "module",
   "version": "0.1.0",
   "description": "集集電工業官方網站（Astro / Jetstream 起點）",
-  "keywords": [
-    "astro",
-    "ccelect",
-    "ssg",
-    "astro-theme",
-    "astrojs"
-  ],
+  "keywords": ["astro", "ccelect", "ssg", "astro-theme", "astrojs"],
   "author": "CCElect",
   "license": "MIT",
   "scripts": {

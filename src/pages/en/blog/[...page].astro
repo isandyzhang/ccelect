@@ -6,7 +6,7 @@ import Image from "@core-elements/image/Image.astro";
 import Pagination from "@core-elements/pagination/Pagination.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import type { Locale } from "@i18n/config";
-import { blogListHref, blogPostHref, defaultLocale, parseLocaleId } from "@i18n/config";
+import { blogListHref, blogPostHref, parseLocaleId } from "@i18n/config";
 import { dateLocale, t } from "@i18n/ui";
 import Page from "@layouts/Page.astro";
 import CustomSection from "@page-sections/builders/custom-section/CustomSection.astro";
@@ -15,7 +15,6 @@ import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import Card from "@wrappers/card/Card.astro";
 import { getCollection } from "astro:content";
-
 
 export async function getStaticPaths({ paginate }) {
   const locale: Locale = "en";
@@ -39,8 +38,10 @@ const allTags = Astro.props.allTags || [];
 const locale: Locale = Astro.props.locale || "en";
 
 let blogPage: any;
+
 try {
   const pages = await getCollection("pages");
+
   blogPage = pages.find((p: any) => p.id === `${locale}/blog`);
 } catch {}
 
@@ -109,7 +110,10 @@ const listBase = blogListHref(locale);
               const author = team.find((m: any) => m.data.uuid === post.data.author);
 
               return (
-                <BentoBoxGridItem columnSpan={columnSpan} editable={false}>
+                <BentoBoxGridItem
+                  columnSpan={columnSpan}
+                  editable={false}
+                >
                   <Card
                     link={blogPostHref(locale, rest)}
                     rounded={true}
@@ -143,7 +147,11 @@ const listBase = blogListHref(locale);
                       editable={false}
                       text={post.data.title.replace(/<[^>]*>/g, "")}
                     />
-                    <SimpleText size="md" style="margin-top: 0;" editable={false}>
+                    <SimpleText
+                      size="md"
+                      style="margin-top: 0;"
+                      editable={false}
+                    >
                       {post.data.description}
                     </SimpleText>
                     <SimpleText
@@ -166,7 +174,11 @@ const listBase = blogListHref(locale);
           />
         </>
       ) : (
-        <SimpleText alignmentHorizontal="center" style="margin-top: var(--spacing-2xl);" editable={false}>
+        <SimpleText
+          alignmentHorizontal="center"
+          style="margin-top: var(--spacing-2xl);"
+          editable={false}
+        >
           {t(locale, "noPosts")}
         </SimpleText>
       )

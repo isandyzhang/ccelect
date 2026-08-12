@@ -28,6 +28,7 @@
   --color-bg-highlight: var(--purple-3);
   --color-bg-brand: var(--color-brand);
   --color-bg-brand-muted: var(--purple-2);
+
   /* 深色區塊用工業深藍；閃電黃留給 CTA 強調，避免大面積黃底白字 */
   --color-bg-inverse: var(--palette-brand-bg-dark);
   --color-bg-inverse-highlight: var(--palette-brand-bright);

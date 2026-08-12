@@ -2,7 +2,8 @@
 
 :where(:root) {
   --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", sans-serif;
-  --font-headings: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", sans-serif;
+  --font-headings:
+    "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", sans-serif;
   --font-mono: var(--font-mono-face, "JetBrains Mono"), ui-monospace, monospace;
 
   --font-size-xs: 0.75rem;

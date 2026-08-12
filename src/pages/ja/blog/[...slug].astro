@@ -4,7 +4,7 @@ import Heading from "@core-elements/heading/Heading.astro";
 import Image from "@core-elements/image/Image.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import type { Locale } from "@i18n/config";
-import { blogListHref, blogPostHref, defaultLocale, parseLocaleId } from "@i18n/config";
+import { blogListHref, blogPostHref, parseLocaleId } from "@i18n/config";
 import { dateLocale, t } from "@i18n/ui";
 import Page from "@layouts/Page.astro";
 import CustomSection from "@page-sections/builders/custom-section/CustomSection.astro";
@@ -21,18 +21,22 @@ const pageSectionsImports = import.meta.glob("../../../components/page-sections/
 });
 const componentImports = { ...buildingBlocksImports, ...pageSectionsImports };
 const mdxComponents: Record<string, any> = {};
+
 Object.entries(componentImports).forEach(([path, module]) => {
   const fileName = path.split("/").pop()?.replace(".astro", "") || "";
+
   mdxComponents[fileName] = (module as any).default;
 });
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
   const locale: Locale = "ja";
+
   return posts
     .filter((post) => parseLocaleId(post.id).locale === locale)
     .map((post: CollectionEntry<"blog">) => {
       const { rest } = parseLocaleId(post.id);
+
       return {
         params: { slug: rest },
         props: { post, locale },
@@ -90,7 +94,17 @@ const listHref = blogListHref(locale);
     verticalOffset={{ size: "nav-height", direction: "back" }}
   >
     <div class="breadcrumb">
-      <a class="blog-link" href={listHref}>{listHref.includes("/en/") ? "Technical Notes" : listHref.includes("/ja/") ? "技術情報" : "技術訊息"}</a>
+      <a
+        class="blog-link"
+        href={listHref}
+        >{
+          listHref.includes("/en/")
+            ? "Technical Notes"
+            : listHref.includes("/ja/")
+              ? "技術情報"
+              : "技術訊息"
+        }</a
+      >
       {
         post.data.tag && (
           <>
@@ -100,11 +114,24 @@ const listHref = blogListHref(locale);
         )
       }
     </div>
-    <Heading level="h1" size="2xl" text={post.data.title.replace(/<[^>]*>/g, "")} editable={false} />
-    <SimpleText size="md" class="description" editable={false}>
+    <Heading
+      level="h1"
+      size="2xl"
+      text={post.data.title.replace(/<[^>]*>/g, "")}
+      editable={false}
+    />
+    <SimpleText
+      size="md"
+      class="description"
+      editable={false}
+    >
       {post.data.description}
     </SimpleText>
-    <SimpleText size="sm" class="author" editable={false}>
+    <SimpleText
+      size="sm"
+      class="author"
+      editable={false}
+    >
       {author?.data.name || ""} · {date}
     </SimpleText>
     {
@@ -122,14 +149,31 @@ const listHref = blogListHref(locale);
     }
   </CustomSection>
 
-  <CustomSection maxContentWidth="2xl" paddingHorizontal="lg" paddingVertical="2xl" colorScheme="light" backgroundColor="base">
-    <Split columnsDesktop="2fr 1fr" gap="2xl" alignItems="start">
+  <CustomSection
+    maxContentWidth="2xl"
+    paddingHorizontal="lg"
+    paddingVertical="2xl"
+    colorScheme="light"
+    backgroundColor="base"
+  >
+    <Split
+      columnsDesktop="2fr 1fr"
+      gap="2xl"
+      alignItems="start"
+    >
       <div slot="first">
         <div class="prose">
           <Content components={mdxComponents} />
         </div>
-        <div class="share-section" style="margin-top: var(--spacing-2xl);">
-          <SimpleText size="md" style="font-weight: var(--font-weight-bold); margin: 0;" editable={false}>
+        <div
+          class="share-section"
+          style="margin-top: var(--spacing-2xl);"
+        >
+          <SimpleText
+            size="md"
+            style="font-weight: var(--font-weight-bold); margin: 0;"
+            editable={false}
+          >
             {t(locale, "shareArticle")}
           </SimpleText>
           <ButtonGroup style="margin-top: var(--spacing-md);">
@@ -155,7 +199,10 @@ const listHref = blogListHref(locale);
           </ButtonGroup>
         </div>
       </div>
-      <div class="sidebar" slot="second">
+      <div
+        class="sidebar"
+        slot="second"
+      >
         <SimpleText
           size="sm"
           style="border-bottom: 2px solid var(--color-border-subtle); color: var(--color-text-brand); font-weight: var(--font-weight-bold);"
@@ -171,6 +218,7 @@ const listHref = blogListHref(locale);
               month: "long",
               day: "numeric",
             });
+
             return (
               <Card
                 link={blogPostHref(locale, rest)}
@@ -206,7 +254,11 @@ const listHref = blogListHref(locale);
                   editable={false}
                   text={recentPost.data.title.replace(/<[^>]*>/g, "")}
                 />
-                <SimpleText size="sm" style="color: var(--color-text-muted); font-weight: var(--font-weight-bold);" editable={false}>
+                <SimpleText
+                  size="sm"
+                  style="color: var(--color-text-muted); font-weight: var(--font-weight-bold);"
+                  editable={false}
+                >
                   {postDate}
                 </SimpleText>
               </Card>

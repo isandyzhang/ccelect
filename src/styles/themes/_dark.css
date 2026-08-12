@@ -11,11 +11,11 @@
   --color-earth: var(--palette-earth);
 
   --color-text: #e8edf4;
-  --color-text-strong: #ffffff;
+  --color-text-strong: #fff;
   --color-text-muted: #a8b3c4;
-  --color-text-on-muted: #ffffff;
-  --color-text-on-brand: #ffffff;
-  --color-text-inverse: #ffffff;
+  --color-text-on-muted: #fff;
+  --color-text-on-brand: #fff;
+  --color-text-inverse: #fff;
   --color-link: var(--purple-3);
   --color-link-hover: var(--palette-brand-bright);
   --color-text-brand: var(--color-brand);
@@ -28,6 +28,7 @@
   --color-bg-highlight: var(--purple-7);
   --color-bg-brand: var(--color-brand);
   --color-bg-brand-muted: var(--purple-8);
+
   /* 反色區仍用深藍，閃電黃由 --color-accent 提供（黃底勿配白字） */
   --color-bg-inverse: var(--palette-brand-bg-dark);
   --color-bg-inverse-highlight: var(--palette-brand-bright);

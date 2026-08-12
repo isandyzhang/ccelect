@@ -14,7 +14,17 @@ const page = pageData?.data || {
   cta: {
     heading: "找不到頁面",
     subtext: "此頁面不存在或連結已失效。",
-    buttonSections: [{ text: "返回首頁", link: "/", variant: "ghost", iconName: "arrow-long-left", iconPosition: "before", hideText: false, size: "md" }],
+    buttonSections: [
+      {
+        text: "返回首頁",
+        link: "/",
+        variant: "ghost",
+        iconName: "arrow-long-left",
+        iconPosition: "before",
+        hideText: false,
+        size: "md",
+      },
+    ],
     eyebrowIcon: { name: "exclamation-triangle", size: "2xl", color: "default", background: false },
   },
 };
@@ -36,10 +46,13 @@ const page = pageData?.data || {
     >
       <div class="background bg-highlight-radial-gradient"></div>
       <div class="content pad-x-md pad-y-4xl max-width-xl">
-        <Icon {...(page.cta?.eyebrowIcon || {})} />
+        <Icon {...page.cta?.eyebrowIcon || {}} />
         <h1 class="heading">
           <span class="heading-inner size-xl align-center">
-            <span class="heading-text" set:html={page.cta?.heading} />
+            <span
+              class="heading-text"
+              set:html={page.cta?.heading}
+            />
           </span>
         </h1>
         <div class="text">

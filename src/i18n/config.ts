@@ -22,6 +22,7 @@ export function isLocale(value: string): value is Locale {
 /** Parse content id like `zh-tw/about` or `en/blog-post` */
 export function parseLocaleId(id: string): { locale: Locale; rest: string } {
   const parts = id.split("/");
+
   if (parts.length >= 2 && isLocale(parts[0])) {
     return { locale: parts[0], rest: parts.slice(1).join("/") };
   }
@@ -31,6 +32,7 @@ export function parseLocaleId(id: string): { locale: Locale; rest: string } {
 /** Page URL slug param for [...slug] catch-all (no leading slash) */
 export function pageSlugParam(locale: Locale, rest: string): string | undefined {
   const clean = rest.replace(/\/index$/, "").replace(/^index$/, "");
+
   if (locale === defaultLocale) {
     return clean.length ? clean : undefined;
   }
@@ -40,6 +42,7 @@ export function pageSlugParam(locale: Locale, rest: string): string | undefined 
 /** Public path for a page key like `about` or `` (home) */
 export function localizedHref(locale: Locale, pageKey: string): string {
   const key = pageKey.replace(/^\/+|\/+$/g, "");
+
   if (locale === defaultLocale) {
     return key ? `/${key}/` : "/";
   }
@@ -54,5 +57,6 @@ export function blogListHref(locale: Locale): string {
 /** Blog post href */
 export function blogPostHref(locale: Locale, postRest: string): string {
   const slug = postRest.replace(/\.mdx?$/, "");
+
   return locale === defaultLocale ? `/blog/${slug}/` : `/${locale}/blog/${slug}/`;
 }

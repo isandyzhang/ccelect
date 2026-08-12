@@ -2,7 +2,7 @@
    保留 --purple-* / --pink-* 變數名以相容模板元件；數值改為藍系與強調色。 */
 :where(:root) {
   /* 冷灰藍（對齊主要文字 / 邊框 / 頁面底） */
-  --gray-0: #ffffff;
+  --gray-0: #fff;
   --gray-1: #f4f7fb;
   --gray-2: #e8edf4;
   --gray-3: #d9e2ee;

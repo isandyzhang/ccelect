@@ -6,7 +6,7 @@ import Image from "@core-elements/image/Image.astro";
 import Pagination from "@core-elements/pagination/Pagination.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import type { Locale } from "@i18n/config";
-import { blogListHref, blogPostHref, defaultLocale, parseLocaleId } from "@i18n/config";
+import { blogListHref, blogPostHref, parseLocaleId } from "@i18n/config";
 import { dateLocale, t } from "@i18n/ui";
 import Page from "@layouts/Page.astro";
 import CustomSection from "@page-sections/builders/custom-section/CustomSection.astro";
@@ -15,7 +15,6 @@ import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import Card from "@wrappers/card/Card.astro";
 import { getCollection } from "astro:content";
-
 
 export async function getStaticPaths({ paginate }) {
   const locale: Locale = "zh-tw";
@@ -29,6 +28,7 @@ export async function getStaticPaths({ paginate }) {
 
   return allTags.flatMap((tag: string) => {
     const filteredPosts = blogPosts.filter((post: any) => post.data.tag === tag);
+
     return paginate(filteredPosts, {
       pageSize: 8,
       params: { tag },
@@ -43,8 +43,10 @@ const allTags = Astro.props.allTags || [];
 const locale: Locale = Astro.props.locale || "zh-tw";
 
 let blogPage: any;
+
 try {
   const pages = await getCollection("pages");
+
   blogPage = pages.find((p: any) => p.id === `${locale}/blog`);
 } catch {}
 
@@ -56,7 +58,12 @@ const team = await getCollection("team");
 const listBase = blogListHref(locale);
 ---
 
-<Page title={pageTitle} description={pageDescription} locale={locale} pageKey="blog">
+<Page
+  title={pageTitle}
+  description={pageDescription}
+  locale={locale}
+  pageKey="blog"
+>
   <RenderBlock contentSections={heroSections} />
   <CustomSection
     id="posts"
@@ -103,8 +110,12 @@ const listBase = blogListHref(locale);
           });
           const columnSpan = index === 0 ? 7 : index === 1 ? 5 : 4;
           const author = team.find((m: any) => m.data.uuid === post.data.author);
+
           return (
-            <BentoBoxGridItem columnSpan={columnSpan} editable={false}>
+            <BentoBoxGridItem
+              columnSpan={columnSpan}
+              editable={false}
+            >
               <Card
                 link={blogPostHref(locale, rest)}
                 rounded={true}
@@ -137,10 +148,17 @@ const listBase = blogListHref(locale);
                   editable={false}
                   text={post.data.title.replace(/<[^>]*>/g, "")}
                 />
-                <SimpleText size="md" editable={false}>
+                <SimpleText
+                  size="md"
+                  editable={false}
+                >
                   {post.data.description}
                 </SimpleText>
-                <SimpleText size="sm" style="color: var(--color-text-muted); font-weight: bold;" editable={false}>
+                <SimpleText
+                  size="sm"
+                  style="color: var(--color-text-muted); font-weight: bold;"
+                  editable={false}
+                >
                   {author?.data.name || ""} | {pubDate}
                 </SimpleText>
               </Card>
@@ -149,7 +167,12 @@ const listBase = blogListHref(locale);
         })
       }
     </BentoBoxGrid>
-    <Pagination page={page} showArrows={true} anchor="posts" style="margin-top: var(--spacing-2xl);" />
+    <Pagination
+      page={page}
+      showArrows={true}
+      anchor="posts"
+      style="margin-top: var(--spacing-2xl);"
+    />
   </CustomSection>
   <RenderBlock contentSections={ctaSections} />
 </Page>
