@@ -5,8 +5,18 @@
   "themeToggle": true,
   "navData": [
     {
-      "name": "事業内容",
-      "path": "/ja/pricing/",
+      "name": "ホーム",
+      "path": "/ja/",
+      "children": []
+    },
+    {
+      "name": "会社概要",
+      "path": "/ja/about/",
+      "children": []
+    },
+    {
+      "name": "商品",
+      "path": "/ja/products/",
       "children": []
     },
     {
@@ -15,8 +25,13 @@
       "children": []
     },
     {
-      "name": "会社概要",
-      "path": "/ja/about/",
+      "name": "施工実績",
+      "path": "/ja/projects/",
+      "children": []
+    },
+    {
+      "name": "市場サービス",
+      "path": "/ja/services/",
       "children": []
     },
     {

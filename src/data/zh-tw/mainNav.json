@@ -5,8 +5,18 @@
   "themeToggle": true,
   "navData": [
     {
-      "name": "業務項目",
-      "path": "/pricing/",
+      "name": "首頁",
+      "path": "/",
+      "children": []
+    },
+    {
+      "name": "關於我們",
+      "path": "/about/",
+      "children": []
+    },
+    {
+      "name": "商品櫥窗",
+      "path": "/products/",
       "children": []
     },
     {
@@ -15,8 +25,13 @@
       "children": []
     },
     {
-      "name": "關於我們",
-      "path": "/about/",
+      "name": "工程實績",
+      "path": "/projects/",
+      "children": []
+    },
+    {
+      "name": "市場服務",
+      "path": "/services/",
       "children": []
     },
     {

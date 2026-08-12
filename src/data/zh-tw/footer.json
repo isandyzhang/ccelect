@@ -4,9 +4,11 @@
   "logoAlt": "集集電工業",
   "links": [
     { "name": "首頁", "path": "/" },
-    { "name": "業務項目", "path": "/pricing/" },
-    { "name": "技術訊息", "path": "/blog/" },
     { "name": "關於我們", "path": "/about/" },
+    { "name": "商品櫥窗", "path": "/products/" },
+    { "name": "技術訊息", "path": "/blog/" },
+    { "name": "工程實績", "path": "/projects/" },
+    { "name": "市場服務", "path": "/services/" },
     { "name": "聯絡我們", "path": "/contact/" }
   ],
   "socials": [],

@@ -5,8 +5,18 @@
   "themeToggle": true,
   "navData": [
     {
-      "name": "Capabilities",
-      "path": "/en/pricing/",
+      "name": "Home",
+      "path": "/en/",
+      "children": []
+    },
+    {
+      "name": "About",
+      "path": "/en/about/",
+      "children": []
+    },
+    {
+      "name": "Products",
+      "path": "/en/products/",
       "children": []
     },
     {
@@ -15,8 +25,13 @@
       "children": []
     },
     {
-      "name": "About",
-      "path": "/en/about/",
+      "name": "Projects",
+      "path": "/en/projects/",
+      "children": []
+    },
+    {
+      "name": "Services",
+      "path": "/en/services/",
       "children": []
     },
     {

@@ -4,9 +4,11 @@
   "logoAlt": "CCElect",
   "links": [
     { "name": "Home", "path": "/en/" },
-    { "name": "Capabilities", "path": "/en/pricing/" },
-    { "name": "Technical Notes", "path": "/en/blog/" },
     { "name": "About", "path": "/en/about/" },
+    { "name": "Products", "path": "/en/products/" },
+    { "name": "Technical Notes", "path": "/en/blog/" },
+    { "name": "Projects", "path": "/en/projects/" },
+    { "name": "Services", "path": "/en/services/" },
     { "name": "Contact", "path": "/en/contact/" }
   ],
   "socials": [],
