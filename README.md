@@ -40,7 +40,7 @@
 
 ## 本機開發
 
-環境：Node.js **20+**（見 `.nvmrc`）、npm。
+環境：Node.js **22+**（見 `package.json` 的 `engines`）、npm。
 
 ```bash
 npm install
@@ -50,6 +50,137 @@ npm run preview   # 預覽建置結果
 npm run check     # ESLint + Stylelint + Prettier
 npm run check:fix # 自動修正可修項目
 ```
+
+Windows PowerShell 若因執行原則無法載入 `npm.ps1`，可改用 `npm.cmd`：
+
+```powershell
+npm.cmd run dev
+```
+
+---
+
+## 第一次寫 Astro：先理解這四件事
+
+### 1. `.astro` 元件的結構
+
+Astro 元件通常由「建置時程式、HTML 模板、樣式、瀏覽器腳本」組成：
+
+```astro
+---
+import Button from './Button.astro';
+
+const { title = '預設標題' } = Astro.props;
+---
+
+<section>
+  <h1>{title}</h1>
+  <Button text="聯絡我們" />
+</section>
+
+<style>
+  /* 預設只套用到目前元件 */
+  section {
+    padding: 2rem;
+  }
+</style>
+
+<script>
+  // 這一段才會在瀏覽器執行
+  console.log('page loaded');
+</script>
+```
+
+- `---` 之間的程式在建置或伺服器端執行。
+- `Astro.props` 是父元件傳入的資料。
+- `{condition && <Component />}` 用於條件顯示。
+- `{items.map(...)}` 用於重複渲染。
+- `<slot />` 是父元件放進子元件的內容。
+- Astro 元件預設輸出 HTML，不會自動把整套元件 JavaScript 傳到瀏覽器。
+
+### 2. 本專案以內容驅動頁面
+
+本專案不是每個網址都手寫一個 `.astro` 頁面。大部分頁面先在 Markdown frontmatter 描述內容，再由 Astro 選擇元件：
+
+```yaml
+---
+title: 首頁
+pageSections:
+  - _component: page-sections/heroes/hero-center
+    heading: 首頁標題
+    subtext: 首頁說明
+---
+```
+
+上面的 `_component` 會對應到：
+
+```text
+src/components/page-sections/heroes/hero-center/HeroCenter.astro
+```
+
+其他欄位會作為 props 傳入該元件，概念上等同：
+
+```astro
+<HeroCenter heading="首頁標題" subtext="首頁說明" />
+```
+
+### 3. 首頁從內容到 HTML 的流程
+
+```text
+src/content/pages/zh-tw/index.md
+        ↓
+src/content.config.ts 載入並驗證 pages collection
+        ↓
+src/pages/[...slug].astro 透過 getStaticPaths() 產生 URL
+        ↓
+src/layouts/Page.astro 加入主選單、Footer 與頁面區塊
+        ↓
+src/components/utils/MainComponent.astro
+        ↓
+src/components/utils/renderBlock.astro 根據 _component 尋找元件
+        ↓
+HeroCenter.astro、FeatureGrid.astro、CtaCenter.astro 等元件
+        ↓
+src/layouts/BaseLayout.astro 輸出完整 HTML
+```
+
+`getStaticPaths()` 在建置時決定動態路由，因此：
+
+```text
+src/content/pages/zh-tw/index.md  → /
+src/content/pages/zh-tw/about.md  → /about/
+src/content/pages/en/about.md     → /en/about/
+src/content/pages/ja/about.md     → /ja/about/
+```
+
+### 4. 修改需求時先找哪裡
+
+| 想修改的內容             | 優先查看的位置                                     |
+| ------------------------ | -------------------------------------------------- |
+| 頁面標題、文案、圖片     | `src/content/pages/{語系}/`                        |
+| Blog 文章                | `src/content/blog/{語系}/`                         |
+| 導覽列、Footer、SEO 資料 | `src/data/{語系}/`                                 |
+| 區塊 HTML、CSS、動畫     | `src/components/page-sections/`                    |
+| Button、Heading 等小元件 | `src/components/building-blocks/`                  |
+| 全站色彩、間距、字型     | `src/styles/variables/`、`src/styles/themes/`      |
+| URL 與多語路徑           | `src/pages/`、`src/i18n/`、`src/content.config.ts` |
+
+修改樣式時優先使用既有 CSS token，例如：
+
+```css
+.example {
+  color: var(--color-text-strong);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-sm);
+}
+```
+
+不要一開始就閱讀所有元件。第一次熟悉專案，建議依序追蹤：
+
+1. `src/content/pages/zh-tw/index.md`
+2. `src/pages/[...slug].astro`
+3. `src/layouts/Page.astro`
+4. `src/components/utils/renderBlock.astro`
+5. `src/components/page-sections/heroes/hero-center/HeroCenter.astro`
 
 ---
 
@@ -84,13 +215,19 @@ ccelect/
 ├── public/
 ├── src/
 │   ├── components/           # UI／導覽（含語言切換）
+│   │   ├── building-blocks/  # Button、Heading、Card 等基礎元件
+│   │   ├── navigation/       # 主選單、Footer、語言與主題切換
+│   │   ├── page-sections/    # Hero、Feature、CTA、FAQ 等完整區塊
+│   │   └── utils/            # 動態元件渲染與共用工具
 │   ├── content/
 │   │   ├── pages/{zh-tw,en,ja}/
 │   │   └── blog/{zh-tw,en,ja}/
 │   ├── data/{zh-tw,en,ja}/   # 主選單、頁尾、SEO
 │   ├── i18n/                 # locale 與路徑 helper
-│   ├── pages/                # 路由（含 en／ja）
-│   └── styles/               # 主題與色票 token
+│   ├── layouts/              # HTML 外框、SEO、主選單與 Footer
+│   ├── pages/                # Astro 檔案路由（含 en／ja）
+│   ├── styles/               # 主題與色票 token
+│   └── content.config.ts     # Content Collections 與資料 schema
 ├── astro.config.mjs
 ├── package.json
 └── README.md
@@ -162,3 +299,4 @@ ccelect/
 | 2026-08-04 | 初選 ProCleaning；後改以 **Astro Jetstream** 為實際骨架                             |
 | 2026-08-08 | 匯入 Jetstream：品牌樣式、繁中內容、zh-tw／en／ja 多語                              |
 | 2026-08-12 | 對齊舊站七項主選單；商品／工程／服務佔位頁；語言切換改下拉選單；README 改為反映現況 |
+| 2026-08-14 | 新增 Astro 初學者導覽、首頁渲染流程、常見修改位置；開發環境更新為 Node.js 22+       |
