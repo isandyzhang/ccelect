@@ -1,6 +1,6 @@
 {
-  "logoSource": "/src/assets/images/jetstream-logo.svg",
-  "logoAlternateSource": "/src/assets/images/jetstream-dark-theme.svg",
+  "logoSource": "/images/ccelect/logo-black.png",
+  "logoAlternateSource": "",
   "logoAlt": "集集電工業",
   "themeToggle": true,
   "navData": [
@@ -32,11 +32,6 @@
     {
       "name": "市場サービス",
       "path": "/ja/services/",
-      "children": []
-    },
-    {
-      "name": "お問い合わせ",
-      "path": "/ja/contact/",
       "children": []
     }
   ],

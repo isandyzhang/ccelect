@@ -3,35 +3,45 @@ _schema: default
 permalink:
 title: Home
 description: >-
-  CCElect — exothermic welding, chemical grounding rods, grounding and lightning materials, and consulting.
+  CCElect Industrial — exothermic welding materials and molds, chemical
+  grounding rods, grounding and lightning products, earthing tests and design
+  consulting.
+keywords:
+  - CCElect
+  - exothermic welding
+  - grounding
 pageSections:
   - _component: page-sections/heroes/hero-center
     eyebrowIcon: {}
     eyebrowText: CCElect Industrial Co., Ltd.
-    heading: Exothermic welding & <br /><span class="highlight-text">grounding materials</span>
+    heading: Exothermic welding &<br /><span class="highlight-text">grounding / LPS</span>
     headingSize: 3xl
     subtext: >-
-      Since 1979, focused on grounding materials and practices—exothermic welding materials and molds, chemical rods, grounding and lightning components, plus testing and design consulting.
+      Since 1979 we have focused on grounding materials and methods—welding
+      materials and molds, chemical rods, grounding and lightning components,
+      plus testing and design consulting.
     buttonSections:
       - _component: building-blocks/core-elements/button
-        text: Capabilities
+        text: About us
         hideText: false
-        link: /en/pricing/
+        link: /en/about/
         iconName: arrow-right
+        iconColor: default
         iconPosition: after
         variant: primary
         size: md
       - _component: building-blocks/core-elements/button
-        text: Contact
+        text: Contact us
         hideText: false
         link: /en/contact/
         iconName: arrow-right
+        iconColor: default
         iconPosition: after
         variant: tertiary
         size: md
     image:
       source: /src/assets/images/hero-1.svg
-      alt: CCElect
+      alt: CCElect Industrial
       rounded: true
     icons: []
     backgroundDecoration: true
@@ -47,24 +57,31 @@ pageSections:
     paddingVertical: md
   - _component: page-sections/features/feature-grid
     id: services
-    eyebrowIcon: {}
+    eyebrowIcon:
+      _component: building-blocks/core-elements/icon
+      name: light-bulb
+      size: 3xl
+      color: brand-gradient
+      background: true
+      iconOffset: true
+      alignmentHorizontal: center
     eyebrowText:
-    heading: What we provide
-    subtext: Materials and support for common grounding project needs.
+    heading: Core business
+    subtext: Aligned with our public company profile for design, supply, and field work.
     featureGrid:
       features:
         - _component: page-sections/features/feature-grid/feature-item
-          title: Exothermic welding
-          description: Materials, molds, and tools for thermite / CAD welding joints.
+          title: Welding materials & molds
+          description: Exothermic welding material and mold manufacture & sales.
           eyebrowIcon:
             _component: building-blocks/core-elements/icon
-            name: bolt
+            name: fire
             size: 2xl
             color: brand
             background: true
         - _component: page-sections/features/feature-grid/feature-item
           title: Chemical grounding rods
-          description: Electrolytic (chemical) rods for long-life earthing systems.
+          description: Chemical rod supply and installation for long-life earthing systems.
           eyebrowIcon:
             _component: building-blocks/core-elements/icon
             name: signal
@@ -73,7 +90,7 @@ pageSections:
             background: true
         - _component: page-sections/features/feature-grid/feature-item
           title: Grounding & lightning
-          description: Earth rods, conductors, and lightning accessories.
+          description: Earth rods, grounding accessories, and lightning protection components.
           eyebrowIcon:
             _component: building-blocks/core-elements/icon
             name: shield-check
@@ -82,7 +99,7 @@ pageSections:
             background: true
         - _component: page-sections/features/feature-grid/feature-item
           title: Testing & consulting
-          description: Grounding tests and design consultation.
+          description: Earthing tests, soil resistivity measurement, and design consulting.
           eyebrowIcon:
             _component: building-blocks/core-elements/icon
             name: chat-bubble-left-right
@@ -96,12 +113,34 @@ pageSections:
     contentBackground: false
     rounded: true
   - _component: page-sections/ctas/cta-center
+    id: certifications
+    eyebrowIcon: {}
+    eyebrowText: Quality milestones
+    heading: Traceable industrial credentials
+    subtext: >-
+      Founded 1979. Milestones include Taipower type tests, ERICO partnership,
+      UL (E305374), and ISO 9001 (certificates prevail).
+    buttonSections:
+      - _component: building-blocks/core-elements/button
+        text: Learn about us
+        hideText: false
+        link: /en/about/
+        iconName: arrow-right
+        iconPosition: after
+        variant: primary
+        size: md
+    maxContentWidth: xl
+    paddingVertical: 2xl
+    colorScheme: dark
+    backgroundColor: highlight-radial-gradient
+    contentBackground: false
+    rounded: false
+  - _component: page-sections/ctas/cta-center
     id: contact-cta
     eyebrowIcon: {}
     eyebrowText:
-    heading: Need a quote or datasheet?
-    subtext: >-
-      2-2 Yunhe St., Taipei · 886-2-23632992 · cce@ccelect.com.tw
+    heading: Need specs or a quotation?
+    subtext: 2-2 Yunhe St., Taipei · 886-2-23632992 · cce@ccelect.com.tw
     buttonSections:
       - _component: building-blocks/core-elements/button
         text: Email us

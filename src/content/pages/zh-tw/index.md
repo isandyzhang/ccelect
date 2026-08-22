@@ -11,6 +11,46 @@ keywords:
   - 接地
   - 避雷
 pageSections:
+  - _component: page-sections/builders/custom-section
+    id: homepage-banners
+    maxContentWidth: 2xl
+    paddingHorizontal: md
+    paddingVertical: sm
+    colorScheme: inherit
+    backgroundColor: base
+    contentBackground: false
+    rounded: false
+    contentSections:
+      - _component: building-blocks/wrappers/carousel
+        label: 首頁廣告輪播
+        autoPlay: true
+        loop: true
+        showIndicators: true
+        indicatorStyle: dots
+        showArrows: true
+        slideWidthPercent: 100
+        slides:
+          - contentSections:
+              - _component: building-blocks/core-elements/image
+                source: /images/ccelect/adv_1_chinese.jpg
+                alt: 火泥熔接 — 現代點金術
+                width: 1150
+                height: 403
+                rounded: true
+          - contentSections:
+              - _component: building-blocks/core-elements/image
+                source: /images/ccelect/adv_2_chinese.jpg
+                alt: 火泥熔接 避雷 接地 — 熱熔接 接地詢問
+                width: 1150
+                height: 403
+                rounded: true
+          - contentSections:
+              - _component: building-blocks/core-elements/image
+                source: /images/ccelect/adv_3_chinese.jpg
+                alt: 火泥熔接 避雷 接地 — 現場施工
+                width: 1150
+                height: 403
+                rounded: true
   - _component: page-sections/heroes/hero-center
     eyebrowIcon:
       _component: building-blocks/core-elements/icon

@@ -1,6 +1,6 @@
 {
-  "logoSource": "/src/assets/images/jetstream-logo.svg",
-  "logoAlternateSource": "/src/assets/images/jetstream-dark-theme.svg",
+  "logoSource": "/images/ccelect/logo-black.png",
+  "logoAlternateSource": "",
   "logoAlt": "集集電工業",
   "links": [
     { "name": "首頁", "path": "/" },
@@ -8,8 +8,7 @@
     { "name": "商品櫥窗", "path": "/products/" },
     { "name": "技術訊息", "path": "/blog/" },
     { "name": "工程實績", "path": "/projects/" },
-    { "name": "市場服務", "path": "/services/" },
-    { "name": "聯絡我們", "path": "/contact/" }
+    { "name": "市場服務", "path": "/services/" }
   ],
   "socials": [],
   "footerText": "© 集集電工業股份有限公司. 版權所有."

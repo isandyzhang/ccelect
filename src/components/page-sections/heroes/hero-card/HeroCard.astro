@@ -58,9 +58,10 @@ if (card.usePost && card.post) {
   }
 
   const post = blogPosts.find((p: any) => {
-    const slug = p.id?.replace(/\.mdx?$/, "") || p.slug;
+    const id = String(p.id || p.slug || "").replace(/\.mdx?$/, "");
+    const idTail = id.includes("/") ? id.split("/").pop() : id;
 
-    return slug === postSlug;
+    return id === postSlug || idTail === postSlug || id.endsWith(`/${postSlug}`);
   });
 
   if (post) {

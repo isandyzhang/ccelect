@@ -1,6 +1,6 @@
 {
-  "logoSource": "/src/assets/images/jetstream-logo.svg",
-  "logoAlternateSource": "/src/assets/images/jetstream-dark-theme.svg",
+  "logoSource": "/images/ccelect/logo-black.png",
+  "logoAlternateSource": "",
   "logoAlt": "CCElect",
   "links": [
     { "name": "Home", "path": "/en/" },
@@ -8,8 +8,7 @@
     { "name": "Products", "path": "/en/products/" },
     { "name": "Technical Notes", "path": "/en/blog/" },
     { "name": "Projects", "path": "/en/projects/" },
-    { "name": "Services", "path": "/en/services/" },
-    { "name": "Contact", "path": "/en/contact/" }
+    { "name": "Services", "path": "/en/services/" }
   ],
   "socials": [],
   "footerText": "© CCElect Industrial Co., Ltd. All rights reserved."

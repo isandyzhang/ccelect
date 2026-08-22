@@ -2,15 +2,18 @@
 _schema: default
 permalink:
 title: Contact
-description: Contact CCElect — address, phone, email, and form.
+description: >-
+  Contact CCElect: 2-2 Yunhe St., Taipei · 886-2-23632992 · cce@ccelect.com.tw
 pageSections:
   - _component: page-sections/ctas/cta-form
     id:
     eyebrowIcon: {}
-    eyebrowText: Contact
-    heading: Get in touch
+    eyebrowText: Contact us
+    heading: Call or email<br /><span class="highlight-text">for specs &amp; quotes</span>
     subtext: >-
-      2-2 Yunhe St., Taipei · Tel: 886-2-23632992 · cce@ccelect.com.tw. LINE button link pending client setup.
+      Address: 2-2 Yunhe St., Taipei<br />Tel: 886-2-23632992 · Fax:
+      886-2-23639044<br />Email: cce@ccelect.com.tw<br />LINE official account:
+      button link pending client setup.
     formAction: ./
     formBlocks:
       - _component: building-blocks/forms/input
@@ -41,7 +44,7 @@ pageSections:
         disabled: false
     buttonSections:
       - _component: building-blocks/core-elements/button
-        text: Email
+        text: Email us
         hideText: false
         link: mailto:cce@ccelect.com.tw
         iconName: arrow-right

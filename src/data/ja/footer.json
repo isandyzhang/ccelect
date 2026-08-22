@@ -1,6 +1,6 @@
 {
-  "logoSource": "/src/assets/images/jetstream-logo.svg",
-  "logoAlternateSource": "/src/assets/images/jetstream-dark-theme.svg",
+  "logoSource": "/images/ccelect/logo-black.png",
+  "logoAlternateSource": "",
   "logoAlt": "集集電工業",
   "links": [
     { "name": "ホーム", "path": "/ja/" },
@@ -8,8 +8,7 @@
     { "name": "商品", "path": "/ja/products/" },
     { "name": "技術情報", "path": "/ja/blog/" },
     { "name": "施工実績", "path": "/ja/projects/" },
-    { "name": "市場サービス", "path": "/ja/services/" },
-    { "name": "お問い合わせ", "path": "/ja/contact/" }
+    { "name": "市場サービス", "path": "/ja/services/" }
   ],
   "socials": [],
   "footerText": "© 集集電工業股份有限公司. All rights reserved."

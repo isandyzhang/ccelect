@@ -1,23 +1,26 @@
 ---
 _schema: default
 permalink:
-title: 搜尋
-description: 站內搜尋頁面。
+title: Search
+description: >-
+  Static Pagefind search across pages and posts—filter by type with no backend.
 pageSections:
   - _component: page-sections/search/search-section
     id:
-    heading: 搜尋站內內容
+    heading: How can we help?
     headingSize: 2xl
-    subtext: 搜尋頁面與技術訊息文章。
-    placeholder: 輸入關鍵字
-    buttonText: 搜尋
+    subtext: >-
+      Deep dives into infrastructure, operational excellence, and the future of
+      the edge-first web.
+    placeholder: Search
+    buttonText: Search
     filters:
-      - label: 全部
+      - label: Website (All)
         type: ''
-      - label: 技術訊息
+      - label: Blog
         type: Article
     resultsPerPage: 10
-    unavailableMessage: 搜尋暫時無法使用，請稍後再試。
+    unavailableMessage: Search is unavailable right now. Please try again later.
     maxContentWidth: 2xl
     paddingVertical: 2xl
     colorScheme: light

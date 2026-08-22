@@ -2,16 +2,15 @@
 _schema: blog-index
 permalink:
 title: Technical Notes
-description: Short notes on grounding and exothermic welding.
+description: Short notes on grounding, exothermic welding, and related field topics.
 keywords: []
 heroSections:
   - _component: page-sections/heroes/hero-center
     eyebrowIcon: {}
     eyebrowText: Technical Notes
-    heading: Knowledge base
+    heading: Knowledge & updates
     headingSize: 3xl
-    subtext: >-
-      Brief notes to align terminology for procurement and field teams.
+    subtext: Practical notes to align procurement and field teams on grounding terminology.
     buttonSections: []
     image:
       source: /src/assets/images/hero-1.svg
@@ -31,10 +30,9 @@ heroSections:
     paddingVertical: md
 ctaSections:
   - _component: page-sections/ctas/cta-center
-    id:
     eyebrowIcon: {}
     eyebrowText:
-    heading: Need product data?
+    heading: Need help with product specs?
     subtext:
     buttonSections:
       - _component: building-blocks/core-elements/button

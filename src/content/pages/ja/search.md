@@ -1,23 +1,26 @@
 ---
 _schema: default
 permalink:
-title: 検索
-description: サイト内検索。
+title: Search
+description: >-
+  Static Pagefind search across pages and posts—filter by type with no backend.
 pageSections:
   - _component: page-sections/search/search-section
     id:
-    heading: 検索
+    heading: How can we help?
     headingSize: 2xl
-    subtext: ページと技術記事を検索します。
-    placeholder: キーワード
-    buttonText: 検索
+    subtext: >-
+      Deep dives into infrastructure, operational excellence, and the future of
+      the edge-first web.
+    placeholder: Search
+    buttonText: Search
     filters:
-      - label: すべて
+      - label: Website (All)
         type: ''
-      - label: 技術情報
+      - label: Blog
         type: Article
     resultsPerPage: 10
-    unavailableMessage: 現在検索を利用できません。後でもう一度お試しください。
+    unavailableMessage: Search is unavailable right now. Please try again later.
     maxContentWidth: 2xl
     paddingVertical: 2xl
     colorScheme: light

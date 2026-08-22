@@ -2,19 +2,22 @@
 _schema: default
 permalink:
 title: Search
-description: Site search.
+description: >-
+  Static Pagefind search across pages and posts—filter by type with no backend.
 pageSections:
   - _component: page-sections/search/search-section
     id:
-    heading: Search
+    heading: How can we help?
     headingSize: 2xl
-    subtext: Search pages and technical notes.
-    placeholder: Keywords
+    subtext: >-
+      Deep dives into infrastructure, operational excellence, and the future of
+      the edge-first web.
+    placeholder: Search
     buttonText: Search
     filters:
-      - label: All
+      - label: Website (All)
         type: ''
-      - label: Technical notes
+      - label: Blog
         type: Article
     resultsPerPage: 10
     unavailableMessage: Search is unavailable right now. Please try again later.

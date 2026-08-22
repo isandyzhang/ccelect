@@ -66,7 +66,6 @@ const {
     alignmentHorizontal="center"
     data-children-prop="buttonSections"
   />
-  <div class="background-decoration"></div>
 </CustomSection>
 
 <style is:global>
@@ -77,21 +76,11 @@ const {
       container-name: cta-center;
 
       .outer-content {
-        @container cta-center (max-width: 1024px) {
-          margin-right: var(--spacing-lg);
-        }
-      }
-
-      .outer-content {
         position: relative;
         z-index: 0;
       }
       .outer-content > .content {
         position: static;
-      }
-      .outer-content > .background {
-        max-width: calc(var(--max-width) + calc((100vw - var(--max-width)) / 2));
-        z-index: var(--layer-below);
       }
 
       .outer-content > .radial-background-wrapper,
@@ -103,44 +92,11 @@ const {
         margin: 0 auto;
       }
 
-      .background-decoration {
-        position: absolute;
-        width: 100%;
-        max-width: calc(var(--max-width) + calc((100vw - var(--max-width)) / 2));
-        top: var(--spacing-lg);
-        right: 0;
-        height: 100%;
-        z-index: var(--layer-below-2);
-        border: 1px solid var(--color-bg-surface);
-        border-right: none;
-        background: repeating-linear-gradient(
-          135deg,
-          var(--color-bg-surface) 0 1px,
-          transparent 2px 20px
-        );
-
-        @container cta-center (max-width: 1024px) {
-          border: 1px solid var(--color-bg-surface);
-          left: var(--spacing-lg);
-        }
-      }
-
       .outer-content.cta-center-rounded {
         > .background {
           border-top-right-radius: var(--radius-md);
           border-bottom-right-radius: var(--radius-md);
-        }
-        .background-decoration {
-          border-top-left-radius: var(--radius-md);
-          border-bottom-left-radius: var(--radius-md);
-        }
 
-        > .background {
-          @container cta-center (max-width: 1024px) {
-            border-radius: var(--radius-md);
-          }
-        }
-        .background-decoration {
           @container cta-center (max-width: 1024px) {
             border-radius: var(--radius-md);
           }

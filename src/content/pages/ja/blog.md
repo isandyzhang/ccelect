@@ -2,16 +2,15 @@
 _schema: blog-index
 permalink:
 title: 技術情報
-description: 接地と熱溶着に関する短い解説。
+description: 接地・テルミット溶接および関連工事の短い技術ノートとお知らせ。
 keywords: []
 heroSections:
   - _component: page-sections/heroes/hero-center
     eyebrowIcon: {}
     eyebrowText: 技術情報
-    heading: ナレッジ
+    heading: 知識とお知らせ
     headingSize: 3xl
-    subtext: >-
-      調達・現場向けに用語をそろえるための簡易メモです。
+    subtext: 調達と現場が同じ用語で話せるよう、接地・溶接の要点を整理します。
     buttonSections: []
     image:
       source: /src/assets/images/hero-1.svg
@@ -31,10 +30,9 @@ heroSections:
     paddingVertical: md
 ctaSections:
   - _component: page-sections/ctas/cta-center
-    id:
     eyebrowIcon: {}
     eyebrowText:
-    heading: 製品仕様のご相談
+    heading: 製品仕様のご相談は？
     subtext:
     buttonSections:
       - _component: building-blocks/core-elements/button
