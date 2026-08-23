@@ -1,0 +1,88 @@
+{
+  "navData": [
+    {
+      "name": "商品",
+      "path": "/ja/products/",
+      "children": []
+    },
+    {
+      "name": "Exoweld カタログ",
+      "path": "/ja/products/exoweld/",
+      "children": [
+        { "name": "W シリーズ", "path": "/ja/products/exoweld/", "children": [] },
+        { "name": "G シリーズ", "path": "/ja/products/exoweld/", "children": [] },
+        { "name": "S シリーズ", "path": "/ja/products/exoweld/", "children": [] },
+        { "name": "R シリーズ", "path": "/ja/products/exoweld/", "children": [] },
+        { "name": "P シリーズ", "path": "/ja/products/exoweld/", "children": [] },
+        { "name": "B シリーズ", "path": "/ja/products/exoweld/", "children": [] },
+        { "name": "E シリーズ", "path": "/ja/products/exoweld/", "children": [] }
+      ]
+    },
+    {
+      "name": "溶接材料・工具",
+      "path": "/ja/products/welding-tools/",
+      "children": [
+        { "name": "材料及工具", "path": "/ja/products/welding-tools/", "children": [] },
+        { "name": "その他付属工具", "path": "/ja/products/welding-tools/", "children": [] }
+      ]
+    },
+    {
+      "name": "溶接型接地部品",
+      "path": "/ja/products/grounding-components/",
+      "children": [
+        { "name": "Ground Plate", "path": "/ja/products/grounding-components/", "children": [] },
+        { "name": "接地端子板", "path": "/ja/products/grounding-components/", "children": [] }
+      ]
+    },
+    {
+      "name": "一般接地材料",
+      "path": "/ja/products/grounding-materials/",
+      "children": [
+        { "name": "接地棒", "path": "/ja/products/grounding-materials/", "children": [] },
+        { "name": "接地銅バー", "path": "/ja/products/grounding-materials/", "children": [] },
+        { "name": "C 型圧着端子", "path": "/ja/products/grounding-materials/", "children": [] },
+        { "name": "接地線固定夾", "path": "/ja/products/grounding-materials/", "children": [] },
+        { "name": "接地抵抗測定器", "path": "/ja/products/grounding-materials/", "children": [] },
+        { "name": "その他付属材料", "path": "/ja/products/grounding-materials/", "children": [] }
+      ]
+    },
+    {
+      "name": "避雷部品",
+      "path": "/ja/products/lightning-protection/",
+      "children": [
+        {
+          "name": "Pressure T-Type Cable Splicer",
+          "path": "/ja/products/lightning-protection/",
+          "children": []
+        },
+        {
+          "name": "Bronze Cross Run Clamp",
+          "path": "/ja/products/lightning-protection/",
+          "children": []
+        },
+        {
+          "name": "Parallel Wire Flat Surface Point Base",
+          "path": "/ja/products/lightning-protection/",
+          "children": []
+        },
+        {
+          "name": "Bronze Adjustable Point Adapter",
+          "path": "/ja/products/lightning-protection/",
+          "children": []
+        },
+        {
+          "name": "Flat Surface Point Base",
+          "path": "/ja/products/lightning-protection/",
+          "children": []
+        },
+        { "name": "Terminal Support", "path": "/ja/products/lightning-protection/", "children": [] },
+        {
+          "name": "Bronze Large Multi Purpose Clamp",
+          "path": "/ja/products/lightning-protection/",
+          "children": []
+        },
+        { "name": "Clamp to Flat Surface", "path": "/ja/products/lightning-protection/", "children": [] }
+      ]
+    }
+  ]
+}

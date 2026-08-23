@@ -1,0 +1,90 @@
+---
+export interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+const {
+  items = [] as BreadcrumbItem[],
+  class: className,
+  useDefaultEditableBinding: _useDefaultEditableBinding = false,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+if (!_component && items.length === 0) return;
+---
+
+<nav
+  class:list={["breadcrumb", className]}
+  aria-label="Breadcrumb"
+  {...htmlAttributes}
+>
+  <ol class="breadcrumb-list">
+    {
+      items.map((item, index) => {
+        const isLast = index === items.length - 1;
+
+        return (
+          <li class="breadcrumb-item">
+            {
+              !isLast && item.href ? (
+                <a href={item.href}>{item.label}</a>
+              ) : (
+                <span aria-current={isLast ? "page" : undefined}>{item.label}</span>
+              )
+            }
+            {!isLast && <span class="breadcrumb-separator" aria-hidden="true">/</span>}
+          </li>
+        );
+      })
+    }
+  </ol>
+</nav>
+
+<style is:global>
+  @layer components {
+    .breadcrumb {
+      color: var(--color-text-muted);
+      font-size: var(--font-size-sm);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .breadcrumb-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .breadcrumb-item {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .breadcrumb a {
+      color: var(--color-text-strong);
+      text-decoration: underline;
+      text-underline-offset: 0.12em;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--color-text-strong);
+      text-decoration-thickness: 2px;
+    }
+
+    .breadcrumb-item > span[aria-current="page"] {
+      color: var(--color-text-strong);
+      font-weight: var(--font-weight-medium);
+    }
+
+    .breadcrumb-separator {
+      color: var(--color-text-muted);
+      margin-inline: 0.35em;
+      user-select: none;
+    }
+  }
+</style>

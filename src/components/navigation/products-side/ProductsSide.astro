@@ -1,0 +1,17 @@
+---
+import Side from "@navigation/side/Side.astro";
+import { defaultLocale, isLocale, type Locale } from "@i18n/config";
+import { getProductsNav } from "@i18n/loadData";
+
+function resolveLocaleFromUrl(pathname: string): Locale {
+  const segment = pathname.split("/").filter(Boolean)[0];
+
+  if (segment && isLocale(segment)) return segment;
+  return defaultLocale;
+}
+
+const locale = resolveLocaleFromUrl(Astro.url.pathname);
+const { navData } = getProductsNav(locale);
+---
+
+<Side navData={navData} class="products-side-nav" />

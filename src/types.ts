@@ -27,6 +27,7 @@ export interface ContentSelectorItem {
   subtext?: string;
   iconName?: string;
   iconColor?: string;
+  hashId?: string;
   contentSections?: ContentBlock[];
   _component?: string;
   [key: string]: unknown;

@@ -1,0 +1,88 @@
+{
+  "navData": [
+    {
+      "name": "Products",
+      "path": "/en/products/",
+      "children": []
+    },
+    {
+      "name": "Exoweld catalogs",
+      "path": "/en/products/exoweld/",
+      "children": [
+        { "name": "W series", "path": "/en/products/exoweld/", "children": [] },
+        { "name": "G series", "path": "/en/products/exoweld/", "children": [] },
+        { "name": "S series", "path": "/en/products/exoweld/", "children": [] },
+        { "name": "R series", "path": "/en/products/exoweld/", "children": [] },
+        { "name": "P series", "path": "/en/products/exoweld/", "children": [] },
+        { "name": "B series", "path": "/en/products/exoweld/", "children": [] },
+        { "name": "E series", "path": "/en/products/exoweld/", "children": [] }
+      ]
+    },
+    {
+      "name": "Welding materials & tools",
+      "path": "/en/products/welding-tools/",
+      "children": [
+        { "name": "Materials & tools", "path": "/en/products/welding-tools/", "children": [] },
+        { "name": "Accessories", "path": "/en/products/welding-tools/", "children": [] }
+      ]
+    },
+    {
+      "name": "Welded grounding assemblies",
+      "path": "/en/products/grounding-components/",
+      "children": [
+        { "name": "Ground Plate", "path": "/en/products/grounding-components/", "children": [] },
+        { "name": "Terminal plates", "path": "/en/products/grounding-components/", "children": [] }
+      ]
+    },
+    {
+      "name": "General grounding materials",
+      "path": "/en/products/grounding-materials/",
+      "children": [
+        { "name": "Ground rods", "path": "/en/products/grounding-materials/", "children": [] },
+        { "name": "Copper busbars", "path": "/en/products/grounding-materials/", "children": [] },
+        { "name": "C-clamps", "path": "/en/products/grounding-materials/", "children": [] },
+        { "name": "Cable clamps", "path": "/en/products/grounding-materials/", "children": [] },
+        { "name": "Earth resistance meters", "path": "/en/products/grounding-materials/", "children": [] },
+        { "name": "Other materials", "path": "/en/products/grounding-materials/", "children": [] }
+      ]
+    },
+    {
+      "name": "Lightning components",
+      "path": "/en/products/lightning-protection/",
+      "children": [
+        {
+          "name": "Pressure T-Type Cable Splicer",
+          "path": "/en/products/lightning-protection/",
+          "children": []
+        },
+        {
+          "name": "Bronze Cross Run Clamp",
+          "path": "/en/products/lightning-protection/",
+          "children": []
+        },
+        {
+          "name": "Parallel Wire Flat Surface Point Base",
+          "path": "/en/products/lightning-protection/",
+          "children": []
+        },
+        {
+          "name": "Bronze Adjustable Point Adapter",
+          "path": "/en/products/lightning-protection/",
+          "children": []
+        },
+        {
+          "name": "Flat Surface Point Base",
+          "path": "/en/products/lightning-protection/",
+          "children": []
+        },
+        { "name": "Terminal Support", "path": "/en/products/lightning-protection/", "children": [] },
+        {
+          "name": "Bronze Large Multi Purpose Clamp",
+          "path": "/en/products/lightning-protection/",
+          "children": []
+        },
+        { "name": "Clamp to Flat Surface", "path": "/en/products/lightning-protection/", "children": [] }
+      ]
+    }
+  ]
+}

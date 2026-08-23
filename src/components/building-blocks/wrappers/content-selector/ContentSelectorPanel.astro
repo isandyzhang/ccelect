@@ -7,6 +7,7 @@ const {
   title,
   subtext,
   contentSections,
+  hashId,
   useDefaultEditableBinding = false,
   checked = false,
   groupName = "content-selector-tabs",
@@ -38,6 +39,7 @@ const arrayDataAttributes = effectiveChildrenProp
     class="content-selector-input"
     checked={checked}
     autocomplete="off"
+    data-hash-id={hashId || undefined}
   />
   <label
     class="content-selector-tab"

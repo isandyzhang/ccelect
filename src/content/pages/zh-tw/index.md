@@ -104,7 +104,7 @@ pageSections:
         - _component: page-sections/features/feature-grid/feature-item
           title: Exoweld 熱熔接
           description: W、G、S、R、P、B、E 系列，對應不同導體與接點形式。
-          link: /products/#exoweld
+          link: /products/exoweld/
           eyebrowIcon:
             _component: building-blocks/core-elements/icon
             name: bolt
@@ -114,7 +114,7 @@ pageSections:
         - _component: page-sections/features/feature-grid/feature-item
           title: 熱熔接材料工具
           description: 熔模、模夾、熔接劑、點火清模及現場施工工具。
-          link: /products/#welding-tools
+          link: /products/welding-tools/
           eyebrowIcon:
             _component: building-blocks/core-elements/icon
             name: wrench-screwdriver
@@ -124,7 +124,7 @@ pageSections:
         - _component: page-sections/features/feature-grid/feature-item
           title: 熱熔接型接地組件
           description: 埋入型接地板與接地端子板等工程組件。
-          link: /products/#grounding-components
+          link: /products/grounding-components/
           eyebrowIcon:
             _component: building-blocks/core-elements/icon
             name: square-3-stack-3d
@@ -134,7 +134,7 @@ pageSections:
         - _component: page-sections/features/feature-grid/feature-item
           title: 一般接地材料
           description: 接地棒、銅排、壓接頭、固定夾、測試儀表與附屬材料。
-          link: /products/#grounding-materials
+          link: /products/grounding-materials/
           eyebrowIcon:
             _component: building-blocks/core-elements/icon
             name: circle-stack
@@ -144,7 +144,7 @@ pageSections:
         - _component: page-sections/features/feature-grid/feature-item
           title: 避雷組件
           description: 導線接續、固定、支撐及多用途銅合金配件。
-          link: /products/#lightning-protection
+          link: /products/lightning-protection/
           eyebrowIcon:
             _component: building-blocks/core-elements/icon
             name: shield-check

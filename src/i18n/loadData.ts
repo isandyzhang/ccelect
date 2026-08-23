@@ -9,7 +9,10 @@ import mainNavJa from "@data/ja/mainNav.json";
 import seoJa from "@data/ja/seo.json";
 import footerZh from "@data/zh-tw/footer.json";
 import mainNavZh from "@data/zh-tw/mainNav.json";
+import productsNavZh from "@data/zh-tw/productsNav.json";
 import seoZh from "@data/zh-tw/seo.json";
+import productsNavEn from "@data/en/productsNav.json";
+import productsNavJa from "@data/ja/productsNav.json";
 
 const seoMap = {
   "zh-tw": seoZh,
@@ -29,6 +32,12 @@ const footerMap = {
   ja: footerJa,
 } as const;
 
+const productsNavMap = {
+  "zh-tw": productsNavZh,
+  en: productsNavEn,
+  ja: productsNavJa,
+} as const;
+
 export function getSeo(locale: Locale = defaultLocale) {
   return seoMap[locale] ?? seoMap[defaultLocale];
 }
@@ -39,6 +48,10 @@ export function getMainNav(locale: Locale = defaultLocale) {
 
 export function getFooter(locale: Locale = defaultLocale) {
   return footerMap[locale] ?? footerMap[defaultLocale];
+}
+
+export function getProductsNav(locale: Locale = defaultLocale) {
+  return productsNavMap[locale] ?? productsNavMap[defaultLocale];
 }
 
 export function resolveLocale(value?: string | null): Locale {
