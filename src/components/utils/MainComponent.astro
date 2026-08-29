@@ -1,9 +1,15 @@
 ---
 import Components from "@components/utils/renderBlock.astro";
+import type { ContentBlock } from "../../types";
 
-const { sections } = Astro.props;
+interface Props {
+  sections: ContentBlock[];
+}
+
+const { sections } = Astro.props as Props;
 ---
 
+<!-- pageSections 陣列會依序交給動態元件渲染器。 -->
 <div
   data-pagefind-body
   data-pagefind-filter="Type:Page"

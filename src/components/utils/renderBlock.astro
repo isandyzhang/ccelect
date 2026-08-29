@@ -8,18 +8,20 @@ export interface Props {
 }
 
 type AstroComponent = (_props: Record<string, unknown>) => unknown;
+type AstroComponentModule = { default: AstroComponent };
 
-const components: Record<string, AstroComponent> = {};
-const componentImports = import.meta.glob("../**/*.{jsx,astro}", {
+// Astro 在建置時找出所有區塊元件，讓內容只要用 _component 指定元件。
+const componentImports = import.meta.glob<AstroComponentModule>("../**/*.{jsx,astro}", {
   eager: true,
 });
+const componentRegistry: Record<string, AstroComponent> = {};
 
-Object.entries(componentImports).forEach(([path, obj]) => {
+Object.entries(componentImports).forEach(([path, componentModule]) => {
   const parts = path.replace("../", "").split(".")[0].split("/");
   const filename = parts[parts.length - 1];
-
   const kebabFilename = pascalToKebab(filename);
 
+  // 資料夾和檔名相同時只保留一層，例如 button/Button.astro → button。
   if (parts.length > 1 && kebabFilename === parts[parts.length - 2]) {
     parts.pop();
     parts[parts.length - 1] = kebabFilename;
@@ -27,9 +29,7 @@ Object.entries(componentImports).forEach(([path, obj]) => {
     parts[parts.length - 1] = kebabFilename;
   }
 
-  const componentName = parts.join("/");
-
-  components[componentName] = (obj as Record<string, AstroComponent>).default;
+  componentRegistry[parts.join("/")] = componentModule.default;
 });
 
 const { contentSections, useDefaultEditableBinding = true } = Astro.props;
@@ -39,12 +39,12 @@ const { contentSections, useDefaultEditableBinding = true } = Astro.props;
   // Array-level editable attributes are owned by the caller's container element.
   // This utility only resolves blocks and marks each rendered block as an array item.
   contentSections?.map((block) => {
-    const Component = components[block._component];
+    const Component = componentRegistry[block._component];
 
     if (!Component && block._component) {
       console.warn(
         `Component not found: ${block._component}. Available components:`,
-        Object.keys(components)
+        Object.keys(componentRegistry)
       );
     }
 

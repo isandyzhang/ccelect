@@ -59,7 +59,7 @@ export function setupImageCarousel(carousel: ImageCarouselElement): void {
       btn.setAttribute("data-selected", isSelected.toString());
 
       if (isSelected && !isInitialUpdate) {
-        btn.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        btn.scrollIntoView({ behavior: "auto", block: "nearest", inline: "center" });
       }
     });
 

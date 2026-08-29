@@ -1,6 +1,5 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import { fade } from "astro:transitions";
 import SeoHead from "@components/utils/SeoHead.astro";
 import StructuredData from "@components/utils/StructuredData.astro";
 import type { Locale } from "@i18n/config";
@@ -9,21 +8,9 @@ import { getSeo } from "@i18n/loadData";
 import "@styles/style.css";
 import SiteFonts from "@layouts/SiteFonts.astro";
 import VideoElements from "@components/utils/VideoElements.astro";
+import type { SeoMetadata } from "../types";
 
-export interface Props {
-  title?: string | null;
-  description?: string | null;
-  keywords?: string[] | null;
-  image?: string | null;
-  canonical?: string | null;
-  type?: "website" | "article";
-  article?: {
-    publishedTime?: string | null;
-    modifiedTime?: string | null;
-    author?: string | string[] | null;
-    tags?: string[] | null;
-  } | null;
-  noindex?: boolean;
+export interface Props extends SeoMetadata {
   locale?: Locale;
 }
 
@@ -118,13 +105,32 @@ const htmlLang = localeHtmlLang[locale];
       href="/sitemap-index.xml"
     />
 
+    <!-- Page Layout 可透過這個 slot 加入該頁專屬的 head 內容。 -->
     <slot name="head" />
+    <script is:inline>
+      // 不讓瀏覽器自動回到舊捲動位置，避免切換頁面時上下跳動。
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+
+      if (!window.__ccelectScrollHistoryDisabled) {
+        window.__ccelectScrollHistoryDisabled = true;
+        window.addEventListener(
+          "popstate",
+          () => {
+            if (history.state && !window.location.hash) {
+              history.replaceState({ ...history.state, scrollX: 0, scrollY: 0 }, "");
+            }
+          },
+          { capture: true }
+        );
+      }
+    </script>
+    <!-- ClientRouter 讓 Astro 換頁時保留動畫與共用導覽列。 -->
     <ClientRouter />
   </head>
   <body>
-    <div transition:animate={fade({ duration: "0.2s" })}>
-      <slot />
-    </div>
+    <slot />
     <VideoElements />
   </body>
 </html>

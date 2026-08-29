@@ -1,15 +1,22 @@
 ---
 import Page from "@layouts/Page.astro";
-import { parseLocaleId, pageSlugParam, defaultLocale } from "@i18n/config";
+import {
+  defaultLocale,
+  pageKeyFromContentId,
+  pageSlugParam,
+  parseLocaleId,
+  type Locale,
+} from "@i18n/config";
 import { getCollection, render, type CollectionEntry } from "astro:content";
 
 export interface Props {
   page: CollectionEntry<"pages">;
-  locale: import("@i18n/config").Locale;
+  locale: Locale;
   pageKey: string;
 }
 
 export async function getStaticPaths() {
+  // 建置時把 content/pages 裡的內容轉成實際網址。
   const pages = await getCollection("pages");
 
   return pages
@@ -22,7 +29,7 @@ export async function getStaticPaths() {
     })
     .map((page) => {
       const { locale, rest } = parseLocaleId(page.id);
-      const pageKey = rest.replace(/\/index$/, "").replace(/^index$/, "");
+      const pageKey = pageKeyFromContentId(rest);
       const slug = pageSlugParam(locale, rest);
 
       return {

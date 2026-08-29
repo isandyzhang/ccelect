@@ -90,8 +90,10 @@ export default defineConfig({
     mdx(),
   ],
   vite: {
+    // Vite 的正式建置設定放在同一處，避免重複 key 互相覆蓋。
     build: {
       minify: "esbuild",
+      chunkSizeWarningLimit: 1024,
     },
     plugins: [
       {
@@ -127,9 +129,6 @@ export default defineConfig({
         },
       },
     ],
-    build: {
-      chunkSizeWarningLimit: 1024,
-    },
     css: {
       devSourcemap: true,
     },

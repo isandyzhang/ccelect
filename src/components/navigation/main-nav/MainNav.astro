@@ -8,14 +8,7 @@ import Image from "@core-elements/image/Image.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import type { Locale } from "@i18n/config";
 import { defaultLocale } from "@i18n/config";
-
-type NavButton = {
-  text?: string;
-  /** Button schema uses `link`; legacy entries may use `href`. */
-  link?: string;
-  href?: string;
-  [key: string]: unknown;
-};
+import type { NavButton } from "../../../types";
 
 const {
   logoSource,
@@ -95,6 +88,76 @@ const mobileNavData = [
   />
 </CustomSection>
 
+<script>
+  import { onPageLoad } from "@components/utils/onPageLoad";
+  import { isLocale, localeLabels, localeNames, localizedHref } from "@i18n/config";
+
+  function syncPersistedMainNav() {
+    const navRoot = document.querySelector(".main-nav");
+
+    if (!(navRoot instanceof HTMLElement)) return;
+
+    const pathname = window.location.pathname;
+    const pageKey = document.querySelector<HTMLMetaElement>('meta[name="page-key"]')?.content ?? "";
+    const siteLocale =
+      document.querySelector<HTMLMetaElement>('meta[name="site-locale"]')?.content ?? "zh-tw";
+
+    navRoot.querySelectorAll<HTMLAnchorElement>("a[href]").forEach((link) => {
+      const href = link.getAttribute("href");
+
+      if (!href || href.startsWith("#") || href.includes("mailto:")) return;
+
+      if (link.closest(".language-menu")) {
+        const locale = link.dataset.locale;
+
+        if (!locale || !isLocale(locale)) return;
+
+        link.href = localizedHref(locale, pageKey);
+        const isActive = locale === siteLocale;
+
+        link.classList.toggle("is-active", isActive);
+
+        if (isActive) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+
+        const check = link.querySelector(".check");
+
+        if (check) {
+          check.textContent = isActive ? "✓" : "";
+        }
+
+        return;
+      }
+
+      const linkPath = new URL(href, window.location.origin).pathname;
+
+      if (linkPath === pathname) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+
+    const summary = navRoot.querySelector(".lang-switcher summary");
+    const summaryLabel = navRoot.querySelector(
+      ".lang-switcher summary > span:not(.language-icon):not(.chevron)"
+    );
+
+    if (summary instanceof HTMLElement && isLocale(siteLocale)) {
+      summary.setAttribute("aria-label", `Language: ${localeNames[siteLocale]}`);
+    }
+
+    if (summaryLabel instanceof HTMLElement && isLocale(siteLocale)) {
+      summaryLabel.textContent = localeLabels[siteLocale];
+    }
+  }
+
+  onPageLoad(syncPersistedMainNav);
+</script>
+
 <style is:global>
   @layer page-sections {
     .main-nav {
@@ -138,8 +201,8 @@ const mobileNavData = [
         }
 
         > a > .image img {
-          height: 2.5rem;
-          max-width: 220px;
+          height: 3.25rem;
+          max-width: 286px;
           width: auto;
         }
 

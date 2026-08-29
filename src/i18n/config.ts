@@ -15,6 +15,12 @@ export const localeLabels: Record<Locale, string> = {
   ja: "日本語",
 };
 
+export const localeNames: Record<Locale, string> = {
+  "zh-tw": "繁體中文",
+  en: "English",
+  ja: "日本語",
+};
+
 export function isLocale(value: string): value is Locale {
   return (locales as readonly string[]).includes(value);
 }
@@ -31,12 +37,17 @@ export function parseLocaleId(id: string): { locale: Locale; rest: string } {
 
 /** Page URL slug param for [...slug] catch-all (no leading slash) */
 export function pageSlugParam(locale: Locale, rest: string): string | undefined {
-  const clean = rest.replace(/\/index$/, "").replace(/^index$/, "");
+  const clean = pageKeyFromContentId(rest);
 
   if (locale === defaultLocale) {
     return clean.length ? clean : undefined;
   }
   return clean.length ? `${locale}/${clean}` : locale;
+}
+
+/** 把內容 ID 轉成網站使用的頁面 key，例如 `company/index` 變成 `company`。 */
+export function pageKeyFromContentId(rest: string): string {
+  return rest.replace(/\/index$/, "").replace(/^index$/, "");
 }
 
 /** Public path for a page key like `about` or `` (home) */

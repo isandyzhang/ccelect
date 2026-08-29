@@ -36,6 +36,8 @@ pageSections:
                 alt: 火泥熔接 — 現代點金術
                 width: 1150
                 height: 403
+                aspectRatio: horizontal-strip
+                priority: true
                 rounded: true
           - contentSections:
               - _component: building-blocks/core-elements/image
@@ -43,6 +45,7 @@ pageSections:
                 alt: 火泥熔接 避雷 接地 — 熱熔接 接地詢問
                 width: 1150
                 height: 403
+                aspectRatio: horizontal-strip
                 rounded: true
           - contentSections:
               - _component: building-blocks/core-elements/image
@@ -50,6 +53,7 @@ pageSections:
                 alt: 火泥熔接 避雷 接地 — 現場施工
                 width: 1150
                 height: 403
+                aspectRatio: horizontal-strip
                 rounded: true
   - _component: page-sections/heroes/hero-center
     eyebrowIcon:
@@ -83,14 +87,11 @@ pageSections:
     image: {}
     icons: []
     backgroundDecoration: true
-    sectionHeight: full
+    sectionHeight: default
     maxContentWidth: lg
     colorScheme: inherit
     backgroundColor: highlight-grid
     contentBackground: true
-    verticalOffset:
-      size: nav-height
-      direction: back
     rounded: false
     paddingVertical: md
   - _component: page-sections/features/feature-grid

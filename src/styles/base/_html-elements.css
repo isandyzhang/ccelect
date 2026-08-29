@@ -1,6 +1,6 @@
 @layer base {
   :where(:root) {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     scroll-padding-top: var(--spacing-nav-height);
 
     body {

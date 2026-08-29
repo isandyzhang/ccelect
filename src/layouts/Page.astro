@@ -1,4 +1,5 @@
 ---
+import { fade } from "astro:transitions";
 import Footer from "@components/navigation/footer/Footer.astro";
 import MainNavigation from "@components/navigation/main-nav/MainNav.astro";
 import ThemeToggleScript from "@components/navigation/theme-toggle/ThemeToggleScript.astro";
@@ -8,44 +9,16 @@ import { defaultLocale, localizedHref } from "@i18n/config";
 import { getFooter, getMainNav } from "@i18n/loadData";
 import Layout from "@layouts/BaseLayout.astro";
 
-import type { ContentBlock } from "../types";
+import type { PageFrontmatter, SeoMetadata } from "../types";
 
-type Props = {
-  frontmatter?: {
-    title?: string | null;
-    description?: string;
-    keywords?: string[];
-    image?: string;
-    canonical?: string;
-    type?: "website" | "article";
-    article?: {
-      publishedTime?: string;
-      modifiedTime?: string;
-      author?: string | string[];
-      tags?: string[];
-    };
-    pageSections?: ContentBlock[];
-    noindex?: boolean;
-  };
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  canonical?: string;
-  type?: "website" | "article";
-  article?: {
-    publishedTime?: string;
-    modifiedTime?: string;
-    author?: string | string[];
-    tags?: string[];
-  };
-  noindex?: boolean;
+interface Props extends SeoMetadata {
+  frontmatter?: PageFrontmatter;
   disablePagefind?: boolean;
   mainNav?: Record<string, unknown>;
   footer?: Record<string, unknown>;
   locale?: Locale;
   pageKey?: string;
-};
+}
 
 const {
   frontmatter,
@@ -85,6 +58,7 @@ const noindex = frontmatter?.noindex ?? noindexProp ?? false;
 const sections = frontmatter?.pageSections ?? [];
 ---
 
+<!-- Page 負責組合全站導覽、頁面內容與頁尾。 -->
 <Layout
   title={title}
   description={description}
@@ -97,9 +71,27 @@ const sections = frontmatter?.pageSections ?? [];
   locale={locale}
 >
   {mainNav.themeToggle && <ThemeToggleScript slot="head" />}
-  <MainNavigation {...mainNav} />
+  <meta
+    name="page-key"
+    content={pageKey}
+    slot="head"
+  />
+  <meta
+    name="site-locale"
+    content={locale}
+    slot="head"
+  />
+  <MainNavigation
+    transition:persist="site-main-nav"
+    {...mainNav}
+  />
 
-  <main {...disablePagefind ? { "data-pagefind-ignore": "all" } : {}}>
+  <!-- 動畫只套在 main，固定導覽列不會跟著重新進場。 -->
+  <main
+    transition:name="page-main"
+    transition:animate={fade({ duration: "0.2s" })}
+    {...disablePagefind ? { "data-pagefind-ignore": "all" } : {}}
+  >
     {
       sections.length > 0 && (
         <div

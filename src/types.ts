@@ -3,6 +3,29 @@ export interface ContentBlock {
   [key: string]: unknown;
 }
 
+export interface ArticleMetadata {
+  publishedTime?: string | null;
+  modifiedTime?: string | null;
+  author?: string | string[] | null;
+  tags?: string[] | null;
+}
+
+/** 所有頁面共用的 SEO 欄位。 */
+export interface SeoMetadata {
+  title?: string | null;
+  description?: string | null;
+  keywords?: string[] | null;
+  image?: string | null;
+  canonical?: string | null;
+  type?: "website" | "article";
+  article?: ArticleMetadata | null;
+  noindex?: boolean;
+}
+
+export interface PageFrontmatter extends SeoMetadata {
+  pageSections?: ContentBlock[];
+}
+
 export interface SocialLink {
   icon: string;
   link: string;
@@ -11,6 +34,7 @@ export interface SocialLink {
 
 export interface NavButton {
   text?: string;
+  link?: string;
   href?: string;
   [key: string]: unknown;
 }

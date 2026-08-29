@@ -61,7 +61,6 @@ const snakePath =
     colorScheme={colorScheme}
     backgroundColor={backgroundColor}
     contentBackground={contentBackground}
-    verticalOffset={verticalOffset}
     rounded={rounded}
   >
     <Icon {...eyebrowIcon} />
@@ -281,6 +280,7 @@ const snakePath =
 <style is:global>
   @layer page-sections {
     .hero-center {
+      overflow-anchor: none;
       overflow-x: clip;
       width: 100vw;
 
