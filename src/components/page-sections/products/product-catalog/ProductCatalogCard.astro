@@ -1,0 +1,63 @@
+---
+import Image from "@core-elements/image/Image.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+import type { CatalogItem } from "./types";
+
+interface Props {
+  item: CatalogItem;
+  fallbackHref: string;
+}
+
+const { item, fallbackHref } = Astro.props as Props;
+---
+
+<article
+  class="catalog-card"
+  id={item.id}
+>
+  <div class:list={["catalog-card-media", !item.image && "icon-media"]}>
+    {
+      item.image ? (
+        <Image
+          source={item.image}
+          alt={item.imageAlt || item.title}
+          aspectRatio="landscape"
+        />
+      ) : (
+        <Icon
+          name={item.iconName || "cube"}
+          size="2xl"
+          aria-hidden="true"
+        />
+      )
+    }
+  </div>
+  <div class="catalog-card-body">
+    {item.category && <p class="catalog-card-category">{item.category}</p>}
+    <h2>{item.title}</h2>
+    {item.description && <p>{item.description}</p>}
+    {
+      item.specifications && (
+        <ul
+          class="catalog-tags"
+          aria-label="產品系列"
+        >
+          {item.specifications.map((specification) => (
+            <li>{specification}</li>
+          ))}
+        </ul>
+      )
+    }
+    <a
+      href={item.href || fallbackHref}
+      class="catalog-card-link"
+    >
+      查看產品資訊
+      <Icon
+        name="arrow-right"
+        size="none"
+        aria-hidden="true"
+      />
+    </a>
+  </div>
+</article>

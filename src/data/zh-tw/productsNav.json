@@ -55,7 +55,11 @@
           "path": "/products/lightning-protection/",
           "children": []
         },
-        { "name": "Bronze Cross Run Clamp", "path": "/products/lightning-protection/", "children": [] },
+        {
+          "name": "Bronze Cross Run Clamp",
+          "path": "/products/lightning-protection/",
+          "children": []
+        },
         {
           "name": "Parallel Wire Flat Surface Point Base",
           "path": "/products/lightning-protection/",
@@ -66,14 +70,22 @@
           "path": "/products/lightning-protection/",
           "children": []
         },
-        { "name": "Flat Surface Point Base", "path": "/products/lightning-protection/", "children": [] },
+        {
+          "name": "Flat Surface Point Base",
+          "path": "/products/lightning-protection/",
+          "children": []
+        },
         { "name": "Terminal Support", "path": "/products/lightning-protection/", "children": [] },
         {
           "name": "Bronze Large Multi Purpose Clamp",
           "path": "/products/lightning-protection/",
           "children": []
         },
-        { "name": "Clamp to Flat Surface", "path": "/products/lightning-protection/", "children": [] }
+        {
+          "name": "Clamp to Flat Surface",
+          "path": "/products/lightning-protection/",
+          "children": []
+        }
       ]
     }
   ]

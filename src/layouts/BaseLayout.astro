@@ -5,6 +5,7 @@ import StructuredData from "@components/utils/StructuredData.astro";
 import type { Locale } from "@i18n/config";
 import { defaultLocale, localeHtmlLang } from "@i18n/config";
 import { getSeo } from "@i18n/loadData";
+import siteConfig from "@data/site.json";
 import "@styles/style.css";
 import SiteFonts from "@layouts/SiteFonts.astro";
 import VideoElements from "@components/utils/VideoElements.astro";
@@ -18,6 +19,9 @@ const props = Astro.props;
 const locale = props.locale ?? defaultLocale;
 const seoData = getSeo(locale);
 const htmlLang = localeHtmlLang[locale];
+const faviconSrc = siteConfig.faviconSrc || "/favicon.png";
+const faviconVersion = "2";
+const faviconHref = `${faviconSrc}?v=${faviconVersion}`;
 ---
 
 <!doctype html>
@@ -33,8 +37,17 @@ const htmlLang = localeHtmlLang[locale];
     />
     <link
       rel="icon"
-      type="image/svg+xml"
-      href="/favicon.svg"
+      href="/favicon.ico?v=2"
+      sizes="any"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href={faviconHref}
+    />
+    <link
+      rel="apple-touch-icon"
+      href={`/apple-touch-icon.png?v=${faviconVersion}`}
     />
     <meta
       name="generator"

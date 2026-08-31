@@ -4,125 +4,75 @@ permalink: null
 title: 一般接地用材料
 description: 接地棒、銅排、壓接頭、固定夾、測試儀表與附屬材料。
 pageSections:
-- _component: page-sections/builders/custom-section
-  id: products-layout
-  maxContentWidth: 3xl
-  paddingHorizontal: md
-  paddingVertical: lg
-  colorScheme: light
-  backgroundColor: base
-  contentBackground: false
-  rounded: false
-  contentSections:
-  - _component: building-blocks/wrappers/split
-    distributionMode: quarter-three-quarters
-    minSplitWidth: 768
-    reverseOrderOnMobile: true
-    alignmentVertical: start
-    firstColumnContentSections:
-    - _component: navigation/products-side
-    secondColumnContentSections:
-    - _component: building-blocks/core-elements/breadcrumb
-      items:
+  - _component: page-sections/products/product-catalog
+    eyebrowText: 一般接地用材料
+    heading: 接地極、導體與測量用品
+    subtext: 依土壤環境、腐蝕條件、目標電阻與專案規範選擇材料。以下整理常用產品分類與系列，方便工程人員快速查找。
+    breadcrumbs:
       - label: 首頁
         href: /
       - label: 商品櫥窗
         href: /products/
       - label: 一般接地用材料
-    - _component: building-blocks/core-elements/heading
-      level: h2
-      size: lg
-      alignmentHorizontal: start
-      text: 一般接地用材料
-    - _component: page-sections/features/feature-grid
-      eyebrowIcon: {}
-      eyebrowText: 一般接地用材料
-      heading: 接地極、導體與測量用品
-      subtext: 依土壤、環境、腐蝕條件、目標電阻及專案規範確認材料組合。
-      featureGrid:
-        features:
-        - _component: page-sections/features/feature-grid/feature-item
-          title: 接地棒
-          description: 離子式接地棒 IEA、銅包鋼接地棒 G、鋼芯鍍銅接地棒 B／NE 系列。
-          image:
-            source: /src/assets/images/ccelect/legacy/product-ion-ground-rod.jpg
-            alt: 離子式接地棒 IEA 現場照片
-            rounded: true
-          eyebrowIcon:
-            _component: building-blocks/core-elements/icon
-            name: circle-stack
-            size: 2xl
-            color: brand
-            background: true
-        - _component: page-sections/features/feature-grid/feature-item
-          title: 接地銅排
-          description: C1020BB、C1100BB 等接地銅排品項。
-          eyebrowIcon:
-            _component: building-blocks/core-elements/icon
-            name: bars-3
-            size: 2xl
-            color: brand
-            background: true
-        - _component: page-sections/features/feature-grid/feature-item
-          title: 壓接頭與固定夾
-          description: C 型壓接頭、壓接端子、GBS 與 GCS 接地線固定夾。
-          eyebrowIcon:
-            _component: building-blocks/core-elements/icon
-            name: link
-            size: 2xl
-            color: brand
-            background: true
-        - _component: page-sections/features/feature-grid/feature-item
-          title: 接地電阻測試儀表
-          description: 舊型錄列有 AEMC 4620 數位式接地電阻測量儀。
-          eyebrowIcon:
-            _component: building-blocks/core-elements/icon
-            name: chart-bar
-            size: 2xl
-            color: brand
-            background: true
-        - _component: page-sections/features/feature-grid/feature-item
-          title: 附屬材料
-          description: 止水板與 Bentonite 土壤改良劑等接地工程附屬品項。
-          eyebrowIcon:
-            _component: building-blocks/core-elements/icon
-            name: archive-box
-            size: 2xl
-            color: brand
-            background: true
-      maxContentWidth: 2xl
-      paddingVertical: 4xl
-      colorScheme: light
-      backgroundColor: surface-linear-gradient
-      contentBackground: false
-      rounded: false
-- _component: page-sections/ctas/cta-center
-  id: product-contact
-  eyebrowIcon: {}
-  eyebrowText: 選型與報價
-  heading: 提供導體、接點與施工條件
-  subtext: 請提供導體材質、線徑、接點形式、數量及現場環境，業務部將協助確認適用產品。
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Email 業務部
-    hideText: false
-    link: mailto:cce@ccelect.com.tw
-    iconName: envelope
-    iconPosition: before
-    variant: primary
-    size: md
-  - _component: building-blocks/core-elements/button
-    text: 查看聯絡方式
-    hideText: false
-    link: /contact/
-    iconName: arrow-right
-    iconPosition: after
-    variant: secondary
-    size: md
-  maxContentWidth: xl
-  paddingVertical: 2xl
-  colorScheme: dark
-  backgroundColor: highlight-radial-gradient
-  contentBackground: false
-  rounded: false
+    helpHeading: 不確定現場適合哪種接地材料？
+    helpText: 提供導體材質、線徑、接點形式、需求數量及施工環境，我們會協助確認產品與報價。
+    helpLink: /contact/
+    helpLinkText: 聯絡工程業務
+    items:
+      - id: grounding-rods
+        category: 接地極
+        title: 接地棒
+        description: 適用於不同土壤條件與接地電阻需求，可依施工環境選擇離子式或銅包鋼系列。
+        image: /src/assets/images/ccelect/legacy/product-ion-ground-rod.jpg
+        imageAlt: 離子式接地棒施工現場
+        specifications:
+          - IEA 離子式
+          - G 系列
+          - B／NE 系列
+        href: /contact/
+      - id: copper-busbars
+        category: 接地導體
+        title: 接地銅排
+        description: 高導電性銅排，適用於接地匯流、配電盤與設備等電位連接。
+        iconName: bars-3
+        specifications:
+          - C1020BB
+          - C1100BB
+        href: /contact/
+      - id: compression-connectors
+        category: 導體接續
+        title: C 型壓接頭
+        description: 用於銅導體分歧與接續，依導體尺寸選擇對應規格並搭配專用壓接工具。
+        iconName: link
+        specifications:
+          - C 型接頭
+          - 壓接端子
+        href: /contact/
+      - id: grounding-clamps
+        category: 固定配件
+        title: 接地線固定夾
+        description: 提供接地導體定位與固定，適用於牆面、結構體及各類接地工程配置。
+        iconName: wrench
+        specifications:
+          - GBS 系列
+          - GCS 系列
+        href: /contact/
+      - id: testing-instruments
+        category: 測量儀器
+        title: 接地電阻測試儀錶
+        description: 用於接地系統施工後的電阻量測、驗收與定期維護檢查。
+        iconName: chart-bar
+        specifications:
+          - AEMC 4620
+          - 數位式量測
+        href: /contact/
+      - id: accessories
+        category: 工程材料
+        title: 其他附屬材料
+        description: 接地工程所需的止水與土壤改善材料，可依現場條件搭配主要接地系統使用。
+        iconName: archive-box
+        specifications:
+          - 止水板
+          - Bentonite
+        href: /contact/
 ---

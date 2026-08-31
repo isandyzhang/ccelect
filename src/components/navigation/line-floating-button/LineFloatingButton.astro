@@ -1,0 +1,64 @@
+---
+import type { Locale } from "@i18n/config";
+import { defaultLocale } from "@i18n/config";
+import { getLineContact } from "@i18n/loadData";
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = defaultLocale } = Astro.props;
+const line = getLineContact(locale);
+---
+
+{
+  line.href ? (
+    <a
+      class="line-floating-button"
+      href={line.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={line.label}
+      title={line.label}
+      transition:persist="line-floating-button"
+    >
+      <img
+        class="line-floating-button__image"
+        src={line.iconSrc}
+        alt=""
+        width="64"
+        height="64"
+        loading="lazy"
+        decoding="async"
+      />
+    </a>
+  ) : null
+}
+
+<style is:global>
+  @layer page-sections {
+    .line-floating-button {
+      background: none;
+      border: 0;
+      bottom: max(var(--spacing-lg), env(safe-area-inset-bottom, 0px));
+      display: block;
+      inset-inline-end: max(var(--spacing-lg), env(safe-area-inset-right, 0px));
+      line-height: 0;
+      padding: 0;
+      position: fixed;
+      text-decoration: none;
+      z-index: var(--layer-5);
+
+      &:focus-visible {
+        outline: 2px solid var(--color-focus-ring);
+        outline-offset: 4px;
+      }
+
+      .line-floating-button__image {
+        display: block;
+        height: auto;
+        width: 3.25rem;
+      }
+    }
+  }
+</style>

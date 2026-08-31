@@ -21,10 +21,14 @@ import MobileNavLayout from "@component-docs/layouts/MobileNavLayout.astro";
 import SidebarNavLayout from "@component-docs/layouts/SidebarNavLayout.astro";
 import ThemeToggleScript from "@components/navigation/theme-toggle/ThemeToggleScript.astro";
 import RenderBlock from "@components/utils/renderBlock.astro";
+import siteConfig from "@data/site.json";
 const props = libraryLayoutSchema.parse(Astro.props);
 const pageTitle = props.frontmatter?.title || "Component Library";
 const pageDescription = props.frontmatter?.description;
 const contentSections = props.frontmatter?.contentSections || [];
+const faviconSrc = siteConfig.faviconSrc || "/favicon.png";
+const faviconVersion = "2";
+const faviconHref = `${faviconSrc}?v=${faviconVersion}`;
 ---
 
 <!doctype html>
@@ -40,8 +44,17 @@ const contentSections = props.frontmatter?.contentSections || [];
     />
     <link
       rel="icon"
-      type="image/svg+xml"
-      href="/favicon.svg"
+      href="/favicon.ico?v=2"
+      sizes="any"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href={faviconHref}
+    />
+    <link
+      rel="apple-touch-icon"
+      href={`/apple-touch-icon.png?v=${faviconVersion}`}
     />
     <meta
       name="generator"

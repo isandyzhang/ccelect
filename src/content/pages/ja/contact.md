@@ -12,7 +12,7 @@ pageSections:
     heading: お電話・メールで<br /><span class="highlight-text">仕様・見積をご相談</span>
     subtext: >-
       住所：台北市雲和街 2-2 号<br />電話：886-2-23632992　FAX：886-2-23639044<br
-      />Email：cce@ccelect.com.tw<br />LINE 公式アカウント：リンクは準備中です。
+      />Email：cce@ccelect.com.tw<br />LINE：@iaf5267c
     formAction: ./
     formBlocks:
       - _component: building-blocks/forms/input
@@ -42,6 +42,14 @@ pageSections:
         hideText: false
         disabled: false
     buttonSections:
+      - _component: building-blocks/core-elements/button
+        text: LINE で相談
+        hideText: false
+        link: https://line.me/R/ti/p/@iaf5267c
+        iconName: arrow-right
+        iconPosition: after
+        variant: tertiary
+        size: md
       - _component: building-blocks/core-elements/button
         text: メールで相談
         hideText: false

@@ -1,6 +1,7 @@
 ---
 import { fade } from "astro:transitions";
 import Footer from "@components/navigation/footer/Footer.astro";
+import LineFloatingButton from "@components/navigation/line-floating-button/LineFloatingButton.astro";
 import MainNavigation from "@components/navigation/main-nav/MainNav.astro";
 import ThemeToggleScript from "@components/navigation/theme-toggle/ThemeToggleScript.astro";
 import MainComponent from "@components/utils/MainComponent.astro";
@@ -108,4 +109,5 @@ const sections = frontmatter?.pageSections ?? [];
     </div>
   </main>
   <Footer {...footer} />
+  <LineFloatingButton locale={locale} />
 </Layout>

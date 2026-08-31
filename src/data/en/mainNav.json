@@ -1,6 +1,6 @@
 {
-  "logoSource": "/images/ccelect/logo-black.png",
-  "logoAlternateSource": "",
+  "logoSource": "/images/ccelect/logo-white.png",
+  "logoAlternateSource": "/images/ccelect/logo-black.png",
   "logoAlt": "CCElect",
   "themeToggle": true,
   "navData": [

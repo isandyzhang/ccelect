@@ -13,6 +13,7 @@ import productsNavZh from "@data/zh-tw/productsNav.json";
 import seoZh from "@data/zh-tw/seo.json";
 import productsNavEn from "@data/en/productsNav.json";
 import productsNavJa from "@data/ja/productsNav.json";
+import siteConfig from "@data/site.json";
 
 const seoMap = {
   "zh-tw": seoZh,
@@ -57,4 +58,31 @@ export function getProductsNav(locale: Locale = defaultLocale) {
 export function resolveLocale(value?: string | null): Locale {
   if (value && isLocale(value)) return value;
   return defaultLocale;
+}
+
+const lineLabels: Record<Locale, { label: string; shortLabel: string }> = {
+  "zh-tw": {
+    label: "透過 LINE 官方帳號聯絡我們",
+    shortLabel: "LINE",
+  },
+  en: {
+    label: "Contact us on LINE",
+    shortLabel: "LINE",
+  },
+  ja: {
+    label: "LINE 公式アカウントでお問い合わせ",
+    shortLabel: "LINE",
+  },
+};
+
+export function getLineContact(locale: Locale = defaultLocale) {
+  const href = siteConfig.lineOfficialAccountUrl?.trim() ?? "";
+  const labels = lineLabels[locale] ?? lineLabels[defaultLocale];
+
+  return {
+    href,
+    basicId: siteConfig.lineBasicId?.trim() ?? "",
+    iconSrc: siteConfig.lineIconSrc?.trim() ?? "/images/line-icon.svg",
+    ...labels,
+  };
 }
