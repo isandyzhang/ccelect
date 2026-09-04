@@ -97,97 +97,67 @@ pageSections:
   - _component: page-sections/features/feature-grid
     id: products
     eyebrowIcon: {}
-    eyebrowText: 產品系列
-    heading: 從接點到完整接地系統
-    subtext: 五大類產品涵蓋熱熔接、施工工具、接地組件、一般接地材料與避雷配件。
+    eyebrowText: 主打產品
+    heading: Exoweld W／G 系列
+    subtext: 依導體與接點形式，快速找到適用的鋁熱熔接方案。
     featureGrid:
       features:
         - _component: page-sections/features/feature-grid/feature-item
-          title: Exoweld 熱熔接
-          description: W、G、S、R、P、B、E 系列，對應不同導體與接點形式。
+          title: Exoweld W 系列
+          description: WE、WT、WX、WP、WL、WXL 等銅導體接點形式。
           link: /products/exoweld/
-          eyebrowIcon:
-            _component: building-blocks/core-elements/icon
-            name: bolt
-            size: 2xl
-            color: brand
-            background: true
+          image:
+            source: /src/assets/images/ccelect/legacy/product-exoweld-w.jpg
+            alt: Exoweld W 系列銅導體接點與規格示意
+            aspectRatio: square
+            rounded: true
         - _component: page-sections/features/feature-grid/feature-item
-          title: 熱熔接材料工具
-          description: 熔模、模夾、熔接劑、點火清模及現場施工工具。
-          link: /products/welding-tools/
-          eyebrowIcon:
-            _component: building-blocks/core-elements/icon
-            name: wrench-screwdriver
-            size: 2xl
-            color: brand
-            background: true
-        - _component: page-sections/features/feature-grid/feature-item
-          title: 熱熔接型接地組件
-          description: 埋入型接地板與接地端子板等工程組件。
-          link: /products/grounding-components/
-          eyebrowIcon:
-            _component: building-blocks/core-elements/icon
-            name: square-3-stack-3d
-            size: 2xl
-            color: brand
-            background: true
-        - _component: page-sections/features/feature-grid/feature-item
-          title: 一般接地材料
-          description: 接地棒、銅排、壓接頭、固定夾、測試儀表與附屬材料。
-          link: /products/grounding-materials/
-          eyebrowIcon:
-            _component: building-blocks/core-elements/icon
-            name: circle-stack
-            size: 2xl
-            color: brand
-            background: true
-        - _component: page-sections/features/feature-grid/feature-item
-          title: 避雷組件
-          description: 導線接續、固定、支撐及多用途銅合金配件。
-          link: /products/lightning-protection/
-          eyebrowIcon:
-            _component: building-blocks/core-elements/icon
-            name: shield-check
-            size: 2xl
-            color: brand
-            background: true
+          title: Exoweld G 系列
+          description: GEE、GET、GST、GEY、GEP 等導體與接地極連接形式。
+          link: /products/exoweld/
+          image:
+            source: /src/assets/images/ccelect/legacy/product-exoweld-g.jpg
+            alt: Exoweld G 系列導體與接地極連接規格示意
+            aspectRatio: square
+            rounded: true
+      gridMaxWidth: xl
     maxContentWidth: 2xl
     paddingVertical: 4xl
     colorScheme: light
     backgroundColor: base
     contentBackground: false
     rounded: false
-  - _component: page-sections/features/feature-carousel-grid
+  - _component: page-sections/features/feature-grid
     id: project-fields
+    eyebrowIcon: {}
     eyebrowText: 歷史實績
     heading: 橫跨交通、能源與製造業
     subtext: 以下為舊官網記載之歷史供應、測量、教育訓練與現場服務範圍。
-    maxContentWidth: 3xl
-    paddingVertical: 2xl
+    featureGrid:
+      features:
+        - _component: page-sections/features/feature-grid/feature-item
+          title: 台灣高鐵工程
+          description: 2000–2006 年接地、避雷材料供應，以及教育訓練與現場測量工作。
+          link: /projects/
+          image:
+            source: /src/assets/images/ccelect/legacy/site-installation-1-enhanced.png
+            alt: 台灣高鐵接地與避雷工程現場紀錄
+            aspectRatio: square
+            rounded: true
+        - _component: page-sections/features/feature-grid/feature-item
+          title: 捷運與機場捷運工程
+          description: 台北捷運各線及桃園機場捷運之熔接、接地與避雷工程需求。
+          link: /projects/
+          image:
+            source: /src/assets/images/ccelect/legacy/site-installation-3-enhanced.png
+            alt: 捷運軌道接地工程現場紀錄
+            aspectRatio: square
+            rounded: true
+      gridMaxWidth: xl
+    maxContentWidth: 2xl
+    paddingVertical: 4xl
     colorScheme: light
     backgroundColor: highlight-grid
-    slides:
-      - cards:
-          - heading: 軌道與交通
-            text: 台灣高鐵、捷運各線及桃園機場捷運之接地、避雷材料與熔接需求。
-            eyebrowIcon:
-              name: truck
-              color: brand
-              background: true
-          - heading: 電力工程
-            text: 水力、火力、複循環與超高壓變電所等歷史工程服務。
-            eyebrowIcon:
-              name: bolt
-              color: brand
-              background: true
-          - heading: 科技製造
-            text: 積體電路與光電廠之接地材料、現場需求與技術支援。
-            eyebrowIcon:
-              name: cpu-chip
-              color: brand
-              background: true
-    backgroundColorHeight: full
     contentBackground: false
     rounded: false
   - _component: page-sections/features/feature-grid
