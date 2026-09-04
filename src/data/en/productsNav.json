@@ -42,7 +42,11 @@
         { "name": "Copper busbars", "path": "/en/products/grounding-materials/", "children": [] },
         { "name": "C-clamps", "path": "/en/products/grounding-materials/", "children": [] },
         { "name": "Cable clamps", "path": "/en/products/grounding-materials/", "children": [] },
-        { "name": "Earth resistance meters", "path": "/en/products/grounding-materials/", "children": [] },
+        {
+          "name": "Earth resistance meters",
+          "path": "/en/products/grounding-materials/",
+          "children": []
+        },
         { "name": "Other materials", "path": "/en/products/grounding-materials/", "children": [] }
       ]
     },
@@ -75,13 +79,21 @@
           "path": "/en/products/lightning-protection/",
           "children": []
         },
-        { "name": "Terminal Support", "path": "/en/products/lightning-protection/", "children": [] },
+        {
+          "name": "Terminal Support",
+          "path": "/en/products/lightning-protection/",
+          "children": []
+        },
         {
           "name": "Bronze Large Multi Purpose Clamp",
           "path": "/en/products/lightning-protection/",
           "children": []
         },
-        { "name": "Clamp to Flat Surface", "path": "/en/products/lightning-protection/", "children": [] }
+        {
+          "name": "Clamp to Flat Surface",
+          "path": "/en/products/lightning-protection/",
+          "children": []
+        }
       ]
     }
   ]

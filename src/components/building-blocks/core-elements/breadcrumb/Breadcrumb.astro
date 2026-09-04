@@ -27,14 +27,19 @@ if (!_component && items.length === 0) return;
 
         return (
           <li class="breadcrumb-item">
-            {
-              !isLast && item.href ? (
-                <a href={item.href}>{item.label}</a>
-              ) : (
-                <span aria-current={isLast ? "page" : undefined}>{item.label}</span>
-              )
-            }
-            {!isLast && <span class="breadcrumb-separator" aria-hidden="true">/</span>}
+            {!isLast && item.href ? (
+              <a href={item.href}>{item.label}</a>
+            ) : (
+              <span aria-current={isLast ? "page" : undefined}>{item.label}</span>
+            )}
+            {!isLast && (
+              <span
+                class="breadcrumb-separator"
+                aria-hidden="true"
+              >
+                /
+              </span>
+            )}
           </li>
         );
       })

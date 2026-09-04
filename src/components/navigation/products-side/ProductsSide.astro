@@ -14,4 +14,7 @@ const locale = resolveLocaleFromUrl(Astro.url.pathname);
 const { navData } = getProductsNav(locale);
 ---
 
-<Side navData={navData} class="products-side-nav" />
+<Side
+  navData={navData}
+  class="products-side-nav"
+/>

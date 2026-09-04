@@ -75,13 +75,21 @@
           "path": "/ja/products/lightning-protection/",
           "children": []
         },
-        { "name": "Terminal Support", "path": "/ja/products/lightning-protection/", "children": [] },
+        {
+          "name": "Terminal Support",
+          "path": "/ja/products/lightning-protection/",
+          "children": []
+        },
         {
           "name": "Bronze Large Multi Purpose Clamp",
           "path": "/ja/products/lightning-protection/",
           "children": []
         },
-        { "name": "Clamp to Flat Surface", "path": "/ja/products/lightning-protection/", "children": [] }
+        {
+          "name": "Clamp to Flat Surface",
+          "path": "/ja/products/lightning-protection/",
+          "children": []
+        }
       ]
     }
   ]
