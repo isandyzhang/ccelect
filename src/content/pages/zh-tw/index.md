@@ -11,89 +11,11 @@ keywords:
   - 接地
   - 避雷
 pageSections:
-  - _component: page-sections/builders/custom-section
-    id: homepage-banners
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: sm
-    colorScheme: inherit
-    backgroundColor: base
-    contentBackground: false
-    rounded: false
-    contentSections:
-      - _component: building-blocks/wrappers/carousel
-        label: 首頁廣告輪播
-        autoPlay: true
-        loop: true
-        showIndicators: true
-        indicatorStyle: dots
-        showArrows: true
-        slideWidthPercent: 100
-        slides:
-          - contentSections:
-              - _component: building-blocks/core-elements/image
-                source: /images/ccelect/adv_1_chinese.jpg
-                alt: 火泥熔接 — 現代點金術
-                width: 1150
-                height: 403
-                aspectRatio: horizontal-strip
-                priority: true
-                rounded: true
-          - contentSections:
-              - _component: building-blocks/core-elements/image
-                source: /images/ccelect/adv_2_chinese.jpg
-                alt: 火泥熔接 避雷 接地 — 熱熔接 接地詢問
-                width: 1150
-                height: 403
-                aspectRatio: horizontal-strip
-                rounded: true
-          - contentSections:
-              - _component: building-blocks/core-elements/image
-                source: /images/ccelect/adv_3_chinese.jpg
-                alt: 火泥熔接 避雷 接地 — 現場施工
-                width: 1150
-                height: 403
-                aspectRatio: horizontal-strip
-                rounded: true
-  - _component: page-sections/heroes/hero-center
-    eyebrowIcon:
-      _component: building-blocks/core-elements/icon
-      name: bolt
-      size: 2xl
-      color: brand
-      background: true
-    eyebrowText: 集集電工業股份有限公司
-    heading: 接地鋁熱熔接與<br /><span class="highlight-text">接地／避雷解決方案</span>
-    headingSize: 3xl
-    subtext: >-
-      自 1979 年投入接地工程材料與技術，提供 Exoweld 熱熔接系統、接地與避雷組件、接地測量、設計諮詢及現場技術支援。
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        text: 瀏覽產品
-        hideText: false
-        link: /products/
-        iconName: arrow-right
-        iconPosition: after
-        variant: primary
-        size: md
-      - _component: building-blocks/core-elements/button
-        text: 洽詢專案
-        hideText: false
-        link: /contact/
-        iconName: arrow-right
-        iconPosition: after
-        variant: tertiary
-        size: md
-    image: {}
-    icons: []
-    backgroundDecoration: true
-    sectionHeight: default
-    maxContentWidth: lg
-    colorScheme: inherit
-    backgroundColor: highlight-grid
-    contentBackground: true
-    rounded: false
-    paddingVertical: md
+  - _component: page-sections/heroes/hero-image-banner
+    id: homepage-banner
+    imageSource: /images/ccelect/banner.png
+    imageAlt: 接地鋁熱熔接與接地／避雷解決方案
+    heading: 接地鋁熱熔接與<br />接地／避雷解決方案
   - _component: page-sections/features/feature-grid
     id: products
     eyebrowIcon: {}
@@ -106,8 +28,9 @@ pageSections:
           title: Exoweld W 系列
           description: WE、WT、WX、WP、WL、WXL 等銅導體接點形式。
           link: /products/exoweld/
+          columnSpan: 6
           image:
-            source: /src/assets/images/ccelect/legacy/product-exoweld-w.jpg
+            source: /images/ccelect/prd01-enhanced.png
             alt: Exoweld W 系列銅導體接點與規格示意
             aspectRatio: square
             rounded: true
@@ -115,12 +38,13 @@ pageSections:
           title: Exoweld G 系列
           description: GEE、GET、GST、GEY、GEP 等導體與接地極連接形式。
           link: /products/exoweld/
+          columnSpan: 6
           image:
-            source: /src/assets/images/ccelect/legacy/product-exoweld-g.jpg
+            source: /images/ccelect/prd01-enhanced.png
             alt: Exoweld G 系列導體與接地極連接規格示意
             aspectRatio: square
             rounded: true
-      gridMaxWidth: xl
+      gridMaxWidth: none
     maxContentWidth: 2xl
     paddingVertical: 4xl
     colorScheme: light
@@ -130,7 +54,7 @@ pageSections:
   - _component: page-sections/features/feature-grid
     id: project-fields
     eyebrowIcon: {}
-    eyebrowText: 歷史實績
+    eyebrowText: 工程實績
     heading: 橫跨交通、能源與製造業
     subtext: 以下為舊官網記載之歷史供應、測量、教育訓練與現場服務範圍。
     featureGrid:
@@ -140,7 +64,7 @@ pageSections:
           description: 2000–2006 年接地、避雷材料供應，以及教育訓練與現場測量工作。
           link: /projects/
           image:
-            source: /src/assets/images/ccelect/legacy/site-installation-1-enhanced.png
+            source: /images/ccelect/project-hsr-enhanced.png
             alt: 台灣高鐵接地與避雷工程現場紀錄
             aspectRatio: square
             rounded: true
@@ -149,11 +73,20 @@ pageSections:
           description: 台北捷運各線及桃園機場捷運之熔接、接地與避雷工程需求。
           link: /projects/
           image:
-            source: /src/assets/images/ccelect/legacy/site-installation-3-enhanced.png
+            source: /images/ccelect/project-metro-enhanced.png
             alt: 捷運軌道接地工程現場紀錄
             aspectRatio: square
             rounded: true
-      gridMaxWidth: xl
+        - _component: page-sections/features/feature-grid/feature-item
+          title: 台電工程
+          description: 水力、複循環、核電與超高壓變電所等接地／避雷材料供應。
+          link: /projects/
+          image:
+            source: /images/ccelect/project-taipower-enhanced.png
+            alt: 台電工程接地與避雷現場紀錄
+            aspectRatio: square
+            rounded: true
+      gridMaxWidth: 3xl
     maxContentWidth: 2xl
     paddingVertical: 4xl
     colorScheme: light

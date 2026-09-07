@@ -487,16 +487,21 @@ function createNavItemData(item, level, parentGroupId) {
         padding: 0 var(--spacing-lg);
 
         .mobile-logo {
+          flex: 1 1 auto;
+          min-width: 0;
+          max-width: calc(100% - 3.5rem);
+
           svg {
-            height: 100%;
-            width: 100%;
-            max-height: 3em;
+            height: auto;
+            width: auto;
+            max-height: 2.5rem;
+            max-width: 100%;
           }
           img,
           .mobile-logo-image {
             height: auto;
-            max-height: 3em;
-            max-width: min(20em, 100%);
+            max-height: 2.5rem;
+            max-width: 100%;
             width: auto;
           }
         }
@@ -748,28 +753,34 @@ function createNavItemData(item, level, parentGroupId) {
     }
 
     .mobile .mobile-header .mobile-logo .mobile-logo-image {
-      display: flex;
+      display: block;
       margin-top: 0 !important;
-      max-width: none;
-      width: 100%;
+      max-width: 100%;
+      overflow: visible;
+      width: auto;
     }
 
     .mobile .mobile-header .mobile-logo .mobile-logo-image > .image-inner {
-      width: 100%;
+      overflow: visible;
+      width: auto;
+      max-width: 100%;
     }
 
     .mobile .mobile-header .mobile-logo .mobile-logo-image picture {
       display: block;
-      width: 100%;
+      width: auto;
+      max-width: 100%;
     }
 
     .mobile .mobile-header .mobile-logo .mobile-logo-image img,
     .mobile .mobile-header .mobile-logo .mobile-logo-image svg,
     .mobile .mobile-header .mobile-logo svg {
       display: block;
-      height: 2rem;
+      height: 2.25rem;
       max-width: 100%;
       width: auto;
+      object-fit: contain;
+      object-position: left center;
     }
 
     .mobile-overlay {

@@ -1,0 +1,16 @@
+id:
+  type: text
+  comment: Unique identifier for the section which can be used as an anchor link.
+imageSource:
+  type: image
+  comment: Background image for the banner.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageAlt:
+  type: textarea
+  comment: Alternative text for the background image.
+heading:
+  type: markdown
+  comment: Heading text shown in the bottom-left corner. Use a line break for two lines.

@@ -1,0 +1,9 @@
+label: Hero Image Banner
+icon: image
+description: Full-bleed banner image with bottom-left heading and hover overlay.
+value:
+  _component: page-sections/heroes/hero-image-banner
+  id:
+  imageSource: ""
+  imageAlt: ""
+  heading: Heading placeholder

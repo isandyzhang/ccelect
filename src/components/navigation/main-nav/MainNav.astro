@@ -195,19 +195,49 @@ const mobileNavData = [
         border-top-right-radius: var(--radius-md);
         border-bottom-right-radius: var(--radius-md);
         pointer-events: all;
+        min-width: 0;
 
         .main-nav-logo {
           margin-top: 0;
+          max-width: 100%;
+          overflow: visible;
+
+          > .image-inner {
+            overflow: visible;
+            width: auto;
+            max-width: 100%;
+
+            picture {
+              width: auto;
+              max-width: 100%;
+            }
+          }
+        }
+
+        > a.main-nav-logo-link {
+          flex: 0 1 auto;
+          min-width: 0;
+          max-width: min(286px, 100%);
         }
 
         > a > .image img {
+          display: block;
           height: 3.25rem;
-          max-width: 286px;
           width: auto;
+          max-width: 100%;
+          object-fit: contain;
+          object-position: left center;
         }
 
-        > a {
-          flex-shrink: 0;
+        @container (max-width: 768px) {
+          gap: var(--spacing-sm);
+          padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) var(--spacing-lg);
+          border-top-left-radius: var(--radius-2xl);
+          border-bottom-left-radius: var(--radius-2xl);
+
+          > a > .image img {
+            height: 2.25rem;
+          }
         }
 
         .button-group {
@@ -231,6 +261,8 @@ const mobileNavData = [
         justify-content: flex-end;
         width: 100%;
         flex-grow: 1;
+        flex-shrink: 1;
+        min-width: 0;
         > .button-group {
           container-type: normal;
           flex: 0 0 auto;
