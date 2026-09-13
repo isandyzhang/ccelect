@@ -77,17 +77,23 @@ const localeNames: Record<Locale, string> = {
 </nav>
 
 <script>
-  document.querySelectorAll<HTMLDetailsElement>(".lang-switcher details").forEach((details) => {
-    document.addEventListener("click", (event) => {
-      if (!details.contains(event.target as Node)) details.removeAttribute("open");
-    });
+  // Delegate events so newly rendered language menus work after a locale change.
+  document.addEventListener("click", (event) => {
+    document
+      .querySelectorAll<HTMLDetailsElement>(".lang-switcher details[open]")
+      .forEach((details) => {
+        if (!details.contains(event.target as Node)) details.removeAttribute("open");
+      });
+  });
 
-    details.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        details.removeAttribute("open");
-        details.querySelector("summary")?.focus();
-      }
-    });
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !(event.target instanceof Element)) return;
+
+    const details = event.target.closest<HTMLDetailsElement>(".lang-switcher details");
+
+    if (!details) return;
+    details.removeAttribute("open");
+    details.querySelector("summary")?.focus();
   });
 </script>
 

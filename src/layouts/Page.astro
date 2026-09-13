@@ -83,7 +83,7 @@ const sections = frontmatter?.pageSections ?? [];
     slot="head"
   />
   <MainNavigation
-    transition:persist="site-main-nav"
+    transition:persist={`site-main-nav-${locale}`}
     {...mainNav}
   />
 

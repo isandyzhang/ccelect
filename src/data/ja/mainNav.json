@@ -38,17 +38,6 @@
   "buttonSections": [
     {
       "_component": "building-blocks/core-elements/button",
-      "text": "検索",
-      "hideText": true,
-      "link": "/ja/search/",
-      "iconName": "magnifying-glass",
-      "iconColor": "default",
-      "iconPosition": "before",
-      "variant": "secondary",
-      "size": "md"
-    },
-    {
-      "_component": "building-blocks/core-elements/button",
       "text": "お問い合わせ",
       "hideText": false,
       "link": "/ja/contact/",

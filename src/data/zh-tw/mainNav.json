@@ -38,17 +38,6 @@
   "buttonSections": [
     {
       "_component": "building-blocks/core-elements/button",
-      "text": "搜尋",
-      "hideText": true,
-      "link": "/search/",
-      "iconName": "magnifying-glass",
-      "iconColor": "default",
-      "iconPosition": "before",
-      "variant": "secondary",
-      "size": "md"
-    },
-    {
-      "_component": "building-blocks/core-elements/button",
       "text": "聯絡我們",
       "hideText": false,
       "link": "/contact/",

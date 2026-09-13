@@ -40,9 +40,9 @@ const hasVideo = typeof videoSource === "string" && videoSource.trim() !== "";
     background={true}
     positionVertical="center"
     positionHorizontal="center"
-    {...(useDefaultEditableBinding
+    {...useDefaultEditableBinding
       ? { "data-prop-src": "imageSource", "data-prop-alt": "imageAlt" }
-      : {})}
+      : {}}
   />
   {
     hasVideo && (
@@ -58,7 +58,8 @@ const hasVideo = typeof videoSource === "string" && videoSource.trim() !== "";
   <div
     class="hero-image-banner__overlay"
     aria-hidden="true"
-  />
+  >
+  </div>
   {
     hasCopy && (
       <div class="hero-image-banner__copy">

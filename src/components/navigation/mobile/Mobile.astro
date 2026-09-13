@@ -9,6 +9,7 @@ const {
   logoAlternateSource,
   logoAlt,
   navData = [],
+  persistKey,
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
   _component,
@@ -71,6 +72,7 @@ function createNavItemData(item, level, parentGroupId) {
 </label>
 
 <nav
+  transition:persist={persistKey ?? navInstanceId}
   class:list={["mobile", className]}
   data-toggle-id={toggleId}
   {...htmlAttributes}
@@ -304,13 +306,13 @@ function createNavItemData(item, level, parentGroupId) {
   import { onPageLoad } from "@component-utils/onPageLoad";
 
   // Create overlays container for proper z-index stacking
-  function getOrCreateOverlaysContainer() {
-    let container = document.getElementById("overlays-container");
+  function getOrCreateOverlaysContainer(doc: Document = document) {
+    let container = doc.getElementById("overlays-container");
     if (!container) {
-      container = document.createElement("div");
+      container = doc.createElement("div");
       container.id = "overlays-container";
       container.style.cssText = "position: relative; z-index: 9999;";
-      document.body.insertBefore(container, document.body.firstChild);
+      doc.body.insertBefore(container, doc.body.firstChild);
     }
     return container;
   }
@@ -446,6 +448,14 @@ function createNavItemData(item, level, parentGroupId) {
       });
     });
   }
+
+  // Keep the incoming overlay outside the persisted header before Astro matches nodes.
+  document.addEventListener("astro:before-swap", (event) => {
+    const { newDocument } = event as Event & { newDocument: Document };
+    const container = getOrCreateOverlaysContainer(newDocument);
+
+    newDocument.querySelectorAll(".mobile").forEach((nav) => container.appendChild(nav));
+  });
 
   onPageLoad(initMobileNavigation);
 </script>

@@ -25,6 +25,20 @@ const pageSchema = z.object({
   keywords: z.array(z.string()).optional(),
   image: z.string().optional(),
   canonical: z.string().optional(),
+  type: z.enum(["website", "article"]).optional(),
+  noindex: z.boolean().optional(),
+  article: z
+    .object({
+      publishedTime: z.string().nullable().optional(),
+      modifiedTime: z.string().nullable().optional(),
+      author: z
+        .union([z.string(), z.array(z.string())])
+        .nullable()
+        .optional(),
+      tags: z.array(z.string()).nullable().optional(),
+    })
+    .nullable()
+    .optional(),
   pageSections: z.array(contentBlockSchema).optional(),
   heroSections: z.array(contentBlockSchema).optional(),
   ctaSections: z.array(contentBlockSchema).optional(),

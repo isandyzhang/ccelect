@@ -24,54 +24,72 @@ const {
   _component,
   ...htmlAttributes
 } = Astro.props;
+
+const hasTitle = Boolean(title?.trim());
+const hasDescription = Boolean(description?.trim());
+const hasEyebrow = Boolean(eyebrowText?.trim());
+const hasEyebrowIcon = Boolean(eyebrowIcon?.name);
+const hasCopy = hasTitle || hasDescription || hasEyebrow || hasEyebrowIcon;
+const isShowcase = Boolean(image?.source) && !hasCopy;
 ---
 
 <BentoBoxGridItem
   columnSpan={columnSpan}
   rowSpan={rowSpan}
-  class="feature-grid-item"
+  class:list={["feature-grid-item", isShowcase && "feature-grid-item-showcase"]}
   {...htmlAttributes}
 >
   <Card
-    class:list={["feature-item", className]}
-    paddingHorizontal="lg"
-    paddingVertical="lg"
+    class:list={["feature-item", isShowcase && "feature-item-showcase", className]}
+    paddingHorizontal={isShowcase ? "" : "lg"}
+    paddingVertical={isShowcase ? "" : "lg"}
     rounded
-    border
-    backgroundColor="base"
+    border={!isShowcase}
+    backgroundColor={isShowcase ? "" : "base"}
     link={link}
   >
     <Fragment slot="before">
+      {isShowcase && image.alt && <span class="visually-hidden">{image.alt}</span>}
       <Image
         {...image}
         data-prop-src="image.source"
         data-prop-alt="image.alt"
       />
     </Fragment>
-    <Icon
-      {...eyebrowIcon}
-      data-prop="eyebrowIcon"
-    />
-    <SimpleText
-      class="eyebrow"
-      data-prop="eyebrowText"
-      text={eyebrowText}
-    />
-    <Heading
-      class="feature-title"
-      level="h3"
-      size="md"
-      alignmentHorizontal="start"
-      data-prop="title"
-    >
-      {title}
-    </Heading>
-    <Text
-      class="feature-description"
-      alignmentHorizontal="start"
-      data-prop="description"
-      text={description}
-    />
+    {
+      !isShowcase && (
+        <>
+          <Icon
+            {...eyebrowIcon}
+            data-prop="eyebrowIcon"
+          />
+          <SimpleText
+            class="eyebrow"
+            data-prop="eyebrowText"
+            text={eyebrowText}
+          />
+          {hasTitle && (
+            <Heading
+              class="feature-title"
+              level="h3"
+              size="md"
+              alignmentHorizontal="start"
+              data-prop="title"
+            >
+              {title}
+            </Heading>
+          )}
+          {hasDescription && (
+            <Text
+              class="feature-description"
+              alignmentHorizontal="start"
+              data-prop="description"
+              text={description}
+            />
+          )}
+        </>
+      )
+    }
   </Card>
 </BentoBoxGridItem>
 
@@ -97,6 +115,24 @@ const {
 
     .feature-description {
       margin-top: 0;
+    }
+
+    .feature-item-showcase {
+      .card-outer-content {
+        display: none;
+      }
+
+      .before-content,
+      .image {
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        height: auto;
+        object-fit: contain;
+        width: 100%;
+      }
     }
   }
 </style>

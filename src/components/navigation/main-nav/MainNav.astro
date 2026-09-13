@@ -84,6 +84,7 @@ const mobileNavData = [
     logoAlt={logoAlt}
     navData={mobileNavData}
     class="mobile-main-nav"
+    persistKey={`mobile-main-nav-${locale}`}
     useDefaultEditableBinding={false}
   />
 </CustomSection>
@@ -102,44 +103,46 @@ const mobileNavData = [
     const siteLocale =
       document.querySelector<HTMLMetaElement>('meta[name="site-locale"]')?.content ?? "zh-tw";
 
-    navRoot.querySelectorAll<HTMLAnchorElement>("a[href]").forEach((link) => {
-      const href = link.getAttribute("href");
+    document
+      .querySelectorAll<HTMLAnchorElement>(".main-nav a[href], .mobile-main-nav a[href]")
+      .forEach((link) => {
+        const href = link.getAttribute("href");
 
-      if (!href || href.startsWith("#") || href.includes("mailto:")) return;
+        if (!href || href.startsWith("#") || href.includes("mailto:")) return;
 
-      if (link.closest(".language-menu")) {
-        const locale = link.dataset.locale;
+        if (link.closest(".language-menu")) {
+          const locale = link.dataset.locale;
 
-        if (!locale || !isLocale(locale)) return;
+          if (!locale || !isLocale(locale)) return;
 
-        link.href = localizedHref(locale, pageKey);
-        const isActive = locale === siteLocale;
+          link.href = localizedHref(locale, pageKey);
+          const isActive = locale === siteLocale;
 
-        link.classList.toggle("is-active", isActive);
+          link.classList.toggle("is-active", isActive);
 
-        if (isActive) {
+          if (isActive) {
+            link.setAttribute("aria-current", "page");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+
+          const check = link.querySelector(".check");
+
+          if (check) {
+            check.textContent = isActive ? "✓" : "";
+          }
+
+          return;
+        }
+
+        const linkPath = new URL(href, window.location.origin).pathname;
+
+        if (linkPath === pathname) {
           link.setAttribute("aria-current", "page");
         } else {
           link.removeAttribute("aria-current");
         }
-
-        const check = link.querySelector(".check");
-
-        if (check) {
-          check.textContent = isActive ? "✓" : "";
-        }
-
-        return;
-      }
-
-      const linkPath = new URL(href, window.location.origin).pathname;
-
-      if (linkPath === pathname) {
-        link.setAttribute("aria-current", "page");
-      } else {
-        link.removeAttribute("aria-current");
-      }
-    });
+      });
 
     const summary = navRoot.querySelector(".lang-switcher summary");
     const summaryLabel = navRoot.querySelector(
@@ -156,25 +159,6 @@ const mobileNavData = [
   }
 
   onPageLoad(syncPersistedMainNav);
-
-  function setupMainNavScrollState() {
-    const navRoot = document.querySelector(".main-nav");
-
-    if (!(navRoot instanceof HTMLElement)) return;
-
-    const updateScrolledState = () => {
-      navRoot.classList.toggle("is-scrolled", window.scrollY > 24);
-    };
-
-    updateScrolledState();
-
-    if (navRoot.dataset.scrollBound === "true") return;
-
-    navRoot.dataset.scrollBound = "true";
-    window.addEventListener("scroll", updateScrolledState, { passive: true });
-  }
-
-  onPageLoad(setupMainNavScrollState);
 </script>
 
 <style is:global>
@@ -189,27 +173,25 @@ const mobileNavData = [
 
       .desktop-main-nav.bar,
       .desktop-button-group.button-group {
-        @container (max-width: 768px) {
+        @container site-nav (max-width: 70rem) {
           display: none;
         }
       }
 
       .nav-hamburger.mobile-button {
-        @container (min-width: 769px) {
+        @container site-nav (width > 70rem) {
           display: none;
         }
       }
 
       > .outer-content > .content {
         align-items: center;
-        container-type: inline-size;
+        container: site-nav / inline-size;
         display: flex;
         gap: var(--spacing-md);
-        background-color: color-mix(in srgb, var(--color-bg) 78%, transparent);
-        backdrop-filter: blur(12px) saturate(1.15);
-        -webkit-backdrop-filter: blur(12px) saturate(1.15);
-        border: 2px solid color-mix(in srgb, var(--color-border-subtle) 70%, transparent);
-        box-shadow: 10px 10px 29px 10px color-mix(in srgb, var(--color-shadow) 55%, transparent);
+        background-color: var(--color-bg-surface);
+        border: 2px solid var(--color-border-subtle);
+        box-shadow: 10px 10px 29px 10px var(--color-shadow);
         padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) var(--spacing-2xl);
         border-top-left-radius: var(--radius-4xl);
         border-bottom-left-radius: var(--radius-4xl);
@@ -217,11 +199,6 @@ const mobileNavData = [
         border-bottom-right-radius: var(--radius-md);
         pointer-events: all;
         min-width: 0;
-        transition:
-          background-color 220ms ease,
-          border-color 220ms ease,
-          box-shadow 220ms ease,
-          backdrop-filter 220ms ease;
 
         .main-nav-logo {
           margin-top: 0;
@@ -241,9 +218,9 @@ const mobileNavData = [
         }
 
         > a.main-nav-logo-link {
-          flex: 0 1 auto;
+          flex: 0 1 240px;
           min-width: 0;
-          max-width: min(286px, 100%);
+          max-width: 240px;
         }
 
         > a > .image img {
@@ -255,7 +232,7 @@ const mobileNavData = [
           object-position: left center;
         }
 
-        @container (max-width: 768px) {
+        @media (max-width: 75rem) {
           gap: var(--spacing-sm);
           padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) var(--spacing-lg);
           border-top-left-radius: var(--radius-2xl);
@@ -280,28 +257,47 @@ const mobileNavData = [
         }
       }
 
+      .nav-hamburger {
+        flex: 0 0 auto;
+      }
+
+      .desktop-main-nav.bar .bar-list {
+        gap: var(--spacing-xs);
+      }
+
+      .desktop-main-nav.bar .nav-item > a,
+      .desktop-main-nav.bar .nav-item > .nav-item-trigger {
+        padding-inline: var(--spacing-sm);
+      }
+
+      @media (max-width: 30rem) {
+        > .outer-content > .content {
+          gap: var(--spacing-xs);
+          padding-inline: var(--spacing-sm);
+        }
+
+        > .outer-content > .content > .nav-end {
+          gap: var(--spacing-xs);
+        }
+
+        .lang-switcher .language-icon {
+          display: none;
+        }
+      }
+
       > .outer-content > .content > .nav-end {
         align-items: center;
         display: flex;
         gap: var(--spacing-md);
         justify-content: flex-end;
-        width: 100%;
-        flex-grow: 1;
-        flex-shrink: 1;
+        flex: 1 0 auto;
+        width: auto;
         min-width: 0;
         > .button-group {
           container-type: normal;
           flex: 0 0 auto;
           width: auto;
         }
-      }
-
-      &.is-scrolled > .outer-content > .content {
-        background-color: var(--color-bg);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        border-color: var(--color-border-subtle);
-        box-shadow: 10px 10px 29px 10px var(--color-shadow);
       }
     }
   }

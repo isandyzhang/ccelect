@@ -40,35 +40,26 @@ pageSections:
     id: products
     eyebrowIcon: {}
     eyebrowText: 主打產品
-    heading: Exoweld W／G 系列
-    subtext: 依導體與接點形式，快速找到適用的鋁熱熔接方案。
+    heading: Exoweld 熱熔接系統
+    subtext: >-
+      火泥熔模與銅導體熔接方案，涵蓋 W 系列銅導體接點（WE、WT、WX、WP、WL、WXL）
+      與 G 系列導體／接地極連接（GEE、GET、GST、GEY、GEP）。
     featureGrid:
       features:
         - _component: page-sections/features/feature-grid/feature-item
-          title: Exoweld W 系列
-          description: WE、WT、WX、WP、WL、WXL 等銅導體接點形式。
+          title: ''
+          description: ''
           link: /products/exoweld/
-          columnSpan: 6
+          columnSpan: 12
           image:
             source: /images/ccelect/prd-display-enhanced.png
-            alt: Exoweld 火泥熔模與銅導體熔接成品
-            aspectRatio: square
-            rounded: true
-        - _component: page-sections/features/feature-grid/feature-item
-          title: Exoweld G 系列
-          description: GEE、GET、GST、GEY、GEP 等導體與接地極連接形式。
-          link: /products/exoweld/
-          columnSpan: 6
-          image:
-            source: /images/ccelect/prd-display-enhanced.png
-            alt: Exoweld 火泥熔模與接地連接熔接成品
-            aspectRatio: square
-            rounded: true
+            alt: Exoweld 火泥熔模、熔接成品與銅導體接點
+            rounded: false
       gridMaxWidth: none
     maxContentWidth: 2xl
-    paddingVertical: 4xl
-    colorScheme: light
-    backgroundColor: base
+    paddingVertical: none
+    colorScheme: dark
+    backgroundColor: none
     contentBackground: false
     rounded: false
   - _component: page-sections/features/feature-grid

@@ -38,6 +38,12 @@ export default defineConfig({
       name: "builder-preview-dev-only",
       hooks: {
         "astro:config:setup": ({ command, injectRoute, updateConfig }) => {
+          if (command === "dev" || process.env.DISABLE_COMPONENT_DOCS !== "true") {
+            injectRoute({
+              pattern: "/component-docs/component-builder",
+              entrypoint: "./src/component-docs/pages/component-builder.astro",
+            });
+          }
           if (command === "dev") {
             injectRoute({
               pattern: "/component-docs/builder-preview",
