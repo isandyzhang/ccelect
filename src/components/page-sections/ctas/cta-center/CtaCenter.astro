@@ -79,13 +79,22 @@ const {
         position: relative;
         z-index: 0;
       }
+
+      /* Keep content above absolute section backgrounds */
       .outer-content > .content {
-        position: static;
+        position: relative;
+        z-index: var(--layer-1);
       }
 
       .outer-content > .radial-background-wrapper,
       .outer-content > .radial-background-wrapper > .radial-background {
         z-index: var(--layer-below);
+      }
+
+      .outer-content > .background,
+      .outer-content > .background-overlay,
+      .outer-content > .background-image {
+        z-index: 0;
       }
 
       .icon.align-center {

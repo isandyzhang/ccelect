@@ -3,7 +3,7 @@ id:
   comment: Unique identifier for the section which can be used as an anchor link.
 imageSource:
   type: image
-  comment: Background image for the banner.
+  comment: Fallback / poster image for the banner.
   options:
     paths:
       uploads: src/assets/images
@@ -11,6 +11,17 @@ imageSource:
 imageAlt:
   type: textarea
   comment: Alternative text for the background image.
+videoSource:
+  type: text
+  comment: Optional looping background video path under /public (e.g. /videos/ccelect/banner.mp4).
 heading:
   type: markdown
-  comment: Heading text shown in the bottom-left corner. Use a line break for two lines.
+  comment: Heading text shown over the banner. Use a line break for two lines.
+subtext:
+  type: textarea
+  comment: Short supporting description shown beneath the heading.
+buttonSections:
+  type: array
+  comment: Call-to-action buttons under the copy.
+  options:
+    structures: _structures.buttonSections

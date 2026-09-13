@@ -1,9 +1,12 @@
 label: Hero Image Banner
 icon: image
-description: Full-bleed banner image with bottom-left heading and hover overlay.
+description: Full-bleed banner image/video with heading, description, and CTAs.
 value:
   _component: page-sections/heroes/hero-image-banner
   id:
   imageSource: ""
   imageAlt: ""
+  videoSource: ""
   heading: Heading placeholder
+  subtext: Short supporting description.
+  buttonSections: []

@@ -15,7 +15,27 @@ pageSections:
     id: homepage-banner
     imageSource: /images/ccelect/banner.png
     imageAlt: 接地鋁熱熔接與接地／避雷解決方案
+    videoSource: /videos/ccelect/video.mp4
     heading: 接地鋁熱熔接與<br />接地／避雷解決方案
+    subtext: >-
+      自 1979 年投入接地工程材料與技術，提供 Exoweld 熱熔接系統、接地與避雷組件、接地測量、設計諮詢及現場技術支援。
+    buttonSections:
+      - _component: building-blocks/core-elements/button
+        text: 瀏覽產品
+        hideText: false
+        link: /products/
+        iconName: arrow-right
+        iconPosition: after
+        variant: primary
+        size: md
+      - _component: building-blocks/core-elements/button
+        text: 關於我們
+        hideText: false
+        link: /about/
+        iconName: arrow-right
+        iconPosition: after
+        variant: secondary
+        size: md
   - _component: page-sections/features/feature-grid
     id: products
     eyebrowIcon: {}
@@ -30,8 +50,8 @@ pageSections:
           link: /products/exoweld/
           columnSpan: 6
           image:
-            source: /images/ccelect/prd01-enhanced.png
-            alt: Exoweld W 系列銅導體接點與規格示意
+            source: /images/ccelect/prd-display-enhanced.png
+            alt: Exoweld 火泥熔模與銅導體熔接成品
             aspectRatio: square
             rounded: true
         - _component: page-sections/features/feature-grid/feature-item
@@ -40,8 +60,8 @@ pageSections:
           link: /products/exoweld/
           columnSpan: 6
           image:
-            source: /images/ccelect/prd01-enhanced.png
-            alt: Exoweld G 系列導體與接地極連接規格示意
+            source: /images/ccelect/prd-display-enhanced.png
+            alt: Exoweld 火泥熔模與接地連接熔接成品
             aspectRatio: square
             rounded: true
       gridMaxWidth: none
