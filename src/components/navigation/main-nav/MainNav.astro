@@ -158,7 +158,7 @@ const mobileNavData = [
   @layer page-sections {
     .main-nav {
       z-index: var(--layer-2);
-      padding: var(--spacing-sm) var(--spacing-sm);
+      padding: var(--nav-outer-pad) var(--spacing-sm);
       position: sticky;
       top: 0;
       overflow: visible;
@@ -179,13 +179,13 @@ const mobileNavData = [
 
       > .outer-content > .content {
         align-items: center;
-        container: site-nav / inline-size;
         display: flex;
         gap: var(--spacing-md);
         background-color: var(--color-bg-surface);
         border: 2px solid var(--color-border-subtle);
         box-shadow: 10px 10px 29px 10px var(--color-shadow);
-        padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) var(--spacing-xl);
+        padding: var(--nav-content-pad-block) var(--spacing-md) var(--nav-content-pad-block)
+          var(--spacing-xl);
         border-top-left-radius: var(--radius-4xl);
         border-bottom-left-radius: var(--radius-4xl);
         border-top-right-radius: var(--radius-md);
@@ -211,14 +211,14 @@ const mobileNavData = [
         }
 
         > a.main-nav-logo-link {
-          flex: 0 1 275px;
+          flex: 0 1 var(--nav-logo-width);
           min-width: 0;
-          max-width: 275px;
+          max-width: var(--nav-logo-width);
         }
 
         > a > .image img {
           display: block;
-          height: 3.4375rem;
+          height: var(--nav-logo-height);
           width: auto;
           max-width: 100%;
           object-fit: contain;
@@ -227,18 +227,9 @@ const mobileNavData = [
 
         @media (max-width: 75rem) {
           gap: var(--spacing-sm);
-          padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-xs) var(--spacing-lg);
+          padding-inline: var(--spacing-sm) var(--spacing-lg);
           border-top-left-radius: var(--radius-2xl);
           border-bottom-left-radius: var(--radius-2xl);
-
-          > a.main-nav-logo-link {
-            flex-basis: 225px;
-            max-width: 225px;
-          }
-
-          > a > .image img {
-            height: 3.125rem;
-          }
         }
 
         .button-group {
@@ -252,7 +243,7 @@ const mobileNavData = [
           .button > .button-inner {
             border-radius: var(--radius-sm);
             font-size: calc(var(--font-size-sm) * 1.25);
-            min-height: 2.8125rem;
+            min-height: var(--nav-cta-min-height);
             padding-inline: var(--spacing-md);
           }
         }
@@ -263,30 +254,9 @@ const mobileNavData = [
       }
 
       .nav-hamburger.mobile-button {
-        font-size: 1.5625rem;
-        min-height: 3.125rem;
-        min-width: 3.125rem;
-      }
-
-      @media (max-width: 64rem) {
-        > .outer-content > .content {
-          padding-block: 0.78125rem;
-
-          > a.main-nav-logo-link {
-            flex-basis: 275px;
-            max-width: 275px;
-          }
-
-          > a > .image img {
-            height: 3.90625rem;
-          }
-        }
-
-        .nav-hamburger.mobile-button {
-          font-size: 1.953125rem;
-          min-height: 3.90625rem;
-          min-width: 3.90625rem;
-        }
+        font-size: var(--nav-hamburger-font);
+        min-height: var(--nav-hamburger-size);
+        min-width: var(--nav-hamburger-size);
       }
 
       .desktop-main-nav.bar {

@@ -214,7 +214,7 @@ const hasVideo = typeof videoSource === "string" && videoSource.trim() !== "";
         color: #fff;
       }
 
-      /* Mobile: 高:寬 = 3:2，影片鋪滿並播放 */
+      /* Mobile: aspect-ratio width/height = 2/3 (tall 3:2) */
       @media (width < 768px) {
         aspect-ratio: 2 / 3;
         height: auto;

@@ -27,7 +27,7 @@ if (type === "local-source" && source) {
 
   localVideoSources = await discoverVideoSources(source);
 
-  // Prefer a single playable MP4 for background heroes to avoid source-selection quirks.
+  // Prefer a single MP4 for background heroes to avoid multi-source quirks.
   if (background) {
     const mp4 = localVideoSources.find((item) => item.type === "video/mp4");
     if (mp4) localVideoSources = [mp4];
@@ -68,13 +68,11 @@ if (type === "local-source" && source) {
     <div
       class:list={["video", "background", className]}
       aria-hidden="true"
-      data-bg-video="true"
       {...htmlAttributes}
     >
+      {/* Sources use data-src so the file is not fetched until visible. */}
       <video
-        class="bg-video-el"
-        preload="auto"
-        autoplay
+        preload="none"
         muted
         loop
         playsinline
@@ -84,7 +82,7 @@ if (type === "local-source" && source) {
       >
         {localVideoSources.map(({ src, type: sourceType }) => (
           <source
-            src={src}
+            data-src={src}
             type={sourceType}
           />
         ))}
@@ -122,8 +120,7 @@ if (type === "local-source" && source) {
         pointer-events: none;
         position: absolute;
 
-        > video,
-        > .bg-video-el {
+        > video {
           display: block;
           height: 100%;
           min-height: 100%;
@@ -137,92 +134,135 @@ if (type === "local-source" && source) {
 </style>
 
 <script>
-  const PLAY_ATTR = "data-bg-video-playing";
+  import { onPageLoad } from "@component-utils/onPageLoad";
+
+  const PLAYING = "data-bg-video-playing";
+  const LOADED = "data-bg-video-loaded";
+
+  function prefersReducedMotion() {
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  function prefersSaveData() {
+    const connection = (navigator as Navigator & { connection?: { saveData?: boolean } })
+      .connection;
+    return Boolean(connection?.saveData);
+  }
+
+  function hydrateSources(video: HTMLVideoElement) {
+    if (video.getAttribute(LOADED) === "true") return;
+
+    let hydrated = false;
+    video.querySelectorAll("source[data-src]").forEach((node) => {
+      const source = node as HTMLSourceElement;
+      const src = source.dataset.src;
+      if (!src) return;
+      source.src = src;
+      source.removeAttribute("data-src");
+      hydrated = true;
+    });
+
+    if (hydrated) {
+      video.setAttribute(LOADED, "true");
+      video.load();
+    }
+  }
 
   function unlockAndPlay(video: HTMLVideoElement) {
+    if (prefersReducedMotion() || prefersSaveData()) {
+      video.pause();
+      video.removeAttribute(PLAYING);
+      return;
+    }
+
+    if (video.getAttribute(PLAYING) === "true" && !video.paused) return;
+
+    hydrateSources(video);
+
     video.muted = true;
     video.defaultMuted = true;
-    video.volume = 0;
     video.playsInline = true;
     video.setAttribute("muted", "");
     video.setAttribute("playsinline", "");
-    video.setAttribute("webkit-playsinline", "true");
     video.loop = true;
 
-    const run = () =>
+    const tryPlay = () =>
       video.play().then(() => {
-        video.setAttribute(PLAY_ATTR, "true");
+        video.setAttribute(PLAYING, "true");
       });
 
-    return run().catch(() => {
-      // iOS / strict autoplay: retry after first gesture or when visible.
-      const retry = () => {
-        run().catch(() => {});
-      };
+    const startWhenReady = () => {
+      void tryPlay().catch(() => {
+        const retry = () => {
+          void tryPlay().catch(() => {});
+        };
 
-      window.addEventListener("touchstart", retry, { once: true, passive: true });
-      window.addEventListener("pointerdown", retry, { once: true });
-      document.addEventListener("visibilitychange", () => {
-        if (!document.hidden) retry();
+        window.addEventListener("pointerdown", retry, { once: true });
+        window.addEventListener("touchstart", retry, { once: true, passive: true });
+        document.addEventListener(
+          "visibilitychange",
+          () => {
+            if (!document.hidden) retry();
+          },
+          { once: true }
+        );
       });
-    });
+    };
+
+    if (video.readyState >= 2) {
+      startWhenReady();
+    } else {
+      video.addEventListener("canplay", startWhenReady, { once: true });
+    }
   }
 
-  function playBackgroundVideos() {
-    const videos = document.querySelectorAll<HTMLVideoElement>(
-      ".video.background video, video.bg-video-el"
-    );
+  function freezeBackgroundVideo(video: HTMLVideoElement) {
+    video.pause();
+    video.removeAttribute(PLAYING);
+  }
 
-    videos.forEach((video) => {
-      if (video.getAttribute(PLAY_ATTR) === "true" && !video.paused) return;
+  function bindReducedMotionToggle(video: HTMLVideoElement) {
+    if (video.dataset.bgMotionBound === "true") return;
+    video.dataset.bgMotionBound = "true";
 
-      const start = () => {
-        void unlockAndPlay(video);
-      };
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const onChange = () => {
+      if (media.matches) freezeBackgroundVideo(video);
+      else unlockAndPlay(video);
+    };
+
+    media.addEventListener("change", onChange);
+  }
+
+  function initBackgroundVideos() {
+    document.querySelectorAll<HTMLVideoElement>(".video.background video").forEach((video) => {
+      bindReducedMotionToggle(video);
+
+      if (prefersReducedMotion() || prefersSaveData()) {
+        freezeBackgroundVideo(video);
+        return;
+      }
+
+      if (video.getAttribute(PLAYING) === "true" && !video.paused) return;
+
+      const start = () => unlockAndPlay(video);
 
       if ("IntersectionObserver" in window) {
         const io = new IntersectionObserver(
           (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                start();
-                io.disconnect();
-              }
-            });
+            if (entries.some((entry) => entry.isIntersecting)) {
+              start();
+              io.disconnect();
+            }
           },
-          { threshold: 0.15 }
+          { rootMargin: "80px", threshold: 0.1 }
         );
-
         io.observe(video);
-      }
-
-      if (video.readyState >= 2) {
-        start();
       } else {
-        video.addEventListener("loadeddata", start, { once: true });
-        video.addEventListener("canplay", start, { once: true });
-        try {
-          video.load();
-        } catch {
-          /* ignore */
-        }
+        start();
       }
     });
   }
 
-  const boot = () => {
-    playBackgroundVideos();
-    // Second pass after layout/fonts settle (helps mobile + view transitions).
-    window.setTimeout(playBackgroundVideos, 300);
-    window.setTimeout(playBackgroundVideos, 1000);
-  };
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", boot, { once: true });
-  } else {
-    boot();
-  }
-
-  document.addEventListener("astro:page-load", boot);
-  document.addEventListener("astro:after-swap", boot);
+  onPageLoad(initBackgroundVideos);
 </script>

@@ -22,5 +22,38 @@
   --spacing-em-5xl: 6em;
   --spacing-em-6xl: 7em;
 
-  --spacing-nav-height: 7.25rem;
+  /* Site nav sizing — adjust these; --spacing-nav-height follows. */
+  --nav-outer-pad: var(--spacing-sm);
+  --nav-content-pad-block: var(--spacing-sm);
+  --nav-logo-height: 3.4375rem;
+  --nav-logo-width: 17.1875rem;
+  --nav-logo-height-narrow: 3.125rem;
+  --nav-logo-width-narrow: 14.0625rem;
+  --nav-cta-min-height: 2.8125rem;
+  --nav-hamburger-size: 3.125rem;
+  --nav-hamburger-font: 1.5625rem;
+  --nav-drawer-header-height: 6.640625rem;
+  --nav-drawer-logo-height: 3.515625rem;
+
+  --spacing-nav-height: calc(
+    var(--nav-outer-pad) * 2 + var(--nav-content-pad-block) * 2 + var(--nav-logo-height) + 0.25rem
+  );
+}
+
+@media (max-width: 75rem) {
+  :where(:root) {
+    --nav-logo-height: var(--nav-logo-height-narrow);
+    --nav-logo-width: var(--nav-logo-width-narrow);
+    --nav-content-pad-block: var(--spacing-xs);
+  }
+}
+
+@media (max-width: 64rem) {
+  :where(:root) {
+    --nav-logo-height: 3.90625rem;
+    --nav-logo-width: 17.1875rem;
+    --nav-content-pad-block: 0.78125rem;
+    --nav-hamburger-size: 3.90625rem;
+    --nav-hamburger-font: 1.953125rem;
+  }
 }
