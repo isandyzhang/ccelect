@@ -91,7 +91,7 @@ const mobileNavData = [
 
 <script>
   import { onPageLoad } from "@components/utils/onPageLoad";
-  import { isLocale, localeLabels, localeNames, localizedHref } from "@i18n/config";
+  import { isLocale, localeNames, localizedHref } from "@i18n/config";
 
   function syncPersistedMainNav() {
     const navRoot = document.querySelector(".main-nav");
@@ -145,16 +145,9 @@ const mobileNavData = [
       });
 
     const summary = navRoot.querySelector(".lang-switcher summary");
-    const summaryLabel = navRoot.querySelector(
-      ".lang-switcher summary > span:not(.language-icon):not(.chevron)"
-    );
 
     if (summary instanceof HTMLElement && isLocale(siteLocale)) {
       summary.setAttribute("aria-label", `Language: ${localeNames[siteLocale]}`);
-    }
-
-    if (summaryLabel instanceof HTMLElement && isLocale(siteLocale)) {
-      summaryLabel.textContent = localeLabels[siteLocale];
     }
   }
 
@@ -165,7 +158,7 @@ const mobileNavData = [
   @layer page-sections {
     .main-nav {
       z-index: var(--layer-2);
-      padding: var(--spacing-md) var(--spacing-sm);
+      padding: var(--spacing-sm) var(--spacing-sm);
       position: sticky;
       top: 0;
       overflow: visible;
@@ -173,13 +166,13 @@ const mobileNavData = [
 
       .desktop-main-nav.bar,
       .desktop-button-group.button-group {
-        @container site-nav (max-width: 70rem) {
+        @media (max-width: 64rem) {
           display: none;
         }
       }
 
       .nav-hamburger.mobile-button {
-        @container site-nav (width > 70rem) {
+        @media (width > 64rem) {
           display: none;
         }
       }
@@ -192,7 +185,7 @@ const mobileNavData = [
         background-color: var(--color-bg-surface);
         border: 2px solid var(--color-border-subtle);
         box-shadow: 10px 10px 29px 10px var(--color-shadow);
-        padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) var(--spacing-2xl);
+        padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) var(--spacing-xl);
         border-top-left-radius: var(--radius-4xl);
         border-bottom-left-radius: var(--radius-4xl);
         border-top-right-radius: var(--radius-md);
@@ -218,14 +211,14 @@ const mobileNavData = [
         }
 
         > a.main-nav-logo-link {
-          flex: 0 1 240px;
+          flex: 0 1 275px;
           min-width: 0;
-          max-width: 240px;
+          max-width: 275px;
         }
 
         > a > .image img {
           display: block;
-          height: 3.25rem;
+          height: 3.4375rem;
           width: auto;
           max-width: 100%;
           object-fit: contain;
@@ -234,12 +227,17 @@ const mobileNavData = [
 
         @media (max-width: 75rem) {
           gap: var(--spacing-sm);
-          padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) var(--spacing-lg);
+          padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-xs) var(--spacing-lg);
           border-top-left-radius: var(--radius-2xl);
           border-bottom-left-radius: var(--radius-2xl);
 
+          > a.main-nav-logo-link {
+            flex-basis: 225px;
+            max-width: 225px;
+          }
+
           > a > .image img {
-            height: 2.25rem;
+            height: 3.125rem;
           }
         }
 
@@ -247,12 +245,15 @@ const mobileNavData = [
           margin-top: 0;
 
           > .button-group__items {
-            gap: var(--spacing-xl);
+            gap: var(--spacing-md);
             width: auto;
           }
 
           .button > .button-inner {
             border-radius: var(--radius-sm);
+            font-size: calc(var(--font-size-sm) * 1.25);
+            min-height: 2.8125rem;
+            padding-inline: var(--spacing-md);
           }
         }
       }
@@ -261,27 +262,61 @@ const mobileNavData = [
         flex: 0 0 auto;
       }
 
+      .nav-hamburger.mobile-button {
+        font-size: 1.5625rem;
+        min-height: 3.125rem;
+        min-width: 3.125rem;
+      }
+
+      @media (max-width: 64rem) {
+        > .outer-content > .content {
+          padding-block: 0.78125rem;
+
+          > a.main-nav-logo-link {
+            flex-basis: 275px;
+            max-width: 275px;
+          }
+
+          > a > .image img {
+            height: 3.90625rem;
+          }
+        }
+
+        .nav-hamburger.mobile-button {
+          font-size: 1.953125rem;
+          min-height: 3.90625rem;
+          min-width: 3.90625rem;
+        }
+      }
+
+      .desktop-main-nav.bar {
+        font-size: var(--font-size-md);
+      }
+
       .desktop-main-nav.bar .bar-list {
         gap: var(--spacing-xs);
       }
 
       .desktop-main-nav.bar .nav-item > a,
       .desktop-main-nav.bar .nav-item > .nav-item-trigger {
-        padding-inline: var(--spacing-sm);
+        font-size: var(--font-size-md);
+        padding: var(--spacing-sm) var(--spacing-sm);
+        color: var(--color-text-strong);
+      }
+
+      .desktop-main-nav.bar .nav-item > a:hover,
+      .desktop-main-nav.bar .nav-item > .nav-item-trigger:hover {
+        color: var(--color-brand);
       }
 
       @media (max-width: 30rem) {
         > .outer-content > .content {
-          gap: var(--spacing-xs);
-          padding-inline: var(--spacing-sm);
+          gap: var(--spacing-sm);
+          padding-inline: var(--spacing-md);
         }
 
         > .outer-content > .content > .nav-end {
-          gap: var(--spacing-xs);
-        }
-
-        .lang-switcher .language-icon {
-          display: none;
+          gap: var(--spacing-sm);
         }
       }
 

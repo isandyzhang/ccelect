@@ -26,6 +26,12 @@ if (type === "local-source" && source) {
   const { discoverVideoSources } = await import("@component-utils/discoverVideoSources");
 
   localVideoSources = await discoverVideoSources(source);
+
+  // Prefer a single playable MP4 for background heroes to avoid source-selection quirks.
+  if (background) {
+    const mp4 = localVideoSources.find((item) => item.type === "video/mp4");
+    if (mp4) localVideoSources = [mp4];
+  }
 }
 ---
 
@@ -62,14 +68,18 @@ if (type === "local-source" && source) {
     <div
       class:list={["video", "background", className]}
       aria-hidden="true"
+      data-bg-video="true"
       {...htmlAttributes}
     >
       <video
-        preload="metadata"
+        class="bg-video-el"
+        preload="auto"
         autoplay
         muted
         loop
         playsinline
+        disablepictureinpicture
+        disableremoteplayback
         poster={posterUrl}
       >
         {localVideoSources.map(({ src, type: sourceType }) => (
@@ -112,19 +122,107 @@ if (type === "local-source" && source) {
         pointer-events: none;
         position: absolute;
 
-        > video {
+        > video,
+        > .bg-video-el {
+          display: block;
           height: 100%;
+          min-height: 100%;
           object-fit: cover;
           object-position: var(--background-position, center center);
           width: 100%;
         }
       }
     }
-
-    @media (prefers-reduced-motion: reduce) {
-      .video.background {
-        display: none;
-      }
-    }
   }
 </style>
+
+<script>
+  const PLAY_ATTR = "data-bg-video-playing";
+
+  function unlockAndPlay(video: HTMLVideoElement) {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.volume = 0;
+    video.playsInline = true;
+    video.setAttribute("muted", "");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "true");
+    video.loop = true;
+
+    const run = () =>
+      video.play().then(() => {
+        video.setAttribute(PLAY_ATTR, "true");
+      });
+
+    return run().catch(() => {
+      // iOS / strict autoplay: retry after first gesture or when visible.
+      const retry = () => {
+        run().catch(() => {});
+      };
+
+      window.addEventListener("touchstart", retry, { once: true, passive: true });
+      window.addEventListener("pointerdown", retry, { once: true });
+      document.addEventListener("visibilitychange", () => {
+        if (!document.hidden) retry();
+      });
+    });
+  }
+
+  function playBackgroundVideos() {
+    const videos = document.querySelectorAll<HTMLVideoElement>(
+      ".video.background video, video.bg-video-el"
+    );
+
+    videos.forEach((video) => {
+      if (video.getAttribute(PLAY_ATTR) === "true" && !video.paused) return;
+
+      const start = () => {
+        void unlockAndPlay(video);
+      };
+
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                start();
+                io.disconnect();
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+
+        io.observe(video);
+      }
+
+      if (video.readyState >= 2) {
+        start();
+      } else {
+        video.addEventListener("loadeddata", start, { once: true });
+        video.addEventListener("canplay", start, { once: true });
+        try {
+          video.load();
+        } catch {
+          /* ignore */
+        }
+      }
+    });
+  }
+
+  const boot = () => {
+    playBackgroundVideos();
+    // Second pass after layout/fonts settle (helps mobile + view transitions).
+    window.setTimeout(playBackgroundVideos, 300);
+    window.setTimeout(playBackgroundVideos, 1000);
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot, { once: true });
+  } else {
+    boot();
+  }
+
+  document.addEventListener("astro:page-load", boot);
+  document.addEventListener("astro:after-swap", boot);
+</script>

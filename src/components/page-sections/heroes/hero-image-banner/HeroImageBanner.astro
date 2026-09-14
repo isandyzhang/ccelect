@@ -214,18 +214,49 @@ const hasVideo = typeof videoSource === "string" && videoSource.trim() !== "";
         color: #fff;
       }
 
+      /* Mobile: 高:寬 = 3:2，影片鋪滿並播放 */
       @media (width < 768px) {
+        aspect-ratio: 2 / 3;
+        height: auto;
+        min-height: min(100dvh, 42rem);
+        width: 100%;
+
+        > .hero-image-banner__media,
+        > .hero-image-banner__video,
+        > .hero-image-banner__video.video.background,
+        > .hero-image-banner__video > video {
+          height: 100%;
+          min-height: 100%;
+          width: 100%;
+        }
+
         > .hero-image-banner__copy {
+          bottom: var(--spacing-xl);
+          gap: var(--spacing-sm);
+          left: var(--spacing-lg);
           max-width: calc(100% - 2 * var(--spacing-lg));
-          padding: var(--spacing-xl) var(--spacing-lg);
+          padding: 0;
+          right: var(--spacing-lg);
+          top: auto;
+          transform: none;
         }
 
         .hero-image-banner__title {
-          font-size: var(--font-size-heading-xl);
+          font-size: clamp(1.5rem, 6vw, 2rem);
         }
 
         .hero-image-banner__subtext {
+          display: -webkit-box;
           font-size: var(--font-size-md);
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+          line-clamp: 4;
+          overflow: hidden;
+        }
+
+        .hero-image-banner__actions .button-inner {
+          font-size: var(--font-size-sm);
+          min-height: 2.5rem;
         }
       }
 
