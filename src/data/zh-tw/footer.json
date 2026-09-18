@@ -5,7 +5,7 @@
   "links": [
     { "name": "首頁", "path": "/" },
     { "name": "關於我們", "path": "/about/" },
-    { "name": "商品櫥窗", "path": "/products/" },
+    { "name": "商品櫥窗", "path": "/products/exoweld/" },
     { "name": "技術訊息", "path": "/blog/" },
     { "name": "工程實績", "path": "/projects/" },
     { "name": "市場服務", "path": "/services/" }

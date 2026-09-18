@@ -5,7 +5,7 @@
   "links": [
     { "name": "Home", "path": "/en/" },
     { "name": "About", "path": "/en/about/" },
-    { "name": "Products", "path": "/en/products/" },
+    { "name": "Products", "path": "/en/products/exoweld/" },
     { "name": "Technical Notes", "path": "/en/blog/" },
     { "name": "Projects", "path": "/en/projects/" },
     { "name": "Services", "path": "/en/services/" }

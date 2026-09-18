@@ -101,19 +101,24 @@ const isShowcase = Boolean(image?.source) && !hasCopy;
       height: 100%;
 
       .card-content {
+        color: var(--color-text);
         display: flex;
         flex-direction: column;
         flex: 1;
-        justify-content: center;
+        justify-content: flex-start;
       }
     }
 
-    .feature-title {
+    .feature-title,
+    .feature-item .heading,
+    .feature-item .heading-text {
+      color: var(--color-text-strong);
       margin-bottom: var(--spacing-sm);
       margin-top: var(--spacing-sm);
     }
 
     .feature-description {
+      color: var(--color-text);
       margin-top: 0;
     }
 

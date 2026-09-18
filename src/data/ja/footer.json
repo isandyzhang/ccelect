@@ -5,7 +5,7 @@
   "links": [
     { "name": "ホーム", "path": "/ja/" },
     { "name": "会社概要", "path": "/ja/about/" },
-    { "name": "商品", "path": "/ja/products/" },
+    { "name": "商品", "path": "/ja/products/exoweld/" },
     { "name": "技術情報", "path": "/ja/blog/" },
     { "name": "施工実績", "path": "/ja/projects/" },
     { "name": "市場サービス", "path": "/ja/services/" }

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Product placeholder">
+  <rect width="800" height="600" fill="#d9e2ee"/>
+  <rect x="48" y="48" width="704" height="504" rx="24" fill="#f4f7fb"/>
+  <g fill="none" stroke="#193773" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M292 196h216v48H508c0 72-48 120-108 120s-108-48-108-120h0V196z"/>
+    <path d="M340 196V164h120v32"/>
+  </g>
+  <text x="400" y="448" text-anchor="middle" fill="#5e6878" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">DUMMY PHOTO</text>
+</svg>

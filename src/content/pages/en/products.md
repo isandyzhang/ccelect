@@ -26,11 +26,6 @@ pageSections:
         firstColumnContentSections:
           - _component: navigation/products-side
         secondColumnContentSections:
-          - _component: building-blocks/core-elements/breadcrumb
-            items:
-              - label: Home
-                href: /en/
-              - label: Products
           - _component: building-blocks/core-elements/heading
             level: h2
             size: lg
@@ -49,11 +44,10 @@ pageSections:
                     paddingVertical: md
                     rounded: true
                     border: true
-                    backgroundColor: base
-                    link: /en/products/exoweld/
+                    backgroundColor: surface
                     beforeContentSections:
                       - _component: building-blocks/core-elements/image
-                        source: /src/assets/images/ccelect/legacy/product-exoweld-we.jpg
+                        source: /src/assets/images/ccelect/dummy/product-1.svg
                         alt: Exoweld WE series
                         aspectRatio: landscape
                         rounded: false
@@ -90,11 +84,10 @@ pageSections:
                     paddingVertical: md
                     rounded: true
                     border: true
-                    backgroundColor: base
-                    link: /en/products/welding-tools/
+                    backgroundColor: surface
                     beforeContentSections:
                       - _component: building-blocks/core-elements/image
-                        source: /src/assets/images/ccelect/legacy/product-investment-casting.jpg
+                        source: /src/assets/images/ccelect/dummy/product-2.svg
                         alt: Exothermic mold
                         aspectRatio: landscape
                         rounded: false
@@ -129,11 +122,10 @@ pageSections:
                     paddingVertical: md
                     rounded: true
                     border: true
-                    backgroundColor: base
-                    link: /en/products/grounding-components/
+                    backgroundColor: surface
                     beforeContentSections:
                       - _component: building-blocks/core-elements/image
-                        source: /src/assets/images/ccelect/legacy/product-ground-plate.jpg
+                        source: /src/assets/images/ccelect/dummy/product-3.svg
                         alt: Ground plate
                         aspectRatio: landscape
                         rounded: false
@@ -164,11 +156,10 @@ pageSections:
                     paddingVertical: md
                     rounded: true
                     border: true
-                    backgroundColor: base
-                    link: /en/products/grounding-materials/
+                    backgroundColor: surface
                     beforeContentSections:
                       - _component: building-blocks/core-elements/image
-                        source: /src/assets/images/ccelect/legacy/product-ion-ground-rod.jpg
+                        source: /src/assets/images/ccelect/dummy/product-4.svg
                         alt: Chemical ground rod
                         aspectRatio: landscape
                         rounded: false
@@ -205,11 +196,10 @@ pageSections:
                     paddingVertical: md
                     rounded: true
                     border: true
-                    backgroundColor: base
-                    link: /en/products/lightning-protection/
+                    backgroundColor: surface
                     beforeContentSections:
                       - _component: building-blocks/core-elements/image
-                        source: /src/assets/images/ccelect/legacy/product-terminal-support.jpg
+                        source: /src/assets/images/ccelect/dummy/product-5.svg
                         alt: Terminal support
                         aspectRatio: landscape
                         rounded: false

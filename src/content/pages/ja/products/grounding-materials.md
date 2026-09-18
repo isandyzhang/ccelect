@@ -2,127 +2,76 @@
 _schema: default
 permalink: null
 title: 一般接地材料
-description: 接地棒、銅バー、圧着端子、固定具、測定器。
+description: 接地棒、銅バー、圧着端子、固定夾、測定器、付属材料。
 pageSections:
-  - _component: page-sections/builders/custom-section
-    id: products-layout
-    maxContentWidth: 3xl
-    paddingHorizontal: md
-    paddingVertical: lg
-    colorScheme: light
-    backgroundColor: base
-    contentBackground: false
-    rounded: false
-    contentSections:
-      - _component: building-blocks/wrappers/split
-        distributionMode: quarter-three-quarters
-        minSplitWidth: 768
-        reverseOrderOnMobile: true
-        alignmentVertical: start
-        firstColumnContentSections:
-          - _component: navigation/products-side
-        secondColumnContentSections:
-          - _component: building-blocks/core-elements/breadcrumb
-            items:
-              - label: ホーム
-                href: /ja/
-              - label: 商品
-                href: /ja/products/
-              - label: 一般接地材料
-          - _component: building-blocks/core-elements/heading
-            level: h2
-            size: lg
-            alignmentHorizontal: start
-            text: 一般接地材料
-          - _component: page-sections/features/feature-grid
-            eyebrowIcon: {}
-            eyebrowText: 一般接地材料
-            heading: 接地棒、導体、測定機器
-            subtext: 土壌、腐食、目標抵抗、プロジェクト仕様に応じて材料を確認。
-            featureGrid:
-              features:
-                - _component: page-sections/features/feature-grid/feature-item
-                  title: 接地棒
-                  description: 離子式接地棒 IEA、銅包鋼接地棒 G、鋼芯鍍銅接地棒 B／NE 系列。
-                  image:
-                    source: /src/assets/images/ccelect/legacy/product-ion-ground-rod.jpg
-                    alt: 離子式接地棒 IEA 現場照片
-                    rounded: true
-                  eyebrowIcon:
-                    _component: building-blocks/core-elements/icon
-                    name: circle-stack
-                    size: 2xl
-                    color: brand
-                    background: true
-                - _component: page-sections/features/feature-grid/feature-item
-                  title: 接地銅排
-                  description: C1020BB、C1100BB 等接地銅排品項。
-                  eyebrowIcon:
-                    _component: building-blocks/core-elements/icon
-                    name: bars-3
-                    size: 2xl
-                    color: brand
-                    background: true
-                - _component: page-sections/features/feature-grid/feature-item
-                  title: 壓接頭與固定夾
-                  description: C 型壓接頭、壓接端子、GBS 與 GCS 接地線固定夾。
-                  eyebrowIcon:
-                    _component: building-blocks/core-elements/icon
-                    name: link
-                    size: 2xl
-                    color: brand
-                    background: true
-                - _component: page-sections/features/feature-grid/feature-item
-                  title: 接地電阻測試儀表
-                  description: 舊型錄列有 AEMC 4620 數位式接地電阻測量儀。
-                  eyebrowIcon:
-                    _component: building-blocks/core-elements/icon
-                    name: chart-bar
-                    size: 2xl
-                    color: brand
-                    background: true
-                - _component: page-sections/features/feature-grid/feature-item
-                  title: 附屬材料
-                  description: 止水板與 Bentonite 土壤改良劑等接地工程附屬品項。
-                  eyebrowIcon:
-                    _component: building-blocks/core-elements/icon
-                    name: archive-box
-                    size: 2xl
-                    color: brand
-                    background: true
-            maxContentWidth: 2xl
-            paddingVertical: 4xl
-            colorScheme: light
-            backgroundColor: surface-linear-gradient
-            contentBackground: false
-            rounded: false
-  - _component: page-sections/ctas/cta-center
-    id: product-contact
-    eyebrowIcon: {}
-    eyebrowText: 仕様・見積
-    heading: 導体と現場条件をお知らせください
-    subtext: 導体材質、線径、接点形式、数量、現場環境をご提示ください。
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        text: メール
-        hideText: false
-        link: mailto:cce@ccelect.com.tw
-        iconName: envelope
-        iconPosition: before
-        variant: primary
-        size: md
-      - _component: building-blocks/core-elements/button
-        text: お問い合わせ
-        hideText: false
-        link: /ja/contact/
-        iconName: arrow-right
-        iconPosition: after
-        variant: secondary
-        size: md
-    maxContentWidth: xl
-    paddingVertical: 2xl
-    colorScheme: dark
-    backgroundColor: highlight-radial-gradient
-    contentBackground: false
-    rounded: false
+  - _component: page-sections/products/product-catalog
+    eyebrowText: 一般接地材料
+    heading: 接地棒・導体・測定用品
+    subtext: 土壌、腐食、目標抵抗、プロジェクト仕様に応じて材料を選択してください。
+    helpHeading: 現場に合う接地材料が分かりませんか？
+    helpText: 導体材質、線径、接点形式、数量、施工環境をお知らせください。製品選定をお手伝いします。
+    helpLink: /ja/contact/
+    helpLinkText: 営業へ連絡
+    items:
+      - id: grounding-rods
+        category: 電極
+        title: 接地棒
+        description: 土壌条件と接地抵抗目標に応じて、イオン式または銅被覆鋼棒を選択。
+        image: /src/assets/images/ccelect/dummy/product-4.svg
+        imageAlt: 製品プレースホルダー
+        specifications:
+          - IEA イオン式
+          - G シリーズ
+          - B／NE シリーズ
+        href: /ja/contact/
+      - id: copper-busbars
+        category: 導体
+        title: 接地銅バー
+        description: 接地母線や等電位接続向けの高導電銅バー。
+        image: /src/assets/images/ccelect/dummy/product-5.svg
+        imageAlt: 製品プレースホルダー
+        specifications:
+          - C1020BB
+          - C1100BB
+        href: /ja/contact/
+      - id: compression-connectors
+        category: 接続
+        title: C 型圧着端子
+        description: 銅導体の分岐・接続用圧着端子。
+        image: /src/assets/images/ccelect/dummy/product-1.svg
+        imageAlt: 製品プレースホルダー
+        specifications:
+          - C 型
+          - 圧着端子
+        href: /ja/contact/
+      - id: grounding-clamps
+        category: 固定
+        title: 接地線固定夾
+        description: 壁面・構造体などへの接地導体固定用。
+        image: /src/assets/images/ccelect/dummy/product-2.svg
+        imageAlt: 製品プレースホルダー
+        specifications:
+          - GBS シリーズ
+          - GCS シリーズ
+        href: /ja/contact/
+      - id: testing-instruments
+        category: 測定
+        title: 接地抵抗測定器
+        description: 施工後の抵抗測定・点検用測定器。
+        image: /src/assets/images/ccelect/dummy/product-3.svg
+        imageAlt: 製品プレースホルダー
+        specifications:
+          - AEMC 4620
+          - デジタル測定
+        href: /ja/contact/
+      - id: accessories
+        category: 付属
+        title: その他付属材料
+        description: 止水・土壌改良など接地工事用付属材料。
+        image: /src/assets/images/ccelect/dummy/product-5.svg
+        imageAlt: 製品プレースホルダー
+        specifications:
+          - 止水板
+          - Bentonite
+        href: /ja/contact/
 ---

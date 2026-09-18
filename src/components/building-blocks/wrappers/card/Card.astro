@@ -276,6 +276,7 @@ const usesAfterContentSections = !hasAfterSlot && showBeforeAfter && afterConten
           z-index: var(--layer-2);
 
           > .card-content {
+            color: var(--color-text);
             container-type: inline-size;
             display: flex;
             flex: 1 1 auto;
@@ -284,6 +285,17 @@ const usesAfterContentSections = !hasAfterSlot && showBeforeAfter && afterConten
             min-height: 0;
             position: relative;
             z-index: var(--layer-1);
+
+            .heading,
+            .heading-text,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              color: var(--color-text-strong);
+            }
 
             > *:first-child {
               margin-top: 0 !important;
@@ -424,6 +436,7 @@ const usesAfterContentSections = !hasAfterSlot && showBeforeAfter && afterConten
         > .background {
           inset: 0;
           position: absolute;
+          z-index: var(--layer-0);
         }
 
         > .background-image {

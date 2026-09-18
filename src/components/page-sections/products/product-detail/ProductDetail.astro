@@ -1,0 +1,411 @@
+---
+import Image from "@core-elements/image/Image.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+import type {
+  ProductDetailCta,
+  ProductDetailGalleryItem,
+  ProductDetailSpec,
+} from "./types";
+
+interface Props {
+  category?: string;
+  heading: string;
+  summary?: string;
+  description?: string[];
+  image: string;
+  imageAlt?: string;
+  imageHint?: string;
+  primaryCta?: ProductDetailCta;
+  secondaryCta?: ProductDetailCta;
+  featuresHeading?: string;
+  features?: string[];
+  specsHeading?: string;
+  specifications?: ProductDetailSpec[];
+  applicationHeading?: string;
+  applicationImages?: ProductDetailGalleryItem[];
+  note?: string;
+}
+
+const {
+  category = "",
+  heading,
+  summary = "",
+  description = [],
+  image,
+  imageAlt = heading,
+  imageHint = "點擊圖片可放大檢視",
+  primaryCta = { text: "聯絡工程業務", href: "/contact/" },
+  secondaryCta,
+  featuresHeading = "特點",
+  features = [],
+  specsHeading = "規格摘要",
+  specifications = [],
+  applicationHeading = "應用示意",
+  applicationImages = [],
+  note = "",
+} = Astro.props as Props;
+---
+
+<section
+  class="product-detail"
+  data-theme="light"
+>
+  <div class="product-detail-shell">
+    <div class="product-hero">
+      <figure class="product-media">
+        <div class="product-media-frame">
+          <Image
+            source={image}
+            alt={imageAlt}
+            aspectRatio="square"
+            sizes="(max-width: 900px) 100vw, 48vw"
+          />
+        </div>
+        <figcaption>{imageHint}</figcaption>
+      </figure>
+
+      <div class="product-copy">
+        {category && <p class="product-category">{category}</p>}
+        <h1>{heading}</h1>
+        {summary && <p class="product-summary">{summary}</p>}
+        {
+          description.length > 0 && (
+            <div class="product-description">
+              {description.map((paragraph) => (
+                <p>{paragraph}</p>
+              ))}
+            </div>
+          )
+        }
+
+        <div class="product-actions">
+          <a
+            class="product-cta-primary"
+            href={primaryCta.href}
+          >
+            {primaryCta.text}
+            <Icon
+              name="arrow-right"
+              size="none"
+              aria-hidden="true"
+            />
+          </a>
+          {
+            secondaryCta && (
+              <a
+                class="product-cta-secondary"
+                href={secondaryCta.href}
+              >
+                {secondaryCta.text}
+              </a>
+            )
+          }
+        </div>
+      </div>
+    </div>
+
+    {
+      (features.length > 0 || specifications.length > 0) && (
+        <section
+          class="product-details-panel"
+          aria-labelledby="product-details-heading"
+        >
+          <h2 id="product-details-heading">詳細資訊</h2>
+
+          <div class="product-details-grid">
+            {
+              features.length > 0 && (
+                <div>
+                  <h3>{featuresHeading}</h3>
+                  <ul class="product-features">
+                    {features.map((feature) => (
+                      <li>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+              )
+            }
+
+            {
+              specifications.length > 0 && (
+                <div>
+                  <h3>{specsHeading}</h3>
+                  <dl class="product-specs">
+                    {specifications.map((spec) => (
+                      <div>
+                        <dt>{spec.label}</dt>
+                        <dd>{spec.value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              )
+            }
+          </div>
+        </section>
+      )
+    }
+
+    {
+      applicationImages.length > 0 && (
+        <section
+          class="product-applications"
+          aria-labelledby="product-applications-heading"
+        >
+          <h2 id="product-applications-heading">{applicationHeading}</h2>
+          <div class="product-applications-grid">
+            {applicationImages.map((item) => (
+              <figure>
+                <div class="product-media-frame">
+                  <Image
+                    source={item.image}
+                    alt={item.imageAlt || heading}
+                    aspectRatio="landscape"
+                    sizes="(max-width: 900px) 100vw, 30vw"
+                  />
+                </div>
+                {item.caption && <figcaption>{item.caption}</figcaption>}
+              </figure>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    {
+      note && (
+        <p class="product-note">
+          {note}
+        </p>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .product-detail {
+    background:
+      radial-gradient(circle at top left, color-mix(in srgb, var(--color-bg-brand) 12%, transparent), transparent 42%),
+      linear-gradient(180deg, var(--color-bg-base) 0%, color-mix(in srgb, var(--color-bg-subtle) 70%, var(--color-bg-base)) 100%);
+    color: var(--color-text);
+    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
+  }
+
+  .product-detail-shell {
+    display: grid;
+    gap: clamp(2rem, 5vw, 3.5rem);
+    margin-inline: auto;
+    max-width: 72rem;
+  }
+
+  .product-hero {
+    display: grid;
+    gap: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .product-media,
+  .product-applications figure {
+    margin: 0;
+  }
+
+  .product-media-frame {
+    background:
+      linear-gradient(180deg, #f7f8fa 0%, #eef1f5 100%);
+    border: 1px solid var(--color-border);
+    display: grid;
+    overflow: hidden;
+    place-items: center;
+  }
+
+  .product-media .product-media-frame {
+    aspect-ratio: 1 / 1;
+    min-height: 18rem;
+  }
+
+  .product-media :global(img),
+  .product-applications :global(img) {
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+  }
+
+  .product-media figcaption,
+  .product-applications figcaption {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    margin-top: 0.75rem;
+  }
+
+  .product-copy {
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+  }
+
+  .product-category {
+    color: var(--color-text-brand);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .product-copy h1 {
+    color: var(--color-text-strong);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  .product-summary,
+  .product-description p,
+  .product-note {
+    margin: 0;
+  }
+
+  .product-summary {
+    color: var(--color-text-strong);
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+  }
+
+  .product-description {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .product-description p,
+  .product-note {
+    color: var(--color-text);
+    line-height: 1.7;
+  }
+
+  .product-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .product-cta-primary,
+  .product-cta-secondary {
+    align-items: center;
+    display: inline-flex;
+    font-weight: 700;
+    gap: 0.5rem;
+    padding: 0.85rem 1.15rem;
+    text-decoration: none;
+  }
+
+  .product-cta-primary {
+    background: var(--color-bg-brand);
+    color: var(--color-text-on-brand, #fff);
+  }
+
+  .product-cta-primary :global(svg) {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .product-cta-secondary {
+    border: 1px solid var(--color-border-strong);
+    color: var(--color-text-strong);
+  }
+
+  .product-details-panel,
+  .product-applications {
+    border-top: 1px solid var(--color-border);
+    padding-top: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .product-details-panel h2,
+  .product-applications h2,
+  .product-details-panel h3 {
+    color: var(--color-text-strong);
+    margin: 0 0 1rem;
+  }
+
+  .product-details-panel h2,
+  .product-applications h2 {
+    font-size: clamp(1.35rem, 3vw, 1.75rem);
+  }
+
+  .product-details-panel h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .product-details-grid {
+    display: grid;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .product-features {
+    display: grid;
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .product-features li {
+    border-left: 3px solid var(--color-bg-brand);
+    line-height: 1.6;
+    padding-left: 0.85rem;
+  }
+
+  .product-specs {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+  }
+
+  .product-specs > div {
+    border-bottom: 1px solid var(--color-border);
+    display: grid;
+    gap: 0.25rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .product-specs dt {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+  }
+
+  .product-specs dd {
+    color: var(--color-text-strong);
+    margin: 0;
+  }
+
+  .product-applications-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .product-note {
+    border-left: 3px solid var(--color-border-strong);
+    color: var(--color-text-muted);
+    padding-left: 0.85rem;
+  }
+
+  @media (min-width: 900px) {
+    .product-hero {
+      align-items: start;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    }
+
+    .product-details-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .product-applications-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .product-specs > div {
+      grid-template-columns: 8rem 1fr;
+      gap: 1rem;
+    }
+  }
+</style>
