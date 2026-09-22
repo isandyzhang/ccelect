@@ -26,6 +26,9 @@ if (!htmlAttributes.id && (id || label)) {
 const hasButtons = Array.isArray(buttonSections) && buttonSections.length > 0;
 const hasCopy = Boolean(heading || subtext || hasButtons);
 const hasVideo = typeof videoSource === "string" && videoSource.trim() !== "";
+const imageDataAttributes = useDefaultEditableBinding
+  ? { "data-prop-src": "imageSource", "data-prop-alt": "imageAlt" }
+  : {};
 ---
 
 <section
@@ -40,9 +43,7 @@ const hasVideo = typeof videoSource === "string" && videoSource.trim() !== "";
     background={true}
     positionVertical="center"
     positionHorizontal="center"
-    {...useDefaultEditableBinding
-      ? { "data-prop-src": "imageSource", "data-prop-alt": "imageAlt" }
-      : {}}
+    {...imageDataAttributes}
   />
   {
     hasVideo && (

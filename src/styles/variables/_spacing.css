@@ -32,8 +32,8 @@
   --nav-cta-min-height: 2.8125rem;
   --nav-hamburger-size: 3.125rem;
   --nav-hamburger-font: 1.5625rem;
-  --nav-drawer-header-height: 6.640625rem;
-  --nav-drawer-logo-height: 3.515625rem;
+  --nav-drawer-header-height: 6.6406rem;
+  --nav-drawer-logo-height: 3.5156rem;
 
   --spacing-nav-height: calc(
     var(--nav-outer-pad) * 2 + var(--nav-content-pad-block) * 2 + var(--nav-logo-height) + 0.25rem
@@ -50,10 +50,10 @@
 
 @media (max-width: 64rem) {
   :where(:root) {
-    --nav-logo-height: 3.90625rem;
+    --nav-logo-height: 3.9063rem;
     --nav-logo-width: 17.1875rem;
-    --nav-content-pad-block: 0.78125rem;
-    --nav-hamburger-size: 3.90625rem;
-    --nav-hamburger-font: 1.953125rem;
+    --nav-content-pad-block: 0.7813rem;
+    --nav-hamburger-size: 3.9063rem;
+    --nav-hamburger-font: 1.9531rem;
   }
 }

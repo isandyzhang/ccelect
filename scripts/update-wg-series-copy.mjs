@@ -9,6 +9,7 @@ const gCodes = ["GEE", "GET", "GST", "GEY", "GEP"];
 
 function yamlList(items, indent = 6) {
   const pad = " ".repeat(indent);
+
   return items.map((i) => `${pad}- ${i}`).join("\n");
 }
 
@@ -16,6 +17,7 @@ function catalogItems(codes, category, descFn, hrefFn, startImg = 1) {
   return codes
     .map((code, i) => {
       const img = ((startImg - 1 + i) % 5) + 1;
+
       return `      - id: ${code.toLowerCase()}
         category: ${category}
         title: ${code}
@@ -245,6 +247,7 @@ ${catalogItems(codes, meta.category, meta.modelDesc, meta.href)}
 ---
 `;
   const file = path.join(root, locale, `products/exoweld/${key}-series.md`);
+
   fs.writeFileSync(file, content, "utf8");
   console.log("wrote", file);
 }
@@ -252,6 +255,7 @@ ${catalogItems(codes, meta.category, meta.modelDesc, meta.href)}
 function patchExoweldIndex(locale, wMeta, gMeta) {
   const file = path.join(root, locale, "products/exoweld.md");
   let t = fs.readFileSync(file, "utf8");
+
   // Replace W series card title/description blocks more carefully with simple replacements
   t = t
     .replace(/title: W 系列\n/, `title: ${wMeta.indexTitle}\n`)
@@ -291,8 +295,10 @@ function patchExoweldIndex(locale, wMeta, gMeta) {
 function patchWDetails(locale, wMeta, shared) {
   for (const code of wCodes) {
     const file = path.join(root, locale, `products/exoweld/w-series/${code.toLowerCase()}.md`);
+
     if (!fs.existsSync(file)) continue;
     let t = fs.readFileSync(file, "utf8");
+
     t = t
       .replace(/^description: .+$/m, `description: ${wMeta.detailSummary(code)}`)
       .replace(/^\s+category: .+$/m, `    category: ${wMeta.detailCategory}`)

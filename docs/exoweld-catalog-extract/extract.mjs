@@ -35,28 +35,27 @@ function bufferHash(buf) {
   const a = buf[0] ?? 0;
   const b = buf[Math.floor(buf.length / 2)] ?? 0;
   const c = buf[buf.length - 1] ?? 0;
+
   return `${buf.length}:${a}:${b}:${c}`;
 }
 
 async function saveImage(nameHint, bytes, ext) {
   const hash = bufferHash(bytes);
+
   if (seenImageHashes.has(hash)) return null;
   seenImageHashes.add(hash);
 
   imageCount += 1;
   const filename = `${String(imageCount).padStart(4, "0")}-${nameHint}.${ext}`;
   const full = path.join(imagesDir, filename);
+
   await fs.writeFile(full, bytes);
   imageIndex.push({ id: imageCount, file: `images/${filename}`, nameHint });
   return filename;
 }
 
-function rgbaToPngViaRawInfo(width, height, data) {
-  // Keep as raw RGBA dump metadata; convert with sharp if available
-  return { width, height, data };
-}
-
 let sharp;
+
 try {
   // Prefer project-root sharp if present
   sharp = require(path.resolve(__dirname, "..", "..", "node_modules", "sharp"));
@@ -72,10 +71,12 @@ async function saveRgbaImage(nameHint, width, height, rgba) {
   if (!sharp) {
     // Fallback: write .rgba + .json sidecar
     const hash = bufferHash(Buffer.from(rgba));
+
     if (seenImageHashes.has(hash)) return null;
     seenImageHashes.add(hash);
     imageCount += 1;
     const base = `${String(imageCount).padStart(4, "0")}-${nameHint}`;
+
     await fs.writeFile(path.join(imagesDir, `${base}.rgba`), Buffer.from(rgba));
     await fs.writeFile(
       path.join(imagesDir, `${base}.json`),
@@ -100,32 +101,18 @@ async function saveRgbaImage(nameHint, width, height, rgba) {
   return saveImage(nameHint, png, "png");
 }
 
-function isJpeg(bytes) {
-  return bytes[0] === 0xff && bytes[1] === 0xd8;
-}
-function isPng(bytes) {
-  return (
-    bytes[0] === 0x89 &&
-    bytes[1] === 0x50 &&
-    bytes[2] === 0x4e &&
-    bytes[3] === 0x47
-  );
-}
-
 for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
   const page = await pdf.getPage(pageNum);
   const textContent = await page.getTextContent();
-  const strings = textContent.items
-    .map((item) => ("str" in item ? item.str : ""))
-    .filter(Boolean);
-  const text = strings.join(" ").replace(/\s+/g, " ").trim();
 
   // Also keep line-ish grouping by Y position
   const linesMap = new Map();
+
   for (const item of textContent.items) {
     if (!("str" in item) || !item.str) continue;
     const y = Math.round(item.transform[5]);
     const x = item.transform[4];
+
     if (!linesMap.has(y)) linesMap.set(y, []);
     linesMap.get(y).push({ x, str: item.str });
   }
@@ -142,6 +129,7 @@ for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
     .filter(Boolean);
 
   const pageText = lines.join("\n");
+
   await fs.writeFile(path.join(textDir, `page-${String(pageNum).padStart(3, "0")}.txt`), pageText);
 
   // Extract images via operator list
@@ -151,6 +139,7 @@ for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
 
   for (let i = 0; i < ops.fnArray.length; i++) {
     const fn = ops.fnArray[i];
+
     if (
       fn === OPS.paintImageXObject ||
       fn === OPS.paintInlineImageXObject ||
@@ -158,6 +147,7 @@ for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
       fn === OPS.paintInlineImageXObjectGroup
     ) {
       const arg = ops.argsArray[i]?.[0];
+
       if (typeof arg === "string") imgNames.add(arg);
     }
   }
@@ -166,6 +156,7 @@ for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
     try {
       const img = await new Promise((resolve, reject) => {
         let resolved = false;
+
         page.objs.get(name, (obj) => {
           resolved = true;
           resolve(obj);
@@ -189,6 +180,7 @@ for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
         // Usually Uint8ClampedArray RGBA or RGB
         const channels = Math.round(img.data.length / (img.width * img.height));
         let rgba;
+
         if (channels === 4) {
           rgba = img.data;
         } else if (channels === 3) {
@@ -212,7 +204,7 @@ for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
       } else if (img.bitmap) {
         // ImageBitmap - skip for now
       }
-    } catch (err) {
+    } catch {
       // ignore missing image objects
     }
   }
@@ -246,11 +238,13 @@ await fs.writeFile(
 
 // Combined raw text
 const combined = [];
+
 for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
   const t = await fs.readFile(
     path.join(textDir, `page-${String(pageNum).padStart(3, "0")}.txt`),
     "utf8",
   );
+
   combined.push(`\n\n===== PAGE ${pageNum} =====\n\n${t}`);
 }
 await fs.writeFile(path.join(outDir, "all-text.txt"), combined.join(""));

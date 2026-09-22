@@ -175,6 +175,7 @@ const copy = {
 
 function yamlList(items, indent = 8) {
   const pad = " ".repeat(indent);
+
   return items.map((i) => `${pad}- ${i}`).join("\n");
 }
 
@@ -225,6 +226,7 @@ ${items}
 ---
 `;
   const file = path.join(root, locale, "products/exoweld.md");
+
   fs.writeFileSync(file, content, "utf8");
   console.log("wrote", file);
 }
@@ -266,8 +268,10 @@ ${items}
 ---
 `;
   const dir = path.join(root, locale, "products/exoweld");
+
   fs.mkdirSync(dir, { recursive: true });
   const file = path.join(dir, `${key}-series.md`);
+
   fs.writeFileSync(file, content, "utf8");
   console.log("wrote", file);
 }
@@ -311,14 +315,17 @@ ${yamlList(c.features, 6)}
 ---
 `;
   const dir = path.join(root, locale, "products/exoweld/w-series");
+
   fs.mkdirSync(dir, { recursive: true });
   const file = path.join(dir, `${slug}.md`);
+
   fs.writeFileSync(file, content, "utf8");
   console.log("wrote", file);
 }
 
 for (const locale of ["zh-tw", "en", "ja"]) {
   const c = copy[locale];
+
   writeExoweldIndex(locale, c);
   for (const key of Object.keys(seriesMeta)) writeSeriesCatalog(locale, c, key);
   for (const code of seriesMeta.w.codes) writeWDetail(locale, c, code);

@@ -30,6 +30,7 @@ if (type === "local-source" && source) {
   // Prefer a single MP4 for background heroes to avoid multi-source quirks.
   if (background) {
     const mp4 = localVideoSources.find((item) => item.type === "video/mp4");
+
     if (mp4) localVideoSources = [mp4];
   }
 }

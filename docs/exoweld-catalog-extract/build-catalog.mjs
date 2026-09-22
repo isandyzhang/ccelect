@@ -40,6 +40,7 @@ const entries = [];
 for (const file of imageFiles) {
   const ocrPath = path.join(ocrSrc, file.replace(/\.png$/i, ".txt"));
   let ocrText = "";
+
   try {
     ocrText = await fs.readFile(ocrPath, "utf8");
   } catch {
@@ -55,9 +56,11 @@ for (const file of imageFiles) {
   const footerMatch = ocrNorm.match(/\bPAGE\s+(\d{1,2})\b/i);
   const nameMatch = file.match(/-p(\d{3})-/i);
   const pdfPage = nameMatch ? Number(nameMatch[1]) : null;
+
   if (!pdfPage) continue;
 
   let catalogPage = footerMatch ? Number(footerMatch[1]) : null;
+
   // OCR sometimes reads PAGE 32 as 82 etc.
   if (catalogPage != null && (catalogPage < 1 || catalogPage > 52)) {
     catalogPage = null;
@@ -70,20 +73,25 @@ for (const file of imageFiles) {
 
   const full = path.join(imagesSrc, file);
   const size = (await fs.stat(full)).size;
+
   entries.push({ pdfPage, catalogPage, file, full, size, ocrText: ocrNorm });
 }
 
 // Prefer largest image per PDF page (full page over insets)
 const byPdf = new Map();
+
 for (const e of entries) {
   const prev = byPdf.get(e.pdfPage);
+
   if (!prev || e.size > prev.size) byPdf.set(e.pdfPage, e);
 }
 
 // Also index by catalog page (largest wins)
 const byCatalog = new Map();
+
 for (const e of byPdf.values()) {
   const prev = byCatalog.get(e.catalogPage);
+
   if (!prev || e.size > prev.size) byCatalog.set(e.catalogPage, e);
 }
 
@@ -91,6 +99,7 @@ for (const e of byPdf.values()) {
 for (const [num, e] of [...byCatalog.entries()].sort((a, b) => a[0] - b[0])) {
   if (num < 1 || num > 52) continue;
   const outName = `page-${String(num).padStart(2, "0")}.png`;
+
   await fs.copyFile(e.full, path.join(pagesDir, outName));
 
   if (num >= 8 && num <= 44 && e.size > 40000) {
@@ -99,6 +108,7 @@ for (const [num, e] of [...byCatalog.entries()].sort((a, b) => a[0] - b[0])) {
     const h = meta.height;
     const cropW = Math.round(w * 0.34);
     const cropH = Math.round(h * 0.3);
+
     await sharp(e.full)
       .extract({
         left: Math.round(w * 0.015),
@@ -183,6 +193,7 @@ function parseRows(ocrText, typeCode) {
     "gi",
   );
   let m;
+
   while ((m = re.exec(ocrText)) !== null) {
     rows.push({
       moldType: `${m[1].toUpperCase()}-${m[2]}`,
@@ -192,6 +203,7 @@ function parseRows(ocrText, typeCode) {
     });
   }
   const seen = new Set();
+
   return rows.filter((r) => {
     if (seen.has(r.moldType)) return false;
     seen.add(r.moldType);
@@ -203,6 +215,7 @@ function findOcrForType(typeCode) {
   const chunks = [];
   const pagesHit = new Set();
   const needle = new RegExp(`\\b${typeCode}-`, "i");
+
   for (const e of byPdf.values()) {
     if (needle.test(e.ocrText)) {
       chunks.push(e.ocrText);
@@ -221,6 +234,7 @@ function mdTable(rows) {
     "| 熔模型號 Mold Type | Price Code | Weld Metal | 配件 |",
     "| --- | --- | --- | --- |",
   ];
+
   for (const r of rows) {
     lines.push(
       `| \`${r.moldType}\` | ${r.priceCode} | ${r.weldMetal} | ${r.accessory || "—"} |`,
@@ -242,6 +256,7 @@ try {
   };
   // Attach to catalog 38 OCR by appending into byCatalog entry if exists
   const existing = byCatalog.get(38);
+
   if (existing) existing.ocrText += `\n${fake.ocrText}`;
   else byCatalog.set(38, fake);
   // Ensure type search sees it
@@ -254,6 +269,7 @@ try {
 }
 
 const md = [];
+
 md.push(`# CCECO EXOWELD IEC 型錄整理
 
 > 來源：\`docs/CCECO EXOWELD- IEC CATALOG.pdf\`（52 頁）  
@@ -359,10 +375,12 @@ ${Object.entries(SERIES_META)
 
 const json = {};
 const bySeries = {};
+
 for (const p of PRODUCT_TYPES) (bySeries[p.series] ??= []).push(p);
 
 for (const [series, products] of Object.entries(bySeries)) {
   const meta = SERIES_META[series];
+
   md.push(`\n<a id="series-${series.toLowerCase()}"></a>\n`);
   md.push(`## ${meta.title}\n\n${meta.desc}\n`);
 
@@ -376,6 +394,7 @@ for (const [series, products] of Object.entries(bySeries)) {
     if (page != null) {
       md.push(`- 型錄頁：PAGE ${page}${found.pages.length > 1 ? `（相關頁：${found.pages.join(", ")}）` : ""}`);
       const pageRel = `pages/page-${String(page).padStart(2, "0")}.png`;
+
       try {
         await fs.access(path.join(deliver, pageRel));
         md.push(`- 整頁圖：[![](${pageRel})](${pageRel})`);
@@ -383,6 +402,7 @@ for (const [series, products] of Object.entries(bySeries)) {
         /* missing */
       }
       const diagram = `products/page-${String(page).padStart(2, "0")}-diagram.png`;
+
       try {
         await fs.access(path.join(deliver, diagram));
         md.push(`- 示意圖：![${prod.title}](${diagram})`);
@@ -451,6 +471,7 @@ E-Mail: cce@ccelect.com.tw
 for (const num of [...byCatalog.keys()].sort((a, b) => a - b)) {
   if (num < 1 || num > 52) continue;
   const rel = `pages/page-${String(num).padStart(2, "0")}.png`;
+
   md.push(`| ${num} | [${rel}](${rel}) |`);
 }
 
@@ -478,4 +499,5 @@ await fs.writeFile(
 );
 
 const withRows = Object.values(json).filter((p) => p.rows.length).length;
+
 console.log(`README written. Pages: ${byCatalog.size}. Types with rows: ${withRows}/${PRODUCT_TYPES.length}`);
