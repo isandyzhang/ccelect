@@ -1,9 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Product placeholder">
-  <rect width="800" height="600" fill="#e3eef9"/>
-  <rect x="48" y="48" width="704" height="504" rx="24" fill="#f4f7fb"/>
-  <g fill="none" stroke="#265ca6" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M400 148l-36 92h56l-40 108"/>
-    <rect x="364" y="348" width="72" height="36" rx="6"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Product placeholder">
+  <defs>
+    <linearGradient id="mold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a5563"/>
+      <stop offset="100%" stop-color="#1f2933"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d7dde6"/>
+      <stop offset="100%" stop-color="#8f9aab"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#ffffff"/>
+  <rect x="70" y="70" width="660" height="460" rx="28" fill="#f7f8fa" stroke="#e5e8ee" stroke-width="2"/>
+  <g transform="translate(400 250)">
+    <rect x="-120" y="-90" width="240" height="180" rx="28" fill="url(#mold)"/>
+    <rect x="-70" y="-40" width="140" height="80" rx="14" fill="#2d3742" stroke="#9aa5b4" stroke-width="3"/>
+    <rect x="-160" y="-14" width="70" height="28" rx="10" fill="url(#handle)"/>
+    <rect x="90" y="-14" width="70" height="28" rx="10" fill="url(#handle)"/>
+    <circle cx="-40" cy="0" r="10" fill="#cbd5e1"/>
+    <circle cx="40" cy="0" r="10" fill="#cbd5e1"/>
   </g>
-  <text x="400" y="448" text-anchor="middle" fill="#5e6878" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">DUMMY PHOTO</text>
+  <text x="400" y="500" text-anchor="middle" fill="#7a8494" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">DUMMY PHOTO</text>
 </svg>

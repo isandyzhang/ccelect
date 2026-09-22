@@ -65,10 +65,10 @@ pageSections:
                         size: md
                         listType: bullet
                         items:
-                          - text: W 系列
-                            link: /products/exoweld/
-                          - text: G 系列
-                            link: /products/exoweld/
+                          - text: W 系列-線對線
+                            link: /products/exoweld/w-series/
+                          - text: G 系列-線對接地棒
+                            link: /products/exoweld/g-series/
                           - text: S 系列
                             link: /products/exoweld/
                           - text: R 系列
@@ -182,8 +182,6 @@ pageSections:
                           - text: 接地銅排
                             link: /products/grounding-materials/
                           - text: 壓接頭與固定夾
-                            link: /products/grounding-materials/
-                          - text: 接地電阻測試儀表
                             link: /products/grounding-materials/
                           - text: 附屬材料
                             link: /products/grounding-materials/

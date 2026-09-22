@@ -1,10 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Product placeholder">
-  <rect width="800" height="600" fill="#e3eef9"/>
-  <rect x="48" y="48" width="704" height="504" rx="24" fill="#f4f7fb"/>
-  <g fill="none" stroke="#265ca6" stroke-width="10" stroke-linejoin="round">
-    <rect x="286" y="168" width="228" height="188" rx="16"/>
-    <path d="M310 168l114-52 228 0-114 52"/>
-    <path d="M514 168v188l114-52V116"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Product placeholder">
+  <defs>
+    <linearGradient id="metal1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d8dee8"/>
+      <stop offset="45%" stop-color="#f4f6f8"/>
+      <stop offset="100%" stop-color="#b7c0ce"/>
+    </linearGradient>
+    <linearGradient id="copper1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8a066"/>
+      <stop offset="100%" stop-color="#b85a2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#ffffff"/>
+  <rect x="70" y="70" width="660" height="460" rx="28" fill="#f7f8fa" stroke="#e5e8ee" stroke-width="2"/>
+  <g transform="translate(400 270)">
+    <ellipse cx="-120" cy="0" rx="70" ry="42" fill="url(#copper1)" opacity="0.95"/>
+    <ellipse cx="120" cy="0" rx="70" ry="42" fill="url(#copper1)" opacity="0.95"/>
+    <rect x="-130" y="-28" width="260" height="56" rx="18" fill="url(#metal1)" stroke="#8f9aab" stroke-width="4"/>
+    <rect x="-48" y="-48" width="96" height="96" rx="16" fill="#c9d1dc" stroke="#7d8796" stroke-width="4"/>
+    <circle cx="0" cy="0" r="18" fill="#f0f3f7" stroke="#6f7b8c" stroke-width="4"/>
   </g>
-  <text x="400" y="448" text-anchor="middle" fill="#5e6878" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">DUMMY PHOTO</text>
+  <text x="400" y="500" text-anchor="middle" fill="#7a8494" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">DUMMY PHOTO</text>
 </svg>

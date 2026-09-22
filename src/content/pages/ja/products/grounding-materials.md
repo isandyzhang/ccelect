@@ -2,11 +2,11 @@
 _schema: default
 permalink: null
 title: 一般接地材料
-description: 接地棒、銅バー、圧着端子、固定夾、測定器、付属材料。
+description: 接地棒、銅バー、圧着端子、固定夾、付属材料。
 pageSections:
   - _component: page-sections/products/product-catalog
     eyebrowText: 一般接地材料
-    heading: 接地棒・導体・測定用品
+    heading: 接地棒・導体・工事部品
     subtext: 土壌、腐食、目標抵抗、プロジェクト仕様に応じて材料を選択してください。
     helpHeading: 現場に合う接地材料が分かりませんか？
     helpText: 導体材質、線径、接点形式、数量、施工環境をお知らせください。製品選定をお手伝いします。
@@ -53,16 +53,6 @@ pageSections:
         specifications:
           - GBS シリーズ
           - GCS シリーズ
-        href: /ja/contact/
-      - id: testing-instruments
-        category: 測定
-        title: 接地抵抗測定器
-        description: 施工後の抵抗測定・点検用測定器。
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: 製品プレースホルダー
-        specifications:
-          - AEMC 4620
-          - デジタル測定
         href: /ja/contact/
       - id: accessories
         category: 付属

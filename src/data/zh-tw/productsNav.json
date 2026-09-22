@@ -4,8 +4,8 @@
       "name": "Exoweld 熱熔接型錄",
       "path": "/products/exoweld/",
       "children": [
-        { "name": "W 系列", "path": "/products/exoweld/w-series/", "children": [] },
-        { "name": "G 系列", "path": "/products/exoweld/g-series/", "children": [] },
+        { "name": "W 系列-線對線", "path": "/products/exoweld/w-series/", "children": [] },
+        { "name": "G 系列-線對接地棒", "path": "/products/exoweld/g-series/", "children": [] },
         { "name": "S 系列", "path": "/products/exoweld/s-series/", "children": [] },
         { "name": "R 系列", "path": "/products/exoweld/r-series/", "children": [] },
         { "name": "P 系列", "path": "/products/exoweld/p-series/", "children": [] },

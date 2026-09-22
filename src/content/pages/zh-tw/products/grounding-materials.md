@@ -2,28 +2,17 @@
 _schema: default
 permalink: null
 title: 一般接地用材料
-description: 接地棒、銅排、壓接頭、固定夾、測試儀表與附屬材料。
+description: 接地棒、銅排、壓接頭、固定夾與附屬材料。
 pageSections:
   - _component: page-sections/products/product-catalog
     eyebrowText: 一般接地用材料
-    heading: 接地極、導體與測量用品
+    heading: 接地極、導體與工程配件
     subtext: 依土壤環境、腐蝕條件、目標電阻與專案規範選擇材料。以下整理常用產品分類與系列，方便工程人員快速查找。
     helpHeading: 不確定現場適合哪種接地材料？
     helpText: 提供導體材質、線徑、接點形式、需求數量及施工環境，我們會協助確認產品與報價。
     helpLink: /contact/
     helpLinkText: 聯絡工程業務
     items:
-      - id: composite-cable
-        category: 接地導體
-        title: Cu-Bond 複合接地電纜
-        description: 外層鍍錫銅包鋼、內層銅絞線，適用需防盜與直埋的暴露式接地場景。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: Cu-Bond 複合接地電纜示意
-        specifications:
-          - CC5A05CB
-          - CC5A20CB
-          - CC5A40CB
-        href: /products/grounding-materials/composite-cable/
       - id: grounding-rods
         category: 接地極
         title: 接地棒
@@ -67,17 +56,6 @@ pageSections:
         specifications:
           - GBS 系列
           - GCS 系列
-        href: /contact/
-      - id: testing-instruments
-        category: 測量儀器
-        title: 接地電阻測試儀錶
-        description: 用於接地系統施工後的電阻量測、驗收與定期維護檢查。
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: 產品示意照片
-        iconName: chart-bar
-        specifications:
-          - AEMC 4620
-          - 數位式量測
         href: /contact/
       - id: accessories
         category: 工程材料

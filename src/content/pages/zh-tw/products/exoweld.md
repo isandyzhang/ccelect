@@ -15,8 +15,8 @@ pageSections:
     items:
       - id: series-w
         category: Exoweld
-        title: W 系列
-        description: WE、WT、WX、WP、WL、WXL 等銅導體接點形式。
+        title: W 系列-線對線
+        description: 銅導體線對線接點：WE、WT、WX、WP、WL、WXL。
         image: /src/assets/images/ccelect/dummy/product-1.svg
         imageAlt: 產品示意照片
         specifications:
@@ -29,8 +29,8 @@ pageSections:
         href: /products/exoweld/w-series/
       - id: series-g
         category: Exoweld
-        title: G 系列
-        description: GEE、GET、GST、GEY、GEP 等導體與接地極連接形式。
+        title: G 系列-線對接地棒
+        description: 導體對接地棒接點：GEE、GET、GST、GEY、GEP。
         image: /src/assets/images/ccelect/dummy/product-2.svg
         imageAlt: 產品示意照片
         specifications:

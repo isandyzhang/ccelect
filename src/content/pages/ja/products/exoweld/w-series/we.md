@@ -2,12 +2,12 @@
 _schema: default
 permalink: null
 title: WE
-description: WE は旧カタログに基づく Exoweld W シリーズ銅導体熱熔接接点型番です。
+description: WE は W シリーズ線対線の銅導体熱熔接接点で、導体どうしの接続に適します。
 pageSections:
   - _component: page-sections/products/product-detail
-    category: Exoweld ／ W シリーズ
+    category: Exoweld ／ W シリーズ-線対線
     heading: WE
-    summary: WE は旧カタログに基づく Exoweld W シリーズ銅導体熱熔接接点型番です。
+    summary: WE は W シリーズ線対線の銅導体熱熔接接点で、導体どうしの接続に適します。
     description:
       - WE は W シリーズ銅導体接点形式で、線径と接点条件に応じた溶模・溶接剤と組み合わせます。
       - 本ページは製品詳細テンプレートの Demo です。正式仕様、型番、溶接剤量は営業確認資料に従ってください。
@@ -19,7 +19,7 @@ pageSections:
       text: 営業へ連絡
       href: /ja/contact/
     secondaryCta:
-      text: W シリーズへ戻る
+      text: W シリーズ-線対線へ戻る
       href: /ja/products/exoweld/w-series/
     features:
       - 銅導体の熱熔接接点に対応

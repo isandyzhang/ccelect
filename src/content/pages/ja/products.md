@@ -63,10 +63,10 @@ pageSections:
                         size: md
                         listType: bullet
                         items:
-                          - text: W シリーズ
-                            link: /ja/products/exoweld/
-                          - text: G シリーズ
-                            link: /ja/products/exoweld/
+                          - text: W シリーズ-線対線
+                            link: /ja/products/exoweld/w-series/
+                          - text: G シリーズ-線対接地棒
+                            link: /ja/products/exoweld/g-series/
                           - text: S シリーズ
                             link: /ja/products/exoweld/
                           - text: R シリーズ
@@ -180,8 +180,6 @@ pageSections:
                           - text: 接地銅バー
                             link: /ja/products/grounding-materials/
                           - text: 圧着・固定具
-                            link: /ja/products/grounding-materials/
-                          - text: 接地抵抗測定器
                             link: /ja/products/grounding-materials/
                           - text: 付属材料
                             link: /ja/products/grounding-materials/

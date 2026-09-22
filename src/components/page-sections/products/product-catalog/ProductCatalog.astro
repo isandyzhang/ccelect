@@ -8,23 +8,36 @@ interface Props {
   eyebrowText?: string;
   heading: string;
   subtext?: string;
+  overviewTitle?: string;
+  overview?: string[];
+  overviewFeatures?: string[];
+  productsHeading?: string;
   items?: CatalogItem[];
   helpHeading?: string;
   helpText?: string;
   helpLink?: string;
   helpLinkText?: string;
+  countLabel?: string;
 }
 
 const {
   eyebrowText = "產品分類",
   heading,
   subtext,
+  overviewTitle = "",
+  overview = [],
+  overviewFeatures = [],
+  productsHeading = "",
   items = [],
   helpHeading = "不確定該選哪一項產品？",
   helpText = "提供使用環境、導體規格與需求數量，我們會協助確認適合的材料。",
   helpLink = "/contact/",
   helpLinkText = "取得選型協助",
+  countLabel = "共 {count} 個產品分類",
 } = Astro.props as Props;
+
+const hasOverview = Boolean(overviewTitle || overview.length > 0 || overviewFeatures.length > 0);
+const itemCountLabel = countLabel.replace("{count}", String(items.length));
 
 // 在第一排產品後插入協助區塊，避免使用者迷失在長列表中。
 const firstItems = items.slice(0, 3);
@@ -59,8 +72,39 @@ const remainingItems = items.slice(3);
           <h1>{heading}</h1>
           {subtext && <p class="catalog-subtext">{subtext}</p>}
         </div>
-        <p class="catalog-count">共 {items.length} 個產品分類</p>
+        <p class="catalog-count">{itemCountLabel}</p>
       </header>
+
+      {
+        hasOverview && (
+          <section
+            class="catalog-overview"
+            aria-label={overviewTitle || heading}
+          >
+            {overviewTitle && <h2>{overviewTitle}</h2>}
+            {overview.length > 0 && (
+              <div class="catalog-overview-copy">
+                {overview.map((paragraph) => (
+                  <p>{paragraph}</p>
+                ))}
+              </div>
+            )}
+            {overviewFeatures.length > 0 && (
+              <ul class="catalog-overview-features">
+                {overviewFeatures.map((feature) => (
+                  <li>{feature}</li>
+                ))}
+              </ul>
+            )}
+          </section>
+        )
+      }
+
+      {
+        productsHeading && (
+          <h2 class="catalog-products-heading">{productsHeading}</h2>
+        )
+      }
 
       <div class="catalog-grid">
         {
@@ -208,140 +252,59 @@ const remainingItems = items.slice(3);
         }
       }
 
+      .catalog-overview {
+        border-bottom: 1px solid var(--color-border);
+        display: grid;
+        gap: 1rem;
+        margin-top: clamp(1.5rem, 3vw, 2.5rem);
+        padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
+
+        h2 {
+          color: var(--color-text-strong);
+          font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+          margin: 0;
+        }
+      }
+
+      .catalog-overview-copy {
+        display: grid;
+        gap: 0.85rem;
+        max-width: 46rem;
+
+        p {
+          color: var(--color-text);
+          line-height: 1.75;
+          margin: 0;
+        }
+      }
+
+      .catalog-overview-features {
+        display: grid;
+        gap: 0.65rem;
+        list-style: none;
+        margin: 0.25rem 0 0;
+        max-width: 46rem;
+        padding: 0;
+
+        li {
+          border-left: 3px solid var(--color-bg-brand);
+          color: var(--color-text);
+          line-height: 1.6;
+          padding-left: 0.85rem;
+        }
+      }
+
+      .catalog-products-heading {
+        color: var(--color-text-strong);
+        font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+        margin: clamp(1.75rem, 3vw, 2.75rem) 0 0;
+      }
+
       .catalog-grid {
         display: grid;
         gap: var(--spacing-lg);
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        margin-top: clamp(2rem, 4vw, 3.5rem);
-      }
-
-      .catalog-card {
-        background: var(--color-bg-surface);
-        border: 1px solid var(--color-border);
-        border-radius: var(--radius-lg);
-        display: flex;
-        flex-direction: column;
-        min-width: 0;
-        overflow: hidden;
-        scroll-margin-top: 9rem;
-        transition:
-          border-color var(--animation-normal) ease,
-          box-shadow var(--animation-normal) ease,
-          transform var(--animation-normal) ease;
-
-        &:hover {
-          border-color: var(--color-border-strong);
-          box-shadow: 0 1rem 2.5rem var(--color-shadow);
-          transform: translateY(-0.25rem);
-        }
-
-        .catalog-card-media {
-          aspect-ratio: 4 / 3;
-          background:
-            linear-gradient(145deg, var(--color-bg-muted), transparent), var(--color-bg-accent);
-          overflow: hidden;
-
-          > .image,
-          > .image > .image-inner,
-          picture,
-          img {
-            height: 100%;
-            margin: 0;
-            width: 100%;
-          }
-
-          img {
-            object-fit: cover;
-            transition: transform var(--animation-slow) ease;
-          }
-
-          &.icon-media {
-            align-items: center;
-            color: var(--color-text-brand);
-            display: flex;
-            justify-content: center;
-
-            .icon {
-              background: var(--color-bg-surface);
-              border: 1px solid var(--color-border);
-              border-radius: var(--radius-md);
-              box-shadow: 0 0.75rem 2rem var(--color-shadow);
-              padding: var(--spacing-lg);
-            }
-          }
-        }
-
-        &:hover .catalog-card-media img {
-          transform: scale(1.035);
-        }
-
-        .catalog-card-body {
-          color: var(--color-text);
-          display: flex;
-          flex: 1;
-          flex-direction: column;
-          padding: clamp(1.25rem, 2vw, 1.75rem);
-
-          .catalog-card-category {
-            color: var(--color-text-brand);
-            font-size: var(--font-size-xs);
-            font-weight: var(--font-weight-bold);
-            letter-spacing: 0.08em;
-            margin: 0 0 var(--spacing-sm);
-            text-transform: uppercase;
-          }
-
-          h2 {
-            color: var(--color-text-strong);
-            font-size: clamp(1.2rem, 2vw, 1.5rem);
-            line-height: 1.3;
-            margin: 0;
-          }
-
-          > p:not(.catalog-card-category) {
-            color: var(--color-text-muted);
-            font-size: var(--font-size-sm);
-            line-height: 1.7;
-            margin: var(--spacing-md) 0 0;
-          }
-        }
-
-        .catalog-tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: var(--spacing-xs);
-          list-style: none;
-          margin: var(--spacing-lg) 0 0;
-          padding: 0;
-
-          li {
-            background: var(--color-bg-muted);
-            border-radius: var(--radius-full);
-            color: var(--color-text-muted);
-            font-size: var(--font-size-xs);
-            padding: 0.3rem 0.65rem;
-          }
-        }
-
-        .catalog-card-link {
-          align-items: center;
-          color: var(--color-text-strong);
-          display: flex;
-          font-size: var(--font-size-sm);
-          font-weight: var(--font-weight-bold);
-          gap: var(--spacing-sm);
-          margin-top: auto;
-          padding-top: var(--spacing-xl);
-          text-decoration: none;
-
-          .icon {
-            transition: transform var(--animation-normal) ease;
-          }
-
-          &:hover .icon {
-            transform: translateX(0.25rem);
-          }
-        }
+        margin-top: clamp(1.25rem, 3vw, 2rem);
       }
 
       .catalog-help-card {

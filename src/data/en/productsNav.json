@@ -4,8 +4,8 @@
       "name": "Exoweld catalogs",
       "path": "/en/products/exoweld/",
       "children": [
-        { "name": "W series", "path": "/en/products/exoweld/w-series/", "children": [] },
-        { "name": "G series", "path": "/en/products/exoweld/g-series/", "children": [] },
+        { "name": "W series - wire to wire", "path": "/en/products/exoweld/w-series/", "children": [] },
+        { "name": "G series - wire to ground rod", "path": "/en/products/exoweld/g-series/", "children": [] },
         { "name": "S series", "path": "/en/products/exoweld/s-series/", "children": [] },
         { "name": "R series", "path": "/en/products/exoweld/r-series/", "children": [] },
         { "name": "P series", "path": "/en/products/exoweld/p-series/", "children": [] },

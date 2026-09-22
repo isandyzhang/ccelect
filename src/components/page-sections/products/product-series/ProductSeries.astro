@@ -1,0 +1,1016 @@
+---
+import Image from "@core-elements/image/Image.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+import ProductsSide from "@navigation/products-side/ProductsSide.astro";
+import ProductCatalogCard from "../product-catalog/ProductCatalogCard.astro";
+import type { CatalogItem } from "../product-catalog/types";
+import type {
+  ProductSeriesCta,
+  ProductSeriesGalleryItem,
+  ProductSeriesProjectItem,
+  ProductSeriesVideoItem,
+} from "./types";
+
+interface Props {
+  eyebrowText?: string;
+  heading: string;
+  summary?: string;
+  image?: string;
+  imageAlt?: string;
+  images?: ProductSeriesGalleryItem[];
+  featuresHeading?: string;
+  features?: string[];
+  detailsLabel?: string;
+  productsHeading?: string;
+  applicationsLabel?: string;
+  applicationImages?: ProductSeriesGalleryItem[];
+  videosLabel?: string;
+  videos?: ProductSeriesVideoItem[];
+  projectsLabel?: string;
+  projects?: ProductSeriesProjectItem[];
+  items?: CatalogItem[];
+  helpHeading?: string;
+  helpText?: string;
+  primaryCta?: ProductSeriesCta;
+  secondaryCta?: ProductSeriesCta;
+  countLabel?: string;
+}
+
+const {
+  eyebrowText = "Exoweld",
+  heading,
+  summary = "",
+  image,
+  imageAlt = heading,
+  images = [],
+  featuresHeading = "功能",
+  features = [],
+  detailsLabel = "詳情",
+  productsHeading = "商品列表",
+  applicationsLabel = "應用場景圖片",
+  applicationImages = [],
+  videosLabel = "影片",
+  videos = [],
+  projectsLabel = "工程實績",
+  projects = [],
+  items = [],
+  helpHeading = "需要技術支援或報價嗎？我們隨時為您服務。",
+  helpText = "",
+  primaryCta = { text: "聯絡我們", href: "/contact/" },
+  secondaryCta,
+  countLabel = "共 {count} 個商品",
+} = Astro.props as Props;
+
+const gallery: ProductSeriesGalleryItem[] =
+  images.length > 0 ? images : image ? [{ image, imageAlt }] : [];
+
+const itemCountLabel = countLabel.replace("{count}", String(items.length));
+
+const tabs = [
+  { id: "details", label: detailsLabel },
+  { id: "products", label: productsHeading },
+  { id: "applications", label: applicationsLabel },
+  { id: "videos", label: videosLabel },
+  { id: "projects", label: projectsLabel },
+] as const;
+---
+
+<section
+  class="product-series"
+  data-theme="light"
+>
+  <div class="product-series-shell">
+    <details
+      class="series-sidebar"
+      open
+    >
+      <summary>
+        <span>瀏覽商品分類</span>
+        <Icon
+          name="chevron-down"
+          size="none"
+          aria-hidden="true"
+        />
+      </summary>
+      <div class="series-sidebar-heading">商品櫥窗</div>
+      <ProductsSide />
+    </details>
+
+    <div class="series-main">
+      <div class="series-hero">
+        {
+          gallery.length > 0 && (
+            <div
+              class="series-gallery"
+              data-series-gallery
+            >
+              <div
+                class="series-gallery-track"
+                data-series-track
+              >
+                {gallery.map((item) => (
+                  <figure class="series-gallery-slide">
+                    <div class="series-media-frame">
+                      <Image
+                        source={item.image}
+                        alt={item.imageAlt || heading}
+                        aspectRatio="square"
+                        sizes="(max-width: 900px) 100vw, 42vw"
+                      />
+                    </div>
+                    {item.caption && <figcaption>{item.caption}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+              {
+                gallery.length > 1 && (
+                  <>
+                    <div class="series-gallery-nav">
+                      <button
+                        type="button"
+                        data-gallery-prev
+                        aria-label="上一張"
+                      >
+                        <Icon
+                          name="chevron-left"
+                          size="none"
+                          aria-hidden="true"
+                        />
+                      </button>
+                      <button
+                        type="button"
+                        data-gallery-next
+                        aria-label="下一張"
+                      >
+                        <Icon
+                          name="chevron-right"
+                          size="none"
+                          aria-hidden="true"
+                        />
+                      </button>
+                    </div>
+                    <div
+                      class="series-gallery-dots"
+                      data-series-dots
+                      role="tablist"
+                      aria-label="圖片切換"
+                    >
+                      {gallery.map((_, index) => (
+                        <button
+                          type="button"
+                          class:list={["series-gallery-dot", index === 0 && "is-active"]}
+                          aria-label={`第 ${index + 1} 張圖片`}
+                          data-index={index}
+                        />
+                      ))}
+                    </div>
+                  </>
+                )
+              }
+            </div>
+          )
+        }
+
+        <div class="series-copy">
+          {eyebrowText && <p class="series-eyebrow">{eyebrowText}</p>}
+          <h1>{heading}</h1>
+          {summary && <p class="series-summary">{summary}</p>}
+        </div>
+      </div>
+
+      <div
+        class="series-tabs"
+        role="tablist"
+        aria-label="系列資訊"
+        data-series-tabs
+      >
+        {
+          tabs.map((tab, index) => (
+            <button
+              type="button"
+              class:list={[index === 0 && "is-active"]}
+              role="tab"
+              aria-selected={index === 0 ? "true" : "false"}
+              data-tab={tab.id}
+            >
+              {tab.label}
+            </button>
+          ))
+        }
+      </div>
+
+      <div
+        class="series-panels"
+        data-series-panels
+      >
+        <section
+          class="series-panel series-details is-active"
+          data-panel="details"
+          role="tabpanel"
+        >
+          <h2>{featuresHeading}</h2>
+          {
+            features.length > 0 ? (
+              <ul>
+                {features.map((feature) => (
+                  <li>{feature}</li>
+                ))}
+              </ul>
+            ) : (
+              <p class="series-empty">DUMMY：詳情內容待補。</p>
+            )
+          }
+        </section>
+
+        <section
+          class="series-panel series-products"
+          data-panel="products"
+          role="tabpanel"
+          hidden
+        >
+          <div class="series-products-head">
+            <h2>{productsHeading}</h2>
+            <p>{itemCountLabel}</p>
+          </div>
+          {
+            items.length > 0 ? (
+              <div class="series-products-grid">
+                {items.map((item) => (
+                  <ProductCatalogCard
+                    item={item}
+                    fallbackHref={primaryCta.href}
+                  />
+                ))}
+              </div>
+            ) : (
+              <p class="series-empty">DUMMY：商品列表待補。</p>
+            )
+          }
+        </section>
+
+        <section
+          class="series-panel series-applications"
+          data-panel="applications"
+          role="tabpanel"
+          hidden
+        >
+          <h2>{applicationsLabel}</h2>
+          {
+            applicationImages.length > 0 ? (
+              <div class="series-media-grid">
+                {applicationImages.map((item) => (
+                  <figure>
+                    <div class="series-media-frame">
+                      <Image
+                        source={item.image}
+                        alt={item.imageAlt || heading}
+                        aspectRatio="landscape"
+                        sizes="(max-width: 900px) 100vw, 30vw"
+                      />
+                    </div>
+                    <figcaption>{item.caption || "DUMMY 應用場景"}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            ) : (
+              <p class="series-empty">DUMMY：應用場景圖片待補。</p>
+            )
+          }
+        </section>
+
+        <section
+          class="series-panel series-videos"
+          data-panel="videos"
+          role="tabpanel"
+          hidden
+        >
+          <h2>{videosLabel}</h2>
+          {
+            videos.length > 0 ? (
+              <div class="series-media-grid">
+                {videos.map((video) => (
+                  <article class="series-video-card">
+                    <div class="series-video-thumb">
+                      {video.thumbnail ? (
+                        <Image
+                          source={video.thumbnail}
+                          alt={video.title}
+                          aspectRatio="landscape"
+                          sizes="(max-width: 900px) 100vw, 30vw"
+                        />
+                      ) : (
+                        <span>DUMMY VIDEO</span>
+                      )}
+                      <span class="series-video-play" aria-hidden="true">
+                        <Icon
+                          name="play-circle"
+                          size="none"
+                        />
+                      </span>
+                    </div>
+                    <div class="series-video-copy">
+                      <h3>{video.title}</h3>
+                      {video.description && <p>{video.description}</p>}
+                      <a href={video.href || "#"}>{video.href ? "觀看影片" : "DUMMY 連結"}</a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <p class="series-empty">DUMMY：影片內容待補。</p>
+            )
+          }
+        </section>
+
+        <section
+          class="series-panel series-projects"
+          data-panel="projects"
+          role="tabpanel"
+          hidden
+        >
+          <h2>{projectsLabel}</h2>
+          {
+            projects.length > 0 ? (
+              <div class="series-media-grid">
+                {projects.map((project) => (
+                  <article class="series-project-card">
+                    <div class="series-media-frame">
+                      <Image
+                        source={project.image || "/src/assets/images/ccelect/dummy/product-5.svg"}
+                        alt={project.imageAlt || project.title}
+                        aspectRatio="landscape"
+                        sizes="(max-width: 900px) 100vw, 30vw"
+                      />
+                    </div>
+                    <div class="series-project-copy">
+                      <h3>{project.title}</h3>
+                      {project.description && <p>{project.description}</p>}
+                      <a href={project.href || "/projects/"}>{project.href ? "查看實績" : "DUMMY 實績"}</a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <p class="series-empty">DUMMY：工程實績待補。</p>
+            )
+          }
+        </section>
+      </div>
+
+      <aside
+        class="series-help"
+        id="series-help"
+      >
+        <div class="series-help-copy">
+          <h2>{helpHeading}</h2>
+          {helpText && <p>{helpText}</p>}
+        </div>
+        <div class="series-help-actions">
+          <a
+            class="series-cta-primary"
+            href={primaryCta.href}
+          >
+            {primaryCta.text}
+            <Icon
+              name="arrow-right"
+              size="none"
+              aria-hidden="true"
+            />
+          </a>
+          {
+            secondaryCta && (
+              <a
+                class="series-cta-secondary"
+                href={secondaryCta.href}
+              >
+                {secondaryCta.text}
+              </a>
+            )
+          }
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<script>
+  function setupSeriesGalleries(root: ParentNode = document) {
+    root.querySelectorAll<HTMLElement>("[data-series-gallery]").forEach((gallery) => {
+      if (gallery.dataset.ready === "true") return;
+
+      const track = gallery.querySelector<HTMLElement>("[data-series-track]");
+      const dots = gallery.querySelectorAll<HTMLButtonElement>("[data-series-dots] button");
+      const prev = gallery.querySelector<HTMLButtonElement>("[data-gallery-prev]");
+      const next = gallery.querySelector<HTMLButtonElement>("[data-gallery-next]");
+      if (!track) return;
+
+      const slides = track.querySelectorAll<HTMLElement>(".series-gallery-slide");
+      if (slides.length === 0) return;
+
+      let activeIndex = 0;
+
+      const setActive = (index: number) => {
+        activeIndex = index;
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("is-active", i === index);
+        });
+      };
+
+      const goTo = (index: number) => {
+        const nextIndex = (index + slides.length) % slides.length;
+        const slide = slides[nextIndex];
+        if (!slide) return;
+        track.scrollTo({ left: slide.offsetLeft, behavior: "smooth" });
+        setActive(nextIndex);
+      };
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          goTo(Number(dot.dataset.index || 0));
+        });
+      });
+
+      prev?.addEventListener("click", () => goTo(activeIndex - 1));
+      next?.addEventListener("click", () => goTo(activeIndex + 1));
+
+      track.addEventListener(
+        "scroll",
+        () => {
+          const index = Math.round(track.scrollLeft / Math.max(track.clientWidth, 1));
+          setActive(Math.min(Math.max(index, 0), slides.length - 1));
+        },
+        { passive: true }
+      );
+
+      let isDragging = false;
+      let startX = 0;
+      let startScroll = 0;
+
+      track.addEventListener("pointerdown", (event) => {
+        isDragging = true;
+        startX = event.clientX;
+        startScroll = track.scrollLeft;
+        track.setPointerCapture(event.pointerId);
+      });
+
+      track.addEventListener("pointermove", (event) => {
+        if (!isDragging) return;
+        track.scrollLeft = startScroll - (event.clientX - startX);
+      });
+
+      const endDrag = (event: PointerEvent) => {
+        if (!isDragging) return;
+        isDragging = false;
+        track.releasePointerCapture(event.pointerId);
+        const index = Math.round(track.scrollLeft / Math.max(track.clientWidth, 1));
+        goTo(index);
+      };
+
+      track.addEventListener("pointerup", endDrag);
+      track.addEventListener("pointercancel", endDrag);
+
+      gallery.dataset.ready = "true";
+    });
+  }
+
+  function setupSeriesTabs(root: ParentNode = document) {
+    root.querySelectorAll<HTMLElement>("[data-series-tabs]").forEach((tablist) => {
+      if (tablist.dataset.ready === "true") return;
+
+      const main = tablist.closest(".series-main");
+      if (!main) return;
+
+      const tabs = tablist.querySelectorAll<HTMLButtonElement>("[data-tab]");
+      const panels = main.querySelectorAll<HTMLElement>("[data-panel]");
+
+      const activate = (name: string) => {
+        tabs.forEach((tab) => {
+          const active = tab.dataset.tab === name;
+          tab.classList.toggle("is-active", active);
+          tab.setAttribute("aria-selected", active ? "true" : "false");
+        });
+
+        panels.forEach((panel) => {
+          const active = panel.dataset.panel === name;
+          panel.classList.toggle("is-active", active);
+          panel.hidden = !active;
+        });
+      };
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          activate(tab.dataset.tab || "details");
+        });
+      });
+
+      tablist.dataset.ready = "true";
+    });
+  }
+
+  function setupProductSeries() {
+    setupSeriesGalleries();
+    setupSeriesTabs();
+  }
+
+  setupProductSeries();
+  document.addEventListener("astro:page-load", setupProductSeries);
+</script>
+
+<style is:global>
+  @layer page-sections {
+    .product-series {
+      background: var(--color-bg);
+      color: var(--color-text);
+      padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 3vw, 3rem);
+
+      .product-series-shell {
+        display: grid;
+        gap: clamp(2rem, 4vw, 4.5rem);
+        margin: 0 auto;
+        max-width: 90rem;
+      }
+
+      .series-sidebar {
+        background: var(--color-bg-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        height: fit-content;
+        padding: var(--spacing-lg);
+
+        > summary {
+          align-items: center;
+          color: var(--color-text-strong);
+          cursor: pointer;
+          display: flex;
+          font-weight: var(--font-weight-bold);
+          justify-content: space-between;
+          list-style: none;
+
+          &::-webkit-details-marker {
+            display: none;
+          }
+
+          svg {
+            height: 1rem;
+            transition: transform var(--animation-normal) ease;
+            width: 1rem;
+          }
+        }
+
+        &[open] > summary svg {
+          transform: rotate(180deg);
+        }
+
+        .series-sidebar-heading {
+          color: var(--color-text-brand);
+          font-size: var(--font-size-sm);
+          font-weight: var(--font-weight-bold);
+          letter-spacing: 0.08em;
+          margin: var(--spacing-lg) 0 var(--spacing-md);
+        }
+      }
+
+      .series-main {
+        min-width: 0;
+      }
+
+      .series-hero {
+        align-items: center;
+        background: var(--color-bg-surface, #fff);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        color: var(--color-text);
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 2.5rem);
+        padding: clamp(1.25rem, 3vw, 2rem);
+      }
+
+      .series-gallery {
+        min-width: 0;
+        position: relative;
+      }
+
+      .series-gallery-track {
+        cursor: grab;
+        display: flex;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        touch-action: pan-x;
+        user-select: none;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+
+      .series-gallery-slide {
+        flex: 0 0 100%;
+        margin: 0;
+        min-width: 100%;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+
+      .series-media-frame {
+        aspect-ratio: 1 / 1;
+        background: #fff;
+        border: 1px solid var(--color-border);
+        display: grid;
+        min-height: 16rem;
+        overflow: hidden;
+        place-items: center;
+
+        :global(.image),
+        :global(.image-inner),
+        :global(picture) {
+          background: #fff !important;
+          height: 100%;
+          margin: 0;
+          width: 100%;
+        }
+      }
+
+      .series-gallery-slide :global(img) {
+        background: #fff;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        pointer-events: none;
+        user-select: none;
+        width: 100%;
+      }
+
+      .series-gallery-slide figcaption {
+        color: var(--color-text-muted);
+        font-size: var(--font-size-sm);
+        margin-top: 0.75rem;
+        text-align: center;
+      }
+
+      .series-gallery-nav {
+        display: flex;
+        inset: 0;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0 0.5rem;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        /* Keep arrows vertically centered on the square media, above caption/dots */
+        height: min(100%, calc(100% - 3.5rem));
+        align-items: center;
+        z-index: 2;
+      }
+
+      .series-gallery-nav button {
+        align-items: center;
+        background: color-mix(in srgb, #fff 92%, transparent);
+        border: 1px solid var(--color-border);
+        border-radius: 999px;
+        box-shadow: 0 1px 4px color-mix(in srgb, #000 12%, transparent);
+        color: var(--color-text-strong);
+        cursor: pointer;
+        display: inline-flex;
+        height: 2.5rem;
+        justify-content: center;
+        pointer-events: auto;
+        width: 2.5rem;
+
+        :global(svg) {
+          height: 1.1rem;
+          width: 1.1rem;
+        }
+      }
+
+      .series-gallery-dots {
+        display: flex;
+        gap: 0.55rem;
+        justify-content: center;
+        margin-top: 0.9rem;
+      }
+
+      .series-gallery-dot {
+        background: color-mix(in srgb, var(--color-text-muted) 45%, transparent);
+        border: 0;
+        border-radius: 999px;
+        cursor: pointer;
+        height: 0.55rem;
+        padding: 0;
+        transition:
+          background var(--animation-normal) ease,
+          width var(--animation-normal) ease;
+        width: 0.55rem;
+      }
+
+      .series-gallery-dot.is-active {
+        background: var(--color-bg-brand);
+        width: 1.35rem;
+      }
+
+      .series-copy {
+        align-content: center;
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .series-eyebrow {
+        color: var(--color-text-brand);
+        font-size: var(--font-size-sm);
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        margin: 0;
+        text-transform: uppercase;
+      }
+
+      .series-copy h1 {
+        color: var(--color-text-strong);
+        font-size: clamp(1.85rem, 4vw, 2.75rem);
+        line-height: 1.15;
+        margin: 0;
+      }
+
+      .series-summary {
+        color: var(--color-text);
+        font-size: var(--font-size-lg);
+        line-height: 1.7;
+        margin: 0;
+        max-width: 36rem;
+      }
+
+      .series-tabs {
+        border-bottom: 1px solid var(--color-border);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        margin-top: clamp(1.5rem, 3vw, 2.25rem);
+
+        button {
+          background: transparent;
+          border: 0;
+          color: var(--color-text-muted);
+          cursor: pointer;
+          font: inherit;
+          font-weight: 700;
+          padding: 0.85rem 0;
+        }
+
+        button.is-active,
+        button:hover {
+          box-shadow: inset 0 -2px 0 var(--color-bg-brand);
+          color: var(--color-text-brand);
+        }
+      }
+
+      .series-panels {
+        min-height: 12rem;
+      }
+
+      .series-panel {
+        display: none;
+        padding-top: clamp(1.5rem, 3vw, 2.25rem);
+      }
+
+      .series-panel.is-active {
+        display: block;
+      }
+
+      .series-empty {
+        color: var(--color-text-muted);
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .series-help {
+        padding-top: clamp(1.5rem, 3vw, 2.25rem);
+      }
+
+      .series-details h2,
+      .series-products-head h2,
+      .series-applications h2,
+      .series-videos h2,
+      .series-projects h2,
+      .series-help h2 {
+        color: var(--color-text-strong);
+        font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+        margin: 0 0 1rem;
+      }
+
+      .series-details ul {
+        display: grid;
+        gap: 0.75rem;
+        list-style: none;
+        margin: 0;
+        max-width: 48rem;
+        padding: 0;
+      }
+
+      .series-details li {
+        border-left: 3px solid var(--color-bg-brand);
+        line-height: 1.65;
+        padding-left: 0.85rem;
+      }
+
+      .series-products-head {
+        align-items: end;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.5rem;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        p {
+          color: var(--color-text-muted);
+          margin: 0;
+        }
+      }
+
+      .series-products-grid,
+      .series-media-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+
+      .series-media-grid figure,
+      .series-video-card,
+      .series-project-card {
+        margin: 0;
+      }
+
+      .series-media-grid figcaption,
+      .series-video-copy p,
+      .series-project-copy p {
+        color: var(--color-text-muted);
+        font-size: var(--font-size-sm);
+        line-height: 1.6;
+        margin: 0.65rem 0 0;
+      }
+
+      .series-video-card,
+      .series-project-card {
+        background: var(--color-bg-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+      }
+
+      .series-video-thumb,
+      .series-project-card .series-media-frame {
+        aspect-ratio: 16 / 10;
+        background: #fff;
+        border: 0;
+        border-bottom: 1px solid var(--color-border);
+        border-radius: 0;
+        min-height: 0;
+        position: relative;
+      }
+
+      .series-video-thumb {
+        align-items: center;
+        color: var(--color-text-muted);
+        display: grid;
+        font-weight: 700;
+        place-items: center;
+      }
+
+      .series-video-thumb :global(img) {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .series-video-play {
+        align-items: center;
+        background: color-mix(in srgb, #000 55%, transparent);
+        border-radius: 999px;
+        color: #fff;
+        display: grid;
+        height: 3rem;
+        place-items: center;
+        position: absolute;
+        width: 3rem;
+
+        :global(svg) {
+          height: 1.25rem;
+          margin-left: 0.15rem;
+          width: 1.25rem;
+        }
+      }
+
+      .series-video-copy,
+      .series-project-copy {
+        display: grid;
+        gap: 0.5rem;
+        padding: 1rem;
+      }
+
+      .series-video-copy h3,
+      .series-project-copy h3 {
+        color: var(--color-text-strong);
+        font-size: var(--font-size-lg);
+        margin: 0;
+      }
+
+      .series-video-copy a,
+      .series-project-copy a {
+        color: var(--color-text-brand);
+        font-weight: 700;
+        text-decoration: none;
+        width: fit-content;
+      }
+
+      .series-help {
+        background: var(--color-bg-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        display: grid;
+        gap: 1.25rem;
+        margin-top: clamp(1rem, 2vw, 1.5rem);
+        padding: clamp(1.25rem, 3vw, 2rem);
+      }
+
+      .series-help-copy p {
+        color: var(--color-text-muted);
+        line-height: 1.7;
+        margin: 0;
+        max-width: 40rem;
+      }
+
+      .series-help-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .series-cta-primary,
+      .series-cta-secondary {
+        align-items: center;
+        display: inline-flex;
+        font-weight: 700;
+        gap: 0.5rem;
+        justify-content: center;
+        padding: 0.85rem 1.15rem;
+        text-decoration: none;
+      }
+
+      .series-cta-primary {
+        background: var(--color-bg-brand);
+        color: var(--color-text-on-brand, #fff);
+      }
+
+      .series-cta-primary :global(svg) {
+        height: 1rem;
+        width: 1rem;
+      }
+
+      .series-cta-secondary {
+        border: 1px solid var(--color-border-strong);
+        color: var(--color-text-strong);
+      }
+    }
+
+    @media (min-width: 700px) {
+      .product-series {
+        .series-products-grid,
+        .series-media-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .series-help {
+          align-items: center;
+          grid-template-columns: minmax(0, 1fr) auto;
+        }
+      }
+    }
+
+    @media (min-width: 980px) {
+      .product-series {
+        .product-series-shell {
+          align-items: start;
+          grid-template-columns: minmax(14rem, 18rem) minmax(0, 1fr);
+        }
+
+        .series-sidebar > summary {
+          display: none;
+        }
+
+        .series-hero {
+          align-items: center;
+          grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        }
+
+        .series-products-grid,
+        .series-media-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+    }
+  }
+</style>

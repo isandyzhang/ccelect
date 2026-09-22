@@ -1,69 +1,125 @@
 ---
 _schema: default
 permalink: null
-title: W series
-description: Copper conductor joints such as WE, WT, WX, WP, WL, and WXL.
+title: W series - wire to wire
+description: Exoweld wire-to-wire exothermic molds for multiple copper conductor joint forms.
 pageSections:
-  - _component: page-sections/products/product-catalog
-    eyebrowText: Exoweld / W series
-    heading: W series models
-    subtext: Choose a W series joint model to view product details or contact sales.
-    helpHeading: Not sure which series to choose?
-    helpText: Share conductor material, size, joint type, quantity, and site conditions. We will help confirm the right product.
-    helpLink: /en/contact/
-    helpLinkText: Contact sales
+  - _component: page-sections/products/product-series
+    eyebrowText: Exoweld exothermic
+    heading: W series - wire to wire
+    summary: Exoweld graphite molds are designed for many wire-to-wire connection styles and conductor combinations.
+    images:
+      - image: /src/assets/images/ccelect/dummy/product-1.svg
+        imageAlt: Wire-to-wire joint placeholder
+        caption: Wire-to-wire joint
+      - image: /src/assets/images/ccelect/dummy/product-2.svg
+        imageAlt: Straight joint
+        caption: Straight joint (DUMMY)
+      - image: /src/assets/images/ccelect/dummy/product-3.svg
+        imageAlt: Tee joint
+        caption: Tee joint (DUMMY)
+      - image: /src/assets/images/ccelect/dummy/product-4.svg
+        imageAlt: Cross joint
+        caption: Cross joint (DUMMY)
+    featuresHeading: Features
+    detailsLabel: Details
+    features:
+      - Creates a permanent, low-resistance connection
+      - Provides a molecular bond
+      - Exothermic joint current rating matches the conductor
+      - Portable equipment with no external power required
+      - Installers need only basic training
+      - Weld quality can be visually inspected
+    productsHeading: Product list
+    countLabel: "{count} products"
+    applicationsLabel: Application images
+    applicationImages:
+      - image: /src/assets/images/ccelect/dummy/product-2.svg
+        caption: DUMMY application
+      - image: /src/assets/images/ccelect/dummy/product-3.svg
+        caption: DUMMY application
+      - image: /src/assets/images/ccelect/dummy/product-4.svg
+        caption: DUMMY application
+    videosLabel: Videos
+    videos:
+      - title: DUMMY welding demo
+        description: Placeholder video content.
+        thumbnail: /src/assets/images/ccelect/dummy/product-1.svg
+        href: "#"
+      - title: DUMMY safety briefing
+        description: Placeholder video content.
+        thumbnail: /src/assets/images/ccelect/dummy/product-5.svg
+        href: "#"
+    projectsLabel: Project cases
+    projects:
+      - title: DUMMY substation grounding
+        description: Placeholder project case.
+        image: /src/assets/images/ccelect/dummy/product-2.svg
+        href: /en/projects/
+      - title: DUMMY plant bonding upgrade
+        description: Placeholder project case.
+        image: /src/assets/images/ccelect/dummy/product-3.svg
+        href: /en/projects/
+    helpHeading: Need technical support or a quote? We're here to help.
+    helpText: Share conductor size, joint form, and quantity. We will help confirm molds and pricing.
+    primaryCta:
+      text: Contact us
+      href: /en/contact/
+    secondaryCta:
+      text: Back to Exoweld
+      href: /en/products/exoweld/
     items:
       - id: we
-        category: Exoweld / W series
+        category: Wire to wire
         title: WE
-        description: WE is an Exoweld W series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
+        description: WE wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
         image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: Product placeholder
+        imageAlt: WE
         specifications:
           - WE
         href: /en/products/exoweld/w-series/we/
       - id: wt
-        category: Exoweld / W series
+        category: Wire to wire
         title: WT
-        description: WT is an Exoweld W series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
+        description: WT wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
         image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: Product placeholder
+        imageAlt: WT
         specifications:
           - WT
         href: /en/products/exoweld/w-series/wt/
       - id: wx
-        category: Exoweld / W series
+        category: Wire to wire
         title: WX
-        description: WX is an Exoweld W series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
+        description: WX wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
         image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: Product placeholder
+        imageAlt: WX
         specifications:
           - WX
         href: /en/products/exoweld/w-series/wx/
       - id: wp
-        category: Exoweld / W series
+        category: Wire to wire
         title: WP
-        description: WP is an Exoweld W series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
+        description: WP wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
         image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: Product placeholder
+        imageAlt: WP
         specifications:
           - WP
         href: /en/products/exoweld/w-series/wp/
       - id: wl
-        category: Exoweld / W series
+        category: Wire to wire
         title: WL
-        description: WL is an Exoweld W series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
+        description: WL wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
         image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: Product placeholder
+        imageAlt: WL
         specifications:
           - WL
         href: /en/products/exoweld/w-series/wl/
       - id: wxl
-        category: Exoweld / W series
+        category: Wire to wire
         title: WXL
-        description: WXL is an Exoweld W series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
+        description: WXL wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
         image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: Product placeholder
+        imageAlt: WXL
         specifications:
           - WXL
         href: /en/products/exoweld/w-series/wxl/

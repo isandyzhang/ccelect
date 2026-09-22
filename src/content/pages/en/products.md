@@ -63,10 +63,10 @@ pageSections:
                         size: md
                         listType: bullet
                         items:
-                          - text: W series
-                            link: /en/products/exoweld/
-                          - text: G series
-                            link: /en/products/exoweld/
+                          - text: W series - wire to wire
+                            link: /en/products/exoweld/w-series/
+                          - text: G series - wire to ground rod
+                            link: /en/products/exoweld/g-series/
                           - text: S series
                             link: /en/products/exoweld/
                           - text: R series
@@ -180,8 +180,6 @@ pageSections:
                           - text: Copper busbars
                             link: /en/products/grounding-materials/
                           - text: Clamps & connectors
-                            link: /en/products/grounding-materials/
-                          - text: Earth meters
                             link: /en/products/grounding-materials/
                           - text: Accessories
                             link: /en/products/grounding-materials/

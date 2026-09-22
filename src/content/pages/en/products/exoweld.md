@@ -15,8 +15,8 @@ pageSections:
     items:
       - id: series-w
         category: Exoweld
-        title: W series
-        description: Copper conductor joints such as WE, WT, WX, WP, WL, and WXL.
+        title: W series - wire to wire
+        description: Copper conductor-to-conductor joints: WE, WT, WX, WP, WL, WXL.
         image: /src/assets/images/ccelect/dummy/product-1.svg
         imageAlt: Product placeholder
         specifications:
@@ -29,8 +29,8 @@ pageSections:
         href: /en/products/exoweld/w-series/
       - id: series-g
         category: Exoweld
-        title: G series
-        description: Conductor-to-ground electrode joints such as GEE, GET, GST, GEY, and GEP.
+        title: G series - wire to ground rod
+        description: Conductor-to-ground-rod joints: GEE, GET, GST, GEY, GEP.
         image: /src/assets/images/ccelect/dummy/product-2.svg
         imageAlt: Product placeholder
         specifications:

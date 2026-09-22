@@ -4,8 +4,8 @@
       "name": "Exoweld カタログ",
       "path": "/ja/products/exoweld/",
       "children": [
-        { "name": "W シリーズ", "path": "/ja/products/exoweld/w-series/", "children": [] },
-        { "name": "G シリーズ", "path": "/ja/products/exoweld/g-series/", "children": [] },
+        { "name": "W シリーズ-線対線", "path": "/ja/products/exoweld/w-series/", "children": [] },
+        { "name": "G シリーズ-線対接地棒", "path": "/ja/products/exoweld/g-series/", "children": [] },
         { "name": "S シリーズ", "path": "/ja/products/exoweld/s-series/", "children": [] },
         { "name": "R シリーズ", "path": "/ja/products/exoweld/r-series/", "children": [] },
         { "name": "P シリーズ", "path": "/ja/products/exoweld/p-series/", "children": [] },

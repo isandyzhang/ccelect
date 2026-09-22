@@ -61,3 +61,136 @@ const { item, fallbackHref } = Astro.props as Props;
     </a>
   </div>
 </article>
+
+<style>
+  .catalog-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    scroll-margin-top: 9rem;
+    transition:
+      border-color var(--animation-normal) ease,
+      box-shadow var(--animation-normal) ease,
+      transform var(--animation-normal) ease;
+  }
+
+  .catalog-card:hover {
+    border-color: var(--color-border-strong);
+    box-shadow: 0 1rem 2.5rem var(--color-shadow);
+    transform: translateY(-0.25rem);
+  }
+
+  .catalog-card-media {
+    aspect-ratio: 4 / 3;
+    background: #fff;
+    border-bottom: 1px solid var(--color-border);
+    overflow: hidden;
+  }
+
+  .catalog-card-media :global(.image),
+  .catalog-card-media :global(.image-inner),
+  .catalog-card-media :global(picture) {
+    background: #fff !important;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+  }
+
+  .catalog-card-media :global(img) {
+    background: #fff;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 0.75rem;
+    transition: transform var(--animation-slow) ease;
+    width: 100%;
+  }
+
+  .catalog-card:hover .catalog-card-media :global(img) {
+    transform: scale(1.03);
+  }
+
+  .catalog-card-media.icon-media {
+    align-items: center;
+    color: var(--color-text-brand);
+    display: flex;
+    justify-content: center;
+  }
+
+  .catalog-card-media.icon-media :global(.icon) {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: 0 0.5rem 1.25rem var(--color-shadow);
+    padding: var(--spacing-lg);
+  }
+
+  .catalog-card-body {
+    color: var(--color-text);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: clamp(1.25rem, 2vw, 1.75rem);
+  }
+
+  .catalog-card-category {
+    color: var(--color-text-brand);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.08em;
+    margin: 0 0 var(--spacing-sm);
+    text-transform: uppercase;
+  }
+
+  .catalog-card-body h2 {
+    color: var(--color-text-strong);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .catalog-card-body > p:not(.catalog-card-category) {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+    margin: var(--spacing-md) 0 0;
+  }
+
+  .catalog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    list-style: none;
+    margin: var(--spacing-lg) 0 0;
+    padding: 0;
+  }
+
+  .catalog-tags li {
+    background: var(--color-bg-muted);
+    border-radius: var(--radius-full);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    padding: 0.3rem 0.65rem;
+  }
+
+  .catalog-card-link {
+    align-items: center;
+    color: var(--color-text-brand);
+    display: flex;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    gap: var(--spacing-sm);
+    margin-top: auto;
+    padding-top: var(--spacing-lg);
+    text-decoration: none;
+  }
+
+  .catalog-card-link :global(svg) {
+    height: 1rem;
+    width: 1rem;
+  }
+</style>

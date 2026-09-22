@@ -2,12 +2,12 @@
 _schema: default
 permalink: null
 title: WP
-description: WP copper conductor exothermic joint model for Exoweld W series installations based on legacy catalogs.
+description: WP is a W series wire-to-wire copper exothermic joint for conductor-to-conductor connections.
 pageSections:
   - _component: page-sections/products/product-detail
-    category: Exoweld / W series
+    category: Exoweld / W series - wire to wire
     heading: WP
-    summary: WP copper conductor exothermic joint model for Exoweld W series installations based on legacy catalogs.
+    summary: WP is a W series wire-to-wire copper exothermic joint for conductor-to-conductor connections.
     description:
       - WP belongs to the W series copper conductor joint family and can be paired with matching molds and welding powder by conductor size.
       - This page is a product-detail template demo. Confirm final specs, mold numbers, and powder amounts with sales.
@@ -19,7 +19,7 @@ pageSections:
       text: Contact sales
       href: /en/contact/
     secondaryCta:
-      text: Back to W series
+      text: Back to W series - wire to wire
       href: /en/products/exoweld/w-series/
     features:
       - For copper conductor exothermic joints

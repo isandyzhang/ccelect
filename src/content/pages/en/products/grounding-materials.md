@@ -2,11 +2,11 @@
 _schema: default
 permalink: null
 title: General grounding materials
-description: Ground rods, busbars, clamps, meters, and accessories.
+description: Ground rods, busbars, clamps, and accessories.
 pageSections:
   - _component: page-sections/products/product-catalog
     eyebrowText: General grounding materials
-    heading: Rods, conductors, and meters
+    heading: Rods, conductors, and accessories
     subtext: Choose materials by soil, corrosion, target resistance, and project specs.
     helpHeading: Not sure which grounding materials fit the site?
     helpText: Share conductor material, size, joint type, quantity, and site conditions. We will help confirm the right product.
@@ -53,16 +53,6 @@ pageSections:
         specifications:
           - GBS series
           - GCS series
-        href: /en/contact/
-      - id: testing-instruments
-        category: Instruments
-        title: Earth resistance meters
-        description: Meters for post-install resistance checks and maintenance.
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: Product placeholder
-        specifications:
-          - AEMC 4620
-          - Digital metering
         href: /en/contact/
       - id: accessories
         category: Accessories
