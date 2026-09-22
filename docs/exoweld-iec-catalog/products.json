@@ -1,0 +1,7959 @@
+{
+  "WE": {
+    "id": "we",
+    "series": "W",
+    "title": "WE",
+    "nameZh": "線對線直通",
+    "desc": "Wire-to-wire through / splice",
+    "page": 8,
+    "pages": [
+      8
+    ],
+    "rows": [
+      {
+        "moldType": "WE-10/10",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "WE-16/16",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "WE-25/25",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "WE-30/30",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "WE-35/35",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "WE-50/50",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WE-70/70",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WE-95/95",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WE-120/120",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "WE-150/150",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "WE-185/185",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WE-240/240",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WE-300/300",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WE-400/400",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WE-500/500",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      }
+    ]
+  },
+  "WT": {
+    "id": "wt",
+    "series": "W",
+    "title": "WT",
+    "nameZh": "線對線 T 接",
+    "desc": "Wire-to-wire T connection",
+    "page": 9,
+    "pages": [
+      5,
+      9,
+      11,
+      47
+    ],
+    "rows": [
+      {
+        "moldType": "WT-10/10",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-16/16",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-25/25",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-25/16",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-30/30",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-30/25",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-30/16",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-35/35",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-35/30",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-35/25",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-35/16",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-50/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-50/35",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-50/30",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-50/25",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-50/16",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-70/70",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-70/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-70/35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-70/30",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-70/25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-70/16",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-95/95",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-95/70",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-95/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-95/35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-95/30",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-95/25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-95/16",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-120/120",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-120/95",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-120/70",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-120/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-120/35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-150/150",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-150/120",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-150/95",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-150/70",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-150/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-150/35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-150/30",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-150/25",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-185/185",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-185/150",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-185/120",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-185/95",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-240/240",
+        "priceCode": "3",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-240/185",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-240/150",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-240/120",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-240/95",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-300/300",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-300/240",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-300/185",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-300/150",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-120/30",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-120/25",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WT-120116",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      }
+    ]
+  },
+  "WX": {
+    "id": "wx",
+    "series": "W",
+    "title": "WX",
+    "nameZh": "線對線交叉",
+    "desc": "Wire-to-wire cross (X)",
+    "page": 10,
+    "pages": [
+      10,
+      11
+    ],
+    "rows": [
+      {
+        "moldType": "WX-10/10",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-16/16",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-25/25",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-30/30",
+        "priceCode": "3",
+        "weldMetal": "6",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-35/35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-35/25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-50/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-50/35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-50/25",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-70/70",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-70/50",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-70/35",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-70/25",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-95/95",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-95/70",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-95/50",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-95/35",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-120/120",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-120/95",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-120/70",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-120/50",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-120/35",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-120/25",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-150/150",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-150/120",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-150/95",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-150/70",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-150/50",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-185/185",
+        "priceCode": "3",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-185/150",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-185/120",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-185/95",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-185/70",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-240/240",
+        "priceCode": "4",
+        "weldMetal": "2X 250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-240/185",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-240/150",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-240/120",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WX-240/95",
+        "priceCode": "4",
+        "weldMetal": "250",
+        "accessory": ""
+      }
+    ]
+  },
+  "WF": {
+    "id": "wf",
+    "series": "W",
+    "title": "WF",
+    "nameZh": "線對線平行",
+    "desc": "Wire-to-wire parallel",
+    "page": 10,
+    "pages": [
+      10
+    ],
+    "rows": [
+      {
+        "moldType": "WF-10/10",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-16/16",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-25/25",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-30/30",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-35/35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-35/25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-50/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-50/35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-50/25",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-70/70",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-70/50",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-70/35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-70/25",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-95/95",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-95/70",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-95/50",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-95/35",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-120/120",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-120/95",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-120/70",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WF-120/50",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      }
+    ]
+  },
+  "WP": {
+    "id": "wp",
+    "series": "W",
+    "title": "WP",
+    "nameZh": "線對線垂直搭接",
+    "desc": "Wire-to-wire parallel/vertical tap",
+    "page": 11,
+    "pages": [
+      11
+    ],
+    "rows": [
+      {
+        "moldType": "WP-10/10",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-16/16",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-25/25",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-30/30",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-35/35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-35/30",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-50/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-50/35",
+        "priceCode": "3",
+        "weldMetal": "20",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-50/25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-70/50",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-70/35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-70/30",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-95/95",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-95/50",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-95/35",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-120/120",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-120/95",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-120/70",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-120/50",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-150/150",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-150/120",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-150/95",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-150/70",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-185/185",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-185/150",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-185/120",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-185/95",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-240/240",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-240/185",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-240/150",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-240/120",
+        "priceCode": "4",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-300/300",
+        "priceCode": "4",
+        "weldMetal": "2X 250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-300/240",
+        "priceCode": "4",
+        "weldMetal": "2X 250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-300/185",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WP-300/150",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      }
+    ]
+  },
+  "WL": {
+    "id": "wl",
+    "series": "W",
+    "title": "WL",
+    "nameZh": "線對線 L 接",
+    "desc": "Wire-to-wire L",
+    "page": 12,
+    "pages": [
+      12
+    ],
+    "rows": [
+      {
+        "moldType": "WL-10/10",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-16/16",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-25/25",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-30/30",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-35/35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-35/25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-50/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-50/35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-50/25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-70/70",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-70/50",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-70/35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-70/25",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-95/95",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-95/70",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-95/50",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-95/35",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-120/120",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-120/95",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-120/70",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WL-120/50",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      }
+    ]
+  },
+  "WXL": {
+    "id": "wxl",
+    "series": "W",
+    "title": "WXL",
+    "nameZh": "線對線 XL 接",
+    "desc": "Wire-to-wire XL",
+    "page": 13,
+    "pages": [
+      13
+    ],
+    "rows": [
+      {
+        "moldType": "WXL-10/10",
+        "priceCode": "5",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-16/16",
+        "priceCode": "5",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-25/25",
+        "priceCode": "5",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-30/30",
+        "priceCode": "5",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-35/35",
+        "priceCode": "5",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-35/25",
+        "priceCode": "5",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-50/50",
+        "priceCode": "10",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-50/35",
+        "priceCode": "10",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-50/25",
+        "priceCode": "10",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-70/70",
+        "priceCode": "10",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-70/50",
+        "priceCode": "10",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-70/35",
+        "priceCode": "10",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-70/25",
+        "priceCode": "10",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-95/95",
+        "priceCode": "10",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-95/70",
+        "priceCode": "10",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-95/50",
+        "priceCode": "10",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-95/35",
+        "priceCode": "10",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-120/120",
+        "priceCode": "10",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-120/95",
+        "priceCode": "10",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-120/70",
+        "priceCode": "10",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-120/50",
+        "priceCode": "10",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-120/35",
+        "priceCode": "10",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-120/25",
+        "priceCode": "10",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-150/95",
+        "priceCode": "10",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-150/70",
+        "priceCode": "10",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-150/50",
+        "priceCode": "10",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "WXL-185/70",
+        "priceCode": "10",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      }
+    ]
+  },
+  "WES": {
+    "id": "wes",
+    "series": "W",
+    "title": "WES",
+    "nameZh": "線對線直通（小型）",
+    "desc": "Wire-to-wire splice compact",
+    "page": 13,
+    "pages": [
+      13
+    ],
+    "rows": [
+      {
+        "moldType": "WES-10/10",
+        "priceCode": "2",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "WES-16/16",
+        "priceCode": "2",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "WES-25/25",
+        "priceCode": "2",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "WES-30/30",
+        "priceCode": "2",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "WES-35/35",
+        "priceCode": "2",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "WES-50/50",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      }
+    ]
+  },
+  "WTS": {
+    "id": "wts",
+    "series": "W",
+    "title": "WTS",
+    "nameZh": "線對線 T（小型）",
+    "desc": "Wire-to-wire T compact",
+    "page": 14,
+    "pages": [
+      14
+    ],
+    "rows": [
+      {
+        "moldType": "WTS-10/10",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-16/16",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-25/25",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-25/16",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-30/30",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-30/25",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-30/16",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-35/35",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-35/30",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-35/25",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-35/16",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-50/50",
+        "priceCode": "2",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-50/35",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-50/30",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-50/25",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "WTS-50/16",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      }
+    ]
+  },
+  "GEE": {
+    "id": "gee",
+    "series": "G",
+    "title": "GEE",
+    "nameZh": "接地棒對線直通",
+    "desc": "Ground rod to wire end/run",
+    "page": 15,
+    "pages": [
+      15,
+      47
+    ],
+    "rows": [
+      {
+        "moldType": "GEE-12/16",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-12/25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-12/30",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-12/35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-12/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-12/70",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-12/95",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-12/120",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-15/16",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-15/25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-15/30",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-15/35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-15/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-15/70",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-15/95",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-15/120",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-15/150",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-15/185",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-15/240",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-18/25",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-18/30",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-18/35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-18/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-18/70",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-18/95",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-18/120",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-18/150",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-18/185",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-18/240",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-24/25",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-24/30",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-24/35",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-24/50",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-24/70",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-24995",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-24/120",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-24/150",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-24/185",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-24/240",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEE-24/300",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      }
+    ]
+  },
+  "GET": {
+    "id": "get",
+    "series": "G",
+    "title": "GET",
+    "nameZh": "接地棒對線 T 接",
+    "desc": "Ground rod to wire T",
+    "page": 16,
+    "pages": [
+      16,
+      47
+    ],
+    "rows": [
+      {
+        "moldType": "GET-12/16",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-12/25",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-12/30",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-12/35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-12/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-12/70",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-12/95",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-12/120",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-15/16",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-15/25",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-15/30",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-15/35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-15/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-15/70",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-15/95",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-15/120",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-15/150",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-15/185",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-15/240",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-18/25",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-18/30",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-18/35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-18/50",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-18/70",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-18/95",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-18/120",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-18/150",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-18/185",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-18/240",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-24/25",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-24/30",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-24/35",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-24/50",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-24/70",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-24/95",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-24/120",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-24/150",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-24/185",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-24/240",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GET-24/300",
+        "priceCode": "4",
+        "weldMetal": "2X150",
+        "accessory": ""
+      }
+    ]
+  },
+  "GES": {
+    "id": "ges",
+    "series": "G",
+    "title": "GES",
+    "nameZh": "接地棒對線側接",
+    "desc": "Ground rod to wire side",
+    "page": 16,
+    "pages": [
+      16
+    ],
+    "rows": [
+      {
+        "moldType": "GES-12/10",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "GES-12/16",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "GES-12/25",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GES-12/30",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GES-15/10",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "GES-15/16",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GES-15/25",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GES-15/30",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GES-15/35",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GES-18/10",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "GES-18/16",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GES-18/25",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GES-18/30",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GES-18/35",
+        "priceCode": "2",
+        "weldMetal": "90",
+        "accessory": ""
+      }
+    ]
+  },
+  "GST": {
+    "id": "gst",
+    "series": "G",
+    "title": "GST",
+    "nameZh": "接地棒對線斜 T",
+    "desc": "Ground rod to wire angled T",
+    "page": 17,
+    "pages": [
+      17
+    ],
+    "rows": [
+      {
+        "moldType": "GST-12/16",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-12/25",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-12/30",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-12/35",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-12/50",
+        "priceCode": "7",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-12/70",
+        "priceCode": "7",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-12/95",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-15/16",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-15/25",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-15/30",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-15/35",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-15/50",
+        "priceCode": "7",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-15/70",
+        "priceCode": "7",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-15/95",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-15/150",
+        "priceCode": "7",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-15/185",
+        "priceCode": "7",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-15/240",
+        "priceCode": "8",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-18/25",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-18/30",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-18/35",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-18/50",
+        "priceCode": "7",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-18/95",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-18/120",
+        "priceCode": "7",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-18/150",
+        "priceCode": "7",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-18/185",
+        "priceCode": "8",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-18/240",
+        "priceCode": "8",
+        "weldMetal": "2X 250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-24/25",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-24/30",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-24/35",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-24/50",
+        "priceCode": "7",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-24/70",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-24/95",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-24/150",
+        "priceCode": "7",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-24/185",
+        "priceCode": "8",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-24/240",
+        "priceCode": "8",
+        "weldMetal": "2X 250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GST-24/300",
+        "priceCode": "8",
+        "weldMetal": "3X 200",
+        "accessory": ""
+      }
+    ]
+  },
+  "GTS": {
+    "id": "gts",
+    "series": "G",
+    "title": "GTS",
+    "nameZh": "接地棒對線搭接",
+    "desc": "Ground rod to wire tap",
+    "page": 17,
+    "pages": [
+      17
+    ],
+    "rows": [
+      {
+        "moldType": "GTS-12/10",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "GTS-12/16",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GTS-12/25",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GTS-12/30",
+        "priceCode": "2",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GTS-12/35",
+        "priceCode": "2",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GTS-15/10",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "GTS-15/16",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GTS-15/25",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GTS-15/30",
+        "priceCode": "2",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GTS-15/35",
+        "priceCode": "2",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GTS-18/10",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GTS-18/16",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GTS-18/25",
+        "priceCode": "2",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GTS-18/30",
+        "priceCode": "2",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GTS-18/35",
+        "priceCode": "2",
+        "weldMetal": "90",
+        "accessory": ""
+      }
+    ]
+  },
+  "GEY": {
+    "id": "gey",
+    "series": "G",
+    "title": "GEY",
+    "nameZh": "接地棒對線 Y 接",
+    "desc": "Ground rod to wire Y",
+    "page": 18,
+    "pages": [
+      18
+    ],
+    "rows": [
+      {
+        "moldType": "GEY-12/16",
+        "priceCode": "5",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-12/25",
+        "priceCode": "5",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-12/30",
+        "priceCode": "5",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-12/35",
+        "priceCode": "5",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-12/50",
+        "priceCode": "5",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-12/70",
+        "priceCode": "5",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-12/95.",
+        "priceCode": "5",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-15/16",
+        "priceCode": "5",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-15/25",
+        "priceCode": "5",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-15/30",
+        "priceCode": "5",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-15/35",
+        "priceCode": "5",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-15/50",
+        "priceCode": "5",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-15/70",
+        "priceCode": "5",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-15/95",
+        "priceCode": "5",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-15/120",
+        "priceCode": "6",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-15/150",
+        "priceCode": "6",
+        "weldMetal": "2X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-15/185",
+        "priceCode": "6",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-15/240",
+        "priceCode": "6",
+        "weldMetal": "3X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-18/25",
+        "priceCode": "5",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-18/30",
+        "priceCode": "5",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-18/35",
+        "priceCode": "5",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-18/50",
+        "priceCode": "5",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-18/70",
+        "priceCode": "6",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-18/95",
+        "priceCode": "6",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-18/120",
+        "priceCode": "6",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-18/150",
+        "priceCode": "6",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-18/185",
+        "priceCode": "6",
+        "weldMetal": "3X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-18/240",
+        "priceCode": "6",
+        "weldMetal": "3X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-24/25",
+        "priceCode": "5",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-24/30",
+        "priceCode": "5",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-24/35",
+        "priceCode": "5",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-24/50",
+        "priceCode": "5",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-24/70",
+        "priceCode": "5",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-24/95",
+        "priceCode": "6",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-24/120",
+        "priceCode": "6",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-24/150",
+        "priceCode": "6",
+        "weldMetal": "3X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-24/185",
+        "priceCode": "6",
+        "weldMetal": "3X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEY-24/240",
+        "priceCode": "6",
+        "weldMetal": "3X 250",
+        "accessory": ""
+      }
+    ]
+  },
+  "GEP": {
+    "id": "gep",
+    "series": "G",
+    "title": "GEP",
+    "nameZh": "接地棒對線平行",
+    "desc": "Ground rod to wire parallel",
+    "page": 19,
+    "pages": [
+      19
+    ],
+    "rows": [
+      {
+        "moldType": "GEP-12/16",
+        "priceCode": "5",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-12/25",
+        "priceCode": "5",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-12/30",
+        "priceCode": "5",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-12/35",
+        "priceCode": "5",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-12/50",
+        "priceCode": "5",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-12/70",
+        "priceCode": "5",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-12/95",
+        "priceCode": "5",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-15/16",
+        "priceCode": "5",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-15/25",
+        "priceCode": "5",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-15/30",
+        "priceCode": "5",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-15/35",
+        "priceCode": "5",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-15/50",
+        "priceCode": "5",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-15/70",
+        "priceCode": "5",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-15/95",
+        "priceCode": "6",
+        "weldMetal": "2X150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-15/120",
+        "priceCode": "6",
+        "weldMetal": "2X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-15/150",
+        "priceCode": "6",
+        "weldMetal": "3X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-15/185",
+        "priceCode": "6",
+        "weldMetal": "2X250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-15/240",
+        "priceCode": "6",
+        "weldMetal": "3X 250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-18/25",
+        "priceCode": "5",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-18/30",
+        "priceCode": "5",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-18/35",
+        "priceCode": "5",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-18/50",
+        "priceCode": "5",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-18/70",
+        "priceCode": "6",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-18/95",
+        "priceCode": "6",
+        "weldMetal": "2X150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-18/120",
+        "priceCode": "6",
+        "weldMetal": "2X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-18/150",
+        "priceCode": "6",
+        "weldMetal": "3X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-18/185",
+        "priceCode": "6",
+        "weldMetal": "3X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-18/240",
+        "priceCode": "6",
+        "weldMetal": "3X 250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-24/25",
+        "priceCode": "5",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-24/30",
+        "priceCode": "5",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-24/35",
+        "priceCode": "5",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-24/50",
+        "priceCode": "5",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-24/70",
+        "priceCode": "6",
+        "weldMetal": "2X150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-24/95",
+        "priceCode": "6",
+        "weldMetal": "2X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-24/120",
+        "priceCode": "6",
+        "weldMetal": "2X250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-24/150",
+        "priceCode": "6",
+        "weldMetal": "3X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-24/185",
+        "priceCode": "6",
+        "weldMetal": "3X 250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GEP-24/240",
+        "priceCode": "6",
+        "weldMetal": "4X 250",
+        "accessory": ""
+      }
+    ]
+  },
+  "GVE": {
+    "id": "gve",
+    "series": "G",
+    "title": "GVE",
+    "nameZh": "接地棒接續",
+    "desc": "Ground rod splice",
+    "page": 19,
+    "pages": [
+      19
+    ],
+    "rows": [
+      {
+        "moldType": "GVE-15",
+        "priceCode": "4",
+        "weldMetal": "200",
+        "accessory": ""
+      }
+    ]
+  },
+  "GBN": {
+    "id": "gbn",
+    "series": "G",
+    "title": "GBN",
+    "nameZh": "接地棒對扁銅排",
+    "desc": "Ground rod to busbar",
+    "page": 20,
+    "pages": [
+      20
+    ],
+    "rows": [
+      {
+        "moldType": "GBN-12/0220",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-12/0225",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-12/0230",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-12/0320",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-12/0325",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-12/0330",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-12/0340",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-12/0350",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-12/0420",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-12/0425",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0230",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0320",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0325",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0330",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0340",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0350",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0420",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0425",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0525",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0530",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0540",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0550",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0625",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0630",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0640",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-15/0650",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0230",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0320",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0325",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0330",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0340",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0350",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0420",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0425",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0525",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0530",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0540",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0550",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0625",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0630",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0640",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBN-18/0650",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      }
+    ]
+  },
+  "GBT": {
+    "id": "gbt",
+    "series": "G",
+    "title": "GBT",
+    "nameZh": "接地棒對扁銅排 T",
+    "desc": "Ground rod to busbar T",
+    "page": 21,
+    "pages": [
+      21
+    ],
+    "rows": [
+      {
+        "moldType": "GBT-12/0220",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-12/0225",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-12/0230",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-12/0320",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-12/0325",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-12/0330",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-12/0340",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-12/0350",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-12/0420",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-12/0425",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0230",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0320",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0325",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0330",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0340",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0350",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0420",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0425",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0525",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0530",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0540",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0550",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0625",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0630",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0640",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-15/0650",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0230",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0320",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0325",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0330",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0340",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0350",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0420",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0425",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0525",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0530",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0540",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0550",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0625",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0630",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0640",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "GBT-18/0650",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      }
+    ]
+  },
+  "SHEA": {
+    "id": "shea",
+    "series": "S",
+    "title": "SHEA",
+    "nameZh": "鋼板對線（水平 A）",
+    "desc": "Steel surface to cable H-A",
+    "page": 22,
+    "pages": [
+      22
+    ],
+    "rows": [
+      {
+        "moldType": "SHEA-16",
+        "priceCode": "1",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEA-25",
+        "priceCode": "1",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEA-30",
+        "priceCode": "1",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEA-35",
+        "priceCode": "1",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-70",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-95",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-120",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-150",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-185",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-240",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-300",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-16-D",
+        "priceCode": "1",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEA-25-D",
+        "priceCode": "1",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEA-30-D",
+        "priceCode": "1",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEA-35-D",
+        "priceCode": "1",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-50-D",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-70-D",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-95-D",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-120-D",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-150-D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-185-D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-240-D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHEA-300-D",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": "DX-3"
+      }
+    ]
+  },
+  "SHEB": {
+    "id": "sheb",
+    "series": "S",
+    "title": "SHEB",
+    "nameZh": "鋼板對線（水平 B）",
+    "desc": "Steel surface to cable H-B",
+    "page": 22,
+    "pages": [
+      22
+    ],
+    "rows": [
+      {
+        "moldType": "SHEB-16",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-25",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-30",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-35",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-70",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-95",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-120",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-150",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-185",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-240",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-300",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-16-D",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-25-D",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-30-D",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-35-D",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-50-D",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-70-D",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-95-D",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-120-D",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-150-D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-185-D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-240-D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHEB-300-D",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      }
+    ]
+  },
+  "SHTA": {
+    "id": "shta",
+    "series": "S",
+    "title": "SHTA",
+    "nameZh": "鋼板對線 T（A）",
+    "desc": "Steel to cable T-A",
+    "page": 23,
+    "pages": [
+      23
+    ],
+    "rows": [
+      {
+        "moldType": "SHTA-16",
+        "priceCode": "1",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTA-25",
+        "priceCode": "1",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTA-30",
+        "priceCode": "1",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTA-35",
+        "priceCode": "1",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-70",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-95",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-120",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-150",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-185",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-240",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-300",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-16-D",
+        "priceCode": "1",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTA-50-D",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-70-D",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-120-D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-150-D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-185-D",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-240-D",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SHTA-300-D",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": "DX-3"
+      }
+    ]
+  },
+  "SHTB": {
+    "id": "shtb",
+    "series": "S",
+    "title": "SHTB",
+    "nameZh": "鋼板對線 T（B）",
+    "desc": "Steel to cable T-B",
+    "page": 23,
+    "pages": [
+      23
+    ],
+    "rows": [
+      {
+        "moldType": "SHTB-16",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-25",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-30",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-35",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-50",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-70",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-95",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-120",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-150",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-185",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-240",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-300",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-16-D",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-25-D",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-30-D",
+        "priceCode": "2",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-35-D",
+        "priceCode": "2",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-50-D",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-70-D",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-95-D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-120-D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-150-D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-185-D",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-240-D",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SHTB-300-D",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      }
+    ]
+  },
+  "SVES": {
+    "id": "sves",
+    "series": "S",
+    "title": "SVES",
+    "nameZh": "鋼管／立柱對線",
+    "desc": "Vertical steel/pipe to cable",
+    "page": 24,
+    "pages": [
+      24
+    ],
+    "rows": [
+      {
+        "moldType": "SVES-16",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-25",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-30",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-70",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-95",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-120",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-150",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-185",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-240",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-300",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-16-D",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-25-D",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-30-D",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-35-D",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-50-D",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-70-D",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-95-D",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-120-D",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-150-D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-185-D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-240-D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVES-300-D",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      }
+    ]
+  },
+  "SVED": {
+    "id": "sved",
+    "series": "S",
+    "title": "SVED",
+    "nameZh": "鋼管對線 D 型",
+    "desc": "Vertical steel to cable D",
+    "page": 24,
+    "pages": [
+      24
+    ],
+    "rows": [
+      {
+        "moldType": "SVED-16",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-30",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVED-70",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVED-95",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVED-120",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVED-150",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVED-185",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVED-240",
+        "priceCode": "5",
+        "weldMetal": "2X 150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVED-300",
+        "priceCode": "5",
+        "weldMetal": "2X 200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVED-16-D",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-25-D",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-30-D",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-35-D",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-50-D",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-70-D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-95-D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-120-D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-150-D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-185-D",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-240-D",
+        "priceCode": "5",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVED-300-D",
+        "priceCode": "5",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      }
+    ]
+  },
+  "SVEU": {
+    "id": "sveu",
+    "series": "S",
+    "title": "SVEU",
+    "nameZh": "鋼管對線 U 型",
+    "desc": "Vertical steel to cable U",
+    "page": 25,
+    "pages": [
+      25
+    ],
+    "rows": [
+      {
+        "moldType": "SVEU-16",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-30",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-70",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-95",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-120",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-150",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-185",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-240",
+        "priceCode": "5",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-300",
+        "priceCode": "5",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-16-D",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-25-D",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-30-D",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-35-D",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-50-D",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-70-D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-95-D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-120-D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-150-D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-185-D",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-240-D",
+        "priceCode": "5",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEU-300-D",
+        "priceCode": "5",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      }
+    ]
+  },
+  "SVTV": {
+    "id": "svtv",
+    "series": "S",
+    "title": "SVTV",
+    "nameZh": "鋼管對線垂直 T",
+    "desc": "Vertical steel to cable T",
+    "page": 25,
+    "pages": [
+      25
+    ],
+    "rows": [
+      {
+        "moldType": "SVTV-16",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTV-25",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTV-30",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTV-35",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTV-50",
+        "priceCode": "5",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTV-70",
+        "priceCode": "5",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTV-95",
+        "priceCode": "5",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTV-120",
+        "priceCode": "5",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTV-150",
+        "priceCode": "5",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      }
+    ]
+  },
+  "SVTHA": {
+    "id": "svtha",
+    "series": "S",
+    "title": "SVTHA",
+    "nameZh": "鋼管對線水平 T（A）",
+    "desc": "Steel horizontal T-A",
+    "page": 26,
+    "pages": [
+      26
+    ],
+    "rows": [
+      {
+        "moldType": "SVTHA-16",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHA-25",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHA-30",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHA-35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHA-50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-70",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-95",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-120",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-150",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-185",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-240",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-300",
+        "priceCode": "3",
+        "weldMetal": "2X 200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-16-D",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHA-25-D",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHA-30-D",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHA-35-D",
+        "priceCode": "3",
+        "weldMetal": "60",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHA-50-D",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-70-D",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-95-D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-120-D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-150-D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-185-D",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-240-D",
+        "priceCode": "4",
+        "weldMetal": "2X150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVTHA-300-D",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": "DX-3"
+      }
+    ]
+  },
+  "SVTHB": {
+    "id": "svthb",
+    "series": "S",
+    "title": "SVTHB",
+    "nameZh": "鋼管對線水平 T（B）",
+    "desc": "Steel horizontal T-B",
+    "page": 26,
+    "pages": [
+      26
+    ],
+    "rows": [
+      {
+        "moldType": "SVTHB-16",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-30",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-35",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-50",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-70",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-95",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-120",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-150",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-185",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-240",
+        "priceCode": "5",
+        "weldMetal": "2X150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-300",
+        "priceCode": "5",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-16-D",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-25-D",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-30-D",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-35-D",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-50-D",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-70-D",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-95-D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-120-D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-150-D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-185-D",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-240-D",
+        "priceCode": "4",
+        "weldMetal": "2X150",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVTHB-300-D",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      }
+    ]
+  },
+  "SVEH": {
+    "id": "sveh",
+    "series": "S",
+    "title": "SVEH",
+    "nameZh": "鋼管對線側向（L/R）",
+    "desc": "Vertical steel side L/R",
+    "page": 27,
+    "pages": [
+      27
+    ],
+    "rows": [
+      {
+        "moldType": "SVEH-16-(L/R)",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEH-25-L/R)",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEH-30-L/R)",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEH-35-(L/R)",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEH-50-L/R)",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVEH-70-(LIR)",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVEH-95-L/R)",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVEH-120-(L/R)",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVEH-150-(L/R)",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVEH-185-(L/R)",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVEH-240-(LIR)",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVEH-300-(L/R)",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVEH-25-(LIR)D",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEH-30-(L/IR)D",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEH-35-LIR)D",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "SVEH-50-(L/R)D",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVEH-70-L/R)D",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVEH-120-(L/R)D",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVEH-150-(L/R)D",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVEH-185-(L/R)D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVEH-240-(L/R)D",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "SVEH-300-(L/R)D",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": "DX-3"
+      }
+    ]
+  },
+  "RHEH": {
+    "id": "rheh",
+    "series": "R",
+    "title": "RHEH",
+    "nameZh": "鋼筋對線水平",
+    "desc": "Rebar to wire horizontal",
+    "page": 28,
+    "pages": [
+      28,
+      29,
+      30
+    ],
+    "rows": [
+      {
+        "moldType": "RHEH-10/16",
+        "priceCode": "3",
+        "weldMetal": "25",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-10/25",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-10/30",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-10/35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-10/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-10/70",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-10/95",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-10/120",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-13/25",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-13/30",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-13/35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-13/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-13/70",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-13/95",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-16/25",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-16/30",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-16/35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-16/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-16/70",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-16/95",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-19/16",
+        "priceCode": "3",
+        "weldMetal": "25",
+        "accessory": ""
+      },
+      {
+        "moldType": "RHEH-19/25",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-19/30",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-19/35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-19/50",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-19/70",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-19/95",
+        "priceCode": "9",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-22/16",
+        "priceCode": "3",
+        "weldMetal": "25",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-22/25",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-22/35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-22/50",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-22/70",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-2295",
+        "priceCode": "9",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-22/120",
+        "priceCode": "9",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-1035",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-1070",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-1095",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-13/16",
+        "priceCode": "3",
+        "weldMetal": "25",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-1395",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-16/16",
+        "priceCode": "3",
+        "weldMetal": "25",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-1916",
+        "priceCode": "3",
+        "weldMetal": "25",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-19/120",
+        "priceCode": "9",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-22/30",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-22/95",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-25/30",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "RHEH-25/35",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-25/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-25/70",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-25/95",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-25/120",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-29/30",
+        "priceCode": "1",
+        "weldMetal": "45",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-29/35",
+        "priceCode": "1",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-29/70",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-29/95",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-32/30",
+        "priceCode": "1",
+        "weldMetal": "45",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-32/35",
+        "priceCode": "1",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-32/50",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-32/70",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-32/95",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-32/120",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-36/30",
+        "priceCode": "1",
+        "weldMetal": "45",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-36/35",
+        "priceCode": "1",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-36/50",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-36/70",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-36/95",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-43/30",
+        "priceCode": "9",
+        "weldMetal": "45",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-43/35",
+        "priceCode": "9",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-43/50",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-43/70",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-43/95",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-43/120",
+        "priceCode": "9",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-57/50",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-57/70",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-57/95",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHEH-57/120",
+        "priceCode": "9",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      }
+    ]
+  },
+  "RHXH": {
+    "id": "rhxh",
+    "series": "R",
+    "title": "RHXH",
+    "nameZh": "鋼筋對線交叉",
+    "desc": "Rebar to wire cross",
+    "page": 31,
+    "pages": [
+      31,
+      32
+    ],
+    "rows": [
+      {
+        "moldType": "RHXH-10/25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-10/30",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-10/85",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-10/50",
+        "priceCode": "10",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-10/70",
+        "priceCode": "10",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-1095",
+        "priceCode": "10",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-10/120",
+        "priceCode": "10",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-13/25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-13/30",
+        "priceCode": "3",
+        "weldMetal": "20",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-13/35",
+        "priceCode": "10",
+        "weldMetal": "20",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-13/50",
+        "priceCode": "10",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-13/70",
+        "priceCode": "10",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-13/95",
+        "priceCode": "10",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-16/16",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-16/25",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-16/30",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-16/35",
+        "priceCode": "10",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-16/50",
+        "priceCode": "10",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-16/70",
+        "priceCode": "10",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-16/95",
+        "priceCode": "10",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-16/120",
+        "priceCode": "10",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-19/16",
+        "priceCode": "9",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-19/25",
+        "priceCode": "9",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-19/30",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-19/35",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-19/50",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-19/70",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-19/95",
+        "priceCode": "9",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-22/16",
+        "priceCode": "9",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-22/25",
+        "priceCode": "9",
+        "weldMetal": "65",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-22/30",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-22/35",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-22/50",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-22/70",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-22/95",
+        "priceCode": "9",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-22/120",
+        "priceCode": "9",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-25/30",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-25/35",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-25/50",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-25/70",
+        "priceCode": "9",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-25/95",
+        "priceCode": "9",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-29/30",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-29/35",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-29/50",
+        "priceCode": "9",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-29/70",
+        "priceCode": "9",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-29/95",
+        "priceCode": "9",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-29/120",
+        "priceCode": "9",
+        "weldMetal": "2010",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-32/30",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-32/85",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-32/50",
+        "priceCode": "9",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-32/70",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-32/95",
+        "priceCode": "9",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-3630",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-36/35",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-36/50",
+        "priceCode": "9",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-36/70",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-36/95",
+        "priceCode": "9",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-36/120",
+        "priceCode": "9",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-43/30",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-43/35",
+        "priceCode": "9",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-43/50",
+        "priceCode": "9",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-43/70",
+        "priceCode": "9",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-43/95",
+        "priceCode": "9",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-57/50",
+        "priceCode": "9",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-57/70",
+        "priceCode": "9",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-57/95",
+        "priceCode": "9",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RHXH-57/120",
+        "priceCode": "9",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      }
+    ]
+  },
+  "RVXH": {
+    "id": "rvxh",
+    "series": "R",
+    "title": "RVXH",
+    "nameZh": "鋼筋對線垂直交叉",
+    "desc": "Rebar to wire vertical cross",
+    "page": 33,
+    "pages": [
+      33,
+      34
+    ],
+    "rows": [
+      {
+        "moldType": "RVXH-10/16",
+        "priceCode": "7",
+        "weldMetal": "20",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-10/25",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-10/30",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-10/35",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-10/50",
+        "priceCode": "7",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-10/70",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-10/95",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-13/25.",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-13/30",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-13/35",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-13/50",
+        "priceCode": "7",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-13/70",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-13/95",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-46/16",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-16/25",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-16/30",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-16/35",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-16/50",
+        "priceCode": "7",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-16/70",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-16/95",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-19/16",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-19/25",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-1980",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-19385",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-19/50",
+        "priceCode": "7",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-19/70",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-1995",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-22/16",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-22/25",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-2280",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-2285.",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-22/50",
+        "priceCode": "7",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-22/70",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-22/95",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-22/120",
+        "priceCode": "7",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-25/30",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-25/35",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-25/50",
+        "priceCode": "7",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-25/70",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-25/95",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-29/30",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-29/35",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-29/50",
+        "priceCode": "7",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-29/70",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-29/95",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-32/30",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-32/35",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-32/50",
+        "priceCode": "7",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-32/70",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-32/95",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-36/30",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-36/35",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-36/50",
+        "priceCode": "7",
+        "weldMetal": "15",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-36/70",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-36/95",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-43/30",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-43/35.",
+        "priceCode": "7",
+        "weldMetal": "90",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-43/50",
+        "priceCode": "7",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-43/70",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-43/95",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-57/50",
+        "priceCode": "7",
+        "weldMetal": "115",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-57/70",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-57/95",
+        "priceCode": "7",
+        "weldMetal": "150",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "RVXH-57/120",
+        "priceCode": "7",
+        "weldMetal": "200",
+        "accessory": "DX-3"
+      }
+    ]
+  },
+  "PK": {
+    "id": "pk",
+    "series": "P",
+    "title": "PK",
+    "nameZh": "線對扁銅排",
+    "desc": "Cable to busbar",
+    "page": 35,
+    "pages": [
+      35
+    ],
+    "rows": [
+      {
+        "moldType": "PK-10/0220",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-16/0325",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-25/0325",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-30/0325",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-35/0325",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-50/0325",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-50/0425",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-50/0525",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-70/0325",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-70/0425",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-70/0525",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-95/0425",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-95/0525",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-95/0530",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-95/0540",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-95-0550",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-95/0650",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-95/0675",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-120/0525",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-120/0530",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-120/0540",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-120/0550",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-120/0650",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-120/0675",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-150/0530",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-150/0540",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-150/0550",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-150/0650",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-150/0675",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-185/0540",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-185/0550",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-185/0650",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-185/0850",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-185/0675",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-185/0875",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-240/0550",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-240/0650",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-240/0850",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-240/0675",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-240/0875",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-300/0650",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-300/0850",
+        "priceCode": "4",
+        "weldMetal": "2X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-300/1050",
+        "priceCode": "4",
+        "weldMetal": "2X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-300/0675",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-300/0875",
+        "priceCode": "4",
+        "weldMetal": "2X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-500/1050",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-500/1250",
+        "priceCode": "4",
+        "weldMetal": "2X 250",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-500/0875",
+        "priceCode": "4",
+        "weldMetal": "2X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-500/1075",
+        "priceCode": "4",
+        "weldMetal": "2X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PK-500/1275",
+        "priceCode": "4",
+        "weldMetal": "2X 250",
+        "accessory": ""
+      }
+    ]
+  },
+  "PV": {
+    "id": "pv",
+    "series": "P",
+    "title": "PV",
+    "nameZh": "線對扁銅排垂直",
+    "desc": "Cable to busbar vertical",
+    "page": 36,
+    "pages": [
+      36
+    ],
+    "rows": [
+      {
+        "moldType": "PV-10/0225",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-16/0225",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-25/0225",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-30/0225",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-50/0225",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-30/0325",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-35/0325",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-50/0325",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-70/0325",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-70/0425",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-95/0425",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-95/0525",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-120/0525",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-120/0530",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-150/0530",
+        "priceCode": "7",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-150/0540",
+        "priceCode": "7",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-185/0550",
+        "priceCode": "7",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-240/0550",
+        "priceCode": "7",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-240/0650",
+        "priceCode": "7",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-300/0650",
+        "priceCode": "8",
+        "weldMetal": "2X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-300/0850",
+        "priceCode": "8",
+        "weldMetal": "2X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-109/0325",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "PV-100/0425",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      }
+    ]
+  },
+  "PT": {
+    "id": "pt",
+    "series": "P",
+    "title": "PT",
+    "nameZh": "線對扁銅排 T",
+    "desc": "Cable to busbar T",
+    "page": 37,
+    "pages": [
+      37
+    ],
+    "rows": [
+      {
+        "moldType": "PT-10/0220",
+        "priceCode": "3",
+        "weldMetal": "25",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-16/0220",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-25/0220",
+        "priceCode": "3",
+        "weldMetal": "32",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-35/0220",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-30/0225",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-50/0225",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-50/0325",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-70/0325",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-70/0425",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-95/0425",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-95/0525",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-120/0525",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-120/0530",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-150/0530",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-150/0540",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-185/0540",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-185/0550",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-240/0550",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-240/0650",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-300/0650",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-300/0850",
+        "priceCode": "4",
+        "weldMetal": "2X 250",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-890225",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-890325",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-10410325",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "PT-10910425",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      }
+    ]
+  },
+  "BE": {
+    "id": "be",
+    "series": "B",
+    "title": "BE",
+    "nameZh": "扁銅排對扁銅排",
+    "desc": "Busbar to busbar end",
+    "page": 38,
+    "pages": [
+      38
+    ],
+    "rows": [
+      {
+        "moldType": "BE-0220",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0320",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0225",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0325",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0425",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0230",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0330",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0430",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0530",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0340",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0440",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0540",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0640",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0550",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0650",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0850",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0660",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0860",
+        "priceCode": "4",
+        "weldMetal": "2X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0680",
+        "priceCode": "4",
+        "weldMetal": "2X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BE-0880",
+        "priceCode": "4",
+        "weldMetal": "500",
+        "accessory": ""
+      }
+    ]
+  },
+  "BEH": {
+    "id": "beh",
+    "series": "B",
+    "title": "BEH",
+    "nameZh": "扁銅排水平搭接",
+    "desc": "Busbar horizontal",
+    "page": 38,
+    "pages": [
+      38
+    ],
+    "rows": [
+      {
+        "moldType": "BEH-0220",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0320",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0420",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0520",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0225",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0325",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0425",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0525",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0230",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0330",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0430",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0530",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0340",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0440",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0540",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0640",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0550",
+        "priceCode": "4",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0650",
+        "priceCode": "4",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0850",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0660",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BEH-0860",
+        "priceCode": "4",
+        "weldMetal": "2X200",
+        "accessory": ""
+      }
+    ]
+  },
+  "BTV": {
+    "id": "btv",
+    "series": "B",
+    "title": "BTV",
+    "nameZh": "扁銅排垂直 T",
+    "desc": "Busbar vertical T",
+    "page": 39,
+    "pages": [
+      39
+    ],
+    "rows": [
+      {
+        "moldType": "BTV-0220",
+        "priceCode": "3",
+        "weldMetal": "45",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0320",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0225",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0325",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0425",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0230",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0330",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0430",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0530",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0340",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0440",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0540",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0640",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0550",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0650",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0850",
+        "priceCode": "3",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0660",
+        "priceCode": "4",
+        "weldMetal": "2X150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0860",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-1060",
+        "priceCode": "4",
+        "weldMetal": "500",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0680",
+        "priceCode": "4",
+        "weldMetal": "2X200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-0880",
+        "priceCode": "4",
+        "weldMetal": "500",
+        "accessory": ""
+      },
+      {
+        "moldType": "BTV-1080",
+        "priceCode": "4",
+        "weldMetal": "3X 200",
+        "accessory": ""
+      }
+    ]
+  },
+  "BS": {
+    "id": "bs",
+    "series": "B",
+    "title": "BS",
+    "nameZh": "扁銅排對鋼結構",
+    "desc": "Busbar to steel",
+    "page": 40,
+    "pages": [
+      40
+    ],
+    "rows": [
+      {
+        "moldType": "BS-0320",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BS-0225",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BS-0325",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "BS-0425",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "BS-0330",
+        "priceCode": "3",
+        "weldMetal": "15",
+        "accessory": ""
+      },
+      {
+        "moldType": "BS-0430",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BS-0530",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BS-0340",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BS-0440",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BS-0540",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "BS-0550",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "BS-0650",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "BS-0860",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BS-1060",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      }
+    ]
+  },
+  "BVSE": {
+    "id": "bvse",
+    "series": "B",
+    "title": "BVSE",
+    "nameZh": "扁銅排對鋼立面",
+    "desc": "Busbar to vertical steel",
+    "page": 41,
+    "pages": [
+      41
+    ],
+    "rows": [
+      {
+        "moldType": "BVSE-0220",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0320",
+        "priceCode": "3",
+        "weldMetal": "65",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0225",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0325",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0425",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0230",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0330",
+        "priceCode": "3",
+        "weldMetal": "90",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0430",
+        "priceCode": "3",
+        "weldMetal": "115",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0530",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0340",
+        "priceCode": "3",
+        "weldMetal": "150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0440",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0540",
+        "priceCode": "3",
+        "weldMetal": "200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0640",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0550",
+        "priceCode": "3",
+        "weldMetal": "250",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0650",
+        "priceCode": "4",
+        "weldMetal": "2X 150",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0850",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0660",
+        "priceCode": "4",
+        "weldMetal": "2X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0860",
+        "priceCode": "4",
+        "weldMetal": "2X 250",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-1060",
+        "priceCode": "4",
+        "weldMetal": "3X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0680",
+        "priceCode": "4",
+        "weldMetal": "2X 250",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-0880",
+        "priceCode": "4",
+        "weldMetal": "3X 200",
+        "accessory": ""
+      },
+      {
+        "moldType": "BVSE-1080",
+        "priceCode": "4",
+        "weldMetal": "3X 250",
+        "accessory": ""
+      }
+    ]
+  },
+  "ERB": {
+    "id": "erb",
+    "series": "E",
+    "title": "ERB",
+    "nameZh": "線端端子／耳片",
+    "desc": "Cable lug / terminal",
+    "page": 42,
+    "pages": [
+      42
+    ],
+    "rows": [
+      {
+        "moldType": "ERB-10",
+        "priceCode": "1",
+        "weldMetal": "B45",
+        "accessory": ""
+      },
+      {
+        "moldType": "ERB-16",
+        "priceCode": "1",
+        "weldMetal": "B45",
+        "accessory": ""
+      },
+      {
+        "moldType": "ERB-25",
+        "priceCode": "1",
+        "weldMetal": "B45",
+        "accessory": ""
+      },
+      {
+        "moldType": "ERB-35",
+        "priceCode": "1",
+        "weldMetal": "B65",
+        "accessory": ""
+      },
+      {
+        "moldType": "ERB-50",
+        "priceCode": "3",
+        "weldMetal": "B90",
+        "accessory": ""
+      },
+      {
+        "moldType": "ERB-70",
+        "priceCode": "3",
+        "weldMetal": "B115",
+        "accessory": ""
+      },
+      {
+        "moldType": "ERB-95",
+        "priceCode": "3",
+        "weldMetal": "B150",
+        "accessory": ""
+      },
+      {
+        "moldType": "ERB-120",
+        "priceCode": "3",
+        "weldMetal": "B200",
+        "accessory": ""
+      },
+      {
+        "moldType": "ERB-150",
+        "priceCode": "3",
+        "weldMetal": "B250",
+        "accessory": ""
+      }
+    ]
+  },
+  "CSHEA": {
+    "id": "cshea",
+    "series": "C",
+    "title": "CSHEA",
+    "nameZh": "陰極防蝕鋼板對線",
+    "desc": "CP steel to cable",
+    "page": 43,
+    "pages": [
+      43
+    ],
+    "rows": [
+      {
+        "moldType": "CSHEA-4-D",
+        "priceCode": "1",
+        "weldMetal": "CP-15",
+        "accessory": ""
+      },
+      {
+        "moldType": "CSHEA-6-D",
+        "priceCode": "1",
+        "weldMetal": "CP-15",
+        "accessory": ""
+      },
+      {
+        "moldType": "CSHEA-10-D",
+        "priceCode": "1",
+        "weldMetal": "CP-25",
+        "accessory": ""
+      },
+      {
+        "moldType": "CSHEA-16-D",
+        "priceCode": "1",
+        "weldMetal": "CP-32",
+        "accessory": ""
+      },
+      {
+        "moldType": "CSHEA-25D",
+        "priceCode": "1",
+        "weldMetal": "CP-25",
+        "accessory": ""
+      },
+      {
+        "moldType": "CSHEA-30-D",
+        "priceCode": "1",
+        "weldMetal": "CP-32",
+        "accessory": ""
+      },
+      {
+        "moldType": "CSHEA-35-D",
+        "priceCode": "1",
+        "weldMetal": "CP-35",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "CSHEA-50-D",
+        "priceCode": "1",
+        "weldMetal": "CP-45",
+        "accessory": "DX-3"
+      },
+      {
+        "moldType": "CSHEA-70-D",
+        "priceCode": "1",
+        "weldMetal": "CP-65",
+        "accessory": "DX-3"
+      }
+    ]
+  },
+  "CWL": {
+    "id": "cwl",
+    "series": "C",
+    "title": "CWL",
+    "nameZh": "陰極防蝕線對線 L",
+    "desc": "CP wire L",
+    "page": 44,
+    "pages": [
+      44
+    ],
+    "rows": [
+      {
+        "moldType": "CWL-6/6",
+        "priceCode": "2",
+        "weldMetal": "CP-25",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWL-10/4",
+        "priceCode": "2",
+        "weldMetal": "CP-25",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWL-10/6",
+        "priceCode": "2",
+        "weldMetal": "CP-25",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWL-10/10",
+        "priceCode": "2",
+        "weldMetal": "CP-25",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWL-16/6",
+        "priceCode": "2",
+        "weldMetal": "CP-32",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWL-16/10",
+        "priceCode": "2",
+        "weldMetal": "CP-32",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWL-16/16",
+        "priceCode": "2",
+        "weldMetal": "CP-32",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWL-25/10",
+        "priceCode": "2",
+        "weldMetal": "CP-32",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWL-25/16",
+        "priceCode": "2",
+        "weldMetal": "CP-32",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWL-30/16",
+        "priceCode": "2",
+        "weldMetal": "CP-45",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWL-30/25",
+        "priceCode": "2",
+        "weldMetal": "CP-45",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWL-30/30",
+        "priceCode": "2",
+        "weldMetal": "CP-65",
+        "accessory": ""
+      }
+    ]
+  },
+  "CWE": {
+    "id": "cwe",
+    "series": "C",
+    "title": "CWE",
+    "nameZh": "陰極防蝕線對線直通",
+    "desc": "CP wire through",
+    "page": 44,
+    "pages": [
+      44
+    ],
+    "rows": [
+      {
+        "moldType": "CWE-2.5/2.5",
+        "priceCode": "2",
+        "weldMetal": "CP-15",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWE-4/4",
+        "priceCode": "2",
+        "weldMetal": "CP-15",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWE-6/6",
+        "priceCode": "2",
+        "weldMetal": "CP-15",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWE-10/10",
+        "priceCode": "2",
+        "weldMetal": "CP-25",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWE-16/16",
+        "priceCode": "2",
+        "weldMetal": "CP-25",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWE-25/25",
+        "priceCode": "2",
+        "weldMetal": "CP-25",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWE-30/30",
+        "priceCode": "2",
+        "weldMetal": "cP-32",
+        "accessory": ""
+      },
+      {
+        "moldType": "CWE-35/35",
+        "priceCode": "2",
+        "weldMetal": "CP-32",
+        "accessory": ""
+      }
+    ]
+  }
+}
