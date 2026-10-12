@@ -9,18 +9,18 @@ pageSections:
     heading: W 系列-線對線
     summary: Exoweld 石墨熔模設計與建造，適用於多種線對線連接方式與導體組合。
     images:
-      - image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: 線對線熱熔接接點示意（DUMMY）
-        caption: 線對線接點
-      - image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: 線對線直通接點示意
-        caption: 直通接點（DUMMY）
-      - image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: 線對線 T 接示意
-        caption: T 型接點（DUMMY）
-      - image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: 線對線交叉接點示意
-        caption: 交叉接點（DUMMY）
+      - image: /src/assets/images/ccelect/we/we-joint-cut.png
+        imageAlt: WE 熔接完成的銅導體接點
+        caption: WE
+      - image: /src/assets/images/ccelect/wt/wt-joint-cut.png
+        imageAlt: WT 熔接完成的銅導體接點
+        caption: WT
+      - image: /src/assets/images/ccelect/wx/wx-joint-cut.png
+        imageAlt: WX 熔接完成的銅導體接點
+        caption: WX
+      - image: /src/assets/images/ccelect/wp/wp-joint-cut.png
+        imageAlt: WP 熔接完成的銅導體接點
+        caption: WP
     featuresHeading: 功能
     detailsLabel: 詳情
     features:
@@ -32,41 +32,28 @@ pageSections:
       - 可目視檢查熔接處
     productsHeading: 商品列表
     countLabel: 共 {count} 個商品
-    applicationsLabel: 應用場景圖片
-    applicationImages:
-      - image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: 接地網線對線施工示意
-        caption: DUMMY：接地網線對線施工
-      - image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: 配電盤等電位連接示意
-        caption: DUMMY：等電位連接
-      - image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: 銅導體延長接點示意
-        caption: DUMMY：銅導體延長
     videosLabel: 影片
     videos:
-      - title: DUMMY：線對線熔接示範
-        description: 示意影片，實際教學內容待補。
-        thumbnail: /src/assets/images/ccelect/dummy/product-1.svg
-        href: "#"
-      - title: DUMMY：熔模準備與安全注意
-        description: 示意影片，實際教學內容待補。
-        thumbnail: /src/assets/images/ccelect/dummy/product-5.svg
-        href: "#"
-    projectsLabel: 工程實績
-    projects:
-      - title: DUMMY：變電所接地網工程
-        description: 線對線接點應用示意，正式實績資料待補。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        href: /projects/
-      - title: DUMMY：廠區等電位改善
-        description: 銅導體接續應用示意，正式實績資料待補。
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        href: /projects/
-      - title: DUMMY：輸電塔接地補強
-        description: 現場熔接應用示意，正式實績資料待補。
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        href: /projects/
+      - title: WE 線對線熔接
+        description: WE 石墨熔模熔接銅導體的操作示範。
+        videoId: ja-FXInWnLU
+        href: https://youtu.be/ja-FXInWnLU
+        linkText: 在 YouTube 觀看
+      - title: WT 線對線熔接
+        description: WT 石墨熔模熔接銅導體的操作示範。
+        videoId: QfQ0m-a-DUU
+        href: https://youtu.be/QfQ0m-a-DUU
+        linkText: 在 YouTube 觀看
+      - title: WX 線對線熔接
+        description: WX 石墨熔模熔接銅導體的操作示範。
+        videoId: kaAG0uRJg8M
+        href: https://youtu.be/kaAG0uRJg8M
+        linkText: 在 YouTube 觀看
+      - title: WP 線對線熔接
+        description: WP 石墨熔模熔接銅導體的操作示範。
+        videoId: 7USyYp7DDqU
+        href: https://youtu.be/7USyYp7DDqU
+        linkText: 在 YouTube 觀看
     helpHeading: 需要技術支援或報價嗎？我們隨時為您服務。
     helpText: 提供導體線徑、接點形式與需求數量，我們會協助確認熔模與報價。
     primaryCta:
@@ -80,7 +67,7 @@ pageSections:
         category: 線對線
         title: WE
         description: WE 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
+        image: /src/assets/images/ccelect/we/we-joint-cut.png
         imageAlt: WE
         specifications:
           - WE
@@ -89,8 +76,8 @@ pageSections:
         category: 線對線
         title: WT
         description: WT 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: WT
+        image: /src/assets/images/ccelect/wt/wt-joint-cut.png
+        imageAlt: WT 熔接完成的銅導體接點
         specifications:
           - WT
         href: /products/exoweld/w-series/wt/
@@ -98,8 +85,8 @@ pageSections:
         category: 線對線
         title: WX
         description: WX 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: WX
+        image: /src/assets/images/ccelect/wx/wx-joint-cut.png
+        imageAlt: WX 熔接完成的銅導體接點
         specifications:
           - WX
         href: /products/exoweld/w-series/wx/
@@ -107,8 +94,8 @@ pageSections:
         category: 線對線
         title: WP
         description: WP 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: WP
+        image: /src/assets/images/ccelect/wp/wp-joint-cut.png
+        imageAlt: WP 熔接完成的銅導體接點
         specifications:
           - WP
         href: /products/exoweld/w-series/wp/

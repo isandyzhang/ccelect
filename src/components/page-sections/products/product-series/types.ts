@@ -14,6 +14,8 @@ export interface ProductSeriesVideoItem {
   description?: string;
   thumbnail?: string;
   href?: string;
+  videoId?: string;
+  linkText?: string;
 }
 
 export interface ProductSeriesProjectItem {

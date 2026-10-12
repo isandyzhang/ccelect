@@ -5,6 +5,7 @@ import type {
   ProductDetailCta,
   ProductDetailGalleryItem,
   ProductDetailSpec,
+  ProductDetailVideo,
 } from "./types";
 
 interface Props {
@@ -23,6 +24,8 @@ interface Props {
   specifications?: ProductDetailSpec[];
   applicationHeading?: string;
   applicationImages?: ProductDetailGalleryItem[];
+  videoHeading?: string;
+  video?: ProductDetailVideo;
   note?: string;
 }
 
@@ -42,6 +45,8 @@ const {
   specifications = [],
   applicationHeading = "應用示意",
   applicationImages = [],
+  videoHeading = "熔接影片",
+  video,
   note = "",
 } = Astro.props as Props;
 ---
@@ -147,6 +152,29 @@ const {
     }
 
     {
+      video?.videoId && (
+        <section
+          class="product-video"
+          aria-labelledby="product-video-heading"
+        >
+          <h2 id="product-video-heading">{videoHeading}</h2>
+          <lite-youtube
+            class="product-video-embed"
+            videoid={video.videoId}
+            videotitle={video.title || heading}
+          >
+            <a
+              class="lite-youtube-fallback"
+              href={`https://www.youtube.com/watch?v=${video.videoId}`}
+            >
+              {video.title || heading}
+            </a>
+          </lite-youtube>
+        </section>
+      )
+    }
+
+    {
       applicationImages.length > 0 && (
         <section
           class="product-applications"
@@ -214,12 +242,22 @@ const {
     border: 1px solid var(--color-border);
     display: grid;
     overflow: hidden;
-    place-items: center;
   }
 
   .product-media .product-media-frame {
     aspect-ratio: 1 / 1;
     min-height: 18rem;
+  }
+
+  .product-media-frame :global(.image) {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .product-media .product-media-frame :global(.image),
+  .product-media .product-media-frame :global(.image-inner),
+  .product-media .product-media-frame :global(picture) {
+    height: 100%;
   }
 
   .product-media :global(img),
@@ -315,20 +353,31 @@ const {
   }
 
   .product-details-panel,
-  .product-applications {
+  .product-applications,
+  .product-video {
     border-top: 1px solid var(--color-border);
     padding-top: clamp(1.5rem, 4vw, 2.5rem);
   }
 
+  .product-video-embed {
+    aspect-ratio: 16 / 9;
+    background: #111;
+    display: block;
+    max-width: 52rem;
+    width: 100%;
+  }
+
   .product-details-panel h2,
   .product-applications h2,
+  .product-video h2,
   .product-details-panel h3 {
     color: var(--color-text-strong);
     margin: 0 0 1rem;
   }
 
   .product-details-panel h2,
-  .product-applications h2 {
+  .product-applications h2,
+  .product-video h2 {
     font-size: clamp(1.35rem, 3vw, 1.75rem);
   }
 

@@ -69,10 +69,10 @@ const itemCountLabel = countLabel.replace("{count}", String(items.length));
 const tabs = [
   { id: "details", label: detailsLabel },
   { id: "products", label: productsHeading },
-  { id: "applications", label: applicationsLabel },
-  { id: "videos", label: videosLabel },
-  { id: "projects", label: projectsLabel },
-] as const;
+  ...(applicationImages.length > 0 ? [{ id: "applications", label: applicationsLabel }] : []),
+  ...(videos.length > 0 ? [{ id: "videos", label: videosLabel }] : []),
+  ...(projects.length > 0 ? [{ id: "projects", label: projectsLabel }] : []),
+];
 ---
 
 <section
@@ -248,6 +248,8 @@ const tabs = [
           }
         </section>
 
+        {
+          applicationImages.length > 0 && (
         <section
           class="series-panel series-applications"
           data-panel="applications"
@@ -277,7 +279,11 @@ const tabs = [
             )
           }
         </section>
+          )
+        }
 
+        {
+          videos.length > 0 && (
         <section
           class="series-panel series-videos"
           data-panel="videos"
@@ -290,28 +296,45 @@ const tabs = [
               <div class="series-media-grid">
                 {videos.map((video) => (
                   <article class="series-video-card">
-                    <div class="series-video-thumb">
-                      {video.thumbnail ? (
-                        <Image
-                          source={video.thumbnail}
-                          alt={video.title}
-                          aspectRatio="landscape"
-                          sizes="(max-width: 900px) 100vw, 30vw"
-                        />
+                    {
+                      video.videoId ? (
+                        <lite-youtube
+                          class="series-video-embed"
+                          videoid={video.videoId}
+                          videotitle={video.title}
+                        >
+                          <a
+                            class="lite-youtube-fallback"
+                            href={video.href || `https://www.youtube.com/watch?v=${video.videoId}`}
+                          >
+                            {video.title}
+                          </a>
+                        </lite-youtube>
                       ) : (
-                        <span>DUMMY VIDEO</span>
-                      )}
-                      <span class="series-video-play" aria-hidden="true">
-                        <Icon
-                          name="play-circle"
-                          size="none"
-                        />
-                      </span>
-                    </div>
+                        <div class="series-video-thumb">
+                          {video.thumbnail ? (
+                            <Image
+                              source={video.thumbnail}
+                              alt={video.title}
+                              aspectRatio="landscape"
+                              sizes="(max-width: 900px) 100vw, 30vw"
+                            />
+                          ) : (
+                            <span>DUMMY VIDEO</span>
+                          )}
+                          <span class="series-video-play" aria-hidden="true">
+                            <Icon
+                              name="play-circle"
+                              size="none"
+                            />
+                          </span>
+                        </div>
+                      )
+                    }
                     <div class="series-video-copy">
                       <h3>{video.title}</h3>
                       {video.description && <p>{video.description}</p>}
-                      <a href={video.href || "#"}>{video.href ? "觀看影片" : "DUMMY 連結"}</a>
+                      <a href={video.href || "#"}>{video.linkText || (video.href ? "觀看影片" : "DUMMY 連結")}</a>
                     </div>
                   </article>
                 ))}
@@ -321,7 +344,11 @@ const tabs = [
             )
           }
         </section>
+          )
+        }
 
+        {
+          projects.length > 0 && (
         <section
           class="series-panel series-projects"
           data-panel="projects"
@@ -355,6 +382,8 @@ const tabs = [
             )
           }
         </section>
+          )
+        }
       </div>
 
       <aside
@@ -861,6 +890,13 @@ const tabs = [
         overflow: hidden;
       }
 
+      .series-video-embed {
+        aspect-ratio: 16 / 9;
+        background: #111;
+        display: block;
+        width: 100%;
+      }
+
       .series-video-thumb,
       .series-project-card .series-media-frame {
         aspect-ratio: 16 / 10;
@@ -983,6 +1019,10 @@ const tabs = [
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
+        .series-videos .series-media-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
         .series-help {
           align-items: center;
           grid-template-columns: minmax(0, 1fr) auto;
@@ -1009,6 +1049,10 @@ const tabs = [
         .series-products-grid,
         .series-media-grid {
           grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .series-videos .series-media-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
     }

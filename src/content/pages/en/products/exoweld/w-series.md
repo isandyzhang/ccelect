@@ -9,18 +9,18 @@ pageSections:
     heading: W series - wire to wire
     summary: Exoweld graphite molds are designed for many wire-to-wire connection styles and conductor combinations.
     images:
-      - image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: Wire-to-wire joint placeholder
-        caption: Wire-to-wire joint
-      - image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: Straight joint
-        caption: Straight joint (DUMMY)
-      - image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: Tee joint
-        caption: Tee joint (DUMMY)
-      - image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: Cross joint
-        caption: Cross joint (DUMMY)
+      - image: /src/assets/images/ccelect/we/we-joint-cut.png
+        imageAlt: WE completed copper conductor joint
+        caption: WE
+      - image: /src/assets/images/ccelect/wt/wt-joint-cut.png
+        imageAlt: WT completed copper conductor joint
+        caption: WT
+      - image: /src/assets/images/ccelect/wx/wx-joint-cut.png
+        imageAlt: WX completed copper conductor joint
+        caption: WX
+      - image: /src/assets/images/ccelect/wp/wp-joint-cut.png
+        imageAlt: WP completed copper conductor joint
+        caption: WP
     featuresHeading: Features
     detailsLabel: Details
     features:
@@ -32,34 +32,28 @@ pageSections:
       - Weld quality can be visually inspected
     productsHeading: Product list
     countLabel: "{count} products"
-    applicationsLabel: Application images
-    applicationImages:
-      - image: /src/assets/images/ccelect/dummy/product-2.svg
-        caption: DUMMY application
-      - image: /src/assets/images/ccelect/dummy/product-3.svg
-        caption: DUMMY application
-      - image: /src/assets/images/ccelect/dummy/product-4.svg
-        caption: DUMMY application
     videosLabel: Videos
     videos:
-      - title: DUMMY welding demo
-        description: Placeholder video content.
-        thumbnail: /src/assets/images/ccelect/dummy/product-1.svg
-        href: "#"
-      - title: DUMMY safety briefing
-        description: Placeholder video content.
-        thumbnail: /src/assets/images/ccelect/dummy/product-5.svg
-        href: "#"
-    projectsLabel: Project cases
-    projects:
-      - title: DUMMY substation grounding
-        description: Placeholder project case.
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        href: /en/projects/
-      - title: DUMMY plant bonding upgrade
-        description: Placeholder project case.
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        href: /en/projects/
+      - title: WE wire-to-wire weld
+        description: Demonstration of a WE graphite mold welding copper conductors.
+        videoId: ja-FXInWnLU
+        href: https://youtu.be/ja-FXInWnLU
+        linkText: Watch on YouTube
+      - title: WT wire-to-wire weld
+        description: Demonstration of a WT graphite mold welding copper conductors.
+        videoId: QfQ0m-a-DUU
+        href: https://youtu.be/QfQ0m-a-DUU
+        linkText: Watch on YouTube
+      - title: WX wire-to-wire weld
+        description: Demonstration of a WX graphite mold welding copper conductors.
+        videoId: kaAG0uRJg8M
+        href: https://youtu.be/kaAG0uRJg8M
+        linkText: Watch on YouTube
+      - title: WP wire-to-wire weld
+        description: Demonstration of a WP graphite mold welding copper conductors.
+        videoId: 7USyYp7DDqU
+        href: https://youtu.be/7USyYp7DDqU
+        linkText: Watch on YouTube
     helpHeading: Need technical support or a quote? We're here to help.
     helpText: Share conductor size, joint form, and quantity. We will help confirm molds and pricing.
     primaryCta:
@@ -73,7 +67,7 @@ pageSections:
         category: Wire to wire
         title: WE
         description: WE wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-1.svg
+        image: /src/assets/images/ccelect/we/we-joint-cut.png
         imageAlt: WE
         specifications:
           - WE
@@ -82,8 +76,8 @@ pageSections:
         category: Wire to wire
         title: WT
         description: WT wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: WT
+        image: /src/assets/images/ccelect/wt/wt-joint-cut.png
+        imageAlt: WT completed copper conductor joint
         specifications:
           - WT
         href: /en/products/exoweld/w-series/wt/
@@ -91,8 +85,8 @@ pageSections:
         category: Wire to wire
         title: WX
         description: WX wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: WX
+        image: /src/assets/images/ccelect/wx/wx-joint-cut.png
+        imageAlt: WX completed copper conductor joint
         specifications:
           - WX
         href: /en/products/exoweld/w-series/wx/
@@ -100,8 +94,8 @@ pageSections:
         category: Wire to wire
         title: WP
         description: WP wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: WP
+        image: /src/assets/images/ccelect/wp/wp-joint-cut.png
+        imageAlt: WP completed copper conductor joint
         specifications:
           - WP
         href: /en/products/exoweld/w-series/wp/

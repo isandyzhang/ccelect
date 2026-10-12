@@ -13,3 +13,8 @@ export interface ProductDetailGalleryItem {
   imageAlt?: string;
   caption?: string;
 }
+
+export interface ProductDetailVideo {
+  title: string;
+  videoId: string;
+}

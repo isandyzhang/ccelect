@@ -12,9 +12,13 @@ pageSections:
       - WX 屬於 W 系列銅導體接點形式，可依現場導體尺寸與接點需求搭配對應熔模與熔接劑。
       - 本頁為單品詳情公版 Demo。正式規格、模具編號與焊接劑用量請以業務確認資料為準。
       - 施工前請確認導體清潔、模具乾燥與安全防護，並依操作手冊完成點火與冷卻程序。
-    image: /src/assets/images/ccelect/dummy/product-3.svg
-    imageAlt: WX 產品示意照片
-    imageHint: 點擊圖片可放大檢視（Demo）
+    image: /src/assets/images/ccelect/wx/wx-joint-cut.png
+    imageAlt: WX 熔接完成的銅導體接點
+    imageHint: 熔接完成的銅導體接點
+    videoHeading: 熔接影片
+    video:
+      title: WX 線對線熔接示範
+      videoId: kaAG0uRJg8M
     primaryCta:
       text: 聯絡工程業務
       href: /contact/
@@ -36,5 +40,19 @@ pageSections:
         value: 銅導體接點
       - label: 狀態
         value: Demo
+    applicationHeading: 應用示意
+    applicationImages:
+      - image: /src/assets/images/ccelect/wx/wx-top.jpg
+        imageAlt: WX 銅導體與熔模配置俯視
+        caption: 銅導體與熔模配置俯視
+      - image: /src/assets/images/ccelect/wx/wx-setup.jpg
+        imageAlt: WX 銅導體置入熔模
+        caption: 銅導體置入熔模
+      - image: /src/assets/images/ccelect/wx/wx-process.jpg
+        imageAlt: WX 熔接操作過程
+        caption: 熔接操作過程
+      - image: /src/assets/images/ccelect/wx/wx-joint.jpg
+        imageAlt: WX 熔接完成的銅導體接點
+        caption: 熔接完成的銅導體接點
     note: 本頁為 Exoweld W 系列單品詳情 Demo。正式規格請以業務確認為準。
 ---

@@ -9,18 +9,18 @@ pageSections:
     heading: W シリーズ-線対線
     summary: Exoweld グラファイト溶模は、さまざまな線対線接続形式と導体組合せ向けに設計されています。
     images:
-      - image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: 線対線接点プレースホルダー
-        caption: 線対線接点
-      - image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: 直通接点
-        caption: 直通接点（DUMMY）
-      - image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: T 接点
-        caption: T 型接点（DUMMY）
-      - image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: 交差接点
-        caption: 交差接点（DUMMY）
+      - image: /src/assets/images/ccelect/we/we-joint-cut.png
+        imageAlt: WE 熔接完了後の銅導体接点
+        caption: WE
+      - image: /src/assets/images/ccelect/wt/wt-joint-cut.png
+        imageAlt: WT 熔接完了後の銅導体接点
+        caption: WT
+      - image: /src/assets/images/ccelect/wx/wx-joint-cut.png
+        imageAlt: WX 熔接完了後の銅導体接点
+        caption: WX
+      - image: /src/assets/images/ccelect/wp/wp-joint-cut.png
+        imageAlt: WP 熔接完了後の銅導体接点
+        caption: WP
     featuresHeading: 機能
     detailsLabel: 詳細
     features:
@@ -32,34 +32,28 @@ pageSections:
       - 溶接部を目視確認可能
     productsHeading: 商品一覧
     countLabel: 全 {count} 製品
-    applicationsLabel: 応用シーン画像
-    applicationImages:
-      - image: /src/assets/images/ccelect/dummy/product-2.svg
-        caption: DUMMY 応用シーン
-      - image: /src/assets/images/ccelect/dummy/product-3.svg
-        caption: DUMMY 応用シーン
-      - image: /src/assets/images/ccelect/dummy/product-4.svg
-        caption: DUMMY 応用シーン
     videosLabel: 動画
     videos:
-      - title: DUMMY 溶接デモ
-        description: プレースホルダー動画です。
-        thumbnail: /src/assets/images/ccelect/dummy/product-1.svg
-        href: "#"
-      - title: DUMMY 安全説明
-        description: プレースホルダー動画です。
-        thumbnail: /src/assets/images/ccelect/dummy/product-5.svg
-        href: "#"
-    projectsLabel: 施工実績
-    projects:
-      - title: DUMMY 変電所接地工事
-        description: プレースホルダー実績です。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        href: /ja/projects/
-      - title: DUMMY 工場等電位改善
-        description: プレースホルダー実績です。
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        href: /ja/projects/
+      - title: WE 線対線熔接
+        description: WE グラファイト溶模で銅導体を熔接する作業動画です。
+        videoId: ja-FXInWnLU
+        href: https://youtu.be/ja-FXInWnLU
+        linkText: YouTube で見る
+      - title: WT 線対線熔接
+        description: WT グラファイト溶模で銅導体を熔接する作業動画です。
+        videoId: QfQ0m-a-DUU
+        href: https://youtu.be/QfQ0m-a-DUU
+        linkText: YouTube で見る
+      - title: WX 線対線熔接
+        description: WX グラファイト溶模で銅導体を熔接する作業動画です。
+        videoId: kaAG0uRJg8M
+        href: https://youtu.be/kaAG0uRJg8M
+        linkText: YouTube で見る
+      - title: WP 線対線熔接
+        description: WP グラファイト溶模で銅導体を熔接する作業動画です。
+        videoId: 7USyYp7DDqU
+        href: https://youtu.be/7USyYp7DDqU
+        linkText: YouTube で見る
     helpHeading: 技術サポートやお見積りが必要ですか？お手伝いします。
     helpText: 導体線径、接点形式、数量をお知らせください。溶模選定をお手伝いします。
     primaryCta:
@@ -73,7 +67,7 @@ pageSections:
         category: 線対線
         title: WE
         description: WE 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
+        image: /src/assets/images/ccelect/we/we-joint-cut.png
         imageAlt: WE
         specifications:
           - WE
@@ -82,8 +76,8 @@ pageSections:
         category: 線対線
         title: WT
         description: WT 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: WT
+        image: /src/assets/images/ccelect/wt/wt-joint-cut.png
+        imageAlt: WT 熔接完了後の銅導体接点
         specifications:
           - WT
         href: /ja/products/exoweld/w-series/wt/
@@ -91,8 +85,8 @@ pageSections:
         category: 線対線
         title: WX
         description: WX 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: WX
+        image: /src/assets/images/ccelect/wx/wx-joint-cut.png
+        imageAlt: WX 熔接完了後の銅導体接点
         specifications:
           - WX
         href: /ja/products/exoweld/w-series/wx/
@@ -100,8 +94,8 @@ pageSections:
         category: 線対線
         title: WP
         description: WP 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: WP
+        image: /src/assets/images/ccelect/wp/wp-joint-cut.png
+        imageAlt: WP 熔接完了後の銅導体接点
         specifications:
           - WP
         href: /ja/products/exoweld/w-series/wp/

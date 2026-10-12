@@ -12,9 +12,13 @@ pageSections:
       - WT belongs to the W series copper conductor joint family and can be paired with matching molds and welding powder by conductor size.
       - This page is a product-detail template demo. Confirm final specs, mold numbers, and powder amounts with sales.
       - Before welding, clean conductors, dry the mold, follow safety procedures, and complete ignition and cooling per the manual.
-    image: /src/assets/images/ccelect/dummy/product-2.svg
-    imageAlt: WT Product placeholder
-    imageHint: Click image to enlarge (Demo)
+    image: /src/assets/images/ccelect/wt/wt-joint-cut.png
+    imageAlt: WT completed copper conductor joint
+    imageHint: Completed copper conductor joint
+    videoHeading: Welding video
+    video:
+      title: WT wire-to-wire weld
+      videoId: QfQ0m-a-DUU
     primaryCta:
       text: Contact sales
       href: /en/contact/
@@ -36,5 +40,19 @@ pageSections:
         value: Copper conductor joints
       - label: Status
         value: Demo
+    applicationHeading: Application photos
+    applicationImages:
+      - image: /src/assets/images/ccelect/wt/wt-open.jpg
+        imageAlt: WT Mold interior
+        caption: Mold interior
+      - image: /src/assets/images/ccelect/wt/wt-setup.jpg
+        imageAlt: WT Copper conductors positioned in the mold
+        caption: Copper conductors positioned in the mold
+      - image: /src/assets/images/ccelect/wt/wt-process.jpg
+        imageAlt: WT Welding process
+        caption: Welding process
+      - image: /src/assets/images/ccelect/wt/wt-joint.jpg
+        imageAlt: WT Completed copper conductor joint
+        caption: Completed copper conductor joint
     note: Demo product detail for Exoweld W series. Confirm final specs with sales.
 ---
