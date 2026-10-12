@@ -12,7 +12,7 @@ pageSections:
       - WE 屬於 W 系列銅導體接點形式，可依現場導體尺寸與接點需求搭配對應熔模與熔接劑。
       - 本頁為單品詳情公版 Demo。正式規格、模具編號與焊接劑用量請以業務確認資料為準。
       - 施工前請確認導體清潔、模具乾燥與安全防護，並依操作手冊完成點火與冷卻程序。
-    image: /src/assets/images/ccelect/we/we-joint-cut.png
+    image: /src/assets/images/ccelect/we/we-joint.jpg
     imageAlt: WE 熔接完成的銅導體接點
     imageHint: 熔接完成的銅導體接點
     videoHeading: 熔接影片

@@ -654,7 +654,7 @@ const tabs = [
         display: grid;
         min-height: 16rem;
         overflow: hidden;
-        place-items: center;
+        place-items: stretch;
 
         :global(.image),
         :global(.image-inner),
@@ -667,9 +667,8 @@ const tabs = [
       }
 
       .series-gallery-slide :global(img) {
-        background: #fff;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         object-position: center;
         pointer-events: none;
         user-select: none;

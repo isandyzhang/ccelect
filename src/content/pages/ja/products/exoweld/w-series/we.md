@@ -12,7 +12,7 @@ pageSections:
       - WE は W シリーズ銅導体接点形式で、線径と接点条件に応じた溶模・溶接剤と組み合わせます。
       - 本ページは製品詳細テンプレートの Demo です。正式仕様、型番、溶接剤量は営業確認資料に従ってください。
       - 施工前に導体清掃、溶模乾燥、安全対策を確認し、手順書どおり点火と冷却を行ってください。
-    image: /src/assets/images/ccelect/we/we-joint-cut.png
+    image: /src/assets/images/ccelect/we/we-joint.jpg
     imageAlt: WE 熔接完了後の銅導体接点
     imageHint: 熔接完了後の銅導体接点
     videoHeading: 熔接動画

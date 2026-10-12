@@ -12,7 +12,7 @@ pageSections:
       - WE belongs to the W series copper conductor joint family and can be paired with matching molds and welding powder by conductor size.
       - This page is a product-detail template demo. Confirm final specs, mold numbers, and powder amounts with sales.
       - Before welding, clean conductors, dry the mold, follow safety procedures, and complete ignition and cooling per the manual.
-    image: /src/assets/images/ccelect/we/we-joint-cut.png
+    image: /src/assets/images/ccelect/we/we-joint.jpg
     imageAlt: WE completed copper conductor joint
     imageHint: Completed copper conductor joint
     videoHeading: Welding video

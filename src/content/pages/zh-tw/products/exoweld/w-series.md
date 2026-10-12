@@ -9,16 +9,16 @@ pageSections:
     heading: W 系列-線對線
     summary: Exoweld 石墨熔模設計與建造，適用於多種線對線連接方式與導體組合。
     images:
-      - image: /src/assets/images/ccelect/we/we-joint-cut.png
+      - image: /src/assets/images/ccelect/we/we-joint.jpg
         imageAlt: WE 熔接完成的銅導體接點
         caption: WE
-      - image: /src/assets/images/ccelect/wt/wt-joint-cut.png
+      - image: /src/assets/images/ccelect/wt/wt-joint.jpg
         imageAlt: WT 熔接完成的銅導體接點
         caption: WT
-      - image: /src/assets/images/ccelect/wx/wx-joint-cut.png
+      - image: /src/assets/images/ccelect/wx/wx-joint.jpg
         imageAlt: WX 熔接完成的銅導體接點
         caption: WX
-      - image: /src/assets/images/ccelect/wp/wp-joint-cut.png
+      - image: /src/assets/images/ccelect/wp/wp-joint.jpg
         imageAlt: WP 熔接完成的銅導體接點
         caption: WP
     featuresHeading: 功能
@@ -67,7 +67,7 @@ pageSections:
         category: 線對線
         title: WE
         description: WE 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/we/we-joint-cut.png
+        image: /src/assets/images/ccelect/we/we-joint.jpg
         imageAlt: WE
         specifications:
           - WE
@@ -76,7 +76,7 @@ pageSections:
         category: 線對線
         title: WT
         description: WT 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/wt/wt-joint-cut.png
+        image: /src/assets/images/ccelect/wt/wt-joint.jpg
         imageAlt: WT 熔接完成的銅導體接點
         specifications:
           - WT
@@ -85,7 +85,7 @@ pageSections:
         category: 線對線
         title: WX
         description: WX 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/wx/wx-joint-cut.png
+        image: /src/assets/images/ccelect/wx/wx-joint.jpg
         imageAlt: WX 熔接完成的銅導體接點
         specifications:
           - WX
@@ -94,7 +94,7 @@ pageSections:
         category: 線對線
         title: WP
         description: WP 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/wp/wp-joint-cut.png
+        image: /src/assets/images/ccelect/wp/wp-joint.jpg
         imageAlt: WP 熔接完成的銅導體接點
         specifications:
           - WP

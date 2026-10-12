@@ -9,16 +9,16 @@ pageSections:
     heading: W series - wire to wire
     summary: Exoweld graphite molds are designed for many wire-to-wire connection styles and conductor combinations.
     images:
-      - image: /src/assets/images/ccelect/we/we-joint-cut.png
+      - image: /src/assets/images/ccelect/we/we-joint.jpg
         imageAlt: WE completed copper conductor joint
         caption: WE
-      - image: /src/assets/images/ccelect/wt/wt-joint-cut.png
+      - image: /src/assets/images/ccelect/wt/wt-joint.jpg
         imageAlt: WT completed copper conductor joint
         caption: WT
-      - image: /src/assets/images/ccelect/wx/wx-joint-cut.png
+      - image: /src/assets/images/ccelect/wx/wx-joint.jpg
         imageAlt: WX completed copper conductor joint
         caption: WX
-      - image: /src/assets/images/ccelect/wp/wp-joint-cut.png
+      - image: /src/assets/images/ccelect/wp/wp-joint.jpg
         imageAlt: WP completed copper conductor joint
         caption: WP
     featuresHeading: Features
@@ -67,7 +67,7 @@ pageSections:
         category: Wire to wire
         title: WE
         description: WE wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/we/we-joint-cut.png
+        image: /src/assets/images/ccelect/we/we-joint.jpg
         imageAlt: WE
         specifications:
           - WE
@@ -76,7 +76,7 @@ pageSections:
         category: Wire to wire
         title: WT
         description: WT wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/wt/wt-joint-cut.png
+        image: /src/assets/images/ccelect/wt/wt-joint.jpg
         imageAlt: WT completed copper conductor joint
         specifications:
           - WT
@@ -85,7 +85,7 @@ pageSections:
         category: Wire to wire
         title: WX
         description: WX wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/wx/wx-joint-cut.png
+        image: /src/assets/images/ccelect/wx/wx-joint.jpg
         imageAlt: WX completed copper conductor joint
         specifications:
           - WX
@@ -94,7 +94,7 @@ pageSections:
         category: Wire to wire
         title: WP
         description: WP wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/wp/wp-joint-cut.png
+        image: /src/assets/images/ccelect/wp/wp-joint.jpg
         imageAlt: WP completed copper conductor joint
         specifications:
           - WP
