@@ -112,6 +112,7 @@ const tabs = [
                   <figure class="series-gallery-slide">
                     <div class="series-media-frame">
                       <Image
+                        class="series-gallery-image"
                         source={item.image}
                         alt={item.imageAlt || heading}
                         aspectRatio="square"
@@ -661,7 +662,7 @@ const tabs = [
         :global(picture) {
           background: #fff !important;
           height: 100%;
-          margin: 0;
+          margin: 0 !important;
           width: 100%;
         }
       }
@@ -673,6 +674,10 @@ const tabs = [
         pointer-events: none;
         user-select: none;
         width: 100%;
+      }
+
+      .series-gallery-image {
+        margin-top: 0 !important;
       }
 
       .series-gallery-slide figcaption {
