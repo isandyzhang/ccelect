@@ -32,10 +32,10 @@ pageSections:
             imageAlt: WX completed copper conductor joint
           - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
             imageAlt: WX open graphite mold
-          - image: /images/ccelect/wp/00-wp-enhanced.jpg
-            imageAlt: WP completed copper conductor joint
-          - image: /images/ccelect/wp/01-mold-open-enhanced.jpg
-            imageAlt: WP open graphite mold
+          - image: /images/ccelect/wxl/00-wxl-enhanced.jpg
+            imageAlt: WXL completed copper conductor joint
+          - image: /images/ccelect/wxl/01-mold-open-enhanced.jpg
+            imageAlt: WXL open graphite mold
         specifications:
           - WE
           - WT

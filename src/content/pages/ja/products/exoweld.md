@@ -32,10 +32,10 @@ pageSections:
             imageAlt: WX 熔接完了後の銅導体接点
           - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
             imageAlt: WX 開放グラファイト溶模
-          - image: /images/ccelect/wp/00-wp-enhanced.jpg
-            imageAlt: WP 熔接完了後の銅導体接点
-          - image: /images/ccelect/wp/01-mold-open-enhanced.jpg
-            imageAlt: WP 開放グラファイト溶模
+          - image: /images/ccelect/wxl/00-wxl-enhanced.jpg
+            imageAlt: WXL 熔接完了後の銅導体接点
+          - image: /images/ccelect/wxl/01-mold-open-enhanced.jpg
+            imageAlt: WXL 開放グラファイト溶模
         specifications:
           - WE
           - WT

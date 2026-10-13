@@ -27,12 +27,12 @@ pageSections:
       - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
         imageAlt: WX 開啟的石墨熔模
         caption: WX 熔模
-      - image: /images/ccelect/wp/00-wp-enhanced.jpg
-        imageAlt: WP 熔接完成的銅導體接點
-        caption: WP
-      - image: /images/ccelect/wp/01-mold-open-enhanced.jpg
-        imageAlt: WP 開啟的石墨熔模
-        caption: WP 熔模
+      - image: /images/ccelect/wxl/00-wxl-enhanced.jpg
+        imageAlt: WXL 熔接完成的銅導體接點
+        caption: WXL
+      - image: /images/ccelect/wxl/01-mold-open-enhanced.jpg
+        imageAlt: WXL 開啟的石墨熔模
+        caption: WXL 熔模
     featuresHeading: 功能
     detailsLabel: 詳情
     features:
@@ -61,8 +61,8 @@ pageSections:
         videoId: kaAG0uRJg8M
         href: https://youtu.be/kaAG0uRJg8M
         linkText: 在 YouTube 觀看
-      - title: WP 線對線熔接
-        description: WP 石墨熔模熔接銅導體的操作示範。
+      - title: WXL 線對線熔接
+        description: WXL 石墨熔模熔接銅導體的操作示範。
         videoId: 7USyYp7DDqU
         href: https://youtu.be/7USyYp7DDqU
         linkText: 在 YouTube 觀看
@@ -106,8 +106,8 @@ pageSections:
         category: 線對線
         title: WP
         description: WP 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/wp/00-wp-enhanced.jpg
-        imageAlt: WP 熔接完成的銅導體接點
+        image: /src/assets/images/ccelect/dummy/product-4.svg
+        imageAlt: WP
         specifications:
           - WP
         href: /products/exoweld/w-series/wp/
@@ -124,8 +124,8 @@ pageSections:
         category: 線對線
         title: WXL
         description: WXL 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: WXL
+        image: /images/ccelect/wxl/00-wxl-enhanced.jpg
+        imageAlt: WXL 熔接完成的銅導體接點
         specifications:
           - WXL
         href: /products/exoweld/w-series/wxl/

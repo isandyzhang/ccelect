@@ -27,12 +27,12 @@ pageSections:
       - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
         imageAlt: WX open graphite mold
         caption: WX mold
-      - image: /images/ccelect/wp/00-wp-enhanced.jpg
-        imageAlt: WP completed copper conductor joint
-        caption: WP
-      - image: /images/ccelect/wp/01-mold-open-enhanced.jpg
-        imageAlt: WP open graphite mold
-        caption: WP mold
+      - image: /images/ccelect/wxl/00-wxl-enhanced.jpg
+        imageAlt: WXL completed copper conductor joint
+        caption: WXL
+      - image: /images/ccelect/wxl/01-mold-open-enhanced.jpg
+        imageAlt: WXL open graphite mold
+        caption: WXL mold
     featuresHeading: Features
     detailsLabel: Details
     features:
@@ -61,8 +61,8 @@ pageSections:
         videoId: kaAG0uRJg8M
         href: https://youtu.be/kaAG0uRJg8M
         linkText: Watch on YouTube
-      - title: WP wire-to-wire weld
-        description: Demonstration of a WP graphite mold welding copper conductors.
+      - title: WXL wire-to-wire weld
+        description: Demonstration of a WXL graphite mold welding copper conductors.
         videoId: 7USyYp7DDqU
         href: https://youtu.be/7USyYp7DDqU
         linkText: Watch on YouTube
@@ -106,8 +106,8 @@ pageSections:
         category: Wire to wire
         title: WP
         description: WP wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/wp/00-wp-enhanced.jpg
-        imageAlt: WP completed copper conductor joint
+        image: /src/assets/images/ccelect/dummy/product-4.svg
+        imageAlt: WP
         specifications:
           - WP
         href: /en/products/exoweld/w-series/wp/
@@ -124,8 +124,8 @@ pageSections:
         category: Wire to wire
         title: WXL
         description: WXL wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: WXL
+        image: /images/ccelect/wxl/00-wxl-enhanced.jpg
+        imageAlt: WXL completed copper conductor joint
         specifications:
           - WXL
         href: /en/products/exoweld/w-series/wxl/

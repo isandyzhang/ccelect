@@ -27,12 +27,12 @@ pageSections:
       - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
         imageAlt: WX 開放グラファイト溶模
         caption: WX 溶模
-      - image: /images/ccelect/wp/00-wp-enhanced.jpg
-        imageAlt: WP 熔接完了後の銅導体接点
-        caption: WP
-      - image: /images/ccelect/wp/01-mold-open-enhanced.jpg
-        imageAlt: WP 開放グラファイト溶模
-        caption: WP 溶模
+      - image: /images/ccelect/wxl/00-wxl-enhanced.jpg
+        imageAlt: WXL 熔接完了後の銅導体接点
+        caption: WXL
+      - image: /images/ccelect/wxl/01-mold-open-enhanced.jpg
+        imageAlt: WXL 開放グラファイト溶模
+        caption: WXL 溶模
     featuresHeading: 機能
     detailsLabel: 詳細
     features:
@@ -61,8 +61,8 @@ pageSections:
         videoId: kaAG0uRJg8M
         href: https://youtu.be/kaAG0uRJg8M
         linkText: YouTube で見る
-      - title: WP 線対線熔接
-        description: WP グラファイト溶模で銅導体を熔接する作業動画です。
+      - title: WXL 線対線熔接
+        description: WXL グラファイト溶模で銅導体を熔接する作業動画です。
         videoId: 7USyYp7DDqU
         href: https://youtu.be/7USyYp7DDqU
         linkText: YouTube で見る
@@ -106,8 +106,8 @@ pageSections:
         category: 線対線
         title: WP
         description: WP 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/wp/00-wp-enhanced.jpg
-        imageAlt: WP 熔接完了後の銅導体接点
+        image: /src/assets/images/ccelect/dummy/product-4.svg
+        imageAlt: WP
         specifications:
           - WP
         href: /ja/products/exoweld/w-series/wp/
@@ -124,8 +124,8 @@ pageSections:
         category: 線対線
         title: WXL
         description: WXL 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: WXL
+        image: /images/ccelect/wxl/00-wxl-enhanced.jpg
+        imageAlt: WXL 熔接完了後の銅導体接点
         specifications:
           - WXL
         href: /ja/products/exoweld/w-series/wxl/
