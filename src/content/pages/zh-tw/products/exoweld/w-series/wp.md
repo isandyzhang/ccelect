@@ -45,12 +45,18 @@ pageSections:
       - image: /images/ccelect/wp/01-mold-open-enhanced.jpg
         imageAlt: WP 熔模內部構造
         caption: 熔模內部構造
-      - image: /src/assets/images/ccelect/wp/wp-setup.jpg
+      - image: /images/ccelect/wp/02-mold-closeup-enhanced.jpg
+        imageAlt: WP 熔模近拍
+        caption: 熔模近拍
+      - image: /images/ccelect/wp/03-setup-enhanced.jpg
         imageAlt: WP 銅導體置入熔模
         caption: 銅導體置入熔模
-      - image: /src/assets/images/ccelect/wp/wp-process.jpg
-        imageAlt: WP 熔接操作過程
-        caption: 熔接操作過程
+      - image: /images/ccelect/wp/04-setup-clamp-enhanced.jpg
+        imageAlt: WP 熔模夾持固定
+        caption: 熔模夾持固定
+      - image: /images/ccelect/wp/05-powder-enhanced.jpg
+        imageAlt: WP 熔接劑装填
+        caption: 熔接劑裝填
       - image: /images/ccelect/wp/00-wp-enhanced.jpg
         imageAlt: WP 熔接完成的銅導體接點
         caption: 熔接完成的銅導體接點

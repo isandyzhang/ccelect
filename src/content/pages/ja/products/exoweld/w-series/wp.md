@@ -45,12 +45,18 @@ pageSections:
       - image: /images/ccelect/wp/01-mold-open-enhanced.jpg
         imageAlt: WP 溶模の内部構造
         caption: 溶模の内部構造
-      - image: /src/assets/images/ccelect/wp/wp-setup.jpg
+      - image: /images/ccelect/wp/02-mold-closeup-enhanced.jpg
+        imageAlt: WP 溶模の近接
+        caption: 溶模の近接
+      - image: /images/ccelect/wp/03-setup-enhanced.jpg
         imageAlt: WP 銅導体を溶模にセット
         caption: 銅導体を溶模にセット
-      - image: /src/assets/images/ccelect/wp/wp-process.jpg
-        imageAlt: WP 熔接作業の様子
-        caption: 熔接作業の様子
+      - image: /images/ccelect/wp/04-setup-clamp-enhanced.jpg
+        imageAlt: WP 溶模のクランプ固定
+        caption: 溶模のクランプ固定
+      - image: /images/ccelect/wp/05-powder-enhanced.jpg
+        imageAlt: WP 溶接剤の装填
+        caption: 溶接剤の装填
       - image: /images/ccelect/wp/00-wp-enhanced.jpg
         imageAlt: WP 熔接完了後の銅導体接点
         caption: 熔接完了後の銅導体接点

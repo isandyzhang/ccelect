@@ -43,12 +43,18 @@ pageSections:
     applicationHeading: 施工例
     applicationImages:
       - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
-        imageAlt: WX 銅導体と溶模の配置（上面）
-        caption: 銅導体と溶模の配置（上面）
-      - image: /src/assets/images/ccelect/wx/wx-setup.jpg
+        imageAlt: WX 溶模の内部構造
+        caption: 溶模の内部構造
+      - image: /images/ccelect/wx/02-preheat-enhanced.jpg
+        imageAlt: WX 予熱作業
+        caption: 予熱作業
+      - image: /images/ccelect/wx/03-setup-enhanced.jpg
         imageAlt: WX 銅導体を溶模にセット
         caption: 銅導体を溶模にセット
-      - image: /src/assets/images/ccelect/wx/wx-process.jpg
+      - image: /images/ccelect/wx/04-setup-top-enhanced.jpg
+        imageAlt: WX 溶模配置（上面）
+        caption: 溶模配置（上面）
+      - image: /images/ccelect/wx/05-process-enhanced.jpg
         imageAlt: WX 熔接作業の様子
         caption: 熔接作業の様子
       - image: /images/ccelect/wx/00-wx-enhanced.jpg

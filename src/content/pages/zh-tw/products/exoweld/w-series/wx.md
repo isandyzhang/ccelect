@@ -43,12 +43,18 @@ pageSections:
     applicationHeading: 應用示意
     applicationImages:
       - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
-        imageAlt: WX 銅導體與熔模配置俯視
-        caption: 銅導體與熔模配置俯視
-      - image: /src/assets/images/ccelect/wx/wx-setup.jpg
+        imageAlt: WX 熔模內部構造
+        caption: 熔模內部構造
+      - image: /images/ccelect/wx/02-preheat-enhanced.jpg
+        imageAlt: WX 預熱作業
+        caption: 預熱作業
+      - image: /images/ccelect/wx/03-setup-enhanced.jpg
         imageAlt: WX 銅導體置入熔模
         caption: 銅導體置入熔模
-      - image: /src/assets/images/ccelect/wx/wx-process.jpg
+      - image: /images/ccelect/wx/04-setup-top-enhanced.jpg
+        imageAlt: WX 熔模俯視配置
+        caption: 熔模俯視配置
+      - image: /images/ccelect/wx/05-process-enhanced.jpg
         imageAlt: WX 熔接操作過程
         caption: 熔接操作過程
       - image: /images/ccelect/wx/00-wx-enhanced.jpg

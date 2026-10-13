@@ -45,12 +45,18 @@ pageSections:
       - image: /images/ccelect/wt/01-mold-open-enhanced.jpg
         imageAlt: WT Mold interior
         caption: Mold interior
-      - image: /src/assets/images/ccelect/wt/wt-setup.jpg
+      - image: /images/ccelect/wt/02-mold-open-side-enhanced.jpg
+        imageAlt: WT Mold side view
+        caption: Mold side view
+      - image: /images/ccelect/wt/03-setup-enhanced.jpg
         imageAlt: WT Copper conductors positioned in the mold
         caption: Copper conductors positioned in the mold
-      - image: /src/assets/images/ccelect/wt/wt-process.jpg
+      - image: /images/ccelect/wt/04-process-enhanced.jpg
         imageAlt: WT Welding process
         caption: Welding process
+      - image: /images/ccelect/wt/05-mold-opening-enhanced.jpg
+        imageAlt: WT Mold opening
+        caption: Mold opening
       - image: /images/ccelect/wt/00-wt-enhanced.jpg
         imageAlt: WT Completed copper conductor joint
         caption: Completed copper conductor joint

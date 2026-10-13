@@ -43,12 +43,18 @@ pageSections:
     applicationHeading: Application photos
     applicationImages:
       - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
-        imageAlt: WX Top view of conductors and mold
-        caption: Top view of conductors and mold
-      - image: /src/assets/images/ccelect/wx/wx-setup.jpg
+        imageAlt: WX Mold interior
+        caption: Mold interior
+      - image: /images/ccelect/wx/02-preheat-enhanced.jpg
+        imageAlt: WX Preheat step
+        caption: Preheat step
+      - image: /images/ccelect/wx/03-setup-enhanced.jpg
         imageAlt: WX Copper conductors positioned in the mold
         caption: Copper conductors positioned in the mold
-      - image: /src/assets/images/ccelect/wx/wx-process.jpg
+      - image: /images/ccelect/wx/04-setup-top-enhanced.jpg
+        imageAlt: WX Top view of mold setup
+        caption: Top view of mold setup
+      - image: /images/ccelect/wx/05-process-enhanced.jpg
         imageAlt: WX Welding process
         caption: Welding process
       - image: /images/ccelect/wx/00-wx-enhanced.jpg

@@ -42,17 +42,23 @@ pageSections:
         value: Demo
     applicationHeading: Applications
     applicationImages:
+      - image: /images/ccelect/we/01-mold-enhanced.jpg
+        imageAlt: WE graphite mold
+        caption: Graphite mold
       - image: /images/ccelect/we/02-mold-open-enhanced.jpg
         imageAlt: Opened WE graphite mold
         caption: Mold opened to show the weld cavity
-      - image: /src/assets/images/ccelect/we/we-setup.jpg
+      - image: /images/ccelect/we/03-setup-enhanced.jpg
         imageAlt: Copper conductor seated in the WE mold
         caption: Copper conductor seated in the mold
-      - image: /src/assets/images/ccelect/we/we-finish.jpg
-        imageAlt: Finished WE wire-to-wire joint
-        caption: Finished wire-to-wire joint
-      - image: /images/ccelect/we/00-we-enhanced.jpg
+      - image: /images/ccelect/we/04-joint-held-enhanced.jpg
+        imageAlt: Finished WE joint
+        caption: Finished joint
+      - image: /images/ccelect/we/05-joint-enhanced.jpg
         imageAlt: Close-up of a WE joint
         caption: Close-up of the finished joint
+      - image: /images/ccelect/we/00-we-enhanced.jpg
+        imageAlt: WE completed copper conductor joint
+        caption: Finished product joint
     note: Demo product detail for Exoweld W series. Confirm final specs with sales.
 ---

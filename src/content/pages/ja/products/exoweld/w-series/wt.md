@@ -45,12 +45,18 @@ pageSections:
       - image: /images/ccelect/wt/01-mold-open-enhanced.jpg
         imageAlt: WT 溶模の内部構造
         caption: 溶模の内部構造
-      - image: /src/assets/images/ccelect/wt/wt-setup.jpg
+      - image: /images/ccelect/wt/02-mold-open-side-enhanced.jpg
+        imageAlt: WT 溶模の側面
+        caption: 溶模の側面
+      - image: /images/ccelect/wt/03-setup-enhanced.jpg
         imageAlt: WT 銅導体を溶模にセット
         caption: 銅導体を溶模にセット
-      - image: /src/assets/images/ccelect/wt/wt-process.jpg
+      - image: /images/ccelect/wt/04-process-enhanced.jpg
         imageAlt: WT 熔接作業の様子
         caption: 熔接作業の様子
+      - image: /images/ccelect/wt/05-mold-opening-enhanced.jpg
+        imageAlt: WT 溶模を開く
+        caption: 溶模を開く
       - image: /images/ccelect/wt/00-wt-enhanced.jpg
         imageAlt: WT 熔接完了後の銅導体接点
         caption: 熔接完了後の銅導体接点

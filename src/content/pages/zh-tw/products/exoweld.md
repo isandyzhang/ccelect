@@ -26,10 +26,16 @@ pageSections:
             imageAlt: WE 開啟的石墨熔模
           - image: /images/ccelect/wt/00-wt-enhanced.jpg
             imageAlt: WT 熔接完成的銅導體接點
+          - image: /images/ccelect/wt/01-mold-open-enhanced.jpg
+            imageAlt: WT 開啟的石墨熔模
           - image: /images/ccelect/wx/00-wx-enhanced.jpg
             imageAlt: WX 熔接完成的銅導體接點
+          - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
+            imageAlt: WX 開啟的石墨熔模
           - image: /images/ccelect/wp/00-wp-enhanced.jpg
             imageAlt: WP 熔接完成的銅導體接點
+          - image: /images/ccelect/wp/01-mold-open-enhanced.jpg
+            imageAlt: WP 開啟的石墨熔模
         specifications:
           - WE
           - WT

@@ -45,12 +45,18 @@ pageSections:
       - image: /images/ccelect/wp/01-mold-open-enhanced.jpg
         imageAlt: WP Mold interior
         caption: Mold interior
-      - image: /src/assets/images/ccelect/wp/wp-setup.jpg
+      - image: /images/ccelect/wp/02-mold-closeup-enhanced.jpg
+        imageAlt: WP Mold close-up
+        caption: Mold close-up
+      - image: /images/ccelect/wp/03-setup-enhanced.jpg
         imageAlt: WP Copper conductors positioned in the mold
         caption: Copper conductors positioned in the mold
-      - image: /src/assets/images/ccelect/wp/wp-process.jpg
-        imageAlt: WP Welding process
-        caption: Welding process
+      - image: /images/ccelect/wp/04-setup-clamp-enhanced.jpg
+        imageAlt: WP Mold clamped in place
+        caption: Mold clamped in place
+      - image: /images/ccelect/wp/05-powder-enhanced.jpg
+        imageAlt: WP Weld powder loaded
+        caption: Weld powder loaded
       - image: /images/ccelect/wp/00-wp-enhanced.jpg
         imageAlt: WP Completed copper conductor joint
         caption: Completed copper conductor joint

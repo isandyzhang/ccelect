@@ -45,12 +45,18 @@ pageSections:
       - image: /images/ccelect/wt/01-mold-open-enhanced.jpg
         imageAlt: WT 熔模內部構造
         caption: 熔模內部構造
-      - image: /src/assets/images/ccelect/wt/wt-setup.jpg
+      - image: /images/ccelect/wt/02-mold-open-side-enhanced.jpg
+        imageAlt: WT 熔模側面
+        caption: 熔模側面
+      - image: /images/ccelect/wt/03-setup-enhanced.jpg
         imageAlt: WT 銅導體置入熔模
         caption: 銅導體置入熔模
-      - image: /src/assets/images/ccelect/wt/wt-process.jpg
+      - image: /images/ccelect/wt/04-process-enhanced.jpg
         imageAlt: WT 熔接操作過程
         caption: 熔接操作過程
+      - image: /images/ccelect/wt/05-mold-opening-enhanced.jpg
+        imageAlt: WT 熔模開啟
+        caption: 熔模開啟
       - image: /images/ccelect/wt/00-wt-enhanced.jpg
         imageAlt: WT 熔接完成的銅導體接點
         caption: 熔接完成的銅導體接點
