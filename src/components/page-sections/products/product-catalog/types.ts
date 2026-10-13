@@ -1,3 +1,8 @@
+export interface CatalogItemImage {
+  image: string;
+  imageAlt?: string;
+}
+
 export interface CatalogItem {
   id?: string;
   title: string;
@@ -5,6 +10,7 @@ export interface CatalogItem {
   category?: string;
   image?: string;
   imageAlt?: string;
+  images?: CatalogItemImage[];
   iconName?: string;
   specifications?: string[];
   href?: string;

@@ -17,8 +17,19 @@ pageSections:
         category: Exoweld
         title: W series - wire to wire
         description: 'Copper conductor-to-conductor joints: WE, WT, WX, WP, WL, WXL.'
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/we/00-we-enhanced.jpg
+        imageAlt: WE completed copper conductor joint
+        images:
+          - image: /images/ccelect/we/00-we-enhanced.jpg
+            imageAlt: WE completed copper conductor joint
+          - image: /images/ccelect/we/02-mold-open-enhanced.jpg
+            imageAlt: WE open graphite mold
+          - image: /images/ccelect/wt/00-wt-enhanced.jpg
+            imageAlt: WT completed copper conductor joint
+          - image: /images/ccelect/wx/00-wx-enhanced.jpg
+            imageAlt: WX completed copper conductor joint
+          - image: /images/ccelect/wp/00-wp-enhanced.jpg
+            imageAlt: WP completed copper conductor joint
         specifications:
           - WE
           - WT

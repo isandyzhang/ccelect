@@ -9,26 +9,68 @@ interface Props {
 }
 
 const { item, fallbackHref } = Astro.props as Props;
+
+const href = item.href || fallbackHref;
+const gallery =
+  item.images && item.images.length > 0
+    ? item.images
+    : item.image
+      ? [{ image: item.image, imageAlt: item.imageAlt }]
+      : [];
 ---
 
 <article
   class="catalog-card"
   id={item.id}
+  data-catalog-card
 >
-  <div class:list={["catalog-card-media", !item.image && "icon-media"]}>
+  <div class:list={["catalog-card-media", gallery.length === 0 && "icon-media"]}>
     {
-      item.image ? (
-        <Image
-          source={item.image}
-          alt={item.imageAlt || item.title}
-          aspectRatio="landscape"
-        />
+      gallery.length > 0 ? (
+        <div
+          class="catalog-card-gallery"
+          data-catalog-gallery={gallery.length > 1 ? "true" : undefined}
+        >
+          <div
+            class="catalog-card-track"
+            data-catalog-track
+          >
+            {gallery.map((slide) => (
+              <div class="catalog-card-slide">
+                <Image
+                  source={slide.image}
+                  alt={slide.imageAlt || item.imageAlt || item.title}
+                  aspectRatio="landscape"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       ) : (
         <Icon
           name={item.iconName || "cube"}
           size="2xl"
           aria-hidden="true"
         />
+      )
+    }
+    {
+      gallery.length > 1 && (
+        <div
+          class="catalog-card-dots"
+          data-catalog-dots
+          role="tablist"
+          aria-label={`${item.title} 圖片切換`}
+        >
+          {gallery.map((_, index) => (
+            <button
+              type="button"
+              class:list={["catalog-card-dot", index === 0 && "is-active"]}
+              aria-label={`第 ${index + 1} 張圖片`}
+              data-index={index}
+            />
+          ))}
+        </div>
       )
     }
   </div>
@@ -48,29 +90,97 @@ const { item, fallbackHref } = Astro.props as Props;
         </ul>
       )
     }
-    <a
-      href={item.href || fallbackHref}
-      class="catalog-card-link"
-    >
+    <span class="catalog-card-link">
       查看產品資訊
       <Icon
         name="arrow-right"
         size="none"
         aria-hidden="true"
       />
-    </a>
+    </span>
   </div>
+  <a
+    class="catalog-card-hit"
+    href={href}
+  >
+    <span class="sr-only">查看 {item.title}</span>
+  </a>
 </article>
+
+<script>
+  function setupCatalogGalleries(root: ParentNode = document) {
+    root.querySelectorAll<HTMLElement>("[data-catalog-card]").forEach((card) => {
+      if (card.dataset.galleryReady === "true") return;
+
+      const gallery = card.querySelector<HTMLElement>("[data-catalog-gallery]");
+      const track = card.querySelector<HTMLElement>("[data-catalog-track]");
+      const dots = card.querySelectorAll<HTMLButtonElement>("[data-catalog-dots] button");
+      if (!gallery || !track || dots.length === 0) return;
+
+      const slides = track.querySelectorAll<HTMLElement>(".catalog-card-slide");
+      if (slides.length === 0) return;
+
+      let activeIndex = 0;
+      let timer: ReturnType<typeof setInterval> | undefined;
+
+      const setActive = (index: number) => {
+        activeIndex = index;
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("is-active", i === index);
+        });
+      };
+
+      const goTo = (index: number) => {
+        const nextIndex = (index + slides.length) % slides.length;
+        const slide = slides[nextIndex];
+        if (!slide) return;
+        track.scrollTo({ left: slide.offsetLeft, behavior: "smooth" });
+        setActive(nextIndex);
+      };
+
+      const startAutoplay = () => {
+        window.clearInterval(timer);
+        timer = window.setInterval(() => goTo(activeIndex + 1), 3500);
+      };
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          goTo(Number(dot.dataset.index || 0));
+          startAutoplay();
+        });
+      });
+
+      track.addEventListener(
+        "scroll",
+        () => {
+          const index = Math.round(track.scrollLeft / Math.max(track.clientWidth, 1));
+          setActive(Math.min(Math.max(index, 0), slides.length - 1));
+        },
+        { passive: true }
+      );
+
+      startAutoplay();
+      card.dataset.galleryReady = "true";
+    });
+  }
+
+  setupCatalogGalleries();
+  document.addEventListener("astro:page-load", () => setupCatalogGalleries());
+</script>
 
 <style>
   .catalog-card {
     background: #fff;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     min-width: 0;
     overflow: hidden;
+    position: relative;
     scroll-margin-top: 9rem;
     transition:
       border-color var(--animation-normal) ease,
@@ -78,34 +188,79 @@ const { item, fallbackHref } = Astro.props as Props;
       transform var(--animation-normal) ease;
   }
 
-  .catalog-card:hover {
+  .catalog-card:hover,
+  .catalog-card:focus-within {
     border-color: var(--color-border-strong);
     box-shadow: 0 1rem 2.5rem var(--color-shadow);
     transform: translateY(-0.25rem);
   }
 
+  .catalog-card-hit {
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .catalog-card-hit .sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
   .catalog-card-media {
     aspect-ratio: 4 / 3;
-    background: #fff;
+    background: #0a0a0a;
     border-bottom: 1px solid var(--color-border);
     overflow: hidden;
+    position: relative;
+  }
+
+  .catalog-card-gallery {
+    height: 100%;
+    position: relative;
+  }
+
+  .catalog-card-track {
+    display: flex;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .catalog-card-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .catalog-card-slide {
+    flex: 0 0 100%;
+    height: 100%;
+    min-width: 100%;
+    scroll-snap-align: start;
   }
 
   .catalog-card-media :global(.image),
   .catalog-card-media :global(.image-inner),
   .catalog-card-media :global(picture) {
-    background: #fff !important;
+    background: #0a0a0a !important;
     height: 100%;
-    margin: 0;
+    margin: 0 !important;
     width: 100%;
   }
 
   .catalog-card-media :global(img) {
-    background: #fff;
+    background: #0a0a0a;
     height: 100%;
     object-fit: contain;
     object-position: center;
-    padding: 0.75rem;
+    padding: 0.5rem;
     transition: transform var(--animation-slow) ease;
     width: 100%;
   }
@@ -114,8 +269,39 @@ const { item, fallbackHref } = Astro.props as Props;
     transform: scale(1.03);
   }
 
+  .catalog-card-dots {
+    bottom: 0.65rem;
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+
+  .catalog-card-dot {
+    background: color-mix(in srgb, #fff 45%, transparent);
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    height: 0.4rem;
+    padding: 0;
+    position: relative;
+    transition:
+      background var(--animation-normal) ease,
+      width var(--animation-normal) ease;
+    width: 0.4rem;
+  }
+
+  .catalog-card-dot.is-active {
+    background: #fff;
+    width: 1.1rem;
+  }
+
   .catalog-card-media.icon-media {
     align-items: center;
+    background: #fff;
     color: var(--color-text-brand);
     display: flex;
     justify-content: center;
@@ -135,6 +321,8 @@ const { item, fallbackHref } = Astro.props as Props;
     flex: 1;
     flex-direction: column;
     padding: clamp(1.25rem, 2vw, 1.75rem);
+    position: relative;
+    z-index: 0;
   }
 
   .catalog-card-category {
@@ -186,7 +374,6 @@ const { item, fallbackHref } = Astro.props as Props;
     gap: var(--spacing-sm);
     margin-top: auto;
     padding-top: var(--spacing-lg);
-    text-decoration: none;
   }
 
   .catalog-card-link :global(svg) {

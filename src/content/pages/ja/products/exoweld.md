@@ -17,8 +17,19 @@ pageSections:
         category: Exoweld
         title: W シリーズ-線対線
         description: 銅導体どうしの接点：WE、WT、WX、WP、WL、WXL。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/we/00-we-enhanced.jpg
+        imageAlt: WE 熔接完了後の銅導体接点
+        images:
+          - image: /images/ccelect/we/00-we-enhanced.jpg
+            imageAlt: WE 熔接完了後の銅導体接点
+          - image: /images/ccelect/we/02-mold-open-enhanced.jpg
+            imageAlt: WE 開放グラファイト溶模
+          - image: /images/ccelect/wt/00-wt-enhanced.jpg
+            imageAlt: WT 熔接完了後の銅導体接点
+          - image: /images/ccelect/wx/00-wx-enhanced.jpg
+            imageAlt: WX 熔接完了後の銅導体接点
+          - image: /images/ccelect/wp/00-wp-enhanced.jpg
+            imageAlt: WP 熔接完了後の銅導体接点
         specifications:
           - WE
           - WT

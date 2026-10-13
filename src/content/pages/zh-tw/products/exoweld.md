@@ -17,8 +17,19 @@ pageSections:
         category: Exoweld
         title: W 系列-線對線
         description: 銅導體線對線接點：WE、WT、WX、WP、WL、WXL。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/we/00-we-enhanced.jpg
+        imageAlt: WE 熔接完成的銅導體接點
+        images:
+          - image: /images/ccelect/we/00-we-enhanced.jpg
+            imageAlt: WE 熔接完成的銅導體接點
+          - image: /images/ccelect/we/02-mold-open-enhanced.jpg
+            imageAlt: WE 開啟的石墨熔模
+          - image: /images/ccelect/wt/00-wt-enhanced.jpg
+            imageAlt: WT 熔接完成的銅導體接點
+          - image: /images/ccelect/wx/00-wx-enhanced.jpg
+            imageAlt: WX 熔接完成的銅導體接點
+          - image: /images/ccelect/wp/00-wp-enhanced.jpg
+            imageAlt: WP 熔接完成的銅導體接點
         specifications:
           - WE
           - WT
