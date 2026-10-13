@@ -12,7 +12,7 @@ pageSections:
       - WT は W シリーズ銅導体接点形式で、線径と接点条件に応じた溶模・溶接剤と組み合わせます。
       - 本ページは製品詳細テンプレートの Demo です。正式仕様、型番、溶接剤量は営業確認資料に従ってください。
       - 施工前に導体清掃、溶模乾燥、安全対策を確認し、手順書どおり点火と冷却を行ってください。
-    image: /src/assets/images/ccelect/wt/wt-joint.jpg
+    image: /images/ccelect/wt/00-wt-enhanced.jpg
     imageAlt: WT 熔接完了後の銅導体接点
     imageHint: 熔接完了後の銅導体接点
     videoHeading: 熔接動画
@@ -42,7 +42,7 @@ pageSections:
         value: Demo
     applicationHeading: 施工例
     applicationImages:
-      - image: /src/assets/images/ccelect/wt/wt-open.jpg
+      - image: /images/ccelect/wt/01-mold-open-enhanced.jpg
         imageAlt: WT 溶模の内部構造
         caption: 溶模の内部構造
       - image: /src/assets/images/ccelect/wt/wt-setup.jpg
@@ -51,7 +51,7 @@ pageSections:
       - image: /src/assets/images/ccelect/wt/wt-process.jpg
         imageAlt: WT 熔接作業の様子
         caption: 熔接作業の様子
-      - image: /src/assets/images/ccelect/wt/wt-joint.jpg
+      - image: /images/ccelect/wt/00-wt-enhanced.jpg
         imageAlt: WT 熔接完了後の銅導体接点
         caption: 熔接完了後の銅導体接点
     note: Exoweld W シリーズ製品詳細の Demo です。正式仕様は営業確認に従ってください。

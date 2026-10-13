@@ -12,7 +12,7 @@ pageSections:
       - WE 屬於 W 系列銅導體接點形式，可依現場導體尺寸與接點需求搭配對應熔模與熔接劑。
       - 本頁為單品詳情公版 Demo。正式規格、模具編號與焊接劑用量請以業務確認資料為準。
       - 施工前請確認導體清潔、模具乾燥與安全防護，並依操作手冊完成點火與冷卻程序。
-    image: /src/assets/images/ccelect/we/we-joint.jpg
+    image: /images/ccelect/we/00-we-enhanced.jpg
     imageAlt: WE 熔接完成的銅導體接點
     imageHint: 熔接完成的銅導體接點
     videoHeading: 熔接影片
@@ -42,7 +42,7 @@ pageSections:
         value: Demo
     applicationHeading: 應用示意
     applicationImages:
-      - image: /src/assets/images/ccelect/we/we-mold-open.jpg
+      - image: /images/ccelect/we/02-mold-open-enhanced.jpg
         imageAlt: 開啟的 WE 石墨熔模
         caption: 熔模開啟，可見熔接腔
       - image: /src/assets/images/ccelect/we/we-setup.jpg
@@ -51,7 +51,7 @@ pageSections:
       - image: /src/assets/images/ccelect/we/we-finish.jpg
         imageAlt: 熔接完成的 WE 線對線接點
         caption: 熔接完成的線對線接點
-      - image: /src/assets/images/ccelect/we/we-joint.jpg
+      - image: /images/ccelect/we/00-we-enhanced.jpg
         imageAlt: WE 接點近拍
         caption: 接點近拍
     note: 本頁為 Exoweld W 系列單品詳情 Demo。正式規格請以業務確認為準。

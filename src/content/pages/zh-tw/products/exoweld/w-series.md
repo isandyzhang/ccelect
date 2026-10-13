@@ -9,18 +9,30 @@ pageSections:
     heading: W 系列-線對線
     summary: Exoweld 石墨熔模設計與建造，適用於多種線對線連接方式與導體組合。
     images:
-      - image: /src/assets/images/ccelect/we/we-joint.jpg
+      - image: /images/ccelect/we/00-we-enhanced.jpg
         imageAlt: WE 熔接完成的銅導體接點
         caption: WE
-      - image: /src/assets/images/ccelect/wt/wt-joint.jpg
+      - image: /images/ccelect/we/02-mold-open-enhanced.jpg
+        imageAlt: WE 開啟的石墨熔模
+        caption: WE 熔模
+      - image: /images/ccelect/wt/00-wt-enhanced.jpg
         imageAlt: WT 熔接完成的銅導體接點
         caption: WT
-      - image: /src/assets/images/ccelect/wx/wx-joint.jpg
+      - image: /images/ccelect/wt/01-mold-open-enhanced.jpg
+        imageAlt: WT 開啟的石墨熔模
+        caption: WT 熔模
+      - image: /images/ccelect/wx/00-wx-enhanced.jpg
         imageAlt: WX 熔接完成的銅導體接點
         caption: WX
-      - image: /src/assets/images/ccelect/wp/wp-joint.jpg
+      - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
+        imageAlt: WX 開啟的石墨熔模
+        caption: WX 熔模
+      - image: /images/ccelect/wp/00-wp-enhanced.jpg
         imageAlt: WP 熔接完成的銅導體接點
         caption: WP
+      - image: /images/ccelect/wp/01-mold-open-enhanced.jpg
+        imageAlt: WP 開啟的石墨熔模
+        caption: WP 熔模
     featuresHeading: 功能
     detailsLabel: 詳情
     features:
@@ -67,7 +79,7 @@ pageSections:
         category: 線對線
         title: WE
         description: WE 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/we/we-joint.jpg
+        image: /images/ccelect/we/00-we-enhanced.jpg
         imageAlt: WE
         specifications:
           - WE
@@ -76,7 +88,7 @@ pageSections:
         category: 線對線
         title: WT
         description: WT 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/wt/wt-joint.jpg
+        image: /images/ccelect/wt/00-wt-enhanced.jpg
         imageAlt: WT 熔接完成的銅導體接點
         specifications:
           - WT
@@ -85,7 +97,7 @@ pageSections:
         category: 線對線
         title: WX
         description: WX 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/wx/wx-joint.jpg
+        image: /images/ccelect/wx/00-wx-enhanced.jpg
         imageAlt: WX 熔接完成的銅導體接點
         specifications:
           - WX
@@ -94,7 +106,7 @@ pageSections:
         category: 線對線
         title: WP
         description: WP 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/wp/wp-joint.jpg
+        image: /images/ccelect/wp/00-wp-enhanced.jpg
         imageAlt: WP 熔接完成的銅導體接點
         specifications:
           - WP

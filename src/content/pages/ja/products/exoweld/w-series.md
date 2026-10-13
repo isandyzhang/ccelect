@@ -9,18 +9,30 @@ pageSections:
     heading: W シリーズ-線対線
     summary: Exoweld グラファイト溶模は、さまざまな線対線接続形式と導体組合せ向けに設計されています。
     images:
-      - image: /src/assets/images/ccelect/we/we-joint.jpg
+      - image: /images/ccelect/we/00-we-enhanced.jpg
         imageAlt: WE 熔接完了後の銅導体接点
         caption: WE
-      - image: /src/assets/images/ccelect/wt/wt-joint.jpg
+      - image: /images/ccelect/we/02-mold-open-enhanced.jpg
+        imageAlt: WE 開放グラファイト溶模
+        caption: WE 溶模
+      - image: /images/ccelect/wt/00-wt-enhanced.jpg
         imageAlt: WT 熔接完了後の銅導体接点
         caption: WT
-      - image: /src/assets/images/ccelect/wx/wx-joint.jpg
+      - image: /images/ccelect/wt/01-mold-open-enhanced.jpg
+        imageAlt: WT 開放グラファイト溶模
+        caption: WT 溶模
+      - image: /images/ccelect/wx/00-wx-enhanced.jpg
         imageAlt: WX 熔接完了後の銅導体接点
         caption: WX
-      - image: /src/assets/images/ccelect/wp/wp-joint.jpg
+      - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
+        imageAlt: WX 開放グラファイト溶模
+        caption: WX 溶模
+      - image: /images/ccelect/wp/00-wp-enhanced.jpg
         imageAlt: WP 熔接完了後の銅導体接点
         caption: WP
+      - image: /images/ccelect/wp/01-mold-open-enhanced.jpg
+        imageAlt: WP 開放グラファイト溶模
+        caption: WP 溶模
     featuresHeading: 機能
     detailsLabel: 詳細
     features:
@@ -67,7 +79,7 @@ pageSections:
         category: 線対線
         title: WE
         description: WE 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/we/we-joint.jpg
+        image: /images/ccelect/we/00-we-enhanced.jpg
         imageAlt: WE
         specifications:
           - WE
@@ -76,7 +88,7 @@ pageSections:
         category: 線対線
         title: WT
         description: WT 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/wt/wt-joint.jpg
+        image: /images/ccelect/wt/00-wt-enhanced.jpg
         imageAlt: WT 熔接完了後の銅導体接点
         specifications:
           - WT
@@ -85,7 +97,7 @@ pageSections:
         category: 線対線
         title: WX
         description: WX 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/wx/wx-joint.jpg
+        image: /images/ccelect/wx/00-wx-enhanced.jpg
         imageAlt: WX 熔接完了後の銅導体接点
         specifications:
           - WX
@@ -94,7 +106,7 @@ pageSections:
         category: 線対線
         title: WP
         description: WP 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/wp/wp-joint.jpg
+        image: /images/ccelect/wp/00-wp-enhanced.jpg
         imageAlt: WP 熔接完了後の銅導体接点
         specifications:
           - WP
