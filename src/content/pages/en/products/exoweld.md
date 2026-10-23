@@ -17,25 +17,21 @@ pageSections:
         category: Exoweld
         title: W series - wire to wire
         description: 'Copper conductor-to-conductor joints: WE, WT, WX, WP, WL, WXL.'
-        image: /images/ccelect/we/00-we-enhanced.jpg
-        imageAlt: WE completed copper conductor joint
+        image: /images/ccelect/diagrams/we.jpg
+        imageAlt: WE/WES wire-to-wire splice diagram
         images:
-          - image: /images/ccelect/we/00-we-enhanced.jpg
-            imageAlt: WE completed copper conductor joint
-          - image: /images/ccelect/we/02-mold-open-enhanced.jpg
-            imageAlt: WE open graphite mold
-          - image: /images/ccelect/wt/00-wt-enhanced.jpg
-            imageAlt: WT completed copper conductor joint
-          - image: /images/ccelect/wt/01-mold-open-enhanced.jpg
-            imageAlt: WT open graphite mold
-          - image: /images/ccelect/wx/00-wx-enhanced.jpg
-            imageAlt: WX completed copper conductor joint
-          - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
-            imageAlt: WX open graphite mold
-          - image: /images/ccelect/wxl/00-wxl-enhanced.jpg
-            imageAlt: WXL completed copper conductor joint
-          - image: /images/ccelect/wxl/01-mold-open-enhanced.jpg
-            imageAlt: WXL open graphite mold
+          - image: /images/ccelect/diagrams/we.jpg
+            imageAlt: WE/WES wire-to-wire splice diagram
+          - image: /images/ccelect/diagrams/wt.jpg
+            imageAlt: WT wire-to-wire tee diagram
+          - image: /images/ccelect/diagrams/wx.jpg
+            imageAlt: WX/WXS wire-to-wire cross diagram
+          - image: /images/ccelect/diagrams/wp.jpg
+            imageAlt: WP parallel wire diagram
+          - image: /images/ccelect/diagrams/wl.jpg
+            imageAlt: WL wire-to-wire L diagram
+          - image: /images/ccelect/diagrams/wxl.jpg
+            imageAlt: WXL wire-to-wire cross diagram
         specifications:
           - WE
           - WT
@@ -48,8 +44,19 @@ pageSections:
         category: Exoweld
         title: G series - wire to ground rod
         description: 'Conductor-to-ground-rod joints: GEE, GET, GST, GEY, GEP.'
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/diagrams/gee.jpg
+        imageAlt: GEE wire-to-ground-rod diagram
+        images:
+          - image: /images/ccelect/diagrams/gee.jpg
+            imageAlt: GEE wire-to-ground-rod diagram
+          - image: /images/ccelect/diagrams/get.jpg
+            imageAlt: GET wire-to-ground-rod diagram
+          - image: /images/ccelect/diagrams/gst.jpg
+            imageAlt: GST wire-to-ground-rod diagram
+          - image: /images/ccelect/diagrams/gey.jpg
+            imageAlt: GEY wire-to-ground-rod diagram
+          - image: /images/ccelect/diagrams/gep.jpg
+            imageAlt: GEP wire-to-ground-rod diagram
         specifications:
           - GEE
           - GET
@@ -61,8 +68,15 @@ pageSections:
         category: Exoweld
         title: S series
         description: Special joint forms such as SHEA, SHEB, and SVES.
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/diagrams/shea.jpg
+        imageAlt: SHEA steel-plate-to-wire diagram
+        images:
+          - image: /images/ccelect/diagrams/shea.jpg
+            imageAlt: SHEA steel-plate-to-wire diagram
+          - image: /images/ccelect/diagrams/sheb.jpg
+            imageAlt: SHEB steel-plate-to-wire diagram
+          - image: /images/ccelect/diagrams/sves.jpg
+            imageAlt: SVES pipe-to-wire diagram
         specifications:
           - SHEA
           - SHEB
@@ -72,8 +86,13 @@ pageSections:
         category: Exoweld
         title: R series
         description: RHEH and RHXH joint forms.
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/diagrams/rheh.jpg
+        imageAlt: RHEH rebar-to-wire diagram
+        images:
+          - image: /images/ccelect/diagrams/rheh.jpg
+            imageAlt: RHEH rebar-to-wire diagram
+          - image: /images/ccelect/diagrams/rhxh.jpg
+            imageAlt: RHXH rebar-to-wire diagram
         specifications:
           - RHEH
           - RHXH

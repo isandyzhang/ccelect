@@ -56,21 +56,47 @@ const gallery =
     }
     {
       gallery.length > 1 && (
-        <div
-          class="catalog-card-dots"
-          data-catalog-dots
-          role="tablist"
-          aria-label={`${item.title} 圖片切換`}
-        >
-          {gallery.map((_, index) => (
-            <button
-              type="button"
-              class:list={["catalog-card-dot", index === 0 && "is-active"]}
-              aria-label={`第 ${index + 1} 張圖片`}
-              data-index={index}
+        <>
+          <button
+            type="button"
+            class="catalog-card-arrow catalog-card-arrow-prev"
+            data-catalog-prev
+            aria-label="上一張"
+          >
+            <Icon
+              name="chevron-left"
+              size="none"
+              aria-hidden="true"
             />
-          ))}
-        </div>
+          </button>
+          <button
+            type="button"
+            class="catalog-card-arrow catalog-card-arrow-next"
+            data-catalog-next
+            aria-label="下一張"
+          >
+            <Icon
+              name="chevron-right"
+              size="none"
+              aria-hidden="true"
+            />
+          </button>
+          <div
+            class="catalog-card-dots"
+            data-catalog-dots
+            role="tablist"
+            aria-label={`${item.title} 圖片切換`}
+          >
+            {gallery.map((_, index) => (
+              <button
+                type="button"
+                class:list={["catalog-card-dot", index === 0 && "is-active"]}
+                aria-label={`第 ${index + 1} 張圖片`}
+                data-index={index}
+              />
+            ))}
+          </div>
+        </>
       )
     }
   </div>
@@ -115,13 +141,14 @@ const gallery =
       const gallery = card.querySelector<HTMLElement>("[data-catalog-gallery]");
       const track = card.querySelector<HTMLElement>("[data-catalog-track]");
       const dots = card.querySelectorAll<HTMLButtonElement>("[data-catalog-dots] button");
+      const prev = card.querySelector<HTMLButtonElement>("[data-catalog-prev]");
+      const next = card.querySelector<HTMLButtonElement>("[data-catalog-next]");
       if (!gallery || !track || dots.length === 0) return;
 
       const slides = track.querySelectorAll<HTMLElement>(".catalog-card-slide");
       if (slides.length === 0) return;
 
       let activeIndex = 0;
-      let timer: ReturnType<typeof setInterval> | undefined;
 
       const setActive = (index: number) => {
         activeIndex = index;
@@ -138,19 +165,20 @@ const gallery =
         setActive(nextIndex);
       };
 
-      const startAutoplay = () => {
-        window.clearInterval(timer);
-        timer = window.setInterval(() => goTo(activeIndex + 1), 3500);
+      const onControlClick = (event: Event, index: number) => {
+        event.preventDefault();
+        event.stopPropagation();
+        goTo(index);
       };
 
       dots.forEach((dot) => {
         dot.addEventListener("click", (event) => {
-          event.preventDefault();
-          event.stopPropagation();
-          goTo(Number(dot.dataset.index || 0));
-          startAutoplay();
+          onControlClick(event, Number(dot.dataset.index || 0));
         });
       });
+
+      prev?.addEventListener("click", (event) => onControlClick(event, activeIndex - 1));
+      next?.addEventListener("click", (event) => onControlClick(event, activeIndex + 1));
 
       track.addEventListener(
         "scroll",
@@ -161,7 +189,6 @@ const gallery =
         { passive: true }
       );
 
-      startAutoplay();
       card.dataset.galleryReady = "true";
     });
   }
@@ -267,6 +294,37 @@ const gallery =
 
   .catalog-card:hover .catalog-card-media :global(img) {
     transform: scale(1.03);
+  }
+
+  .catalog-card-arrow {
+    align-items: center;
+    background: color-mix(in srgb, #fff 92%, transparent);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    box-shadow: 0 1px 4px color-mix(in srgb, #000 12%, transparent);
+    color: var(--color-text-strong);
+    cursor: pointer;
+    display: inline-flex;
+    height: 2rem;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    z-index: 2;
+
+    :global(svg) {
+      height: 1rem;
+      width: 1rem;
+    }
+  }
+
+  .catalog-card-arrow-prev {
+    left: 0.45rem;
+  }
+
+  .catalog-card-arrow-next {
+    right: 0.45rem;
   }
 
   .catalog-card-dots {
