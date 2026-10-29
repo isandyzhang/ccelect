@@ -1,0 +1,348 @@
+---
+interface Props {
+  id?: string;
+  monochrome?: boolean;
+}
+const { id = "grounding-experience", monochrome = false } = Astro.props;
+// Coordinates traced on the clean 1574 × 999 illustration, not the ASCII concept.
+const circuits = [
+  {
+    duration: 8,
+    offset: 0,
+    path: "M 200 618 L 257 650 L 299 678 Q 320 693 349 700 L 418 680 L 477 668 L 540 658 L 608 650 L 655 638",
+    joints: [
+      [257, 650],
+      [349, 700],
+      [418, 680],
+      [540, 658],
+      [608, 650],
+    ],
+  },
+  {
+    duration: 7,
+    offset: 2.1,
+    path: "M 875 590 L 935 603 L 1007 618 L 1055 627 Q 1074 634 1085 631 L 1126 619 L 1150 611",
+    joints: [
+      [935, 603],
+      [1007, 618],
+      [1126, 619],
+    ],
+  },
+  {
+    duration: 9,
+    offset: 4.3,
+    path: "M 1238 550 L 1242 562 Q 1245 571 1257 576 L 1327 596 L 1384 617",
+    joints: [
+      [1257, 576],
+      [1327, 596],
+    ],
+  },
+];
+---
+
+<section
+  class:list={["grounding-experience", { "is-monochrome": monochrome }]}
+  id={id}
+  aria-label={monochrome ? "黑白版接地系統連接概念示意" : "彩色版接地系統連接概念示意"}
+>
+  <grounding-flow>
+    <img
+      src="/images/ccelect/grounding/grounding-scene-clean.png"
+      alt="工廠、變電設備、鐵塔與地下接地網；光點僅為連接概念示意，不代表實際電流方向或工程計算"
+      width="1574"
+      height="999"
+      loading="lazy"
+      decoding="async"
+    />
+    <svg
+      class="flow-overlay"
+      viewBox="0 0 1574 999"
+      aria-hidden="true"
+      focusable="false"
+      hidden
+    >
+      {
+        circuits.map((circuit) => (
+          <g
+            data-circuit
+            data-duration={circuit.duration}
+            data-offset={circuit.offset}
+          >
+            <path
+              data-route
+              d={circuit.path}
+              fill="none"
+              stroke="none"
+            />
+            <polyline
+              data-tail
+              class="flow-tail"
+              points=""
+            />
+            <circle
+              data-halo
+              class="flow-halo"
+              r="9"
+            />
+            <circle
+              data-head
+              class="flow-head"
+              r="3.4"
+            />
+            {circuit.joints.map(([x, y]) => (
+              <circle
+                data-joint
+                cx={x}
+                cy={y}
+                r="8"
+                opacity="0"
+                class="flow-joint"
+              />
+            ))}
+          </g>
+        ))
+      }
+    </svg>
+    <button
+      class="playback"
+      type="button"
+      aria-label="暫停動畫"
+      aria-pressed="false"
+      hidden
+    >
+      <svg
+        class="pause-icon"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        ><path d="M8 6v12M16 6v12"></path></svg
+      >
+      <svg
+        class="play-icon"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        ><path d="m9 5 10 7-10 7Z"></path></svg
+      >
+    </button>
+    <grounding-ascii hidden>
+      <img
+        src="/images/ccelect/grounding/grounding-ascii-concept.png"
+        alt="工廠與地下接地網的 ASCII 字元概念示意"
+        width="1574"
+        height="999"
+        loading="lazy"
+      />
+      <canvas
+        role="img"
+        aria-label="工廠與接地網的即時字元動畫，非工程模擬"
+        hidden
+      ></canvas>
+      <button
+        type="button"
+        class="playback"
+        aria-label="暫停動畫"
+        aria-pressed="false"
+        hidden
+      >
+        <svg
+          class="pause-icon"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          ><path d="M8 6v12M16 6v12"></path></svg
+        >
+        <svg
+          class="play-icon"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          ><path d="m9 5 10 7-10 7Z"></path></svg
+        >
+      </button>
+    </grounding-ascii>
+    <div
+      class="mode-switch"
+      role="group"
+      aria-label="場景顯示模式"
+      hidden
+    >
+      <button
+        class="mode-toggle"
+        data-mode="color"
+        type="button"
+        aria-pressed={String(!monochrome)}
+        >彩色</button
+      >
+      <button
+        class="mode-toggle"
+        data-mode="mono"
+        type="button"
+        aria-pressed={String(monochrome)}
+        >黑白</button
+      >
+      <button
+        class="mode-toggle"
+        data-mode="ascii"
+        type="button"
+        aria-pressed="false"
+        >ASCII</button
+      >
+    </div>
+  </grounding-flow>
+</section>
+<script>
+  import "./grounding-flow";
+</script>
+<style>
+  .grounding-experience {
+    background: #e8e8e3;
+  }
+  .is-monochrome {
+    background: #e8e8e8;
+  }
+  .is-monochrome img,
+  .is-monochrome .flow-overlay {
+    filter: grayscale(1);
+  }
+  .is-monochrome .flow-tail {
+    stroke: #fff;
+  }
+  .is-monochrome .flow-head {
+    fill: #fff;
+    stroke: #333;
+  }
+  .is-monochrome .flow-halo,
+  .is-monochrome .flow-joint {
+    fill: #fff;
+  }
+  .is-monochrome .flow-joint {
+    stroke: #555;
+  }
+  grounding-flow {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    aspect-ratio: 1574 / 999;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+  img,
+  .flow-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .flow-overlay {
+    pointer-events: none;
+  }
+  .flow-tail {
+    fill: none;
+    stroke: #ffd18b;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.8;
+  }
+  .flow-head {
+    fill: #fff5d9;
+    stroke: #cf7629;
+    stroke-width: 1;
+  }
+  .flow-halo {
+    fill: #ffbd60;
+    opacity: 0.3;
+  }
+  .flow-joint {
+    fill: #ffd18b;
+    stroke: #fff0c4;
+    stroke-width: 1;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  button {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #687a7a;
+    border-radius: 50%;
+    color: #f5e4c7;
+    background: #152321e6;
+    cursor: pointer;
+  }
+  button:hover {
+    color: #ffd19b;
+    border-color: currentcolor;
+  }
+  button:focus-visible {
+    outline: 2px solid #fff0c4;
+    outline-offset: -5px;
+  }
+  grounding-ascii {
+    position: absolute;
+    inset: 0;
+    display: block;
+    background: #000;
+  }
+  grounding-ascii canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    touch-action: pan-y;
+  }
+  .mode-switch {
+    position: absolute;
+    left: 64px;
+    bottom: 12px;
+    display: flex;
+    padding: 3px;
+    border: 1px solid #687a7a;
+    border-radius: 24px;
+    background: #152321ed;
+  }
+  .mode-toggle {
+    position: static;
+    width: auto;
+    min-width: 48px;
+    height: 36px;
+    border: 0;
+    border-radius: 20px;
+    padding-inline: 10px;
+    font-size: 12px;
+    color: #bdc5c3;
+    background: transparent;
+  }
+  .mode-toggle[aria-pressed="true"] {
+    background: #f0eee8;
+    color: #1c2925;
+    font-weight: 700;
+  }
+  button svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 2;
+  }
+  .play-icon,
+  button[aria-pressed="true"] .pause-icon {
+    display: none;
+  }
+  button[aria-pressed="true"] .play-icon {
+    display: block;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .flow-overlay,
+    .playback {
+      display: none !important;
+    }
+    .mode-switch {
+      left: 12px;
+    }
+  }
+</style>

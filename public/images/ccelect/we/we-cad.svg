@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 884">
+  <rect width="1600" height="884" fill="#ffffff"/>
+  <g transform="translate(800 300) rotate(15) scale(1.18)" fill="#ffffff" stroke="#161616" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-248-54 h70 a15 15 0 0 1 0 30 h-70 a15 15 0 0 1 0-30z"/>
+    <path d="M-258-20 h80 a15 15 0 0 1 0 30 h-80 a15 15 0 0 1 0-30z"/>
+    <path d="M-258 14 h80 a15 15 0 0 1 0 30 h-80 a15 15 0 0 1 0-30z"/>
+    <path d="M-248 48 h70 a15 15 0 0 1 0 30 h-70 a15 15 0 0 1 0-30z"/>
+    <path d="M-138-112 L150-112 A42 112 0 0 1 150 112 L-138 112 A42 112 0 0 1 -138-112 Z"/>
+    <ellipse cx="-138" cy="0" rx="42" ry="112"/>
+    <g fill="none">
+      <path d="M168-72 h92 a13 13 0 0 1 0 26 h-92"/>
+      <path d="M176-44 h108 a13 13 0 0 1 0 26 h-108"/>
+      <path d="M182-16 h118 a13 13 0 0 1 0 26 h-118"/>
+      <path d="M182 12 h118 a13 13 0 0 1 0 26 h-118"/>
+      <path d="M176 40 h108 a13 13 0 0 1 0 26 h-108"/>
+      <path d="M168 68 h92 a13 13 0 0 1 0 26 h-92"/>
+    </g>
+    <ellipse cx="158" cy="0" rx="48" ry="108" fill="none"/>
+  </g>
+  <text x="800" y="700" text-anchor="middle" fill="#161616" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="148" font-weight="800">WE/WES</text>
+</svg>

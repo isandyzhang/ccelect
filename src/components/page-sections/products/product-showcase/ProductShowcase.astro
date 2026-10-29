@@ -1,0 +1,164 @@
+---
+import Image from "@core-elements/image/Image.astro";
+import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
+const {
+  image,
+  link = "/products/exoweld/",
+  columnSpan = 12,
+  videoSource = "",
+  videoLabel = "熔接示意",
+  ...attributes
+} = Astro.props;
+---
+
+<BentoBoxGridItem
+  columnSpan={columnSpan}
+  class="feature-grid-item feature-grid-item-showcase"
+  {...attributes}
+>
+  <product-showcase class="feature-item-showcase">
+    <div class="showcase-media">
+      <a
+        class="product-photo"
+        href={link}
+        aria-label="查看 Exoweld 產品型錄"
+        ><Image {...image} /></a
+      >
+      <div
+        class="product-video"
+        hidden
+      >
+        <video
+          controls
+          playsinline
+          preload="none"
+          poster={image.source}
+          data-src={videoSource}
+          aria-label="模具開合與熔接概念影片"
+        ></video>
+        <p class="video-note">示意影片，非施工教學</p>
+        <p
+          class="video-error"
+          role="status"
+          hidden
+        >
+          影片暫時無法載入，請切回產品圖片。
+        </p>
+      </div>
+    </div>
+    <div
+      class="showcase-controls"
+      role="group"
+      aria-label="主打產品展示模式"
+      hidden
+    >
+      <button
+        type="button"
+        data-view="photo"
+        aria-pressed="true"
+        >產品圖片</button
+      >
+      <button
+        type="button"
+        data-view="video"
+        aria-pressed="false"
+        >{videoLabel}</button
+      >
+    </div>
+  </product-showcase>
+</BentoBoxGridItem>
+<script>
+  import "./product-showcase";
+</script>
+<style>
+  product-showcase {
+    display: block;
+    position: relative;
+    width: 100%;
+    background: #050505;
+  }
+  .showcase-media {
+    aspect-ratio: 4 / 3;
+    position: relative;
+  }
+  .product-photo,
+  .product-video {
+    position: absolute;
+    inset: 0;
+  }
+  .product-photo {
+    display: block;
+  }
+  .product-photo :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .showcase-controls {
+    display: flex;
+    gap: 4px;
+    width: fit-content;
+    padding: 4px;
+    margin: 0 0 0 12px;
+    transform: translateY(-8px);
+    border: 1px solid #555;
+    border-radius: 24px;
+    background: #171b1a;
+  }
+  button {
+    border: 0;
+    border-radius: 20px;
+    min-height: 36px;
+    padding: 0 14px;
+    color: #bfc7c4;
+    background: transparent;
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  button[aria-pressed="true"] {
+    color: #18211d;
+    background: #f0eee8;
+    font-weight: 700;
+  }
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid #e3b778;
+    outline-offset: 2px;
+  }
+  .video-note {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    margin: 0;
+    padding: 4px 8px;
+    font-size: 11px;
+    color: #ddd;
+    background: #000a;
+    border-radius: 4px;
+    pointer-events: none;
+  }
+  .video-error {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+  }
+  [hidden] {
+    display: none !important;
+  }
+</style>
+
+<style is:global>
+  .feature-grid:has(product-showcase[data-view="video"]) .feature-grid-content {
+    visibility: hidden;
+  }
+</style>

@@ -36,6 +36,8 @@ pageSections:
         iconPosition: after
         variant: secondary
         size: md
+  - _component: page-sections/features/grounding-experience
+    id: grounding-experience
   - _component: page-sections/features/feature-grid
     id: products
     eyebrowIcon: {}
@@ -46,9 +48,9 @@ pageSections:
       與 G 系列導體／接地極連接（GEE、GET、GST、GEY、GEP）。
     featureGrid:
       features:
-        - _component: page-sections/features/feature-grid/feature-item
-          title: ''
-          description: ''
+        - _component: page-sections/products/product-showcase
+          videoSource: /videos/ccelect/welding-demo.mp4
+          videoLabel: 開模・點火示意
           link: /products/exoweld/
           columnSpan: 12
           image:

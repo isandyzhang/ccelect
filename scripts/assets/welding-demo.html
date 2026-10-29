@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #080a0b;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="importmap">
+      { "imports": { "three": "/node_modules/three/build/three.module.js" } }
+    </script>
+    <script type="module">
+      // Procedural concept animation, not a physical model or construction instructions.
+      // renderFrame(seconds) is deterministic for offline capture at 1280 × 960 / 30fps.
+      import * as T from "three";
+      const renderer = new T.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+      renderer.setSize(1280, 960);
+      renderer.setPixelRatio(1);
+      renderer.toneMapping = T.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.25;
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = T.PCFSoftShadowMap;
+      document.body.append(renderer.domElement);
+      const scene = new T.Scene();
+      scene.background = new T.Color("#080a0b");
+      scene.fog = new T.Fog("#080a0b", 14, 30);
+      const camera = new T.PerspectiveCamera(36, 4 / 3, 0.1, 60);
+      camera.position.set(7, 5.5, 8);
+      camera.lookAt(0, 0.5, 0);
+      scene.add(new T.HemisphereLight(0xd8e9ff, 0x24201c, 2));
+      function light(color, power, x, y, z) {
+        const l = new T.DirectionalLight(color, power);
+        l.position.set(x, y, z);
+        scene.add(l);
+        return l;
+      }
+      const key = light(0xffe3c3, 4, 4, 8, 5);
+      key.castShadow = true;
+      key.shadow.mapSize.set(2048, 2048);
+      key.shadow.camera.left = -7;
+      key.shadow.camera.right = 7;
+      key.shadow.camera.top = 7;
+      key.shadow.camera.bottom = -7;
+      light(0x8ebeff, 2, -5, 4, -3);
+      light(0xffffff, 2, 0, 6, -6);
+      // A deterministic graphite grain texture made in code.
+      const texCanvas = document.createElement("canvas");
+      texCanvas.width = 256;
+      texCanvas.height = 256;
+      const tc = texCanvas.getContext("2d");
+      const pixels = tc.createImageData(256, 256);
+      let seed = 721;
+      for (let i = 0; i < pixels.data.length; i += 4) {
+        seed = (1664525 * seed + 1013904223) >>> 0;
+        const v = 60 + (seed % 45);
+        pixels.data[i] = v;
+        pixels.data[i + 1] = v;
+        pixels.data[i + 2] = v;
+        pixels.data[i + 3] = 255;
+      }
+      tc.putImageData(pixels, 0, 0);
+      const grain = new T.CanvasTexture(texCanvas);
+      grain.wrapS = grain.wrapT = T.RepeatWrapping;
+      const graphite = new T.MeshStandardMaterial({
+        color: 0x56595a,
+        map: grain,
+        roughness: 0.93,
+        metalness: 0.08,
+      });
+      const copper = new T.MeshStandardMaterial({
+        color: 0xb97343,
+        metalness: 0.78,
+        roughness: 0.3,
+      });
+      const steel = new T.MeshStandardMaterial({
+        color: 0x686b6b,
+        metalness: 0.8,
+        roughness: 0.28,
+      });
+      const inner = new T.MeshStandardMaterial({
+        color: 0x202324,
+        roughness: 1,
+        side: T.DoubleSide,
+      });
+      const base = new T.Mesh(
+        new T.PlaneGeometry(80, 80),
+        new T.MeshStandardMaterial({ color: 0x111416, roughness: 0.75 })
+      );
+      base.rotation.x = -Math.PI / 2;
+      base.position.y = -1.03;
+      base.receiveShadow = true;
+      scene.add(base);
+      function mesh(geo, mat, parent, x = 0, y = 0, z = 0) {
+        const m = new T.Mesh(geo, mat);
+        m.position.set(x, y, z);
+        m.castShadow = true;
+        m.receiveShadow = true;
+        parent.add(m);
+        return m;
+      }
+      const rig = new T.Group();
+      scene.add(rig);
+      // Two halves form a visible cylindrical chamber when closed.
+      const halves = [new T.Group(), new T.Group()];
+      halves.forEach((g) => rig.add(g));
+      for (let side = 0; side < 2; side++) {
+        const half = halves[side];
+        const left = side === 0;
+        const shape = new T.Shape();
+        const outer = 1.25,
+          depth = 1.05,
+          r = 0.64;
+        if (left) {
+          shape.moveTo(-outer, -depth);
+          shape.lineTo(0, -depth);
+          shape.lineTo(0, -r);
+          shape.absarc(0, 0, r, -Math.PI / 2, -Math.PI * 1.5, true);
+          shape.lineTo(0, depth);
+          shape.lineTo(-outer, depth);
+          shape.closePath();
+        } else {
+          shape.moveTo(0, -depth);
+          shape.lineTo(outer, -depth);
+          shape.lineTo(outer, depth);
+          shape.lineTo(0, depth);
+          shape.lineTo(0, r);
+          shape.absarc(0, 0, r, Math.PI / 2, -Math.PI / 2, true);
+          shape.closePath();
+        }
+        const geo = new T.ExtrudeGeometry(shape, {
+          depth: 2.3,
+          bevelEnabled: true,
+          bevelSegments: 2,
+          steps: 1,
+          bevelSize: 0.025,
+          bevelThickness: 0.025,
+          curveSegments: 40,
+        });
+        geo.rotateX(-Math.PI / 2);
+        mesh(geo, graphite, half, 0, -0.8, 0);
+        const handle = new T.Mesh(new T.TorusGeometry(0.32, 0.035, 10, 28, Math.PI), steel);
+        handle.rotation.z = left ? Math.PI / 2 : -Math.PI / 2;
+        handle.position.set(left ? -1.27 : 1.27, 0.2, 0.2);
+        half.add(handle);
+      }
+      // Copper strands enter beneath the chamber; no dimensions or product branding implied.
+      for (const axis of ["x", "z"])
+        for (let strand = 0; strand < 7; strand++) {
+          const angle = (strand * Math.PI) / 3;
+          const radius = strand === 6 ? 0 : 0.085;
+          const points = [];
+          for (let i = 0; i <= 70; i++) {
+            const t = i / 70;
+            const p = -3.5 + t * 7;
+            const twist = t * Math.PI * 15 + angle;
+            points.push(
+              axis === "x"
+                ? new T.Vector3(p, -0.63 + Math.cos(twist) * radius, Math.sin(twist) * radius)
+                : new T.Vector3(Math.sin(twist) * radius, -0.63 + Math.cos(twist) * radius, p)
+            );
+          }
+          mesh(
+            new T.TubeGeometry(new T.CatmullRomCurve3(points), 120, 0.042, 7, false),
+            copper,
+            rig
+          );
+        }
+      const weldMat = new T.MeshStandardMaterial({
+        color: 0xc6814c,
+        metalness: 0.7,
+        roughness: 0.28,
+        emissive: 0xff5500,
+        emissiveIntensity: 0,
+      });
+      const weld = mesh(new T.SphereGeometry(0.34, 32, 20), weldMat, rig, 0, -0.61, 0);
+      weld.scale.set(1.35, 0.65, 1.35);
+      const lidPivot = new T.Group();
+      lidPivot.position.set(0, 1.54, -1.04);
+      rig.add(lidPivot);
+      mesh(new T.BoxGeometry(2.57, 0.18, 2.13), graphite, lidPivot, 0, 0.08, 1.04);
+      const topSlot = mesh(
+        new T.CylinderGeometry(0.15, 0.15, 0.2, 24),
+        inner,
+        lidPivot,
+        0.78,
+        0.1,
+        1.12
+      );
+      const flare = new T.PointLight(0xff8b2a, 0, 9, 2);
+      flare.position.set(0.72, 1.9, 0.05);
+      rig.add(flare);
+      const sparkGeo = new T.SphereGeometry(0.016, 5, 5);
+      const sparkMat = new T.MeshBasicMaterial({ color: 0xffcc71 });
+      const sparks = Array.from({ length: 65 }, () => mesh(sparkGeo, sparkMat, rig));
+      const smokeTexCanvas = document.createElement("canvas");
+      smokeTexCanvas.width = 64;
+      smokeTexCanvas.height = 64;
+      const sc = smokeTexCanvas.getContext("2d");
+      const grad = sc.createRadialGradient(32, 32, 0, 32, 32, 32);
+      grad.addColorStop(0, "rgba(200,205,210,0.35)");
+      grad.addColorStop(0.5, "rgba(150,160,170,0.12)");
+      grad.addColorStop(1, "rgba(100,110,120,0)");
+      sc.fillStyle = grad;
+      sc.fillRect(0, 0, 64, 64);
+      const smokeTex = new T.CanvasTexture(smokeTexCanvas);
+      const smoke = Array.from({ length: 10 }, () => {
+        const s = new T.Sprite(
+          new T.SpriteMaterial({ map: smokeTex, transparent: true, depthWrite: false, opacity: 0 })
+        );
+        rig.add(s);
+        return s;
+      });
+      const smooth = (x) => {
+        x = T.MathUtils.clamp(x, 0, 1);
+        return x * x * (3 - 2 * x);
+      };
+      window.renderFrame = (time) => {
+        // 0–3 open showcase; 3–4.5 close; 5–7 ignition; 7–10 cool; 10–13 reveal.
+        const closing = smooth((time - 3) / 1.5);
+        const opening = smooth((time - 10) / 2.2);
+        const open = (1 - closing) * 0.75 + opening * 0.75;
+        halves[0].position.x = -open;
+        halves[1].position.x = open;
+        lidPivot.rotation.x = -1.9 * (1 - closing + opening);
+        const ignition = smooth((time - 5) / 0.22) * (1 - smooth((time - 6.8) / 0.8));
+        flare.intensity = ignition * (7 + Math.sin(time * 37) * 2);
+        weldMat.emissiveIntensity = time > 5 ? (1 - smooth((time - 7) / 3)) * 1.5 : 0;
+        weld.visible = time >= 5;
+        sparks.forEach((s, i) => {
+          const age = (time - 5 + i * 0.037) % 1;
+          const theta = i * 2.39996;
+          s.visible = time >= 5 && time < 7.3 && age >= 0;
+          s.position.set(
+            0.72 + Math.cos(theta) * age * 0.7,
+            1.72 + age * 2.4 - age * age * 2,
+            0.08 + Math.sin(theta) * age * 0.7
+          );
+          s.scale.setScalar((1 - age) * 1.6);
+        });
+        smoke.forEach((s, i) => {
+          const age = (time - 5 + i * 0.19) % 2.5;
+          s.material.opacity = time >= 5 && time < 10 ? Math.max(0, 1 - age / 2.5) * 0.6 : 0;
+          s.position.set(
+            0.72 + Math.sin(i * 2 + time * 0.6) * age * 0.15,
+            1.7 + age * 0.9,
+            0.08 + Math.cos(i) * age * 0.14
+          );
+          s.scale.setScalar(0.3 + age * 0.75);
+        });
+        camera.position.set(7 + Math.sin(time * 0.12) * 0.6, 5.5, 8);
+        camera.lookAt(0, 0.5, 0);
+        renderer.render(scene, camera);
+      };
+      window.renderFrame(0);
+      window.demoReady = true;
+    </script>
+  </body>
+</html>
