@@ -77,7 +77,7 @@ pageSections:
           description: 2000–2006 年接地、避雷材料供應，以及教育訓練與現場測量工作。
           link: /projects/
           image:
-            source: /images/ccelect/project-hsr-enhanced.png
+            source: /images/ccelect/project-hsr-retouched.webp
             alt: 台灣高鐵接地與避雷工程現場紀錄
             aspectRatio: square
             rounded: true
@@ -86,7 +86,7 @@ pageSections:
           description: 台北捷運各線及桃園機場捷運之熔接、接地與避雷工程需求。
           link: /projects/
           image:
-            source: /images/ccelect/project-metro-enhanced.png
+            source: /images/ccelect/project-metro-retouched.webp
             alt: 捷運軌道接地工程現場紀錄
             aspectRatio: square
             rounded: true
@@ -95,7 +95,7 @@ pageSections:
           description: 水力、複循環、核電與超高壓變電所等接地／避雷材料供應。
           link: /projects/
           image:
-            source: /images/ccelect/project-taipower-enhanced.png
+            source: /images/ccelect/project-taipower-retouched.webp
             alt: 台電工程接地與避雷現場紀錄
             aspectRatio: square
             rounded: true

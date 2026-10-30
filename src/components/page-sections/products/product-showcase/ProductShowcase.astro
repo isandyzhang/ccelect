@@ -6,9 +6,17 @@ const {
   link = "/products/exoweld/",
   columnSpan = 12,
   videoSource = "",
-  videoLabel = "熔接示意",
+  videoLabel = "開模・點火示意",
   ...attributes
 } = Astro.props;
+const uid = `weld-${crypto.randomUUID()}`;
+const paint = (name: string) => `url(#${uid}-${name})`;
+const chapters = [
+  { title: "精準成型", label: "開模", text: "從模腔到導體，讓連接細節清晰可見。" },
+  { title: "緊密合模", label: "合模", text: "模具與導體就位，準備下一次穩固連接。" },
+  { title: "瞬間熔接", label: "點火", text: "以一道光，揭開金屬連接的力量。" },
+  { title: "穩固連接", label: "成型", text: "留下扎實接點，串起接地系統的每一環。" },
+];
 ---
 
 <BentoBoxGridItem
@@ -16,7 +24,11 @@ const {
   class="feature-grid-item feature-grid-item-showcase"
   {...attributes}
 >
-  <product-showcase class="feature-item-showcase">
+  <product-showcase
+    class="feature-item-showcase"
+    data-view="photo"
+    data-phase="0"
+  >
     <div class="showcase-media">
       <a
         class="product-photo"
@@ -24,6 +36,451 @@ const {
         aria-label="查看 Exoweld 產品型錄"
         ><Image {...image} /></a
       >
+      <div
+        class="weld-experience"
+        hidden
+      >
+        <div class="experience-heading">
+          <span class="edition">EXOWELD / CONNECTION IN MOTION</span>
+          <span class="concept-label">熔接概念展示</span>
+        </div>
+        <div class="experience-body">
+          <div
+            class="chapter-copy"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            <span
+              class="chapter-index"
+              data-chapter-index
+              >01 / 04</span
+            >
+            <h3 data-chapter-title>{chapters[0].title}</h3>
+            <p data-chapter-text>{chapters[0].text}</p>
+            <a
+              class="catalog-link"
+              href={link}
+              >探索熱熔接系統 <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="weld-stage">
+            <span class="stage-label">GRAPHITE MOLD / COPPER CONDUCTOR</span>
+            <svg
+              class="weld-scene"
+              viewBox="0 0 640 480"
+              role="img"
+              aria-label="石墨模具開合、點火與銅導體接點的分鏡示意，非施工教學"
+            >
+              <defs>
+                <linearGradient
+                  id={`${uid}-top`}
+                  x2="0.85"
+                  y2="1"
+                  ><stop stop-color="#777b7a"></stop><stop
+                    offset=".4"
+                    stop-color="#3d4445"
+                  ></stop><stop
+                    offset="1"
+                    stop-color="#252b2d"
+                  ></stop></linearGradient
+                >
+                <linearGradient
+                  id={`${uid}-front`}
+                  x2="1"
+                  y2=".7"
+                  ><stop stop-color="#32383b"></stop><stop
+                    offset=".5"
+                    stop-color="#1a2023"
+                  ></stop><stop
+                    offset="1"
+                    stop-color="#0e1215"
+                  ></stop></linearGradient
+                >
+                <linearGradient
+                  id={`${uid}-side`}
+                  x2="1"
+                  y2="1"
+                  ><stop stop-color="#485052"></stop><stop
+                    offset="1"
+                    stop-color="#171c1f"
+                  ></stop></linearGradient
+                >
+                <linearGradient
+                  id={`${uid}-copper`}
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="1"
+                  ><stop stop-color="#62341e"></stop><stop
+                    offset=".28"
+                    stop-color="#d99456"
+                  ></stop><stop
+                    offset=".44"
+                    stop-color="#ffdb9d"
+                  ></stop><stop
+                    offset=".6"
+                    stop-color="#b4703f"
+                  ></stop><stop
+                    offset="1"
+                    stop-color="#512c1d"
+                  ></stop></linearGradient
+                >
+                <linearGradient
+                  id={`${uid}-joint`}
+                  x2="1"
+                  y2="1"
+                  ><stop stop-color="#e8ae71"></stop><stop
+                    offset=".35"
+                    stop-color="#ba7847"
+                  ></stop><stop
+                    offset=".7"
+                    stop-color="#6a3b26"
+                  ></stop><stop
+                    offset="1"
+                    stop-color="#d4965f"
+                  ></stop></linearGradient
+                >
+                <radialGradient id={`${uid}-halo`}
+                  ><stop
+                    stop-color="#ffbb67"
+                    stop-opacity=".7"
+                  ></stop><stop
+                    offset=".35"
+                    stop-color="#e97d30"
+                    stop-opacity=".18"
+                  ></stop><stop
+                    offset="1"
+                    stop-color="#de6624"
+                    stop-opacity="0"
+                  ></stop></radialGradient
+                >
+                <radialGradient id={`${uid}-floor`}
+                  ><stop
+                    stop-color="#8e7c64"
+                    stop-opacity=".18"
+                  ></stop><stop
+                    offset="1"
+                    stop-color="#8e7c64"
+                    stop-opacity="0"
+                  ></stop></radialGradient
+                >
+              </defs>
+              <g
+                class="draft-lines"
+                fill="none"
+                stroke="#998269"
+                stroke-width=".7"
+              >
+                <path
+                  d="M55 350 310 195 590 350 335 465ZM115 315 370 460M180 275 435 422M245 235 500 383M110 383 365 230M170 418 425 265M230 452 485 300"
+                ></path>
+                <path
+                  d="M320 52V430M75 248H570"
+                  stroke-dasharray="3 9"
+                ></path>
+                <circle
+                  cx="320"
+                  cy="248"
+                  r="172"
+                  stroke-dasharray="2 10"
+                ></circle>
+              </g>
+              <ellipse
+                cx="320"
+                cy="375"
+                rx="230"
+                ry="65"
+                fill={paint("floor")}
+              ></ellipse>
+              <g class="connection">
+                <path
+                  d="M92 321 311 276 552 316"
+                  fill="none"
+                  stroke="#24170f"
+                  stroke-width="27"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M92 316 311 271 552 311"
+                  fill="none"
+                  stroke={paint("copper")}
+                  stroke-width="24"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="m310 270 24 117"
+                  stroke="#512c1d"
+                  stroke-width="23"
+                ></path>
+                <path
+                  d="m310 267 24 117"
+                  stroke={paint("copper")}
+                  stroke-width="18"
+                ></path>
+                <g
+                  fill="none"
+                  stroke="#ffcf92"
+                  stroke-opacity=".32"
+                  stroke-width="1"
+                  ><path
+                    d="m93 310 216-44 244 40M93 316l216-44 244 40M93 322l216-44 244 40M306 275l23 109M312 275l23 109"
+                  ></path></g
+                >
+                <g class="finished-joint"
+                  ><path
+                    d="m279 263 29-15 37 11 12 28-34 19-38-15Z"
+                    fill={paint("joint")}
+                    stroke="#dfac72"
+                    stroke-width="1"
+                  ></path><path
+                    d="m285 269 36 15 29-17M321 284l2 22"
+                    fill="none"
+                    stroke="#f4c58b"
+                    stroke-opacity=".5"
+                  ></path></g
+                >
+              </g>
+              <g
+                class="mold mold-left"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="m209 161 107-58v174l-107 60Z"
+                  fill={paint("side")}
+                  stroke="#697171"
+                  stroke-width="1"
+                ></path>
+                <path
+                  d="m209 161 59 35v174l-59-33Z"
+                  fill={paint("front")}
+                  stroke="#434b4d"
+                  stroke-width="1"
+                ></path>
+                <path
+                  d="m209 161 107-58 58 35-106 58Z"
+                  fill={paint("top")}
+                ></path>
+                <path
+                  d="m268 196 106-58v174l-106 58Z"
+                  fill={paint("front")}
+                  stroke="#78807c"
+                  stroke-width="1"
+                ></path>
+                <path
+                  d="m313 173 27-15v76l-27 16Z"
+                  fill="#0a1012"
+                  stroke="#555e5e"
+                ></path>
+                <ellipse
+                  cx="326"
+                  cy="251"
+                  rx="22"
+                  ry="15"
+                  transform="rotate(-28 326 251)"
+                  fill="#080c0e"
+                  stroke="#59605e"
+                ></ellipse>
+                <path
+                  d="m276 279 90-49"
+                  stroke="#080c0e"
+                  stroke-width="19"
+                ></path><path
+                  d="m276 276 90-49"
+                  stroke="#565d58"
+                  stroke-width="1"
+                ></path>
+                <path
+                  d="m218 169 41 25M218 319l41 24"
+                  stroke="#68706e"
+                  stroke-opacity=".5"
+                ></path>
+                <text
+                  x="224"
+                  y="245"
+                  transform="rotate(30 224 245)"
+                  fill="#8a9089"
+                  font-size="10"
+                  letter-spacing="2"
+                  >EXOWELD</text
+                >
+              </g>
+              <g
+                class="mold mold-right"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="m316 103 115 67-57 33-116-67Z"
+                  fill={paint("top")}
+                  stroke="#818780"
+                  stroke-width="1"
+                ></path>
+                <path
+                  d="m258 136 116 67v174l-116-67Z"
+                  fill={paint("front")}
+                  stroke="#454e50"
+                  stroke-width="1"
+                ></path>
+                <path
+                  d="m374 203 57-33v174l-57 33Z"
+                  fill={paint("side")}
+                  stroke="#555e5e"
+                  stroke-width="1"
+                ></path>
+                <ellipse
+                  cx="332"
+                  cy="154"
+                  rx="19"
+                  ry="10"
+                  fill="#080c0e"
+                  stroke="#8a8b7b"
+                ></ellipse><ellipse
+                  cx="332"
+                  cy="155"
+                  rx="11"
+                  ry="5"
+                  fill="#06090a"
+                ></ellipse>
+                <path
+                  d="m268 148 95 55M383 216l38-22M383 327l38-22"
+                  stroke="#777d75"
+                  stroke-opacity=".55"
+                ></path>
+                <path
+                  d="m263 284 107 62"
+                  stroke="#090d0f"
+                  stroke-width="17"
+                ></path><path
+                  d="m263 280 107 62"
+                  stroke="#64675b"
+                  stroke-width="1"
+                ></path>
+                <circle
+                  cx="394"
+                  cy="237"
+                  r="4"
+                  fill="#111719"
+                  stroke="#74796e"
+                ></circle><circle
+                  cx="394"
+                  cy="301"
+                  r="4"
+                  fill="#111719"
+                  stroke="#74796e"
+                ></circle>
+              </g>
+              <g
+                class="ignition"
+                aria-hidden="true"
+              >
+                <circle
+                  cx="332"
+                  cy="154"
+                  r="150"
+                  fill={paint("halo")}
+                ></circle>
+                <path
+                  d="m322 155 5-27 5 12 6-32 7 46Z"
+                  fill="#ffd295"
+                ></path><ellipse
+                  cx="332"
+                  cy="153"
+                  rx="12"
+                  ry="5"
+                  fill="#fff5d8"
+                ></ellipse>
+                {
+                  [
+                    [-65, -70],
+                    [-38, -95],
+                    [8, -112],
+                    [48, -82],
+                    [70, -44],
+                    [-78, -30],
+                    [34, -120],
+                    [-18, -54],
+                  ].map(([x, y], i) => (
+                    <circle
+                      class="spark"
+                      cx="332"
+                      cy="150"
+                      r={i % 2 ? "1.5" : "2"}
+                      fill="#ffcf86"
+                      style={`--spark-x:${x}px;--spark-y:${y}px;--spark-delay:${i * 90}ms`}
+                    />
+                  ))
+                }
+              </g>
+              <g
+                class="annotation"
+                fill="none"
+                stroke="#b7966b"
+                stroke-width="1"
+                ><path d="M224 173 153 131H77M388 318l72 44h96"></path><circle
+                  cx="224"
+                  cy="173"
+                  r="3"
+                  fill="#dcb580"
+                ></circle><circle
+                  cx="388"
+                  cy="318"
+                  r="3"
+                  fill="#dcb580"
+                ></circle></g
+              >
+              <g
+                class="annotation"
+                fill="#bfa47f"
+                font-size="10"
+                letter-spacing="2"
+                ><text
+                  x="77"
+                  y="120"
+                  >01 / GRAPHITE</text
+                ><text
+                  x="461"
+                  y="382"
+                  >02 / COPPER</text
+                ></g
+              >
+            </svg>
+            <span class="stage-footnote">結構與光效為概念示意，非施工教學</span>
+          </div>
+        </div>
+        <div class="experience-footer">
+          <div
+            class="chapter-nav"
+            role="group"
+            aria-label="熔接展示分鏡"
+          >
+            {
+              chapters.map((chapter, i) => (
+                <button
+                  type="button"
+                  data-chapter={i}
+                  data-title={chapter.title}
+                  data-text={chapter.text}
+                  aria-pressed={String(i === 0)}
+                >
+                  <span>0{i + 1}</span>
+                  {chapter.label}
+                </button>
+              ))
+            }
+          </div>
+          <button
+            class="play-control"
+            type="button"
+            data-action="play"
+            >播放展示 <span aria-hidden="true">▶</span></button
+          >
+        </div>
+        <div
+          class="playback-track"
+          aria-hidden="true"
+        >
+          <span></span>
+        </div>
+      </div>
       <div
         class="product-video"
         hidden
@@ -42,7 +499,7 @@ const {
           role="status"
           hidden
         >
-          影片暫時無法載入，請切回產品圖片。
+          影片暫時無法載入，請切回產品圖片或分鏡展示。
         </p>
       </div>
     </div>
@@ -56,14 +513,25 @@ const {
         type="button"
         data-view="photo"
         aria-pressed="true"
-        >產品圖片</button
+        >產品全貌</button
       >
       <button
         type="button"
-        data-view="video"
+        data-view="experience"
         aria-pressed="false"
-        >{videoLabel}</button
+        >{videoLabel} <span aria-hidden="true">↗</span></button
       >
+      {
+        videoSource && (
+          <button
+            type="button"
+            data-view="video"
+            aria-pressed="false"
+          >
+            原始影片
+          </button>
+        )
+      }
     </div>
   </product-showcase>
 </BentoBoxGridItem>
@@ -75,90 +543,424 @@ const {
     display: block;
     position: relative;
     width: 100%;
-    background: #050505;
+    background: #090c0d;
+    color: #eee9df;
   }
   .showcase-media {
     aspect-ratio: 4 / 3;
     position: relative;
   }
   .product-photo,
-  .product-video {
+  .product-video,
+  .weld-experience {
     position: absolute;
     inset: 0;
   }
   .product-photo {
     display: block;
   }
-  .product-photo :global(img) {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
+  .product-photo :global(img),
   video {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
-  .showcase-controls {
+  .weld-experience {
     display: flex;
-    gap: 4px;
-    width: fit-content;
-    padding: 4px;
-    margin: 0 0 0 12px;
-    transform: translateY(-8px);
-    border: 1px solid #555;
-    border-radius: 24px;
-    background: #171b1a;
+    flex-direction: column;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 67% 46%, #252c2c 0%, #111719 35%, #090d0e 75%);
+    border-block: 1px solid #bda17940;
+  }
+  .experience-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: clamp(20px, 4vw, 54px);
+    padding-bottom: 0;
+  }
+  .edition {
+    color: #d5b58b;
+    font-size: 10px;
+    letter-spacing: 0.23em;
+  }
+  .concept-label {
+    color: #939c99;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+  }
+  .experience-body {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    align-items: center;
+    padding: 0 clamp(20px, 4vw, 54px);
+  }
+  .chapter-copy {
+    position: relative;
+    z-index: 1;
+  }
+  .chapter-index {
+    display: block;
+    color: #c4a278;
+    font: 11px monospace;
+    letter-spacing: 0.22em;
+    margin-bottom: 24px;
+  }
+  h3 {
+    color: #f2eee5;
+    font-size: clamp(26px, 3.8vw, 54px);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin: 0 0 20px;
+    line-height: 1.25;
+  }
+  .chapter-copy p {
+    color: #a8b0ab;
+    font-size: clamp(12px, 1.2vw, 15px);
+    line-height: 1.9;
+    max-width: 19em;
+    margin: 0;
+  }
+  .catalog-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    color: #dec29a;
+    font-size: 12px;
+    text-decoration: none;
+    border-bottom: 1px solid #a68a615e;
+    padding-block: 12px;
+    margin-top: 30px;
+  }
+  .catalog-link span {
+    font-size: 18px;
+  }
+  .weld-stage {
+    position: relative;
+    min-width: 0;
+  }
+  .stage-label {
+    position: absolute;
+    top: 3%;
+    right: 0;
+    font: 8px monospace;
+    letter-spacing: 0.16em;
+    color: #8f9890;
+  }
+  .weld-scene {
+    display: block;
+    width: 100%;
+    overflow: visible;
+  }
+  .stage-footnote {
+    display: block;
+    text-align: right;
+    font-size: 10px;
+    color: #8a938e;
+    letter-spacing: 0.05em;
+  }
+  .draft-lines {
+    opacity: 0.2;
+  }
+  .mold,
+  .connection,
+  .annotation,
+  .finished-joint,
+  .ignition {
+    transition:
+      transform 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 1s ease;
+  }
+  .mold-left {
+    transform: translate(-65px, 18px);
+  }
+  .mold-right {
+    transform: translate(65px, -18px);
+  }
+  .finished-joint,
+  .ignition {
+    opacity: 0;
+  }
+  [data-phase="1"] .mold,
+  [data-phase="2"] .mold {
+    transform: translate(0, 0);
+  }
+  [data-phase="1"] .annotation,
+  [data-phase="2"] .annotation {
+    opacity: 0;
+  }
+  [data-phase="2"] .ignition {
+    opacity: 1;
+  }
+  [data-phase="3"] .mold-left {
+    transform: translate(-100px, -30px);
+    opacity: 0;
+  }
+  [data-phase="3"] .mold-right {
+    transform: translate(100px, -70px);
+    opacity: 0;
+  }
+  [data-phase="3"] .finished-joint {
+    opacity: 1;
+  }
+  [data-phase="3"] .connection {
+    transform: translateY(-22px);
+  }
+  [data-phase="3"] .annotation {
+    opacity: 0;
+  }
+  .spark {
+    opacity: 0;
+  }
+  [data-phase="2"] .spark {
+    animation: weld-spark 1.1s ease-out var(--spark-delay) infinite;
+  }
+  [data-playing="false"] .spark {
+    animation-play-state: paused;
+  }
+  @keyframes weld-spark {
+    0% {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    15% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(var(--spark-x), var(--spark-y));
+    }
+  }
+  .experience-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 24px clamp(20px, 4vw, 54px);
+    padding-top: 20px;
+    border-top: 1px solid #a58d6d33;
+  }
+  .chapter-nav {
+    display: flex;
+    gap: clamp(12px, 2.5vw, 36px);
   }
   button {
     border: 0;
-    border-radius: 20px;
-    min-height: 36px;
-    padding: 0 14px;
-    color: #bfc7c4;
-    background: transparent;
+    background: none;
+    color: #929d97;
     font: inherit;
-    font-size: 12px;
     cursor: pointer;
+    min-height: 44px;
+  }
+  .chapter-nav button {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0;
+    font-size: 12px;
+  }
+  .chapter-nav button span {
+    font: 9px monospace;
+    color: #8b7c65;
   }
   button[aria-pressed="true"] {
-    color: #18211d;
-    background: #f0eee8;
-    font-weight: 700;
+    color: #f3d4a9;
+  }
+  .play-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 0 16px;
+    border: 1px solid #b599705c;
+    color: #e5c59c;
+    font-size: 12px;
+    min-width: 124px;
+  }
+  .play-control:hover,
+  .catalog-link:hover {
+    color: #fff1dc;
+    border-color: #d7b586;
+  }
+  .playback-track {
+    height: 2px;
+    background: #d0ae7c1a;
+  }
+  .playback-track span {
+    display: block;
+    height: 100%;
+    background: #cfa574;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  .showcase-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    padding: 16px 20px;
+    background: #090d0e;
+  }
+  .showcase-controls button {
+    padding: 0 20px;
+    font-size: 12px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+  }
+  .showcase-controls button[aria-pressed="true"] {
+    border-color: #c4a27770;
+    background: #c4a27712;
+  }
+  .showcase-controls button:hover {
+    color: #efd5b1;
+  }
+  .showcase-controls span {
+    margin-left: 12px;
   }
   button:focus-visible,
   a:focus-visible {
     outline: 2px solid #e3b778;
-    outline-offset: 2px;
+    outline-offset: 5px;
   }
   .video-note {
     position: absolute;
-    top: 10px;
-    left: 12px;
-    margin: 0;
+    top: 12px;
+    left: 16px;
     padding: 4px 8px;
+    margin: 0;
     font-size: 11px;
     color: #ddd;
     background: #000a;
-    border-radius: 4px;
     pointer-events: none;
   }
   .video-error {
     position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    padding: 20px;
     text-align: center;
     color: #fff;
+    background: #121719;
   }
   [hidden] {
     display: none !important;
   }
+  @media (min-width: 80rem) {
+    .showcase-media {
+      aspect-ratio: 16 / 10;
+    }
+  }
+  @media (max-width: 48rem) {
+    [data-view="experience"] .showcase-media {
+      aspect-ratio: auto;
+      height: 660px;
+    }
+    .experience-heading {
+      padding: 24px 20px 0;
+    }
+    .edition {
+      font-size: 8px;
+      letter-spacing: 0.14em;
+    }
+    .concept-label {
+      font-size: 9px;
+      white-space: nowrap;
+    }
+    .experience-body {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      padding: 32px 20px 0;
+    }
+    .chapter-copy {
+      padding-inline: 6px;
+    }
+    .chapter-index {
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .chapter-copy p {
+      max-width: none;
+      font-size: 12px;
+    }
+    .catalog-link {
+      margin-top: 8px;
+      padding-block: 8px;
+    }
+    .weld-stage {
+      width: min(100%, 420px);
+      margin-inline: auto;
+    }
+    .stage-label {
+      top: 5%;
+      font-size: 7px;
+    }
+    .stage-footnote {
+      font-size: 9px;
+    }
+    .experience-footer {
+      margin: 12px 20px 16px;
+      padding-top: 12px;
+      gap: 10px;
+    }
+    .chapter-nav {
+      gap: 14px;
+    }
+    .chapter-nav button {
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+      font-size: 11px;
+    }
+    .play-control {
+      min-width: 100px;
+      padding-inline: 10px;
+      gap: 10px;
+      font-size: 11px;
+    }
+    .showcase-controls {
+      gap: 2px;
+      padding-inline: 8px;
+    }
+    .showcase-controls button {
+      padding-inline: 12px;
+      font-size: 11px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .mold,
+    .connection,
+    .annotation,
+    .finished-joint,
+    .ignition {
+      transition: none;
+    }
+    [data-phase="2"] .spark {
+      animation: none;
+    }
+  }
 </style>
-
 <style is:global>
-  .feature-grid:has(product-showcase[data-view="video"]) .feature-grid-content {
+  .feature-grid:has(product-showcase[data-view="video"]) .feature-grid-content,
+  .feature-grid:has(product-showcase[data-view="experience"]) .feature-grid-content {
     visibility: hidden;
+  }
+  @media (max-width: 40rem) {
+    .feature-grid:has(product-showcase[data-view="video"])
+      > .outer-content
+      > .content
+      > .feature-grid-content,
+    .feature-grid:has(product-showcase[data-view="experience"])
+      > .outer-content
+      > .content
+      > .feature-grid-content {
+      display: none;
+    }
   }
 </style>
