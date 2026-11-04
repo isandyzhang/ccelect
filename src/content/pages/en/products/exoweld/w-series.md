@@ -79,8 +79,8 @@ pageSections:
         category: Wire to wire
         title: WE
         description: WE wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/we/00-we-enhanced.jpg
-        imageAlt: WE
+        image: /images/ccelect/diagrams/we.jpg
+        imageAlt: WE/WES straight wire-to-wire diagram
         specifications:
           - WE
         href: /en/products/exoweld/w-series/we/
@@ -88,8 +88,8 @@ pageSections:
         category: Wire to wire
         title: WT
         description: WT wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/wt/00-wt-enhanced.jpg
-        imageAlt: WT completed copper conductor joint
+        image: /images/ccelect/diagrams/wt.jpg
+        imageAlt: WT wire-to-wire tee diagram
         specifications:
           - WT
         href: /en/products/exoweld/w-series/wt/
@@ -97,8 +97,8 @@ pageSections:
         category: Wire to wire
         title: WX
         description: WX wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/wx/00-wx-enhanced.jpg
-        imageAlt: WX completed copper conductor joint
+        image: /images/ccelect/diagrams/wx.jpg
+        imageAlt: WX/WXS wire-to-wire cross diagram
         specifications:
           - WX
         href: /en/products/exoweld/w-series/wx/
@@ -106,8 +106,8 @@ pageSections:
         category: Wire to wire
         title: WP
         description: WP wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: WP
+        image: /images/ccelect/diagrams/wp.jpg
+        imageAlt: WP parallel wire-to-wire diagram
         specifications:
           - WP
         href: /en/products/exoweld/w-series/wp/
@@ -115,8 +115,8 @@ pageSections:
         category: Wire to wire
         title: WL
         description: WL wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: WL
+        image: /images/ccelect/diagrams/wl.jpg
+        imageAlt: WL wire-to-wire L diagram
         specifications:
           - WL
         href: /en/products/exoweld/w-series/wl/
@@ -124,8 +124,8 @@ pageSections:
         category: Wire to wire
         title: WXL
         description: WXL wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/wxl/00-wxl-enhanced.jpg
-        imageAlt: WXL completed copper conductor joint
+        image: /images/ccelect/diagrams/wxl.jpg
+        imageAlt: WXL wire-to-wire cross diagram
         specifications:
           - WXL
         href: /en/products/exoweld/w-series/wxl/

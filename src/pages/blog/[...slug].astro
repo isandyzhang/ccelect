@@ -171,7 +171,7 @@ const listHref = blogListHref(locale);
         >
           <SimpleText
             size="md"
-            style="font-weight: var(--font-weight-bold); margin: 0;"
+            style="font-weight: var(--font-weight-medium); margin: 0;"
             editable={false}
           >
             {t(locale, "shareArticle")}
@@ -205,7 +205,7 @@ const listHref = blogListHref(locale);
       >
         <SimpleText
           size="sm"
-          style="border-bottom: 2px solid var(--color-border-subtle); color: var(--color-text-brand); font-weight: var(--font-weight-bold);"
+          style="border-bottom: 2px solid var(--color-border-subtle); color: var(--color-text-brand); font-weight: var(--font-weight-medium);"
           editable={false}
         >
           {t(locale, "latestNews")}
@@ -242,7 +242,7 @@ const listHref = blogListHref(locale);
                 )}
                 <SimpleText
                   size="xs"
-                  style="color: var(--color-text-brand); font-weight: var(--font-weight-bold); margin-top: var(--spacing-sm);"
+                  style="color: var(--color-text-brand); font-weight: var(--font-weight-medium); margin-top: var(--spacing-sm);"
                   editable={false}
                 >
                   {recentPost.data.tag}
@@ -256,7 +256,7 @@ const listHref = blogListHref(locale);
                 />
                 <SimpleText
                   size="sm"
-                  style="color: var(--color-text-muted); font-weight: var(--font-weight-bold);"
+                  style="color: var(--color-text-muted); font-weight: var(--font-weight-medium);"
                   editable={false}
                 >
                   {postDate}
@@ -285,7 +285,7 @@ const listHref = blogListHref(locale);
   @layer page-sections {
     .hero-feature .breadcrumb {
       color: var(--color-text-brand);
-      font-weight: var(--font-weight-bold);
+      font-weight: var(--font-weight-medium);
       margin-bottom: var(--spacing-md);
     }
     .hero-feature .blog-link {

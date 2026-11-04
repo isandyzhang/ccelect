@@ -39,12 +39,12 @@
     {
       "_component": "building-blocks/core-elements/button",
       "text": "お問い合わせ",
-      "hideText": false,
+      "hideText": true,
       "link": "/ja/contact/",
-      "iconName": "arrow-right",
+      "iconName": "envelope",
       "iconColor": "default",
-      "iconPosition": "after",
-      "variant": "primary",
+      "iconPosition": "before",
+      "variant": "ghost",
       "size": "md"
     }
   ]

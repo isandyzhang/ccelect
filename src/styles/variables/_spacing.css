@@ -23,7 +23,7 @@
   --spacing-em-6xl: 7em;
 
   /* Site nav sizing — adjust these; --spacing-nav-height follows. */
-  --nav-outer-pad: var(--spacing-sm);
+  --nav-outer-pad: 0;
   --nav-content-pad-block: var(--spacing-sm);
   --nav-logo-height: 3.4375rem;
   --nav-logo-width: 17.1875rem;
@@ -36,7 +36,7 @@
   --nav-drawer-logo-height: 3.5156rem;
 
   --spacing-nav-height: calc(
-    var(--nav-outer-pad) * 2 + var(--nav-content-pad-block) * 2 + var(--nav-logo-height) + 0.25rem
+    var(--nav-outer-pad) * 2 + var(--nav-content-pad-block) * 2 + var(--nav-logo-height) + 1px
   );
 }
 

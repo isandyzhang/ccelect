@@ -7,6 +7,7 @@ const {
   videoId,
   title,
   source,
+  introSource = "",
   thumbnail,
   background = false,
   class: className,
@@ -17,10 +18,15 @@ const {
 
 const trimmedThumbnail =
   typeof thumbnail === "string" && thumbnail.trim() !== "" ? thumbnail.trim() : "";
+const trimmedIntroSource =
+  typeof introSource === "string" && introSource.trim() !== "" ? introSource.trim() : "";
 
 const posterUrl = trimmedThumbnail ? await resolveVideoPosterSource(trimmedThumbnail) : undefined;
 
 let localVideoSources: VideoSource[] = [];
+let introVideoSources: VideoSource[] = [];
+let backgroundIntroSrc = "";
+let backgroundLoopSrc = "";
 
 if (type === "local-source" && source) {
   const { discoverVideoSources } = await import("@component-utils/discoverVideoSources");
@@ -32,8 +38,20 @@ if (type === "local-source" && source) {
     const mp4 = localVideoSources.find((item) => item.type === "video/mp4");
 
     if (mp4) localVideoSources = [mp4];
+    backgroundLoopSrc = localVideoSources[0]?.src ?? "";
+  }
+
+  if (background && trimmedIntroSource) {
+    introVideoSources = await discoverVideoSources(trimmedIntroSource);
+    const introMp4 = introVideoSources.find((item) => item.type === "video/mp4");
+
+    if (introMp4) introVideoSources = [introMp4];
+    backgroundIntroSrc = introVideoSources[0]?.src ?? "";
   }
 }
+
+const backgroundHasIntro = Boolean(background && backgroundIntroSrc && backgroundLoopSrc);
+const backgroundInitialSources = backgroundHasIntro ? introVideoSources : localVideoSources;
 ---
 
 {
@@ -75,13 +93,15 @@ if (type === "local-source" && source) {
       <video
         preload="none"
         muted
-        loop
+        loop={!backgroundHasIntro}
         playsinline
         disablepictureinpicture
         disableremoteplayback
         poster={posterUrl}
+        data-bg-intro-src={backgroundHasIntro ? backgroundIntroSrc : undefined}
+        data-bg-loop-src={backgroundHasIntro ? backgroundLoopSrc : undefined}
       >
-        {localVideoSources.map(({ src, type: sourceType }) => (
+        {backgroundInitialSources.map(({ src, type: sourceType }) => (
           <source
             data-src={src}
             type={sourceType}
@@ -150,15 +170,15 @@ if (type === "local-source" && source) {
     return Boolean(connection?.saveData);
   }
 
-  function hydrateSources(video: HTMLVideoElement) {
-    if (video.getAttribute(LOADED) === "true") return;
+  function hydrateSources(video: HTMLVideoElement, preferredSrc?: string) {
+    if (video.getAttribute(LOADED) === "true" && !preferredSrc) return;
 
     let hydrated = false;
-    video.querySelectorAll("source[data-src]").forEach((node) => {
+    video.querySelectorAll("source").forEach((node) => {
       const source = node as HTMLSourceElement;
-      const src = source.dataset.src;
-      if (!src) return;
-      source.src = src;
+      const nextSrc = preferredSrc || source.dataset.src || source.getAttribute("src");
+      if (!nextSrc) return;
+      source.src = nextSrc;
       source.removeAttribute("data-src");
       hydrated = true;
     });
@@ -167,6 +187,33 @@ if (type === "local-source" && source) {
       video.setAttribute(LOADED, "true");
       video.load();
     }
+  }
+
+  function switchToLoop(video: HTMLVideoElement) {
+    const loopSrc = video.dataset.bgLoopSrc;
+    if (!loopSrc) return;
+
+    video.loop = true;
+    hydrateSources(video, loopSrc);
+
+    const playLoop = () => {
+      void video.play().then(() => {
+        video.setAttribute(PLAYING, "true");
+      }).catch(() => {});
+    };
+
+    if (video.readyState >= 2) playLoop();
+    else video.addEventListener("canplay", playLoop, { once: true });
+  }
+
+  function bindIntroToLoop(video: HTMLVideoElement) {
+    if (!video.dataset.bgIntroSrc || !video.dataset.bgLoopSrc) return;
+    if (video.dataset.bgIntroBound === "true") return;
+    video.dataset.bgIntroBound = "true";
+
+    video.addEventListener("ended", () => {
+      switchToLoop(video);
+    });
   }
 
   function unlockAndPlay(video: HTMLVideoElement) {
@@ -178,14 +225,17 @@ if (type === "local-source" && source) {
 
     if (video.getAttribute(PLAYING) === "true" && !video.paused) return;
 
-    hydrateSources(video);
+    const hasIntro = Boolean(video.dataset.bgIntroSrc && video.dataset.bgLoopSrc);
+
+    hydrateSources(video, hasIntro ? video.dataset.bgIntroSrc : undefined);
+    bindIntroToLoop(video);
 
     video.muted = true;
     video.defaultMuted = true;
     video.playsInline = true;
     video.setAttribute("muted", "");
     video.setAttribute("playsinline", "");
-    video.loop = true;
+    video.loop = !hasIntro;
 
     const tryPlay = () =>
       video.play().then(() => {
