@@ -1,4 +1,9 @@
 ---
+import ProductBreadcrumb from "../ProductBreadcrumb.astro";
+import { contactHref, experienceText, localeFromPath } from "@i18n/experience";
+
+const messages = experienceText[localeFromPath(Astro.url.pathname)];
+
 import Icon from "@core-elements/icon/Icon.astro";
 import ProductsSide from "@navigation/products-side/ProductsSide.astro";
 import ProductCatalogCard from "./ProductCatalogCard.astro";
@@ -21,7 +26,7 @@ interface Props {
 }
 
 const {
-  eyebrowText = "產品分類",
+  eyebrowText = messages.products,
   heading,
   subtext,
   overviewTitle = "",
@@ -29,9 +34,14 @@ const {
   overviewFeatures = [],
   productsHeading = "",
   items = [],
+  helpHeading = messages.contact,
+  helpText = "",
+  helpLinkText = messages.contact,
   helpLink = "/contact/",
-  countLabel = "共 {count} 個產品分類",
+  countLabel = messages.itemCount,
 } = Astro.props as Props;
+
+const localizedContact = (href: string) => contactHref(Astro.url.pathname, href);
 
 const hasOverview = Boolean(overviewTitle || overview.length > 0 || overviewFeatures.length > 0);
 const itemCountLabel = countLabel.replace("{count}", String(items.length));
@@ -42,19 +52,20 @@ const itemCountLabel = countLabel.replace("{count}", String(items.length));
   data-theme="light"
 >
   <div class="product-catalog-shell">
+    <ProductBreadcrumb heading={heading} />
     <details
       class="catalog-sidebar"
       open
     >
       <summary>
-        <span>瀏覽商品分類</span>
+        <span>{messages.browse}</span>
         <Icon
           name="chevron-down"
           size="none"
           aria-hidden="true"
         />
       </summary>
-      <div class="catalog-sidebar-heading">商品櫥窗</div>
+      <div class="catalog-sidebar-heading">{messages.products}</div>
       <ProductsSide />
     </details>
 
@@ -93,22 +104,23 @@ const itemCountLabel = countLabel.replace("{count}", String(items.length));
         )
       }
 
-      {
-        productsHeading && (
-          <h2 class="catalog-products-heading">{productsHeading}</h2>
-        )
-      }
+      {productsHeading && <h2 class="catalog-products-heading">{productsHeading}</h2>}
 
       <div class="catalog-grid">
         {
           items.map((item) => (
             <ProductCatalogCard
               item={item}
-              fallbackHref={helpLink}
+              fallbackHref={localizedContact(helpLink)}
             />
           ))
         }
       </div>
+      <aside class="catalog-help">
+        <h2>{helpHeading}</h2>
+        {helpText && <p>{helpText}</p>}
+        <a href={localizedContact(helpLink)}>{helpLinkText}</a>
+      </aside>
     </div>
   </div>
 </section>
@@ -168,6 +180,12 @@ const itemCountLabel = countLabel.replace("{count}", String(items.length));
           color: var(--color-text-brand);
           text-decoration: none;
         }
+      }
+
+      .catalog-help {
+        border-top: 1px solid var(--color-border);
+        margin-top: var(--spacing-xl);
+        padding-top: var(--spacing-lg);
       }
 
       .catalog-main {
@@ -266,7 +284,6 @@ const itemCountLabel = countLabel.replace("{count}", String(items.length));
         grid-template-columns: repeat(3, minmax(0, 1fr));
         margin-top: clamp(1.25rem, 3vw, 2rem);
       }
-
     }
 
     @media (max-width: 1100px) {

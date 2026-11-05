@@ -13,7 +13,7 @@ pageSections:
     subtext: >-
       Address: 2-2 Yunhe St., Taipei<br />Tel: 886-2-23632992 · Fax:
       886-2-23639044<br />Email: cce@ccelect.com.tw<br />LINE: @iaf5267c
-    formAction: ./
+    formAction: ""
     formBlocks:
       - _component: building-blocks/forms/input
         label: Name
@@ -42,6 +42,11 @@ pageSections:
         hideText: false
         disabled: false
     buttonSections:
+      - _component: building-blocks/core-elements/button
+        text: Call sales
+        link: tel:+886223632992
+        variant: primary
+        size: md
       - _component: building-blocks/core-elements/button
         text: Chat on LINE
         hideText: false

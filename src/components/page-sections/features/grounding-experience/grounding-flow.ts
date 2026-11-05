@@ -213,7 +213,6 @@ class GroundingFlow extends HTMLElement {
     const context = canvas.getContext("2d")!;
     const frameData = context.createImageData(W, H);
     const pixels = new Uint32Array(frameData.data.buffer);
-    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
     const events = new AbortController();
     const { signal } = events;
     let field: CopperField | undefined;
@@ -229,7 +228,7 @@ class GroundingFlow extends HTMLElement {
     const setVar = (name: string, value: number) => section.style.setProperty(name, String(value));
 
     const flowing = () =>
-      !!field && visible && !paused && !reduced.matches && !document.hidden && progress > 0.8;
+      !!field && visible && !paused && !document.hidden && progress > 0.8;
 
     const draw = () => {
       if (!field) return;
@@ -283,7 +282,7 @@ class GroundingFlow extends HTMLElement {
 
     const sync = () => {
       stop();
-      button.hidden = !field || reduced.matches || progress < 0.8;
+      button.hidden = !field || progress < 0.8;
       button.setAttribute("aria-pressed", String(paused));
       button.setAttribute("aria-label", paused ? "播放動畫" : "暫停動畫");
       if (flowing()) frame = requestAnimationFrame(tick);
@@ -303,10 +302,6 @@ class GroundingFlow extends HTMLElement {
     };
 
     const measure = () => {
-      if (reduced.matches) {
-        apply(1);
-        return;
-      }
       const rect = track.getBoundingClientRect();
 
       apply(clamp(-rect.top / Math.max(1, rect.height - window.innerHeight)));
@@ -354,7 +349,6 @@ class GroundingFlow extends HTMLElement {
       },
       { signal }
     );
-    reduced.addEventListener("change", measure, { signal });
     document.addEventListener("visibilitychange", sync, { signal });
     window.addEventListener("scroll", onScroll, { passive: true, signal });
     window.addEventListener("resize", onScroll, { passive: true, signal });

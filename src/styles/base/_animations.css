@@ -48,14 +48,6 @@
   syntax: "<angle>";
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    scroll-behavior: auto !important;
-    transition: none !important;
-  }
-}
-
 @keyframes flatten {
   to {
     transform: perspective(500px) rotateX(0deg);

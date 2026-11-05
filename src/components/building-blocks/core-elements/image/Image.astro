@@ -44,10 +44,14 @@ const dataAttributes = isEditable
   : {};
 
 const positionClass = `position-${positionVertical}-${positionHorizontal}`;
+// The builder also discovers component imports in the browser; keep Sharp server-only.
+const publicSize = import.meta.env.SSR
+  ? await (await import("../../../../utils/publicImageSize")).publicImageSize(source)
+  : undefined;
 const preparedImage = prepareImageData({
   source,
-  width,
-  height,
+  width: width || publicSize?.width,
+  height: height || publicSize?.height,
   widths,
   aspectRatio,
   positionVertical,

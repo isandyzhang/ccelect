@@ -1,20 +1,16 @@
 ---
+import { experienceText } from "@i18n/experience";
 import type { Locale } from "@i18n/config";
-import { defaultLocale, locales, localizedHref } from "@i18n/config";
+import { defaultLocale, locales, localeNames } from "@i18n/config";
 
 interface Props {
   locale?: Locale;
   /** Page key without locale: '', 'about', 'pricing', 'blog', ... */
   pageKey?: string;
+  availablePages?: Partial<Record<Locale, string>>;
 }
 
-const { locale = defaultLocale, pageKey = "" } = Astro.props as Props;
-
-const localeNames: Record<Locale, string> = {
-  "zh-tw": "繁體中文",
-  en: "English",
-  ja: "日本語",
-};
+const { locale = defaultLocale, availablePages = {} } = Astro.props as Props;
 ---
 
 <nav
@@ -44,7 +40,11 @@ const localeNames: Record<Locale, string> = {
       {
         locales.map((loc) => (
           <a
-            href={localizedHref(loc, pageKey)}
+            href={availablePages[loc]}
+            data-astro-reload
+            title={!availablePages[loc] ? experienceText[locale].untranslated : undefined}
+            aria-disabled={!availablePages[loc] ? "true" : undefined}
+            tabindex={!availablePages[loc] ? -1 : undefined}
             data-locale={loc}
             class:list={[{ "is-active": loc === locale }]}
             aria-current={loc === locale ? "page" : undefined}
@@ -170,7 +170,12 @@ const localeNames: Record<Locale, string> = {
       color 150ms ease;
   }
 
-  .language-menu a:hover {
+  .language-menu a[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  .language-menu a[href]:hover {
     background: var(--color-bg-muted);
     color: var(--color-brand);
   }
@@ -188,12 +193,5 @@ const localeNames: Record<Locale, string> = {
 
   .check {
     text-align: center;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .lang-switcher summary,
-    .language-menu a {
-      transition: none;
-    }
   }
 </style>

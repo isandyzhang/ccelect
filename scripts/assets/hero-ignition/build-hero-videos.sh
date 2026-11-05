@@ -14,8 +14,8 @@ GRADE_BLACK="eq=brightness=-0.55:contrast=1.35:saturation=0.45:gamma=0.45,colorb
 GRADE_IGN="eq=brightness=-0.1:contrast=1.28:saturation=0.92:gamma=0.88,colorbalance=rs=0.1:gs=-0.02:bs=-0.12:rm=0.12:gm=0.02:bm=-0.1:rh=0.08:gh=0.02:bh=-0.08,vignette=PI/5.5"
 GRADE_LOOP="eq=brightness=-0.18:contrast=1.22:saturation=0.85:gamma=0.8,colorbalance=rs=0.08:gs=-0.04:bs=-0.1:rm=0.1:gm=-0.01:bm=-0.08,vignette=PI/5"
 ENHANCE="deshake=rx=32:ry=32:edge=mirror,hqdn3d=2.0:1.5:3.0:2.5,unsharp=5:5:0.6:5:5:0.0"
-SCALE="scale=1920:1080:flags=lanczos,fps=30,format=yuv420p"
-ENCODE=(-c:v libx264 -preset slow -crf 19 -pix_fmt yuv420p -movflags +faststart -an)
+SCALE="scale=1280:720:flags=lanczos,fps=24,format=yuv420p"
+ENCODE=(-c:v libx264 -preset slow -crf 28 -pix_fmt yuv420p -movflags +faststart -an)
 
 echo "==> Building intro segments (~10s target)"
 

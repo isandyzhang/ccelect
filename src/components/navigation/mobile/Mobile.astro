@@ -1,4 +1,7 @@
 ---
+import { experienceText, localeFromPath } from "@i18n/experience";
+const messages = experienceText[localeFromPath(Astro.url.pathname)];
+
 import Button from "@core-elements/button/Button.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 import Image from "@core-elements/image/Image.astro";
@@ -58,7 +61,10 @@ function createNavItemData(item, level, parentGroupId) {
 <label
   for={toggleId}
   class="nav-hamburger mobile-button"
-  aria-label="Toggle navigation menu"
+  aria-label={messages.openMenu}
+  role="button"
+  aria-expanded="false"
+  aria-controls={`nav-${navInstanceId}`}
   tabindex="0"
 >
   <Button
@@ -75,6 +81,8 @@ function createNavItemData(item, level, parentGroupId) {
   transition:persist={persistKey ?? navInstanceId}
   class:list={["mobile", className]}
   data-toggle-id={toggleId}
+  id={`nav-${navInstanceId}`}
+  aria-label={messages.openMenu}
   {...htmlAttributes}
 >
   <div class="mobile-header">
@@ -93,7 +101,8 @@ function createNavItemData(item, level, parentGroupId) {
       <label
         for={toggleId}
         class="mobile-close mobile-button"
-        aria-label="Close navigation menu"
+        aria-label={messages.closeMenu}
+        role="button"
         tabindex="0"
       >
         <Button
@@ -326,6 +335,19 @@ function createNavItemData(item, level, parentGroupId) {
       const navElement = nav as HTMLElement;
       if (navElement.dataset.mobileInitialized === "true") return;
       navElement.dataset.mobileInitialized = "true";
+      const events = new AbortController();
+      const listen = (target, type, handler) =>
+        target.addEventListener(type, handler, { signal: events.signal });
+      document.addEventListener(
+        "astro:before-swap",
+        () => {
+          if (toggle) toggle.checked = false;
+          handleNavToggle(false, false);
+          events.abort();
+          delete navElement.dataset.mobileInitialized;
+        },
+        { once: true, signal: events.signal }
+      );
 
       // Add a class to indicate JS is available
       nav.classList.add("js-enabled");
@@ -341,6 +363,15 @@ function createNavItemData(item, level, parentGroupId) {
       // Handle navigation toggle state and accessibility
       function handleNavToggle(isOpen, returnFocus = true) {
         const backdrop = document.getElementById("mobile-nav-backdrop");
+        navElement.inert = !isOpen;
+        hamburger?.setAttribute("aria-expanded", String(isOpen));
+        if (isOpen) {
+          nav.setAttribute("role", "dialog");
+          nav.setAttribute("aria-modal", "true");
+        } else {
+          nav.removeAttribute("role");
+          nav.removeAttribute("aria-modal");
+        }
 
         if (isOpen) {
           nav.setAttribute("aria-hidden", "false");
@@ -351,7 +382,7 @@ function createNavItemData(item, level, parentGroupId) {
           document.body.style.overflow = "hidden";
           // Defer focus until the slide-in has started.
           requestAnimationFrame(() => {
-            nav.querySelector(".mobile-close")?.focus();
+            if (toggle?.checked) nav.querySelector<HTMLElement>(".mobile-close")?.focus();
           });
         } else {
           nav.setAttribute("aria-hidden", "true");
@@ -386,7 +417,7 @@ function createNavItemData(item, level, parentGroupId) {
       // Close the menu when a link is followed. Same-page links (such as
       // `/#services` while already on the home page) never trigger a page load,
       // so nothing else would close the menu for them.
-      nav.addEventListener("click", (e) => {
+      listen(nav, "click", (e) => {
         if (e.defaultPrevented || !toggle?.checked) return;
 
         const link = e.target?.closest("a[href]");
@@ -407,8 +438,8 @@ function createNavItemData(item, level, parentGroupId) {
           handleNavToggle(toggle.checked);
         };
 
-        hamburger.addEventListener("click", toggleHandler);
-        hamburger.addEventListener("keydown", (e) => {
+        listen(hamburger, "click", toggleHandler);
+        listen(hamburger, "keydown", (e) => {
           if (e.key === "Enter" || e.key === " ") {
             toggleHandler(e);
           }
@@ -425,8 +456,8 @@ function createNavItemData(item, level, parentGroupId) {
           handleNavToggle(false);
         };
 
-        closeButton.addEventListener("click", closeHandler);
-        closeButton.addEventListener("keydown", (e) => {
+        listen(closeButton, "click", closeHandler);
+        listen(closeButton, "keydown", (e) => {
           if (e.key === "Enter" || e.key === " ") {
             closeHandler(e);
           }
@@ -435,7 +466,7 @@ function createNavItemData(item, level, parentGroupId) {
 
       // Handle toggle state changes
       if (toggle) {
-        toggle.addEventListener("change", (e) => {
+        listen(toggle, "change", (e) => {
           handleNavToggle(e.target.checked);
         });
       }
@@ -462,15 +493,54 @@ function createNavItemData(item, level, parentGroupId) {
         }
       };
 
-      nav.addEventListener("click", handleDropdownToggle);
-      nav.addEventListener("keydown", (e) => {
+      listen(nav, "click", handleDropdownToggle);
+      listen(nav, "keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
           handleDropdownToggle(e);
         }
       });
 
+      const syncSubmenus = () => {
+        nav.querySelectorAll<HTMLInputElement>(".nav-item-toggle").forEach((input) => {
+          const expanded = input.checked;
+          input.setAttribute("aria-expanded", String(expanded));
+          const panel = document.getElementById(input.getAttribute("aria-controls") || "");
+          if (panel) {
+            panel.setAttribute("aria-hidden", String(!expanded));
+            panel.inert = !expanded;
+          }
+          nav.querySelectorAll<HTMLElement>(".nav-item-trigger").forEach((trigger) => {
+            if (
+              trigger.getAttribute("for") === input.id ||
+              trigger.closest(".nav-item")?.querySelector(".nav-item-toggle") === input
+            ) {
+              trigger.setAttribute("role", "button");
+              trigger.setAttribute("aria-expanded", String(expanded));
+            }
+          });
+        });
+      };
+      listen(nav, "change", syncSubmenus);
+      syncSubmenus();
+      handleNavToggle(Boolean(toggle?.checked), false);
+      listen(nav, "keydown", (event) => {
+        if (event.key !== "Tab" || !toggle?.checked) return;
+        const focusable = Array.from(
+          nav.querySelectorAll<HTMLElement>('a[href], button, [tabindex="0"]')
+        ).filter((element) => !element.closest("[inert]") && element.getClientRects().length > 0);
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first?.focus();
+        }
+      });
+
       // Handle escape key to close navigation
-      document.addEventListener("keydown", (e) => {
+      listen(document, "keydown", (e) => {
         if (e.key === "Escape" && toggle?.checked) {
           toggle.checked = false;
           handleNavToggle(false);
@@ -877,18 +947,6 @@ function createNavItemData(item, level, parentGroupId) {
 
       &.open {
         transform: translateX(0);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .mobile,
-      .mobile-nav-backdrop,
-      .mobile-overlay {
-        transition: none;
-      }
-
-      .mobile.is-open .mobile-list > .nav-item {
-        animation: none;
       }
     }
   }

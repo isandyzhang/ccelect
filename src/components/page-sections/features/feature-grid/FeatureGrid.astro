@@ -125,21 +125,11 @@ const {
 
     if (!sections.length) return;
 
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
     const clamp = (value: number) => Math.min(1, Math.max(0, value));
 
     const measure = () => {
       sections.forEach((section) => {
         const outer = section.querySelector<HTMLElement>(":scope > .outer-content");
-
-        if (reduced.matches) {
-          section.style.setProperty("--showcase-p", "1");
-          section.style.minHeight = "";
-          section.removeAttribute("data-showcase-stick");
-          if (outer) outer.style.top = "";
-          return;
-        }
-
         const photo = section.querySelector<HTMLElement>("product-showcase");
         const natural = photo?.offsetHeight ?? outer?.offsetHeight ?? 0;
         const frame = Math.min(natural || window.innerHeight, window.innerHeight);
@@ -167,7 +157,6 @@ const {
     measure();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
-    reduced.addEventListener("change", measure);
   }
 
   onPageLoad(initShowcaseReveal);
@@ -385,6 +374,22 @@ const {
         .feature-grid-subtext p {
           white-space: nowrap;
         }
+
+        @media (width < 72rem) {
+          .feature-grid-subtext {
+            max-width: 100%;
+            min-width: 0;
+            width: auto;
+          }
+
+          .feature-grid-subtext p {
+            white-space: normal;
+          }
+
+          > .outer-content > .content > .feature-grid-subtext {
+            min-width: 0;
+          }
+        }
       }
 
       @media (max-width: 40rem) {
@@ -431,36 +436,6 @@ const {
           .feature-grid-subtext p {
             white-space: normal;
           }
-        }
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .feature-grid:has(.feature-item-showcase) {
-        .feature-grid-content {
-          > .eyebrow,
-          > .outer-content > .content > .eyebrow,
-          > .heading,
-          > .outer-content > .content > .heading,
-          > .feature-grid-subtext,
-          > .outer-content > .content > .feature-grid-subtext {
-            opacity: 1;
-            transform: none;
-          }
-        }
-
-        product-showcase.feature-item-showcase::after,
-        .feature-item-showcase > .card-inner::after {
-          opacity: 0.28;
-        }
-
-        &[data-showcase-stick] {
-          min-height: 0;
-        }
-
-        &[data-showcase-stick] > .outer-content {
-          height: 100%;
-          position: static;
         }
       }
     }
@@ -576,13 +551,6 @@ const {
         }
       }
 
-      @media (prefers-reduced-motion: reduce) {
-        .feature-item .before-content img,
-        .feature-item:hover .before-content img {
-          transform: none;
-          transition: none;
-        }
-      }
     }
   }
 </style>

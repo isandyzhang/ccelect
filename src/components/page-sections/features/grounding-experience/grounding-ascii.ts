@@ -53,7 +53,6 @@ class GroundingAscii extends HTMLElement {
     const fallback = this.querySelector("img")!;
     const button = this.querySelector("button")!;
     const ctx = canvas.getContext("2d", { alpha: false });
-    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
     const compact = matchMedia("(max-width: 760px)");
     const source = new Image();
     const base = document.createElement("canvas");
@@ -83,7 +82,7 @@ class GroundingAscii extends HTMLElement {
     let lastBuildWidth = 0;
     let lastCompact = compact.matches;
     const running = () =>
-      ready && visible && !document.hidden && !paused && !reduced.matches && !signal.aborted;
+      ready && visible && !document.hidden && !paused && !signal.aborted;
     const stop = () => {
       cancelAnimationFrame(frame);
       frame = 0;
@@ -209,7 +208,7 @@ class GroundingAscii extends HTMLElement {
     };
     const sync = () => {
       stop();
-      button.hidden = !ready || reduced.matches;
+      button.hidden = !ready;
       button.setAttribute("aria-pressed", String(paused));
       button.setAttribute("aria-label", paused ? "播放動畫" : "暫停動畫");
       if (running()) frame = requestAnimationFrame(tick);
@@ -400,15 +399,6 @@ class GroundingAscii extends HTMLElement {
       "click",
       () => {
         paused = !paused;
-        pointer = null;
-        waves = [];
-        sync();
-      },
-      { signal }
-    );
-    reduced.addEventListener(
-      "change",
-      () => {
         pointer = null;
         waves = [];
         sync();

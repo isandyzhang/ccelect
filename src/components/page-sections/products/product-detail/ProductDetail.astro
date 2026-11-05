@@ -1,4 +1,9 @@
 ---
+import ProductBreadcrumb from "../ProductBreadcrumb.astro";
+import { contactHref, experienceText, localeFromPath } from "@i18n/experience";
+
+const messages = experienceText[localeFromPath(Astro.url.pathname)];
+
 import Image from "@core-elements/image/Image.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 import type {
@@ -36,19 +41,21 @@ const {
   description = [],
   image,
   imageAlt = heading,
-  imageHint = "點擊圖片可放大檢視",
-  primaryCta = { text: "聯絡工程業務", href: "/contact/" },
+  imageHint = "",
+  primaryCta = { text: messages.contact, href: "/contact/" },
   secondaryCta,
-  featuresHeading = "特點",
+  featuresHeading = messages.features,
   features = [],
-  specsHeading = "規格摘要",
+  specsHeading = messages.details,
   specifications = [],
-  applicationHeading = "應用示意",
+  applicationHeading = messages.applications,
   applicationImages = [],
-  videoHeading = "熔接影片",
+  videoHeading = messages.videos,
   video,
   note = "",
 } = Astro.props as Props;
+
+const localizedContact = (href: string) => contactHref(Astro.url.pathname, href);
 ---
 
 <section
@@ -56,6 +63,7 @@ const {
   data-theme="light"
 >
   <div class="product-detail-shell">
+    <ProductBreadcrumb heading={heading} />
     <div class="product-hero">
       <figure class="product-media">
         <div class="product-media-frame">
@@ -64,12 +72,18 @@ const {
             alt={imageAlt}
             aspectRatio="square"
             sizes="(max-width: 900px) 100vw, 48vw"
+            priority={true}
           />
         </div>
         <figcaption>{imageHint}</figcaption>
       </figure>
 
       <div class="product-copy">
+        {
+          JSON.stringify({ summary, description, specifications, note }).match(
+            /demo|示範|示意|待補/i
+          ) && <p class="product-note">{messages.pending}</p>
+        }
         {category && <p class="product-category">{category}</p>}
         <h1>{heading}</h1>
         {summary && <p class="product-summary">{summary}</p>}
@@ -86,7 +100,7 @@ const {
         <div class="product-actions">
           <a
             class="product-cta-primary"
-            href={primaryCta.href}
+            href={localizedContact(primaryCta.href)}
           >
             {primaryCta.text}
             <Icon
@@ -99,7 +113,7 @@ const {
             secondaryCta && (
               <a
                 class="product-cta-secondary"
-                href={secondaryCta.href}
+                href={localizedContact(secondaryCta.href)}
               >
                 {secondaryCta.text}
               </a>
@@ -118,34 +132,30 @@ const {
           <h2 id="product-details-heading">詳細資訊</h2>
 
           <div class="product-details-grid">
-            {
-              features.length > 0 && (
-                <div>
-                  <h3>{featuresHeading}</h3>
-                  <ul class="product-features">
-                    {features.map((feature) => (
-                      <li>{feature}</li>
-                    ))}
-                  </ul>
-                </div>
-              )
-            }
+            {features.length > 0 && (
+              <div>
+                <h3>{featuresHeading}</h3>
+                <ul class="product-features">
+                  {features.map((feature) => (
+                    <li>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-            {
-              specifications.length > 0 && (
-                <div>
-                  <h3>{specsHeading}</h3>
-                  <dl class="product-specs">
-                    {specifications.map((spec) => (
-                      <div>
-                        <dt>{spec.label}</dt>
-                        <dd>{spec.value}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                </div>
-              )
-            }
+            {specifications.length > 0 && (
+              <div>
+                <h3>{specsHeading}</h3>
+                <dl class="product-specs">
+                  {specifications.map((spec) => (
+                    <div>
+                      <dt>{spec.label}</dt>
+                      <dd>{spec.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            )}
           </div>
         </section>
       )
@@ -200,21 +210,23 @@ const {
       )
     }
 
-    {
-      note && (
-        <p class="product-note">
-          {note}
-        </p>
-      )
-    }
+    {note && <p class="product-note">{note}</p>}
   </div>
 </section>
 
 <style>
   .product-detail {
     background:
-      radial-gradient(circle at top left, color-mix(in srgb, var(--color-bg-brand) 12%, transparent), transparent 42%),
-      linear-gradient(180deg, var(--color-bg-base) 0%, color-mix(in srgb, var(--color-bg-subtle) 70%, var(--color-bg-base)) 100%);
+      radial-gradient(
+        circle at top left,
+        color-mix(in srgb, var(--color-bg-brand) 12%, transparent),
+        transparent 42%
+      ),
+      linear-gradient(
+        180deg,
+        var(--color-bg-base) 0%,
+        color-mix(in srgb, var(--color-bg-subtle) 70%, var(--color-bg-base)) 100%
+      );
     color: var(--color-text);
     padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
   }
@@ -237,8 +249,7 @@ const {
   }
 
   .product-media-frame {
-    background:
-      linear-gradient(180deg, #f7f8fa 0%, #eef1f5 100%);
+    background: linear-gradient(180deg, #f7f8fa 0%, #eef1f5 100%);
     border: 1px solid var(--color-border);
     display: grid;
     overflow: hidden;

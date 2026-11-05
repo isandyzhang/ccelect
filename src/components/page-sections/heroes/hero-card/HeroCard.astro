@@ -10,6 +10,7 @@ import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Text from "@core-elements/text/Text.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import { getCollection } from "astro:content";
+import { isPublished } from "../../../../utils/published";
 
 const {
   id = "",
@@ -43,7 +44,7 @@ let finalCard = { ...card };
 
 // If usePost is true, fetch the post and override card fields
 if (card.usePost && card.post) {
-  const blogPosts = await getCollection("blog");
+  const blogPosts = await getCollection("blog", isPublished);
 
   // Extract slug from the post path (handle both full paths and slugs)
   let postSlug = card.post;

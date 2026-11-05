@@ -1,8 +1,9 @@
 import { getCollection } from "astro:content";
+import { isPublished } from "./published";
 
 /** Blog posts newest-first (for index and tag archives). */
 export async function getBlogPostsSortedByDate() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("blog", isPublished);
 
   return posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 }
@@ -13,7 +14,7 @@ export async function loadBlogPageContext() {
   let heroSections: any[] = [];
 
   try {
-    const pages = await getCollection("pages");
+    const pages = await getCollection("pages", isPublished);
 
     blogPage = pages.find((p: any) => p.id === "blog");
 

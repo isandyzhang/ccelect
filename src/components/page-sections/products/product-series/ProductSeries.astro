@@ -1,4 +1,9 @@
 ---
+import ProductBreadcrumb from "../ProductBreadcrumb.astro";
+import { contactHref, experienceText, localeFromPath } from "@i18n/experience";
+
+const messages = experienceText[localeFromPath(Astro.url.pathname)];
+
 import Image from "@core-elements/image/Image.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 import ProductsSide from "@navigation/products-side/ProductsSide.astro";
@@ -43,28 +48,32 @@ const {
   image,
   imageAlt = heading,
   images = [],
-  featuresHeading = "功能",
+  featuresHeading = messages.features,
   features = [],
-  detailsLabel = "詳情",
-  productsHeading = "商品列表",
-  applicationsLabel = "應用場景圖片",
+  detailsLabel = messages.details,
+  productsHeading = messages.products,
+  applicationsLabel = messages.applications,
   applicationImages = [],
-  videosLabel = "影片",
+  videosLabel = messages.videos,
   videos = [],
-  projectsLabel = "工程實績",
+  projectsLabel = messages.projects,
   projects = [],
   items = [],
-  helpHeading = "需要技術支援或報價嗎？我們隨時為您服務。",
+  helpHeading = messages.contact,
   helpText = "",
-  primaryCta = { text: "聯絡我們", href: "/contact/" },
+  primaryCta = { text: messages.contact, href: "/contact/" },
   secondaryCta,
-  countLabel = "共 {count} 個商品",
+  countLabel = messages.itemCount,
 } = Astro.props as Props;
+
+const localizedContact = (href: string) => contactHref(Astro.url.pathname, href);
 
 const gallery: ProductSeriesGalleryItem[] =
   images.length > 0 ? images : image ? [{ image, imageAlt }] : [];
 
 const itemCountLabel = countLabel.replace("{count}", String(items.length));
+
+const tabsId = `series-${crypto.randomUUID()}`;
 
 const tabs = [
   { id: "products", label: productsHeading },
@@ -80,19 +89,20 @@ const tabs = [
   data-theme="light"
 >
   <div class="product-series-shell">
+    <ProductBreadcrumb heading={heading} />
     <details
       class="series-sidebar"
       open
     >
       <summary>
-        <span>瀏覽商品分類</span>
+        <span>{messages.browse}</span>
         <Icon
           name="chevron-down"
           size="none"
           aria-hidden="true"
         />
       </summary>
-      <div class="series-sidebar-heading">商品櫥窗</div>
+      <div class="series-sidebar-heading">{messages.products}</div>
       <ProductsSide />
     </details>
 
@@ -108,7 +118,7 @@ const tabs = [
                 class="series-gallery-track"
                 data-series-track
               >
-                {gallery.map((item) => (
+                {gallery.map((item, index) => (
                   <figure class="series-gallery-slide">
                     <div class="series-media-frame">
                       <Image
@@ -117,57 +127,57 @@ const tabs = [
                         alt={item.imageAlt || heading}
                         aspectRatio="square"
                         sizes="(max-width: 900px) 100vw, 42vw"
+                        priority={index === 0}
                       />
                     </div>
                     {item.caption && <figcaption>{item.caption}</figcaption>}
                   </figure>
                 ))}
               </div>
-              {
-                gallery.length > 1 && (
-                  <>
-                    <div class="series-gallery-nav">
-                      <button
-                        type="button"
-                        data-gallery-prev
-                        aria-label="上一張"
-                      >
-                        <Icon
-                          name="chevron-left"
-                          size="none"
-                          aria-hidden="true"
-                        />
-                      </button>
-                      <button
-                        type="button"
-                        data-gallery-next
-                        aria-label="下一張"
-                      >
-                        <Icon
-                          name="chevron-right"
-                          size="none"
-                          aria-hidden="true"
-                        />
-                      </button>
-                    </div>
-                    <div
-                      class="series-gallery-dots"
-                      data-series-dots
-                      role="tablist"
-                      aria-label="圖片切換"
+              {gallery.length > 1 && (
+                <>
+                  <div class="series-gallery-nav">
+                    <button
+                      type="button"
+                      data-gallery-prev
+                      aria-label={messages.previous}
                     >
-                      {gallery.map((_, index) => (
-                        <button
-                          type="button"
-                          class:list={["series-gallery-dot", index === 0 && "is-active"]}
-                          aria-label={`第 ${index + 1} 張圖片`}
-                          data-index={index}
-                        />
-                      ))}
-                    </div>
-                  </>
-                )
-              }
+                      <Icon
+                        name="chevron-left"
+                        size="none"
+                        aria-hidden="true"
+                      />
+                    </button>
+                    <button
+                      type="button"
+                      data-gallery-next
+                      aria-label={messages.next}
+                    >
+                      <Icon
+                        name="chevron-right"
+                        size="none"
+                        aria-hidden="true"
+                      />
+                    </button>
+                  </div>
+                  <div
+                    class="series-gallery-dots"
+                    data-series-dots
+                    role="group"
+                    aria-label={messages.image}
+                  >
+                    {gallery.map((_, index) => (
+                      <button
+                        type="button"
+                        class:list={["series-gallery-dot", index === 0 && "is-active"]}
+                        aria-label={`${messages.image} ${index + 1}`}
+                        aria-pressed={index === 0}
+                        data-index={index}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           )
         }
@@ -182,7 +192,7 @@ const tabs = [
       <div
         class="series-tabs"
         role="tablist"
-        aria-label="系列資訊"
+        aria-label={messages.series}
         data-series-tabs
       >
         {
@@ -191,6 +201,9 @@ const tabs = [
               type="button"
               class:list={[index === 0 && "is-active"]}
               role="tab"
+              id={`${tabsId}-tab-${tab.id}`}
+              aria-controls={`${tabsId}-panel-${tab.id}`}
+              tabindex={index === 0 ? 0 : -1}
               aria-selected={index === 0 ? "true" : "false"}
               data-tab={tab.id}
             >
@@ -207,6 +220,9 @@ const tabs = [
         <section
           class="series-panel series-products is-active"
           data-panel="products"
+          id={`${tabsId}-panel-products`}
+          aria-labelledby={`${tabsId}-tab-products`}
+          tabindex="0"
           role="tabpanel"
         >
           <div class="series-products-head">
@@ -219,12 +235,12 @@ const tabs = [
                 {items.map((item) => (
                   <ProductCatalogCard
                     item={item}
-                    fallbackHref={primaryCta.href}
+                    fallbackHref={localizedContact(primaryCta.href)}
                   />
                 ))}
               </div>
             ) : (
-              <p class="series-empty">DUMMY：商品列表待補。</p>
+              <p class="series-empty">{messages.pending}</p>
             )
           }
         </section>
@@ -232,6 +248,9 @@ const tabs = [
         <section
           class="series-panel series-details"
           data-panel="details"
+          id={`${tabsId}-panel-details`}
+          aria-labelledby={`${tabsId}-tab-details`}
+          tabindex="0"
           role="tabpanel"
           hidden
         >
@@ -251,54 +270,56 @@ const tabs = [
 
         {
           applicationImages.length > 0 && (
-        <section
-          class="series-panel series-applications"
-          data-panel="applications"
-          role="tabpanel"
-          hidden
-        >
-          <h2>{applicationsLabel}</h2>
-          {
-            applicationImages.length > 0 ? (
-              <div class="series-media-grid">
-                {applicationImages.map((item) => (
-                  <figure>
-                    <div class="series-media-frame">
-                      <Image
-                        source={item.image}
-                        alt={item.imageAlt || heading}
-                        aspectRatio="landscape"
-                        sizes="(max-width: 900px) 100vw, 30vw"
-                      />
-                    </div>
-                    <figcaption>{item.caption || "DUMMY 應用場景"}</figcaption>
-                  </figure>
-                ))}
-              </div>
-            ) : (
-              <p class="series-empty">DUMMY：應用場景圖片待補。</p>
-            )
-          }
-        </section>
+            <section
+              class="series-panel series-applications"
+              data-panel="applications"
+              id={`${tabsId}-panel-applications`}
+              aria-labelledby={`${tabsId}-tab-applications`}
+              tabindex="0"
+              role="tabpanel"
+              hidden
+            >
+              <h2>{applicationsLabel}</h2>
+              {applicationImages.length > 0 ? (
+                <div class="series-media-grid">
+                  {applicationImages.map((item) => (
+                    <figure>
+                      <div class="series-media-frame">
+                        <Image
+                          source={item.image}
+                          alt={item.imageAlt || heading}
+                          aspectRatio="landscape"
+                          sizes="(max-width: 900px) 100vw, 30vw"
+                        />
+                      </div>
+                      <figcaption>{item.caption || "DUMMY 應用場景"}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              ) : (
+                <p class="series-empty">DUMMY：應用場景圖片待補。</p>
+              )}
+            </section>
           )
         }
 
         {
           videos.length > 0 && (
-        <section
-          class="series-panel series-videos"
-          data-panel="videos"
-          role="tabpanel"
-          hidden
-        >
-          <h2>{videosLabel}</h2>
-          {
-            videos.length > 0 ? (
-              <div class="series-media-grid">
-                {videos.map((video) => (
-                  <article class="series-video-card">
-                    {
-                      video.videoId ? (
+            <section
+              class="series-panel series-videos"
+              data-panel="videos"
+              id={`${tabsId}-panel-videos`}
+              aria-labelledby={`${tabsId}-tab-videos`}
+              tabindex="0"
+              role="tabpanel"
+              hidden
+            >
+              <h2>{videosLabel}</h2>
+              {videos.length > 0 ? (
+                <div class="series-media-grid">
+                  {videos.map((video) => (
+                    <article class="series-video-card">
+                      {video.videoId ? (
                         <lite-youtube
                           class="series-video-embed"
                           videoid={video.videoId}
@@ -323,66 +344,72 @@ const tabs = [
                           ) : (
                             <span>DUMMY VIDEO</span>
                           )}
-                          <span class="series-video-play" aria-hidden="true">
+                          <span
+                            class="series-video-play"
+                            aria-hidden="true"
+                          >
                             <Icon
                               name="play-circle"
                               size="none"
                             />
                           </span>
                         </div>
-                      )
-                    }
-                    <div class="series-video-copy">
-                      <h3>{video.title}</h3>
-                      {video.description && <p>{video.description}</p>}
-                      <a href={video.href || "#"}>{video.linkText || (video.href ? "觀看影片" : "DUMMY 連結")}</a>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            ) : (
-              <p class="series-empty">DUMMY：影片內容待補。</p>
-            )
-          }
-        </section>
+                      )}
+                      <div class="series-video-copy">
+                        <h3>{video.title}</h3>
+                        {video.description && <p>{video.description}</p>}
+                        <a href={video.href || "#"}>
+                          {video.linkText || (video.href ? "觀看影片" : "DUMMY 連結")}
+                        </a>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              ) : (
+                <p class="series-empty">DUMMY：影片內容待補。</p>
+              )}
+            </section>
           )
         }
 
         {
           projects.length > 0 && (
-        <section
-          class="series-panel series-projects"
-          data-panel="projects"
-          role="tabpanel"
-          hidden
-        >
-          <h2>{projectsLabel}</h2>
-          {
-            projects.length > 0 ? (
-              <div class="series-media-grid">
-                {projects.map((project) => (
-                  <article class="series-project-card">
-                    <div class="series-media-frame">
-                      <Image
-                        source={project.image || "/src/assets/images/ccelect/dummy/product-5.svg"}
-                        alt={project.imageAlt || project.title}
-                        aspectRatio="landscape"
-                        sizes="(max-width: 900px) 100vw, 30vw"
-                      />
-                    </div>
-                    <div class="series-project-copy">
-                      <h3>{project.title}</h3>
-                      {project.description && <p>{project.description}</p>}
-                      <a href={project.href || "/projects/"}>{project.href ? "查看實績" : "DUMMY 實績"}</a>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            ) : (
-              <p class="series-empty">DUMMY：工程實績待補。</p>
-            )
-          }
-        </section>
+            <section
+              class="series-panel series-projects"
+              data-panel="projects"
+              id={`${tabsId}-panel-projects`}
+              aria-labelledby={`${tabsId}-tab-projects`}
+              tabindex="0"
+              role="tabpanel"
+              hidden
+            >
+              <h2>{projectsLabel}</h2>
+              {projects.length > 0 ? (
+                <div class="series-media-grid">
+                  {projects.map((project) => (
+                    <article class="series-project-card">
+                      <div class="series-media-frame">
+                        <Image
+                          source={project.image || "/src/assets/images/ccelect/dummy/product-5.svg"}
+                          alt={project.imageAlt || project.title}
+                          aspectRatio="landscape"
+                          sizes="(max-width: 900px) 100vw, 30vw"
+                        />
+                      </div>
+                      <div class="series-project-copy">
+                        <h3>{project.title}</h3>
+                        {project.description && <p>{project.description}</p>}
+                        <a href={project.href || "/projects/"}>
+                          {project.href ? "查看實績" : "DUMMY 實績"}
+                        </a>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              ) : (
+                <p class="series-empty">DUMMY：工程實績待補。</p>
+              )}
+            </section>
           )
         }
       </div>
@@ -398,7 +425,7 @@ const tabs = [
         <div class="series-help-actions">
           <a
             class="series-cta-primary"
-            href={primaryCta.href}
+            href={localizedContact(primaryCta.href)}
           >
             {primaryCta.text}
             <Icon
@@ -411,7 +438,7 @@ const tabs = [
             secondaryCta && (
               <a
                 class="series-cta-secondary"
-                href={secondaryCta.href}
+                href={localizedContact(secondaryCta.href)}
               >
                 {secondaryCta.text}
               </a>
@@ -443,6 +470,7 @@ const tabs = [
         activeIndex = index;
         dots.forEach((dot, i) => {
           dot.classList.toggle("is-active", i === index);
+          dot.setAttribute("aria-pressed", String(i === index));
         });
       };
 
@@ -450,7 +478,7 @@ const tabs = [
         const nextIndex = (index + slides.length) % slides.length;
         const slide = slides[nextIndex];
         if (!slide) return;
-        track.scrollTo({ left: slide.offsetLeft, behavior: "smooth" });
+        track.scrollTo({ left: slide.offsetLeft - slides[0].offsetLeft, behavior: "smooth" });
         setActive(nextIndex);
       };
 
@@ -491,7 +519,7 @@ const tabs = [
       const endDrag = (event: PointerEvent) => {
         if (!isDragging) return;
         isDragging = false;
-        track.releasePointerCapture(event.pointerId);
+        if (track.hasPointerCapture(event.pointerId)) track.releasePointerCapture(event.pointerId);
         const index = Math.round(track.scrollLeft / Math.max(track.clientWidth, 1));
         goTo(index);
       };
@@ -499,6 +527,18 @@ const tabs = [
       track.addEventListener("pointerup", endDrag);
       track.addEventListener("pointercancel", endDrag);
 
+      gallery.tabIndex = 0;
+      gallery.addEventListener("keydown", (event) => {
+        if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+        event.preventDefault();
+        goTo(
+          event.key === "Home"
+            ? 0
+            : event.key === "End"
+              ? slides.length - 1
+              : activeIndex + (event.key === "ArrowRight" ? 1 : -1)
+        );
+      });
       gallery.dataset.ready = "true";
     });
   }
@@ -518,6 +558,7 @@ const tabs = [
           const active = tab.dataset.tab === name;
           tab.classList.toggle("is-active", active);
           tab.setAttribute("aria-selected", active ? "true" : "false");
+          tab.tabIndex = active ? 0 : -1;
         });
 
         panels.forEach((panel) => {
@@ -533,6 +574,20 @@ const tabs = [
         });
       });
 
+      tablist.addEventListener("keydown", (event) => {
+        if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+        const current = Array.from(tabs).indexOf(document.activeElement as HTMLButtonElement);
+        if (current < 0) return;
+        event.preventDefault();
+        const index =
+          event.key === "Home"
+            ? 0
+            : event.key === "End"
+              ? tabs.length - 1
+              : (current + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+        activate(tabs[index].dataset.tab || "products");
+        tabs[index].focus();
+      });
       tablist.dataset.ready = "true";
     });
   }

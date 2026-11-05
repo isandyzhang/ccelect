@@ -1,26 +1,22 @@
 ---
 _schema: default
 permalink:
-title: Search
-description: >-
-  Static Pagefind search across pages and posts—filter by type with no backend.
+title: Site search
+description: Find CCElect products, grounding materials and technical articles.
 pageSections:
   - _component: page-sections/search/search-section
     id:
-    heading: How can we help?
+    heading: Find products and technical information
     headingSize: 2xl
-    subtext: >-
-      Deep dives into infrastructure, operational excellence, and the future of
-      the edge-first web.
+    subtext: Search by model, grounding material or installation keyword.
     placeholder: Search
     buttonText: Search
     filters:
-      - label: Website (All)
+      - label: All content
         type: ''
-      - label: Blog
+      - label: Technical articles
         type: Article
     resultsPerPage: 10
-    unavailableMessage: Search is unavailable right now. Please try again later.
     maxContentWidth: 2xl
     paddingVertical: 2xl
     colorScheme: light

@@ -1,0 +1,67 @@
+---
+import { getCollection } from "astro:content";
+import { localizedHref, pageKeyFromContentId, parseLocaleId } from "@i18n/config";
+import { experienceText, localeFromPath } from "@i18n/experience";
+import { isPublished } from "../../../utils/published";
+
+const { heading } = Astro.props;
+const locale = localeFromPath(Astro.url.pathname);
+const messages = experienceText[locale];
+const currentPath = Astro.url.pathname.replace(/\/?$/, "/");
+const pages = await getCollection("pages", isPublished);
+const ancestors = pages
+  .flatMap((page) => {
+    const parsed = parseLocaleId(page.id);
+    const key = pageKeyFromContentId(parsed.rest);
+    const href = localizedHref(locale, key);
+
+    return parsed.locale === locale &&
+      key.startsWith("products") &&
+      href !== currentPath &&
+      currentPath.startsWith(href)
+      ? [{ href, title: page.data.title || key }]
+      : [];
+  })
+  .sort((a, b) => a.href.length - b.href.length);
+---
+
+<nav
+  class="product-breadcrumb"
+  aria-label={messages.products}
+>
+  <ol>
+    {
+      ancestors.map((item) => (
+        <li>
+          <a href={item.href}>{item.title}</a>
+        </li>
+      ))
+    }
+    <li aria-current="page">{heading}</li>
+  </ol>
+</nav>
+
+<style>
+  .product-breadcrumb {
+    grid-column: 1 / -1;
+    margin-bottom: var(--spacing-lg);
+  }
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-sm);
+  }
+  li + li::before {
+    content: "/";
+    margin-inline-end: 0.5rem;
+    color: var(--color-text-muted);
+  }
+  a {
+    color: var(--color-text-strong);
+    text-underline-offset: 0.2em;
+  }
+</style>

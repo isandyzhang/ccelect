@@ -210,9 +210,7 @@ function navFullName(item) {
                                       <a
                                         href={grandChild.path}
                                         aria-label={
-                                          grandChild.hint
-                                            ? navFullName(grandChild)
-                                            : undefined
+                                          grandChild.hint ? navFullName(grandChild) : undefined
                                         }
                                         aria-current={
                                           isCurrentPage(grandChild) ? "page" : undefined
@@ -242,9 +240,7 @@ function navFullName(item) {
                           >
                             <span class="nav-item-label">
                               {child.name}
-                              {child.hint ? (
-                                <span class="nav-item-hint">{child.hint}</span>
-                              ) : null}
+                              {child.hint ? <span class="nav-item-hint">{child.hint}</span> : null}
                             </span>
                           </a>
                         </li>
@@ -288,31 +284,25 @@ function navFullName(item) {
       if (navElement.dataset.sideInitialized === "true") return;
       navElement.dataset.sideInitialized = "true";
 
-      // Handle radio button changes
-      sideNav.querySelectorAll(".nav-item-toggle").forEach((toggle) => {
-        toggle.addEventListener("change", (e) => {
-          const target = e.target;
-          const content = document.getElementById(target.getAttribute("aria-controls") || "");
-          const toggleBtn = sideNav.querySelector(`label.nav-item-toggle-btn[for="${target.id}"]`);
-          const rowLabel = sideNav.querySelector(
-            `label.nav-item-trigger:not(.nav-item-toggle-btn)[for="${target.id}"]`
-          );
-
-          if (content) {
-            const isOpen = target.checked;
-
-            target.setAttribute("aria-expanded", isOpen.toString());
-            content.setAttribute("aria-hidden", (!isOpen).toString());
-
-            if (toggleBtn) {
-              toggleBtn.setAttribute("aria-expanded", isOpen.toString());
-            }
-            if (rowLabel) {
-              rowLabel.setAttribute("aria-expanded", isOpen.toString());
-            }
+      const sync = () => {
+        sideNav.querySelectorAll<HTMLInputElement>(".nav-item-toggle").forEach((toggle) => {
+          const panel = document.getElementById(toggle.getAttribute("aria-controls") || "");
+          toggle.setAttribute("aria-expanded", String(toggle.checked));
+          if (panel) {
+            panel.inert = !toggle.checked;
+            panel.setAttribute("aria-hidden", String(!toggle.checked));
           }
+          sideNav.querySelectorAll<HTMLElement>("label[for]").forEach((label) => {
+            if (label.getAttribute("for") !== toggle.id) return;
+            label.setAttribute("role", "button");
+            label.setAttribute("aria-expanded", String(toggle.checked));
+          });
         });
-      });
+      };
+      sideNav
+        .querySelectorAll(".nav-item-toggle")
+        .forEach((toggle) => toggle.addEventListener("change", sync));
+      sync();
 
       function bindTriggerHandlers(trigger) {
         trigger.addEventListener("click", (e) => {

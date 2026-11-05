@@ -1,26 +1,22 @@
 ---
 _schema: default
 permalink:
-title: Search
-description: >-
-  Static Pagefind search across pages and posts—filter by type with no backend.
+title: サイト内検索
+description: 集集電の製品・接地材料・技術情報を検索できます。
 pageSections:
   - _component: page-sections/search/search-section
     id:
-    heading: How can we help?
+    heading: 製品・技術情報を検索
     headingSize: 2xl
-    subtext: >-
-      Deep dives into infrastructure, operational excellence, and the future of
-      the edge-first web.
-    placeholder: Search
-    buttonText: Search
+    subtext: 型番、接地材料、施工に関するキーワードで検索してください。
+    placeholder: 検索
+    buttonText: 検索
     filters:
-      - label: Website (All)
+      - label: すべての内容
         type: ''
-      - label: Blog
+      - label: 技術記事
         type: Article
     resultsPerPage: 10
-    unavailableMessage: Search is unavailable right now. Please try again later.
     maxContentWidth: 2xl
     paddingVertical: 2xl
     colorScheme: light

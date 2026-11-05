@@ -18,6 +18,7 @@ const permalinkOrPath = ({ entry, data }: { entry: string; data: Record<string, 
     : entry.replace(/\.mdx?$/, "");
 
 const pageSchema = z.object({
+  draft: z.boolean().default(false),
   url: z.string().optional(),
   permalink: z.string().optional().nullable(),
   title: z.string().optional().nullable(),
@@ -127,6 +128,7 @@ const docsComponentsCollection = defineCollection({
 });
 
 const blogPostSchema = z.object({
+  draft: z.boolean().default(false),
   permalink: z.string().optional().nullable(),
   title: z.string(),
   description: z.string(),

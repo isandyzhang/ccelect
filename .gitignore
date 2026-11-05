@@ -37,3 +37,7 @@ scripts/assets/hero-ignition/work/
 scripts/assets/hero-ignition/check_*.jpg
 scripts/assets/hero-ignition/ref_*.jpg
 scripts/assets/hero-ignition/loopcand_*.jpg
+
+# Browser regression artifacts
+/test-results/
+/playwright-report/

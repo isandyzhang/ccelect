@@ -15,10 +15,12 @@ import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import Card from "@wrappers/card/Card.astro";
 import { getCollection } from "astro:content";
+import { BLOG_PAGE_SIZE } from "@i18n/availablePages";
+import { isPublished } from "../../../../../utils/published";
 
 export async function getStaticPaths({ paginate }) {
   const locale: Locale = "ja";
-  const blogPosts = (await getCollection("blog"))
+  const blogPosts = (await getCollection("blog", isPublished))
     .filter((p) => parseLocaleId(p.id).locale === locale)
     .sort((a: any, b: any) => b.data.date.getTime() - a.data.date.getTime());
 
@@ -30,7 +32,7 @@ export async function getStaticPaths({ paginate }) {
     const filteredPosts = blogPosts.filter((post: any) => post.data.tag === tag);
 
     return paginate(filteredPosts, {
-      pageSize: 8,
+      pageSize: BLOG_PAGE_SIZE,
       params: { tag },
       props: { selectedTag: tag, allTags, locale },
     });
@@ -45,7 +47,7 @@ const locale: Locale = Astro.props.locale || "ja";
 let blogPage: any;
 
 try {
-  const pages = await getCollection("pages");
+  const pages = await getCollection("pages", isPublished);
 
   blogPage = pages.find((p: any) => p.id === `${locale}/blog`);
 } catch {}

@@ -15,7 +15,6 @@ class ProductShowcase extends HTMLElement {
     const chapters = Array.from(this.querySelectorAll<HTMLButtonElement>("[data-chapter]"));
     const play = this.querySelector<HTMLButtonElement>('[data-action="play"]')!;
     const progress = this.querySelector<HTMLElement>(".playback-track span")!;
-    const motion = matchMedia("(prefers-reduced-motion: reduce)");
     const starts = [0, 2800, 5300, 7800];
     const duration = 11000;
     let elapsed = 0;
@@ -77,14 +76,14 @@ class ProductShowcase extends HTMLElement {
           panel.hidden = view !== "video";
           experience.hidden = view !== "experience";
           buttons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
-          if (view === "experience" && !motion.matches) start();
+          if (view === "experience") start();
           if (view === "video") {
             error.hidden = true;
             if (!video.getAttribute("src")) {
               video.src = video.dataset.src!;
               video.load();
             }
-            if (!motion.matches) void video.play().catch(() => {});
+            void video.play().catch(() => {});
           }
         },
         { signal }
@@ -106,7 +105,6 @@ class ProductShowcase extends HTMLElement {
       stop();
       video.pause();
     };
-    motion.addEventListener("change", suspend, { signal });
     video.addEventListener(
       "error",
       () => {

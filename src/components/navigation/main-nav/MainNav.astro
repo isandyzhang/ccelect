@@ -20,6 +20,7 @@ const {
   homeHref = "/",
   locale = defaultLocale as Locale,
   pageKey = "",
+  availablePages = {},
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
   _component,
@@ -67,6 +68,7 @@ const mobileNavData = [
     <LanguageSwitcher
       locale={locale}
       pageKey={pageKey}
+      availablePages={availablePages}
     />
     {themeToggle && <ThemeToggle />}
     <ButtonGroup
@@ -91,7 +93,7 @@ const mobileNavData = [
 
 <script>
   import { onPageLoad } from "@components/utils/onPageLoad";
-  import { isLocale, localeNames, localizedHref } from "@i18n/config";
+  import { isLocale, localeNames } from "@i18n/config";
 
   function syncPersistedMainNav() {
     const navRoot = document.querySelector(".main-nav");
@@ -99,23 +101,30 @@ const mobileNavData = [
     if (!(navRoot instanceof HTMLElement)) return;
 
     const pathname = window.location.pathname;
-    const pageKey = document.querySelector<HTMLMetaElement>('meta[name="page-key"]')?.content ?? "";
+    const availablePages = JSON.parse(
+      document.querySelector<HTMLMetaElement>('meta[name="available-pages"]')?.content || "{}"
+    );
     const siteLocale =
       document.querySelector<HTMLMetaElement>('meta[name="site-locale"]')?.content ?? "zh-tw";
 
     document
-      .querySelectorAll<HTMLAnchorElement>(".main-nav a[href], .mobile-main-nav a[href]")
+      .querySelectorAll<HTMLAnchorElement>(
+        ".main-nav a[href], .main-nav .language-menu a[data-locale], .mobile-main-nav a[href]"
+      )
       .forEach((link) => {
         const href = link.getAttribute("href");
-
-        if (!href || href.startsWith("#") || href.includes("mailto:")) return;
 
         if (link.closest(".language-menu")) {
           const locale = link.dataset.locale;
 
           if (!locale || !isLocale(locale)) return;
 
-          link.href = localizedHref(locale, pageKey);
+          const href = availablePages[locale];
+          if (href) link.href = href;
+          else link.removeAttribute("href");
+          link.setAttribute("aria-disabled", String(!href));
+          if (href) link.removeAttribute("tabindex");
+          else link.tabIndex = -1;
           const isActive = locale === siteLocale;
 
           link.classList.toggle("is-active", isActive);
@@ -134,6 +143,8 @@ const mobileNavData = [
 
           return;
         }
+
+        if (!href || href.startsWith("#") || href.includes("mailto:")) return;
 
         const linkPath = new URL(href, window.location.origin).pathname;
 

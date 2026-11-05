@@ -12,6 +12,7 @@ import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import Card from "@wrappers/card/Card.astro";
 import Split from "@wrappers/split/Split.astro";
 import { getCollection, render, type CollectionEntry } from "astro:content";
+import { isPublished } from "../../utils/published";
 
 const buildingBlocksImports = import.meta.glob("../../components/building-blocks/**/*.astro", {
   eager: true,
@@ -29,7 +30,7 @@ Object.entries(componentImports).forEach(([path, module]) => {
 });
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("blog", isPublished);
   const locale: Locale = "zh-tw";
 
   return posts
@@ -57,7 +58,7 @@ const date = post.data.date.toLocaleDateString(dateLocale(locale), {
   day: "numeric",
 });
 
-const allPosts = await getCollection("blog");
+const allPosts = await getCollection("blog", isPublished);
 const recentPosts = allPosts
   .filter((p) => parseLocaleId(p.id).locale === locale && p.id !== post.id)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())

@@ -6,6 +6,7 @@ import ThemeToggleScript from "@components/navigation/theme-toggle/ThemeToggleSc
 import MainComponent from "@components/utils/MainComponent.astro";
 import type { Locale } from "@i18n/config";
 import { defaultLocale, localizedHref } from "@i18n/config";
+import { alternatePages } from "@i18n/availablePages";
 import { getFooter, getMainNav } from "@i18n/loadData";
 import Layout from "@layouts/BaseLayout.astro";
 
@@ -37,12 +38,15 @@ const {
   pageKey = "",
 } = Astro.props as Props;
 
+const availablePages = await alternatePages(Astro.url.pathname);
+
 const mainNav = {
   ...getMainNav(locale),
   ...(mainNavProp || {}),
   homeHref: localizedHref(locale, ""),
   locale,
   pageKey,
+  availablePages,
 };
 
 const footer = footerProp || getFooter(locale);
@@ -81,6 +85,11 @@ const sections = frontmatter?.pageSections ?? [];
     content={locale}
     slot="head"
   />
+  <meta
+    name="available-pages"
+    content={JSON.stringify(availablePages)}
+    slot="head"
+  />
   <MainNavigation
     transition:persist={`site-main-nav-${locale}`}
     {...mainNav}
@@ -90,7 +99,7 @@ const sections = frontmatter?.pageSections ?? [];
   <main
     transition:name="page-main"
     transition:animate={fade({ duration: "0.2s" })}
-    {...disablePagefind ? { "data-pagefind-ignore": "all" } : {}}
+    {...disablePagefind ? { "data-pagefind-ignore": "all" } : { "data-pagefind-body": true }}
   >
     {
       sections.length > 0 && (
@@ -103,7 +112,7 @@ const sections = frontmatter?.pageSections ?? [];
         </div>
       )
     }
-    <div {...disablePagefind ? {} : { "data-pagefind-body": true }}>
+    <div>
       <slot />
     </div>
   </main>

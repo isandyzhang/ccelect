@@ -9,8 +9,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "cross-env DISABLE_COMPONENT_DOCS=true astro build",
-    "build:with-docs": "astro build",
+    "build": "cross-env DISABLE_COMPONENT_DOCS=true astro build && npm run search:index",
+    "build:with-docs": "astro build && npm run search:index",
     "preview": "astro preview",
     "astro": "astro",
     "check": "npm run lint && npm run format",
@@ -26,7 +26,9 @@
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "deps:sync": "rm -rf node_modules && npm install --os=linux --cpu=x64 --libc=glibc --ignore-scripts --no-audit && npm ci",
-    "deps:check": "npm ci --dry-run"
+    "deps:check": "npm ci --dry-run",
+    "search:index": "pagefind --site dist",
+    "test:ux": "playwright test"
   },
   "dependencies": {
     "@astrojs/compiler-rs": "^0.1.10",
@@ -58,6 +60,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@playwright/test": "1.58.2",
     "@types/markdown-it": "^14.1.2",
     "@types/three": "^0.186.0",
     "@typescript-eslint/eslint-plugin": "^8.59.1",
@@ -68,6 +71,7 @@
     "eslint-plugin-jsonc": "^3.1.2",
     "eslint-plugin-yml": "^3.3.1",
     "jsonc-eslint-parser": "^3.1.0",
+    "pagefind": "1.6.0",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
     "stylelint": "^17.9.1",

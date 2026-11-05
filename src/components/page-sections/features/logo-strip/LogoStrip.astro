@@ -211,31 +211,11 @@ const {
       }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      .logo-strip-track[data-animate="true"] {
-        animation: none;
-      }
-      .logo-strip-grid[data-animate="true"] {
-        -webkit-mask-image: none;
-        mask-image: none;
-        overflow-x: auto;
-      }
-    }
   }
 </style>
 <script>
   (() => {
     const viewports = document.querySelectorAll("[data-logo-strip-viewport]");
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      viewports.forEach((viewport) => {
-        const track = viewport.querySelector("[data-logo-strip-track]");
-        if (!track) return;
-        viewport.setAttribute("data-animate", "false");
-        track.setAttribute("data-animate", "false");
-      });
-      return;
-    }
 
     viewports.forEach((viewport) => {
       const track = viewport.querySelector("[data-logo-strip-track]");

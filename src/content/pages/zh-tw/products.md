@@ -10,6 +10,8 @@ keywords:
   - 接地材料
   - 避雷組件
 pageSections:
+  - _component: page-sections/products/product-breadcrumb
+    heading: 商品櫥窗
   - _component: page-sections/builders/custom-section
     id: products-layout
     maxContentWidth: 3xl
@@ -29,7 +31,7 @@ pageSections:
           - _component: navigation/products-side
         secondColumnContentSections:
           - _component: building-blocks/core-elements/heading
-            level: h2
+            level: h1
             size: lg
             alignmentHorizontal: start
             text: 商品櫥窗

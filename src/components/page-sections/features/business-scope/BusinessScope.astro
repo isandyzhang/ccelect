@@ -282,14 +282,7 @@ function figureLabel(figure: string | number | undefined, index: number) {
     observers.forEach((observer) => observer.disconnect());
     observers = [];
 
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
     document.querySelectorAll<HTMLElement>("[data-business-scope]").forEach((section) => {
-      if (reduce) {
-        section.classList.add("is-inview");
-        return;
-      }
-
       if (section.classList.contains("is-inview")) return;
 
       const observer = new IntersectionObserver(
@@ -567,37 +560,6 @@ function figureLabel(figure: string | number | undefined, index: number) {
 
     .scope-figure + .scope-figure {
       border-inline-start: 1px solid var(--scope-line);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .draw,
-    .is-inview .draw {
-      stroke-dashoffset: 0;
-      transition: none;
-    }
-
-    .lid,
-    .pulse,
-    .sheet,
-    .is-inview .lid,
-    .is-inview .pulse,
-    .is-hover-motion .scope-figure:hover .draw,
-    .is-hover-motion .scope-figure:focus-within .draw,
-    .is-hover-motion .scope-figure:hover .pulse,
-    .is-hover-motion .scope-figure:focus-within .pulse,
-    .is-hover-motion .scope-figure:hover .lid,
-    .is-hover-motion .scope-figure:focus-within .lid,
-    .is-hover-motion .scope-figure:hover .sheet,
-    .is-hover-motion .scope-figure:focus-within .sheet,
-    .is-hover-motion .scope-figure:hover .scope-art svg,
-    .is-hover-motion .scope-figure:focus-within .scope-art svg {
-      animation: none;
-      transform: none;
-    }
-
-    .pulse {
-      opacity: 0;
     }
   }
 

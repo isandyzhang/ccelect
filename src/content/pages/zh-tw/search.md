@@ -1,26 +1,22 @@
 ---
 _schema: default
 permalink:
-title: Search
-description: >-
-  Static Pagefind search across pages and posts—filter by type with no backend.
+title: 站內搜尋
+description: 搜尋集集電的產品、接地材料與技術文章。
 pageSections:
   - _component: page-sections/search/search-section
     id:
-    heading: How can we help?
+    heading: 尋找產品或技術資訊
     headingSize: 2xl
-    subtext: >-
-      Deep dives into infrastructure, operational excellence, and the future of
-      the edge-first web.
-    placeholder: Search
-    buttonText: Search
+    subtext: 輸入產品型號、接地材料或施工關鍵字，搜尋本站內容。
+    placeholder: 搜尋
+    buttonText: 搜尋
     filters:
-      - label: Website (All)
+      - label: 所有內容
         type: ''
-      - label: Blog
+      - label: 技術文章
         type: Article
     resultsPerPage: 10
-    unavailableMessage: Search is unavailable right now. Please try again later.
     maxContentWidth: 2xl
     paddingVertical: 2xl
     colorScheme: light

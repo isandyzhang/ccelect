@@ -1,4 +1,7 @@
 ---
+import { contactHref, experienceText, localeFromPath } from "@i18n/experience";
+const messages = experienceText[localeFromPath(Astro.url.pathname)];
+
 import Image from "@core-elements/image/Image.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 import type { CatalogItem } from "./types";
@@ -10,7 +13,7 @@ interface Props {
 
 const { item, fallbackHref } = Astro.props as Props;
 
-const href = item.href || fallbackHref;
+const href = contactHref(Astro.url.pathname, item.href || fallbackHref);
 const gallery =
   item.images && item.images.length > 0
     ? item.images
@@ -41,6 +44,8 @@ const gallery =
                   source={slide.image}
                   alt={slide.imageAlt || item.imageAlt || item.title}
                   aspectRatio="landscape"
+                  sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 25vw"
+                  widths={[320, 480, 640, 960]}
                 />
               </div>
             ))}
@@ -61,7 +66,7 @@ const gallery =
             type="button"
             class="catalog-card-arrow catalog-card-arrow-prev"
             data-catalog-prev
-            aria-label="上一張"
+            aria-label={messages.previous}
           >
             <Icon
               name="chevron-left"
@@ -73,7 +78,7 @@ const gallery =
             type="button"
             class="catalog-card-arrow catalog-card-arrow-next"
             data-catalog-next
-            aria-label="下一張"
+            aria-label={messages.next}
           >
             <Icon
               name="chevron-right"
@@ -84,14 +89,15 @@ const gallery =
           <div
             class="catalog-card-dots"
             data-catalog-dots
-            role="tablist"
-            aria-label={`${item.title} 圖片切換`}
+            role="group"
+            aria-label={`${item.title} — ${messages.image}`}
           >
             {gallery.map((_, index) => (
               <button
                 type="button"
                 class:list={["catalog-card-dot", index === 0 && "is-active"]}
-                aria-label={`第 ${index + 1} 張圖片`}
+                aria-label={`${messages.image} ${index + 1}`}
+                aria-pressed={index === 0}
                 data-index={index}
               />
             ))}
@@ -108,7 +114,7 @@ const gallery =
       item.specifications && (
         <ul
           class="catalog-tags"
-          aria-label="產品系列"
+          aria-label={messages.series}
         >
           {item.specifications.map((specification) => (
             <li>{specification}</li>
@@ -117,7 +123,7 @@ const gallery =
       )
     }
     <span class="catalog-card-link">
-      查看產品資訊
+      {messages.viewProduct}
       <Icon
         name="arrow-right"
         size="none"
@@ -129,7 +135,7 @@ const gallery =
     class="catalog-card-hit"
     href={href}
   >
-    <span class="sr-only">查看 {item.title}</span>
+    <span class="sr-only">{messages.viewProduct}: {item.title}</span>
   </a>
 </article>
 
@@ -154,6 +160,7 @@ const gallery =
         activeIndex = index;
         dots.forEach((dot, i) => {
           dot.classList.toggle("is-active", i === index);
+          dot.setAttribute("aria-pressed", String(i === index));
         });
       };
 
@@ -161,7 +168,7 @@ const gallery =
         const nextIndex = (index + slides.length) % slides.length;
         const slide = slides[nextIndex];
         if (!slide) return;
-        track.scrollTo({ left: slide.offsetLeft, behavior: "smooth" });
+        track.scrollTo({ left: slide.offsetLeft - slides[0].offsetLeft, behavior: "smooth" });
         setActive(nextIndex);
       };
 
@@ -189,6 +196,18 @@ const gallery =
         { passive: true }
       );
 
+      gallery.setAttribute("tabindex", "0");
+      gallery.addEventListener("keydown", (event) => {
+        if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+        event.preventDefault();
+        goTo(
+          event.key === "Home"
+            ? 0
+            : event.key === "End"
+              ? slides.length - 1
+              : activeIndex + (event.key === "ArrowRight" ? 1 : -1)
+        );
+      });
       card.dataset.galleryReady = "true";
     });
   }

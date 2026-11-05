@@ -60,21 +60,28 @@ npm run check:fix # 自動修正可修項目
 
 ### 搜尋與部署
 
-搜尋元件載入 `/pagefind/pagefind.js`。CloudCannon 透過 `.cloudcannon/postbuild` 執行索引產生；單獨執行 `npm run build` 不會執行這個 hook。在其他靜態主機或本機預覽完整搜尋時，需依序執行：
+搜尋採用固定版本的 Pagefind，`npm run build` 與 `npm run build:with-docs` 都會在 Astro 建置後執行 `npm run search:index`，產生 `dist/pagefind/`。CloudCannon postbuild 僅在索引不存在時補建，不重複產生。完整搜尋請使用建置預覽；`npm run dev` 不提供搜尋索引。
 
 ```bash
 npm run build
-npx pagefind --site dist
 npm run preview
 ```
 
-Pagefind 目前未列入 `package.json`，`npx` 可能需要下載套件。後續應固定版本並將索引產生納入共用建置指令，讓不同部署環境使用相同流程。
+聯絡頁提供電話、Email 與 LINE。`cta-form` 的 `formAction` 預設為空，未設定有效的 HTTP(S) 收件網址或站內絕對路徑時隱藏表單；本專案未提供收件 API。設定服務後仍須驗證實際收件及錯誤流程。
 
-聯絡表單目前以 POST 送至 `./`，專案內未見收件 API。部署時必須確認主機代收服務或串接表單服務，並實測成功、失敗與收件流程；只部署 `dist/` 不代表表單可以寄送。
+頁面與文章可設定 `draft: true`：本機 dev 可預覽，正式建置排除其路由、列表、搜尋與 sitemap。上游範例文章與 pricing 已設為草稿；產品 Demo 保留，正式規格仍須由業務確認。缺少對應翻譯的語言選項會停用。
 
 ### 目前自動檢查範圍
 
-GitHub Actions（`.github/workflows/test.yml`）在推送至 `main` 或對 `main` 發出 PR 時，檢查 lockfile、安裝相依套件並執行 `npm run check`。目前未包含網站建置、獨立型別檢查或端對端測試，因此格式與 lint 通過不等於網站功能驗收完成。
+GitHub Actions（`.github/workflows/test.yml`）在推送至 `main` 或對 `main` 發出 PR 時，檢查 lockfile、安裝相依套件並執行 `npm run check`。CI 尚未包含網站建置、獨立型別檢查或瀏覽器測試，因此格式與 lint 通過不等於網站功能驗收完成。新增的本機訪客流程測試涵蓋桌機及 375px 手機、三語搜尋與重試、產品導覽、聯絡入口、草稿排除及動畫切頁：
+
+```bash
+npx playwright install chromium  # 第一次執行時安裝測試瀏覽器
+npm run build
+npm run test:ux
+```
+
+測試會自動啟動本機 preview，失敗時將 trace 留在 `test-results/`。
 
 Windows PowerShell 若因執行原則無法載入 `npm.ps1`，可改用 `npm.cmd`：
 

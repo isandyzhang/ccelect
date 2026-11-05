@@ -157,163 +157,100 @@ const backgroundInitialSources = backgroundHasIntro ? introVideoSources : localV
 <script>
   import { onPageLoad } from "@component-utils/onPageLoad";
 
-  const PLAYING = "data-bg-video-playing";
-  const LOADED = "data-bg-video-loaded";
-
-  function prefersReducedMotion() {
-    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  }
-
-  function prefersSaveData() {
-    const connection = (navigator as Navigator & { connection?: { saveData?: boolean } })
-      .connection;
-    return Boolean(connection?.saveData);
-  }
-
-  function hydrateSources(video: HTMLVideoElement, preferredSrc?: string) {
-    if (video.getAttribute(LOADED) === "true" && !preferredSrc) return;
-
-    let hydrated = false;
-    video.querySelectorAll("source").forEach((node) => {
-      const source = node as HTMLSourceElement;
-      const nextSrc = preferredSrc || source.dataset.src || source.getAttribute("src");
-      if (!nextSrc) return;
-      source.src = nextSrc;
-      source.removeAttribute("data-src");
-      hydrated = true;
-    });
-
-    if (hydrated) {
-      video.setAttribute(LOADED, "true");
-      video.load();
-    }
-  }
-
-  function switchToLoop(video: HTMLVideoElement) {
-    const loopSrc = video.dataset.bgLoopSrc;
-    if (!loopSrc) return;
-
-    video.loop = true;
-    hydrateSources(video, loopSrc);
-
-    const playLoop = () => {
-      void video.play().then(() => {
-        video.setAttribute(PLAYING, "true");
-      }).catch(() => {});
-    };
-
-    if (video.readyState >= 2) playLoop();
-    else video.addEventListener("canplay", playLoop, { once: true });
-  }
-
-  function bindIntroToLoop(video: HTMLVideoElement) {
-    if (!video.dataset.bgIntroSrc || !video.dataset.bgLoopSrc) return;
-    if (video.dataset.bgIntroBound === "true") return;
-    video.dataset.bgIntroBound = "true";
-
-    video.addEventListener("ended", () => {
-      switchToLoop(video);
-    });
-  }
-
-  function unlockAndPlay(video: HTMLVideoElement) {
-    if (prefersReducedMotion() || prefersSaveData()) {
-      video.pause();
-      video.removeAttribute(PLAYING);
-      return;
-    }
-
-    if (video.getAttribute(PLAYING) === "true" && !video.paused) return;
-
-    const hasIntro = Boolean(video.dataset.bgIntroSrc && video.dataset.bgLoopSrc);
-
-    hydrateSources(video, hasIntro ? video.dataset.bgIntroSrc : undefined);
-    bindIntroToLoop(video);
-
-    video.muted = true;
-    video.defaultMuted = true;
-    video.playsInline = true;
-    video.setAttribute("muted", "");
-    video.setAttribute("playsinline", "");
-    video.loop = !hasIntro;
-
-    const tryPlay = () =>
-      video.play().then(() => {
-        video.setAttribute(PLAYING, "true");
-      });
-
-    const startWhenReady = () => {
-      void tryPlay().catch(() => {
-        const retry = () => {
-          void tryPlay().catch(() => {});
-        };
-
-        window.addEventListener("pointerdown", retry, { once: true });
-        window.addEventListener("touchstart", retry, { once: true, passive: true });
-        document.addEventListener(
-          "visibilitychange",
-          () => {
-            if (!document.hidden) retry();
-          },
-          { once: true }
-        );
-      });
-    };
-
-    if (video.readyState >= 2) {
-      startWhenReady();
-    } else {
-      video.addEventListener("canplay", startWhenReady, { once: true });
-    }
-  }
-
-  function freezeBackgroundVideo(video: HTMLVideoElement) {
-    video.pause();
-    video.removeAttribute(PLAYING);
-  }
-
-  function bindReducedMotionToggle(video: HTMLVideoElement) {
-    if (video.dataset.bgMotionBound === "true") return;
-    video.dataset.bgMotionBound = "true";
-
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const onChange = () => {
-      if (media.matches) freezeBackgroundVideo(video);
-      else unlockAndPlay(video);
-    };
-
-    media.addEventListener("change", onChange);
-  }
+  let cleanup: (() => void) | undefined;
 
   function initBackgroundVideos() {
+    cleanup?.();
+    const events = new AbortController();
+    const { signal } = events;
+    const releases: (() => void)[] = [];
+    const connection = (navigator as Navigator & { connection?: { saveData?: boolean } })
+      .connection;
+
     document.querySelectorAll<HTMLVideoElement>(".video.background video").forEach((video) => {
-      bindReducedMotionToggle(video);
-
-      if (prefersReducedMotion() || prefersSaveData()) {
-        freezeBackgroundVideo(video);
-        return;
-      }
-
-      if (video.getAttribute(PLAYING) === "true" && !video.paused) return;
-
-      const start = () => unlockAndPlay(video);
-
-      if ("IntersectionObserver" in window) {
-        const io = new IntersectionObserver(
-          (entries) => {
-            if (entries.some((entry) => entry.isIntersecting)) {
-              start();
-              io.disconnect();
-            }
-          },
-          { rootMargin: "80px", threshold: 0.1 }
-        );
-        io.observe(video);
-      } else {
-        start();
-      }
+      let visible = false;
+      let retryBound = false;
+      let loop = !video.dataset.bgIntroSrc;
+      const pause = () => {
+        video.pause();
+        video.removeAttribute("data-bg-video-playing");
+      };
+      const play = () => {
+        if (
+          signal.aborted ||
+          !video.isConnected ||
+          !visible ||
+          document.hidden ||
+          connection?.saveData
+        ) {
+          pause();
+          return;
+        }
+        if (!video.paused) return;
+        if (video.dataset.bgVideoLoaded !== "true") {
+          video.querySelectorAll<HTMLSourceElement>("source").forEach((source) => {
+            source.src =
+              (!loop && video.dataset.bgIntroSrc) ||
+              video.dataset.bgLoopSrc ||
+              source.dataset.src ||
+              source.src;
+          });
+          video.dataset.bgVideoLoaded = "true";
+          video.load();
+        }
+        video.muted = true;
+        video.defaultMuted = true;
+        video.playsInline = true;
+        video.loop = loop;
+        void video
+          .play()
+          .then(() => {
+            if (signal.aborted || !visible || document.hidden) pause();
+            else video.setAttribute("data-bg-video-playing", "true");
+          })
+          .catch(() => {
+            if (retryBound || signal.aborted) return;
+            retryBound = true;
+            window.addEventListener(
+              "pointerdown",
+              () => {
+                retryBound = false;
+                play();
+              },
+              { once: true, signal }
+            );
+          });
+      };
+      video.addEventListener(
+        "ended",
+        () => {
+          if (!video.dataset.bgLoopSrc) return;
+          loop = true;
+          video.dataset.bgVideoLoaded = "false";
+          play();
+        },
+        { signal }
+      );
+      document.addEventListener("visibilitychange", play, { signal });
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          visible = entry.isIntersecting;
+          play();
+        },
+        { threshold: 0.1 }
+      );
+      observer.observe(video);
+      releases.push(() => {
+        observer.disconnect();
+        pause();
+      });
     });
+    cleanup = () => {
+      events.abort();
+      releases.forEach((release) => release());
+    };
   }
 
+  document.addEventListener("astro:before-swap", () => cleanup?.());
   onPageLoad(initBackgroundVideos);
 </script>

@@ -8,6 +8,8 @@ keywords:
   - grounding
   - lightning
 pageSections:
+  - _component: page-sections/products/product-breadcrumb
+    heading: 製品一覧
   - _component: page-sections/builders/custom-section
     id: products-layout
     maxContentWidth: 3xl
@@ -27,7 +29,7 @@ pageSections:
           - _component: navigation/products-side
         secondColumnContentSections:
           - _component: building-blocks/core-elements/heading
-            level: h2
+            level: h1
             size: lg
             alignmentHorizontal: start
             text: 商品

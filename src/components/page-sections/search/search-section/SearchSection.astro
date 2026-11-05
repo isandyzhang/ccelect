@@ -5,6 +5,9 @@ import Heading from "@core-elements/heading/Heading.astro";
 import Text from "@core-elements/text/Text.astro";
 import Input from "@forms/input/Input.astro";
 import Split from "@wrappers/split/Split.astro";
+import { experienceText, localeFromPath } from "@i18n/experience";
+
+const messages = experienceText[localeFromPath(Astro.url.pathname)];
 
 interface SearchFilter {
   /** Tab label shown to the visitor. */
@@ -18,11 +21,11 @@ const {
   heading = "",
   headingSize = "2xl",
   subtext = "",
-  placeholder = "Search",
-  buttonText = "Search",
+  placeholder = messages.search,
+  buttonText = messages.search,
   filters = [] as SearchFilter[],
   resultsPerPage = 10,
-  unavailableMessage = "Search is unavailable right now. Please try again later.",
+  unavailableMessage = messages.unavailable,
   maxContentWidth = "2xl",
   paddingHorizontal = "md",
   paddingVertical = "2xl",
@@ -51,6 +54,7 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
   contentBackground={contentBackground}
   rounded={rounded}
   class:list={["search-section", className]}
+  data-messages={JSON.stringify(messages)}
   data-results-per-page={resultsPerPage}
   data-unavailable-message={unavailableMessage}
   data-pagefind-ignore="all"
@@ -85,7 +89,7 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
       <div
         class="search-tabs"
         role="radiogroup"
-        aria-label="Filter results by type"
+        aria-label={messages.filter}
       >
         {filterOptions.map((filter: SearchFilter, index: number) => (
           <label class="search-tab">
@@ -109,7 +113,7 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
   >
     {placeholder}
   </label>
-  {/* A GET form so the page still works without JavaScript — results render client-side below. */}
+  {/* Query URLs can be shared; results require JavaScript. */}
   <form
     class="search-form"
     role="search"
@@ -142,6 +146,12 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
       aria-live="polite"
     >
     </p>
+    <button
+      type="button"
+      class="search-retry"
+      hidden
+      >{messages.retry}</button
+    >
     <div class="search-results-list"></div>
     <div
       class="search-results-more"
@@ -151,7 +161,7 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
         element="button"
         type="button"
         class="search-load-more"
-        text="Load more results"
+        text={messages.more}
         iconName="arrow-long-down"
         iconPosition="after"
         variant="tertiary"
@@ -194,18 +204,24 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
   const SUB_RESULT_LIMIT = 3;
 
   let pagefindPromise: Promise<Pagefind> | null = null;
+  let loadAttempt = 0;
+
+  function resetPagefind() {
+    pagefindPromise = null;
+    ++loadAttempt;
+  }
 
   /**
-   * The index is generated after the site build (`.cloudcannon/postbuild` runs
-   * `npx pagefind --site dist`), so the module only exists in the built output.
+   * npm run build generates the index after Astro, so the module only exists in built output.
    * Building the URL at runtime keeps Vite from trying to resolve it at build time.
    */
   function loadPagefind(): Promise<Pagefind> {
     if (!pagefindPromise) {
-      const moduleUrl = new URL("/pagefind/pagefind.js", window.location.origin).href;
+      const moduleUrl = new URL("/pagefind/pagefind.js", window.location.origin);
+      if (loadAttempt) moduleUrl.searchParams.set("retry", String(loadAttempt));
 
-      pagefindPromise = import(/* @vite-ignore */ moduleUrl).catch((error) => {
-        pagefindPromise = null;
+      pagefindPromise = import(/* @vite-ignore */ moduleUrl.href).catch((error) => {
+        resetPagefind();
         throw error;
       });
     }
@@ -297,13 +313,27 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
 
     section.dataset.searchInitialized = "true";
 
-    const pageSize = Number(section.dataset.resultsPerPage) || 10;
+    const messages = JSON.parse(section.dataset.messages || "{}");
+    const retry = section.querySelector<HTMLButtonElement>(".search-retry")!;
+    const pageSize = Math.max(1, Number(section.dataset.resultsPerPage) || 10);
     const unavailableMessage = section.dataset.unavailableMessage || "";
 
     let results: PagefindResult[] = [];
     let shown = 0;
     let requestId = 0;
     let debounceTimer: number | undefined;
+    let renderingId: number | undefined;
+    const events = new AbortController();
+    const { signal } = events;
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        ++requestId;
+        window.clearTimeout(debounceTimer);
+        events.abort();
+      },
+      { once: true, signal }
+    );
 
     const activeType = () => filterInputs.find((input) => input.checked)?.value ?? "";
 
@@ -321,17 +351,31 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
     };
 
     const renderNext = async (id: number) => {
-      const batch = results.slice(shown, shown + pageSize);
+      if (renderingId === id) return;
+      renderingId = id;
+      if (moreButton) moreButton.disabled = true;
+      try {
+        const batch = results.slice(shown, shown + pageSize);
 
-      shown += batch.length;
+        const items = await Promise.all(batch.map((result) => result.data()));
 
-      const items = await Promise.all(batch.map((result) => result.data()));
+        if (id !== requestId) return;
 
-      if (id !== requestId) return;
+        shown += batch.length;
+        items.forEach((data) => list.append(buildResult(data)));
+        retry.hidden = true;
 
-      items.forEach((data) => list.append(buildResult(data)));
-
-      if (moreWrapper) moreWrapper.hidden = shown >= results.length;
+        if (moreWrapper) moreWrapper.hidden = shown >= results.length;
+      } catch {
+        if (id === requestId) resetPagefind();
+        if (id === requestId) {
+          status.textContent = unavailableMessage;
+          retry.hidden = false;
+        }
+      } finally {
+        if (renderingId === id) renderingId = undefined;
+        if (id === requestId && moreButton) moreButton.disabled = false;
+      }
     };
 
     const runSearch = async (query: string, { updateUrl = true } = {}) => {
@@ -340,6 +384,7 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
 
       if (updateUrl) syncUrl(query, type);
 
+      retry.hidden = true;
       results = [];
       shown = 0;
       list.replaceChildren();
@@ -348,31 +393,39 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
 
       if (!query) {
         status.textContent = "";
+        section.setAttribute("aria-busy", "false");
         return;
       }
 
-      let pagefind: Pagefind;
-
+      status.textContent = messages.loading;
+      section.setAttribute("aria-busy", "true");
       try {
-        pagefind = await loadPagefind();
+        const pagefind = await loadPagefind();
+        if (id !== requestId) return;
+        const search = await pagefind.search(query, type ? { filters: { Type: type } } : undefined);
+
+        if (id !== requestId) return;
+
+        results = search.results;
+
+        if (!results.length) {
+          status.textContent = messages.empty.replace("{query}", query);
+          return;
+        }
+
+        status.textContent = messages.count
+          .replace("{query}", query)
+          .replace("{count}", String(results.length));
+        await renderNext(id);
       } catch {
-        if (id === requestId) status.textContent = unavailableMessage;
-        return;
+        if (id === requestId) resetPagefind();
+        if (id === requestId) {
+          status.textContent = unavailableMessage;
+          retry.hidden = false;
+        }
+      } finally {
+        if (id === requestId) section.setAttribute("aria-busy", "false");
       }
-
-      const search = await pagefind.search(query, type ? { filters: { Type: type } } : undefined);
-
-      if (id !== requestId) return;
-
-      results = search.results;
-
-      if (!results.length) {
-        status.textContent = `No results for “${query}”. Try a different search term.`;
-        return;
-      }
-
-      status.textContent = `${results.length} result${results.length === 1 ? "" : "s"} for “${query}”.`;
-      await renderNext(id);
     };
 
     form.addEventListener("submit", (event) => {
@@ -382,6 +435,12 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
     });
 
     field.addEventListener("input", () => {
+      ++requestId;
+      list.replaceChildren();
+      retry.hidden = true;
+      status.textContent = field.value.trim() ? messages.loading : "";
+      section.setAttribute("aria-busy", "false");
+      if (moreWrapper) moreWrapper.hidden = true;
       window.clearTimeout(debounceTimer);
       debounceTimer = window.setTimeout(() => runSearch(field.value.trim()), DEBOUNCE_MS);
     });
@@ -395,7 +454,8 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
       });
     });
 
-    moreButton?.addEventListener("click", () => renderNext(requestId));
+    moreButton?.addEventListener("click", () => void renderNext(requestId), { signal });
+    retry.addEventListener("click", () => void runSearch(field.value.trim()), { signal });
 
     const params = new URLSearchParams(window.location.search);
     const initialQuery = params.get("q")?.trim() ?? "";

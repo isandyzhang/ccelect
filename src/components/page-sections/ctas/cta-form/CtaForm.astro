@@ -14,7 +14,7 @@ const {
   eyebrowText = "",
   heading = "",
   subtext = "",
-  formAction = "./",
+  formAction = "",
   formBlocks = [],
   buttonSections = [],
   reverse = false,
@@ -29,10 +29,12 @@ const {
   _component,
   ...htmlAttributes
 } = Astro.props;
+
+const hasForm = /^https?:\/\//.test(formAction) || /^\/(?!\/)/.test(formAction);
 ---
 
 <CustomSection
-  class:list={["cta-form", className]}
+  class:list={["cta-form", !hasForm && "contact-only", className]}
   label={id}
   maxContentWidth={maxContentWidth}
   paddingHorizontal="lg"
@@ -49,7 +51,7 @@ const {
     class="split"
     distributionMode="two-thirds-third"
     alignmentVertical="center"
-    reverse={reverse}
+    reverse={hasForm && reverse}
     minSplitWidth={640}
   >
     <Fragment slot="first">
@@ -76,19 +78,27 @@ const {
       <ButtonGroup buttonSections={buttonSections} />
     </Fragment>
     <Fragment slot="second">
-      <Form
-        class="form"
-        action={formAction}
-        formBlocks={formBlocks}
-        data-children-prop="formBlocks"
-      />
+      {
+        hasForm && (
+          <Form
+            class="form"
+            action={formAction}
+            formBlocks={formBlocks}
+            data-children-prop="formBlocks"
+          />
+        )
+      }
     </Fragment>
   </Split>
 </CustomSection>
 
 <style is:global>
   @layer page-sections {
-    .cta-form {
+    .cta-form.contact-only .split-inner {
+      display: block;
+    }
+    .cta-form.contact-only .pane.second {
+      display: none;
     }
   }
 </style>

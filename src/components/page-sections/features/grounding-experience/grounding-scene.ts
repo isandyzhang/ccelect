@@ -5,6 +5,7 @@ class GroundingScene extends HTMLElement {
   private generation = 0;
 
   connectedCallback() {
+    this.cleanup?.();
     const generation = ++this.generation;
     const observer = new IntersectionObserver(
       (entries) => {
@@ -37,7 +38,6 @@ class GroundingScene extends HTMLElement {
     const canvas = this.querySelector("canvas")!;
     const stage = this.querySelector<HTMLElement>(".grounding-stage")!;
     const button = this.querySelector("button")!;
-    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
     const mobile = matchMedia("(max-width: 760px)");
     let renderer: Three.WebGLRenderer;
 
@@ -177,15 +177,14 @@ class GroundingScene extends HTMLElement {
     const draw = (time: number) => {
       frame = 0;
       if (disposed) return;
-      const moving = !paused && !reduced.matches;
+      const moving = !paused;
 
       if (moving) elapsed += Math.min((time - (last || time)) / 1000, 0.05);
       last = time;
       const rect = this.getBoundingClientRect();
-      const progress =
-        reduced.matches || paused
-          ? 0.5
-          : Math.max(0, Math.min(1, (innerHeight - rect.top) / (innerHeight + rect.height)));
+      const progress = paused
+        ? 0.5
+        : Math.max(0, Math.min(1, (innerHeight - rect.top) / (innerHeight + rect.height)));
       const rotation = (progress - 0.5) * 0.45 + (moving ? pointerX * 0.15 : 0);
 
       assembly.rotation.y += (rotation - assembly.rotation.y) * 0.06;
@@ -220,7 +219,7 @@ class GroundingScene extends HTMLElement {
       wake();
     };
     const pointer = (event: PointerEvent) => {
-      if (event.pointerType !== "mouse" || reduced.matches || paused) return;
+      if (event.pointerType !== "mouse" || paused) return;
       const rect = stage.getBoundingClientRect();
 
       pointerX = (event.clientX - rect.left) / rect.width - 0.5;
@@ -229,10 +228,6 @@ class GroundingScene extends HTMLElement {
     const leave = () => {
       pointerX = 0;
       pointerY = 0;
-    };
-    const preference = () => {
-      button.hidden = reduced.matches;
-      wake();
     };
     const toggle = () => {
       paused = !paused;
@@ -258,7 +253,6 @@ class GroundingScene extends HTMLElement {
       visibility.disconnect();
       sizing.disconnect();
       document.removeEventListener("visibilitychange", wake);
-      reduced.removeEventListener("change", preference);
       stage.removeEventListener("pointermove", pointer);
       stage.removeEventListener("pointerleave", leave);
       button.removeEventListener("click", toggle);
@@ -284,14 +278,12 @@ class GroundingScene extends HTMLElement {
     stage.addEventListener("pointerleave", leave);
     button.addEventListener("click", toggle);
     document.addEventListener("visibilitychange", wake);
-    reduced.addEventListener("change", preference);
     sizing.observe(stage);
     visibility.observe(this);
     resize();
-    // A static render also serves reduced-motion users.
     draw(performance.now());
     this.setAttribute("data-ready", "");
-    button.hidden = reduced.matches;
+    button.hidden = false;
   }
 }
 

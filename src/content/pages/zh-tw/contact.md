@@ -16,7 +16,7 @@ pageSections:
     subtext: >-
       業務部將協助您確認產品規格、報價與技術服務。<br />地址：106 台北市大安區雲和街 2-2 號<br />電話：886-2-23632992（台灣地區可撥
       02-2363-2992）　傳真：886-2-23639044<br />Email：cce@ccelect.com.tw<br />LINE 官方帳號：@iaf5267c
-    formAction: ./
+    formAction: ""
     formBlocks:
       - _component: building-blocks/forms/input
         label: 姓名
@@ -45,6 +45,11 @@ pageSections:
         hideText: false
         disabled: false
     buttonSections:
+      - _component: building-blocks/core-elements/button
+        text: 致電業務部
+        link: tel:+886223632992
+        variant: primary
+        size: md
       - _component: building-blocks/core-elements/button
         text: LINE 官方帳號
         hideText: false

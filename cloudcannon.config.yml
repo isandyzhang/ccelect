@@ -355,6 +355,9 @@ collections_config:
     disable_add_folder: false
     disable_file_actions: false
 _inputs:
+  draft:
+    type: switch
+    comment: 草稿可在本機開發預覽，不會輸出至正式網站、搜尋或 sitemap。
   pageSections:
     comment: The main sections of the page.
     cascade: true
