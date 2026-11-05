@@ -6,7 +6,6 @@ const {
   link = "/products/exoweld/",
   columnSpan = 12,
   videoSource = "",
-  videoLabel = "開模・點火示意",
   ...attributes
 } = Astro.props;
 const uid = `weld-${crypto.randomUUID()}`;
@@ -503,36 +502,6 @@ const chapters = [
         </p>
       </div>
     </div>
-    <div
-      class="showcase-controls"
-      role="group"
-      aria-label="主打產品展示模式"
-      hidden
-    >
-      <button
-        type="button"
-        data-view="photo"
-        aria-pressed="true"
-        >產品全貌</button
-      >
-      <button
-        type="button"
-        data-view="experience"
-        aria-pressed="false"
-        >{videoLabel} <span aria-hidden="true">↗</span></button
-      >
-      {
-        videoSource && (
-          <button
-            type="button"
-            data-view="video"
-            aria-pressed="false"
-          >
-            原始影片
-          </button>
-        )
-      }
-    </div>
   </product-showcase>
 </BentoBoxGridItem>
 <script>
@@ -796,30 +765,6 @@ const chapters = [
     transform: scaleX(0);
     transform-origin: left;
   }
-  .showcase-controls {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-    padding: 16px 20px;
-    background: #090d0e;
-  }
-  .showcase-controls button {
-    padding: 0 20px;
-    font-size: 12px;
-    border: 1px solid transparent;
-    border-radius: 2px;
-  }
-  .showcase-controls button[aria-pressed="true"] {
-    border-color: #c4a27770;
-    background: #c4a27712;
-  }
-  .showcase-controls button:hover {
-    color: #efd5b1;
-  }
-  .showcase-controls span {
-    margin-left: 12px;
-  }
   button:focus-visible,
   a:focus-visible {
     outline: 2px solid #e3b778;
@@ -922,14 +867,6 @@ const chapters = [
       min-width: 100px;
       padding-inline: 10px;
       gap: 10px;
-      font-size: 11px;
-    }
-    .showcase-controls {
-      gap: 2px;
-      padding-inline: 8px;
-    }
-    .showcase-controls button {
-      padding-inline: 12px;
       font-size: 11px;
     }
   }

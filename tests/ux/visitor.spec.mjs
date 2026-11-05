@@ -34,6 +34,14 @@ for (const prefix of ["", "/en", "/ja"]) {
     await expect(page.locator(".search-section")).toHaveAttribute("aria-busy", "false");
     await expect(page).toHaveURL(/q=WE/);
     await expect(page.locator(".search-status")).toContainText("WE");
+    await field.fill(prefix === "/en" ? "grounding" : "接地");
+    await page.locator(".search-tab").nth(1).click();
+    await expect(page.locator(".search-result").first()).toBeVisible();
+    expect(
+      await page
+        .locator(".search-result-title a")
+        .evaluateAll((links) => links.every((link) => link.getAttribute("href").includes("/blog/")))
+    ).toBe(true);
     await page.goto(`${prefix}/contact/`);
     await expect(page.locator("main form")).toHaveCount(0);
     await expect(page.locator('main a[href="tel:+886223632992"]')).toBeVisible();

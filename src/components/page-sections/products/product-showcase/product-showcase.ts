@@ -9,9 +9,8 @@ class ProductShowcase extends HTMLElement {
     const panel = this.querySelector<HTMLElement>(".product-video")!;
     const experience = this.querySelector<HTMLElement>(".weld-experience")!;
     const video = this.querySelector("video")!;
-    const controls = this.querySelector<HTMLElement>(".showcase-controls")!;
     const error = this.querySelector<HTMLElement>(".video-error")!;
-    const buttons = Array.from(controls.querySelectorAll<HTMLButtonElement>("[data-view]"));
+    const buttons = Array.from(this.querySelectorAll<HTMLButtonElement>("[data-view]"));
     const chapters = Array.from(this.querySelectorAll<HTMLButtonElement>("[data-chapter]"));
     const play = this.querySelector<HTMLButtonElement>('[data-action="play"]')!;
     const progress = this.querySelector<HTMLElement>(".playback-track span")!;
@@ -63,7 +62,6 @@ class ProductShowcase extends HTMLElement {
 
     setPhase(0);
     this.dataset.playing = "false";
-    controls.hidden = false;
     buttons.forEach((button) =>
       button.addEventListener(
         "click",

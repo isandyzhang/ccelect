@@ -99,6 +99,9 @@ const sections = frontmatter?.pageSections ?? [];
   <main
     transition:name="page-main"
     transition:animate={fade({ duration: "0.2s" })}
+    data-pagefind-filter={disablePagefind
+      ? undefined
+      : `Type:${type === "article" ? "Article" : "Page"}`}
     {...disablePagefind ? { "data-pagefind-ignore": "all" } : { "data-pagefind-body": true }}
   >
     {
