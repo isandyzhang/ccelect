@@ -299,10 +299,11 @@ const {
       }
 
       &[data-showcase-stick] > .outer-content {
+        background: #050505;
         height: auto;
+        min-height: 100dvh;
         position: sticky;
         top: 0;
-        z-index: 1;
       }
 
       &[data-showcase-stick] product-showcase .showcase-media {
@@ -506,6 +507,15 @@ const {
     }
 
     .feature-grid-mosaic {
+      background-color: var(--color-bg);
+      isolation: isolate;
+      position: relative;
+      z-index: 2;
+
+      > .outer-content > .content {
+        padding-top: clamp(4.5rem, 12vh, 7.5rem);
+      }
+
       .feature-grid-content {
         padding-bottom: 0;
       }
@@ -662,7 +672,7 @@ const {
 
       @media (width >= 768px) {
         .feature-item > .card-inner {
-          min-height: 22rem;
+          min-height: 26rem;
         }
       }
 
