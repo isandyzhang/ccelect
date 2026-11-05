@@ -65,6 +65,7 @@ pageSections:
           title: 捷運與機場捷運工程
           link: /projects/
           columnSpan: 4
+          hoverVideo: /videos/ccelect/project-metro-spark.mp4
           image:
             source: /images/ccelect/project-metro-retouched.webp
             alt: 捷運軌道接地工程現場紀錄
@@ -79,6 +80,7 @@ pageSections:
           title: 積體電路及光電廠
           link: /projects/
           columnSpan: 4
+          hoverVideo: /videos/ccelect/project-fab-clouds.mp4
           image:
             source: /images/ccelect/project-fab.jpg
             alt: 積體電路與光電廠廠房外觀
@@ -86,6 +88,7 @@ pageSections:
           title: 資源回收廠
           link: /projects/
           columnSpan: 8
+          hoverVideo: /videos/ccelect/project-incinerator-clouds.mp4
           image:
             source: /images/ccelect/project-incinerator.jpg
             alt: 資源回收廠焚化爐外觀

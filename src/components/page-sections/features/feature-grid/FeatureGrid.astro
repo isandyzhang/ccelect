@@ -159,7 +159,72 @@ const {
     window.addEventListener("resize", onScroll);
   }
 
-  onPageLoad(initShowcaseReveal);
+  function initMosaicMotion() {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    const sections = document.querySelectorAll<HTMLElement>(".feature-grid-mosaic");
+
+    if (!sections.length || reduce) return;
+
+    sections.forEach((section) => {
+      if (section.dataset.mosaicReady === "true") return;
+      section.dataset.mosaicReady = "true";
+
+      const videos = Array.from(section.querySelectorAll<HTMLVideoElement>("video.feature-hover-video"));
+      const reveal = () => {
+        section.classList.add("is-mosaic-in");
+        if (!canHover) return;
+        videos.forEach((video) => {
+          const src = video.dataset.src;
+          if (!src || video.getAttribute("src")) return;
+          video.src = src;
+          video.load();
+        });
+      };
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+          reveal();
+          observer.disconnect();
+        },
+        { rootMargin: "0px 0px -8% 0px", threshold: 0.15 }
+      );
+
+      observer.observe(section);
+
+      if (!canHover) return;
+
+      videos.forEach((video) => {
+        const card = video.closest<HTMLElement>(".feature-item");
+        if (!card) return;
+
+        card.addEventListener("pointerenter", () => {
+          const src = video.dataset.src;
+          if (src && !video.getAttribute("src")) {
+            video.src = src;
+            video.load();
+          }
+          card.classList.add("is-playing");
+          void video.play().catch(() => {});
+        });
+        card.addEventListener("pointerleave", () => {
+          card.classList.remove("is-playing");
+          video.pause();
+          if (Number.isFinite(video.duration)) video.currentTime = 0;
+        });
+      });
+    });
+  }
+
+  onPageLoad(() => {
+    initShowcaseReveal();
+    initMosaicMotion();
+  });
+</script>
+<script is:inline>
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.documentElement.classList.add("mosaic-motion");
+  }
 </script>
 
 <style is:global>
@@ -498,6 +563,63 @@ const {
         transform: scale(1.04);
       }
 
+      .feature-item:has(.feature-hover-video):hover .before-content img {
+        transform: none;
+      }
+
+      .feature-hover-video {
+        height: 100%;
+        inset: 0;
+        object-fit: cover;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        transition: opacity 180ms ease;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .feature-item.is-playing .feature-hover-video {
+        opacity: 1;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        html.mosaic-motion &:not(.is-mosaic-in) .bento-box-grid-item {
+          opacity: 0;
+          transform: translateY(1.25rem);
+        }
+
+        html.mosaic-motion &.is-mosaic-in .bento-box-grid-item {
+          animation: mosaic-rise 0.7s ease forwards;
+        }
+
+        html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(1) {
+          animation-delay: 0s;
+        }
+
+        html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(2) {
+          animation-delay: 0.12s;
+        }
+
+        html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(3) {
+          animation-delay: 0.24s;
+        }
+
+        html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(4) {
+          animation-delay: 0.36s;
+        }
+
+        html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(5) {
+          animation-delay: 0.48s;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .feature-hover-video {
+          transition: none;
+        }
+      }
+
       .feature-item > .card-inner > .card-outer-content {
         background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.82));
         inset: auto 0 0 0;
@@ -551,6 +673,18 @@ const {
         }
       }
 
+    }
+
+    @keyframes mosaic-rise {
+      from {
+        opacity: 0;
+        transform: translateY(1.25rem);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
   }
 </style>

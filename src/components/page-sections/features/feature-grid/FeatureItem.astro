@@ -19,6 +19,7 @@ const {
   description = "",
   columnSpan,
   rowSpan,
+  hoverVideo = "",
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
   _component,
@@ -55,6 +56,19 @@ const isShowcase = Boolean(image?.source) && !hasCopy;
         data-prop-src="image.source"
         data-prop-alt="image.alt"
       />
+      {
+        hoverVideo && (
+          <video
+            class="feature-hover-video"
+            muted
+            loop
+            playsinline
+            preload="none"
+            data-src={hoverVideo}
+            aria-hidden="true"
+          />
+        )
+      }
     </Fragment>
     {
       !isShowcase && (
