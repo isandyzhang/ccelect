@@ -350,7 +350,13 @@ const mobileNavData = [
       }
 
       .desktop-main-nav.bar .nav-item > a:hover,
-      .desktop-main-nav.bar .nav-item > .nav-item-trigger:hover {
+      .desktop-main-nav.bar .nav-item > .nav-item-trigger:hover,
+      .desktop-main-nav.bar .nav-item-split:hover,
+      .desktop-main-nav.bar .nav-item-split:hover .nav-item-link,
+      .desktop-main-nav.bar .nav-item-split:hover .nav-item-toggle-btn,
+      .desktop-main-nav.bar .nav-item-split .nav-item-toggle-btn:hover {
+        background: transparent;
+        border-color: transparent;
         color: var(--color-brand);
       }
 
