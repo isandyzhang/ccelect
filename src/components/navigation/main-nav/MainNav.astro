@@ -94,6 +94,7 @@ const mobileNavData = [
 <script>
   import { onPageLoad } from "@components/utils/onPageLoad";
   import { isLocale, localeNames } from "@i18n/config";
+  import { experienceText } from "@i18n/experience";
 
   function syncPersistedMainNav() {
     const navRoot = document.querySelector(".main-nav");
@@ -123,6 +124,9 @@ const mobileNavData = [
           if (href) link.href = href;
           else link.removeAttribute("href");
           link.setAttribute("aria-disabled", String(!href));
+          if (isLocale(siteLocale)) {
+            link.title = href ? "" : experienceText[siteLocale].untranslated;
+          }
           if (href) link.removeAttribute("tabindex");
           else link.tabIndex = -1;
           const isActive = locale === siteLocale;

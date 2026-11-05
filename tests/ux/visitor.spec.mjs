@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import { writeFile } from "node:fs/promises";
 
 test.beforeEach(async ({ page }) => {
   // External fonts and embedded players are not needed to verify local visitor flows.
@@ -10,18 +11,21 @@ for (const prefix of ["", "/en", "/ja"]) {
     page,
   }) => {
     const errors = [];
+
     page.on("pageerror", (error) => errors.push(error.message));
     await page.goto(`${prefix}/search/?q=Exoweld`);
     await expect(page.locator(".search-result").first()).toBeVisible();
     const hrefs = await page
       .locator(".search-result-title a")
       .evaluateAll((links) => links.map((link) => link.getAttribute("href")));
+
     expect(
       hrefs.every((href) =>
         prefix ? href?.startsWith(`${prefix}/`) : !/^\/(en|ja)\//.test(href || "")
       )
     ).toBe(true);
     const field = page.locator('input[name="q"]');
+
     await field.fill("zzqvzx987654321");
     await expect(page.locator(".search-status")).toContainText("zzqvzx987654321");
     await expect(page.locator(".search-result")).toHaveCount(0);
@@ -42,9 +46,21 @@ for (const prefix of ["", "/en", "/ja"]) {
     page,
   }, testInfo) => {
     const errors = [];
+
     page.on("pageerror", (error) => errors.push(error.message));
     await page.goto(`${prefix}/products/exoweld/w-series/`);
+    const gallery = page.locator("[data-series-gallery]").first();
+
+    if ((await gallery.locator("[data-series-dots] button").count()) > 1) {
+      await gallery.focus();
+      await page.keyboard.press("ArrowRight");
+      await expect(gallery.locator("[data-series-dots] button").nth(1)).toHaveAttribute(
+        "aria-pressed",
+        "true"
+      );
+    }
     const tabs = page.locator('[data-series-tabs] [role="tab"]');
+
     await tabs.first().focus();
     await page.keyboard.press("ArrowRight");
     await expect(tabs.nth(1)).toBeFocused();
@@ -61,6 +77,7 @@ for (const prefix of ["", "/en", "/ja"]) {
     const overflow = await page.evaluate(
       () => document.documentElement.scrollWidth > innerWidth + 1
     );
+
     expect(overflow).toBe(false);
     await page.screenshot({ path: testInfo.outputPath("product.png"), fullPage: true });
     await page.locator(".product-cta-primary").click();
@@ -71,16 +88,61 @@ for (const prefix of ["", "/en", "/ja"]) {
 
 test("search module download failure can be retried", async ({ page }) => {
   let fail = true;
+
   await page.route("**/pagefind/pagefind.js*", (route) =>
     fail ? route.abort() : route.continue()
   );
   await page.goto("/search/?q=Exoweld");
   const retry = page.locator(".search-retry");
+
   await expect(retry).toBeVisible();
   fail = false;
   await retry.click();
   await expect(page.locator(".search-result").first()).toBeVisible();
   await expect(retry).toBeHidden();
+});
+
+test("an older search cannot replace a newer query", async ({ page }) => {
+  await page.route("**/pagefind/pagefind.js*", (route) =>
+    route.fulfill({
+      contentType: "application/javascript",
+      body: `export async function search(query) {
+      window.__queries = [...(window.__queries || []), query];
+      await new Promise(resolve => setTimeout(resolve, query === "slow" ? 900 : 10));
+      if (query === "slow") window.__slowFinished = true;
+      return { results: [{ id: query, data: async () => ({ url: "/products/", excerpt: query, meta: { title: query } }) }] };
+    }`,
+    })
+  );
+  await page.goto("/search/?q=slow");
+  await page.waitForFunction(() => window.__queries?.includes("slow"));
+  await page.locator('input[name="q"]').fill("quick");
+  await expect(page.locator(".search-result-title")).toHaveText("quick");
+  await page.waitForFunction(() => window.__slowFinished);
+  await expect(page.locator(".search-result-title")).toHaveText("quick");
+  await expect(page.locator(".search-result")).toHaveCount(1);
+});
+
+test("a rejected search API request can be retried without an unhandled error", async ({
+  page,
+}) => {
+  const errors = [];
+
+  page.on("pageerror", (error) => errors.push(error.message));
+  await page.route("**/pagefind/pagefind.js*", (route) =>
+    route.fulfill({
+      contentType: "application/javascript",
+      body: `export async function search() {
+      if (!window.__failedSearch) { window.__failedSearch = true; throw new Error("Temporary index failure"); }
+      return { results: [{ id: "WE", data: async () => ({ url: "/products/", excerpt: "WE", meta: { title: "WE" } }) }] };
+    }`,
+    })
+  );
+  await page.goto("/search/?q=WE");
+  await expect(page.locator(".search-retry")).toBeVisible();
+  await page.locator(".search-retry").click();
+  await expect(page.locator(".search-result-title")).toHaveText("WE");
+  expect(errors).toEqual([]);
 });
 
 test("production excludes upstream drafts and disables unavailable translations", async ({
@@ -92,6 +154,7 @@ test("production excludes upstream drafts and disables unavailable translations"
     (await request.get("/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/")).status()
   ).toBe(404);
   const sitemap = await (await request.get("/sitemap-0.xml")).text();
+
   expect(sitemap).not.toContain("dns-resolver");
   expect(sitemap).not.toContain("/pricing/");
   await page.goto("/blog/exothermic-welding-process/");
@@ -116,12 +179,15 @@ test("mobile menu traps focus, closes with Escape and works after navigation", a
 }, testInfo) => {
   test.skip(testInfo.project.name !== "mobile");
   const errors = [];
+
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto("/products/");
   const hamburger = page.locator(".nav-hamburger");
+
   for (let cycle = 0; cycle < 3; cycle++) {
     await hamburger.click();
     const menu = page.locator(".mobile.is-open");
+
     await expect(menu).toBeVisible();
     await expect(menu.locator(".mobile-close")).toBeFocused();
     await page.keyboard.press("Shift+Tab");
@@ -139,6 +205,7 @@ test("mobile menu traps focus, closes with Escape and works after navigation", a
 
 test("animation cleanup survives repeated client navigation", async ({ page }, testInfo) => {
   const errors = [];
+
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto("/");
   for (let cycle = 0; cycle < 2; cycle++) {
@@ -164,9 +231,11 @@ test("animation cleanup survives repeated client navigation", async ({ page }, t
       ms: entry.duration,
     })),
   }));
+
   await testInfo.attach("media.json", {
     body: JSON.stringify(media, null, 2),
     contentType: "application/json",
   });
+  await writeFile(testInfo.outputPath("media.json"), JSON.stringify(media, null, 2));
   expect(errors).toEqual([]);
 });

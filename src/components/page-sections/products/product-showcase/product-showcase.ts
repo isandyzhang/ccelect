@@ -69,6 +69,7 @@ class ProductShowcase extends HTMLElement {
         "click",
         () => {
           const view = button.dataset.view!;
+
           stop();
           video.pause();
           this.dataset.view = view;
@@ -105,6 +106,7 @@ class ProductShowcase extends HTMLElement {
       stop();
       video.pause();
     };
+
     video.addEventListener(
       "error",
       () => {
@@ -122,6 +124,7 @@ class ProductShowcase extends HTMLElement {
     const observer = new IntersectionObserver(([entry]) => {
       if (!entry.isIntersecting) suspend();
     });
+
     observer.observe(this);
     this.cleanup = () => {
       events.abort();

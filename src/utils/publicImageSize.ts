@@ -8,6 +8,7 @@ const publicRoot = path.resolve("public");
 export function publicImageSize(source?: string) {
   if (!source?.startsWith("/images/")) return undefined;
   const filename = path.resolve(publicRoot, `.${source}`);
+
   if (!filename.startsWith(`${publicRoot}${path.sep}`)) return undefined;
   if (!sizes.has(filename)) {
     sizes.set(

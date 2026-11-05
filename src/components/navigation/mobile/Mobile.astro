@@ -523,6 +523,12 @@ function createNavItemData(item, level, parentGroupId) {
       listen(nav, "change", syncSubmenus);
       syncSubmenus();
       handleNavToggle(Boolean(toggle?.checked), false);
+      listen(window, "resize", () => {
+        if (window.innerWidth >= 1024 && toggle?.checked) {
+          toggle.checked = false;
+          handleNavToggle(false, false);
+        }
+      });
       listen(nav, "keydown", (event) => {
         if (event.key !== "Tab" || !toggle?.checked) return;
         const focusable = Array.from(
