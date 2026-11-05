@@ -137,7 +137,7 @@ const listBase = blogListHref(locale);
                 )}
                 <SimpleText
                   size="sm"
-                  style="color: var(--color-text-brand); font-weight: var(--font-weight-bold);"
+                  style="color: var(--color-text-brand); font-weight: var(--font-weight-medium);"
                   editable={false}
                 >
                   {post.data.tag}
@@ -156,7 +156,7 @@ const listBase = blogListHref(locale);
                 </SimpleText>
                 <SimpleText
                   size="sm"
-                  style="color: var(--color-text-muted); font-weight: bold;"
+                  style="color: var(--color-text-muted); font-weight: var(--font-weight-medium);"
                   editable={false}
                 >
                   {author?.data.name || ""} | {pubDate}

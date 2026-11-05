@@ -79,8 +79,8 @@ pageSections:
         category: 線對線
         title: WE
         description: WE 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/we/00-we-enhanced.jpg
-        imageAlt: WE
+        image: /images/ccelect/diagrams/we.jpg
+        imageAlt: WE/WES 線對線直通示意圖
         specifications:
           - WE
         href: /products/exoweld/w-series/we/
@@ -88,8 +88,8 @@ pageSections:
         category: 線對線
         title: WT
         description: WT 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/wt/00-wt-enhanced.jpg
-        imageAlt: WT 熔接完成的銅導體接點
+        image: /images/ccelect/diagrams/wt.jpg
+        imageAlt: WT 線對線 T 接示意圖
         specifications:
           - WT
         href: /products/exoweld/w-series/wt/
@@ -97,8 +97,8 @@ pageSections:
         category: 線對線
         title: WX
         description: WX 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/wx/00-wx-enhanced.jpg
-        imageAlt: WX 熔接完成的銅導體接點
+        image: /images/ccelect/diagrams/wx.jpg
+        imageAlt: WX/WXS 線對線交叉示意圖
         specifications:
           - WX
         href: /products/exoweld/w-series/wx/
@@ -106,8 +106,8 @@ pageSections:
         category: 線對線
         title: WP
         description: WP 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: WP
+        image: /images/ccelect/diagrams/wp.jpg
+        imageAlt: WP 線對線平行示意圖
         specifications:
           - WP
         href: /products/exoweld/w-series/wp/
@@ -115,8 +115,8 @@ pageSections:
         category: 線對線
         title: WL
         description: WL 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: WL
+        image: /images/ccelect/diagrams/wl.jpg
+        imageAlt: WL 線對線 L 接示意圖
         specifications:
           - WL
         href: /products/exoweld/w-series/wl/
@@ -124,8 +124,8 @@ pageSections:
         category: 線對線
         title: WXL
         description: WXL 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/wxl/00-wxl-enhanced.jpg
-        imageAlt: WXL 熔接完成的銅導體接點
+        image: /images/ccelect/diagrams/wxl.jpg
+        imageAlt: WXL 線對線交叉示意圖
         specifications:
           - WXL
         href: /products/exoweld/w-series/wxl/

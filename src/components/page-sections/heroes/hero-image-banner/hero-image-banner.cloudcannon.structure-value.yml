@@ -7,6 +7,8 @@ value:
   imageSource: ""
   imageAlt: ""
   videoSource: ""
+  videoIntroSource: ""
+  scrollMask: false
   heading: Heading placeholder
   subtext: Short supporting description.
   buttonSections: []

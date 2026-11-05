@@ -154,64 +154,27 @@ pageSections:
                     date: '2003'
                     heading: ISO 9001
                     text: 品質系統轉為 ISO 9001；現行證書版本另列於認證區。
-              - _component: page-sections/features/feature-grid
-                eyebrowIcon: {}
+              - _component: page-sections/features/business-scope
                 eyebrowText: 營業項目
-                heading: 五大業務範圍
+                heading: 四大業務範圍
                 subtext: 依舊官網公司介紹整理。
-                featureGrid:
-                  features:
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: 接地用鋁熱熔接劑與模具
-                      description: Exothermic welding material and mold production & sale.
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: fire
-                        size: 2xl
-                        color: brand
-                        background: true
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: 電解式接地棒
-                      description: Chemical rod supply and installation.
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: signal
-                        size: 2xl
-                        color: brand
-                        background: true
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: 其它接地材料
-                      description: Earth rod and grounding material sale (UL approved).
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: cube
-                        size: 2xl
-                        color: brand
-                        background: true
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: 避雷材料
-                      description: Lightning protection equipment manufacture & sale.
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: bolt
-                        size: 2xl
-                        color: brand
-                        background: true
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: 接地測試
-                      description: Earthing test and measurement services.
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: chart-bar
-                        size: 2xl
-                        color: brand
-                        background: true
-                maxContentWidth: 2xl
-                paddingVertical: 4xl
-                colorScheme: light
-                backgroundColor: base
-                contentBackground: false
-                rounded: false
+                items:
+                  - id: weld
+                    figure: "01"
+                    title: 接地用鋁熱熔接劑與模具
+                    description: 製造與銷售鋁熱熔接劑及石墨模具，用於銅導體的永久接合。
+                  - id: rod
+                    figure: "02"
+                    title: 電解式接地棒
+                    description: 供應並施作電解式接地棒，對應土壤條件較差時的長期接地需求。
+                  - id: lightning
+                    figure: "03"
+                    title: 避雷材料
+                    description: 製造與銷售避雷針與相關組件。
+                  - id: test
+                    figure: "04"
+                    title: 接地測試
+                    description: 現場接地電阻與土壤電阻率測量。
               - _component: page-sections/info-blocks/table
                 eyebrowIcon: {}
                 eyebrowText: 公司基本資料

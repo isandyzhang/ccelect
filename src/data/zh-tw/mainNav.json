@@ -39,12 +39,12 @@
     {
       "_component": "building-blocks/core-elements/button",
       "text": "聯絡我們",
-      "hideText": false,
+      "hideText": true,
       "link": "/contact/",
-      "iconName": "arrow-right",
+      "iconName": "envelope",
       "iconColor": "default",
-      "iconPosition": "after",
-      "variant": "primary",
+      "iconPosition": "before",
+      "variant": "ghost",
       "size": "md"
     }
   ]

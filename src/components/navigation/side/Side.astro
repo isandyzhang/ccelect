@@ -26,6 +26,10 @@ function hasCurrentChild(item) {
   }
   return false;
 }
+
+function navFullName(item) {
+  return item.hint ? `${item.name}${item.hint}` : item.name;
+}
 ---
 
 <nav
@@ -61,16 +65,20 @@ function hasCurrentChild(item) {
                   <a
                     href={item.path}
                     class="nav-item-link"
+                    aria-label={item.hint ? navFullName(item) : undefined}
                     aria-current={isCurrent ? "page" : undefined}
                   >
-                    <span class="nav-item-label">{item.name}</span>
+                    <span class="nav-item-label">
+                      {item.name}
+                      {item.hint ? <span class="nav-item-hint">{item.hint}</span> : null}
+                    </span>
                   </a>
                   <label
                     for={dropdownId}
                     class="nav-item-trigger nav-item-toggle-btn"
                     aria-controls={contentId}
                     tabindex="0"
-                    aria-label={`Toggle ${item.name} submenu`}
+                    aria-label={`Toggle ${navFullName(item)} submenu`}
                   >
                     <span class="nav-item-icon">
                       <Icon
@@ -89,7 +97,10 @@ function hasCurrentChild(item) {
                   tabindex="0"
                   aria-current={isCurrent ? "page" : undefined}
                 >
-                  <span class="nav-item-label">{item.name}</span>
+                  <span class="nav-item-label">
+                    {item.name}
+                    {item.hint ? <span class="nav-item-hint">{item.hint}</span> : null}
+                  </span>
                   <span class="nav-item-icon">
                     <Icon
                       name="chevron-right"
@@ -103,7 +114,7 @@ function hasCurrentChild(item) {
                 id={contentId}
                 class:list={["nav-item-content", hasCurrent && "nav-item-content-initial"]}
                 role="region"
-                aria-label={`${item.name} submenu`}
+                aria-label={`${navFullName(item)} submenu`}
                 aria-hidden={(!hasCurrent).toString()}
               >
                 <ul class="nav-list">
@@ -133,16 +144,22 @@ function hasCurrentChild(item) {
                               <a
                                 href={child.path}
                                 class="nav-item-link"
+                                aria-label={child.hint ? navFullName(child) : undefined}
                                 aria-current={childIsCurrent ? "page" : undefined}
                               >
-                                <span class="nav-item-label">{child.name}</span>
+                                <span class="nav-item-label">
+                                  {child.name}
+                                  {child.hint ? (
+                                    <span class="nav-item-hint">{child.hint}</span>
+                                  ) : null}
+                                </span>
                               </a>
                               <label
                                 for={childDropdownId}
                                 class="nav-item-trigger nav-item-toggle-btn"
                                 aria-controls={childContentId}
                                 tabindex="0"
-                                aria-label={`Toggle ${child.name} submenu`}
+                                aria-label={`Toggle ${navFullName(child)} submenu`}
                               >
                                 <span class="nav-item-icon">
                                   <Icon
@@ -161,7 +178,12 @@ function hasCurrentChild(item) {
                               tabindex="0"
                               aria-current={childIsCurrent ? "page" : undefined}
                             >
-                              <span class="nav-item-label">{child.name}</span>
+                              <span class="nav-item-label">
+                                {child.name}
+                                {child.hint ? (
+                                  <span class="nav-item-hint">{child.hint}</span>
+                                ) : null}
+                              </span>
                               <span class="nav-item-icon">
                                 <Icon
                                   name="chevron-right"
@@ -178,7 +200,7 @@ function hasCurrentChild(item) {
                               childHasCurrent && "nav-item-content-initial",
                             ]}
                             role="region"
-                            aria-label={`${child.name} submenu`}
+                            aria-label={`${navFullName(child)} submenu`}
                             aria-hidden={(!childHasCurrent).toString()}
                           >
                             <ul class="nav-list">
@@ -187,11 +209,21 @@ function hasCurrentChild(item) {
                                     <li class="nav-item">
                                       <a
                                         href={grandChild.path}
+                                        aria-label={
+                                          grandChild.hint
+                                            ? navFullName(grandChild)
+                                            : undefined
+                                        }
                                         aria-current={
                                           isCurrentPage(grandChild) ? "page" : undefined
                                         }
                                       >
-                                        <span class="nav-item-label">{grandChild.name}</span>
+                                        <span class="nav-item-label">
+                                          {grandChild.name}
+                                          {grandChild.hint ? (
+                                            <span class="nav-item-hint">{grandChild.hint}</span>
+                                          ) : null}
+                                        </span>
                                       </a>
                                     </li>
                                   ))
@@ -205,9 +237,15 @@ function hasCurrentChild(item) {
                         <li class="nav-item">
                           <a
                             href={child.path || "#"}
+                            aria-label={child.hint ? navFullName(child) : undefined}
                             aria-current={childIsCurrent ? "page" : undefined}
                           >
-                            <span class="nav-item-label">{child.name}</span>
+                            <span class="nav-item-label">
+                              {child.name}
+                              {child.hint ? (
+                                <span class="nav-item-hint">{child.hint}</span>
+                              ) : null}
+                            </span>
                           </a>
                         </li>
                       );
@@ -222,9 +260,13 @@ function hasCurrentChild(item) {
             <li class="nav-item">
               <a
                 href={item.path || "#"}
+                aria-label={item.hint ? navFullName(item) : undefined}
                 aria-current={isCurrent ? "page" : undefined}
               >
-                <span class="nav-item-label">{item.name}</span>
+                <span class="nav-item-label">
+                  {item.name}
+                  {item.hint ? <span class="nav-item-hint">{item.hint}</span> : null}
+                </span>
               </a>
             </li>
           );
@@ -368,7 +410,7 @@ function hasCurrentChild(item) {
       }
 
       .nav-item > a {
-        font-weight: var(--font-weight-semibold);
+        font-weight: var(--font-weight-normal);
       }
 
       .nav-item > .nav-item-trigger:not(.nav-item-toggle-btn) {
@@ -394,7 +436,7 @@ function hasCurrentChild(item) {
 
       /* Primary full-row trigger reads as a top-level heading */
       .side-list > .nav-item > .nav-item-trigger:not(.nav-item-toggle-btn) {
-        font-weight: var(--font-weight-semibold);
+        font-weight: var(--font-weight-normal);
       }
 
       /* Split row: link column + chevron toggle column */
@@ -427,7 +469,7 @@ function hasCurrentChild(item) {
           color: inherit;
           display: flex;
           flex: 1 1 auto;
-          font-weight: var(--font-weight-semibold);
+          font-weight: var(--font-weight-normal);
           min-height: 1.75rem;
           min-width: 0;
           padding: var(--spacing-sm) var(--spacing-xs) var(--spacing-sm) var(--spacing-md);
@@ -484,6 +526,27 @@ function hasCurrentChild(item) {
         text-decoration: underline dotted;
         text-decoration-color: var(--color-text-muted);
         text-underline-offset: 3px;
+      }
+
+      /* Optional series hint (e.g. "-線對線") — hover / keyboard focus only */
+      .nav-item-hint {
+        color: var(--color-text-muted);
+        display: none;
+      }
+
+      .nav-item > a:hover .nav-item-hint,
+      .nav-item > a:focus-visible .nav-item-hint,
+      .nav-item > .nav-item-trigger:hover .nav-item-hint,
+      .nav-item > .nav-item-trigger:focus-visible .nav-item-hint,
+      .nav-item-split:hover .nav-item-hint,
+      .nav-item-split:focus-within .nav-item-hint {
+        display: inline;
+      }
+
+      @media (hover: none) {
+        .nav-item-hint {
+          display: inline;
+        }
       }
 
       /* Hidden checkbox drives expand/collapse via `:checked ~` selectors */

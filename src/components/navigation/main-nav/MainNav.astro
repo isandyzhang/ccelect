@@ -37,7 +37,7 @@ const mobileNavData = [
 ---
 
 <CustomSection
-  maxContentWidth="2xl"
+  maxContentWidth="none"
   paddingHorizontal="lg"
   paddingVertical="none"
   colorScheme="light"
@@ -158,11 +158,14 @@ const mobileNavData = [
   @layer page-sections {
     .main-nav {
       z-index: var(--layer-2);
-      padding: var(--nav-outer-pad) var(--spacing-sm);
+      padding: 0;
       position: sticky;
       top: 0;
       overflow: visible;
-      pointer-events: none;
+      pointer-events: auto;
+      background-color: var(--color-bg-surface);
+      /* Dark theme's subtle border matches the surface, so use the visible border token. */
+      border-bottom: 1px solid var(--color-border);
 
       .desktop-main-nav.bar,
       .desktop-button-group.button-group {
@@ -181,16 +184,9 @@ const mobileNavData = [
         align-items: center;
         display: flex;
         gap: var(--spacing-md);
-        background-color: var(--color-bg-surface);
-        border: 2px solid var(--color-border-subtle);
-        box-shadow: 10px 10px 29px 10px var(--color-shadow);
-        padding: var(--nav-content-pad-block) var(--spacing-md) var(--nav-content-pad-block)
-          var(--spacing-xl);
-        border-top-left-radius: var(--radius-4xl);
-        border-bottom-left-radius: var(--radius-4xl);
-        border-top-right-radius: var(--radius-md);
-        border-bottom-right-radius: var(--radius-md);
-        pointer-events: all;
+        max-width: none;
+        width: 100%;
+        padding: var(--nav-content-pad-block) var(--spacing-xl);
         min-width: 0;
 
         .main-nav-logo {
@@ -227,9 +223,7 @@ const mobileNavData = [
 
         @media (max-width: 75rem) {
           gap: var(--spacing-sm);
-          padding-inline: var(--spacing-sm) var(--spacing-lg);
-          border-top-left-radius: var(--radius-2xl);
-          border-bottom-left-radius: var(--radius-2xl);
+          padding-inline: var(--spacing-lg);
         }
 
         .button-group {
@@ -246,7 +240,73 @@ const mobileNavData = [
             min-height: var(--nav-cta-min-height);
             padding-inline: var(--spacing-md);
           }
+
+          .button > .button-inner.icon-only {
+            aspect-ratio: 1;
+            background: var(--color-bg-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 999px;
+            height: 2.75rem;
+            min-height: 2.75rem;
+            min-width: 2.75rem;
+            padding: 0;
+            width: 2.75rem;
+          }
+
+          .button > .button-inner.icon-only:hover {
+            background: var(--color-bg-surface);
+            border-color: var(--color-brand);
+            color: var(--color-brand);
+          }
+
+          .button > .button-inner.icon-only:focus-visible {
+            box-shadow: 0 0 0 3px var(--color-focus-ring);
+            outline: none;
+          }
+
+          .button > .button-inner.icon-only .icon,
+          .button > .button-inner.icon-only .icon svg {
+            height: 1.35rem;
+            width: 1.35rem;
+          }
         }
+      }
+
+      .nav-end > .theme-toggle,
+      .nav-hamburger.mobile-button .button > .button-inner {
+        align-items: center;
+        background: var(--color-bg-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 999px;
+        color: var(--color-text-strong);
+        display: inline-flex;
+        flex-shrink: 0;
+        height: 2.75rem;
+        justify-content: center;
+        min-height: 2.75rem;
+        min-width: 2.75rem;
+        padding: 0;
+        width: 2.75rem;
+      }
+
+      .nav-end > .theme-toggle:hover,
+      .nav-hamburger.mobile-button .button > .button-inner:hover {
+        background: var(--color-bg-surface);
+        border-color: var(--color-brand);
+        color: var(--color-brand);
+      }
+
+      .nav-end > .theme-toggle:focus-visible,
+      .nav-hamburger.mobile-button:focus-visible .button > .button-inner {
+        box-shadow: 0 0 0 3px var(--color-focus-ring);
+        outline: none;
+      }
+
+      .nav-end > .theme-toggle svg,
+      .nav-hamburger.mobile-button .button > .button-inner .icon,
+      .nav-hamburger.mobile-button .button > .button-inner .icon svg {
+        height: 1.35rem;
+        width: 1.35rem;
       }
 
       .nav-hamburger {
@@ -255,8 +315,8 @@ const mobileNavData = [
 
       .nav-hamburger.mobile-button {
         font-size: var(--nav-hamburger-font);
-        min-height: var(--nav-hamburger-size);
-        min-width: var(--nav-hamburger-size);
+        min-height: 2.75rem;
+        min-width: 2.75rem;
       }
 
       .desktop-main-nav.bar {

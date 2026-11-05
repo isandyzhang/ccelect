@@ -13,7 +13,13 @@ imageAlt:
   comment: Alternative text for the background image.
 videoSource:
   type: text
-  comment: Optional looping background video path under /public (e.g. /videos/ccelect/banner.mp4).
+  comment: Optional looping background video path under /public (e.g. /videos/ccelect/hero-loop.mp4).
+videoIntroSource:
+  type: text
+  comment: Optional one-shot intro video played once before the looping videoSource (e.g. /videos/ccelect/hero-ignition-intro.mp4).
+scrollMask:
+  type: switch
+  comment: Pin the banner while scrolling and shrink the media into a rounded window.
 heading:
   type: markdown
   comment: Heading text shown over the banner. Use a line break for two lines.

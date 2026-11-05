@@ -154,64 +154,27 @@ pageSections:
                     date: '2003'
                     heading: ISO 9001
                     text: ISO 9001 へ移行。現行証書は認証セクションを参照。
-              - _component: page-sections/features/feature-grid
-                eyebrowIcon: {}
+              - _component: page-sections/features/business-scope
                 eyebrowText: 営業項目
-                heading: 5 つの事業領域
+                heading: 4 つの事業領域
                 subtext: 旧公式サイトの会社紹介に基づく。
-                featureGrid:
-                  features:
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: テルミット溶接材料・金型
-                      description: Exothermic welding material and mold production & sale.
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: fire
-                        size: 2xl
-                        color: brand
-                        background: true
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: 電解式接地棒
-                      description: Chemical rod supply and installation.
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: signal
-                        size: 2xl
-                        color: brand
-                        background: true
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: その他接地材料
-                      description: Earth rod and grounding material sale (UL approved).
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: cube
-                        size: 2xl
-                        color: brand
-                        background: true
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: 避雷材料
-                      description: Lightning protection equipment manufacture & sale.
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: bolt
-                        size: 2xl
-                        color: brand
-                        background: true
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: 接地試験
-                      description: Earthing test and measurement services.
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: chart-bar
-                        size: 2xl
-                        color: brand
-                        background: true
-                maxContentWidth: 2xl
-                paddingVertical: 4xl
-                colorScheme: light
-                backgroundColor: base
-                contentBackground: false
-                rounded: false
+                items:
+                  - id: weld
+                    figure: "01"
+                    title: テルミット溶接材料・金型
+                    description: 銅導体を恒久的に接続するテルミット溶接剤と黒鉛金型の製造・販売。
+                  - id: rod
+                    figure: "02"
+                    title: 電解式接地棒
+                    description: 土壌条件が厳しい現場に、電解式接地棒の供給と施工を行います。
+                  - id: lightning
+                    figure: "03"
+                    title: 避雷材料
+                    description: 避雷針と関連部品の製造・販売。
+                  - id: test
+                    figure: "04"
+                    title: 接地試験
+                    description: 現場での接地抵抗および土壌抵抗率の測定。
               - _component: page-sections/info-blocks/table
                 eyebrowIcon: {}
                 eyebrowText: 会社基本データ

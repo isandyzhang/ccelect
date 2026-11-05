@@ -13,44 +13,25 @@ keywords:
 pageSections:
   - _component: page-sections/heroes/hero-image-banner
     id: homepage-banner
-    imageSource: /images/ccelect/banner.png
+    imageSource: /images/ccelect/banner-ignition.jpg
     imageAlt: 接地鋁熱熔接與接地／避雷解決方案
-    videoSource: /videos/ccelect/video.mp4
+    videoIntroSource: /videos/ccelect/hero-ignition-intro.mp4
+    videoSource: /videos/ccelect/hero-loop.mp4
+    scrollMask: true
     heading: 接地鋁熱熔接與<br />接地／避雷解決方案
-    subtext: >-
-      自 1979 年投入接地工程材料與技術，提供 Exoweld 熱熔接系統、接地與避雷組件、接地測量、設計諮詢及現場技術支援。
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        text: 瀏覽產品
-        hideText: false
-        link: /products/
-        iconName: arrow-right
-        iconPosition: after
-        variant: primary
-        size: md
-      - _component: building-blocks/core-elements/button
-        text: 關於我們
-        hideText: false
-        link: /about/
-        iconName: arrow-right
-        iconPosition: after
-        variant: secondary
-        size: md
+    subtext: 自 1979 年投入接地工程材料與技術，提供 Exoweld 熱熔接系統、接地與避雷組件、<br />接地測量、設計諮詢及現場技術支援。
+    buttonSections: []
   - _component: page-sections/features/grounding-experience
     id: grounding-experience
   - _component: page-sections/features/feature-grid
     id: products
     eyebrowIcon: {}
     eyebrowText: 主打產品
-    heading: Exoweld 熱熔接系統
-    subtext: >-
-      火泥熔模與銅導體熔接方案，涵蓋 W 系列銅導體接點（WE、WT、WX、WP、WL、WXL）
-      與 G 系列導體／接地極連接（GEE、GET、GST、GEY、GEP）。
+    heading: Exoweld<br />熱熔接系統
+    subtext: 火泥熔模與銅導體熔接方案，涵蓋 W 系列銅導體接點（WE、WT、WX、WP、WL、WXL）<br />與 G 系列導體／接地極連接（GEE、GET、GST、GEY、GEP）。
     featureGrid:
       features:
         - _component: page-sections/products/product-showcase
-          videoSource: /videos/ccelect/welding-demo.mp4
-          videoLabel: 開模・點火示意
           link: /products/exoweld/
           columnSpan: 12
           image:
@@ -66,90 +47,77 @@ pageSections:
     rounded: false
   - _component: page-sections/features/feature-grid
     id: project-fields
+    class: feature-grid-mosaic
     eyebrowIcon: {}
-    eyebrowText: 工程實績
-    heading: 橫跨交通、能源與製造業
-    subtext: 以下為舊官網記載之歷史供應、測量、教育訓練與現場服務範圍。
+    eyebrowText: ""
+    heading: ""
+    subtext: ""
     featureGrid:
       features:
         - _component: page-sections/features/feature-grid/feature-item
           title: 台灣高鐵工程
-          description: 2000–2006 年接地、避雷材料供應，以及教育訓練與現場測量工作。
           link: /projects/
+          columnSpan: 4
           image:
             source: /images/ccelect/project-hsr-retouched.webp
             alt: 台灣高鐵接地與避雷工程現場紀錄
-            aspectRatio: square
-            rounded: true
         - _component: page-sections/features/feature-grid/feature-item
           title: 捷運與機場捷運工程
-          description: 台北捷運各線及桃園機場捷運之熔接、接地與避雷工程需求。
           link: /projects/
+          columnSpan: 4
           image:
             source: /images/ccelect/project-metro-retouched.webp
             alt: 捷運軌道接地工程現場紀錄
-            aspectRatio: square
-            rounded: true
         - _component: page-sections/features/feature-grid/feature-item
           title: 台電工程
-          description: 水力、複循環、核電與超高壓變電所等接地／避雷材料供應。
           link: /projects/
+          columnSpan: 4
           image:
             source: /images/ccelect/project-taipower-retouched.webp
             alt: 台電工程接地與避雷現場紀錄
-            aspectRatio: square
-            rounded: true
-      gridMaxWidth: 3xl
+        - _component: page-sections/features/feature-grid/feature-item
+          title: 積體電路及光電廠
+          link: /projects/
+          columnSpan: 4
+          image:
+            source: /images/ccelect/project-fab.jpg
+            alt: 積體電路與光電廠廠房外觀
+        - _component: page-sections/features/feature-grid/feature-item
+          title: 資源回收廠
+          link: /projects/
+          columnSpan: 8
+          image:
+            source: /images/ccelect/project-incinerator.jpg
+            alt: 資源回收廠焚化爐外觀
+      gridMaxWidth: none
     maxContentWidth: 2xl
     paddingVertical: 4xl
     colorScheme: light
     backgroundColor: highlight-grid
     contentBackground: false
     rounded: false
-  - _component: page-sections/features/feature-grid
+  - _component: page-sections/features/business-scope
     id: technical-reading
-    eyebrowIcon: {}
+    motion: hover
     eyebrowText: 技術閱讀
     heading: 從材料特性到系統設計
     subtext: 整理舊站技術資料，提供規格、施工與接地設計的基礎閱讀。
-    featureGrid:
-      features:
-        - _component: page-sections/features/feature-grid/feature-item
-          title: 鋁熱熔接的電氣與機械特性
-          description: 了解分子結合、載流能力、溫升與接點強度。
-          link: /blog/exothermic-welding-properties/
-          eyebrowIcon:
-            _component: building-blocks/core-elements/icon
-            name: beaker
-            size: 2xl
-            color: brand
-            background: true
-        - _component: page-sections/features/feature-grid/feature-item
-          title: 火泥熔接施工流程與現場準備
-          description: 從模具乾燥、固定導體到點火與完成後檢查。
-          link: /blog/exothermic-welding-process/
-          eyebrowIcon:
-            _component: building-blocks/core-elements/icon
-            name: clipboard-document-check
-            size: 2xl
-            color: brand
-            background: true
-        - _component: page-sections/features/feature-grid/feature-item
-          title: 接地系統設計的基本分類與考量
-          description: 區分電力系統、設備、避雷與電子設備接地需求。
-          link: /blog/grounding-system-design/
-          eyebrowIcon:
-            _component: building-blocks/core-elements/icon
-            name: adjustments-horizontal
-            size: 2xl
-            color: brand
-            background: true
-    maxContentWidth: 2xl
-    paddingVertical: 4xl
-    colorScheme: light
-    backgroundColor: surface-linear-gradient
-    contentBackground: false
-    rounded: false
+    items:
+      - id: weld
+        figure: "01"
+        title: 鋁熱熔接的電氣與機械特性
+        description: 了解分子結合、載流能力、溫升與接點強度。
+        link: /blog/exothermic-welding-properties/
+      - id: process
+        figure: "02"
+        title: 火泥熔接施工流程與現場準備
+        description: 從模具乾燥、固定導體到點火與完成後檢查。
+        link: /blog/exothermic-welding-process/
+      - id: rod
+        figure: "03"
+        title: 接地系統設計的基本分類與考量
+        description: 區分電力系統、設備、避雷與電子設備接地需求。
+        link: /blog/grounding-system-design/
   - _component: page-sections/ctas/cta-center
     id: credentials
     eyebrowIcon: {}

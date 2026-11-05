@@ -154,64 +154,27 @@ pageSections:
                     date: '2003'
                     heading: ISO 9001
                     text: Transitioned to ISO 9001; current certificate listed under Certifications.
-              - _component: page-sections/features/feature-grid
-                eyebrowIcon: {}
+              - _component: page-sections/features/business-scope
                 eyebrowText: Business scope
-                heading: Five business areas
+                heading: Four business areas
                 subtext: From our public company profile.
-                featureGrid:
-                  features:
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: Exothermic welding materials & molds
-                      description: Manufacture and sales of exothermic welding material and molds.
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: fire
-                        size: 2xl
-                        color: brand
-                        background: true
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: Chemical grounding rods
-                      description: Supply and installation of chemical (electrolytic) grounding rods.
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: signal
-                        size: 2xl
-                        color: brand
-                        background: true
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: Grounding materials
-                      description: Earth rods and related grounding materials (UL-related offerings).
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: cube
-                        size: 2xl
-                        color: brand
-                        background: true
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: Lightning protection
-                      description: Manufacture and sales of lightning protection equipment.
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: bolt
-                        size: 2xl
-                        color: brand
-                        background: true
-                    - _component: page-sections/features/feature-grid/feature-item
-                      title: Earthing tests
-                      description: On-site earthing tests and measurement services.
-                      eyebrowIcon:
-                        _component: building-blocks/core-elements/icon
-                        name: chart-bar
-                        size: 2xl
-                        color: brand
-                        background: true
-                maxContentWidth: 2xl
-                paddingVertical: 4xl
-                colorScheme: light
-                backgroundColor: base
-                contentBackground: false
-                rounded: false
+                items:
+                  - id: weld
+                    figure: "01"
+                    title: Exothermic welding materials and molds
+                    description: Manufacture and sale of exothermic welding materials and graphite molds for permanent copper joints.
+                  - id: rod
+                    figure: "02"
+                    title: Electrolytic grounding rods
+                    description: Supply and installation of electrolytic grounding rods where soil conditions are difficult.
+                  - id: lightning
+                    figure: "03"
+                    title: Lightning protection
+                    description: Manufacture and sale of air terminals and related lightning protection equipment.
+                  - id: test
+                    figure: "04"
+                    title: Earthing tests
+                    description: On-site earthing resistance and soil resistivity measurement.
               - _component: page-sections/info-blocks/table
                 eyebrowIcon: {}
                 eyebrowText: Company profile

@@ -31,3 +31,9 @@ yarn-error.log*
 # temporary files
 *.tmp
 *.temp
+
+# Hero ignition build intermediates
+scripts/assets/hero-ignition/work/
+scripts/assets/hero-ignition/check_*.jpg
+scripts/assets/hero-ignition/ref_*.jpg
+scripts/assets/hero-ignition/loopcand_*.jpg
