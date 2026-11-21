@@ -1,0 +1,102 @@
+{
+  "source": "https://www.southwire.com/medias/2304-American-Wire-Gauge-PRINT.pdf?context=bWFzdGVyfHJvb3R8MjQyMTE2fGFwcGxpY2F0aW9uL3BkZnxoYjIvaGJjLzkyMjU2NjM3NDE5ODIvMjMwNF9BbWVyaWNhbl9XaXJlX0dhdWdlX1BSSU5ULnBkZnwxNTlkMGY2OWM2NTQzNDBhYmZiMzE5ZDFlYWRjNTRlMzhjMDU0NTljMjgxM2EyM2I4ZWRkZWFhMWI2NDJjZDRl",
+  "method": "Nearest nominal cross-sectional area; reference only, not mold compatibility approval.",
+  "sizes": [
+    {
+      "label": "8 AWG",
+      "areaMm2": 8.37
+    },
+    {
+      "label": "6 AWG",
+      "areaMm2": 13.3
+    },
+    {
+      "label": "4 AWG",
+      "areaMm2": 21.2
+    },
+    {
+      "label": "3 AWG",
+      "areaMm2": 26.7
+    },
+    {
+      "label": "2 AWG",
+      "areaMm2": 33.6
+    },
+    {
+      "label": "1 AWG",
+      "areaMm2": 42.4
+    },
+    {
+      "label": "1/0 AWG",
+      "areaMm2": 53.5
+    },
+    {
+      "label": "2/0 AWG",
+      "areaMm2": 67.4
+    },
+    {
+      "label": "3/0 AWG",
+      "areaMm2": 85
+    },
+    {
+      "label": "4/0 AWG",
+      "areaMm2": 107
+    },
+    {
+      "label": "250 kcmil",
+      "areaMm2": 127
+    },
+    {
+      "label": "300 kcmil",
+      "areaMm2": 152
+    },
+    {
+      "label": "350 kcmil",
+      "areaMm2": 177
+    },
+    {
+      "label": "400 kcmil",
+      "areaMm2": 203
+    },
+    {
+      "label": "450 kcmil",
+      "areaMm2": 228
+    },
+    {
+      "label": "500 kcmil",
+      "areaMm2": 253
+    },
+    {
+      "label": "550 kcmil",
+      "areaMm2": 279
+    },
+    {
+      "label": "600 kcmil",
+      "areaMm2": 304
+    },
+    {
+      "label": "650 kcmil",
+      "areaMm2": 329
+    },
+    {
+      "label": "700 kcmil",
+      "areaMm2": 355
+    },
+    {
+      "label": "750 kcmil",
+      "areaMm2": 380
+    },
+    {
+      "label": "800 kcmil",
+      "areaMm2": 405
+    },
+    {
+      "label": "900 kcmil",
+      "areaMm2": 456
+    },
+    {
+      "label": "1000 kcmil",
+      "areaMm2": 507
+    }
+  ]
+}

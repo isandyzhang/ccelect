@@ -2,7 +2,7 @@
 _schema: default
 permalink: null
 title: Exoweld 熱熔接型錄
-description: Exoweld 銅熱熔接系列型錄：W、G、S、R、P、B、E 系列接點形式。
+description: Exoweld 銅熱熔接系列型錄：W、G、S、R、P、B、E、C 系列接點形式。
 pageSections:
   - _component: page-sections/products/product-catalog
     eyebrowText: Exoweld 熱熔接型錄
@@ -17,15 +17,15 @@ pageSections:
         category: Exoweld
         title: W 系列-線對線
         description: 銅導體線對線接點：WE、WT、WX、WP、WL、WXL。
-        image: /images/ccelect/diagrams/we.jpg
-        imageAlt: WE/WES 線對線直通示意圖
+        image: /images/ccelect/diagrams/we.svg
+        imageAlt: WE 線對線直通示意圖
         images:
-          - image: /images/ccelect/diagrams/we.jpg
-            imageAlt: WE/WES 線對線直通示意圖
+          - image: /images/ccelect/diagrams/we.svg
+            imageAlt: WE 線對線直通示意圖
           - image: /images/ccelect/diagrams/wt.jpg
             imageAlt: WT 線對線 T 接示意圖
-          - image: /images/ccelect/diagrams/wx.jpg
-            imageAlt: WX/WXS 線對線交叉示意圖
+          - image: /images/ccelect/diagrams/wx.svg
+            imageAlt: WX 線對線交叉示意圖
           - image: /images/ccelect/diagrams/wp.jpg
             imageAlt: WP 線對線平行示意圖
           - image: /images/ccelect/diagrams/wl.jpg
@@ -101,8 +101,17 @@ pageSections:
         category: Exoweld
         title: P 系列
         description: PK、PV、PY、PT 系列接點形式。
-        image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/diagrams/pk.svg
+        imageAlt: PK 接點示意圖
+        images:
+          - image: /images/ccelect/diagrams/pk.svg
+            imageAlt: PK 接點示意圖
+          - image: /images/ccelect/diagrams/pv.svg
+            imageAlt: PV 接點示意圖
+          - image: /images/ccelect/diagrams/py.svg
+            imageAlt: PY 接點示意圖
+          - image: /images/ccelect/diagrams/pt.svg
+            imageAlt: PT 接點示意圖
         specifications:
           - PK
           - PV
@@ -112,22 +121,73 @@ pageSections:
       - id: series-b
         category: Exoweld
         title: B 系列
-        description: BE、BEH、BT、BTV 系列接點形式。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: 產品示意照片
+        description: BE、BEH、BT、BTV、BS、BX、BVES 系列接點形式。
+        image: /images/ccelect/diagrams/be.svg
+        imageAlt: BE 接點示意圖
+        images:
+          - image: /images/ccelect/diagrams/be.svg
+            imageAlt: BE 接點示意圖
+          - image: /images/ccelect/diagrams/beh.svg
+            imageAlt: BEH 接點示意圖
+          - image: /images/ccelect/diagrams/bt.svg
+            imageAlt: BT 接點示意圖
+          - image: /images/ccelect/diagrams/btv.svg
+            imageAlt: BTV 接點示意圖
+          - image: /images/ccelect/diagrams/bs.svg
+            imageAlt: BS 接點示意圖
+          - image: /images/ccelect/diagrams/bx.svg
+            imageAlt: BX 接點示意圖
+          - image: /images/ccelect/diagrams/bves.svg
+            imageAlt: BVES 接點示意圖
         specifications:
           - BE
           - BEH
           - BT
           - BTV
+          - BS
+          - BX
+          - BVES
         href: /products/exoweld/b-series/
       - id: series-e
         category: Exoweld
         title: E 系列
-        description: ERW 系列接點形式。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: 產品示意照片
+        description: ERB、ERW、ERT 系列接點形式。
+        image: /images/ccelect/diagrams/erb.svg
+        imageAlt: ERB 接點示意圖
+        images:
+          - image: /images/ccelect/diagrams/erb.svg
+            imageAlt: ERB 接點示意圖
+          - image: /images/ccelect/diagrams/erw.svg
+            imageAlt: ERW 接點示意圖
+          - image: /images/ccelect/diagrams/ert.svg
+            imageAlt: ERT 接點示意圖
         specifications:
+          - ERB
           - ERW
+          - ERT
         href: /products/exoweld/e-series/
+      - id: series-c
+        category: Exoweld
+        title: C 系列
+        description: CSHEA、CSHTA、CSVES、CWL、CWE 系列接點形式。
+        image: /images/ccelect/diagrams/cshea.svg
+        imageAlt: CSHEA 接點示意圖
+        images:
+          - image: /images/ccelect/diagrams/cshea.svg
+            imageAlt: CSHEA 接點示意圖
+          - image: /images/ccelect/diagrams/cshta.svg
+            imageAlt: CSHTA 接點示意圖
+          - image: /images/ccelect/diagrams/csves.svg
+            imageAlt: CSVES 接點示意圖
+          - image: /images/ccelect/diagrams/cwl.svg
+            imageAlt: CWL 接點示意圖
+          - image: /images/ccelect/diagrams/cwe.svg
+            imageAlt: CWE 接點示意圖
+        specifications:
+          - CSHEA
+          - CSHTA
+          - CSVES
+          - CWL
+          - CWE
+        href: /products/exoweld/c-series/
 ---

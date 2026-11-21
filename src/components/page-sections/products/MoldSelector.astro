@@ -1,0 +1,477 @@
+---
+import catalog from "@data/exoweld/mold-options.json";
+import usWireSizes from "@data/exoweld/us-wire-sizes.json";
+import { localeFromPath } from "@i18n/experience";
+
+interface Props {
+  product: string;
+}
+
+const { product } = Astro.props;
+const config = catalog[product as keyof typeof catalog];
+const locale = localeFromPath(Astro.url.pathname);
+const translations = {
+  "zh-tw": {
+    title: "模具型號選擇器",
+    intro: "依照示意圖選擇導體 A 與 B 的截面積，查詢對應模具型號。",
+    a: "導體 A",
+    b: "導體 B",
+    choose: "請選擇規格",
+    chooseA: "請先選擇導體 A",
+    model: "模具型號（Mold Type）",
+    empty: "選好 A、B 規格後，將顯示對應型號。",
+    copy: "複製型號",
+    copied: "已複製型號",
+    failed: "無法自動複製，請選取型號文字複製。",
+    diagram: `${product} 導體 A、B 位置示意圖`,
+    units: "單位制",
+    conversion:
+      "Metric 使用 mm²；Imperial 顯示標稱截面積最接近的 AWG／kcmil，括號為原公制規格。僅供尺寸參考，不代表美規導體可直接使用此模具。",
+    download: "下載全部組合 CSV",
+    downloadNote: "示範檔案：包含全部 15 組有效規格與兩種單位。",
+  },
+  en: {
+    title: "Mold type selector",
+    intro:
+      "Choose the cross-sectional areas of conductors A and B using the diagram to find the matching mold type.",
+    a: "Conductor A",
+    b: "Conductor B",
+    choose: "Select a size",
+    chooseA: "Select conductor A first",
+    model: "Mold Type",
+    empty: "Select both conductor sizes to see the matching mold type.",
+    copy: "Copy mold type",
+    copied: "Mold type copied",
+    failed: "Unable to copy automatically. Select and copy the mold type text.",
+    diagram: `${product} conductor A and B diagram`,
+    units: "Unit system",
+    conversion:
+      "Metric uses mm². Imperial shows the closest nominal AWG/kcmil area; parentheses retain the original metric size. Reference only; mold compatibility with US conductors is not confirmed.",
+    download: "Download all combinations CSV",
+    downloadNote: "Demo file: all 15 valid combinations in both units.",
+  },
+  ja: {
+    title: "モールド型番選択",
+    intro: "図を参考に導体 A と B の断面積を選択すると、対応するモールド型番を確認できます。",
+    a: "導体 A",
+    b: "導体 B",
+    choose: "サイズを選択",
+    chooseA: "先に導体 A を選択してください",
+    model: "モールド型番（Mold Type）",
+    empty: "A と B のサイズを選択すると型番が表示されます。",
+    copy: "型番をコピー",
+    copied: "型番をコピーしました",
+    failed: "自動コピーできません。型番のテキストを選択してコピーしてください。",
+    diagram: `${product} 導体 A・B の位置図`,
+    units: "単位系",
+    conversion:
+      "Metric は mm²、Imperial は公称断面積が最も近い AWG／kcmil を表示します。括弧内は元の公制サイズです。参考値であり、米国規格導体とモールドの適合を保証するものではありません。",
+    download: "全組み合わせ CSV をダウンロード",
+    downloadNote: "サンプルファイル：全15組の有効な規格を両方の単位で収録。",
+  },
+};
+const text = translations[locale];
+const id = `mold-selector-${crypto.randomUUID()}`;
+const sizes = config
+  ? [...new Set(config.options.map((option) => option.a))].sort((a, b) => Number(a) - Number(b))
+  : [];
+---
+
+{
+  config && (
+    <section
+      id={`mold-selector-${product.toLowerCase()}`}
+      class="mold-selector"
+      data-mold-selector
+      data-options={JSON.stringify(config.options)}
+      data-choose={text.choose}
+      data-choose-a={text.chooseA}
+      data-empty={text.empty}
+      data-copied={text.copied}
+      data-failed={text.failed}
+      aria-labelledby={`${id}-heading`}
+    >
+      <header>
+        <h2 id={`${id}-heading`}>{text.title}</h2>
+        <p>{text.intro}</p>
+      </header>
+      <div class="mold-selector-layout">
+        <figure>
+          <img
+            src={config.diagram}
+            alt={text.diagram}
+            width="214"
+            height="194"
+            loading="lazy"
+          />
+        </figure>
+        <div class="mold-selector-controls">
+          <div
+            class="unit-switch"
+            role="group"
+            aria-label={text.units}
+          >
+            <button
+              type="button"
+              data-unit="metric"
+              aria-pressed="true"
+            >
+              Metric
+            </button>
+            <button
+              type="button"
+              data-unit="imperial"
+              aria-pressed="false"
+            >
+              Imperial
+            </button>
+          </div>
+          <p class="conversion-note">
+            {text.conversion}{" "}
+            <a
+              href={usWireSizes.source}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Southwire
+            </a>
+          </p>
+          <div class="mold-selector-fields">
+            <label for={`${id}-a`}>
+              <span>
+                {text.a} <small data-unit-label>mm²</small>
+              </span>
+              <select
+                id={`${id}-a`}
+                data-conductor-a
+              >
+                <option value="">{text.choose}</option>
+                {sizes.map((size) => (
+                  <option value={size}>{size} mm²</option>
+                ))}
+              </select>
+            </label>
+            <label for={`${id}-b`}>
+              <span>
+                {text.b} <small data-unit-label>mm²</small>
+              </span>
+              <select
+                id={`${id}-b`}
+                data-conductor-b
+                disabled
+              >
+                <option value="">{text.chooseA}</option>
+              </select>
+            </label>
+          </div>
+          <div class="mold-selector-result">
+            <label for={`${id}-model`}>{text.model}</label>
+            <div class="mold-selector-output">
+              <input
+                id={`${id}-model`}
+                data-model
+                readonly
+                placeholder="—"
+                autocomplete="off"
+              />
+              <button
+                type="button"
+                data-copy-model
+                disabled
+              >
+                {text.copy}
+              </button>
+            </div>
+            <p
+              data-selector-status
+              role="status"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              {text.empty}
+            </p>
+          </div>
+          <div class="mold-selector-download">
+            <a
+              href="/downloads/we-mold-combinations-demo.csv"
+              download="WE-all-combinations-demo.csv"
+            >
+              {text.download}
+            </a>
+            <p>{text.downloadNote}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<script>
+  import { onPageLoad } from "@component-utils/onPageLoad";
+  import usWireSizes from "@data/exoweld/us-wire-sizes.json";
+
+  interface MoldOption {
+    a: string;
+    b: string;
+    model: string;
+  }
+
+  function setupMoldSelectors() {
+    document.querySelectorAll<HTMLElement>("[data-mold-selector]").forEach((root) => {
+      if (root.dataset.ready === "true") return;
+      const options: MoldOption[] = JSON.parse(root.dataset.options || "[]");
+      const a = root.querySelector<HTMLSelectElement>("[data-conductor-a]");
+      const b = root.querySelector<HTMLSelectElement>("[data-conductor-b]");
+      const model = root.querySelector<HTMLInputElement>("[data-model]");
+      const copy = root.querySelector<HTMLButtonElement>("[data-copy-model]");
+      const status = root.querySelector<HTMLElement>("[data-selector-status]");
+      if (!a || !b || !model || !copy || !status) return;
+      const unitButtons = root.querySelectorAll<HTMLButtonElement>("[data-unit]");
+      let unit: "metric" | "imperial" = "metric";
+      // Compare nominal areas, retaining original metric keys and mold numbers.
+      const formatSize = (value: string) => {
+        if (unit === "metric") return `${value} mm²`;
+        const closest = usWireSizes.sizes.reduce((best, size) =>
+          Math.abs(size.areaMm2 - Number(value)) < Math.abs(best.areaMm2 - Number(value))
+            ? size
+            : best
+        );
+        return `≈ ${closest.label} (${value} mm²)`;
+      };
+      const renderUnit = () => {
+        [a, b].forEach((select) => {
+          Array.from(select.options).forEach((option) => {
+            if (option.value) option.textContent = formatSize(option.value);
+          });
+        });
+        root.querySelectorAll<HTMLElement>("[data-unit-label]").forEach((label) => {
+          label.textContent = unit === "metric" ? "mm²" : "AWG / kcmil";
+        });
+        unitButtons.forEach((button) =>
+          button.setAttribute("aria-pressed", String(button.dataset.unit === unit))
+        );
+      };
+      unitButtons.forEach((button) =>
+        button.addEventListener("click", () => {
+          unit = button.dataset.unit === "imperial" ? "imperial" : "metric";
+          renderUnit();
+        })
+      );
+
+      const updateModel = () => {
+        const match = options.find((option) => option.a === a.value && option.b === b.value);
+        model.value = match?.model || "";
+        copy.disabled = !match;
+        status.textContent = match ? match.model : root.dataset.empty || "";
+      };
+
+      a.addEventListener("change", () => {
+        const previous = b.value;
+        const sizes = [
+          ...new Set(options.filter((option) => option.a === a.value).map((option) => option.b)),
+        ].sort((left, right) => Number(left) - Number(right));
+        b.replaceChildren(new Option(a.value ? root.dataset.choose : root.dataset.chooseA, ""));
+        sizes.forEach((size) => b.add(new Option(formatSize(size), size)));
+        b.disabled = !a.value;
+        b.value = sizes.includes(previous) ? previous : "";
+        updateModel();
+      });
+      b.addEventListener("change", updateModel);
+      copy.addEventListener("click", async () => {
+        const value = model.value;
+        if (!value || copy.disabled) return;
+        try {
+          await navigator.clipboard.writeText(value);
+          if (model.value === value) status.textContent = root.dataset.copied || "";
+        } catch {
+          model.focus();
+          model.select();
+          status.textContent = root.dataset.failed || "";
+        }
+      });
+      root.dataset.ready = "true";
+    });
+  }
+  onPageLoad(setupMoldSelectors);
+</script>
+
+<style>
+  .mold-selector {
+    scroll-margin-top: 6rem;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.25rem, 3vw, 2rem);
+  }
+  h2 {
+    color: var(--color-text-strong);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0;
+  }
+  header p {
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin: 0.75rem 0 1.75rem;
+  }
+  .mold-selector-layout {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+  }
+  figure {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    margin: 0;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+  }
+  figure img {
+    display: block;
+    width: min(100%, 18rem);
+    height: auto;
+  }
+  .mold-selector-controls {
+    min-width: 0;
+  }
+  .unit-switch {
+    display: inline-flex;
+    gap: 0.25rem;
+    padding: 0.35rem;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    max-width: 100%;
+  }
+  .unit-switch button {
+    background: transparent;
+    color: var(--color-text-strong);
+    border-radius: 999px;
+    min-height: 2.25rem;
+    padding: 0.35rem 1.25rem;
+  }
+  .unit-switch button[aria-pressed="true"] {
+    background: #c82032;
+    color: #fff;
+  }
+  .conversion-note,
+  .mold-selector-download p {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin: 0.75rem 0 1.25rem;
+  }
+  .mold-selector-download {
+    margin-top: 1.25rem;
+  }
+  .mold-selector-download a {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--color-text-brand);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-brand);
+    font-weight: 500;
+    min-height: 2.75rem;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+  }
+  .mold-selector-download a:hover {
+    background: color-mix(in srgb, var(--color-bg-brand) 6%, var(--color-bg-surface));
+  }
+  .mold-selector-download p {
+    margin-bottom: 0;
+  }
+  .mold-selector-fields {
+    display: grid;
+    gap: 1rem;
+  }
+  label {
+    display: grid;
+    gap: 0.65rem;
+    color: var(--color-text-strong);
+    font-weight: 500;
+  }
+  small {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin-left: 0.35rem;
+  }
+  select {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-strong);
+    font: inherit;
+    min-height: 3rem;
+    padding: 0.7rem;
+    width: 100%;
+  }
+  select:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  select:focus-visible,
+  button:focus-visible,
+  input:focus-visible {
+    outline: 2px solid var(--color-text-brand);
+    outline-offset: 3px;
+  }
+  .mold-selector-result {
+    background: color-mix(in srgb, var(--color-bg-brand) 6%, var(--color-bg-surface));
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+  }
+  .mold-selector-output {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  input {
+    background: transparent;
+    border: 0;
+    color: var(--color-text-brand);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 600;
+    padding: 0.25rem 0;
+    width: 100%;
+    min-width: 0;
+    flex: 1 1 12rem;
+  }
+  button {
+    background: var(--color-text-brand);
+    color: #fff;
+    border: 0;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 500;
+    min-height: 2.75rem;
+    padding: 0.65rem 1rem;
+  }
+  button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  [data-selector-status] {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin: 0.75rem 0 0;
+    min-height: 1.6em;
+  }
+  @media (min-width: 560px) {
+    .mold-selector-fields {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (min-width: 800px) {
+    .mold-selector-layout {
+      grid-template-columns: minmax(12rem, 0.65fr) minmax(0, 1.35fr);
+    }
+  }
+</style>

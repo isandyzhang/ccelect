@@ -10,7 +10,8 @@
         { "name": "R series", "path": "/en/products/exoweld/r-series/", "children": [] },
         { "name": "P series", "path": "/en/products/exoweld/p-series/", "children": [] },
         { "name": "B series", "path": "/en/products/exoweld/b-series/", "children": [] },
-        { "name": "E series", "path": "/en/products/exoweld/e-series/", "children": [] }
+        { "name": "E series", "path": "/en/products/exoweld/e-series/", "children": [] },
+        { "name": "C series", "path": "/en/products/exoweld/c-series/", "children": [] }
       ]
     },
     {

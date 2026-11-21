@@ -17,15 +17,15 @@ pageSections:
         category: Exoweld
         title: W シリーズ-線対線
         description: 銅導体どうしの接点：WE、WT、WX、WP、WL、WXL。
-        image: /images/ccelect/diagrams/we.jpg
-        imageAlt: WE/WES 線対線ストレート図
+        image: /images/ccelect/diagrams/we.svg
+        imageAlt: WE 線対線ストレート図
         images:
-          - image: /images/ccelect/diagrams/we.jpg
-            imageAlt: WE/WES 線対線ストレート図
+          - image: /images/ccelect/diagrams/we.svg
+            imageAlt: WE 線対線ストレート図
           - image: /images/ccelect/diagrams/wt.jpg
             imageAlt: WT 線対線 T 字図
-          - image: /images/ccelect/diagrams/wx.jpg
-            imageAlt: WX/WXS 線対線クロス図
+          - image: /images/ccelect/diagrams/wx.svg
+            imageAlt: WX 線対線クロス図
           - image: /images/ccelect/diagrams/wp.jpg
             imageAlt: WP 線対線平行図
           - image: /images/ccelect/diagrams/wl.jpg
@@ -101,8 +101,17 @@ pageSections:
         category: Exoweld
         title: P シリーズ
         description: PK、PV、PY、PT シリーズ接点形式。
-        image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/diagrams/pk.svg
+        imageAlt: PK 接続図
+        images:
+          - image: /images/ccelect/diagrams/pk.svg
+            imageAlt: PK 接続図
+          - image: /images/ccelect/diagrams/pv.svg
+            imageAlt: PV 接続図
+          - image: /images/ccelect/diagrams/py.svg
+            imageAlt: PY 接続図
+          - image: /images/ccelect/diagrams/pt.svg
+            imageAlt: PT 接続図
         specifications:
           - PK
           - PV
@@ -112,22 +121,73 @@ pageSections:
       - id: series-b
         category: Exoweld
         title: B シリーズ
-        description: BE、BEH、BT、BTV シリーズ接点形式。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: 製品プレースホルダー
+        description: BE、BEH、BT、BTV、BS、BX、BVES シリーズ接点形式。
+        image: /images/ccelect/diagrams/be.svg
+        imageAlt: BE 接続図
+        images:
+          - image: /images/ccelect/diagrams/be.svg
+            imageAlt: BE 接続図
+          - image: /images/ccelect/diagrams/beh.svg
+            imageAlt: BEH 接続図
+          - image: /images/ccelect/diagrams/bt.svg
+            imageAlt: BT 接続図
+          - image: /images/ccelect/diagrams/btv.svg
+            imageAlt: BTV 接続図
+          - image: /images/ccelect/diagrams/bs.svg
+            imageAlt: BS 接続図
+          - image: /images/ccelect/diagrams/bx.svg
+            imageAlt: BX 接続図
+          - image: /images/ccelect/diagrams/bves.svg
+            imageAlt: BVES 接続図
         specifications:
           - BE
           - BEH
           - BT
           - BTV
+          - BS
+          - BX
+          - BVES
         href: /ja/products/exoweld/b-series/
       - id: series-e
         category: Exoweld
         title: E シリーズ
-        description: ERW シリーズ接点形式。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: 製品プレースホルダー
+        description: ERB、ERW、ERT シリーズ接点形式。
+        image: /images/ccelect/diagrams/erb.svg
+        imageAlt: ERB 接続図
+        images:
+          - image: /images/ccelect/diagrams/erb.svg
+            imageAlt: ERB 接続図
+          - image: /images/ccelect/diagrams/erw.svg
+            imageAlt: ERW 接続図
+          - image: /images/ccelect/diagrams/ert.svg
+            imageAlt: ERT 接続図
         specifications:
+          - ERB
           - ERW
+          - ERT
         href: /ja/products/exoweld/e-series/
+      - id: series-c
+        category: Exoweld
+        title: C シリーズ
+        description: CSHEA、CSHTA、CSVES、CWL、CWE シリーズ接点形式。
+        image: /images/ccelect/diagrams/cshea.svg
+        imageAlt: CSHEA 接続図
+        images:
+          - image: /images/ccelect/diagrams/cshea.svg
+            imageAlt: CSHEA 接続図
+          - image: /images/ccelect/diagrams/cshta.svg
+            imageAlt: CSHTA 接続図
+          - image: /images/ccelect/diagrams/csves.svg
+            imageAlt: CSVES 接続図
+          - image: /images/ccelect/diagrams/cwl.svg
+            imageAlt: CWL 接続図
+          - image: /images/ccelect/diagrams/cwe.svg
+            imageAlt: CWE 接続図
+        specifications:
+          - CSHEA
+          - CSHTA
+          - CSVES
+          - CWL
+          - CWE
+        href: /ja/products/exoweld/c-series/
 ---

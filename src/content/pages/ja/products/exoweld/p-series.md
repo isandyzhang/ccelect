@@ -17,8 +17,8 @@ pageSections:
         category: Exoweld ／ P シリーズ
         title: PK
         description: PK は Exoweld P シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/diagrams/pk.svg
+        imageAlt: PK 接続図
         specifications:
           - PK
         href: /ja/contact/
@@ -26,8 +26,8 @@ pageSections:
         category: Exoweld ／ P シリーズ
         title: PV
         description: PV は Exoweld P シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/diagrams/pv.svg
+        imageAlt: PV 接続図
         specifications:
           - PV
         href: /ja/contact/
@@ -35,8 +35,8 @@ pageSections:
         category: Exoweld ／ P シリーズ
         title: PY
         description: PY は Exoweld P シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/diagrams/py.svg
+        imageAlt: PY 接続図
         specifications:
           - PY
         href: /ja/contact/
@@ -44,8 +44,8 @@ pageSections:
         category: Exoweld ／ P シリーズ
         title: PT
         description: PT は Exoweld P シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/diagrams/pt.svg
+        imageAlt: PT 接続図
         specifications:
           - PT
         href: /ja/contact/

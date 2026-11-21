@@ -2,7 +2,7 @@
 _schema: default
 permalink: null
 title: B 系列
-description: BE、BEH、BT、BTV 系列接點形式。
+description: BE、BEH、BT、BTV、BS、BX、BVES 系列接點形式。
 pageSections:
   - _component: page-sections/products/product-catalog
     eyebrowText: Exoweld ／ B 系列
@@ -17,8 +17,8 @@ pageSections:
         category: Exoweld ／ B 系列
         title: BE
         description: BE 為 Exoweld B 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/diagrams/be.svg
+        imageAlt: BE 接點示意圖
         specifications:
           - BE
         href: /contact/
@@ -26,8 +26,8 @@ pageSections:
         category: Exoweld ／ B 系列
         title: BEH
         description: BEH 為 Exoweld B 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/diagrams/beh.svg
+        imageAlt: BEH 接點示意圖
         specifications:
           - BEH
         href: /contact/
@@ -35,8 +35,8 @@ pageSections:
         category: Exoweld ／ B 系列
         title: BT
         description: BT 為 Exoweld B 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/diagrams/bt.svg
+        imageAlt: BT 接點示意圖
         specifications:
           - BT
         href: /contact/
@@ -44,9 +44,36 @@ pageSections:
         category: Exoweld ／ B 系列
         title: BTV
         description: BTV 為 Exoweld B 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/diagrams/btv.svg
+        imageAlt: BTV 接點示意圖
         specifications:
           - BTV
+        href: /contact/
+      - id: bs
+        category: Exoweld ／ B 系列
+        title: BS
+        description: BS 為 Exoweld B 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
+        image: /images/ccelect/diagrams/bs.svg
+        imageAlt: BS 接點示意圖
+        specifications:
+          - BS
+        href: /contact/
+      - id: bx
+        category: Exoweld ／ B 系列
+        title: BX
+        description: BX 為 Exoweld B 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
+        image: /images/ccelect/diagrams/bx.svg
+        imageAlt: BX 接點示意圖
+        specifications:
+          - BX
+        href: /contact/
+      - id: bves
+        category: Exoweld ／ B 系列
+        title: BVES
+        description: BVES 為 Exoweld B 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
+        image: /images/ccelect/diagrams/bves.svg
+        imageAlt: BVES 接點示意圖
+        specifications:
+          - BVES
         href: /contact/
 ---

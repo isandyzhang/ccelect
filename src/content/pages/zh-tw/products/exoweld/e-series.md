@@ -2,7 +2,7 @@
 _schema: default
 permalink: null
 title: E 系列
-description: ERW 系列接點形式。
+description: ERB、ERW、ERT 系列接點形式。
 pageSections:
   - _component: page-sections/products/product-catalog
     eyebrowText: Exoweld ／ E 系列
@@ -13,13 +13,31 @@ pageSections:
     helpLink: /contact/
     helpLinkText: 聯絡工程業務
     items:
+      - id: erb
+        category: Exoweld ／ E 系列
+        title: ERB
+        description: ERB 為 Exoweld E 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
+        image: /images/ccelect/diagrams/erb.svg
+        imageAlt: ERB 接點示意圖
+        specifications:
+          - ERB
+        href: /contact/
       - id: erw
         category: Exoweld ／ E 系列
         title: ERW
         description: ERW 為 Exoweld E 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/diagrams/erw.svg
+        imageAlt: ERW 接點示意圖
         specifications:
           - ERW
+        href: /contact/
+      - id: ert
+        category: Exoweld ／ E 系列
+        title: ERT
+        description: ERT 為 Exoweld E 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
+        image: /images/ccelect/diagrams/ert.svg
+        imageAlt: ERT 接點示意圖
+        specifications:
+          - ERT
         href: /contact/
 ---

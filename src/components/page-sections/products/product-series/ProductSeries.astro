@@ -1,12 +1,11 @@
 ---
-import ProductBreadcrumb from "../ProductBreadcrumb.astro";
 import { contactHref, experienceText, localeFromPath } from "@i18n/experience";
 
 const messages = experienceText[localeFromPath(Astro.url.pathname)];
 
 import Image from "@core-elements/image/Image.astro";
 import Icon from "@core-elements/icon/Icon.astro";
-import ProductsSide from "@navigation/products-side/ProductsSide.astro";
+import ProductSidebar from "../ProductSidebar.astro";
 import ProductCatalogCard from "../product-catalog/ProductCatalogCard.astro";
 import type { CatalogItem } from "../product-catalog/types";
 import type {
@@ -89,22 +88,7 @@ const tabs = [
   data-theme="light"
 >
   <div class="product-series-shell">
-    <ProductBreadcrumb heading={heading} />
-    <details
-      class="series-sidebar"
-      open
-    >
-      <summary>
-        <span>{messages.browse}</span>
-        <Icon
-          name="chevron-down"
-          size="none"
-          aria-hidden="true"
-        />
-      </summary>
-      <div class="series-sidebar-heading">{messages.products}</div>
-      <ProductsSide />
-    </details>
+    <ProductSidebar />
 
     <div class="series-main">
       <div class="series-hero">
@@ -615,46 +599,6 @@ const tabs = [
         max-width: 90rem;
       }
 
-      .series-sidebar {
-        background: var(--color-bg-surface);
-        border: 1px solid var(--color-border);
-        border-radius: var(--radius-lg);
-        height: fit-content;
-        padding: var(--spacing-lg);
-
-        > summary {
-          align-items: center;
-          color: var(--color-text-strong);
-          cursor: pointer;
-          display: flex;
-          font-weight: var(--font-weight-medium);
-          justify-content: space-between;
-          list-style: none;
-
-          &::-webkit-details-marker {
-            display: none;
-          }
-
-          svg {
-            height: 1rem;
-            transition: transform var(--animation-normal) ease;
-            width: 1rem;
-          }
-        }
-
-        &[open] > summary svg {
-          transform: rotate(180deg);
-        }
-
-        .series-sidebar-heading {
-          color: var(--color-text-brand);
-          font-size: var(--font-size-sm);
-          font-weight: var(--font-weight-medium);
-          letter-spacing: 0.08em;
-          margin: var(--spacing-lg) 0 var(--spacing-md);
-        }
-      }
-
       .series-main {
         min-width: 0;
       }
@@ -1094,10 +1038,6 @@ const tabs = [
         .product-series-shell {
           align-items: start;
           grid-template-columns: minmax(14rem, 18rem) minmax(0, 1fr);
-        }
-
-        .series-sidebar > summary {
-          display: none;
         }
 
         .series-hero {

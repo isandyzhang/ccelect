@@ -79,8 +79,8 @@ pageSections:
         category: Wire to wire
         title: WE
         description: WE wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/we.jpg
-        imageAlt: WE/WES straight wire-to-wire diagram
+        image: /images/ccelect/diagrams/we.svg
+        imageAlt: WE straight wire-to-wire diagram
         specifications:
           - WE
         href: /en/products/exoweld/w-series/we/
@@ -97,8 +97,8 @@ pageSections:
         category: Wire to wire
         title: WX
         description: WX wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/wx.jpg
-        imageAlt: WX/WXS wire-to-wire cross diagram
+        image: /images/ccelect/diagrams/wx.svg
+        imageAlt: WX wire-to-wire cross diagram
         specifications:
           - WX
         href: /en/products/exoweld/w-series/wx/

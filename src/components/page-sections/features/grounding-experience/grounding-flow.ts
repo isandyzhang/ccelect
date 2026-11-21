@@ -205,6 +205,7 @@ class GroundingFlow extends HTMLElement {
 
   connectedCallback() {
     this.cleanup?.();
+    const structuresImage = this.querySelector<HTMLImageElement>("img.scene-structures")!;
     const copperImage = this.querySelector<HTMLImageElement>("img.scene-copper")!;
     const canvas = this.querySelector<HTMLCanvasElement>(".copper-canvas")!;
     const button = this.querySelector<HTMLButtonElement>(".playback")!;
@@ -216,6 +217,7 @@ class GroundingFlow extends HTMLElement {
     const events = new AbortController();
     const { signal } = events;
     let field: CopperField | undefined;
+    let structuresReady = structuresImage.complete && structuresImage.naturalWidth > 0;
     let visible = false;
     let paused = false;
     let frame = 0;
@@ -227,8 +229,7 @@ class GroundingFlow extends HTMLElement {
 
     const setVar = (name: string, value: number) => section.style.setProperty(name, String(value));
 
-    const flowing = () =>
-      !!field && visible && !paused && !document.hidden && progress > 0.8;
+    const flowing = () => !!field && visible && !paused && !document.hidden && progress > 0.8;
 
     const draw = () => {
       if (!field) return;
@@ -302,6 +303,10 @@ class GroundingFlow extends HTMLElement {
     };
 
     const measure = () => {
+      if (!structuresReady) {
+        apply(0);
+        return;
+      }
       const rect = track.getBoundingClientRect();
 
       apply(clamp(-rect.top / Math.max(1, rect.height - window.innerHeight)));
@@ -327,20 +332,34 @@ class GroundingFlow extends HTMLElement {
       measure();
     };
 
+    if (!structuresReady) {
+      const ready = () => {
+        if (signal.aborted || structuresReady) return;
+        structuresReady = true;
+        measure();
+      };
+
+      structuresImage.decode().then(ready).catch(ready);
+    }
+
+    if (copperImage.complete && copperImage.naturalWidth) initialize();
+    else {
+      copperImage
+        .decode()
+        .then(() => {
+          if (!signal.aborted) initialize();
+        })
+        .catch(() => {});
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         visible = entry.isIntersecting;
-        if (visible) {
-          if (copperImage.complete) initialize();
-          measure();
-        } else {
-          sync();
-        }
+        if (visible) measure();
+        else sync();
       },
       { rootMargin: "200px 0px" }
     );
-
-    copperImage.addEventListener("load", () => visible && initialize(), { signal });
     button.addEventListener(
       "click",
       () => {

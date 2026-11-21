@@ -160,17 +160,20 @@ const {
   }
 
   function initMosaicMotion() {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    const canHover = window.matchMedia(
+      "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)"
+    ).matches;
     const sections = document.querySelectorAll<HTMLElement>(".feature-grid-mosaic");
 
-    if (!sections.length || reduce) return;
+    if (!sections.length) return;
 
     sections.forEach((section) => {
       if (section.dataset.mosaicReady === "true") return;
       section.dataset.mosaicReady = "true";
 
-      const videos = Array.from(section.querySelectorAll<HTMLVideoElement>("video.feature-hover-video"));
+      const videos = Array.from(
+        section.querySelectorAll<HTMLVideoElement>("video.feature-hover-video")
+      );
       const reveal = () => {
         section.classList.add("is-mosaic-in");
         if (!canHover) return;
@@ -198,19 +201,21 @@ const {
         const card = video.closest<HTMLElement>(".feature-item");
         if (!card) return;
 
+        video.addEventListener("playing", () => {
+          if (!video.paused) card.classList.add("is-playing");
+        });
         card.addEventListener("pointerenter", () => {
           const src = video.dataset.src;
           if (src && !video.getAttribute("src")) {
             video.src = src;
             video.load();
           }
-          card.classList.add("is-playing");
+          if (Number.isFinite(video.duration)) video.currentTime = 0;
           void video.play().catch(() => {});
         });
         card.addEventListener("pointerleave", () => {
           card.classList.remove("is-playing");
           video.pause();
-          if (Number.isFinite(video.duration)) video.currentTime = 0;
         });
       });
     });
@@ -222,9 +227,7 @@ const {
   });
 </script>
 <script is:inline>
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    document.documentElement.classList.add("mosaic-motion");
-  }
+  document.documentElement.classList.add("mosaic-motion");
 </script>
 
 <style is:global>
@@ -507,6 +510,10 @@ const {
     }
 
     .feature-grid-mosaic {
+      --mosaic-hover-duration: 900ms;
+      --mosaic-hover-easing: ease-in-out;
+      --mosaic-hover-fade-in-duration: 1.5s;
+
       background-color: var(--color-bg);
       isolation: isolate;
       position: relative;
@@ -541,10 +548,41 @@ const {
       }
 
       .feature-item > .card-inner {
+        --project-media-scale: 1;
+
         background: #111;
         border: 0;
         border-radius: 0.75rem;
         min-height: 18rem;
+      }
+
+      .feature-item > .card-inner::before {
+        background: linear-gradient(180deg, rgba(15, 37, 66, 0.08), rgba(15, 37, 66, 0.58));
+        content: "";
+        inset: 0;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        transform: translateY(12%);
+        transition:
+          opacity var(--mosaic-opacity-duration, var(--mosaic-hover-duration))
+            var(--mosaic-hover-easing),
+          transform var(--mosaic-hover-duration) var(--mosaic-hover-easing);
+        z-index: 2;
+      }
+
+      .feature-item > .card-inner:focus-visible {
+        --project-media-scale: 1.035;
+
+        outline: 2px solid var(--color-text-brand);
+        outline-offset: 3px;
+      }
+
+      .feature-item > .card-inner:focus-visible::before {
+        --mosaic-opacity-duration: var(--mosaic-hover-fade-in-duration);
+
+        opacity: 1;
+        transform: translateY(0);
       }
 
       .feature-item .before-content,
@@ -565,16 +603,8 @@ const {
 
       .feature-item .before-content img {
         object-fit: cover;
-        transform: scale(1);
-        transition: transform 700ms ease;
-      }
-
-      .feature-item:hover .before-content img {
-        transform: scale(1.04);
-      }
-
-      .feature-item:has(.feature-hover-video):hover .before-content img {
-        transform: none;
+        transform: scale(var(--project-media-scale));
+        transition: transform var(--mosaic-hover-duration) var(--mosaic-hover-easing);
       }
 
       .feature-hover-video {
@@ -584,50 +614,48 @@ const {
         opacity: 0;
         pointer-events: none;
         position: absolute;
-        transition: opacity 180ms ease;
+        transform: scale(var(--project-media-scale));
+        transition:
+          opacity var(--mosaic-opacity-duration, var(--mosaic-hover-duration))
+            var(--mosaic-hover-easing),
+          transform var(--mosaic-hover-duration) var(--mosaic-hover-easing);
         width: 100%;
         z-index: 1;
       }
 
       .feature-item.is-playing .feature-hover-video {
+        --mosaic-opacity-duration: var(--mosaic-hover-fade-in-duration);
+
         opacity: 1;
       }
 
-      @media (prefers-reduced-motion: no-preference) {
-        html.mosaic-motion &:not(.is-mosaic-in) .bento-box-grid-item {
-          opacity: 0;
-          transform: translateY(1.25rem);
-        }
-
-        html.mosaic-motion &.is-mosaic-in .bento-box-grid-item {
-          animation: mosaic-rise 0.7s ease forwards;
-        }
-
-        html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(1) {
-          animation-delay: 0s;
-        }
-
-        html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(2) {
-          animation-delay: 0.12s;
-        }
-
-        html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(3) {
-          animation-delay: 0.24s;
-        }
-
-        html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(4) {
-          animation-delay: 0.36s;
-        }
-
-        html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(5) {
-          animation-delay: 0.48s;
-        }
+      html.mosaic-motion &:not(.is-mosaic-in) .bento-box-grid-item {
+        opacity: 0;
+        transform: translateY(1.25rem);
       }
 
-      @media (prefers-reduced-motion: reduce) {
-        .feature-hover-video {
-          transition: none;
-        }
+      html.mosaic-motion &.is-mosaic-in .bento-box-grid-item {
+        animation: mosaic-rise 0.7s ease forwards;
+      }
+
+      html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(2) {
+        animation-delay: 0.12s;
+      }
+
+      html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(3) {
+        animation-delay: 0.24s;
+      }
+
+      html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(4) {
+        animation-delay: 0.36s;
+      }
+
+      html.mosaic-motion &.is-mosaic-in .bento-box-grid-item:nth-child(5) {
+        animation-delay: 0.48s;
       }
 
       .feature-item > .card-inner > .card-outer-content {
@@ -647,7 +675,45 @@ const {
         line-height: 1;
         position: absolute;
         right: 0.95rem;
+        transition: transform var(--mosaic-hover-duration) var(--mosaic-hover-easing);
         z-index: 3;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .feature-item > .card-inner:hover {
+          --project-media-scale: 1.035;
+        }
+
+        .feature-item > .card-inner:hover::before {
+          --mosaic-opacity-duration: var(--mosaic-hover-fade-in-duration);
+
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .feature-item > .card-inner:hover::after {
+          transform: translate(2px, -2px);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .feature-item > .card-inner:is(:hover, :focus-visible) {
+          --project-media-scale: 1;
+        }
+
+        .feature-item > .card-inner::before,
+        .feature-item > .card-inner::after,
+        .feature-item .before-content img,
+        .feature-hover-video {
+          transition: none;
+          transform: none;
+        }
+
+        html.mosaic-motion & .bento-box-grid-item {
+          animation: none;
+          opacity: 1;
+          transform: none;
+        }
       }
 
       .feature-title,
@@ -682,7 +748,6 @@ const {
           grid-row: auto;
         }
       }
-
     }
 
     @keyframes mosaic-rise {

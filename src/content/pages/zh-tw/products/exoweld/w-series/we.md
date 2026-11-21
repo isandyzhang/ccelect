@@ -6,6 +6,7 @@ description: WE 屬 W 系列線對線銅導體熱熔接接點，適用導體對�
 pageSections:
   - _component: page-sections/products/product-detail
     category: Exoweld ／ W 系列-線對線
+    moldSelector: WE
     heading: WE
     summary: WE 屬 W 系列線對線銅導體熱熔接接點，適用導體對導體之熔接配置。
     description:

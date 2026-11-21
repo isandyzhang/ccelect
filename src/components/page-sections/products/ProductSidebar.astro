@@ -1,0 +1,73 @@
+---
+import Icon from "@core-elements/icon/Icon.astro";
+import ProductsSide from "@navigation/products-side/ProductsSide.astro";
+import { experienceText, localeFromPath } from "@i18n/experience";
+
+const messages = experienceText[localeFromPath(Astro.url.pathname)];
+---
+
+<details
+  class="product-sidebar"
+  open
+>
+  <summary>
+    <span>{messages.browse}</span>
+    <Icon
+      name="chevron-down"
+      size="none"
+      aria-hidden="true"
+    />
+  </summary>
+  <div class="product-sidebar-heading">{messages.products}</div>
+  <ProductsSide />
+</details>
+
+<style is:global>
+  @layer page-sections {
+    .product-sidebar {
+      background: var(--color-bg-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      height: fit-content;
+      padding: var(--spacing-lg);
+
+      > summary {
+        align-items: center;
+        color: var(--color-text-strong);
+        cursor: pointer;
+        display: flex;
+        font-weight: var(--font-weight-medium);
+        justify-content: space-between;
+        list-style: none;
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+
+        svg {
+          height: 1rem;
+          transition: transform var(--animation-normal) ease;
+          width: 1rem;
+        }
+      }
+
+      &[open] > summary svg {
+        transform: rotate(180deg);
+      }
+
+      .product-sidebar-heading {
+        color: var(--color-text-brand);
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-medium);
+        letter-spacing: 0.08em;
+        margin: var(--spacing-lg) 0 var(--spacing-md);
+      }
+    }
+
+    @media (min-width: 980px) {
+      .product-sidebar > summary {
+        display: none;
+      }
+    }
+  }
+</style>

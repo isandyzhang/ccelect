@@ -17,8 +17,8 @@ pageSections:
         category: Exoweld / P series
         title: PK
         description: PK is an Exoweld P series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/diagrams/pk.svg
+        imageAlt: PK connection diagram
         specifications:
           - PK
         href: /en/contact/
@@ -26,8 +26,8 @@ pageSections:
         category: Exoweld / P series
         title: PV
         description: PV is an Exoweld P series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/diagrams/pv.svg
+        imageAlt: PV connection diagram
         specifications:
           - PV
         href: /en/contact/
@@ -35,8 +35,8 @@ pageSections:
         category: Exoweld / P series
         title: PY
         description: PY is an Exoweld P series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/diagrams/py.svg
+        imageAlt: PY connection diagram
         specifications:
           - PY
         href: /en/contact/
@@ -44,8 +44,8 @@ pageSections:
         category: Exoweld / P series
         title: PT
         description: PT is an Exoweld P series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/diagrams/pt.svg
+        imageAlt: PT connection diagram
         specifications:
           - PT
         href: /en/contact/

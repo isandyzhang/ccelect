@@ -79,8 +79,8 @@ pageSections:
         category: 線對線
         title: WE
         description: WE 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/we.jpg
-        imageAlt: WE/WES 線對線直通示意圖
+        image: /images/ccelect/diagrams/we.svg
+        imageAlt: WE 線對線直通示意圖
         specifications:
           - WE
         href: /products/exoweld/w-series/we/
@@ -97,8 +97,8 @@ pageSections:
         category: 線對線
         title: WX
         description: WX 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/wx.jpg
-        imageAlt: WX/WXS 線對線交叉示意圖
+        image: /images/ccelect/diagrams/wx.svg
+        imageAlt: WX 線對線交叉示意圖
         specifications:
           - WX
         href: /products/exoweld/w-series/wx/

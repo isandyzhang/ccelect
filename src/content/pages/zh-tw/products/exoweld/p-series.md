@@ -17,8 +17,8 @@ pageSections:
         category: Exoweld ／ P 系列
         title: PK
         description: PK 為 Exoweld P 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/diagrams/pk.svg
+        imageAlt: PK 接點示意圖
         specifications:
           - PK
         href: /contact/
@@ -26,8 +26,8 @@ pageSections:
         category: Exoweld ／ P 系列
         title: PV
         description: PV 為 Exoweld P 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/diagrams/pv.svg
+        imageAlt: PV 接點示意圖
         specifications:
           - PV
         href: /contact/
@@ -35,8 +35,8 @@ pageSections:
         category: Exoweld ／ P 系列
         title: PY
         description: PY 為 Exoweld P 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/diagrams/py.svg
+        imageAlt: PY 接點示意圖
         specifications:
           - PY
         href: /contact/
@@ -44,8 +44,8 @@ pageSections:
         category: Exoweld ／ P 系列
         title: PT
         description: PT 為 Exoweld P 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/diagrams/pt.svg
+        imageAlt: PT 接點示意圖
         specifications:
           - PT
         href: /contact/

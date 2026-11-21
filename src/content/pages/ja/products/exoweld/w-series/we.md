@@ -6,6 +6,7 @@ description: WE は W シリーズ線対線の銅導体熱熔接接点で、導�
 pageSections:
   - _component: page-sections/products/product-detail
     category: Exoweld ／ W シリーズ-線対線
+    moldSelector: WE
     heading: WE
     summary: WE は W シリーズ線対線の銅導体熱熔接接点で、導体どうしの接続に適します。
     description:

@@ -2,7 +2,7 @@
 _schema: default
 permalink: null
 title: Exoweld catalogs
-description: W, G, S, R, P, B, and E series exothermic welding catalogs.
+description: W, G, S, R, P, B, E, and C series exothermic welding catalogs.
 pageSections:
   - _component: page-sections/products/product-catalog
     eyebrowText: Exoweld catalogs
@@ -17,15 +17,15 @@ pageSections:
         category: Exoweld
         title: W series - wire to wire
         description: 'Copper conductor-to-conductor joints: WE, WT, WX, WP, WL, WXL.'
-        image: /images/ccelect/diagrams/we.jpg
-        imageAlt: WE/WES wire-to-wire splice diagram
+        image: /images/ccelect/diagrams/we.svg
+        imageAlt: WE wire-to-wire splice diagram
         images:
-          - image: /images/ccelect/diagrams/we.jpg
-            imageAlt: WE/WES wire-to-wire splice diagram
+          - image: /images/ccelect/diagrams/we.svg
+            imageAlt: WE wire-to-wire splice diagram
           - image: /images/ccelect/diagrams/wt.jpg
             imageAlt: WT wire-to-wire tee diagram
-          - image: /images/ccelect/diagrams/wx.jpg
-            imageAlt: WX/WXS wire-to-wire cross diagram
+          - image: /images/ccelect/diagrams/wx.svg
+            imageAlt: WX wire-to-wire cross diagram
           - image: /images/ccelect/diagrams/wp.jpg
             imageAlt: WP parallel wire diagram
           - image: /images/ccelect/diagrams/wl.jpg
@@ -101,8 +101,17 @@ pageSections:
         category: Exoweld
         title: P series
         description: PK, PV, PY, and PT joint forms.
-        image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/diagrams/pk.svg
+        imageAlt: PK connection diagram
+        images:
+          - image: /images/ccelect/diagrams/pk.svg
+            imageAlt: PK connection diagram
+          - image: /images/ccelect/diagrams/pv.svg
+            imageAlt: PV connection diagram
+          - image: /images/ccelect/diagrams/py.svg
+            imageAlt: PY connection diagram
+          - image: /images/ccelect/diagrams/pt.svg
+            imageAlt: PT connection diagram
         specifications:
           - PK
           - PV
@@ -112,22 +121,73 @@ pageSections:
       - id: series-b
         category: Exoweld
         title: B series
-        description: BE, BEH, BT, and BTV joint forms.
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: Product placeholder
+        description: BE, BEH, BT, BTV, BS, BX, and BVES joint forms.
+        image: /images/ccelect/diagrams/be.svg
+        imageAlt: BE connection diagram
+        images:
+          - image: /images/ccelect/diagrams/be.svg
+            imageAlt: BE connection diagram
+          - image: /images/ccelect/diagrams/beh.svg
+            imageAlt: BEH connection diagram
+          - image: /images/ccelect/diagrams/bt.svg
+            imageAlt: BT connection diagram
+          - image: /images/ccelect/diagrams/btv.svg
+            imageAlt: BTV connection diagram
+          - image: /images/ccelect/diagrams/bs.svg
+            imageAlt: BS connection diagram
+          - image: /images/ccelect/diagrams/bx.svg
+            imageAlt: BX connection diagram
+          - image: /images/ccelect/diagrams/bves.svg
+            imageAlt: BVES connection diagram
         specifications:
           - BE
           - BEH
           - BT
           - BTV
+          - BS
+          - BX
+          - BVES
         href: /en/products/exoweld/b-series/
       - id: series-e
         category: Exoweld
         title: E series
-        description: ERW joint forms.
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: Product placeholder
+        description: ERB, ERW, ERT joint forms.
+        image: /images/ccelect/diagrams/erb.svg
+        imageAlt: ERB connection diagram
+        images:
+          - image: /images/ccelect/diagrams/erb.svg
+            imageAlt: ERB connection diagram
+          - image: /images/ccelect/diagrams/erw.svg
+            imageAlt: ERW connection diagram
+          - image: /images/ccelect/diagrams/ert.svg
+            imageAlt: ERT connection diagram
         specifications:
+          - ERB
           - ERW
+          - ERT
         href: /en/products/exoweld/e-series/
+      - id: series-c
+        category: Exoweld
+        title: C series
+        description: CSHEA, CSHTA, CSVES, CWL, CWE joint forms.
+        image: /images/ccelect/diagrams/cshea.svg
+        imageAlt: CSHEA connection diagram
+        images:
+          - image: /images/ccelect/diagrams/cshea.svg
+            imageAlt: CSHEA connection diagram
+          - image: /images/ccelect/diagrams/cshta.svg
+            imageAlt: CSHTA connection diagram
+          - image: /images/ccelect/diagrams/csves.svg
+            imageAlt: CSVES connection diagram
+          - image: /images/ccelect/diagrams/cwl.svg
+            imageAlt: CWL connection diagram
+          - image: /images/ccelect/diagrams/cwe.svg
+            imageAlt: CWE connection diagram
+        specifications:
+          - CSHEA
+          - CSHTA
+          - CSVES
+          - CWL
+          - CWE
+        href: /en/products/exoweld/c-series/
 ---

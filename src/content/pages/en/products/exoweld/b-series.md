@@ -2,7 +2,7 @@
 _schema: default
 permalink: null
 title: B series
-description: BE, BEH, BT, and BTV joint forms.
+description: BE, BEH, BT, BTV, BS, BX, and BVES joint forms.
 pageSections:
   - _component: page-sections/products/product-catalog
     eyebrowText: Exoweld / B series
@@ -17,8 +17,8 @@ pageSections:
         category: Exoweld / B series
         title: BE
         description: BE is an Exoweld B series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/diagrams/be.svg
+        imageAlt: BE connection diagram
         specifications:
           - BE
         href: /en/contact/
@@ -26,8 +26,8 @@ pageSections:
         category: Exoweld / B series
         title: BEH
         description: BEH is an Exoweld B series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/diagrams/beh.svg
+        imageAlt: BEH connection diagram
         specifications:
           - BEH
         href: /en/contact/
@@ -35,8 +35,8 @@ pageSections:
         category: Exoweld / B series
         title: BT
         description: BT is an Exoweld B series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/diagrams/bt.svg
+        imageAlt: BT connection diagram
         specifications:
           - BT
         href: /en/contact/
@@ -44,9 +44,36 @@ pageSections:
         category: Exoweld / B series
         title: BTV
         description: BTV is an Exoweld B series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/diagrams/btv.svg
+        imageAlt: BTV connection diagram
         specifications:
           - BTV
+        href: /en/contact/
+      - id: bs
+        category: Exoweld / B series
+        title: BS
+        description: BS is an Exoweld B series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
+        image: /images/ccelect/diagrams/bs.svg
+        imageAlt: BS connection diagram
+        specifications:
+          - BS
+        href: /en/contact/
+      - id: bx
+        category: Exoweld / B series
+        title: BX
+        description: BX is an Exoweld B series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
+        image: /images/ccelect/diagrams/bx.svg
+        imageAlt: BX connection diagram
+        specifications:
+          - BX
+        href: /en/contact/
+      - id: bves
+        category: Exoweld / B series
+        title: BVES
+        description: BVES is an Exoweld B series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
+        image: /images/ccelect/diagrams/bves.svg
+        imageAlt: BVES connection diagram
+        specifications:
+          - BVES
         href: /en/contact/
 ---

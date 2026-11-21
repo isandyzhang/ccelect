@@ -1,11 +1,11 @@
 ---
-import ProductBreadcrumb from "../ProductBreadcrumb.astro";
 import { contactHref, experienceText, localeFromPath } from "@i18n/experience";
 
 const messages = experienceText[localeFromPath(Astro.url.pathname)];
 
 import Image from "@core-elements/image/Image.astro";
 import Icon from "@core-elements/icon/Icon.astro";
+import MoldSelector from "../MoldSelector.astro";
 import type {
   ProductDetailCta,
   ProductDetailGalleryItem,
@@ -32,6 +32,7 @@ interface Props {
   videoHeading?: string;
   video?: ProductDetailVideo;
   note?: string;
+  moldSelector?: string;
 }
 
 const {
@@ -53,6 +54,7 @@ const {
   videoHeading = messages.videos,
   video,
   note = "",
+  moldSelector,
 } = Astro.props as Props;
 
 const localizedContact = (href: string) => contactHref(Astro.url.pathname, href);
@@ -63,7 +65,6 @@ const localizedContact = (href: string) => contactHref(Astro.url.pathname, href)
   data-theme="light"
 >
   <div class="product-detail-shell">
-    <ProductBreadcrumb heading={heading} />
     <div class="product-hero">
       <figure class="product-media">
         <div class="product-media-frame">
@@ -160,6 +161,8 @@ const localizedContact = (href: string) => contactHref(Astro.url.pathname, href)
         </section>
       )
     }
+
+    {moldSelector && <MoldSelector product={moldSelector} />}
 
     {
       video?.videoId && (

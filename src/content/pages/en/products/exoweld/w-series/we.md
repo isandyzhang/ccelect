@@ -6,6 +6,7 @@ description: WE is a W series wire-to-wire copper exothermic joint for conductor
 pageSections:
   - _component: page-sections/products/product-detail
     category: Exoweld / W series - wire to wire
+    moldSelector: WE
     heading: WE
     summary: WE is a W series wire-to-wire copper exothermic joint for conductor-to-conductor connections.
     description:

@@ -1,0 +1,16 @@
+﻿Demo,Conductor A (mm2),Conductor B (mm2),A nearest US size (reference only),A US nominal area (mm2),B nearest US size (reference only),B US nominal area (mm2),Original Mold Type,Price Code,Weld Metal,Compatibility
+DEMO,10,10,8 AWG,8.37,8 AWG,8.37,WE-10/10,3,32,US conductor mold compatibility unconfirmed
+DEMO,16,16,6 AWG,13.3,6 AWG,13.3,WE-16/16,3,32,US conductor mold compatibility unconfirmed
+DEMO,25,25,3 AWG,26.7,3 AWG,26.7,WE-25/25,3,32,US conductor mold compatibility unconfirmed
+DEMO,30,30,3 AWG,26.7,3 AWG,26.7,WE-30/30,3,32,US conductor mold compatibility unconfirmed
+DEMO,35,35,2 AWG,33.6,2 AWG,33.6,WE-35/35,3,32,US conductor mold compatibility unconfirmed
+DEMO,50,50,1/0 AWG,53.5,1/0 AWG,53.5,WE-50/50,3,45,US conductor mold compatibility unconfirmed
+DEMO,70,70,2/0 AWG,67.4,2/0 AWG,67.4,WE-70/70,3,65,US conductor mold compatibility unconfirmed
+DEMO,95,95,3/0 AWG,85,3/0 AWG,85,WE-95/95,3,90,US conductor mold compatibility unconfirmed
+DEMO,120,120,250 kcmil,127,250 kcmil,127,WE-120/120,3,115,US conductor mold compatibility unconfirmed
+DEMO,150,150,300 kcmil,152,300 kcmil,152,WE-150/150,3,115,US conductor mold compatibility unconfirmed
+DEMO,185,185,350 kcmil,177,350 kcmil,177,WE-185/185,3,150,US conductor mold compatibility unconfirmed
+DEMO,240,240,450 kcmil,228,450 kcmil,228,WE-240/240,3,200,US conductor mold compatibility unconfirmed
+DEMO,300,300,600 kcmil,304,600 kcmil,304,WE-300/300,3,250,US conductor mold compatibility unconfirmed
+DEMO,400,400,800 kcmil,405,800 kcmil,405,WE-400/400,4,2X 150,US conductor mold compatibility unconfirmed
+DEMO,500,500,1000 kcmil,507,1000 kcmil,507,WE-500/500,4,2X 200,US conductor mold compatibility unconfirmed

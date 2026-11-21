@@ -4,6 +4,7 @@ import { itemHasSplitNavLink } from "@component-utils/navSplitLink";
 
 const {
   navData = [],
+  expandCurrentPage = true,
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
   _component,
@@ -44,7 +45,7 @@ function navFullName(item) {
         const contentId = `dropdown-content-${crypto.randomUUID()}`;
         const parentGroupId = `parent-${crypto.randomUUID()}`;
         const isCurrent = isCurrentPage(item);
-        const hasCurrent = hasCurrentChild(item);
+        const hasCurrent = hasCurrentChild(item) && (expandCurrentPage || !isCurrent);
         const splitLink = itemHasSplitNavLink(item);
 
         if (hasChildren) {
@@ -123,7 +124,8 @@ function navFullName(item) {
                     const childDropdownId = `dropdown-toggle-${crypto.randomUUID()}`;
                     const childContentId = `dropdown-content-${crypto.randomUUID()}`;
                     const childIsCurrent = isCurrentPage(child);
-                    const childHasCurrent = hasCurrentChild(child);
+                    const childHasCurrent =
+                      hasCurrentChild(child) && (expandCurrentPage || !childIsCurrent);
                     const childSplitLink = itemHasSplitNavLink(child);
 
                     if (childHasChildren) {
