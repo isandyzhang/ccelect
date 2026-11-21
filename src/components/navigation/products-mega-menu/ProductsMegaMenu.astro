@@ -117,7 +117,7 @@ const regionLabel = label || copy.products;
       border-bottom: 1px solid rgb(0 0 0 / 8%);
       box-shadow: 0 12px 28px rgb(0 0 0 / 6%);
       left: 0;
-      max-height: min(78vh, 42rem);
+      max-height: min(85vh, 48rem);
       opacity: 0;
       overflow-x: hidden;
       overflow-y: auto;
@@ -125,7 +125,9 @@ const regionLabel = label || copy.products;
       pointer-events: none;
       position: absolute;
       right: 0;
-      top: 100%;
+      /* Bridge any gap under the sticky bar so hover doesn't drop while scrolling */
+      top: calc(100% - 0.5rem);
+      padding-top: 0.5rem;
       transform: translateY(-0.4rem);
       transition:
         opacity 0.28s cubic-bezier(0.4, 0, 0.6, 1),

@@ -212,25 +212,62 @@ const mobileNavData = [
 
     navRoot.dataset.megaInitialized = "true";
 
+    let closeTimer: number | null = null;
+
+    const clearCloseTimer = () => {
+      if (closeTimer == null) return;
+      window.clearTimeout(closeTimer);
+      closeTimer = null;
+    };
+
+    const isInsideMegaZone = (node: Node | null) => {
+      if (!node) return false;
+      return trigger.contains(node) || mega.contains(node) || trigger === node || mega === node;
+    };
+
     const open = () => {
+      clearCloseTimer();
       clearMegaForceClose(navRoot);
       navRoot.classList.add("is-mega-open");
+    };
+
+    const scheduleClose = (related: EventTarget | null) => {
+      const next = related instanceof Node ? related : null;
+      if (isInsideMegaZone(next)) return;
+
+      clearCloseTimer();
+      // Delay so scrollbar / wheel / trackpad scroll inside the panel
+      // does not instantly drop :hover and close the menu.
+      closeTimer = window.setTimeout(() => {
+        closeTimer = null;
+        if (trigger.matches(":hover") || mega.matches(":hover")) return;
+        if (mega.contains(document.activeElement)) return;
+        navRoot.classList.remove("is-mega-open");
+      }, 280);
     };
 
     trigger.addEventListener("mouseenter", open);
     trigger.addEventListener("focus", open);
     mega.addEventListener("mouseenter", open);
 
-    const maybeClose = (related: EventTarget | null) => {
-      const next = related instanceof Node ? related : null;
-      if (next && (trigger.contains(next) || mega.contains(next) || trigger === next || mega === next)) {
-        return;
-      }
-      navRoot.classList.remove("is-mega-open");
-    };
+    trigger.addEventListener("mouseleave", (e) => scheduleClose(e.relatedTarget));
+    mega.addEventListener("mouseleave", (e) => scheduleClose(e.relatedTarget));
 
-    trigger.addEventListener("mouseleave", (e) => maybeClose(e.relatedTarget));
-    mega.addEventListener("mouseleave", (e) => maybeClose(e.relatedTarget));
+    // Keep open while the user scrolls the mega panel itself.
+    mega.addEventListener(
+      "wheel",
+      () => {
+        open();
+      },
+      { passive: true }
+    );
+    mega.addEventListener(
+      "scroll",
+      () => {
+        open();
+      },
+      { passive: true }
+    );
 
     if (!megaHandlersBound) {
       document.addEventListener("keydown", (e) => {
