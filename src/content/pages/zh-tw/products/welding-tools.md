@@ -17,8 +17,8 @@ pageSections:
         category: 模具
         title: 熔模與分割型熔模
         description: 火泥熔模、分割型熔模及耐磨板等石墨模具相關品項。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/accessories/mold-powder.jpg
+        imageAlt: EXOWELD 石墨熔模與熔接劑組
         specifications:
           - 火泥熔模
           - 分割型熔模
@@ -28,8 +28,8 @@ pageSections:
         category: 固定工具
         title: 模夾
         description: 泛用模夾、鏈條模夾及 ML-3 模夾等固定工具。
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/accessories/clamps-ignitor.jpg
+        imageAlt: EXOWELD 模夾與點火工具
         specifications:
           - 泛用模夾
           - 鏈條模夾
@@ -39,8 +39,8 @@ pageSections:
         category: 耗材
         title: 熔接劑與點火清模
         description: 鋁箔包熔接劑、點火機、清模板及毛刷等品項。
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/accessories/mold-powder.jpg
+        imageAlt: EXOWELD 熔接劑鋁箔包與清模刷
         specifications:
           - 熔接劑
           - 點火機
@@ -50,8 +50,8 @@ pageSections:
         category: 現場用品
         title: 施工附屬工具
         description: 電纜剪線鉗、卡式噴燈及工具箱等現場用品。
-        image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/accessories/field-tools.jpg
+        imageAlt: EXOWELD 現場施工工具組
         specifications:
           - 剪線鉗
           - 卡式噴燈

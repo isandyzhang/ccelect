@@ -17,8 +17,8 @@ pageSections:
         category: 金型
         title: 溶模と分割型溶模
         description: 火泥溶模、分割型溶模、耐磨板などの黒鉛金型関連品。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/accessories/mold-powder.jpg
+        imageAlt: EXOWELD 黒鉛溶模と溶接剤セット
         specifications:
           - 火泥溶模
           - 分割型溶模
@@ -28,8 +28,8 @@ pageSections:
         category: 固定工具
         title: 模夾
         description: 汎用模夾、チェーン模夾、ML-3 模夾など。
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/accessories/clamps-ignitor.jpg
+        imageAlt: EXOWELD 模夾と点火工具
         specifications:
           - 汎用模夾
           - チェーン模夾
@@ -39,8 +39,8 @@ pageSections:
         category: 消耗品
         title: 溶接剤と点火・清模
         description: アルミ箔包溶接剤、点火機、清模板、ブラシなど。
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/accessories/mold-powder.jpg
+        imageAlt: EXOWELD 溶接剤と清模ブラシ
         specifications:
           - 溶接剤
           - 点火機
@@ -50,8 +50,8 @@ pageSections:
         category: 現場用品
         title: 施工付属工具
         description: ケーブルカッター、カセットトーチ、工具箱など。
-        image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/accessories/field-tools.jpg
+        imageAlt: EXOWELD 現場施工工具セット
         specifications:
           - カッター
           - トーチ

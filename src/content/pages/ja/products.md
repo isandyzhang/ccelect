@@ -84,16 +84,16 @@ pageSections:
         catalogLabel: すべて見る
         navItems:
           - title: 溶模
-            image: /images/ccelect/we/02-mold-open-enhanced.jpg
+            image: /images/ccelect/accessories/mold-powder.jpg
             href: /ja/products/welding-tools/#molds
           - title: 模夾
-            image: /images/ccelect/we/01-mold-enhanced.jpg
+            image: /images/ccelect/accessories/clamps-ignitor.jpg
             href: /ja/products/welding-tools/#clamps
           - title: 溶接剤
-            image: /images/ccelect/we/03-setup-enhanced.jpg
+            image: /images/ccelect/accessories/mold-powder.jpg
             href: /ja/products/welding-tools/#powder
           - title: 現場工具
-            image: /images/ccelect/wt/03-setup-enhanced.jpg
+            image: /images/ccelect/accessories/field-tools.jpg
             href: /ja/products/welding-tools/#field-tools
         items:
           - title: WE

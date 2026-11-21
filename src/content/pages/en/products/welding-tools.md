@@ -17,8 +17,8 @@ pageSections:
         category: Molds
         title: Molds & split molds
         description: Graphite molds, split molds, and wear plates.
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/accessories/mold-powder.jpg
+        imageAlt: EXOWELD graphite mold with weld metal kit
         specifications:
           - Graphite molds
           - Split molds
@@ -28,8 +28,8 @@ pageSections:
         category: Clamps
         title: Mold clamps
         description: Universal clamps, chain clamps, and ML-3 clamps.
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/accessories/clamps-ignitor.jpg
+        imageAlt: EXOWELD mold clamps and ignitor
         specifications:
           - Universal
           - Chain
@@ -39,8 +39,8 @@ pageSections:
         category: Consumables
         title: Powder & cleaning
         description: Foil-packed powder, igniters, cleaning plates, and brushes.
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/accessories/mold-powder.jpg
+        imageAlt: EXOWELD weld metal packets and cleaning brush
         specifications:
           - Powder
           - Igniter
@@ -50,8 +50,8 @@ pageSections:
         category: Field tools
         title: Accessories
         description: Cable cutters, cartridge torches, and tool kits.
-        image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/accessories/field-tools.jpg
+        imageAlt: EXOWELD field welding tool kit
         specifications:
           - Cutters
           - Torches

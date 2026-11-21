@@ -58,10 +58,11 @@ pageSections:
         category: Accessories
         title: Other materials
         description: Waterproofing and soil-improvement materials for grounding works.
-        image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/accessories/ground-plate.jpg
+        imageAlt: EXOWELD AG ground plate and lugs
         specifications:
           - Waterproof boards
           - Bentonite
+          - AG ground plate
         href: /en/contact/
 ---

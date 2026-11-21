@@ -58,10 +58,11 @@ pageSections:
         category: 付属
         title: その他付属材料
         description: 止水・土壌改良など接地工事用付属材料。
-        image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/accessories/ground-plate.jpg
+        imageAlt: EXOWELD AG 接地板と端子部品
         specifications:
           - 止水板
           - Bentonite
+          - AG 接地板
         href: /ja/contact/
 ---

@@ -84,16 +84,16 @@ pageSections:
         catalogLabel: Browse all
         navItems:
           - title: Molds
-            image: /images/ccelect/we/02-mold-open-enhanced.jpg
+            image: /images/ccelect/accessories/mold-powder.jpg
             href: /en/products/welding-tools/#molds
           - title: Clamps
-            image: /images/ccelect/we/01-mold-enhanced.jpg
+            image: /images/ccelect/accessories/clamps-ignitor.jpg
             href: /en/products/welding-tools/#clamps
           - title: Powder
-            image: /images/ccelect/we/03-setup-enhanced.jpg
+            image: /images/ccelect/accessories/mold-powder.jpg
             href: /en/products/welding-tools/#powder
           - title: Field tools
-            image: /images/ccelect/wt/03-setup-enhanced.jpg
+            image: /images/ccelect/accessories/field-tools.jpg
             href: /en/products/welding-tools/#field-tools
         items:
           - title: WE

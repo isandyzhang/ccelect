@@ -61,11 +61,12 @@ pageSections:
         category: 工程材料
         title: 其他附屬材料
         description: 接地工程所需的止水與土壤改善材料，可依現場條件搭配主要接地系統使用。
-        image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/accessories/ground-plate.jpg
+        imageAlt: EXOWELD 接地板 AG 型與端子配件
         iconName: archive-box
         specifications:
           - 止水板
           - Bentonite
+          - AG 接地板
         href: /contact/
 ---
