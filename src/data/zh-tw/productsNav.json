@@ -17,22 +17,41 @@
     {
       "name": "熱熔接材料工具",
       "path": "/products/welding-tools/",
-      "children": []
+      "children": [
+        { "name": "熔模與分割型熔模", "path": "/products/welding-tools/#molds", "children": [] },
+        { "name": "模夾", "path": "/products/welding-tools/#clamps", "children": [] },
+        { "name": "熔接劑與點火清模", "path": "/products/welding-tools/#powder", "children": [] },
+        { "name": "施工附屬工具", "path": "/products/welding-tools/#field-tools", "children": [] }
+      ]
     },
     {
       "name": "熱熔接型接地組件",
       "path": "/products/grounding-components/",
-      "children": []
+      "children": [
+        { "name": "Ground Plate", "path": "/products/grounding-components/#ground-plate", "children": [] },
+        { "name": "接地端子板", "path": "/products/grounding-components/#terminal-plate", "children": [] }
+      ]
     },
     {
       "name": "一般接地用材料",
       "path": "/products/grounding-materials/",
-      "children": []
+      "children": [
+        { "name": "接地棒", "path": "/products/grounding-materials/#grounding-rods", "children": [] },
+        { "name": "接地銅排", "path": "/products/grounding-materials/#copper-busbars", "children": [] },
+        { "name": "C 型壓接頭", "path": "/products/grounding-materials/#compression-connectors", "children": [] },
+        { "name": "接地線固定夾", "path": "/products/grounding-materials/#grounding-clamps", "children": [] },
+        { "name": "其他附屬材料", "path": "/products/grounding-materials/#accessories", "children": [] }
+      ]
     },
     {
       "name": "避雷組件",
       "path": "/products/lightning-protection/",
-      "children": []
+      "children": [
+        { "name": "導線接續配件", "path": "/products/lightning-protection/#cable-splicers", "children": [] },
+        { "name": "Point Base 與 Adapter", "path": "/products/lightning-protection/#point-base", "children": [] },
+        { "name": "Terminal Support", "path": "/products/lightning-protection/#terminal-support", "children": [] },
+        { "name": "多用途固定配件", "path": "/products/lightning-protection/#multi-clamps", "children": [] }
+      ]
     }
   ]
 }

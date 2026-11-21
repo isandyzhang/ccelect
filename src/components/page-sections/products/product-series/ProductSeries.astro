@@ -5,7 +5,6 @@ const messages = experienceText[localeFromPath(Astro.url.pathname)];
 
 import Image from "@core-elements/image/Image.astro";
 import Icon from "@core-elements/icon/Icon.astro";
-import ProductSidebar from "../ProductSidebar.astro";
 import ProductCatalogCard from "../product-catalog/ProductCatalogCard.astro";
 import type { CatalogItem } from "../product-catalog/types";
 import type {
@@ -88,8 +87,6 @@ const tabs = [
   data-theme="light"
 >
   <div class="product-series-shell">
-    <ProductSidebar />
-
     <div class="series-main">
       <div class="series-hero">
         {
@@ -1037,7 +1034,7 @@ const tabs = [
       .product-series {
         .product-series-shell {
           align-items: start;
-          grid-template-columns: minmax(14rem, 18rem) minmax(0, 1fr);
+          grid-template-columns: minmax(0, 1fr);
         }
 
         .series-hero {

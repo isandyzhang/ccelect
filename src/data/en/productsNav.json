@@ -17,22 +17,41 @@
     {
       "name": "Welding materials & tools",
       "path": "/en/products/welding-tools/",
-      "children": []
+      "children": [
+        { "name": "Molds & split molds", "path": "/en/products/welding-tools/#molds", "children": [] },
+        { "name": "Mold clamps", "path": "/en/products/welding-tools/#clamps", "children": [] },
+        { "name": "Powder & cleaning", "path": "/en/products/welding-tools/#powder", "children": [] },
+        { "name": "Accessories", "path": "/en/products/welding-tools/#field-tools", "children": [] }
+      ]
     },
     {
       "name": "Welded grounding assemblies",
       "path": "/en/products/grounding-components/",
-      "children": []
+      "children": [
+        { "name": "Ground Plate", "path": "/en/products/grounding-components/#ground-plate", "children": [] },
+        { "name": "Terminal plates", "path": "/en/products/grounding-components/#terminal-plate", "children": [] }
+      ]
     },
     {
       "name": "General grounding materials",
       "path": "/en/products/grounding-materials/",
-      "children": []
+      "children": [
+        { "name": "Ground rods", "path": "/en/products/grounding-materials/#grounding-rods", "children": [] },
+        { "name": "Copper busbars", "path": "/en/products/grounding-materials/#copper-busbars", "children": [] },
+        { "name": "C-type connectors", "path": "/en/products/grounding-materials/#compression-connectors", "children": [] },
+        { "name": "Cable clamps", "path": "/en/products/grounding-materials/#grounding-clamps", "children": [] },
+        { "name": "Other materials", "path": "/en/products/grounding-materials/#accessories", "children": [] }
+      ]
     },
     {
       "name": "Lightning components",
       "path": "/en/products/lightning-protection/",
-      "children": []
+      "children": [
+        { "name": "Cable splicers", "path": "/en/products/lightning-protection/#cable-splicers", "children": [] },
+        { "name": "Point Base & Adapter", "path": "/en/products/lightning-protection/#point-base", "children": [] },
+        { "name": "Terminal Support", "path": "/en/products/lightning-protection/#terminal-support", "children": [] },
+        { "name": "Multi-purpose clamps", "path": "/en/products/lightning-protection/#multi-clamps", "children": [] }
+      ]
     }
   ]
 }

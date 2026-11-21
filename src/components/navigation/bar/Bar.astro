@@ -23,10 +23,12 @@ function hasCurrentChild(item) {
 
 // Helper function to create navigation item data
 function createNavItemData(item, level, parentGroupId) {
-  const hasChildren = Boolean(item.children?.length);
+  const isMega = Boolean(item.mega);
+  const hasChildren = !isMega && Boolean(item.children?.length);
 
   return {
     ...item,
+    isMega,
     hasChildren,
     hasSplitLink: itemHasSplitNavLink(item),
     level,
@@ -48,6 +50,21 @@ function createNavItemData(item, level, parentGroupId) {
     {
       navData.map((item) => {
         const itemData = createNavItemData(item, "top");
+
+        if (itemData.isMega) {
+          return (
+            <li class="nav-item has-mega">
+              <a
+                href={itemData.path}
+                aria-current={itemData.isCurrent ? "page" : undefined}
+                aria-haspopup="true"
+                data-mega-trigger
+              >
+                {itemData.name}
+              </a>
+            </li>
+          );
+        }
 
         if (!itemData.hasChildren) {
           return (
@@ -400,7 +417,7 @@ function createNavItemData(item, level, parentGroupId) {
       width: auto;
       display: flex;
       justify-content: center;
-      font-weight: var(--font-weight-normal);
+      font-weight: 600;
       .bar-list {
         align-items: center;
         display: flex;
@@ -426,7 +443,7 @@ function createNavItemData(item, level, parentGroupId) {
         color: var(--color-text-strong);
         cursor: pointer;
         display: block;
-        font-weight: var(--font-weight-normal);
+        font-weight: 600;
         padding: var(--spacing-sm) var(--spacing-md);
         text-decoration: none;
         transition: background var(--animation-extra-fast) ease-in-out;
@@ -580,14 +597,14 @@ function createNavItemData(item, level, parentGroupId) {
       .nav-item-nested .nav-item > a {
         border-radius: 0;
         font-size: var(--font-size-sm);
-        font-weight: var(--font-weight-normal);
+        font-weight: var(--font-weight-medium);
         padding-inline-end: 4px;
         padding-left: var(--spacing-xl);
       }
 
       .nav-item-nested .nav-item > .nav-item-trigger,
       .nav-item-nested .nav-item-split .nav-item-link {
-        font-weight: var(--font-weight-normal);
+        font-weight: var(--font-weight-medium);
       }
     }
   }

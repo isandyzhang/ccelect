@@ -3,7 +3,6 @@ import { contactHref, experienceText, localeFromPath } from "@i18n/experience";
 
 const messages = experienceText[localeFromPath(Astro.url.pathname)];
 
-import ProductSidebar from "../ProductSidebar.astro";
 import ProductCatalogCard from "./ProductCatalogCard.astro";
 import type { CatalogItem } from "./types";
 
@@ -50,8 +49,6 @@ const itemCountLabel = countLabel.replace("{count}", String(items.length));
   data-theme="light"
 >
   <div class="product-catalog-shell">
-    <ProductSidebar />
-
     <div class="catalog-main">
       <header class="catalog-intro">
         <div>
@@ -119,7 +116,7 @@ const itemCountLabel = countLabel.replace("{count}", String(items.length));
         display: grid;
         gap: clamp(2rem, 4vw, 4.5rem);
         align-items: start;
-        grid-template-columns: minmax(14rem, 18rem) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
         margin: 0 auto;
         max-width: 92rem;
       }

@@ -52,12 +52,6 @@ pageSections:
       - image: /images/ccelect/we/03-setup-enhanced.jpg
         imageAlt: Copper conductor seated in the WE mold
         caption: Copper conductor seated in the mold
-      - image: /images/ccelect/we/04-joint-held-enhanced.jpg
-        imageAlt: Finished WE joint
-        caption: Finished joint
-      - image: /images/ccelect/we/05-joint-enhanced.jpg
-        imageAlt: Close-up of a WE joint
-        caption: Close-up of the finished joint
       - image: /images/ccelect/we/00-we-enhanced.jpg
         imageAlt: WE completed copper conductor joint
         caption: Finished product joint

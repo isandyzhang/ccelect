@@ -675,8 +675,11 @@ function createNavItemData(item, level, parentGroupId) {
         overflow-y: auto;
       }
 
+      /* Top-level labels stay large; size eases up on wider phones and tablets. */
       .mobile-list {
-        font-size: var(--font-size-xl);
+        font-size: clamp(1.625rem, 4.2vw, 2rem);
+        font-weight: 600;
+        letter-spacing: -0.015em;
       }
 
       .mobile-list,
@@ -702,7 +705,7 @@ function createNavItemData(item, level, parentGroupId) {
         color: var(--color-text-strong);
         cursor: pointer;
         display: flex;
-        font-weight: var(--font-weight-normal);
+        font-weight: var(--font-weight-medium);
         min-height: 3.25rem;
         padding: var(--spacing-md) var(--spacing-xl);
         text-decoration: none;
@@ -781,7 +784,7 @@ function createNavItemData(item, level, parentGroupId) {
           cursor: pointer;
           display: flex;
           flex: 1 1 auto;
-          font-weight: var(--font-weight-normal);
+          font-weight: var(--font-weight-medium);
           min-height: 2.5rem;
           min-width: 0;
           padding: var(--spacing-md) var(--spacing-xs) var(--spacing-md) var(--spacing-md);
@@ -878,23 +881,36 @@ function createNavItemData(item, level, parentGroupId) {
 
         & > .nav-item > a,
         & > .nav-item > .nav-item-trigger:not(.nav-item-toggle-btn) {
+          font-size: clamp(1.125rem, 2.6vw, 1.25rem);
+          font-weight: 600;
+          letter-spacing: -0.01em;
           padding-inline: var(--spacing-xl);
+          white-space: normal;
         }
 
         & > .nav-item > .nav-item-split {
           padding-inline: var(--spacing-xl);
         }
 
-        & > .nav-item > .nav-item-split .nav-item-link,
+        & > .nav-item > .nav-item-split .nav-item-link {
+          font-size: clamp(1.125rem, 2.6vw, 1.25rem);
+          font-weight: 600;
+          letter-spacing: -0.01em;
+          padding: var(--spacing-md) var(--spacing-xs) var(--spacing-md) 0;
+          white-space: normal;
+        }
+
         & .nav-list > .nav-item > .nav-item-split .nav-item-link {
           padding: var(--spacing-md) var(--spacing-xs) var(--spacing-md) 0;
         }
 
         & .nav-list > .nav-item > a,
         & .nav-list > .nav-item > .nav-item-trigger:not(.nav-item-toggle-btn) {
-          font-size: var(--font-size-body-sm);
-          font-weight: var(--font-weight-regular);
+          font-size: clamp(1rem, 2.2vw, 1.0625rem);
+          font-weight: 600;
+          letter-spacing: -0.01em;
           padding-inline-start: var(--spacing-2xl);
+          white-space: normal;
         }
 
         & .nav-list > .nav-item > .nav-item-split {
@@ -903,8 +919,10 @@ function createNavItemData(item, level, parentGroupId) {
         }
 
         & .nav-list > .nav-item > .nav-item-split .nav-item-link {
-          font-size: var(--font-size-body-sm);
-          font-weight: var(--font-weight-regular);
+          font-size: clamp(1rem, 2.2vw, 1.0625rem);
+          font-weight: 600;
+          letter-spacing: -0.01em;
+          white-space: normal;
         }
       }
     }

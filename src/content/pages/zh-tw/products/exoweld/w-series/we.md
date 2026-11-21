@@ -52,12 +52,6 @@ pageSections:
       - image: /images/ccelect/we/03-setup-enhanced.jpg
         imageAlt: 銅導體置入 WE 熔模
         caption: 銅導體置入熔模
-      - image: /images/ccelect/we/04-joint-held-enhanced.jpg
-        imageAlt: WE 熔接完成接點
-        caption: 熔接完成接點
-      - image: /images/ccelect/we/05-joint-enhanced.jpg
-        imageAlt: WE 接點近拍
-        caption: 接點近拍
       - image: /images/ccelect/we/00-we-enhanced.jpg
         imageAlt: WE 熔接完成的銅導體接點
         caption: 成品接點

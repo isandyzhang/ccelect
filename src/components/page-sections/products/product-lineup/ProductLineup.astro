@@ -1,0 +1,557 @@
+---
+import Image from "@core-elements/image/Image.astro";
+import { defaultLocale, type Locale } from "@i18n/config";
+import { experienceText, localeFromPath } from "@i18n/experience";
+
+interface NavItem {
+  title: string;
+  image?: string;
+  imageAlt?: string;
+  href: string;
+  badge?: string;
+}
+
+interface LineupItem {
+  title: string;
+  description?: string;
+  image?: string;
+  imageAlt?: string;
+  href: string;
+  ctaText?: string;
+  secondaryHref?: string;
+  secondaryText?: string;
+  tone?: "dark" | "blue" | "gray" | "warm";
+}
+
+interface Family {
+  id?: string;
+  title: string;
+  lineupHeading?: string;
+  catalogHref?: string;
+  catalogLabel?: string;
+  navItems?: NavItem[];
+  items?: LineupItem[];
+}
+
+interface HelpTile {
+  title: string;
+  description?: string;
+  href: string;
+  linkText?: string;
+}
+
+interface Props {
+  families?: Family[];
+  helpHeading?: string;
+  helpTiles?: HelpTile[];
+  class?: string;
+}
+
+const locale = localeFromPath(Astro.url.pathname) as Locale;
+const copy = experienceText[locale] ?? experienceText[defaultLocale];
+
+const {
+  families = [],
+  helpHeading = "",
+  helpTiles = [],
+  class: className,
+} = Astro.props as Props;
+---
+
+<section
+  class:list={["product-lineup", className]}
+  data-theme="light"
+  data-product-lineup
+>
+  {
+    families.map((family, familyIndex) => {
+      const lineupId = `lineup-${family.id || familyIndex}-${crypto.randomUUID().slice(0, 8)}`;
+      const navItems = family.navItems ?? [];
+      const items = family.items ?? [];
+      const TitleTag = familyIndex === 0 ? "h1" : "h2";
+
+      return (
+        <div
+          class="product-lineup__family"
+          id={family.id}
+        >
+          <div class="product-lineup__family-head">
+            <TitleTag class="product-lineup__family-title">{family.title}</TitleTag>
+          </div>
+
+          {navItems.length > 0 && (
+            <nav
+              class="product-lineup__chapternav"
+              aria-label={family.title}
+            >
+              <ul class="product-lineup__chapternav-list">
+                {navItems.map((item) => (
+                  <li>
+                    <a
+                      class="product-lineup__chapternav-item"
+                      href={item.href}
+                    >
+                      {item.image && (
+                        <span class="product-lineup__chapternav-media">
+                          <Image
+                            source={item.image}
+                            alt={item.imageAlt || item.title}
+                            sizes="192px"
+                          />
+                        </span>
+                      )}
+                      <span class="product-lineup__chapternav-label">{item.title}</span>
+                      {item.badge && (
+                        <span class="product-lineup__chapternav-badge">{item.badge}</span>
+                      )}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
+
+          {items.length > 0 && (
+            <div class="product-lineup__gallery">
+              <div class="product-lineup__gallery-head">
+                <h3 class="product-lineup__gallery-title">
+                  {family.lineupHeading || copy.exploreLineup}
+                </h3>
+              </div>
+
+              <div
+                class="product-lineup__scroller"
+                id={lineupId}
+                data-lineup-scroller
+                tabindex="0"
+              >
+                <ul class="product-lineup__track">
+                  {items.map((item, itemIndex) => (
+                    <li class="product-lineup__card">
+                      <div class="product-lineup__card-inner">
+                        {item.image && (
+                          <div class="product-lineup__card-media">
+                            <Image
+                              source={item.image}
+                              alt={item.imageAlt || item.title}
+                              sizes="(max-width: 700px) 70vw, 280px"
+                            />
+                          </div>
+                        )}
+                        <h4 class="product-lineup__card-title">{item.title}</h4>
+                        {item.description && (
+                          <p class="product-lineup__card-copy">{item.description}</p>
+                        )}
+                        <div class="product-lineup__card-ctas">
+                          <a
+                            class="product-lineup__card-primary"
+                            href={item.href}
+                          >
+                            {item.ctaText || copy.learnMore}
+                          </a>
+                          {item.secondaryHref && (
+                            <a
+                              class="product-lineup__card-secondary"
+                              href={item.secondaryHref}
+                            >
+                              {item.secondaryText || copy.viewProduct}
+                              <span aria-hidden="true"> ›</span>
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    })
+  }
+
+  {
+    helpTiles.length > 0 && (
+      <div class="product-lineup__help">
+        {helpHeading && <h2 class="product-lineup__help-title">{helpHeading}</h2>}
+        <ul class="product-lineup__help-grid">
+          {helpTiles.map((tile) => (
+            <li class="product-lineup__help-tile">
+              <h3>{tile.title}</h3>
+              {tile.description && <p>{tile.description}</p>}
+              <a href={tile.href}>{tile.linkText || copy.learnMore}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+</section>
+
+<style is:global>
+  @layer page-sections {
+    .product-lineup {
+      --lineup-bg: #fff;
+      --lineup-soft: #f5f5f7;
+      --lineup-ink: #1d1d1f;
+      --lineup-muted: #6e6e73;
+      --lineup-link: #0066cc;
+      --lineup-radius: 1.75rem;
+
+      background: var(--lineup-bg);
+      color: var(--lineup-ink);
+      overflow: clip;
+      padding-block: clamp(1.5rem, 4vw, 2.5rem) clamp(3rem, 8vw, 5.5rem);
+    }
+
+    .product-lineup__family + .product-lineup__family {
+      border-top: 1px solid #d2d2d7;
+      margin-top: clamp(3rem, 7vw, 5rem);
+      padding-top: clamp(2.5rem, 6vw, 4rem);
+    }
+
+    .product-lineup__family-head {
+      margin-inline: auto;
+      max-width: 61.25rem;
+      padding-inline: clamp(1.25rem, 4vw, 2rem);
+    }
+
+    .product-lineup__family-title {
+      font-size: clamp(2.25rem, 6.5vw, 4.25rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin: 0;
+      text-align: start;
+    }
+
+    /* Apple chapternav strip */
+    .product-lineup__chapternav {
+      margin-top: clamp(0.65rem, 1.5vw, 1rem);
+      overflow-x: auto;
+      padding-block: 0;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .product-lineup__chapternav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .product-lineup__chapternav-list {
+      display: flex;
+      gap: clamp(0.65rem, 1.8vw, 1.25rem);
+      justify-content: safe center;
+      list-style: none;
+      margin: 0 auto;
+      max-width: max-content;
+      min-width: min(100%, 61.25rem);
+      padding: 0 clamp(0.75rem, 2.5vw, 1.25rem);
+      width: max-content;
+    }
+
+    .product-lineup__chapternav-item {
+      align-items: center;
+      color: var(--lineup-ink);
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      min-width: 0;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .product-lineup__chapternav-item:hover .product-lineup__chapternav-label,
+    .product-lineup__chapternav-item:focus-visible .product-lineup__chapternav-label {
+      color: var(--lineup-link);
+    }
+
+    /* Chapternav icons ~2× prior size */
+    .product-lineup__chapternav-media {
+      align-items: center;
+      display: flex;
+      height: clamp(9.5rem, 16vw, 12rem);
+      justify-content: center;
+      width: clamp(9.5rem, 16vw, 12rem);
+    }
+
+    .product-lineup__chapternav-media .image,
+    .product-lineup__chapternav-media .image-inner {
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
+
+    .product-lineup__chapternav-media picture,
+    .product-lineup__chapternav-media img {
+      height: 100%;
+      margin: auto;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      width: auto;
+    }
+
+    .product-lineup__chapternav-label {
+      font-size: clamp(0.8125rem, 1.8vw, 0.9375rem);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    .product-lineup__chapternav-badge {
+      color: #bf4800;
+      font-size: clamp(0.6875rem, 1.5vw, 0.75rem);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    /* Explore the lineup gallery — gray band separates from chapternav */
+    .product-lineup__gallery {
+      background: var(--lineup-soft);
+      margin-top: clamp(2.25rem, 5vw, 3.5rem);
+      padding-block: clamp(1.75rem, 4vw, 2.75rem) clamp(2rem, 4.5vw, 3.25rem);
+      width: 100%;
+    }
+
+    .product-lineup__gallery-head {
+      margin-bottom: 1.35rem;
+      margin-inline: auto;
+      max-width: 90rem;
+      padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    .product-lineup__gallery-title {
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    .product-lineup__scroller {
+      margin-inline: auto;
+      max-width: 90rem;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      padding-block: 0.25rem 0.75rem;
+      padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+      scroll-padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .product-lineup__scroller:focus-visible {
+      outline: 2px solid var(--color-focus-ring, #0066cc);
+      outline-offset: 4px;
+    }
+
+    .product-lineup__scroller::-webkit-scrollbar {
+      display: none;
+    }
+
+    .product-lineup__track {
+      display: flex;
+      gap: 0.95rem;
+      list-style: none;
+      margin: 0;
+      padding: 0 1px;
+      width: max-content;
+    }
+
+    /* Cards ~60% larger than prior 17.5rem */
+    .product-lineup__card {
+      flex: 0 0 min(88vw, 28rem);
+      scroll-snap-align: start;
+    }
+
+    .product-lineup__card-inner {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-align: center;
+    }
+
+    /* One gray only — transparent cutouts float on the soft band */
+    .product-lineup__card-media {
+      aspect-ratio: 1;
+      background: transparent;
+      border-radius: 1.75rem;
+      margin-bottom: 0.85rem;
+      overflow: hidden;
+      padding: 0.85rem;
+      width: 100%;
+    }
+
+    .product-lineup__card-media .image {
+      background: transparent;
+      margin-top: 0;
+    }
+
+    .product-lineup__card-media .image,
+    .product-lineup__card-media .image-inner {
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
+
+    .product-lineup__card-media picture,
+    .product-lineup__card-media img {
+      background: transparent;
+      height: 100%;
+      margin: auto;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      width: auto;
+    }
+
+    .product-lineup__card-title {
+      font-size: clamp(1.4rem, 3vw, 1.85rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin: 0 0 0.55rem;
+    }
+
+    .product-lineup__card-copy {
+      color: var(--lineup-muted);
+      font-size: clamp(1rem, 2.2vw, 1.125rem);
+      line-height: 1.45;
+      margin: 0 auto 1.15rem;
+      max-width: 24rem;
+      min-height: 2.8em;
+    }
+
+    .product-lineup__card-ctas {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem 1.1rem;
+      justify-content: center;
+      margin-top: auto;
+    }
+
+    .product-lineup__card-primary {
+      background: var(--lineup-link);
+      border-radius: 999px;
+      color: #fff;
+      font-size: clamp(0.9375rem, 1.8vw, 1.0625rem);
+      font-weight: 400;
+      line-height: 1;
+      padding: 0.7rem 1.25rem;
+      text-decoration: none;
+    }
+
+    .product-lineup__card-primary:hover,
+    .product-lineup__card-primary:focus-visible {
+      opacity: 0.88;
+    }
+
+    .product-lineup__card-secondary {
+      color: var(--lineup-link);
+      font-size: clamp(0.9375rem, 1.8vw, 1.0625rem);
+      text-decoration: none;
+    }
+
+    .product-lineup__card-secondary:hover,
+    .product-lineup__card-secondary:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+    }
+
+    .product-lineup__help {
+      border-top: 1px solid #d2d2d7;
+      margin-inline: auto;
+      margin-top: clamp(3rem, 7vw, 5rem);
+      max-width: 61.25rem;
+      padding-inline: clamp(1.25rem, 4vw, 2rem);
+      padding-top: clamp(2.5rem, 6vw, 3.5rem);
+    }
+
+    .product-lineup__help-title {
+      font-size: clamp(1.65rem, 3.8vw, 2.4rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 0 0 1.5rem;
+      text-align: center;
+    }
+
+    .product-lineup__help-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .product-lineup__help-tile {
+      background: var(--lineup-soft);
+      border-radius: 1.25rem;
+      padding: 1.75rem 1.35rem;
+      text-align: center;
+    }
+
+    .product-lineup__help-tile h3 {
+      font-size: clamp(1.125rem, 2.4vw, 1.35rem);
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      margin: 0 0 0.55rem;
+    }
+
+    .product-lineup__help-tile p {
+      color: var(--lineup-muted);
+      font-size: clamp(1rem, 2vw, 1.0625rem);
+      line-height: 1.45;
+      margin: 0 0 0.95rem;
+    }
+
+    .product-lineup__help-tile a {
+      color: var(--lineup-link);
+      font-size: clamp(0.9375rem, 1.8vw, 1.0625rem);
+      text-decoration: none;
+    }
+
+    .product-lineup__help-tile a:hover,
+    .product-lineup__help-tile a:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+
+    @media (max-width: 56rem) {
+      .product-lineup__help-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 40rem) {
+      .product-lineup__chapternav-media {
+        height: 8.25rem;
+        width: 8.25rem;
+      }
+
+      .product-lineup__card {
+        flex-basis: min(86vw, 22rem);
+      }
+
+      .product-lineup__card-media {
+        padding: 0.55rem;
+      }
+
+      .product-lineup__card-ctas {
+        flex-direction: column;
+        gap: 0.65rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .product-lineup__scroller {
+        scroll-behavior: auto;
+      }
+    }
+  }
+</style>

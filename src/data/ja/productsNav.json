@@ -17,22 +17,41 @@
     {
       "name": "溶接材料・工具",
       "path": "/ja/products/welding-tools/",
-      "children": []
+      "children": [
+        { "name": "溶模と分割型溶模", "path": "/ja/products/welding-tools/#molds", "children": [] },
+        { "name": "模夾", "path": "/ja/products/welding-tools/#clamps", "children": [] },
+        { "name": "溶接剤と点火・清模", "path": "/ja/products/welding-tools/#powder", "children": [] },
+        { "name": "施工付属工具", "path": "/ja/products/welding-tools/#field-tools", "children": [] }
+      ]
     },
     {
       "name": "溶接型接地部品",
       "path": "/ja/products/grounding-components/",
-      "children": []
+      "children": [
+        { "name": "Ground Plate", "path": "/ja/products/grounding-components/#ground-plate", "children": [] },
+        { "name": "接地端子板", "path": "/ja/products/grounding-components/#terminal-plate", "children": [] }
+      ]
     },
     {
       "name": "一般接地材料",
       "path": "/ja/products/grounding-materials/",
-      "children": []
+      "children": [
+        { "name": "接地棒", "path": "/ja/products/grounding-materials/#grounding-rods", "children": [] },
+        { "name": "接地銅バー", "path": "/ja/products/grounding-materials/#copper-busbars", "children": [] },
+        { "name": "C 型圧着端子", "path": "/ja/products/grounding-materials/#compression-connectors", "children": [] },
+        { "name": "接地線固定夾", "path": "/ja/products/grounding-materials/#grounding-clamps", "children": [] },
+        { "name": "その他付属材料", "path": "/ja/products/grounding-materials/#accessories", "children": [] }
+      ]
     },
     {
       "name": "避雷部品",
       "path": "/ja/products/lightning-protection/",
-      "children": []
+      "children": [
+        { "name": "導線接続アクセサリ", "path": "/ja/products/lightning-protection/#cable-splicers", "children": [] },
+        { "name": "Point Base と Adapter", "path": "/ja/products/lightning-protection/#point-base", "children": [] },
+        { "name": "Terminal Support", "path": "/ja/products/lightning-protection/#terminal-support", "children": [] },
+        { "name": "多用途固定アクセサリ", "path": "/ja/products/lightning-protection/#multi-clamps", "children": [] }
+      ]
     }
   ]
 }

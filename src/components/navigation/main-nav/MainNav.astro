@@ -3,11 +3,14 @@ import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Bar from "@components/navigation/bar/Bar.astro";
 import LanguageSwitcher from "@components/navigation/language-switcher/LanguageSwitcher.astro";
 import Mobile from "@components/navigation/mobile/Mobile.astro";
+import ProductsMegaMenu from "@components/navigation/products-mega-menu/ProductsMegaMenu.astro";
 import ThemeToggle from "@components/navigation/theme-toggle/ThemeToggle.astro";
 import Image from "@core-elements/image/Image.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import type { Locale } from "@i18n/config";
 import { defaultLocale } from "@i18n/config";
+import { experienceText } from "@i18n/experience";
+import { getProductsNav } from "@i18n/loadData";
 import type { NavButton } from "../../../types";
 
 const {
@@ -27,8 +30,24 @@ const {
   ...htmlAttributes
 } = Astro.props;
 
+const { navData: productsNavData = [] } = getProductsNav(locale);
+const productsLabel = (experienceText[locale] ?? experienceText[defaultLocale]).products;
+
+function isProductsShowcaseItem(item: { name?: string; path?: string }) {
+  const path = item.path ?? "";
+  if (/\/products\/?$/.test(path)) return true;
+  if (/\/products\/exoweld\/?$/.test(path)) return true;
+  return item.name === productsLabel;
+}
+
+const desktopNavData = navData.map((item: { name?: string; path?: string; children?: unknown[] }) =>
+  isProductsShowcaseItem(item) ? { ...item, mega: true, children: [] } : item
+);
+
 const mobileNavData = [
-  ...navData,
+  ...navData.map((item: { name?: string; path?: string; children?: unknown[] }) =>
+    isProductsShowcaseItem(item) ? { ...item, children: productsNavData } : item
+  ),
   ...buttonSections.map((button: any) => ({
     name: button.text || "Button",
     path: button.link || button.href || "#",
@@ -61,7 +80,7 @@ const mobileNavData = [
   </a>
   <div class="nav-end">
     <Bar
-      navData={navData}
+      navData={desktopNavData}
       class="desktop-main-nav"
     />
 
@@ -80,6 +99,11 @@ const mobileNavData = [
       useDefaultEditableBinding={false}
     />
   </div>
+  <ProductsMegaMenu
+    navData={productsNavData}
+    locale={locale}
+    label={productsLabel}
+  />
   <Mobile
     logoSource={logoSource}
     logoAlternateSource={logoAlternateSource}
@@ -95,6 +119,8 @@ const mobileNavData = [
   import { onPageLoad } from "@components/utils/onPageLoad";
   import { isLocale, localeNames } from "@i18n/config";
   import { experienceText } from "@i18n/experience";
+
+  let megaHandlersBound = false;
 
   function syncPersistedMainNav() {
     const navRoot = document.querySelector(".main-nav");
@@ -166,7 +192,77 @@ const mobileNavData = [
     }
   }
 
-  onPageLoad(syncPersistedMainNav);
+  function closeProductsMega(navRoot: HTMLElement) {
+    navRoot.classList.remove("is-mega-open");
+    navRoot.classList.add("mega-force-closed");
+  }
+
+  function clearMegaForceClose(navRoot: HTMLElement) {
+    navRoot.classList.remove("mega-force-closed");
+  }
+
+  function initProductsMega() {
+    const navRoot = document.querySelector(".main-nav");
+    if (!(navRoot instanceof HTMLElement)) return;
+    if (navRoot.dataset.megaInitialized === "true") return;
+
+    const trigger = navRoot.querySelector<HTMLElement>(".nav-item.has-mega [data-mega-trigger]");
+    const mega = navRoot.querySelector<HTMLElement>("[data-products-mega]");
+    if (!trigger || !mega) return;
+
+    navRoot.dataset.megaInitialized = "true";
+
+    const open = () => {
+      clearMegaForceClose(navRoot);
+      navRoot.classList.add("is-mega-open");
+    };
+
+    trigger.addEventListener("mouseenter", open);
+    trigger.addEventListener("focus", open);
+    mega.addEventListener("mouseenter", open);
+
+    const maybeClose = (related: EventTarget | null) => {
+      const next = related instanceof Node ? related : null;
+      if (next && (trigger.contains(next) || mega.contains(next) || trigger === next || mega === next)) {
+        return;
+      }
+      navRoot.classList.remove("is-mega-open");
+    };
+
+    trigger.addEventListener("mouseleave", (e) => maybeClose(e.relatedTarget));
+    mega.addEventListener("mouseleave", (e) => maybeClose(e.relatedTarget));
+
+    if (!megaHandlersBound) {
+      document.addEventListener("keydown", (e) => {
+        if (e.key !== "Escape") return;
+        const root = document.querySelector(".main-nav");
+        if (!(root instanceof HTMLElement)) return;
+        if (!root.classList.contains("is-mega-open") && !root.matches(":has(.nav-item.has-mega:focus-within), :has(.products-mega-menu:focus-within)")) {
+          return;
+        }
+        closeProductsMega(root);
+        const t = root.querySelector<HTMLElement>(".nav-item.has-mega [data-mega-trigger]");
+        t?.focus();
+      });
+
+      document.addEventListener("click", (e) => {
+        const root = document.querySelector(".main-nav");
+        if (!(root instanceof HTMLElement)) return;
+        const target = e.target;
+        if (!(target instanceof Node)) return;
+        if (root.querySelector(".nav-item.has-mega")?.contains(target)) return;
+        if (root.querySelector("[data-products-mega]")?.contains(target)) return;
+        root.classList.remove("is-mega-open");
+      });
+
+      megaHandlersBound = true;
+    }
+  }
+
+  onPageLoad(() => {
+    syncPersistedMainNav();
+    initProductsMega();
+  });
 </script>
 
 <style is:global>
@@ -195,6 +291,10 @@ const mobileNavData = [
         }
       }
 
+      > .outer-content {
+        overflow: visible;
+      }
+
       > .outer-content > .content {
         align-items: center;
         display: flex;
@@ -203,6 +303,8 @@ const mobileNavData = [
         width: 100%;
         padding: var(--nav-content-pad-block) var(--spacing-xl);
         min-width: 0;
+        overflow: visible;
+        position: static;
 
         .main-nav-logo {
           margin-top: 0;
@@ -334,19 +436,31 @@ const mobileNavData = [
         min-width: 2.75rem;
       }
 
+      /*
+        Desktop nav copy scales with the viewport.
+        Floor is 16px once the bar appears (64rem); cap is 18px on wide screens.
+        Inline padding grows with the same range so items stay on one line.
+      */
       .desktop-main-nav.bar {
-        font-size: var(--font-size-md);
+        font-size: clamp(1rem, 0.7rem + 0.5vw, 1.125rem);
+        letter-spacing: -0.01em;
+        min-width: 0;
       }
 
       .desktop-main-nav.bar .bar-list {
-        gap: var(--spacing-xs);
+        gap: clamp(0.1rem, 0.35vw, 0.4rem);
       }
 
       .desktop-main-nav.bar .nav-item > a,
       .desktop-main-nav.bar .nav-item > .nav-item-trigger {
-        font-size: var(--font-size-md);
-        padding: var(--spacing-sm) var(--spacing-sm);
-        color: var(--color-text-strong);
+        border-radius: 0;
+        color: var(--color-text-strong, #1d1d1f);
+        font-size: inherit;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        padding-block: 0.65rem;
+        padding-inline: clamp(0.4rem, 0.12rem + 0.45vw, 0.85rem);
       }
 
       .desktop-main-nav.bar .nav-item > a:hover,
@@ -358,6 +472,15 @@ const mobileNavData = [
         background: transparent;
         border-color: transparent;
         color: var(--color-brand);
+        opacity: 0.72;
+      }
+
+      .desktop-main-nav.bar .nav-item.has-mega > a:hover,
+      .desktop-main-nav.bar .nav-item.has-mega > a:focus-visible,
+      &:not(.mega-force-closed):has(.products-mega-menu:hover) .desktop-main-nav.bar .nav-item.has-mega > a,
+      &.is-mega-open .desktop-main-nav.bar .nav-item.has-mega > a {
+        color: var(--color-brand);
+        opacity: 1;
       }
 
       @media (max-width: 30rem) {
