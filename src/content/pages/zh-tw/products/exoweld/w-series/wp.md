@@ -2,24 +2,24 @@
 _schema: default
 permalink: null
 title: WP
-description: WP 屬 W 系列線對線銅導體熱熔接接點，適用導體對導體之熔接配置。
+description: WP 屬 W 系列銅導體熱熔接接點，適用導體對導體之熔接配置。
 pageSections:
   - _component: page-sections/products/product-detail
-    category: Exoweld ／ W 系列-線對線
+    category: Exoweld ／ W 系列
     heading: WP
-    summary: WP 屬 W 系列線對線銅導體熱熔接接點，適用導體對導體之熔接配置。
+    summary: WP 屬 W 系列銅導體熱熔接接點，適用導體對導體之熔接配置。
     description:
       - WP 屬於 W 系列銅導體接點形式，可依現場導體尺寸與接點需求搭配對應熔模與熔接劑。
       - 本頁為單品詳情公版 Demo。正式規格、模具編號與焊接劑用量請以業務確認資料為準。
       - 施工前請確認導體清潔、模具乾燥與安全防護，並依操作手冊完成點火與冷卻程序。
-    image: /src/assets/images/ccelect/placeholders/product-4.svg
-    imageAlt: WP 產品示意照片
+    image: /src/assets/images/ccelect/products/wp/cutout.png
+    imageAlt: WP (AI product illustration)
     imageHint: 點擊圖片可放大檢視（Demo）
     primaryCta:
       text: 聯絡工程業務
       href: /contact/
     secondaryCta:
-      text: 返回 W 系列-線對線
+      text: 返回 W 系列
       href: /products/exoweld/w-series/
     features:
       - 適用銅導體熱熔接接點配置

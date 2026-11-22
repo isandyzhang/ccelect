@@ -14,12 +14,10 @@ pageSections:
     families:
       - id: exoweld
         title: Exoweld 熱熔接
-        lineupHeading: 探索產品線。
-        catalogHref: /products/exoweld/w-series/
-        catalogLabel: 查看 W 系列
+        lineupHeading: 熔接成一體，連接更可靠。
         navItems:
           - title: W 系列
-            image: /images/ccelect/products/we/diagram.jpg
+            image: /images/ccelect/products/we/diagram.svg
             href: /products/exoweld/w-series/
           - title: G 系列
             image: /images/ccelect/products/gee/diagram.jpg
@@ -44,61 +42,61 @@ pageSections:
             href: /products/exoweld/c-series/
         items:
           - title: WE
-            description: 線對線直通熔接，適用導體接續與延伸。
+            description: 直通熔接，適用導體接續與延伸。
             image: /src/assets/images/ccelect/products/we/cutout.png
             href: /products/exoweld/w-series/we/
             secondaryHref: /products/exoweld/w-series/
             secondaryText: 查看 W 系列
           - title: WT
-            description: 線對線 T 接，常用於分支與接地網。
+            description: T 接，常用於分支與接地網。
             image: /src/assets/images/ccelect/products/wt/cutout.png
             href: /products/exoweld/w-series/wt/
             secondaryHref: /products/exoweld/w-series/
             secondaryText: 查看 W 系列
           - title: WX
-            description: 線對線交叉熔接。
+            description: 交叉熔接。
             image: /src/assets/images/ccelect/products/wx/cutout.png
             href: /products/exoweld/w-series/wx/
             secondaryHref: /products/exoweld/w-series/
             secondaryText: 查看 W 系列
           - title: WP
-            description: 線對線平行接點配置。
+            description: 平行接點配置。
             image: /src/assets/images/ccelect/products/wp/cutout.png
             href: /products/exoweld/w-series/wp/
             secondaryHref: /products/exoweld/w-series/
             secondaryText: 查看 W 系列
           - title: WL
-            description: 線對線 L 接。
+            description: L 接。
             image: /src/assets/images/ccelect/products/wl/cutout.png
             href: /products/exoweld/w-series/wl/
             secondaryHref: /products/exoweld/w-series/
             secondaryText: 查看 W 系列
           - title: WXL
-            description: 線對線交叉（加大／特殊配置）。
+            description: 交叉（加大／特殊配置）。
             image: /src/assets/images/ccelect/products/wxl/cutout.png
             href: /products/exoweld/w-series/wxl/
             secondaryHref: /products/exoweld/w-series/
             secondaryText: 查看 W 系列
       - id: welding-tools
         title: 熱熔接材料工具
-        lineupHeading: 探索產品線。
+        lineupHeading: 從備料到熔接，工具一次到位。
         catalogHref: /products/welding-tools/
         catalogLabel: 查看全部商品
         navItems:
           - title: 點火機
-            image: /src/assets/images/ccelect/accessories/lighter/cutout.png
+            image: /images/ccelect/accessories/lighter/diagram.svg
             imageAlt: 點火機
             href: /products/welding-tools/#igniter
           - title: 模夾
-            image: /src/assets/images/ccelect/accessories/handle/cutout.png
+            image: /images/ccelect/accessories/handle/diagram.svg
             imageAlt: 雙把手模夾
             href: /products/welding-tools/#clamps
           - title: 毛刷
-            image: /src/assets/images/ccelect/accessories/brush/cutout.png
+            image: /images/ccelect/accessories/brush/diagram.svg
             imageAlt: 木柄毛刷
             href: /products/welding-tools/#brush
           - title: 清模鏟
-            image: /src/assets/images/ccelect/accessories/clean-shave/cutout.png
+            image: /images/ccelect/accessories/clean-shave/diagram.svg
             imageAlt: 清模鏟
             href: /products/welding-tools/#scraper
           - title: 熔模
@@ -110,6 +108,20 @@ pageSections:
             imageAlt: 鋁箔包熔接劑
             href: /products/welding-tools/#powder
         items:
+          - title: 火泥熔模
+            description: 火泥熔模，配合接點形式選用的石墨模具。
+            image: /images/ccelect/accessories/investment-casting/cutout.png
+            imageAlt: 火泥熔模
+            href: /products/welding-tools/#molds
+            secondaryHref: /products/welding-tools/
+            secondaryText: 查看全部工具
+          - title: 鋁箔包熔接劑
+            description: 鋁箔包熔接劑，配合熔模與點火工具使用。
+            image: /images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
+            imageAlt: 鋁箔包熔接劑
+            href: /products/welding-tools/#powder
+            secondaryHref: /products/welding-tools/
+            secondaryText: 查看全部工具
           - title: 點火機
             description: 手持式點火工具，供熱熔接作業使用。
             image: /src/assets/images/ccelect/accessories/lighter/cutout.png
@@ -132,13 +144,6 @@ pageSections:
             description: 彎柄清模鏟，供模具清理作業使用。
             image: /src/assets/images/ccelect/accessories/clean-shave/cutout.png
             href: /products/welding-tools/#scraper
-            secondaryHref: /products/welding-tools/
-            secondaryText: 查看全部工具
-          - title: 火泥熔模
-            description: 火泥熔模，配合接點形式選用的石墨模具。
-            image: /images/ccelect/accessories/investment-casting/diagram.jpg
-            imageAlt: 火泥熔模
-            href: /products/welding-tools/#molds
             secondaryHref: /products/welding-tools/
             secondaryText: 查看全部工具
           - title: 分割型熔模
@@ -169,16 +174,9 @@ pageSections:
             href: /products/welding-tools/#clamps
             secondaryHref: /products/welding-tools/
             secondaryText: 查看全部工具
-          - title: 鋁箔包熔接劑
-            description: 鋁箔包熔接劑，配合熔模與點火工具使用。
-            image: /images/ccelect/accessories/foil-pack/diagram.jpg
-            imageAlt: 鋁箔包熔接劑
-            href: /products/welding-tools/#powder
-            secondaryHref: /products/welding-tools/
-            secondaryText: 查看全部工具
       - id: grounding-components
         title: 熱熔接型接地組件
-        lineupHeading: 探索產品線。
+        lineupHeading: 連接每個接點，建構接地系統。
         catalogHref: /products/grounding-components/
         catalogLabel: 查看全部商品
         navItems:
@@ -193,17 +191,17 @@ pageSections:
         items:
           - title: 埋入型接地板
             description: 埋入型接地板，舊型錄包含 AG201-100、AG401-100、AG401-250。
-            image: /images/ccelect/products/ground-plate/diagram.jpg
-            imageAlt: 埋入型接地板 AG201-100、AG401-100、AG401-250
+            image: /images/ccelect/products/ground-plate/cutout.png
+            imageAlt: 埋入型接地板 AG201-100、AG401-100、AG401-250 (AI product illustration)
             href: /products/grounding-components/#ground-plate
           - title: 接地端子板
             description: KS、KZ 接地端子板系列，供工程接地引接使用。
-            image: /images/ccelect/products/terminal-plate/diagram.jpg
-            imageAlt: 接地端子板 KS、KZ
+            image: /images/ccelect/products/terminal-plate/cutout.png
+            imageAlt: 接地端子板 KS、KZ (AI product illustration)
             href: /products/grounding-components/#terminal-plate
       - id: grounding-materials
         title: 一般接地用材料
-        lineupHeading: 探索產品線。
+        lineupHeading: 接地所需，一應俱全。
         catalogHref: /products/grounding-materials/
         catalogLabel: 查看全部商品
         navItems:
@@ -280,72 +278,72 @@ pageSections:
             href: /products/grounding-materials/#accessories
       - id: lightning-protection
         title: 避雷組件
-        lineupHeading: 探索產品線。
+        lineupHeading: 穩固連接，串起避雷防線。
         catalogHref: /products/lightning-protection/
         catalogLabel: 查看全部商品
         navItems:
           - title: "接續"
-            image: /images/ccelect/products/lightning-304/photo-hero.jpg
+            image: /images/ccelect/products/lightning-304/diagram.svg
             imageAlt: "T 型導線接續夾 304A／304B"
             href: /products/lightning-protection/#cable-splicers
           - title: "基座與轉接頭"
-            image: /images/ccelect/products/lightning-62/photo-hero.jpg
+            image: /images/ccelect/products/lightning-62/diagram.svg
             imageAlt: "平行導線平面基座 62"
             href: /products/lightning-protection/#point-base
           - title: "支撐座"
-            image: /images/ccelect/products/lightning-67/photo-hero.jpg
+            image: /images/ccelect/products/lightning-67/diagram.svg
             imageAlt: "接閃桿支撐座 67A／67B"
             href: /products/lightning-protection/#terminal-support
           - title: "固定夾"
-            image: /images/ccelect/products/lightning-297/photo-hero.jpg
+            image: /images/ccelect/products/lightning-297/diagram.svg
             imageAlt: "大型多用途固定夾 297"
             href: /products/lightning-protection/#multi-clamps
         items:
           - title: "T 型導線接續夾 304A／304B"
-            image: /images/ccelect/products/lightning-304/photo-hero.jpg
-            imageAlt: "Pressure T-Type Cable Splicer 304A／304B"
+            image: /images/ccelect/products/lightning-304/cutout.png
+            imageAlt: "Pressure T-Type Cable Splicer 304A／304B (AI product illustration)"
             href: /products/lightning-protection/#cable-splicers
             secondaryHref: /products/lightning-protection/
             secondaryText: "查看全部避雷組件"
           - title: "十字導線夾 119"
-            image: /images/ccelect/products/lightning-119/photo-hero.jpg
-            imageAlt: "Bronze Cross Run Clamp 119"
+            image: /images/ccelect/products/lightning-119/cutout.png
+            imageAlt: "Bronze Cross Run Clamp 119 (AI product illustration)"
             href: /products/lightning-protection/#cross-run-clamp
             secondaryHref: /products/lightning-protection/
             secondaryText: "查看全部避雷組件"
           - title: "平行導線平面基座 62"
-            image: /images/ccelect/products/lightning-62/photo-hero.jpg
-            imageAlt: "Parallel Wire Flat Surface Point Base 62"
+            image: /images/ccelect/products/lightning-62/cutout.png
+            imageAlt: "Parallel Wire Flat Surface Point Base 62 (AI product illustration)"
             href: /products/lightning-protection/#point-base
             secondaryHref: /products/lightning-protection/
             secondaryText: "查看全部避雷組件"
           - title: "可調式接閃桿轉接頭 63A"
-            image: /images/ccelect/products/lightning-63a/photo-hero.jpg
-            imageAlt: "Bronze Adjustable Point Adapter 63A"
+            image: /images/ccelect/products/lightning-63a/cutout.png
+            imageAlt: "Bronze Adjustable Point Adapter 63A (AI product illustration)"
             href: /products/lightning-protection/#point-adapter
             secondaryHref: /products/lightning-protection/
             secondaryText: "查看全部避雷組件"
           - title: "平面接閃桿基座 60A／60B、61A／61B"
-            image: /images/ccelect/products/lightning-60-61/photo-hero.jpg
-            imageAlt: "Flat Surface Point Base 60A／60B、61A／61B"
+            image: /images/ccelect/products/lightning-60-61/cutout.png
+            imageAlt: "Flat Surface Point Base 60A／60B、61A／61B (AI product illustration)"
             href: /products/lightning-protection/#flat-surface-base
             secondaryHref: /products/lightning-protection/
             secondaryText: "查看全部避雷組件"
           - title: "接閃桿支撐座 67A／67B"
-            image: /images/ccelect/products/lightning-67/photo-hero.jpg
-            imageAlt: "Terminal Support 67A／67B"
+            image: /images/ccelect/products/lightning-67/cutout.png
+            imageAlt: "Terminal Support 67A／67B (AI product illustration)"
             href: /products/lightning-protection/#terminal-support
             secondaryHref: /products/lightning-protection/
             secondaryText: "查看全部避雷組件"
           - title: "大型多用途固定夾 297"
-            image: /images/ccelect/products/lightning-297/photo-hero.jpg
-            imageAlt: "Bronze Large Multi Purpose Clamp 297"
+            image: /images/ccelect/products/lightning-297/cutout.png
+            imageAlt: "Bronze Large Multi Purpose Clamp 297 (AI product illustration)"
             href: /products/lightning-protection/#multi-clamps
             secondaryHref: /products/lightning-protection/
             secondaryText: "查看全部避雷組件"
           - title: "平面固定夾 298A"
-            image: /images/ccelect/products/lightning-298a/photo-hero.jpg
-            imageAlt: "Clamp to Flat Surface 298A"
+            image: /images/ccelect/products/lightning-298a/cutout.png
+            imageAlt: "Clamp to Flat Surface 298A (AI product illustration)"
             href: /products/lightning-protection/#flat-surface-clamp
             secondaryHref: /products/lightning-protection/
             secondaryText: "查看全部避雷組件"

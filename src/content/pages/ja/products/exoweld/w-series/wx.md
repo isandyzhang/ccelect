@@ -2,28 +2,28 @@
 _schema: default
 permalink: null
 title: WX
-description: WX は W シリーズ線対線の銅導体熱熔接接点で、導体どうしの接続に適します。
+description: WX は W シリーズの銅導体熱熔接接点で、導体どうしの接続に適します。
 pageSections:
   - _component: page-sections/products/product-detail
-    category: Exoweld ／ W シリーズ-線対線
+    category: Exoweld ／ W シリーズ
     heading: WX
-    summary: WX は W シリーズ線対線の銅導体熱熔接接点で、導体どうしの接続に適します。
+    summary: WX は W シリーズの銅導体熱熔接接点で、導体どうしの接続に適します。
     description:
       - WX は W シリーズ銅導体接点形式で、線径と接点条件に応じた溶模・溶接剤と組み合わせます。
       - 本ページは製品詳細テンプレートの Demo です。正式仕様、型番、溶接剤量は営業確認資料に従ってください。
       - 施工前に導体清掃、溶模乾燥、安全対策を確認し、手順書どおり点火と冷却を行ってください。
-    image: /images/ccelect/products/wx/photo-hero.jpg
+    image: /src/assets/images/ccelect/products/wx/cutout.png
     imageAlt: WX 熔接完了後の銅導体接点
     imageHint: 熔接完了後の銅導体接点
     videoHeading: 熔接動画
     video:
-      title: WX 線対線熔接
+      title: WX 熔接
       videoId: kaAG0uRJg8M
     primaryCta:
       text: 営業へ連絡
       href: /ja/contact/
     secondaryCta:
-      text: W シリーズ-線対線へ戻る
+      text: W シリーズへ戻る
       href: /ja/products/exoweld/w-series/
     features:
       - 銅導体の熱熔接接点に対応

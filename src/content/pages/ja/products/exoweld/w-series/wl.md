@@ -2,24 +2,24 @@
 _schema: default
 permalink: null
 title: WL
-description: WL は W シリーズ線対線の銅導体熱熔接接点で、導体どうしの接続に適します。
+description: WL は W シリーズの銅導体熱熔接接点で、導体どうしの接続に適します。
 pageSections:
   - _component: page-sections/products/product-detail
-    category: Exoweld ／ W シリーズ-線対線
+    category: Exoweld ／ W シリーズ
     heading: WL
-    summary: WL は W シリーズ線対線の銅導体熱熔接接点で、導体どうしの接続に適します。
+    summary: WL は W シリーズの銅導体熱熔接接点で、導体どうしの接続に適します。
     description:
       - WL は W シリーズ銅導体接点形式で、線径と接点条件に応じた溶模・溶接剤と組み合わせます。
       - 本ページは製品詳細テンプレートの Demo です。正式仕様、型番、溶接剤量は営業確認資料に従ってください。
       - 施工前に導体清掃、溶模乾燥、安全対策を確認し、手順書どおり点火と冷却を行ってください。
-    image: /src/assets/images/ccelect/placeholders/product-5.svg
-    imageAlt: WL 製品プレースホルダー
+    image: /src/assets/images/ccelect/products/wl/cutout.png
+    imageAlt: WL (AI product illustration)
     imageHint: 画像をクリックして拡大（Demo）
     primaryCta:
       text: 営業へ連絡
       href: /ja/contact/
     secondaryCta:
-      text: W シリーズ-線対線へ戻る
+      text: W シリーズへ戻る
       href: /ja/products/exoweld/w-series/
     features:
       - 銅導体の熱熔接接点に対応

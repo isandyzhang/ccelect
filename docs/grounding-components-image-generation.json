@@ -1,0 +1,12 @@
+{
+  "mode": "built-in image_gen edit / sketch-to-render",
+  "note": "AI product illustrations based on original diagrams, not photographs or dimensioned engineering references. Original diagrams retained for navigation and detail pages.",
+  "prompts": {
+    "ground-plate": "Use case: sketch-to-render. Input is the engineering reference for embedded grounding plate assemblies. Create a high resolution photoreal product cutout of ONE representative assembly, the upper-left assembly in the reference: a small thick square copper alloy grounding plate with four round threaded mounting holes on its face, short vertical cylindrical metal stem attached beneath the plate, joined to a stranded copper grounding conductor leading diagonally toward the right. Preserve this simple assembly arrangement. Do not include the other assemblies from the sheet. Natural copper/bronze metal, subtle machining detail, realistic stranded copper wire and slightly rough exothermic welded joint. Elevated three-quarter view that clearly shows the plate face and stem and cable. Complete product centered with 15 percent margins on square canvas. Soft neutral studio lighting, high detail, true transparent alpha background, no floor or shadow, no dimensions, no text, no extra hardware. This is a catalog product illustration, not a dimensional drawing.",
+    "terminal-plate": "Use case: sketch-to-render. Input image is an engineering drawing showing flat and offset copper grounding terminal plates. Render TWO representative products together: one flat rectangular thick copper plate with four circular holes arranged 2 by 2 near one end, and one matching offset bent rectangular copper plate with the same four holes near one end and a shallow upward Z offset near the other end. Follow the bottom row and bottom side profiles in the reference, keeping elongated rectangular outlines, flat machined edges and round holes. No bolts or insulators or wire. High resolution realistic machined copper, subtle brushed texture, soft neutral studio product lighting. Show both complete plates separately in a coherent elevated three-quarter perspective, arranged parallel diagonally, not overlapping, equal scale. Square canvas with generous margins, true transparent background and holes, no floor shadows. Remove all dimensions, arrows, letters, labels and drawing lines. Clean premium catalog cutout, no invented logos."
+  },
+  "outputs": [
+    "public/images/ccelect/products/ground-plate/cutout.png",
+    "public/images/ccelect/products/terminal-plate/cutout.png"
+  ]
+}

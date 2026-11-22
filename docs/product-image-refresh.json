@@ -1,0 +1,25 @@
+{
+  "mode": "built-in image_gen / sketch-to-render",
+  "note": "AI product illustrations, not actual project or installation photos. Original technical drawings and process photos retained. Unfinished G-series dummy videos and cases archived under assets/archive/ccelect/content.",
+  "commonPrompt": "Use case: sketch-to-render. Convert this exact engineering drawing to a high resolution photoreal exothermic welded grounding connection. Preserve geometry, conductor count, branch directions and viewpoint precisely. Copper stranded cables, copper-clad solid rod, rough granular dark bronze/copper weld metal (not smooth machined fittings). The drawing's outer sleeve shapes are welded metal, not mechanical fasteners. Natural warm brown copper, neutral soft studio light, complete assembly centered on square canvas with 15% clear margins. TRUE transparent background. No text, labels, lines, floor, shadows, bolts, extra parts. Product catalog AI illustration.",
+  "modelPrompts": {
+    "gst": " This is a benign electrical earthing connector for building wiring. Solid vertical copper earth rod extends BOTH above and below the central joint; one continuous stranded copper wire crosses horizontally in front.",
+    "shea": " Base is a flat square gray steel plate; copper cable ends in a low horizontal elongated weld bonded onto the top plate surface.",
+    "sheb": " Base is a flat square gray steel plate; copper cable ends in a tall upright conical bronze weld bonded onto top plate surface.",
+    "sves": " The large vertical hollow cylinder is a gray steel pipe. One copper wire ends at a bronze weld on its curved side.",
+    "rheh": " The large horizontal ribbed cylinder is gray construction steel rebar, not copper. A short bronze upright weld on top connects a horizontal copper wire end.",
+    "rhxh": " The long horizontal ribbed cylinder is gray construction steel rebar. A bronze joint at center connects a copper wire pointing toward the viewer-right."
+  },
+  "outputs": [
+    "public/images/ccelect/products/gee/cutout.png",
+    "public/images/ccelect/products/get/cutout.png",
+    "public/images/ccelect/products/gst/cutout.png",
+    "public/images/ccelect/products/gey/cutout.png",
+    "public/images/ccelect/products/gep/cutout.png",
+    "public/images/ccelect/products/shea/cutout.png",
+    "public/images/ccelect/products/sheb/cutout.png",
+    "public/images/ccelect/products/sves/cutout.png",
+    "public/images/ccelect/products/rheh/cutout.png",
+    "public/images/ccelect/products/rhxh/cutout.png"
+  ]
+}

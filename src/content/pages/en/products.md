@@ -12,12 +12,10 @@ pageSections:
     families:
       - id: exoweld
         title: Exoweld
-        lineupHeading: Explore the lineup.
-        catalogHref: /en/products/exoweld/w-series/
-        catalogLabel: View W series
+        lineupHeading: Fused together. Connected with confidence.
         navItems:
           - title: W series
-            image: /images/ccelect/products/we/diagram.jpg
+            image: /images/ccelect/products/we/diagram.svg
             href: /en/products/exoweld/w-series/
           - title: G series
             image: /images/ccelect/products/gee/diagram.jpg
@@ -79,24 +77,24 @@ pageSections:
             secondaryText: View W series
       - id: welding-tools
         title: Welding materials & tools
-        lineupHeading: Explore the lineup.
+        lineupHeading: Ready for every step of the weld.
         catalogHref: /en/products/welding-tools/
         catalogLabel: Browse all
         navItems:
           - title: Igniter
-            image: /src/assets/images/ccelect/accessories/lighter/cutout.png
+            image: /images/ccelect/accessories/lighter/diagram.svg
             imageAlt: Handheld igniter
             href: /en/products/welding-tools/#igniter
           - title: Mold clamp
-            image: /src/assets/images/ccelect/accessories/handle/cutout.png
+            image: /images/ccelect/accessories/handle/diagram.svg
             imageAlt: Twin-handle mold clamp
             href: /en/products/welding-tools/#clamps
           - title: Cleaning brush
-            image: /src/assets/images/ccelect/accessories/brush/cutout.png
+            image: /images/ccelect/accessories/brush/diagram.svg
             imageAlt: Wooden-handled cleaning brush
             href: /en/products/welding-tools/#brush
           - title: Mold scraper
-            image: /src/assets/images/ccelect/accessories/clean-shave/cutout.png
+            image: /images/ccelect/accessories/clean-shave/diagram.svg
             imageAlt: Mold scraper
             href: /en/products/welding-tools/#scraper
           - title: Molds
@@ -108,6 +106,20 @@ pageSections:
             imageAlt: Foil-packed weld metal
             href: /en/products/welding-tools/#powder
         items:
+          - title: Graphite mold
+            description: Graphite mold matched to the joint form.
+            image: /images/ccelect/accessories/investment-casting/cutout.png
+            imageAlt: Graphite investment mold
+            href: /en/products/welding-tools/#molds
+            secondaryHref: /en/products/welding-tools/
+            secondaryText: View all tools
+          - title: Foil pack
+            description: Foil-packed weld metal for use with the mold and igniter.
+            image: /images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
+            imageAlt: Foil-packed weld metal
+            href: /en/products/welding-tools/#powder
+            secondaryHref: /en/products/welding-tools/
+            secondaryText: View all tools
           - title: Igniter
             description: Handheld ignition tool for exothermic welding.
             image: /src/assets/images/ccelect/accessories/lighter/cutout.png
@@ -130,13 +142,6 @@ pageSections:
             description: Bent-shaft scraper for mold cleaning.
             image: /src/assets/images/ccelect/accessories/clean-shave/cutout.png
             href: /en/products/welding-tools/#scraper
-            secondaryHref: /en/products/welding-tools/
-            secondaryText: View all tools
-          - title: Graphite mold
-            description: Graphite mold matched to the joint form.
-            image: /images/ccelect/accessories/investment-casting/diagram.jpg
-            imageAlt: Graphite investment mold
-            href: /en/products/welding-tools/#molds
             secondaryHref: /en/products/welding-tools/
             secondaryText: View all tools
           - title: Split mold
@@ -167,16 +172,9 @@ pageSections:
             href: /en/products/welding-tools/#clamps
             secondaryHref: /en/products/welding-tools/
             secondaryText: View all tools
-          - title: Foil pack
-            description: Foil-packed weld metal for use with the mold and igniter.
-            image: /images/ccelect/accessories/foil-pack/diagram.jpg
-            imageAlt: Foil-packed weld metal
-            href: /en/products/welding-tools/#powder
-            secondaryHref: /en/products/welding-tools/
-            secondaryText: View all tools
       - id: grounding-components
         title: Welded grounding assemblies
-        lineupHeading: Explore the lineup.
+        lineupHeading: Connect every point. Build your grounding system.
         catalogHref: /en/products/grounding-components/
         catalogLabel: Browse all
         navItems:
@@ -191,17 +189,17 @@ pageSections:
         items:
           - title: Ground Plate
             description: Embedded ground plates. Legacy catalog includes AG201-100, AG401-100, and AG401-250.
-            image: /images/ccelect/products/ground-plate/diagram.jpg
-            imageAlt: Embedded ground plates AG201-100, AG401-100, and AG401-250
+            image: /images/ccelect/products/ground-plate/cutout.png
+            imageAlt: Embedded ground plates AG201-100, AG401-100, and AG401-250 (AI product illustration)
             href: /en/products/grounding-components/#ground-plate
           - title: Terminal plates
             description: KS and KZ terminal plate series for grounding lead-ins.
-            image: /images/ccelect/products/terminal-plate/diagram.jpg
-            imageAlt: KS and KZ terminal plates
+            image: /images/ccelect/products/terminal-plate/cutout.png
+            imageAlt: KS and KZ terminal plates (AI product illustration)
             href: /en/products/grounding-components/#terminal-plate
       - id: grounding-materials
         title: General grounding materials
-        lineupHeading: Explore the lineup.
+        lineupHeading: The essentials for grounding.
         catalogHref: /en/products/grounding-materials/
         catalogLabel: Browse all
         navItems:
@@ -278,72 +276,72 @@ pageSections:
             href: /en/products/grounding-materials/#accessories
       - id: lightning-protection
         title: Lightning components
-        lineupHeading: Explore the lineup.
+        lineupHeading: Connect, secure, and support your lightning protection.
         catalogHref: /en/products/lightning-protection/
         catalogLabel: Browse all
         navItems:
           - title: "Splicers"
-            image: /images/ccelect/products/lightning-304/photo-hero.jpg
+            image: /images/ccelect/products/lightning-304/diagram.svg
             imageAlt: "Pressure T-Type Cable Splicer 304A／304B"
             href: /en/products/lightning-protection/#cable-splicers
           - title: "Bases & adapters"
-            image: /images/ccelect/products/lightning-62/photo-hero.jpg
+            image: /images/ccelect/products/lightning-62/diagram.svg
             imageAlt: "Parallel Wire Flat Surface Point Base 62"
             href: /en/products/lightning-protection/#point-base
           - title: "Supports"
-            image: /images/ccelect/products/lightning-67/photo-hero.jpg
+            image: /images/ccelect/products/lightning-67/diagram.svg
             imageAlt: "Terminal Support 67A／67B"
             href: /en/products/lightning-protection/#terminal-support
           - title: "Clamps"
-            image: /images/ccelect/products/lightning-297/photo-hero.jpg
+            image: /images/ccelect/products/lightning-297/diagram.svg
             imageAlt: "Bronze Large Multi Purpose Clamp 297"
             href: /en/products/lightning-protection/#multi-clamps
         items:
           - title: "Pressure T-Type Cable Splicer 304A／304B"
-            image: /images/ccelect/products/lightning-304/photo-hero.jpg
-            imageAlt: "Pressure T-Type Cable Splicer 304A／304B"
+            image: /images/ccelect/products/lightning-304/cutout.png
+            imageAlt: "Pressure T-Type Cable Splicer 304A／304B (AI product illustration)"
             href: /en/products/lightning-protection/#cable-splicers
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"
           - title: "Bronze Cross Run Clamp 119"
-            image: /images/ccelect/products/lightning-119/photo-hero.jpg
-            imageAlt: "Bronze Cross Run Clamp 119"
+            image: /images/ccelect/products/lightning-119/cutout.png
+            imageAlt: "Bronze Cross Run Clamp 119 (AI product illustration)"
             href: /en/products/lightning-protection/#cross-run-clamp
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"
           - title: "Parallel Wire Flat Surface Point Base 62"
-            image: /images/ccelect/products/lightning-62/photo-hero.jpg
-            imageAlt: "Parallel Wire Flat Surface Point Base 62"
+            image: /images/ccelect/products/lightning-62/cutout.png
+            imageAlt: "Parallel Wire Flat Surface Point Base 62 (AI product illustration)"
             href: /en/products/lightning-protection/#point-base
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"
           - title: "Bronze Adjustable Point Adapter 63A"
-            image: /images/ccelect/products/lightning-63a/photo-hero.jpg
-            imageAlt: "Bronze Adjustable Point Adapter 63A"
+            image: /images/ccelect/products/lightning-63a/cutout.png
+            imageAlt: "Bronze Adjustable Point Adapter 63A (AI product illustration)"
             href: /en/products/lightning-protection/#point-adapter
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"
           - title: "Flat Surface Point Base 60A／60B、61A／61B"
-            image: /images/ccelect/products/lightning-60-61/photo-hero.jpg
-            imageAlt: "Flat Surface Point Base 60A／60B、61A／61B"
+            image: /images/ccelect/products/lightning-60-61/cutout.png
+            imageAlt: "Flat Surface Point Base 60A／60B、61A／61B (AI product illustration)"
             href: /en/products/lightning-protection/#flat-surface-base
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"
           - title: "Terminal Support 67A／67B"
-            image: /images/ccelect/products/lightning-67/photo-hero.jpg
-            imageAlt: "Terminal Support 67A／67B"
+            image: /images/ccelect/products/lightning-67/cutout.png
+            imageAlt: "Terminal Support 67A／67B (AI product illustration)"
             href: /en/products/lightning-protection/#terminal-support
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"
           - title: "Bronze Large Multi Purpose Clamp 297"
-            image: /images/ccelect/products/lightning-297/photo-hero.jpg
-            imageAlt: "Bronze Large Multi Purpose Clamp 297"
+            image: /images/ccelect/products/lightning-297/cutout.png
+            imageAlt: "Bronze Large Multi Purpose Clamp 297 (AI product illustration)"
             href: /en/products/lightning-protection/#multi-clamps
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"
           - title: "Clamp to Flat Surface 298A"
-            image: /images/ccelect/products/lightning-298a/photo-hero.jpg
-            imageAlt: "Clamp to Flat Surface 298A"
+            image: /images/ccelect/products/lightning-298a/cutout.png
+            imageAlt: "Clamp to Flat Surface 298A (AI product illustration)"
             href: /en/products/lightning-protection/#flat-surface-clamp
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"

@@ -17,7 +17,7 @@ pageSections:
         category: 電極
         title: 接地棒
         description: 土壌条件と接地抵抗目標に応じて、イオン式または銅被覆鋼棒を選択。
-        image: /images/ccelect/products/iea/photo-hero.jpg
+        image: /images/ccelect/products/iea/cutout.png
         imageAlt: イオン式接地棒
         specifications:
           - IEA イオン式
@@ -28,7 +28,7 @@ pageSections:
         category: 導体
         title: 接地銅バー
         description: 接地母線や等電位接続向けの高導電銅バー。
-        image: /images/ccelect/products/copper-busbar/photo-hero.jpg
+        image: /images/ccelect/products/copper-busbar/cutout.png
         imageAlt: 接地銅バー
         specifications:
           - C1020BB
@@ -38,7 +38,7 @@ pageSections:
         category: 接続
         title: C 型圧着端子
         description: 銅導体の分岐・接続用圧着端子。
-        image: /images/ccelect/products/c-connector/photo-hero.jpg
+        image: /images/ccelect/products/c-connector/cutout.png
         imageAlt: C 型圧着端子
         specifications:
           - C 型
@@ -48,7 +48,7 @@ pageSections:
         category: 固定
         title: 接地線固定夾
         description: 壁面・構造体などへの接地導体固定用。
-        image: /images/ccelect/products/gbs/photo-hero.jpg
+        image: /images/ccelect/products/gbs/cutout.png
         imageAlt: 接地線固定夾 GBS
         specifications:
           - GBS シリーズ
@@ -58,7 +58,7 @@ pageSections:
         category: 付属
         title: その他付属材料
         description: 止水・土壌改良など接地工事用付属材料。
-        image: /images/ccelect/products/sealing-plate/photo-hero.jpg
+        image: /images/ccelect/products/sealing-plate/cutout.png
         imageAlt: 止水板
         specifications:
           - 止水板

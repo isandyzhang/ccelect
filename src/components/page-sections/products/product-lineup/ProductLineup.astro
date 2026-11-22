@@ -50,12 +50,7 @@ interface Props {
 const locale = localeFromPath(Astro.url.pathname) as Locale;
 const copy = experienceText[locale] ?? experienceText[defaultLocale];
 
-const {
-  families = [],
-  helpHeading = "",
-  helpTiles = [],
-  class: className,
-} = Astro.props as Props;
+const { families = [], helpHeading = "", helpTiles = [], class: className } = Astro.props as Props;
 ---
 
 <section
@@ -65,7 +60,6 @@ const {
 >
   {
     families.map((family, familyIndex) => {
-      const lineupId = `lineup-${family.id || familyIndex}-${crypto.randomUUID().slice(0, 8)}`;
       const navItems = family.navItems ?? [];
       const items = family.items ?? [];
       const TitleTag = familyIndex === 0 ? "h1" : "h2";
@@ -76,7 +70,21 @@ const {
           id={family.id}
         >
           <div class="product-lineup__family-head">
-            <TitleTag class="product-lineup__family-title">{family.title}</TitleTag>
+            <div>
+              <TitleTag class="product-lineup__family-title">{family.title}</TitleTag>
+              {family.lineupHeading && (
+                <p class="product-lineup__tagline">{family.lineupHeading}</p>
+              )}
+            </div>
+            {family.catalogHref && (
+              <a
+                class="product-lineup__catalog"
+                href={family.catalogHref}
+              >
+                {family.catalogLabel || copy.viewProduct}
+                <span aria-hidden="true"> ↗</span>
+              </a>
+            )}
           </div>
 
           {navItems.length > 0 && (
@@ -113,20 +121,15 @@ const {
 
           {items.length > 0 && (
             <div class="product-lineup__gallery">
-              <div class="product-lineup__gallery-head">
-                <h3 class="product-lineup__gallery-title">
-                  {family.lineupHeading || copy.exploreLineup}
-                </h3>
-              </div>
-
               <div
                 class="product-lineup__scroller"
-                id={lineupId}
                 data-lineup-scroller
                 tabindex="0"
+                role="region"
+                aria-label={family.title}
               >
                 <ul class="product-lineup__track">
-                  {items.map((item, itemIndex) => (
+                  {items.map((item) => (
                     <li class="product-lineup__card">
                       <div class="product-lineup__card-inner">
                         {item.image && (
@@ -134,11 +137,11 @@ const {
                             <Image
                               source={item.image}
                               alt={item.imageAlt || item.title}
-                              sizes="(max-width: 40rem) 86vw, 28rem"
+                              sizes="(max-width: 40rem) 90vw, (max-width: 56rem) 45vw, 25rem"
                             />
                           </div>
                         )}
-                        <h4 class="product-lineup__card-title">{item.title}</h4>
+                        <h3 class="product-lineup__card-title">{item.title}</h3>
                         {item.description && (
                           <p class="product-lineup__card-copy">{item.description}</p>
                         )}
@@ -149,15 +152,6 @@ const {
                           >
                             {item.ctaText || copy.learnMore}
                           </a>
-                          {item.secondaryHref && (
-                            <a
-                              class="product-lineup__card-secondary"
-                              href={item.secondaryHref}
-                            >
-                              {item.secondaryText || copy.viewProduct}
-                              <span aria-hidden="true"> ›</span>
-                            </a>
-                          )}
                         </div>
                       </div>
                     </li>
@@ -188,7 +182,40 @@ const {
     )
   }
 </section>
+<script>
+  let teardown: (() => void) | undefined;
 
+  const init = () => {
+    teardown?.();
+    const events = new AbortController();
+    const { signal } = events;
+    const scrollers = document.querySelectorAll<HTMLElement>("[data-lineup-scroller]");
+    const observers: ResizeObserver[] = [];
+
+    for (const scroller of scrollers) {
+      const update = () => {
+        const more = scroller.scrollLeft + scroller.clientWidth < scroller.scrollWidth - 4;
+
+        scroller.classList.toggle("has-more", more);
+      };
+
+      update();
+      scroller.addEventListener("scroll", update, { passive: true, signal });
+      const observer = new ResizeObserver(update);
+
+      observer.observe(scroller);
+      observers.push(observer);
+    }
+
+    teardown = () => {
+      events.abort();
+      for (const observer of observers) observer.disconnect();
+    };
+  };
+
+  document.addEventListener("astro:page-load", init);
+  init();
+</script>
 <style is:global>
   @layer page-sections {
     .product-lineup {
@@ -197,7 +224,7 @@ const {
       --lineup-ink: #1d1d1f;
       --lineup-muted: #6e6e73;
       --lineup-link: #0066cc;
-      --lineup-radius: 1.75rem;
+      --lineup-gutter: clamp(1.25rem, 4vw, 2.5rem);
 
       background: var(--lineup-bg);
       color: var(--lineup-ink);
@@ -212,13 +239,17 @@ const {
     }
 
     .product-lineup__family-head {
+      align-items: start;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: space-between;
       margin-inline: auto;
-      max-width: 61.25rem;
-      padding-inline: clamp(1.25rem, 4vw, 2rem);
+      max-width: 85rem;
+      padding-inline: var(--lineup-gutter);
     }
 
     .product-lineup__family-title {
-      font-size: clamp(2.25rem, 6.5vw, 4.25rem);
+      font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 600;
       letter-spacing: -0.03em;
       line-height: 1.08;
@@ -226,29 +257,19 @@ const {
       text-align: start;
     }
 
-    /* Apple chapternav strip */
     .product-lineup__chapternav {
-      margin-top: clamp(0.65rem, 1.5vw, 1rem);
-      overflow-x: auto;
-      padding-block: 0;
-      scrollbar-width: none;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .product-lineup__chapternav::-webkit-scrollbar {
-      display: none;
+      margin: 2rem auto 0;
+      max-width: 85rem;
+      padding-inline: var(--lineup-gutter);
     }
 
     .product-lineup__chapternav-list {
-      display: flex;
-      gap: clamp(0.65rem, 1.8vw, 1.25rem);
-      justify-content: safe center;
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
       list-style: none;
-      margin: 0 auto;
-      max-width: max-content;
-      min-width: min(100%, 61.25rem);
-      padding: 0 clamp(0.75rem, 2.5vw, 1.25rem);
-      width: max-content;
+      margin: 0;
+      padding: 0;
     }
 
     .product-lineup__chapternav-item {
@@ -267,13 +288,13 @@ const {
       color: var(--lineup-link);
     }
 
-    /* Chapternav icons ~2× prior size */
     .product-lineup__chapternav-media {
       align-items: center;
       display: flex;
-      height: clamp(9.5rem, 16vw, 12rem);
+      height: 7.5rem;
       justify-content: center;
-      width: clamp(9.5rem, 16vw, 12rem);
+      max-width: 10rem;
+      width: 100%;
     }
 
     .product-lineup__chapternav-media .image,
@@ -310,60 +331,60 @@ const {
     /* Explore the lineup gallery — gray band separates from chapternav */
     .product-lineup__gallery {
       background: var(--lineup-soft);
-      margin-top: clamp(2.25rem, 5vw, 3.5rem);
-      padding-block: clamp(1.75rem, 4vw, 2.75rem) clamp(2rem, 4.5vw, 3.25rem);
+      margin-top: 2.5rem;
+      padding-block: 2.5rem;
       width: 100%;
     }
 
-    .product-lineup__gallery-head {
-      margin-bottom: 1.35rem;
-      margin-inline: auto;
-      max-width: 90rem;
-      padding-inline: clamp(1.25rem, 4vw, 2.5rem);
-    }
-
-    .product-lineup__gallery-title {
-      font-size: clamp(1.75rem, 4vw, 2.75rem);
-      font-weight: 600;
-      letter-spacing: -0.025em;
-      line-height: 1.15;
-      margin: 0;
-    }
-
     .product-lineup__scroller {
+      --lineup-gap: 1.5rem;
+      --lineup-count: 3.5;
+      --lineup-card: calc(
+        (100% - (var(--lineup-count) - 0.5) * var(--lineup-gap)) / var(--lineup-count)
+      );
+      --peek: calc(
+        (100% - var(--lineup-gutter) - (var(--lineup-count) - 0.5) * var(--lineup-gap)) /
+          (var(--lineup-count) * 2)
+      );
+
       margin-inline: auto;
-      max-width: 90rem;
+      max-width: 85rem;
+      padding-inline: var(--lineup-gutter) 0;
+      padding-bottom: 1rem;
       overflow-x: auto;
       overscroll-behavior-x: contain;
-      padding-block: 0.25rem 0.75rem;
-      padding-inline: clamp(1.25rem, 4vw, 2.5rem);
-      scroll-padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+      scroll-padding-inline-start: var(--lineup-gutter);
       scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: #c2c2c8 transparent;
+    }
+
+    .product-lineup__scroller.has-more {
+      -webkit-mask-image: linear-gradient(to right, #000 calc(100% - var(--peek)), transparent);
+      mask-image: linear-gradient(to right, #000 calc(100% - var(--peek)), transparent);
     }
 
     .product-lineup__scroller:focus-visible {
-      outline: 2px solid var(--color-focus-ring, #0066cc);
-      outline-offset: 4px;
-    }
-
-    .product-lineup__scroller::-webkit-scrollbar {
-      display: none;
+      outline: 2px solid var(--lineup-link);
+      outline-offset: -2px;
     }
 
     .product-lineup__track {
       display: flex;
-      gap: 0.95rem;
+      gap: var(--lineup-gap);
       list-style: none;
       margin: 0;
-      padding: 0 1px;
-      width: max-content;
+      padding: 0;
     }
 
-    /* Cards ~60% larger than prior 17.5rem */
+    .product-lineup__track::after {
+      content: "";
+      flex: 0 0 var(--lineup-gutter);
+    }
+
     .product-lineup__card {
-      flex: 0 0 min(88vw, 28rem);
+      flex: 0 0 var(--lineup-card);
+      min-width: 0;
       scroll-snap-align: start;
     }
 
@@ -377,12 +398,10 @@ const {
 
     /* One gray only — transparent cutouts float on the soft band */
     .product-lineup__card-media {
-      aspect-ratio: 1;
       background: transparent;
-      border-radius: 1.75rem;
-      margin-bottom: 0.85rem;
-      overflow: hidden;
-      padding: 0.85rem;
+      height: clamp(15rem, 24vw, 20rem);
+      margin-bottom: 1.25rem;
+      padding: 1rem;
       width: 100%;
     }
 
@@ -410,7 +429,7 @@ const {
     }
 
     .product-lineup__card-title {
-      font-size: clamp(1.4rem, 3vw, 1.85rem);
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
       font-weight: 600;
       letter-spacing: -0.02em;
       line-height: 1.15;
@@ -433,6 +452,7 @@ const {
       gap: 0.85rem 1.1rem;
       justify-content: center;
       margin-top: auto;
+      padding-top: 0.75rem;
     }
 
     .product-lineup__card-primary {
@@ -451,24 +471,12 @@ const {
       opacity: 0.88;
     }
 
-    .product-lineup__card-secondary {
-      color: var(--lineup-link);
-      font-size: clamp(0.9375rem, 1.8vw, 1.0625rem);
-      text-decoration: none;
-    }
-
-    .product-lineup__card-secondary:hover,
-    .product-lineup__card-secondary:focus-visible {
-      text-decoration: underline;
-      text-underline-offset: 0.15em;
-    }
-
     .product-lineup__help {
       border-top: 1px solid #d2d2d7;
       margin-inline: auto;
       margin-top: clamp(3rem, 7vw, 5rem);
-      max-width: 61.25rem;
-      padding-inline: clamp(1.25rem, 4vw, 2rem);
+      max-width: 85rem;
+      padding-inline: var(--lineup-gutter);
       padding-top: clamp(2.5rem, 6vw, 3.5rem);
     }
 
@@ -522,29 +530,69 @@ const {
       text-underline-offset: 0.18em;
     }
 
+    .product-lineup__tagline {
+      color: var(--lineup-muted);
+      font-size: clamp(1.125rem, 2.2vw, 1.5rem);
+      line-height: 1.5;
+      margin: 0.75rem 0 0;
+    }
+
+    .product-lineup__catalog {
+      color: var(--lineup-link);
+      flex-shrink: 0;
+      padding-block: 0.75rem;
+      text-underline-offset: 0.25em;
+    }
+
     @media (max-width: 56rem) {
+      .product-lineup__scroller {
+        --lineup-count: 2.5;
+      }
+
       .product-lineup__help-grid {
         grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 40rem) {
+      .product-lineup__family-head {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .product-lineup__chapternav-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem 0.75rem;
+      }
+
       .product-lineup__chapternav-media {
-        height: 8.25rem;
-        width: 8.25rem;
+        height: 5rem;
       }
 
       .product-lineup__card {
-        flex-basis: min(86vw, 22rem);
+        flex-basis: 86%;
+      }
+
+      .product-lineup__scroller {
+        --peek: 14%;
       }
 
       .product-lineup__card-media {
-        padding: 0.55rem;
+        height: 17.5rem;
+      }
+    }
+
+    @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+      .product-lineup__chapternav-media img,
+      .product-lineup__card-media img {
+        transition: transform 240ms ease-out;
       }
 
-      .product-lineup__card-ctas {
-        flex-direction: column;
-        gap: 0.65rem;
+      .product-lineup__chapternav-item:hover .product-lineup__chapternav-media img,
+      .product-lineup__chapternav-item:focus-visible .product-lineup__chapternav-media img,
+      .product-lineup__card:hover .product-lineup__card-media img,
+      .product-lineup__card:focus-within .product-lineup__card-media img {
+        transform: translateY(-4px) scale(1.015);
       }
     }
 

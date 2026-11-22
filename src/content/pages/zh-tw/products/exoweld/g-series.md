@@ -1,26 +1,29 @@
 ---
 _schema: default
 permalink: null
-title: G 系列-線對接地棒
-description: Exoweld 線對接地棒熱熔接熔模，適用導體與接地極之多種連接組合。
+title: G 系列
+description: Exoweld 熱熔接熔模，適用導體與接地極之多種連接組合。
 pageSections:
   - _component: page-sections/products/product-series
     eyebrowText: Exoweld 熱熔接
-    heading: G 系列-線對接地棒
-    summary: Exoweld 石墨熔模設計與建造，適用於多種線對接地棒連接方式與導體／接地極組合。
+    heading: G 系列
+    summary: Exoweld 石墨熔模設計與建造，適用於多種連接方式與導體／接地極組合。
     images:
-      - image: /src/assets/images/ccelect/placeholders/product-2.svg
-        imageAlt: 線對接地棒熱熔接接點示意（DUMMY）
-        caption: 線對接地棒
-      - image: /src/assets/images/ccelect/placeholders/product-3.svg
-        imageAlt: 導體接接地棒示意
-        caption: 導體至接地棒（DUMMY）
-      - image: /src/assets/images/ccelect/placeholders/product-4.svg
-        imageAlt: 垂直接地極引出示意
-        caption: 垂直接地極引出（DUMMY）
-      - image: /src/assets/images/ccelect/placeholders/product-5.svg
-        imageAlt: 接地網銜接示意
-        caption: 接地網銜接（DUMMY）
+      - image: /images/ccelect/products/gee/cutout.png
+        imageAlt: GEE (AI product illustration)
+        caption: GEE (AI product illustration)
+      - image: /images/ccelect/products/get/cutout.png
+        imageAlt: GET (AI product illustration)
+        caption: GET (AI product illustration)
+      - image: /images/ccelect/products/gst/cutout.png
+        imageAlt: GST (AI product illustration)
+        caption: GST (AI product illustration)
+      - image: /images/ccelect/products/gey/cutout.png
+        imageAlt: GEY (AI product illustration)
+        caption: GEY (AI product illustration)
+      - image: /images/ccelect/products/gep/cutout.png
+        imageAlt: GEP (AI product illustration)
+        caption: GEP (AI product illustration)
     featuresHeading: 功能
     detailsLabel: 詳情
     features:
@@ -32,41 +35,23 @@ pageSections:
       - 可目視檢查熔接處
     productsHeading: 商品列表
     countLabel: 共 {count} 個商品
-    applicationsLabel: 應用場景圖片
+    applicationsLabel: 接點形式示意
     applicationImages:
-      - image: /src/assets/images/ccelect/placeholders/product-3.svg
-        imageAlt: 導體接接地棒施工示意
-        caption: DUMMY：導體至接地棒
-      - image: /src/assets/images/ccelect/placeholders/product-4.svg
-        imageAlt: 垂直接地極引出示意
-        caption: DUMMY：垂直接地極引出
-      - image: /src/assets/images/ccelect/placeholders/product-5.svg
-        imageAlt: 接地網銜接示意
-        caption: DUMMY：接地網銜接
-    videosLabel: 影片
-    videos:
-      - title: DUMMY：線對接地棒熔接示範
-        description: 示意影片，實際教學內容待補。
-        thumbnail: /src/assets/images/ccelect/placeholders/product-2.svg
-        href: "#"
-      - title: DUMMY：接地棒規格確認與施工
-        description: 示意影片，實際教學內容待補。
-        thumbnail: /src/assets/images/ccelect/placeholders/product-5.svg
-        href: "#"
-    projectsLabel: 工程實績
-    projects:
-      - title: DUMMY：電塔接地極安裝
-        description: 線對接地棒應用示意，正式實績資料待補。
-        image: /src/assets/images/ccelect/placeholders/product-2.svg
-        href: /projects/
-      - title: DUMMY：配電桿接地改善
-        description: 現場熔接應用示意，正式實績資料待補。
-        image: /src/assets/images/ccelect/placeholders/product-3.svg
-        href: /projects/
-      - title: DUMMY：廠區接地網擴建
-        description: 接地極銜接應用示意，正式實績資料待補。
-        image: /src/assets/images/ccelect/placeholders/product-4.svg
-        href: /projects/
+      - image: /images/ccelect/products/gee/diagram.jpg
+        imageAlt: GEE
+        caption: GEE
+      - image: /images/ccelect/products/get/diagram.jpg
+        imageAlt: GET
+        caption: GET
+      - image: /images/ccelect/products/gst/diagram.jpg
+        imageAlt: GST
+        caption: GST
+      - image: /images/ccelect/products/gey/diagram.jpg
+        imageAlt: GEY
+        caption: GEY
+      - image: /images/ccelect/products/gep/diagram.jpg
+        imageAlt: GEP
+        caption: GEP
     helpHeading: 需要技術支援或報價嗎？我們隨時為您服務。
     helpText: 提供導體線徑、接地棒規格、接點形式與需求數量，我們會協助確認熔模與報價。
     primaryCta:
@@ -77,47 +62,47 @@ pageSections:
       href: /products/exoweld/
     items:
       - id: gee
-        category: 線對接地棒
+        category: Exoweld ／ G 系列
         title: GEE
-        description: GEE 線對接地棒接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/placeholders/product-1.svg
-        imageAlt: GEE
+        description: GEE 接點型號。實際熔模與導體規格請洽業務。
+        image: /images/ccelect/products/gee/cutout.png
+        imageAlt: GEE (AI product illustration)
         specifications:
           - GEE
         href: /contact/
       - id: get
-        category: 線對接地棒
+        category: Exoweld ／ G 系列
         title: GET
-        description: GET 線對接地棒接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/placeholders/product-2.svg
-        imageAlt: GET
+        description: GET 接點型號。實際熔模與導體規格請洽業務。
+        image: /images/ccelect/products/get/cutout.png
+        imageAlt: GET (AI product illustration)
         specifications:
           - GET
         href: /contact/
       - id: gst
-        category: 線對接地棒
+        category: Exoweld ／ G 系列
         title: GST
-        description: GST 線對接地棒接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/placeholders/product-3.svg
-        imageAlt: GST
+        description: GST 接點型號。實際熔模與導體規格請洽業務。
+        image: /images/ccelect/products/gst/cutout.png
+        imageAlt: GST (AI product illustration)
         specifications:
           - GST
         href: /contact/
       - id: gey
-        category: 線對接地棒
+        category: Exoweld ／ G 系列
         title: GEY
-        description: GEY 線對接地棒接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/placeholders/product-4.svg
-        imageAlt: GEY
+        description: GEY 接點型號。實際熔模與導體規格請洽業務。
+        image: /images/ccelect/products/gey/cutout.png
+        imageAlt: GEY (AI product illustration)
         specifications:
           - GEY
         href: /contact/
       - id: gep
-        category: 線對接地棒
+        category: Exoweld ／ G 系列
         title: GEP
-        description: GEP 線對接地棒接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/placeholders/product-5.svg
-        imageAlt: GEP
+        description: GEP 接點型號。實際熔模與導體規格請洽業務。
+        image: /images/ccelect/products/gep/cutout.png
+        imageAlt: GEP (AI product illustration)
         specifications:
           - GEP
         href: /contact/

@@ -2,29 +2,29 @@
 _schema: default
 permalink: null
 title: WE
-description: WE 屬 W 系列線對線銅導體熱熔接接點，適用導體對導體之熔接配置。
+description: WE 屬 W 系列銅導體熱熔接接點，適用導體對導體之熔接配置。
 pageSections:
   - _component: page-sections/products/product-detail
-    category: Exoweld ／ W 系列-線對線
+    category: Exoweld ／ W 系列
     moldSelector: WE
     heading: WE
-    summary: WE 屬 W 系列線對線銅導體熱熔接接點，適用導體對導體之熔接配置。
+    summary: WE 屬 W 系列銅導體熱熔接接點，適用導體對導體之熔接配置。
     description:
       - WE 屬於 W 系列銅導體接點形式，可依現場導體尺寸與接點需求搭配對應熔模與熔接劑。
       - 本頁為單品詳情公版 Demo。正式規格、模具編號與焊接劑用量請以業務確認資料為準。
       - 施工前請確認導體清潔、模具乾燥與安全防護，並依操作手冊完成點火與冷卻程序。
-    image: /images/ccelect/products/we/photo-hero.jpg
+    image: /src/assets/images/ccelect/products/we/cutout.png
     imageAlt: WE 熔接完成的銅導體接點
     imageHint: 熔接完成的銅導體接點
     videoHeading: 熔接影片
     video:
-      title: WE 線對線熔接示範
+      title: WE 熔接示範
       videoId: ja-FXInWnLU
     primaryCta:
       text: 聯絡工程業務
       href: /contact/
     secondaryCta:
-      text: 返回 W 系列-線對線
+      text: 返回 W 系列
       href: /products/exoweld/w-series/
     features:
       - 適用銅導體熱熔接接點配置

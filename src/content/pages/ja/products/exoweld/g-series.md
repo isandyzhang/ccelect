@@ -1,26 +1,29 @@
 ---
 _schema: default
 permalink: null
-title: G シリーズ-線対接地棒
-description: Exoweld 線対接地棒熱熔接溶模。導体と接地極の接続に対応。
+title: G シリーズ
+description: Exoweld 熱熔接溶模。導体と接地極の接続に対応。
 pageSections:
   - _component: page-sections/products/product-series
     eyebrowText: Exoweld 熱熔接
-    heading: G シリーズ-線対接地棒
-    summary: Exoweld グラファイト溶模は、さまざまな線対接地棒接続形式と組合せ向けに設計されています。
+    heading: G シリーズ
+    summary: Exoweld グラファイト溶模は、さまざまな接続形式と組合せ向けに設計されています。
     images:
-      - image: /src/assets/images/ccelect/placeholders/product-2.svg
-        imageAlt: 線対接地棒接点プレースホルダー
-        caption: 線対接地棒
-      - image: /src/assets/images/ccelect/placeholders/product-3.svg
-        imageAlt: 導体と接地棒
-        caption: 導体至接地棒（DUMMY）
-      - image: /src/assets/images/ccelect/placeholders/product-4.svg
-        imageAlt: 垂直接地極引出
-        caption: 垂直接地極引出（DUMMY）
-      - image: /src/assets/images/ccelect/placeholders/product-5.svg
-        imageAlt: 接地網接続
-        caption: 接地網接続（DUMMY）
+      - image: /images/ccelect/products/gee/cutout.png
+        imageAlt: GEE (AI product illustration)
+        caption: GEE (AI product illustration)
+      - image: /images/ccelect/products/get/cutout.png
+        imageAlt: GET (AI product illustration)
+        caption: GET (AI product illustration)
+      - image: /images/ccelect/products/gst/cutout.png
+        imageAlt: GST (AI product illustration)
+        caption: GST (AI product illustration)
+      - image: /images/ccelect/products/gey/cutout.png
+        imageAlt: GEY (AI product illustration)
+        caption: GEY (AI product illustration)
+      - image: /images/ccelect/products/gep/cutout.png
+        imageAlt: GEP (AI product illustration)
+        caption: GEP (AI product illustration)
     featuresHeading: 機能
     detailsLabel: 詳細
     features:
@@ -32,34 +35,23 @@ pageSections:
       - 溶接部を目視確認可能
     productsHeading: 商品一覧
     countLabel: 全 {count} 製品
-    applicationsLabel: 応用シーン画像
+    applicationsLabel: 接続形状イメージ
     applicationImages:
-      - image: /src/assets/images/ccelect/placeholders/product-3.svg
-        caption: DUMMY 応用シーン
-      - image: /src/assets/images/ccelect/placeholders/product-4.svg
-        caption: DUMMY 応用シーン
-      - image: /src/assets/images/ccelect/placeholders/product-5.svg
-        caption: DUMMY 応用シーン
-    videosLabel: 動画
-    videos:
-      - title: DUMMY 溶接デモ
-        description: プレースホルダー動画です。
-        thumbnail: /src/assets/images/ccelect/placeholders/product-2.svg
-        href: "#"
-      - title: DUMMY 安全説明
-        description: プレースホルダー動画です。
-        thumbnail: /src/assets/images/ccelect/placeholders/product-5.svg
-        href: "#"
-    projectsLabel: 施工実績
-    projects:
-      - title: DUMMY 電柱接地工事
-        description: プレースホルダー実績です。
-        image: /src/assets/images/ccelect/placeholders/product-2.svg
-        href: /ja/projects/
-      - title: DUMMY 工場接地網拡張
-        description: プレースホルダー実績です。
-        image: /src/assets/images/ccelect/placeholders/product-3.svg
-        href: /ja/projects/
+      - image: /images/ccelect/products/gee/diagram.jpg
+        imageAlt: GEE
+        caption: GEE
+      - image: /images/ccelect/products/get/diagram.jpg
+        imageAlt: GET
+        caption: GET
+      - image: /images/ccelect/products/gst/diagram.jpg
+        imageAlt: GST
+        caption: GST
+      - image: /images/ccelect/products/gey/diagram.jpg
+        imageAlt: GEY
+        caption: GEY
+      - image: /images/ccelect/products/gep/diagram.jpg
+        imageAlt: GEP
+        caption: GEP
     helpHeading: 技術サポートやお見積りが必要ですか？お手伝いします。
     helpText: 導体線径、接地棒仕様、接点形式、数量をお知らせください。
     primaryCta:
@@ -70,47 +62,47 @@ pageSections:
       href: /ja/products/exoweld/
     items:
       - id: gee
-        category: 線対接地棒
+        category: Exoweld ／ G シリーズ
         title: GEE
-        description: GEE 線対接地棒接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/placeholders/product-1.svg
-        imageAlt: GEE
+        description: GEE 接点型番。溶模と導体仕様は営業へご確認ください。
+        image: /images/ccelect/products/gee/cutout.png
+        imageAlt: GEE (AI product illustration)
         specifications:
           - GEE
         href: /ja/contact/
       - id: get
-        category: 線対接地棒
+        category: Exoweld ／ G シリーズ
         title: GET
-        description: GET 線対接地棒接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/placeholders/product-2.svg
-        imageAlt: GET
+        description: GET 接点型番。溶模と導体仕様は営業へご確認ください。
+        image: /images/ccelect/products/get/cutout.png
+        imageAlt: GET (AI product illustration)
         specifications:
           - GET
         href: /ja/contact/
       - id: gst
-        category: 線対接地棒
+        category: Exoweld ／ G シリーズ
         title: GST
-        description: GST 線対接地棒接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/placeholders/product-3.svg
-        imageAlt: GST
+        description: GST 接点型番。溶模と導体仕様は営業へご確認ください。
+        image: /images/ccelect/products/gst/cutout.png
+        imageAlt: GST (AI product illustration)
         specifications:
           - GST
         href: /ja/contact/
       - id: gey
-        category: 線対接地棒
+        category: Exoweld ／ G シリーズ
         title: GEY
-        description: GEY 線対接地棒接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/placeholders/product-4.svg
-        imageAlt: GEY
+        description: GEY 接点型番。溶模と導体仕様は営業へご確認ください。
+        image: /images/ccelect/products/gey/cutout.png
+        imageAlt: GEY (AI product illustration)
         specifications:
           - GEY
         href: /ja/contact/
       - id: gep
-        category: 線対接地棒
+        category: Exoweld ／ G シリーズ
         title: GEP
-        description: GEP 線対接地棒接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/placeholders/product-5.svg
-        imageAlt: GEP
+        description: GEP 接点型番。溶模と導体仕様は営業へご確認ください。
+        image: /images/ccelect/products/gep/cutout.png
+        imageAlt: GEP (AI product illustration)
         specifications:
           - GEP
         href: /ja/contact/

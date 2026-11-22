@@ -15,9 +15,9 @@ pageSections:
     items:
       - id: series-w
         category: Exoweld
-        title: W series - wire to wire
+        title: W series
         description: 'Copper conductor-to-conductor joints: WE, WT, WX, WP, WL, WXL.'
-        image: /images/ccelect/products/we/diagram.svg
+        image: /src/assets/images/ccelect/products/we/cutout.png
         imageAlt: WE wire-to-wire splice diagram
         images:
           - image: /images/ccelect/products/we/diagram.svg
@@ -42,9 +42,9 @@ pageSections:
         href: /en/products/exoweld/w-series/
       - id: series-g
         category: Exoweld
-        title: G series - wire to ground rod
+        title: G series
         description: 'Conductor-to-ground-rod joints: GEE, GET, GST, GEY, GEP.'
-        image: /images/ccelect/products/gee/diagram.jpg
+        image: /images/ccelect/products/gee/cutout.png
         imageAlt: GEE wire-to-ground-rod diagram
         images:
           - image: /images/ccelect/products/gee/diagram.jpg
@@ -68,7 +68,7 @@ pageSections:
         category: Exoweld
         title: S series
         description: Special joint forms such as SHEA, SHEB, and SVES.
-        image: /images/ccelect/products/shea/diagram.jpg
+        image: /images/ccelect/products/shea/cutout.png
         imageAlt: SHEA steel-plate-to-wire diagram
         images:
           - image: /images/ccelect/products/shea/diagram.jpg
@@ -86,7 +86,7 @@ pageSections:
         category: Exoweld
         title: R series
         description: RHEH and RHXH joint forms.
-        image: /images/ccelect/products/rheh/diagram.jpg
+        image: /images/ccelect/products/rheh/cutout.png
         imageAlt: RHEH rebar-to-wire diagram
         images:
           - image: /images/ccelect/products/rheh/diagram.jpg

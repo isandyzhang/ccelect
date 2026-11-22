@@ -1,0 +1,20 @@
+    videosLabel: Videos
+    videos:
+      - title: DUMMY welding demo
+        description: Placeholder video content.
+        thumbnail: /src/assets/images/ccelect/placeholders/product-2.svg
+        href: "#"
+      - title: DUMMY safety briefing
+        description: Placeholder video content.
+        thumbnail: /src/assets/images/ccelect/placeholders/product-5.svg
+        href: "#"
+    projectsLabel: Project cases
+    projects:
+      - title: DUMMY tower grounding
+        description: Placeholder project case.
+        image: /src/assets/images/ccelect/placeholders/product-2.svg
+        href: /en/projects/
+      - title: DUMMY pole upgrade
+        description: Placeholder project case.
+        image: /src/assets/images/ccelect/placeholders/product-3.svg
+        href: /en/projects/

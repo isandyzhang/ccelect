@@ -12,12 +12,10 @@ pageSections:
     families:
       - id: exoweld
         title: Exoweld 熱熔接
-        lineupHeading: 製品ラインを見る。
-        catalogHref: /ja/products/exoweld/w-series/
-        catalogLabel: W シリーズを見る
+        lineupHeading: 一体に溶接、確かな接続。
         navItems:
           - title: W シリーズ
-            image: /images/ccelect/products/we/diagram.jpg
+            image: /images/ccelect/products/we/diagram.svg
             href: /ja/products/exoweld/w-series/
           - title: G シリーズ
             image: /images/ccelect/products/gee/diagram.jpg
@@ -42,31 +40,31 @@ pageSections:
             href: /ja/products/exoweld/c-series/
         items:
           - title: WE
-            description: 線対線直通溶接。延長・接続に。
+            description: 直通溶接。延長・接続に。
             image: /src/assets/images/ccelect/products/we/cutout.png
             href: /ja/products/exoweld/w-series/we/
             secondaryHref: /ja/products/exoweld/w-series/
             secondaryText: W シリーズを見る
           - title: WT
-            description: 線対線 T 接。分岐・接地網に。
+            description: T 接。分岐・接地網に。
             image: /src/assets/images/ccelect/products/wt/cutout.png
             href: /ja/products/exoweld/w-series/wt/
             secondaryHref: /ja/products/exoweld/w-series/
             secondaryText: W シリーズを見る
           - title: WX
-            description: 線対線クロス溶接。
+            description: クロス溶接。
             image: /src/assets/images/ccelect/products/wx/cutout.png
             href: /ja/products/exoweld/w-series/wx/
             secondaryHref: /ja/products/exoweld/w-series/
             secondaryText: W シリーズを見る
           - title: WP
-            description: 線対線平行接点。
+            description: 平行接点。
             image: /src/assets/images/ccelect/products/wp/cutout.png
             href: /ja/products/exoweld/w-series/wp/
             secondaryHref: /ja/products/exoweld/w-series/
             secondaryText: W シリーズを見る
           - title: WL
-            description: 線対線 L 接。
+            description: L 接。
             image: /src/assets/images/ccelect/products/wl/cutout.png
             href: /ja/products/exoweld/w-series/wl/
             secondaryHref: /ja/products/exoweld/w-series/
@@ -79,24 +77,24 @@ pageSections:
             secondaryText: W シリーズを見る
       - id: welding-tools
         title: 溶接材料・工具
-        lineupHeading: 製品ラインを見る。
+        lineupHeading: 準備から溶接まで、必要な工具を。
         catalogHref: /ja/products/welding-tools/
         catalogLabel: すべて見る
         navItems:
           - title: 点火器
-            image: /src/assets/images/ccelect/accessories/lighter/cutout.png
+            image: /images/ccelect/accessories/lighter/diagram.svg
             imageAlt: 点火器
             href: /ja/products/welding-tools/#igniter
           - title: 金型クランプ
-            image: /src/assets/images/ccelect/accessories/handle/cutout.png
+            image: /images/ccelect/accessories/handle/diagram.svg
             imageAlt: 両ハンドル式クランプ
             href: /ja/products/welding-tools/#clamps
           - title: 清掃ブラシ
-            image: /src/assets/images/ccelect/accessories/brush/cutout.png
+            image: /images/ccelect/accessories/brush/diagram.svg
             imageAlt: 木柄ブラシ
             href: /ja/products/welding-tools/#brush
           - title: 金型スクレーパー
-            image: /src/assets/images/ccelect/accessories/clean-shave/cutout.png
+            image: /images/ccelect/accessories/clean-shave/diagram.svg
             imageAlt: 金型スクレーパー
             href: /ja/products/welding-tools/#scraper
           - title: 溶模
@@ -108,6 +106,20 @@ pageSections:
             imageAlt: アルミ箔包溶接剤
             href: /ja/products/welding-tools/#powder
         items:
+          - title: 火泥溶模
+            description: 接点形式に合わせて選ぶ黒鉛の火泥溶模。
+            image: /images/ccelect/accessories/investment-casting/cutout.png
+            imageAlt: 火泥溶模
+            href: /ja/products/welding-tools/#molds
+            secondaryHref: /ja/products/welding-tools/
+            secondaryText: すべての工具を見る
+          - title: アルミ箔包溶接剤
+            description: 溶模と点火器と併用するアルミ箔包溶接剤。
+            image: /images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
+            imageAlt: アルミ箔包溶接剤
+            href: /ja/products/welding-tools/#powder
+            secondaryHref: /ja/products/welding-tools/
+            secondaryText: すべての工具を見る
           - title: 点火器
             description: 発熱溶接作業に使用する手持ち式点火器。
             image: /src/assets/images/ccelect/accessories/lighter/cutout.png
@@ -130,13 +142,6 @@ pageSections:
             description: 金型の清掃に使用する曲がり柄スクレーパー。
             image: /src/assets/images/ccelect/accessories/clean-shave/cutout.png
             href: /ja/products/welding-tools/#scraper
-            secondaryHref: /ja/products/welding-tools/
-            secondaryText: すべての工具を見る
-          - title: 火泥溶模
-            description: 接点形式に合わせて選ぶ黒鉛の火泥溶模。
-            image: /images/ccelect/accessories/investment-casting/diagram.jpg
-            imageAlt: 火泥溶模
-            href: /ja/products/welding-tools/#molds
             secondaryHref: /ja/products/welding-tools/
             secondaryText: すべての工具を見る
           - title: 分割型溶模
@@ -167,16 +172,9 @@ pageSections:
             href: /ja/products/welding-tools/#clamps
             secondaryHref: /ja/products/welding-tools/
             secondaryText: すべての工具を見る
-          - title: アルミ箔包溶接剤
-            description: 溶模と点火器と併用するアルミ箔包溶接剤。
-            image: /images/ccelect/accessories/foil-pack/diagram.jpg
-            imageAlt: アルミ箔包溶接剤
-            href: /ja/products/welding-tools/#powder
-            secondaryHref: /ja/products/welding-tools/
-            secondaryText: すべての工具を見る
       - id: grounding-components
         title: 溶接型接地部品
-        lineupHeading: 製品ラインを見る。
+        lineupHeading: 接点をつなぎ、接地システムを築く。
         catalogHref: /ja/products/grounding-components/
         catalogLabel: すべて見る
         navItems:
@@ -191,17 +189,17 @@ pageSections:
         items:
           - title: 埋込型接地板
             description: 埋込型接地板。旧カタログには AG201-100、AG401-100、AG401-250 があります。
-            image: /images/ccelect/products/ground-plate/diagram.jpg
-            imageAlt: 埋込型接地板 AG201-100、AG401-100、AG401-250
+            image: /images/ccelect/products/ground-plate/cutout.png
+            imageAlt: 埋込型接地板 AG201-100、AG401-100、AG401-250 (AI product illustration)
             href: /ja/products/grounding-components/#ground-plate
           - title: 接地端子板
             description: KS・KZ 接地端子板シリーズ。接地引込みに使用します。
-            image: /images/ccelect/products/terminal-plate/diagram.jpg
-            imageAlt: 接地端子板 KS、KZ
+            image: /images/ccelect/products/terminal-plate/cutout.png
+            imageAlt: 接地端子板 KS、KZ (AI product illustration)
             href: /ja/products/grounding-components/#terminal-plate
       - id: grounding-materials
         title: 一般接地材料
-        lineupHeading: 製品ラインを見る。
+        lineupHeading: 接地に必要な材料を、ひと通り。
         catalogHref: /ja/products/grounding-materials/
         catalogLabel: すべて見る
         navItems:
@@ -278,72 +276,72 @@ pageSections:
             href: /ja/products/grounding-materials/#accessories
       - id: lightning-protection
         title: 避雷部品
-        lineupHeading: 製品ラインを見る。
+        lineupHeading: 接続・固定・支持で、避雷設備を支える。
         catalogHref: /ja/products/lightning-protection/
         catalogLabel: すべて見る
         navItems:
           - title: "接続部品"
-            image: /images/ccelect/products/lightning-304/photo-hero.jpg
+            image: /images/ccelect/products/lightning-304/diagram.svg
             imageAlt: "T形導線接続クランプ 304A／304B"
             href: /ja/products/lightning-protection/#cable-splicers
           - title: "ベース・アダプター"
-            image: /images/ccelect/products/lightning-62/photo-hero.jpg
+            image: /images/ccelect/products/lightning-62/diagram.svg
             imageAlt: "平行導線用平面ベース 62"
             href: /ja/products/lightning-protection/#point-base
           - title: "支持金具"
-            image: /images/ccelect/products/lightning-67/photo-hero.jpg
+            image: /images/ccelect/products/lightning-67/diagram.svg
             imageAlt: "受雷部支持金具 67A／67B"
             href: /ja/products/lightning-protection/#terminal-support
           - title: "固定金具"
-            image: /images/ccelect/products/lightning-297/photo-hero.jpg
+            image: /images/ccelect/products/lightning-297/diagram.svg
             imageAlt: "大型多目的クランプ 297"
             href: /ja/products/lightning-protection/#multi-clamps
         items:
           - title: "T形導線接続クランプ 304A／304B"
-            image: /images/ccelect/products/lightning-304/photo-hero.jpg
-            imageAlt: "Pressure T-Type Cable Splicer 304A／304B"
+            image: /images/ccelect/products/lightning-304/cutout.png
+            imageAlt: "Pressure T-Type Cable Splicer 304A／304B (AI product illustration)"
             href: /ja/products/lightning-protection/#cable-splicers
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"
           - title: "交差導線クランプ 119"
-            image: /images/ccelect/products/lightning-119/photo-hero.jpg
-            imageAlt: "Bronze Cross Run Clamp 119"
+            image: /images/ccelect/products/lightning-119/cutout.png
+            imageAlt: "Bronze Cross Run Clamp 119 (AI product illustration)"
             href: /ja/products/lightning-protection/#cross-run-clamp
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"
           - title: "平行導線用平面ベース 62"
-            image: /images/ccelect/products/lightning-62/photo-hero.jpg
-            imageAlt: "Parallel Wire Flat Surface Point Base 62"
+            image: /images/ccelect/products/lightning-62/cutout.png
+            imageAlt: "Parallel Wire Flat Surface Point Base 62 (AI product illustration)"
             href: /ja/products/lightning-protection/#point-base
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"
           - title: "可変式受雷部アダプター 63A"
-            image: /images/ccelect/products/lightning-63a/photo-hero.jpg
-            imageAlt: "Bronze Adjustable Point Adapter 63A"
+            image: /images/ccelect/products/lightning-63a/cutout.png
+            imageAlt: "Bronze Adjustable Point Adapter 63A (AI product illustration)"
             href: /ja/products/lightning-protection/#point-adapter
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"
           - title: "平面取付ベース 60A／60B、61A／61B"
-            image: /images/ccelect/products/lightning-60-61/photo-hero.jpg
-            imageAlt: "Flat Surface Point Base 60A／60B、61A／61B"
+            image: /images/ccelect/products/lightning-60-61/cutout.png
+            imageAlt: "Flat Surface Point Base 60A／60B、61A／61B (AI product illustration)"
             href: /ja/products/lightning-protection/#flat-surface-base
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"
           - title: "受雷部支持金具 67A／67B"
-            image: /images/ccelect/products/lightning-67/photo-hero.jpg
-            imageAlt: "Terminal Support 67A／67B"
+            image: /images/ccelect/products/lightning-67/cutout.png
+            imageAlt: "Terminal Support 67A／67B (AI product illustration)"
             href: /ja/products/lightning-protection/#terminal-support
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"
           - title: "大型多目的クランプ 297"
-            image: /images/ccelect/products/lightning-297/photo-hero.jpg
-            imageAlt: "Bronze Large Multi Purpose Clamp 297"
+            image: /images/ccelect/products/lightning-297/cutout.png
+            imageAlt: "Bronze Large Multi Purpose Clamp 297 (AI product illustration)"
             href: /ja/products/lightning-protection/#multi-clamps
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"
           - title: "平面固定クランプ 298A"
-            image: /images/ccelect/products/lightning-298a/photo-hero.jpg
-            imageAlt: "Clamp to Flat Surface 298A"
+            image: /images/ccelect/products/lightning-298a/cutout.png
+            imageAlt: "Clamp to Flat Surface 298A (AI product illustration)"
             href: /ja/products/lightning-protection/#flat-surface-clamp
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"

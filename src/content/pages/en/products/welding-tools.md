@@ -17,34 +17,44 @@ pageSections:
         category: Molds
         title: Molds & split molds
         description: Graphite molds, split molds, and wear plates.
-        image: /images/ccelect/accessories/split-mold/diagram.jpg
-        imageAlt: Split graphite mold
+        image: /images/ccelect/accessories/investment-casting/cutout.png
+        imageAlt: Graphite mold product photo (WE type)
+        images:
+          - image: /images/ccelect/accessories/investment-casting/cutout.png
+            imageAlt: Graphite mold product photo (WE type)
+          - image: /images/ccelect/accessories/split-mold/diagram.jpg
+            imageAlt: Split mold diagram
         specifications:
           - Graphite molds
           - Split molds
           - Wear plates
         href: /en/contact/
+      - id: powder
+        category: Consumables
+        title: Powder & cleaning
+        description: Foil-packed powder, igniters, cleaning plates, and brushes.
+        image: /images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
+        imageAlt: Foil-packed weld metal
+        images:
+          - image: /images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
+            imageAlt: EXOWELD #45 foil-packed weld metal product photo
+          - image: /images/ccelect/accessories/foil-pack/diagram.jpg
+            imageAlt: Foil-packed weld metal
+        specifications:
+          - Powder
+          - Igniter
+          - Cleaning tools
+        href: /en/contact/
       - id: clamps
         category: Clamps
         title: Mold clamps
         description: Universal clamps, chain clamps, and ML-3 clamps.
-        image: /src/assets/images/ccelect/accessories/handle/photo-hero.jpg
+        image: /src/assets/images/ccelect/accessories/handle/cutout.png
         imageAlt: Black mold clamp with two handles photograph
         specifications:
           - Universal
           - Chain
           - ML-3
-        href: /en/contact/
-      - id: powder
-        category: Consumables
-        title: Powder & cleaning
-        description: Foil-packed powder, igniters, cleaning plates, and brushes.
-        image: /images/ccelect/accessories/foil-pack/diagram.jpg
-        imageAlt: Foil-packed weld metal
-        specifications:
-          - Powder
-          - Igniter
-          - Cleaning tools
         href: /en/contact/
       - id: field-tools
         category: Field tools
@@ -61,21 +71,21 @@ pageSections:
         category: Ignition tools
         title: Igniter
         description: Handheld ignition tool for exothermic welding.
-        image: /src/assets/images/ccelect/accessories/lighter/photo-hero.jpg
+        image: /src/assets/images/ccelect/accessories/lighter/cutout.png
         imageAlt: Metal handheld igniter photograph
         href: /en/contact/
       - id: brush
         category: Cleaning tools
         title: Cleaning brush
         description: Wooden-handled brush for mold cleaning.
-        image: /src/assets/images/ccelect/accessories/brush/photo-hero.jpg
+        image: /src/assets/images/ccelect/accessories/brush/cutout.png
         imageAlt: Wooden-handled cleaning brush photograph
         href: /en/contact/
       - id: scraper
         category: Cleaning tools
         title: Mold scraper
         description: Scraper for mold cleaning.
-        image: /src/assets/images/ccelect/accessories/clean-shave/photo-hero.jpg
+        image: /src/assets/images/ccelect/accessories/clean-shave/cutout.png
         imageAlt: Black mold scraper photograph
         href: /en/contact/
 ---

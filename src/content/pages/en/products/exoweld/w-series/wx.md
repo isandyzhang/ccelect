@@ -5,14 +5,14 @@ title: WX
 description: WX is a W series wire-to-wire copper exothermic joint for conductor-to-conductor connections.
 pageSections:
   - _component: page-sections/products/product-detail
-    category: Exoweld / W series - wire to wire
+    category: Exoweld / W series
     heading: WX
     summary: WX is a W series wire-to-wire copper exothermic joint for conductor-to-conductor connections.
     description:
       - WX belongs to the W series copper conductor joint family and can be paired with matching molds and welding powder by conductor size.
       - This page is a product-detail template demo. Confirm final specs, mold numbers, and powder amounts with sales.
       - Before welding, clean conductors, dry the mold, follow safety procedures, and complete ignition and cooling per the manual.
-    image: /images/ccelect/products/wx/photo-hero.jpg
+    image: /src/assets/images/ccelect/products/wx/cutout.png
     imageAlt: WX completed copper conductor joint
     imageHint: Completed copper conductor joint
     videoHeading: Welding video
@@ -23,7 +23,7 @@ pageSections:
       text: Contact sales
       href: /en/contact/
     secondaryCta:
-      text: Back to W series - wire to wire
+      text: Back to W series
       href: /en/products/exoweld/w-series/
     features:
       - For copper conductor exothermic joints

@@ -17,7 +17,7 @@ pageSections:
         category: Embedded
         title: Ground Plate
         description: Embedded ground plates. Legacy catalog includes AG201-100, AG401-100, AG401-250.
-        image: /images/ccelect/products/ground-plate/diagram.jpg
+        image: /images/ccelect/products/ground-plate/cutout.png
         imageAlt: Embedded ground plates AG201-100, AG401-100, and AG401-250
         specifications:
           - AG201-100
@@ -28,7 +28,7 @@ pageSections:
         category: Terminals
         title: Terminal plates
         description: KS and KZ terminal plate series for grounding lead-ins.
-        image: /images/ccelect/products/terminal-plate/diagram.jpg
+        image: /images/ccelect/products/terminal-plate/cutout.png
         imageAlt: KS and KZ terminal plates
         specifications:
           - KS series

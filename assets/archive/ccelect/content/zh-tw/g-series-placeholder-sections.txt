@@ -1,0 +1,24 @@
+    videosLabel: 影片
+    videos:
+      - title: DUMMY：熔接示範
+        description: 示意影片，實際教學內容待補。
+        thumbnail: /src/assets/images/ccelect/placeholders/product-2.svg
+        href: "#"
+      - title: DUMMY：接地棒規格確認與施工
+        description: 示意影片，實際教學內容待補。
+        thumbnail: /src/assets/images/ccelect/placeholders/product-5.svg
+        href: "#"
+    projectsLabel: 工程實績
+    projects:
+      - title: DUMMY：電塔接地極安裝
+        description: 應用示意，正式實績資料待補。
+        image: /src/assets/images/ccelect/placeholders/product-2.svg
+        href: /projects/
+      - title: DUMMY：配電桿接地改善
+        description: 現場熔接應用示意，正式實績資料待補。
+        image: /src/assets/images/ccelect/placeholders/product-3.svg
+        href: /projects/
+      - title: DUMMY：廠區接地網擴建
+        description: 接地極銜接應用示意，正式實績資料待補。
+        image: /src/assets/images/ccelect/placeholders/product-4.svg
+        href: /projects/

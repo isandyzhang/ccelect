@@ -1,0 +1,20 @@
+    videosLabel: 動画
+    videos:
+      - title: DUMMY 溶接デモ
+        description: プレースホルダー動画です。
+        thumbnail: /src/assets/images/ccelect/placeholders/product-2.svg
+        href: "#"
+      - title: DUMMY 安全説明
+        description: プレースホルダー動画です。
+        thumbnail: /src/assets/images/ccelect/placeholders/product-5.svg
+        href: "#"
+    projectsLabel: 施工実績
+    projects:
+      - title: DUMMY 電柱接地工事
+        description: プレースホルダー実績です。
+        image: /src/assets/images/ccelect/placeholders/product-2.svg
+        href: /ja/projects/
+      - title: DUMMY 工場接地網拡張
+        description: プレースホルダー実績です。
+        image: /src/assets/images/ccelect/placeholders/product-3.svg
+        href: /ja/projects/

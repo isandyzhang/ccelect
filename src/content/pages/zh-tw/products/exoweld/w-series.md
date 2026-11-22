@@ -1,13 +1,13 @@
 ---
 _schema: default
 permalink: null
-title: W 系列-線對線
-description: Exoweld 線對線熱熔接熔模，適用多種銅導體連接方式與導體組合。
+title: W 系列
+description: Exoweld 熱熔接熔模，適用多種銅導體連接方式與導體組合。
 pageSections:
   - _component: page-sections/products/product-series
     eyebrowText: Exoweld 熱熔接
-    heading: W 系列-線對線
-    summary: Exoweld 石墨熔模設計與建造，適用於多種線對線連接方式與導體組合。
+    heading: W 系列
+    summary: Exoweld 石墨熔模設計與建造，適用於多種連接方式與導體組合。
     images:
       - image: /images/ccelect/products/we/photo-hero.jpg
         imageAlt: WE 熔接完成的銅導體接點
@@ -46,22 +46,22 @@ pageSections:
     countLabel: 共 {count} 個商品
     videosLabel: 影片
     videos:
-      - title: WE 線對線熔接
+      - title: WE 熔接
         description: WE 石墨熔模熔接銅導體的操作示範。
         videoId: ja-FXInWnLU
         href: https://youtu.be/ja-FXInWnLU
         linkText: 在 YouTube 觀看
-      - title: WT 線對線熔接
+      - title: WT 熔接
         description: WT 石墨熔模熔接銅導體的操作示範。
         videoId: QfQ0m-a-DUU
         href: https://youtu.be/QfQ0m-a-DUU
         linkText: 在 YouTube 觀看
-      - title: WX 線對線熔接
+      - title: WX 熔接
         description: WX 石墨熔模熔接銅導體的操作示範。
         videoId: kaAG0uRJg8M
         href: https://youtu.be/kaAG0uRJg8M
         linkText: 在 YouTube 觀看
-      - title: WXL 線對線熔接
+      - title: WXL 熔接
         description: WXL 石墨熔模熔接銅導體的操作示範。
         videoId: 7USyYp7DDqU
         href: https://youtu.be/7USyYp7DDqU
@@ -76,56 +76,56 @@ pageSections:
       href: /products/exoweld/
     items:
       - id: we
-        category: 線對線
+        category: Exoweld ／ W 系列
         title: WE
-        description: WE 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/products/we/diagram.svg
-        imageAlt: WE 線對線直通示意圖
+        description: WE 銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
+        image: /src/assets/images/ccelect/products/we/cutout.png
+        imageAlt: WE 直通示意圖
         specifications:
           - WE
         href: /products/exoweld/w-series/we/
       - id: wt
-        category: 線對線
+        category: Exoweld ／ W 系列
         title: WT
-        description: WT 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/products/wt/diagram.jpg
-        imageAlt: WT 線對線 T 接示意圖
+        description: WT 銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
+        image: /src/assets/images/ccelect/products/wt/cutout.png
+        imageAlt: WT T 接示意圖
         specifications:
           - WT
         href: /products/exoweld/w-series/wt/
       - id: wx
-        category: 線對線
+        category: Exoweld ／ W 系列
         title: WX
-        description: WX 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/products/wx/diagram.svg
-        imageAlt: WX 線對線交叉示意圖
+        description: WX 銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
+        image: /src/assets/images/ccelect/products/wx/cutout.png
+        imageAlt: WX 交叉示意圖
         specifications:
           - WX
         href: /products/exoweld/w-series/wx/
       - id: wp
-        category: 線對線
+        category: Exoweld ／ W 系列
         title: WP
-        description: WP 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/products/wp/diagram.jpg
-        imageAlt: WP 線對線平行示意圖
+        description: WP 銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
+        image: /src/assets/images/ccelect/products/wp/cutout.png
+        imageAlt: WP 平行示意圖
         specifications:
           - WP
         href: /products/exoweld/w-series/wp/
       - id: wl
-        category: 線對線
+        category: Exoweld ／ W 系列
         title: WL
-        description: WL 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/products/wl/diagram.jpg
-        imageAlt: WL 線對線 L 接示意圖
+        description: WL 銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
+        image: /src/assets/images/ccelect/products/wl/cutout.png
+        imageAlt: WL L 接示意圖
         specifications:
           - WL
         href: /products/exoweld/w-series/wl/
       - id: wxl
-        category: 線對線
+        category: Exoweld ／ W 系列
         title: WXL
-        description: WXL 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/products/wxl/diagram.jpg
-        imageAlt: WXL 線對線交叉示意圖
+        description: WXL 銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
+        image: /src/assets/images/ccelect/products/wxl/cutout.png
+        imageAlt: WXL 交叉示意圖
         specifications:
           - WXL
         href: /products/exoweld/w-series/wxl/

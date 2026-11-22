@@ -17,7 +17,7 @@ pageSections:
         category: 埋入組件
         title: Ground Plate
         description: 埋入型接地板，舊型錄包含 AG201-100、AG401-100、AG401-250。
-        image: /images/ccelect/products/ground-plate/diagram.jpg
+        image: /images/ccelect/products/ground-plate/cutout.png
         imageAlt: 埋入型接地板 AG201-100、AG401-100、AG401-250
         specifications:
           - AG201-100
@@ -28,7 +28,7 @@ pageSections:
         category: 端子組件
         title: 接地端子板
         description: KS、KZ 接地端子板系列，供工程接地引接使用。
-        image: /images/ccelect/products/terminal-plate/diagram.jpg
+        image: /images/ccelect/products/terminal-plate/cutout.png
         imageAlt: 接地端子板 KS、KZ
         specifications:
           - KS 系列

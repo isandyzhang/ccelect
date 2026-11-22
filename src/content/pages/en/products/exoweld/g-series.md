@@ -1,26 +1,29 @@
 ---
 _schema: default
 permalink: null
-title: G series - wire to ground rod
+title: G series
 description: Exoweld conductor-to-ground-rod molds for electrode connections.
 pageSections:
   - _component: page-sections/products/product-series
     eyebrowText: Exoweld exothermic
-    heading: G series - wire to ground rod
+    heading: G series
     summary: Exoweld graphite molds are designed for many conductor-to-ground-rod connection styles and combinations.
     images:
-      - image: /src/assets/images/ccelect/placeholders/product-2.svg
-        imageAlt: Wire-to-ground-rod joint placeholder
-        caption: Wire to ground rod
-      - image: /src/assets/images/ccelect/placeholders/product-3.svg
-        imageAlt: Conductor to ground rod
-        caption: Conductor to ground rod (DUMMY)
-      - image: /src/assets/images/ccelect/placeholders/product-4.svg
-        imageAlt: Vertical electrode tap
-        caption: Vertical electrode tap (DUMMY)
-      - image: /src/assets/images/ccelect/placeholders/product-5.svg
-        imageAlt: Grid interface
-        caption: Grid interface (DUMMY)
+      - image: /images/ccelect/products/gee/cutout.png
+        imageAlt: GEE (AI product illustration)
+        caption: GEE (AI product illustration)
+      - image: /images/ccelect/products/get/cutout.png
+        imageAlt: GET (AI product illustration)
+        caption: GET (AI product illustration)
+      - image: /images/ccelect/products/gst/cutout.png
+        imageAlt: GST (AI product illustration)
+        caption: GST (AI product illustration)
+      - image: /images/ccelect/products/gey/cutout.png
+        imageAlt: GEY (AI product illustration)
+        caption: GEY (AI product illustration)
+      - image: /images/ccelect/products/gep/cutout.png
+        imageAlt: GEP (AI product illustration)
+        caption: GEP (AI product illustration)
     featuresHeading: Features
     detailsLabel: Details
     features:
@@ -32,34 +35,23 @@ pageSections:
       - Weld quality can be visually inspected
     productsHeading: Product list
     countLabel: "{count} products"
-    applicationsLabel: Application images
+    applicationsLabel: Connection illustrations
     applicationImages:
-      - image: /src/assets/images/ccelect/placeholders/product-3.svg
-        caption: DUMMY application
-      - image: /src/assets/images/ccelect/placeholders/product-4.svg
-        caption: DUMMY application
-      - image: /src/assets/images/ccelect/placeholders/product-5.svg
-        caption: DUMMY application
-    videosLabel: Videos
-    videos:
-      - title: DUMMY welding demo
-        description: Placeholder video content.
-        thumbnail: /src/assets/images/ccelect/placeholders/product-2.svg
-        href: "#"
-      - title: DUMMY safety briefing
-        description: Placeholder video content.
-        thumbnail: /src/assets/images/ccelect/placeholders/product-5.svg
-        href: "#"
-    projectsLabel: Project cases
-    projects:
-      - title: DUMMY tower grounding
-        description: Placeholder project case.
-        image: /src/assets/images/ccelect/placeholders/product-2.svg
-        href: /en/projects/
-      - title: DUMMY pole upgrade
-        description: Placeholder project case.
-        image: /src/assets/images/ccelect/placeholders/product-3.svg
-        href: /en/projects/
+      - image: /images/ccelect/products/gee/diagram.jpg
+        imageAlt: GEE
+        caption: GEE
+      - image: /images/ccelect/products/get/diagram.jpg
+        imageAlt: GET
+        caption: GET
+      - image: /images/ccelect/products/gst/diagram.jpg
+        imageAlt: GST
+        caption: GST
+      - image: /images/ccelect/products/gey/diagram.jpg
+        imageAlt: GEY
+        caption: GEY
+      - image: /images/ccelect/products/gep/diagram.jpg
+        imageAlt: GEP
+        caption: GEP
     helpHeading: Need technical support or a quote? We're here to help.
     helpText: Share conductor size, ground rod specs, joint form, and quantity.
     primaryCta:
@@ -70,47 +62,47 @@ pageSections:
       href: /en/products/exoweld/
     items:
       - id: gee
-        category: Wire to ground rod
+        category: Exoweld / G series
         title: GEE
-        description: GEE wire-to-ground-rod joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/placeholders/product-1.svg
-        imageAlt: GEE
+        description: GEE wire-to-ground-rod joint model. Confirm mold and conductor specs with sales.
+        image: /images/ccelect/products/gee/cutout.png
+        imageAlt: GEE (AI product illustration)
         specifications:
           - GEE
         href: /en/contact/
       - id: get
-        category: Wire to ground rod
+        category: Exoweld / G series
         title: GET
-        description: GET wire-to-ground-rod joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/placeholders/product-2.svg
-        imageAlt: GET
+        description: GET wire-to-ground-rod joint model. Confirm mold and conductor specs with sales.
+        image: /images/ccelect/products/get/cutout.png
+        imageAlt: GET (AI product illustration)
         specifications:
           - GET
         href: /en/contact/
       - id: gst
-        category: Wire to ground rod
+        category: Exoweld / G series
         title: GST
-        description: GST wire-to-ground-rod joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/placeholders/product-3.svg
-        imageAlt: GST
+        description: GST wire-to-ground-rod joint model. Confirm mold and conductor specs with sales.
+        image: /images/ccelect/products/gst/cutout.png
+        imageAlt: GST (AI product illustration)
         specifications:
           - GST
         href: /en/contact/
       - id: gey
-        category: Wire to ground rod
+        category: Exoweld / G series
         title: GEY
-        description: GEY wire-to-ground-rod joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/placeholders/product-4.svg
-        imageAlt: GEY
+        description: GEY wire-to-ground-rod joint model. Confirm mold and conductor specs with sales.
+        image: /images/ccelect/products/gey/cutout.png
+        imageAlt: GEY (AI product illustration)
         specifications:
           - GEY
         href: /en/contact/
       - id: gep
-        category: Wire to ground rod
+        category: Exoweld / G series
         title: GEP
-        description: GEP wire-to-ground-rod joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/placeholders/product-5.svg
-        imageAlt: GEP
+        description: GEP wire-to-ground-rod joint model. Confirm mold and conductor specs with sales.
+        image: /images/ccelect/products/gep/cutout.png
+        imageAlt: GEP (AI product illustration)
         specifications:
           - GEP
         href: /en/contact/

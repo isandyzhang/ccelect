@@ -5,21 +5,21 @@ title: WL
 description: WL is a W series wire-to-wire copper exothermic joint for conductor-to-conductor connections.
 pageSections:
   - _component: page-sections/products/product-detail
-    category: Exoweld / W series - wire to wire
+    category: Exoweld / W series
     heading: WL
     summary: WL is a W series wire-to-wire copper exothermic joint for conductor-to-conductor connections.
     description:
       - WL belongs to the W series copper conductor joint family and can be paired with matching molds and welding powder by conductor size.
       - This page is a product-detail template demo. Confirm final specs, mold numbers, and powder amounts with sales.
       - Before welding, clean conductors, dry the mold, follow safety procedures, and complete ignition and cooling per the manual.
-    image: /src/assets/images/ccelect/placeholders/product-5.svg
-    imageAlt: WL Product placeholder
+    image: /src/assets/images/ccelect/products/wl/cutout.png
+    imageAlt: WL (AI product illustration)
     imageHint: Click image to enlarge (Demo)
     primaryCta:
       text: Contact sales
       href: /en/contact/
     secondaryCta:
-      text: Back to W series - wire to wire
+      text: Back to W series
       href: /en/products/exoweld/w-series/
     features:
       - For copper conductor exothermic joints

@@ -1,12 +1,12 @@
 ---
 _schema: default
 permalink: null
-title: W series - wire to wire
+title: W series
 description: Exoweld wire-to-wire exothermic molds for multiple copper conductor joint forms.
 pageSections:
   - _component: page-sections/products/product-series
     eyebrowText: Exoweld exothermic
-    heading: W series - wire to wire
+    heading: W series
     summary: Exoweld graphite molds are designed for many wire-to-wire connection styles and conductor combinations.
     images:
       - image: /images/ccelect/products/we/photo-hero.jpg
@@ -76,55 +76,55 @@ pageSections:
       href: /en/products/exoweld/
     items:
       - id: we
-        category: Wire to wire
+        category: Exoweld / W series
         title: WE
         description: WE wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/products/we/diagram.svg
+        image: /src/assets/images/ccelect/products/we/cutout.png
         imageAlt: WE straight wire-to-wire diagram
         specifications:
           - WE
         href: /en/products/exoweld/w-series/we/
       - id: wt
-        category: Wire to wire
+        category: Exoweld / W series
         title: WT
         description: WT wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/products/wt/diagram.jpg
+        image: /src/assets/images/ccelect/products/wt/cutout.png
         imageAlt: WT wire-to-wire tee diagram
         specifications:
           - WT
         href: /en/products/exoweld/w-series/wt/
       - id: wx
-        category: Wire to wire
+        category: Exoweld / W series
         title: WX
         description: WX wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/products/wx/diagram.svg
+        image: /src/assets/images/ccelect/products/wx/cutout.png
         imageAlt: WX wire-to-wire cross diagram
         specifications:
           - WX
         href: /en/products/exoweld/w-series/wx/
       - id: wp
-        category: Wire to wire
+        category: Exoweld / W series
         title: WP
         description: WP wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/products/wp/diagram.jpg
+        image: /src/assets/images/ccelect/products/wp/cutout.png
         imageAlt: WP parallel wire-to-wire diagram
         specifications:
           - WP
         href: /en/products/exoweld/w-series/wp/
       - id: wl
-        category: Wire to wire
+        category: Exoweld / W series
         title: WL
         description: WL wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/products/wl/diagram.jpg
+        image: /src/assets/images/ccelect/products/wl/cutout.png
         imageAlt: WL wire-to-wire L diagram
         specifications:
           - WL
         href: /en/products/exoweld/w-series/wl/
       - id: wxl
-        category: Wire to wire
+        category: Exoweld / W series
         title: WXL
         description: WXL wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/products/wxl/diagram.jpg
+        image: /src/assets/images/ccelect/products/wxl/cutout.png
         imageAlt: WXL wire-to-wire cross diagram
         specifications:
           - WXL

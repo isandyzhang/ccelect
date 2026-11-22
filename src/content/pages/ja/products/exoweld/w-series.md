@@ -1,13 +1,13 @@
 ---
 _schema: default
 permalink: null
-title: W シリーズ-線対線
-description: Exoweld 線対線熱熔接溶模。複数の銅導体接続形式に対応。
+title: W シリーズ
+description: Exoweld 熱熔接溶模。複数の銅導体接続形式に対応。
 pageSections:
   - _component: page-sections/products/product-series
     eyebrowText: Exoweld 熱熔接
-    heading: W シリーズ-線対線
-    summary: Exoweld グラファイト溶模は、さまざまな線対線接続形式と導体組合せ向けに設計されています。
+    heading: W シリーズ
+    summary: Exoweld グラファイト溶模は、さまざまな接続形式と導体組合せ向けに設計されています。
     images:
       - image: /images/ccelect/products/we/photo-hero.jpg
         imageAlt: WE 熔接完了後の銅導体接点
@@ -46,22 +46,22 @@ pageSections:
     countLabel: 全 {count} 製品
     videosLabel: 動画
     videos:
-      - title: WE 線対線熔接
+      - title: WE 熔接
         description: WE グラファイト溶模で銅導体を熔接する作業動画です。
         videoId: ja-FXInWnLU
         href: https://youtu.be/ja-FXInWnLU
         linkText: YouTube で見る
-      - title: WT 線対線熔接
+      - title: WT 熔接
         description: WT グラファイト溶模で銅導体を熔接する作業動画です。
         videoId: QfQ0m-a-DUU
         href: https://youtu.be/QfQ0m-a-DUU
         linkText: YouTube で見る
-      - title: WX 線対線熔接
+      - title: WX 熔接
         description: WX グラファイト溶模で銅導体を熔接する作業動画です。
         videoId: kaAG0uRJg8M
         href: https://youtu.be/kaAG0uRJg8M
         linkText: YouTube で見る
-      - title: WXL 線対線熔接
+      - title: WXL 熔接
         description: WXL グラファイト溶模で銅導体を熔接する作業動画です。
         videoId: 7USyYp7DDqU
         href: https://youtu.be/7USyYp7DDqU
@@ -76,56 +76,56 @@ pageSections:
       href: /ja/products/exoweld/
     items:
       - id: we
-        category: 線対線
+        category: Exoweld ／ W シリーズ
         title: WE
-        description: WE 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/products/we/diagram.svg
-        imageAlt: WE 線対線ストレート図
+        description: WE 銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
+        image: /src/assets/images/ccelect/products/we/cutout.png
+        imageAlt: WE ストレート図
         specifications:
           - WE
         href: /ja/products/exoweld/w-series/we/
       - id: wt
-        category: 線対線
+        category: Exoweld ／ W シリーズ
         title: WT
-        description: WT 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/products/wt/diagram.jpg
-        imageAlt: WT 線対線 T 接続図
+        description: WT 銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
+        image: /src/assets/images/ccelect/products/wt/cutout.png
+        imageAlt: WT T 接続図
         specifications:
           - WT
         href: /ja/products/exoweld/w-series/wt/
       - id: wx
-        category: 線対線
+        category: Exoweld ／ W シリーズ
         title: WX
-        description: WX 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/products/wx/diagram.svg
-        imageAlt: WX 線対線クロス図
+        description: WX 銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
+        image: /src/assets/images/ccelect/products/wx/cutout.png
+        imageAlt: WX クロス図
         specifications:
           - WX
         href: /ja/products/exoweld/w-series/wx/
       - id: wp
-        category: 線対線
+        category: Exoweld ／ W シリーズ
         title: WP
-        description: WP 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/products/wp/diagram.jpg
-        imageAlt: WP 線対線平行図
+        description: WP 銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
+        image: /src/assets/images/ccelect/products/wp/cutout.png
+        imageAlt: WP 平行図
         specifications:
           - WP
         href: /ja/products/exoweld/w-series/wp/
       - id: wl
-        category: 線対線
+        category: Exoweld ／ W シリーズ
         title: WL
-        description: WL 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/products/wl/diagram.jpg
-        imageAlt: WL 線対線 L 接続図
+        description: WL 銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
+        image: /src/assets/images/ccelect/products/wl/cutout.png
+        imageAlt: WL L 接続図
         specifications:
           - WL
         href: /ja/products/exoweld/w-series/wl/
       - id: wxl
-        category: 線対線
+        category: Exoweld ／ W シリーズ
         title: WXL
-        description: WXL 線対線銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/products/wxl/diagram.jpg
-        imageAlt: WXL 線対線クロス図
+        description: WXL 銅導体接点型番（Demo）。溶模と導体仕様は営業へご確認ください。
+        image: /src/assets/images/ccelect/products/wxl/cutout.png
+        imageAlt: WXL クロス図
         specifications:
           - WXL
         href: /ja/products/exoweld/w-series/wxl/

@@ -17,7 +17,7 @@ pageSections:
         category: Electrodes
         title: Ground rods
         description: Ionic and copper-clad steel rods for different soil and resistance targets.
-        image: /images/ccelect/products/iea/photo-hero.jpg
+        image: /images/ccelect/products/iea/cutout.png
         imageAlt: Ionic ground rod
         specifications:
           - IEA ionic
@@ -28,7 +28,7 @@ pageSections:
         category: Conductors
         title: Copper busbars
         description: High-conductivity busbars for grounding buses and equipotential bonding.
-        image: /images/ccelect/products/copper-busbar/photo-hero.jpg
+        image: /images/ccelect/products/copper-busbar/cutout.png
         imageAlt: Copper busbar
         specifications:
           - C1020BB
@@ -38,7 +38,7 @@ pageSections:
         category: Connectors
         title: C-type connectors
         description: Compression connectors for copper conductor taps and splices.
-        image: /images/ccelect/products/c-connector/photo-hero.jpg
+        image: /images/ccelect/products/c-connector/cutout.png
         imageAlt: C-type compression connector
         specifications:
           - C-type
@@ -48,7 +48,7 @@ pageSections:
         category: Clamps
         title: Cable clamps
         description: Clamps for positioning grounding conductors on walls and structures.
-        image: /images/ccelect/products/gbs/photo-hero.jpg
+        image: /images/ccelect/products/gbs/cutout.png
         imageAlt: GBS grounding clamp
         specifications:
           - GBS series
@@ -58,7 +58,7 @@ pageSections:
         category: Accessories
         title: Other materials
         description: Waterproofing and soil-improvement materials for grounding works.
-        image: /images/ccelect/products/sealing-plate/photo-hero.jpg
+        image: /images/ccelect/products/sealing-plate/cutout.png
         imageAlt: Sealing plate
         specifications:
           - Waterproof boards

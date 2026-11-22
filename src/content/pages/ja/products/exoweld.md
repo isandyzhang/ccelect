@@ -15,23 +15,23 @@ pageSections:
     items:
       - id: series-w
         category: Exoweld
-        title: W シリーズ-線対線
+        title: W シリーズ
         description: 銅導体どうしの接点：WE、WT、WX、WP、WL、WXL。
-        image: /images/ccelect/products/we/diagram.svg
-        imageAlt: WE 線対線ストレート図
+        image: /src/assets/images/ccelect/products/we/cutout.png
+        imageAlt: WE ストレート図
         images:
           - image: /images/ccelect/products/we/diagram.svg
-            imageAlt: WE 線対線ストレート図
+            imageAlt: WE ストレート図
           - image: /images/ccelect/products/wt/diagram.jpg
-            imageAlt: WT 線対線 T 字図
+            imageAlt: WT T 字図
           - image: /images/ccelect/products/wx/diagram.svg
-            imageAlt: WX 線対線クロス図
+            imageAlt: WX クロス図
           - image: /images/ccelect/products/wp/diagram.jpg
-            imageAlt: WP 線対線平行図
+            imageAlt: WP 平行図
           - image: /images/ccelect/products/wl/diagram.jpg
-            imageAlt: WL 線対線 L 字図
+            imageAlt: WL L 字図
           - image: /images/ccelect/products/wxl/diagram.jpg
-            imageAlt: WXL 線対線クロス図
+            imageAlt: WXL クロス図
         specifications:
           - WE
           - WT
@@ -42,21 +42,21 @@ pageSections:
         href: /ja/products/exoweld/w-series/
       - id: series-g
         category: Exoweld
-        title: G シリーズ-線対接地棒
+        title: G シリーズ
         description: 導体と接地棒の接点：GEE、GET、GST、GEY、GEP。
-        image: /images/ccelect/products/gee/diagram.jpg
-        imageAlt: GEE 線対接地棒図
+        image: /images/ccelect/products/gee/cutout.png
+        imageAlt: GEE 図
         images:
           - image: /images/ccelect/products/gee/diagram.jpg
-            imageAlt: GEE 線対接地棒図
+            imageAlt: GEE 図
           - image: /images/ccelect/products/get/diagram.jpg
-            imageAlt: GET 線対接地棒図
+            imageAlt: GET 図
           - image: /images/ccelect/products/gst/diagram.jpg
-            imageAlt: GST 線対接地棒図
+            imageAlt: GST 図
           - image: /images/ccelect/products/gey/diagram.jpg
-            imageAlt: GEY 線対接地棒図
+            imageAlt: GEY 図
           - image: /images/ccelect/products/gep/diagram.jpg
-            imageAlt: GEP 線対接地棒図
+            imageAlt: GEP 図
         specifications:
           - GEE
           - GET
@@ -68,7 +68,7 @@ pageSections:
         category: Exoweld
         title: S シリーズ
         description: SHEA、SHEB、SVES など特殊接点形式。
-        image: /images/ccelect/products/shea/diagram.jpg
+        image: /images/ccelect/products/shea/cutout.png
         imageAlt: SHEA 鋼板対線図
         images:
           - image: /images/ccelect/products/shea/diagram.jpg
@@ -86,7 +86,7 @@ pageSections:
         category: Exoweld
         title: R シリーズ
         description: RHEH、RHXH シリーズ接点形式。
-        image: /images/ccelect/products/rheh/diagram.jpg
+        image: /images/ccelect/products/rheh/cutout.png
         imageAlt: RHEH 鉄筋対線図
         images:
           - image: /images/ccelect/products/rheh/diagram.jpg
