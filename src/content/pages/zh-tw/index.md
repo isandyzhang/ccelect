@@ -13,7 +13,7 @@ keywords:
 pageSections:
   - _component: page-sections/heroes/hero-image-banner
     id: homepage-banner
-    imageSource: /images/ccelect/banner-ignition.jpg
+    imageSource: /images/ccelect/home/ignition-poster.jpg
     imageAlt: 接地鋁熱熔接與接地／避雷解決方案
     videoIntroSource: /videos/ccelect/hero-ignition-intro.mp4
     videoSource: /videos/ccelect/hero-loop.mp4
@@ -35,7 +35,7 @@ pageSections:
           link: /products/exoweld/
           columnSpan: 12
           image:
-            source: /images/ccelect/prd-display-enhanced.png
+            source: /src/assets/images/ccelect/home/product-display.webp
             alt: Exoweld 火泥熔模、熔接成品與銅導體接點
             rounded: false
       gridMaxWidth: none
@@ -59,7 +59,7 @@ pageSections:
           link: /projects/
           columnSpan: 4
           image:
-            source: /images/ccelect/project-hsr-retouched.webp
+            source: /src/assets/images/ccelect/projects/hsr.webp
             alt: 台灣高鐵接地與避雷工程現場紀錄
         - _component: page-sections/features/feature-grid/feature-item
           title: 捷運與機場捷運工程
@@ -67,14 +67,14 @@ pageSections:
           columnSpan: 4
           hoverVideo: /videos/ccelect/project-metro-spark.mp4
           image:
-            source: /images/ccelect/project-metro-retouched.webp
+            source: /src/assets/images/ccelect/projects/metro.webp
             alt: 捷運軌道接地工程現場紀錄
         - _component: page-sections/features/feature-grid/feature-item
           title: 台電工程
           link: /projects/
           columnSpan: 4
           image:
-            source: /images/ccelect/project-taipower-retouched.webp
+            source: /src/assets/images/ccelect/projects/taipower.webp
             alt: 台電工程接地與避雷現場紀錄
         - _component: page-sections/features/feature-grid/feature-item
           title: 積體電路及光電廠
@@ -82,7 +82,7 @@ pageSections:
           columnSpan: 4
           hoverVideo: /videos/ccelect/project-fab-clouds.mp4
           image:
-            source: /images/ccelect/project-fab.jpg
+            source: /src/assets/images/ccelect/projects/fab.webp
             alt: 積體電路與光電廠廠房外觀
         - _component: page-sections/features/feature-grid/feature-item
           title: 資源回收廠
@@ -90,7 +90,7 @@ pageSections:
           columnSpan: 8
           hoverVideo: /videos/ccelect/project-incinerator-clouds.mp4
           image:
-            source: /images/ccelect/project-incinerator.jpg
+            source: /src/assets/images/ccelect/projects/incinerator.webp
             alt: 資源回收廠焚化爐外觀
       gridMaxWidth: none
     maxContentWidth: 2xl

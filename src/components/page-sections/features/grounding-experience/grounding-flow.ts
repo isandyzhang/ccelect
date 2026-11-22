@@ -332,29 +332,40 @@ class GroundingFlow extends HTMLElement {
       measure();
     };
 
-    if (!structuresReady) {
-      const ready = () => {
-        if (signal.aborted || structuresReady) return;
-        structuresReady = true;
-        measure();
-      };
+    let mediaArmed = false;
 
-      structuresImage.decode().then(ready).catch(ready);
-    }
+    /** Defer decode until near viewport so loading="lazy" is not defeated on page load. */
+    const armMedia = () => {
+      if (mediaArmed || signal.aborted) return;
+      mediaArmed = true;
 
-    if (copperImage.complete && copperImage.naturalWidth) initialize();
-    else {
-      copperImage
-        .decode()
-        .then(() => {
-          if (!signal.aborted) initialize();
-        })
-        .catch(() => {});
-    }
+      if (!structuresReady) {
+        const ready = () => {
+          if (signal.aborted || structuresReady) return;
+          structuresReady = true;
+          measure();
+        };
+
+        structuresImage.decode().then(ready).catch(ready);
+      }
+
+      if (copperImage.complete && copperImage.naturalWidth) initialize();
+      else {
+        copperImage
+          .decode()
+          .then(() => {
+            if (!signal.aborted) initialize();
+          })
+          .catch(() => {});
+      }
+    };
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         visible = entry.isIntersecting;
+        if (visible || entry.intersectionRatio > 0 || entry.boundingClientRect.top < window.innerHeight * 2) {
+          armMedia();
+        }
         if (visible) measure();
         else sync();
       },

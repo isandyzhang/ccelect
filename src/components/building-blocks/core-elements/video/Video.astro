@@ -159,13 +159,37 @@ const backgroundInitialSources = backgroundHasIntro ? introVideoSources : localV
 
   let cleanup: (() => void) | undefined;
 
+  type NetworkInformationLike = {
+    saveData?: boolean;
+    effectiveType?: string;
+    downlink?: number;
+  };
+
+  /** Skip autoplay background video on save-data, reduced motion, or slow links. */
+  function shouldSkipBackgroundVideo(): boolean {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return true;
+
+    const connection = (navigator as Navigator & { connection?: NetworkInformationLike })
+      .connection;
+    if (!connection) return false;
+    if (connection.saveData) return true;
+
+    const type = connection.effectiveType;
+    if (type === "slow-2g" || type === "2g" || type === "3g") return true;
+
+    if (typeof connection.downlink === "number" && connection.downlink > 0 && connection.downlink < 1.5) {
+      return true;
+    }
+
+    return false;
+  }
+
   function initBackgroundVideos() {
     cleanup?.();
     const events = new AbortController();
     const { signal } = events;
     const releases: (() => void)[] = [];
-    const connection = (navigator as Navigator & { connection?: { saveData?: boolean } })
-      .connection;
+    const skipVideo = shouldSkipBackgroundVideo();
 
     document.querySelectorAll<HTMLVideoElement>(".video.background video").forEach((video) => {
       let visible = false;
@@ -181,19 +205,20 @@ const backgroundInitialSources = backgroundHasIntro ? introVideoSources : localV
           !video.isConnected ||
           !visible ||
           document.hidden ||
-          connection?.saveData
+          skipVideo
         ) {
           pause();
           return;
         }
         if (!video.paused) return;
         if (video.dataset.bgVideoLoaded !== "true") {
+          // Load only the active phase (intro first; loop after intro ends).
+          const activeSrc =
+            (!loop && video.dataset.bgIntroSrc) ||
+            video.dataset.bgLoopSrc ||
+            undefined;
           video.querySelectorAll<HTMLSourceElement>("source").forEach((source) => {
-            source.src =
-              (!loop && video.dataset.bgIntroSrc) ||
-              video.dataset.bgLoopSrc ||
-              source.dataset.src ||
-              source.src;
+            source.src = activeSrc || source.dataset.src || source.src;
           });
           video.dataset.bgVideoLoaded = "true";
           video.load();
@@ -205,11 +230,11 @@ const backgroundInitialSources = backgroundHasIntro ? introVideoSources : localV
         void video
           .play()
           .then(() => {
-            if (signal.aborted || !visible || document.hidden) pause();
+            if (signal.aborted || !visible || document.hidden || skipVideo) pause();
             else video.setAttribute("data-bg-video-playing", "true");
           })
           .catch(() => {
-            if (retryBound || signal.aborted) return;
+            if (retryBound || signal.aborted || skipVideo) return;
             retryBound = true;
             window.addEventListener(
               "pointerdown",
@@ -224,13 +249,19 @@ const backgroundInitialSources = backgroundHasIntro ? introVideoSources : localV
       video.addEventListener(
         "ended",
         () => {
-          if (!video.dataset.bgLoopSrc) return;
+          if (!video.dataset.bgLoopSrc || skipVideo) return;
+          // Intro finished — fetch loop only now, not during intro download.
           loop = true;
           video.dataset.bgVideoLoaded = "false";
           play();
         },
         { signal }
       );
+
+      if (skipVideo) {
+        video.dataset.bgVideoSkipped = "true";
+        return;
+      }
       document.addEventListener("visibilitychange", play, { signal });
       const observer = new IntersectionObserver(
         ([entry]) => {

@@ -53,6 +53,8 @@ const isShowcase = Boolean(image?.source) && !hasCopy;
       {isShowcase && image.alt && <span class="visually-hidden">{image.alt}</span>}
       <Image
         {...image}
+        sizes={isShowcase ? "(max-width: 48rem) 100vw, 40vw" : "(max-width: 48rem) 100vw, 28rem"}
+        widths={isShowcase ? [480, 768, 1280] : [480, 768, 1024]}
         data-prop-src="image.source"
         data-prop-alt="image.alt"
       />
