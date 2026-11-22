@@ -18,7 +18,7 @@ function catalogItems(codes, category, descFn, hrefFn, startImg = 1) {
     .map((code, i) => {
       const img = ((startImg - 1 + i) % 5) + 1;
 
-      return `      - id: ${code.toLowerCase()}
+      return ` - id: ${code.toLowerCase()}
         category: ${category}
         title: ${code}
         description: ${descFn(code)}
@@ -39,59 +39,59 @@ const locales = {
     helpText: "提供導體材質、線徑、接點形式、需求數量及施工環境，我們會協助確認產品與報價。",
     helpLinkText: "聯絡工程業務",
     w: {
-      title: "W 系列-線對線",
-      desc: "銅導體線對線熱熔接接點：WE、WT、WX、WP、WL、WXL。",
+      title: "W 系列",
+      desc: "銅導體熱熔接接點：WE、WT、WX、WP、WL、WXL。",
       eyebrow: "Exoweld ／ W 系列",
-      heading: "W 系列-線對線",
+      heading: "W 系列",
       subtext: "適用銅導體與銅導體之間的熱熔接接點配置。先了解系列用途，再選擇對應型號。",
-      overviewTitle: "什麼是線對線接點？",
+      overviewTitle: "什麼是接點？",
       overview: [
         "W 系列專用於銅導體與銅導體之間的熱熔接連接，常見於接地網導體接續、等電位連結與銅線延長。",
         "依舊型錄命名，涵蓋 WE、WT、WX、WP、WL、WXL 等接點形式；實際熔模、熔接劑與線徑規格請洽業務確認。",
         "選型時請提供導體材質、線徑、接點角度／形式與施工環境，以確保模具與焊接劑匹配。",
       ],
       overviewFeatures: [
-        "銅導體對銅導體（線對線）熱熔接",
+        "銅導體對銅導體熱熔接",
         "涵蓋直通、T 接、交叉等常見接點形式",
         "適用接地網、等電位與銅線接續工程",
         "正式規格與模具編號請以業務確認為準",
       ],
       productsHeading: "W 系列商品",
       countLabel: "共 {count} 個商品",
-      category: "Exoweld ／ W 系列-線對線",
-      modelDesc: (c) => `${c} 為 W 系列線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。`,
+      category: "Exoweld ／ W 系列",
+      modelDesc: (c) => `${c} 為 W 系列銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。`,
       href: (c) => `/products/exoweld/w-series/${c.toLowerCase()}/`,
-      indexTitle: "W 系列-線對線",
-      indexDesc: "銅導體線對線接點：WE、WT、WX、WP、WL、WXL。",
-      detailCategory: "Exoweld ／ W 系列-線對線",
-      backToSeries: "返回 W 系列-線對線",
-      detailSummary: (c) => `${c} 屬 W 系列線對線銅導體熱熔接接點，適用導體對導體之熔接配置。`,
+      indexTitle: "W 系列",
+      indexDesc: "銅導體接點：WE、WT、WX、WP、WL、WXL。",
+      detailCategory: "Exoweld ／ W 系列",
+      backToSeries: "返回 W 系列",
+      detailSummary: (c) => `${c} 屬 W 系列銅導體熱熔接接點，適用導體對導體之熔接配置。`,
     },
     g: {
-      title: "G 系列-線對接地棒",
-      desc: "導體對接地棒熱熔接接點：GEE、GET、GST、GEY、GEP。",
+      title: "G 系列",
+      desc: "導體熱熔接接點：GEE、GET、GST、GEY、GEP。",
       eyebrow: "Exoweld ／ G 系列",
-      heading: "G 系列-線對接地棒",
+      heading: "G 系列",
       subtext: "適用銅導體與接地棒（接地極）之間的熱熔接接點配置。先了解系列用途，再選擇對應型號。",
-      overviewTitle: "什麼是線對接地棒接點？",
+      overviewTitle: "什麼是接點？",
       overview: [
         "G 系列專用於導體與接地棒／接地極之間的熱熔接連接，常見於垂直接地極引出與接地網銜接。",
         "依舊型錄命名，涵蓋 GEE、GET、GST、GEY、GEP 等接點形式；實際熔模、熔接劑與接地棒規格請洽業務確認。",
         "選型時請提供導體線徑、接地棒直徑／材質、接點形式與施工環境。",
       ],
       overviewFeatures: [
-        "銅導體對接地棒（線對接地極）熱熔接",
+        "銅導體（線對接地極）熱熔接",
         "適用垂直接地極引出與接地網銜接",
         "涵蓋多種導體與接地棒組合形式",
         "正式規格與模具編號請以業務確認為準",
       ],
       productsHeading: "G 系列商品",
       countLabel: "共 {count} 個商品",
-      category: "Exoweld ／ G 系列-線對接地棒",
-      modelDesc: (c) => `${c} 為 G 系列線對接地棒接點型號（Demo）。實際熔模與導體規格請洽業務。`,
+      category: "Exoweld ／ G 系列",
+      modelDesc: (c) => `${c} 為 G 系列接點型號（Demo）。實際熔模與導體規格請洽業務。`,
       href: () => "/contact/",
-      indexTitle: "G 系列-線對接地棒",
-      indexDesc: "導體對接地棒接點：GEE、GET、GST、GEY、GEP。",
+      indexTitle: "G 系列",
+      indexDesc: "導體接點：GEE、GET、GST、GEY、GEP。",
     },
   },
   en: {
@@ -101,10 +101,10 @@ const locales = {
     helpText: "Share conductor material, size, joint type, quantity, and site conditions. We will help confirm the right product.",
     helpLinkText: "Contact sales",
     w: {
-      title: "W series - wire to wire",
+      title: "W series",
       desc: "Copper conductor-to-conductor joints: WE, WT, WX, WP, WL, WXL.",
       eyebrow: "Exoweld / W series",
-      heading: "W series - wire to wire",
+      heading: "W series",
       subtext: "For exothermic joints between copper conductors. Read the series overview, then choose a model.",
       overviewTitle: "What is a wire-to-wire joint?",
       overview: [
@@ -120,20 +120,20 @@ const locales = {
       ],
       productsHeading: "W series products",
       countLabel: "{count} products",
-      category: "Exoweld / W series - wire to wire",
+      category: "Exoweld / W series",
       modelDesc: (c) => `${c} is a W series wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.`,
       href: (c) => `/en/products/exoweld/w-series/${c.toLowerCase()}/`,
-      indexTitle: "W series - wire to wire",
+      indexTitle: "W series",
       indexDesc: "Copper conductor-to-conductor joints: WE, WT, WX, WP, WL, WXL.",
-      detailCategory: "Exoweld / W series - wire to wire",
-      backToSeries: "Back to W series - wire to wire",
+      detailCategory: "Exoweld / W series",
+      backToSeries: "Back to W series",
       detailSummary: (c) => `${c} is a W series wire-to-wire copper exothermic joint for conductor-to-conductor connections.`,
     },
     g: {
-      title: "G series - wire to ground rod",
+      title: "G series",
       desc: "Conductor-to-ground-rod joints: GEE, GET, GST, GEY, GEP.",
       eyebrow: "Exoweld / G series",
-      heading: "G series - wire to ground rod",
+      heading: "G series",
       subtext: "For exothermic joints between conductors and ground rods. Read the series overview, then choose a model.",
       overviewTitle: "What is a wire-to-ground-rod joint?",
       overview: [
@@ -149,10 +149,10 @@ const locales = {
       ],
       productsHeading: "G series products",
       countLabel: "{count} products",
-      category: "Exoweld / G series - wire to ground rod",
+      category: "Exoweld / G series",
       modelDesc: (c) => `${c} is a G series wire-to-ground-rod joint model (Demo). Confirm mold and conductor specs with sales.`,
       href: () => "/en/contact/",
-      indexTitle: "G series - wire to ground rod",
+      indexTitle: "G series",
       indexDesc: "Conductor-to-ground-rod joints: GEE, GET, GST, GEY, GEP.",
     },
   },
@@ -163,41 +163,41 @@ const locales = {
     helpText: "導体材質、線径、接点形式、数量、施工環境をお知らせください。製品選定をお手伝いします。",
     helpLinkText: "営業へ連絡",
     w: {
-      title: "W シリーズ-線対線",
+      title: "W シリーズ",
       desc: "銅導体どうしの熱熔接接点：WE、WT、WX、WP、WL、WXL。",
       eyebrow: "Exoweld ／ W シリーズ",
-      heading: "W シリーズ-線対線",
+      heading: "W シリーズ",
       subtext: "銅導体どうしの熱熔接接点向けです。シリーズ用途を確認してから型番を選択してください。",
-      overviewTitle: "線対線接点とは？",
+      overviewTitle: "接点とは？",
       overview: [
         "W シリーズは銅導体どうしの熱熔接接続向けで、接地網の導体接続、等電位ボンディング、銅線延長などに用いられます。",
         "旧カタログ名称として WE、WT、WX、WP、WL、WXL があります。溶模・溶接剤・線径は営業へご確認ください。",
         "選定時は導体材質・線径・接点形状・施工環境をお知らせください。",
       ],
       overviewFeatures: [
-        "銅導体どうし（線対線）の熱熔接",
+        "銅導体どうしの熱熔接",
         "直通・T 継手・交差など一般的な接点形式に対応",
         "接地網・等電位・銅線接続工事向け",
         "正式仕様と溶模番号は営業確認に従ってください",
       ],
       productsHeading: "W シリーズ製品",
       countLabel: "全 {count} 製品",
-      category: "Exoweld ／ W シリーズ-線対線",
-      modelDesc: (c) => `${c} は W シリーズ線対線の銅導体接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。`,
+      category: "Exoweld ／ W シリーズ",
+      modelDesc: (c) => `${c} は W シリーズの銅導体接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。`,
       href: (c) => `/ja/products/exoweld/w-series/${c.toLowerCase()}/`,
-      indexTitle: "W シリーズ-線対線",
+      indexTitle: "W シリーズ",
       indexDesc: "銅導体どうしの接点：WE、WT、WX、WP、WL、WXL。",
-      detailCategory: "Exoweld ／ W シリーズ-線対線",
-      backToSeries: "W シリーズ-線対線へ戻る",
-      detailSummary: (c) => `${c} は W シリーズ線対線の銅導体熱熔接接点で、導体どうしの接続に適します。`,
+      detailCategory: "Exoweld ／ W シリーズ",
+      backToSeries: "W シリーズへ戻る",
+      detailSummary: (c) => `${c} は W シリーズの銅導体熱熔接接点で、導体どうしの接続に適します。`,
     },
     g: {
-      title: "G シリーズ-線対接地棒",
+      title: "G シリーズ",
       desc: "導体と接地棒の熱熔接接点：GEE、GET、GST、GEY、GEP。",
       eyebrow: "Exoweld ／ G シリーズ",
-      heading: "G シリーズ-線対接地棒",
+      heading: "G シリーズ",
       subtext: "導体と接地棒（接地極）の熱熔接接点向けです。シリーズ用途を確認してから型番を選択してください。",
-      overviewTitle: "線対接地棒接点とは？",
+      overviewTitle: "接点とは？",
       overview: [
         "G シリーズは導体と接地棒／接地極の熱熔接接続向けで、垂直接地極の引出や接地網との接続に用いられます。",
         "旧カタログ名称として GEE、GET、GST、GEY、GEP があります。溶模・溶接剤・接地棒仕様は営業へご確認ください。",
@@ -211,10 +211,10 @@ const locales = {
       ],
       productsHeading: "G シリーズ製品",
       countLabel: "全 {count} 製品",
-      category: "Exoweld ／ G シリーズ-線対接地棒",
-      modelDesc: (c) => `${c} は G シリーズ線対接地棒の接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。`,
+      category: "Exoweld ／ G シリーズ",
+      modelDesc: (c) => `${c} は G シリーズの接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。`,
       href: () => "/ja/contact/",
-      indexTitle: "G シリーズ-線対接地棒",
+      indexTitle: "G シリーズ",
       indexDesc: "導体と接地棒の接点：GEE、GET、GST、GEY、GEP。",
     },
   },
@@ -301,13 +301,13 @@ function patchWDetails(locale, wMeta, shared) {
 
     t = t
       .replace(/^description: .+$/m, `description: ${wMeta.detailSummary(code)}`)
-      .replace(/^\s+category: .+$/m, `    category: ${wMeta.detailCategory}`)
-      .replace(/^\s+summary: .+$/m, `    summary: ${wMeta.detailSummary(code)}`)
-      .replace(/^\s+text: .+\n\s+href: .+\/w-series\/$/m, `      text: ${wMeta.backToSeries}\n      href: ${shared.prefix}/products/exoweld/w-series/`);
+      .replace(/^\s+category: .+$/m, ` category: ${wMeta.detailCategory}`)
+      .replace(/^\s+summary: .+$/m, ` summary: ${wMeta.detailSummary(code)}`)
+      .replace(/^\s+text: .+\n\s+href: .+\/w-series\/$/m, ` text: ${wMeta.backToSeries}\n href: ${shared.prefix}/products/exoweld/w-series/`);
     // Fix secondaryCta more reliably
     t = t.replace(
       /secondaryCta:\n\s+text: .+\n\s+href: .+/m,
-      `secondaryCta:\n      text: ${wMeta.backToSeries}\n      href: ${shared.prefix}/products/exoweld/w-series/`
+      `secondaryCta:\n text: ${wMeta.backToSeries}\n href: ${shared.prefix}/products/exoweld/w-series/`
     );
     fs.writeFileSync(file, t, "utf8");
     console.log("patched", file);

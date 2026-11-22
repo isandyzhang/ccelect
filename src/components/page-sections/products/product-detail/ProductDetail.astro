@@ -366,11 +366,33 @@ const localizedContact = (href: string) => contactHref(Astro.url.pathname, href)
     color: var(--color-text-strong);
   }
 
+  /* Alternating tone blocks to separate detail / media sections */
   .product-details-panel,
   .product-applications,
   .product-video {
+    border-top: none;
+    margin-inline: calc(50% - 50vw);
+    padding-block: clamp(1.75rem, 4.5vw, 3rem);
+    padding-inline: max(1rem, calc(50vw - 36rem));
+    width: 100vw;
+  }
+
+  .product-details-panel {
+    background: #e8e8ed;
+    border-block: 1px solid #d2d2d7;
+  }
+
+  .product-video {
+    background: #f5f5f7;
+    border-block: 1px solid #e5e5ea;
+  }
+
+  .product-applications {
+    background: transparent;
     border-top: 1px solid var(--color-border);
-    padding-top: clamp(1.5rem, 4vw, 2.5rem);
+    margin-inline: 0;
+    padding-inline: 0;
+    width: auto;
   }
 
   .product-video-embed {
@@ -425,10 +447,15 @@ const localizedContact = (href: string) => contactHref(Astro.url.pathname, href)
   }
 
   .product-specs > div {
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid #c7c7cc;
     display: grid;
     gap: 0.25rem;
     padding-bottom: 0.75rem;
+  }
+
+  .product-specs > div:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
   }
 
   .product-specs dt {

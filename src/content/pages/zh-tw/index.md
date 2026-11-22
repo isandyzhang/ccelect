@@ -18,8 +18,10 @@ pageSections:
     videoIntroSource: /videos/ccelect/hero-ignition-intro.mp4
     videoSource: /videos/ccelect/hero-loop.mp4
     scrollMask: true
-    heading: 接地鋁熱熔接與<br />接地／避雷解決方案
-    subtext: 自 1979 年投入接地工程材料與技術，提供 Exoweld 熱熔接系統、接地與避雷組件、<br />接地測量、設計諮詢及現場技術支援。
+    heading: © 集集電工業<br />以鋁熱熔接技術<br />建構可靠的<br />接地與避雷系統
+    metaLeft: 每一個接地專案<br />都需要可靠連接
+    metaRight: EST. 1979<br />→ EXOWELD
+    subtext: ""
     buttonSections: []
   - _component: page-sections/features/grounding-experience
     id: grounding-experience

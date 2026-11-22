@@ -23,7 +23,7 @@
   --spacing-em-6xl: 7em;
 
   /* Site nav sizing — adjust these; --spacing-nav-height follows. */
-  --nav-outer-pad: 0;
+  --nav-outer-pad: 0px;
   --nav-content-pad-block: var(--spacing-sm);
   --nav-logo-height: 3.4375rem;
   --nav-logo-width: 17.1875rem;

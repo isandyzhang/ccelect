@@ -206,6 +206,7 @@ class GroundingFlow extends HTMLElement {
   connectedCallback() {
     this.cleanup?.();
     const structuresImage = this.querySelector<HTMLImageElement>("img.scene-structures")!;
+    const poweredImage = this.querySelector<HTMLImageElement>("img.scene-powered")!;
     const copperImage = this.querySelector<HTMLImageElement>("img.scene-copper")!;
     const canvas = this.querySelector<HTMLCanvasElement>(".copper-canvas")!;
     const button = this.querySelector<HTMLButtonElement>(".playback")!;
@@ -217,7 +218,9 @@ class GroundingFlow extends HTMLElement {
     const events = new AbortController();
     const { signal } = events;
     let field: CopperField | undefined;
-    let structuresReady = structuresImage.complete && structuresImage.naturalWidth > 0;
+    let structuresReady = false;
+    /** Scroll already consumed when the scene decoded; the sequence plays across what remains. */
+    let progressOrigin = 0;
     let visible = false;
     let paused = false;
     let frame = 0;
@@ -302,14 +305,22 @@ class GroundingFlow extends HTMLElement {
       sync();
     };
 
+    const trackScroll = () => {
+      const rect = track.getBoundingClientRect();
+      const travel = Math.max(1, rect.height - window.innerHeight);
+
+      return { travel, scrolled: clamp(-rect.top, 0, travel) };
+    };
+
     const measure = () => {
       if (!structuresReady) {
         apply(0);
         return;
       }
-      const rect = track.getBoundingClientRect();
+      const { travel, scrolled } = trackScroll();
+      const span = Math.max(1, travel - progressOrigin);
 
-      apply(clamp(-rect.top / Math.max(1, rect.height - window.innerHeight)));
+      apply(clamp((scrolled - progressOrigin) / span));
     };
 
     const onScroll = () => {
@@ -334,22 +345,34 @@ class GroundingFlow extends HTMLElement {
 
     let mediaArmed = false;
 
-    /** Defer decode until near viewport so loading="lazy" is not defeated on page load. */
+    const decoded = (image: HTMLImageElement) => image.complete && image.naturalWidth > 0;
+
+    const decodeImage = (image: HTMLImageElement) =>
+      decoded(image) ? Promise.resolve() : image.decode().catch(() => {});
+
+    const markStructuresReady = () => {
+      if (signal.aborted || structuresReady) return;
+      structuresReady = true;
+      progressOrigin = trackScroll().scrolled;
+      measure();
+    };
+
+    /** Start while the hero is still on screen; fetchpriority=low keeps it behind the hero. */
     const armMedia = () => {
       if (mediaArmed || signal.aborted) return;
       mediaArmed = true;
 
-      if (!structuresReady) {
-        const ready = () => {
-          if (signal.aborted || structuresReady) return;
-          structuresReady = true;
-          measure();
-        };
+      const structuresPromise = decodeImage(structuresImage);
+      const poweredPromise = decodeImage(poweredImage);
 
-        structuresImage.decode().then(ready).catch(ready);
+      if (decoded(structuresImage) && decoded(poweredImage)) markStructuresReady();
+      else {
+        Promise.all([structuresPromise, poweredPromise]).then(() => {
+          if (!signal.aborted) markStructuresReady();
+        });
       }
 
-      if (copperImage.complete && copperImage.naturalWidth) initialize();
+      if (decoded(copperImage)) initialize();
       else {
         copperImage
           .decode()
@@ -360,17 +383,12 @@ class GroundingFlow extends HTMLElement {
       }
     };
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        visible = entry.isIntersecting;
-        if (visible || entry.intersectionRatio > 0 || entry.boundingClientRect.top < window.innerHeight * 2) {
-          armMedia();
-        }
-        if (visible) measure();
-        else sync();
-      },
-      { rootMargin: "200px 0px" }
-    );
+    const observer = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      if (visible) measure();
+      else sync();
+    });
+
     button.addEventListener(
       "click",
       () => {
@@ -382,6 +400,7 @@ class GroundingFlow extends HTMLElement {
     document.addEventListener("visibilitychange", sync, { signal });
     window.addEventListener("scroll", onScroll, { passive: true, signal });
     window.addEventListener("resize", onScroll, { passive: true, signal });
+    armMedia();
     observer.observe(track);
     measure();
 

@@ -13,6 +13,8 @@ const {
   videoIntroSource = "",
   heading = "",
   subtext = "",
+  metaLeft = "",
+  metaRight = "",
   buttonSections = [],
   scrollMask = false,
   class: className,
@@ -25,8 +27,20 @@ if (!htmlAttributes.id && (id || label)) {
   htmlAttributes.id = id || slugifyLabel(label);
 }
 
+const splitLines = (value: unknown) =>
+  typeof value === "string"
+    ? value
+        .split(/<br\s*\/?>/i)
+        .map((line) => line.trim())
+        .filter(Boolean)
+    : [];
+
 const hasButtons = Array.isArray(buttonSections) && buttonSections.length > 0;
-const hasCopy = Boolean(heading || subtext || hasButtons);
+const headingLines = splitLines(heading);
+const leftMetaLines = splitLines(metaLeft || subtext);
+const rightMetaLines = splitLines(metaRight);
+const hasMeta = leftMetaLines.length > 0 || rightMetaLines.length > 0;
+const hasCopy = Boolean(headingLines.length || hasMeta || hasButtons);
 const hasVideo = typeof videoSource === "string" && videoSource.trim() !== "";
 const trimmedVideoIntro =
   typeof videoIntroSource === "string" && videoIntroSource.trim() !== ""
@@ -37,6 +51,7 @@ const imageDataAttributes = useDefaultEditableBinding
   : {};
 const Track = scrollMask ? "div" : Fragment;
 const trackProps = scrollMask ? { class: "hero-image-banner-track", "data-hero-track": "" } : {};
+const metaEnterIndex = headingLines.length;
 ---
 
 <Track {...trackProps}>
@@ -60,18 +75,18 @@ const trackProps = scrollMask ? { class: "hero-image-banner-track", "data-hero-t
         positionHorizontal="center"
         {...imageDataAttributes}
       />
-  {
-    hasVideo && (
-      <Video
-        class="hero-image-banner__video"
-        type="local-source"
-        source={videoSource}
-        introSource={trimmedVideoIntro}
-        thumbnail={imageSource}
-        background={true}
-      />
-    )
-  }
+      {
+        hasVideo && (
+          <Video
+            class="hero-image-banner__video"
+            type="local-source"
+            source={videoSource}
+            introSource={trimmedVideoIntro}
+            thumbnail={imageSource}
+            background={true}
+          />
+        )
+      }
       <div
         class="hero-image-banner__overlay"
         aria-hidden="true"
@@ -81,33 +96,96 @@ const trackProps = scrollMask ? { class: "hero-image-banner-track", "data-hero-t
     {
       hasCopy && (
         <div class="hero-image-banner__copy">
-          {heading && (
+          {headingLines.length > 0 && (
             <h1
               class="hero-image-banner__title"
               data-editable={useDefaultEditableBinding ? "text" : undefined}
               data-type={useDefaultEditableBinding ? "text" : undefined}
               data-prop={useDefaultEditableBinding ? "heading" : undefined}
-              set:html={heading}
-            />
+            >
+              {headingLines.map((line, index) => (
+                <span
+                  class="hero-image-banner__line"
+                  style={`--enter-index: ${index}`}
+                >
+                  <span
+                    class="hero-image-banner__line-inner"
+                    set:html={line}
+                  />
+                </span>
+              ))}
+            </h1>
           )}
-          {subtext && (
-            <p
-              class="hero-image-banner__subtext"
-              data-editable={useDefaultEditableBinding ? "text" : undefined}
-              data-type={useDefaultEditableBinding ? "text" : undefined}
-              data-prop={useDefaultEditableBinding ? "subtext" : undefined}
-              set:html={subtext}
-            />
-          )}
-          {hasButtons && (
-            <ButtonGroup
-              class="hero-image-banner__actions"
-              buttonSections={buttonSections}
-              alignmentHorizontal="start"
-              useDefaultEditableBinding={useDefaultEditableBinding}
-              data-children-prop="buttonSections"
-            />
-          )}
+
+          {
+            hasMeta && (
+              <div
+                class="hero-image-banner__meta"
+                style={`--enter-index: ${metaEnterIndex}`}
+              >
+                <p
+                  class="hero-image-banner__meta-side hero-image-banner__meta-side--left"
+                  data-editable={useDefaultEditableBinding ? "text" : undefined}
+                  data-type={useDefaultEditableBinding ? "text" : undefined}
+                  data-prop={useDefaultEditableBinding ? (metaLeft ? "metaLeft" : "subtext") : undefined}
+                >
+                  {leftMetaLines.map((line) => (
+                    <span
+                      class="hero-image-banner__meta-line"
+                      set:html={line}
+                    />
+                  ))}
+                </p>
+
+                <div
+                  class="hero-image-banner__mark"
+                  aria-hidden="true"
+                >
+                  <svg
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      class="hero-image-banner__mark-path"
+                      d="M24 4 L40 14 V34 L24 44 L8 34 V14 Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      class="hero-image-banner__mark-path hero-image-banner__mark-path--delay"
+                      d="M24 14 L32 19 V29 L24 34 L16 29 V19 Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                <p class="hero-image-banner__meta-side hero-image-banner__meta-side--right">
+                  {rightMetaLines.map((line) => (
+                    <span
+                      class="hero-image-banner__meta-line"
+                      set:html={line}
+                    />
+                  ))}
+                </p>
+              </div>
+            )
+          }
+
+          {
+            hasButtons && (
+              <ButtonGroup
+                class="hero-image-banner__actions"
+                buttonSections={buttonSections}
+                alignmentHorizontal="center"
+                useDefaultEditableBinding={useDefaultEditableBinding}
+                data-children-prop="buttonSections"
+              />
+            )
+          }
         </div>
       )
     }
@@ -153,10 +231,20 @@ const trackProps = scrollMask ? { class: "hero-image-banner-track", "data-hero-t
 
 <style is:global>
   @layer page-sections {
-    @keyframes hero-image-banner-rise {
+    @keyframes hero-image-banner-line-rise {
+      from {
+        transform: translate3d(0, 108%, 0);
+      }
+
+      to {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes hero-image-banner-meta-in {
       from {
         opacity: 0;
-        transform: translate3d(0, 2.5rem, 0);
+        transform: translate3d(0, 1.25rem, 0);
       }
 
       to {
@@ -165,7 +253,20 @@ const trackProps = scrollMask ? { class: "hero-image-banner-track", "data-hero-t
       }
     }
 
+    @keyframes hero-image-banner-mark-draw {
+      from {
+        stroke-dashoffset: 1;
+        opacity: 0.35;
+      }
+
+      to {
+        stroke-dashoffset: 0;
+        opacity: 1;
+      }
+    }
+
     .hero-image-banner {
+      background: #000;
       isolation: isolate;
       margin-top: calc(var(--spacing-nav-height) * -1);
       min-height: 100vh;
@@ -175,8 +276,13 @@ const trackProps = scrollMask ? { class: "hero-image-banner-track", "data-hero-t
       width: 100%;
 
       > .hero-image-banner__frame {
-        inset: 0;
+        background: #000;
+        bottom: 11vh;
+        left: clamp(0.75rem, 3.5vw, 2.75rem);
+        overflow: hidden;
         position: absolute;
+        right: clamp(0.75rem, 3.5vw, 2.75rem);
+        top: calc(var(--spacing-nav-height) + 3.5vh);
         z-index: 0;
       }
 
@@ -203,7 +309,10 @@ const trackProps = scrollMask ? { class: "hero-image-banner-track", "data-hero-t
       }
 
       .hero-image-banner__frame > .hero-image-banner__overlay {
-        background-color: rgba(23, 34, 52, 0.45);
+        background:
+          radial-gradient(ellipse 70% 55% at 50% 45%, transparent 20%, rgba(0, 0, 0, 0.45) 100%),
+          linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, transparent 28%),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, transparent 45%);
         inset: 0;
         pointer-events: none;
         position: absolute;
@@ -222,88 +331,146 @@ const trackProps = scrollMask ? { class: "hero-image-banner-track", "data-hero-t
         top: 0;
 
         > .hero-image-banner__frame {
+          bottom: calc(11vh + var(--hero-mask) * 5vh);
           clip-path: inset(
-            calc(var(--hero-mask) * 14vh) calc(var(--hero-mask) * 8vw) calc(var(--hero-mask) * 8vh)
-              round calc(var(--hero-mask) * 28px)
+            calc(var(--hero-mask) * 3vh) calc(var(--hero-mask) * 3vw) calc(var(--hero-mask) * 3vh)
+              round calc(var(--hero-mask) * 10px)
           );
+          top: calc(var(--spacing-nav-height) + 3.5vh + var(--hero-mask) * 3vh);
         }
 
         .hero-image-banner__frame > .hero-image-banner__media,
         .hero-image-banner__frame > .hero-image-banner__video {
-          scale: calc(1.08 - var(--hero-mask) * 0.08);
+          scale: calc(1.06 - var(--hero-mask) * 0.06);
         }
 
         .hero-image-banner__frame > .hero-image-banner__overlay {
-          background-color: rgba(23, 34, 52, calc(0.45 + var(--hero-mask) * 0.2));
+          opacity: calc(1 + var(--hero-mask) * 0.15);
         }
 
         > .hero-image-banner__copy {
           opacity: calc(1 - var(--hero-copy));
-          translate: 0 calc(var(--hero-copy) * -60px);
+          translate: 0 calc(var(--hero-copy) * -36px);
         }
       }
 
+      /* Centered Anduril-style type stack */
       > .hero-image-banner__copy {
-        align-items: end;
-        bottom: 0;
-        column-gap: clamp(1.75rem, 5vw, 4.5rem);
-        display: grid;
-        grid-template-columns: minmax(min-content, 0.72fr) minmax(0, 1.4fr);
-        height: fit-content;
-        left: clamp(1.5rem, 4vw, 3.25rem);
-        margin-block: auto;
+        align-items: center;
+        bottom: 11vh;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1.35rem, 2.8vh, 2.25rem);
+        justify-content: center;
+        left: clamp(0.75rem, 3.5vw, 2.75rem);
+        margin: 0;
         max-width: none;
-        padding: 0;
+        padding: clamp(1rem, 3vh, 2rem) clamp(1rem, 3vw, 2.5rem);
         position: absolute;
-        right: clamp(1.5rem, 4vw, 3.25rem);
-        text-align: left;
-        top: 0;
+        right: clamp(0.75rem, 3.5vw, 2.75rem);
+        text-align: center;
+        top: calc(var(--spacing-nav-height) + 3.5vh);
         z-index: var(--layer-2);
       }
 
-      .hero-image-banner__title,
-      .hero-image-banner__subtext,
-      .hero-image-banner__actions {
-        animation: hero-image-banner-rise 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
-      }
-
       .hero-image-banner__title {
-        animation-delay: 120ms;
         color: #fff !important;
         font-family: var(--font-headings);
-        font-size: clamp(2.35rem, 4.4vw, 4.5rem);
-        font-weight: var(--font-weight-semibold);
-        grid-column: 1;
+        font-size: clamp(2.5rem, 7.4vw, 6.75rem);
+        font-weight: 700;
         letter-spacing: -0.035em;
-        line-height: 0.98;
+        line-height: 0.9;
         margin: 0;
-        text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
-        white-space: nowrap;
+        max-width: min(14ch, 100%);
+        text-shadow: none;
+        white-space: normal;
       }
 
-      .hero-image-banner__subtext {
-        align-self: end;
-        animation-delay: 280ms;
-        color: #fff !important;
-        font-family: var(--font-body);
-        font-size: clamp(0.95rem, 1.15vw, 1.125rem);
-        grid-column: 2;
-        line-height: 1.55;
+      .hero-image-banner__line {
+        display: block;
+        overflow: hidden;
+        padding-bottom: 0.06em;
+      }
+
+      .hero-image-banner__line-inner {
+        animation: hero-image-banner-line-rise 1100ms cubic-bezier(0.16, 1, 0.3, 1) both;
+        animation-delay: calc(180ms + var(--enter-index, 0) * 120ms);
+        display: block;
+        font-weight: inherit;
+      }
+
+      .hero-image-banner__meta {
+        align-items: center;
+        animation: hero-image-banner-meta-in 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+        animation-delay: calc(280ms + var(--enter-index, 0) * 120ms);
+        color: rgba(255, 255, 255, 0.88);
+        display: grid;
+        gap: clamp(1rem, 4vw, 3rem);
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
         margin: 0;
-        max-width: none;
-        text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
-        white-space: nowrap;
-        width: max-content;
+        max-width: min(52rem, 100%);
+        width: min(52rem, 100%);
+      }
+
+      .hero-image-banner__meta-side {
+        display: grid;
+        font-family: var(--font-body);
+        font-size: clamp(0.68rem, 1.05vw, 0.82rem);
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        line-height: 1.35;
+        margin: 0;
+        text-transform: uppercase;
+      }
+
+      .hero-image-banner__meta-side--left {
+        justify-items: start;
+        text-align: left;
+      }
+
+      .hero-image-banner__meta-side--right {
+        justify-items: end;
+        text-align: right;
+      }
+
+      .hero-image-banner__meta-line {
+        display: block;
+      }
+
+      .hero-image-banner__mark {
+        color: #fff;
+        height: clamp(1.75rem, 3.2vw, 2.35rem);
+        width: clamp(1.75rem, 3.2vw, 2.35rem);
+      }
+
+      .hero-image-banner__mark svg {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+
+      .hero-image-banner__mark-path {
+        animation: hero-image-banner-mark-draw 1200ms cubic-bezier(0.22, 1, 0.36, 1) both;
+        animation-delay: calc(420ms + var(--enter-index, 0) * 80ms);
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+        pathLength: 1;
+      }
+
+      .hero-image-banner__mark-path--delay {
+        animation-delay: calc(620ms + var(--enter-index, 0) * 80ms);
       }
 
       .hero-image-banner__actions {
-        animation-delay: 440ms;
-        margin-top: var(--spacing-sm);
+        animation: hero-image-banner-meta-in 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+        animation-delay: calc(520ms + var(--enter-index, 0) * 120ms);
+        margin-top: 0;
         width: auto;
       }
 
       .hero-image-banner__actions > .button-group__items {
         gap: var(--spacing-md);
+        justify-content: center;
       }
 
       .hero-image-banner__actions .button-inner.variant-secondary {
@@ -318,74 +485,50 @@ const trackProps = scrollMask ? { class: "hero-image-banner-track", "data-hero-t
         color: #fff;
       }
 
-      @media (768px <= width < 72rem) {
-        > .hero-image-banner__copy {
-          grid-template-columns: minmax(0, 1fr);
-          row-gap: 0.75rem;
-        }
-
-        .hero-image-banner__title,
-        .hero-image-banner__subtext {
-          grid-column: 1;
-          max-width: 100%;
-          white-space: normal;
-          width: auto;
-        }
-      }
-
-      /* Mobile: aspect-ratio width/height = 2/3 (tall 3:2) */
       @media (width < 768px) {
-        aspect-ratio: 2 / 3;
-        height: auto;
-        min-height: min(100dvh, 42rem);
-        width: 100%;
+        min-height: 100dvh;
 
-        .hero-image-banner__frame > .hero-image-banner__media,
-        .hero-image-banner__frame > .hero-image-banner__video,
-        .hero-image-banner__frame > .hero-image-banner__video.video.background,
-        .hero-image-banner__frame > .hero-image-banner__video > video {
-          height: 100%;
-          min-height: 100%;
-          width: 100%;
+        > .hero-image-banner__frame {
+          bottom: 7vh;
+          left: 0.75rem;
+          right: 0.75rem;
+          top: calc(var(--spacing-nav-height) + 2vh);
         }
 
         &.is-scroll-mask {
-          aspect-ratio: auto;
-
           > .hero-image-banner__frame {
+            bottom: calc(7vh + var(--hero-mask) * 3vh);
             clip-path: inset(
-              calc(var(--hero-mask) * 10vh) calc(var(--hero-mask) * 4vw)
-                calc(var(--hero-mask) * 4vh) round calc(var(--hero-mask) * 18px)
+              calc(var(--hero-mask) * 2.5vh) calc(var(--hero-mask) * 2.5vw)
+                calc(var(--hero-mask) * 2.5vh) round calc(var(--hero-mask) * 8px)
             );
+            top: calc(var(--spacing-nav-height) + 2vh + var(--hero-mask) * 2.5vh);
           }
         }
 
         > .hero-image-banner__copy {
-          bottom: 0;
-          column-gap: 0;
-          grid-template-columns: 1fr;
-          height: fit-content;
-          left: var(--spacing-lg);
-          margin-block: auto;
-          max-width: calc(100% - 2 * var(--spacing-lg));
-          padding: 0;
-          right: var(--spacing-lg);
-          row-gap: var(--spacing-sm);
-          top: 0;
+          bottom: 7vh;
+          gap: 1.35rem;
+          left: 0.75rem;
+          padding: 1rem 0.85rem;
+          right: 0.75rem;
+          top: calc(var(--spacing-nav-height) + 2vh);
         }
 
         .hero-image-banner__title {
-          font-size: clamp(1.75rem, 8vw, 2.4rem);
-          white-space: normal;
+          font-size: clamp(1.85rem, 9.5vw, 2.65rem);
+          max-width: 12ch;
         }
 
-        .hero-image-banner__subtext {
-          display: block;
-          font-size: var(--font-size-md);
-          grid-column: 1;
-          overflow: visible;
-          white-space: normal;
+        .hero-image-banner__meta {
+          gap: 0.75rem;
+          max-width: 100%;
           width: 100%;
+        }
+
+        .hero-image-banner__meta-side {
+          font-size: 0.62rem;
+          letter-spacing: 0.06em;
         }
 
         .hero-image-banner__actions .button-inner {
@@ -394,6 +537,19 @@ const trackProps = scrollMask ? { class: "hero-image-banner-track", "data-hero-t
         }
       }
 
+      @media (prefers-reduced-motion: reduce) {
+        .hero-image-banner__line-inner,
+        .hero-image-banner__meta,
+        .hero-image-banner__actions,
+        .hero-image-banner__mark-path {
+          animation: none;
+        }
+
+        .hero-image-banner__mark-path {
+          opacity: 1;
+          stroke-dashoffset: 0;
+        }
+      }
     }
 
     .hero-image-banner-track {

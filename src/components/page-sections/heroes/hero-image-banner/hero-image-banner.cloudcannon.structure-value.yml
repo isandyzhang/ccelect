@@ -10,5 +10,7 @@ value:
   videoIntroSource: ""
   scrollMask: false
   heading: Heading placeholder
-  subtext: Short supporting description.
+  metaLeft: Left meta
+  metaRight: Right meta
+  subtext: ""
   buttonSections: []

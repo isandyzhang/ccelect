@@ -97,21 +97,16 @@ const regionLabel = label || copy.products;
 <style is:global>
   @layer components {
     /*
-      Apple global-nav mega menu reference (approx):
-      - labels ~12px muted
-      - primary (Explore) links ~24px / 600
-      - secondary column links ~12–14px
-      - generous left-aligned padding, ~44px column gaps
-      - desktop only; phone uses flyout
+      Desktop product menu. Every column uses the same type size and row gap
+      so the lists line up. Phone uses the side flyout instead.
     */
     .products-mega-menu {
       --mega-label: clamp(0.875rem, 0.75rem + 0.25vw, 1rem);
-      --mega-link-primary: clamp(1.5rem, 1.15rem + 0.9vw, 1.75rem);
       --mega-link-secondary: clamp(0.9375rem, 0.78rem + 0.32vw, 1.0625rem);
       --mega-pad-block: clamp(2.5rem, 4vw, 3.5rem);
       --mega-pad-inline: clamp(1.5rem, 5vw, 3rem);
       --mega-gap: clamp(2rem, 4vw, 3.5rem);
-      --mega-max: 61.25rem; /* ~980px Apple content band */
+      --mega-max: 78rem;
 
       background: var(--color-bg-surface);
       border-bottom: 1px solid rgb(0 0 0 / 8%);
@@ -179,10 +174,7 @@ const regionLabel = label || copy.products;
       align-items: start;
       display: grid;
       gap: var(--mega-gap);
-      /* Apple: primary Explore col wider, then secondary groups */
-      grid-template-columns:
-        minmax(12rem, 1.4fr)
-        repeat(4, minmax(9rem, 1fr));
+      grid-template-columns: repeat(5, minmax(11rem, 1fr));
     }
 
     .products-mega-menu__column {
@@ -216,10 +208,6 @@ const regionLabel = label || copy.products;
       padding: 0;
     }
 
-    .products-mega-menu__column--primary .products-mega-menu__list {
-      gap: 0.7rem;
-    }
-
     .products-mega-menu__link {
       color: var(--color-text-strong, #1d1d1f);
       display: inline-flex;
@@ -231,13 +219,6 @@ const regionLabel = label || copy.products;
       letter-spacing: -0.01em;
       line-height: 1.25;
       text-decoration: none;
-    }
-
-    .products-mega-menu__column--primary .products-mega-menu__link {
-      font-size: var(--mega-link-primary);
-      font-weight: 600;
-      letter-spacing: -0.015em;
-      line-height: 1.16667;
     }
 
     .products-mega-menu__link:hover,
@@ -265,7 +246,6 @@ const regionLabel = label || copy.products;
     @media (max-width: 84rem) {
       .products-mega-menu {
         --mega-max: 72rem;
-        --mega-link-primary: clamp(1.35rem, 1.05rem + 0.7vw, 1.55rem);
         --mega-gap: clamp(1.5rem, 2.5vw, 2.5rem);
       }
     }
@@ -274,7 +254,6 @@ const regionLabel = label || copy.products;
     @media (max-width: 75rem) {
       .products-mega-menu {
         --mega-label: 0.9375rem;
-        --mega-link-primary: 1.375rem;
         --mega-link-secondary: 1rem;
         --mega-pad-block: 2.25rem;
         --mega-gap: 1.75rem 2rem;
