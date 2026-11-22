@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" fill="none" role="img" aria-labelledby="title">
+<title id="title">C-type compression connector</title>
+<g stroke="#242424" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<g transform="rotate(24 240 160)">
+<path d="M218 66q-3 50 0 98t0 146" stroke-width="1.6"/>
+<path d="M223 66q-3 50 0 98t0 146" stroke-width="1.6"/>
+<path d="M228 66q-3 50 0 98t0 146" stroke-width="1.6"/>
+<path d="M233 66q-3 50 0 98t0 146" stroke-width="1.6"/>
+<path d="M238 66q-3 50 0 98t0 146" stroke-width="1.6"/>
+<path d="M243 40q-3 50 0 98t0 122" stroke-width="1.6"/>
+<path d="M248 40q-3 50 0 98t0 122" stroke-width="1.6"/>
+<path d="M253 40q-3 50 0 98t0 122" stroke-width="1.6"/>
+<path d="M215 66q12-9 25 0 M241 40q8-6 15 0 M215 284q11 7 24 0 M241 260q7 5 15 0"/>
+<path fill="white" d="M203 125q35-13 70 0v66q-35 14-70 0Z"/>
+<ellipse cx="238" cy="125" rx="35" ry="10"/><path d="M210 126q27 7 55-1 M268 136v47 M204 185q32 14 68 0" stroke-width="1.5"/>
+</g>
+</g>
+</svg>

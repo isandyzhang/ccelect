@@ -17,7 +17,7 @@ pageSections:
         category: Exoweld / S series
         title: SHEA
         description: SHEA is an Exoweld S series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-1.svg
+        image: /src/assets/images/ccelect/placeholders/product-1.svg
         imageAlt: Product placeholder
         specifications:
           - SHEA
@@ -26,7 +26,7 @@ pageSections:
         category: Exoweld / S series
         title: SHEB
         description: SHEB is an Exoweld S series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-2.svg
+        image: /src/assets/images/ccelect/placeholders/product-2.svg
         imageAlt: Product placeholder
         specifications:
           - SHEB
@@ -35,7 +35,7 @@ pageSections:
         category: Exoweld / S series
         title: SVES
         description: SVES is an Exoweld S series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-3.svg
+        image: /src/assets/images/ccelect/placeholders/product-3.svg
         imageAlt: Product placeholder
         specifications:
           - SVES

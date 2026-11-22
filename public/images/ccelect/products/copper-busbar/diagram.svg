@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" fill="none" role="img" aria-labelledby="title">
+<title id="title">Grounding copper busbar</title>
+<g stroke="#242424" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path fill="white" d="m131 100 0-44 49-27 0-20 16 7v25l-48 27v37Z M148 118l34-18v-15l16 8v18l-48 26Z M334 192v-49l49-27V94l16 8v28l-48 26v43Z M351 209l34-19v-15l16 8v20l-48 24Z"/>
+<ellipse cx="188" cy="27" rx="2.5" ry="4"/><ellipse cx="190" cy="102" rx="2.5" ry="4"/><ellipse cx="391" cy="112" rx="2.5" ry="4"/><ellipse cx="392" cy="192" rx="2.5" ry="4"/>
+<path fill="white" d="M77 143q-9-34 16-51l24-14q25-5 38 22t-2 43l-28 17Z"/>
+<path d="M96 89q35 0 43 37t-15 36 M107 83q35 3 42 36t-9 34"/>
+<path fill="white" d="M280 236q-9-34 16-51l24-14q25-5 38 22t-2 43l-28 17Z"/>
+<path d="M299 182q35 0 43 37t-15 36 M310 176q35 3 42 36t-9 34"/>
+<path fill="white" d="m57 125 270 124v49L57 174Z"/>
+<path d="m57 125 6-4 270 123v50l-6 4 M327 249l6-5"/>
+<path d="m70 143 8-3 8 7v11l-8 3-8-7z m236 108 8-3 8 7v11l-8 3-8-7z"/>
+<ellipse cx="110" cy="156.0" rx="4" ry="5.5"/><ellipse cx="110" cy="176.0" rx="4" ry="5.5"/><ellipse cx="146" cy="172.56" rx="4" ry="5.5"/><ellipse cx="146" cy="192.56" rx="4" ry="5.5"/><ellipse cx="182" cy="189.12" rx="4" ry="5.5"/><ellipse cx="182" cy="209.12" rx="4" ry="5.5"/><ellipse cx="218" cy="205.68" rx="4" ry="5.5"/><ellipse cx="218" cy="225.68" rx="4" ry="5.5"/><ellipse cx="254" cy="222.24" rx="4" ry="5.5"/><ellipse cx="254" cy="242.24" rx="4" ry="5.5"/>
+</g>
+</svg>

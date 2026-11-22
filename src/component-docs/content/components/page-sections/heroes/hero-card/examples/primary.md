@@ -29,7 +29,7 @@ blocks:
       Sometimes good enough isn't good enough, especially when our engineers
       have strong opinions about query optimization.
     image:
-      source: /src/assets/images/blog-dns-resolver.png
+      source: /src/assets/images/template/blog-dns-resolver.png
       alt: >-
         There seems no limit to what the printed circuit could have told you
         (if you had tried to find out); a revelation  trembles just past the

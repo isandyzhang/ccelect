@@ -17,8 +17,8 @@ pageSections:
         category: 模具
         title: 熔模與分割型熔模
         description: 火泥熔模、分割型熔模及耐磨板等石墨模具相關品項。
-        image: /images/ccelect/accessories/mold-powder.jpg
-        imageAlt: EXOWELD 石墨熔模與熔接劑組
+        image: /images/ccelect/accessories/split-mold/diagram.jpg
+        imageAlt: 分割型熔模
         specifications:
           - 火泥熔模
           - 分割型熔模
@@ -28,8 +28,8 @@ pageSections:
         category: 固定工具
         title: 模夾
         description: 泛用模夾、鏈條模夾及 ML-3 模夾等固定工具。
-        image: /images/ccelect/accessories/clamps-ignitor.jpg
-        imageAlt: EXOWELD 模夾與點火工具
+        image: /src/assets/images/ccelect/accessories/handle/photo-hero.jpg
+        imageAlt: 黑色雙把手模夾實拍
         specifications:
           - 泛用模夾
           - 鏈條模夾
@@ -39,8 +39,8 @@ pageSections:
         category: 耗材
         title: 熔接劑與點火清模
         description: 鋁箔包熔接劑、點火機、清模板及毛刷等品項。
-        image: /images/ccelect/accessories/mold-powder.jpg
-        imageAlt: EXOWELD 熔接劑鋁箔包與清模刷
+        image: /images/ccelect/accessories/foil-pack/diagram.jpg
+        imageAlt: 鋁箔包熔接劑
         specifications:
           - 熔接劑
           - 點火機
@@ -50,11 +50,32 @@ pageSections:
         category: 現場用品
         title: 施工附屬工具
         description: 電纜剪線鉗、卡式噴燈及工具箱等現場用品。
-        image: /images/ccelect/accessories/field-tools.jpg
+        image: /src/assets/images/ccelect/accessories/field-tools.jpg
         imageAlt: EXOWELD 現場施工工具組
         specifications:
           - 剪線鉗
           - 卡式噴燈
           - 工具箱
+        href: /contact/
+      - id: igniter
+        category: 點火工具
+        title: 點火機
+        description: 熱熔接作業使用的手持式點火工具。
+        image: /src/assets/images/ccelect/accessories/lighter/photo-hero.jpg
+        imageAlt: 手持式金屬點火機實拍
+        href: /contact/
+      - id: brush
+        category: 清潔工具
+        title: 毛刷
+        description: 木柄毛刷，供模具清潔作業使用。
+        image: /src/assets/images/ccelect/accessories/brush/photo-hero.jpg
+        imageAlt: 木柄毛刷實拍
+        href: /contact/
+      - id: scraper
+        category: 清潔工具
+        title: 清模鏟
+        description: 供模具清理作業使用的清模鏟。
+        image: /src/assets/images/ccelect/accessories/clean-shave/photo-hero.jpg
+        imageAlt: 黑色清模鏟實拍
         href: /contact/
 ---

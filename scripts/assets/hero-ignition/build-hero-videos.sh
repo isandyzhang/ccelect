@@ -7,7 +7,7 @@ ROOT="$(cd "$(dirname "$0")" && pwd)"
 OUT_PUBLIC="$(cd "$ROOT/../../../public/videos/ccelect" && pwd)"
 IMG_PUBLIC="$(cd "$ROOT/../../../public/images/ccelect" && pwd)"
 WORK="$ROOT/work"
-mkdir -p "$WORK"
+mkdir -p "$WORK" "$IMG_PUBLIC/home"
 
 GRADE_PREP="eq=brightness=-0.34:contrast=1.22:saturation=0.72:gamma=0.68,colorbalance=rs=0.05:gs=-0.06:bs=-0.1:rm=0.08:gm=-0.03:bm=-0.08:rh=0.04:gh=-0.02:bh=-0.06,vignette=PI/4.5"
 GRADE_BLACK="eq=brightness=-0.55:contrast=1.35:saturation=0.45:gamma=0.45,colorbalance=rs=0.03:gs=-0.05:bs=-0.08,vignette=PI/3.5"
@@ -70,10 +70,10 @@ ffmpeg -y -i "$WORK/hero-loop.mp4" "${ENCODE[@]}" "$OUT_PUBLIC/hero-loop.mp4"
 echo "==> Poster from lit afterglow"
 ffmpeg -y -ss 19.0 -i "$SRC" -frames:v 1 \
   -vf "${GRADE_IGN},scale=1920:1080:flags=lanczos" \
-  "$IMG_PUBLIC/banner-ignition.jpg"
+  "$IMG_PUBLIC/home/ignition-poster.jpg"
 
 echo "==> Durations"
 ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$OUT_PUBLIC/hero-ignition-intro.mp4"
 ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$OUT_PUBLIC/hero-loop.mp4"
-ls -lh "$OUT_PUBLIC/hero-ignition-intro.mp4" "$OUT_PUBLIC/hero-loop.mp4" "$IMG_PUBLIC/banner-ignition.jpg"
+ls -lh "$OUT_PUBLIC/hero-ignition-intro.mp4" "$OUT_PUBLIC/hero-loop.mp4" "$IMG_PUBLIC/home/ignition-poster.jpg"
 echo "Done."

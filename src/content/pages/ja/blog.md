@@ -13,7 +13,7 @@ heroSections:
     subtext: 調達と現場が同じ用語で話せるよう、接地・溶接の要点を整理します。
     buttonSections: []
     image:
-      source: /src/assets/images/hero-1.svg
+      source: /src/assets/images/template/hero-1.svg
       alt: 技術情報
       rounded: true
     icons: []

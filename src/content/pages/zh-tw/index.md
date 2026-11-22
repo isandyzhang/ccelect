@@ -13,7 +13,7 @@ keywords:
 pageSections:
   - _component: page-sections/heroes/hero-image-banner
     id: homepage-banner
-    imageSource: /images/ccelect/home/ignition-poster.jpg
+    imageSource: /src/assets/images/ccelect/home/ignition-poster.jpg
     imageAlt: 接地鋁熱熔接與接地／避雷解決方案
     videoIntroSource: /videos/ccelect/hero-ignition-intro.mp4
     videoSource: /videos/ccelect/hero-loop.mp4

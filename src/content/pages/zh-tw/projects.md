@@ -50,14 +50,14 @@ pageSections:
           title: 台灣高鐵工程現場紀錄
           description: ''
           image:
-            source: /src/assets/images/ccelect/legacy/site-installation-1.jpg
+            source: /src/assets/images/ccelect/projects/site-installation-1.jpg
             alt: 台灣高鐵接地與避雷工程現場紀錄
             rounded: true
         - _component: page-sections/features/feature-grid/feature-item
           title: 工程實績-高鐵接地工程
           description: ''
           image:
-            source: /src/assets/images/ccelect/legacy/site-installation-2.jpg
+            source: /src/assets/images/ccelect/projects/site-installation-2.jpg
             alt: 工程實績-高鐵接地工程
             rounded: true
       gridMaxWidth: xl
@@ -79,14 +79,14 @@ pageSections:
           title: 淡水線道渣段洩漏電流回收
           description: ''
           image:
-            source: /src/assets/images/ccelect/legacy/site-installation-3.jpg
+            source: /src/assets/images/ccelect/projects/site-installation-3.jpg
             alt: 淡水線道渣段洩漏電流回收
             rounded: true
         - _component: page-sections/features/feature-grid/feature-item
           title: 土城動力線
           description: ''
           image:
-            source: /src/assets/images/ccelect/legacy/site-installation-4.jpg
+            source: /src/assets/images/ccelect/projects/site-installation-4.jpg
             alt: 土城動力線
             rounded: true
       gridMaxWidth: xl

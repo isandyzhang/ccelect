@@ -324,7 +324,7 @@ pageSections:
                     alignmentHorizontal: center
                     text: ISO 9001:2015
                   - _component: building-blocks/core-elements/image
-                    source: /src/assets/images/ccelect/legacy/iso-9001-2015-certificate.jpg
+                    source: /src/assets/images/ccelect/certifications/iso-9001-2015-certificate.jpg
                     alt: CCElect ISO 9001:2015 quality management certificate
                     aspectRatio: landscape
                     rounded: true
@@ -346,7 +346,7 @@ pageSections:
                       title: 1981 Taipower type test
                       description: Type test completed in Taoyuan with Taiwan Power Company participation.
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-taipower-1.jpg
+                        source: /src/assets/images/ccelect/testing/taipower-1.jpg
                         alt: 1981 Taipower type test historical photo
                         rounded: true
                       eyebrowIcon:
@@ -359,7 +359,7 @@ pageSections:
                       title: 1981 Taipower type test (2)
                       description: Additional site documentation from the type test.
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-taipower-2.jpg
+                        source: /src/assets/images/ccelect/testing/taipower-2.jpg
                         alt: 1981 Taipower type test historical photo
                         rounded: true
                       eyebrowIcon:
@@ -372,7 +372,7 @@ pageSections:
                       title: 1999 UL weld sample test
                       description: Legacy site records 54 joint types under high-current testing; UL File E305374.
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-ul-1.jpg
+                        source: /src/assets/images/ccelect/testing/ul-1.jpg
                         alt: UL weld sample high-current test photo
                         rounded: true
                       eyebrowIcon:
@@ -385,7 +385,7 @@ pageSections:
                       title: 1999 UL weld sample test (2)
                       description: High-current test documentation.
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-ul-2.jpg
+                        source: /src/assets/images/ccelect/testing/ul-2.jpg
                         alt: UL weld sample high-current test photo
                         rounded: true
                       eyebrowIcon:
@@ -398,7 +398,7 @@ pageSections:
                       title: 2000 high-current test
                       description: AWG 4/0 cable and bolt exothermic samples on test fixture.
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-high-current-1.jpg
+                        source: /src/assets/images/ccelect/testing/high-current-1.jpg
                         alt: Exothermic joint high-current test photo
                         rounded: true
                       eyebrowIcon:
@@ -411,7 +411,7 @@ pageSections:
                       title: 2000 high-current test (2)
                       description: Test fixture and sample close-up.
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-high-current-2.jpg
+                        source: /src/assets/images/ccelect/testing/high-current-2.jpg
                         alt: Exothermic joint high-current test photo
                         rounded: true
                       eyebrowIcon:

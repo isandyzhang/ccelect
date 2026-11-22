@@ -17,20 +17,20 @@ pageSections:
         category: Exoweld
         title: W シリーズ-線対線
         description: 銅導体どうしの接点：WE、WT、WX、WP、WL、WXL。
-        image: /images/ccelect/diagrams/we.svg
+        image: /images/ccelect/products/we/diagram.svg
         imageAlt: WE 線対線ストレート図
         images:
-          - image: /images/ccelect/diagrams/we.svg
+          - image: /images/ccelect/products/we/diagram.svg
             imageAlt: WE 線対線ストレート図
-          - image: /images/ccelect/diagrams/wt.jpg
+          - image: /images/ccelect/products/wt/diagram.jpg
             imageAlt: WT 線対線 T 字図
-          - image: /images/ccelect/diagrams/wx.svg
+          - image: /images/ccelect/products/wx/diagram.svg
             imageAlt: WX 線対線クロス図
-          - image: /images/ccelect/diagrams/wp.jpg
+          - image: /images/ccelect/products/wp/diagram.jpg
             imageAlt: WP 線対線平行図
-          - image: /images/ccelect/diagrams/wl.jpg
+          - image: /images/ccelect/products/wl/diagram.jpg
             imageAlt: WL 線対線 L 字図
-          - image: /images/ccelect/diagrams/wxl.jpg
+          - image: /images/ccelect/products/wxl/diagram.jpg
             imageAlt: WXL 線対線クロス図
         specifications:
           - WE
@@ -44,18 +44,18 @@ pageSections:
         category: Exoweld
         title: G シリーズ-線対接地棒
         description: 導体と接地棒の接点：GEE、GET、GST、GEY、GEP。
-        image: /images/ccelect/diagrams/gee.jpg
+        image: /images/ccelect/products/gee/diagram.jpg
         imageAlt: GEE 線対接地棒図
         images:
-          - image: /images/ccelect/diagrams/gee.jpg
+          - image: /images/ccelect/products/gee/diagram.jpg
             imageAlt: GEE 線対接地棒図
-          - image: /images/ccelect/diagrams/get.jpg
+          - image: /images/ccelect/products/get/diagram.jpg
             imageAlt: GET 線対接地棒図
-          - image: /images/ccelect/diagrams/gst.jpg
+          - image: /images/ccelect/products/gst/diagram.jpg
             imageAlt: GST 線対接地棒図
-          - image: /images/ccelect/diagrams/gey.jpg
+          - image: /images/ccelect/products/gey/diagram.jpg
             imageAlt: GEY 線対接地棒図
-          - image: /images/ccelect/diagrams/gep.jpg
+          - image: /images/ccelect/products/gep/diagram.jpg
             imageAlt: GEP 線対接地棒図
         specifications:
           - GEE
@@ -68,14 +68,14 @@ pageSections:
         category: Exoweld
         title: S シリーズ
         description: SHEA、SHEB、SVES など特殊接点形式。
-        image: /images/ccelect/diagrams/shea.jpg
+        image: /images/ccelect/products/shea/diagram.jpg
         imageAlt: SHEA 鋼板対線図
         images:
-          - image: /images/ccelect/diagrams/shea.jpg
+          - image: /images/ccelect/products/shea/diagram.jpg
             imageAlt: SHEA 鋼板対線図
-          - image: /images/ccelect/diagrams/sheb.jpg
+          - image: /images/ccelect/products/sheb/diagram.jpg
             imageAlt: SHEB 鋼板対線図
-          - image: /images/ccelect/diagrams/sves.jpg
+          - image: /images/ccelect/products/sves/diagram.jpg
             imageAlt: SVES 鋼管対線図
         specifications:
           - SHEA
@@ -86,12 +86,12 @@ pageSections:
         category: Exoweld
         title: R シリーズ
         description: RHEH、RHXH シリーズ接点形式。
-        image: /images/ccelect/diagrams/rheh.jpg
+        image: /images/ccelect/products/rheh/diagram.jpg
         imageAlt: RHEH 鉄筋対線図
         images:
-          - image: /images/ccelect/diagrams/rheh.jpg
+          - image: /images/ccelect/products/rheh/diagram.jpg
             imageAlt: RHEH 鉄筋対線図
-          - image: /images/ccelect/diagrams/rhxh.jpg
+          - image: /images/ccelect/products/rhxh/diagram.jpg
             imageAlt: RHXH 鉄筋対線図
         specifications:
           - RHEH
@@ -101,16 +101,16 @@ pageSections:
         category: Exoweld
         title: P シリーズ
         description: PK、PV、PY、PT シリーズ接点形式。
-        image: /images/ccelect/diagrams/pk.svg
+        image: /images/ccelect/products/pk/diagram.svg
         imageAlt: PK 接続図
         images:
-          - image: /images/ccelect/diagrams/pk.svg
+          - image: /images/ccelect/products/pk/diagram.svg
             imageAlt: PK 接続図
-          - image: /images/ccelect/diagrams/pv.svg
+          - image: /images/ccelect/products/pv/diagram.svg
             imageAlt: PV 接続図
-          - image: /images/ccelect/diagrams/py.svg
+          - image: /images/ccelect/products/py/diagram.svg
             imageAlt: PY 接続図
-          - image: /images/ccelect/diagrams/pt.svg
+          - image: /images/ccelect/products/pt/diagram.svg
             imageAlt: PT 接続図
         specifications:
           - PK
@@ -122,22 +122,22 @@ pageSections:
         category: Exoweld
         title: B シリーズ
         description: BE、BEH、BT、BTV、BS、BX、BVES シリーズ接点形式。
-        image: /images/ccelect/diagrams/be.svg
+        image: /images/ccelect/products/be/diagram.svg
         imageAlt: BE 接続図
         images:
-          - image: /images/ccelect/diagrams/be.svg
+          - image: /images/ccelect/products/be/diagram.svg
             imageAlt: BE 接続図
-          - image: /images/ccelect/diagrams/beh.svg
+          - image: /images/ccelect/products/beh/diagram.svg
             imageAlt: BEH 接続図
-          - image: /images/ccelect/diagrams/bt.svg
+          - image: /images/ccelect/products/bt/diagram.svg
             imageAlt: BT 接続図
-          - image: /images/ccelect/diagrams/btv.svg
+          - image: /images/ccelect/products/btv/diagram.svg
             imageAlt: BTV 接続図
-          - image: /images/ccelect/diagrams/bs.svg
+          - image: /images/ccelect/products/bs/diagram.svg
             imageAlt: BS 接続図
-          - image: /images/ccelect/diagrams/bx.svg
+          - image: /images/ccelect/products/bx/diagram.svg
             imageAlt: BX 接続図
-          - image: /images/ccelect/diagrams/bves.svg
+          - image: /images/ccelect/products/bves/diagram.svg
             imageAlt: BVES 接続図
         specifications:
           - BE
@@ -152,14 +152,14 @@ pageSections:
         category: Exoweld
         title: E シリーズ
         description: ERB、ERW、ERT シリーズ接点形式。
-        image: /images/ccelect/diagrams/erb.svg
+        image: /images/ccelect/products/erb/diagram.svg
         imageAlt: ERB 接続図
         images:
-          - image: /images/ccelect/diagrams/erb.svg
+          - image: /images/ccelect/products/erb/diagram.svg
             imageAlt: ERB 接続図
-          - image: /images/ccelect/diagrams/erw.svg
+          - image: /images/ccelect/products/erw/diagram.svg
             imageAlt: ERW 接続図
-          - image: /images/ccelect/diagrams/ert.svg
+          - image: /images/ccelect/products/ert/diagram.svg
             imageAlt: ERT 接続図
         specifications:
           - ERB
@@ -170,18 +170,18 @@ pageSections:
         category: Exoweld
         title: C シリーズ
         description: CSHEA、CSHTA、CSVES、CWL、CWE シリーズ接点形式。
-        image: /images/ccelect/diagrams/cshea.svg
+        image: /images/ccelect/products/cshea/diagram.svg
         imageAlt: CSHEA 接続図
         images:
-          - image: /images/ccelect/diagrams/cshea.svg
+          - image: /images/ccelect/products/cshea/diagram.svg
             imageAlt: CSHEA 接続図
-          - image: /images/ccelect/diagrams/cshta.svg
+          - image: /images/ccelect/products/cshta/diagram.svg
             imageAlt: CSHTA 接続図
-          - image: /images/ccelect/diagrams/csves.svg
+          - image: /images/ccelect/products/csves/diagram.svg
             imageAlt: CSVES 接続図
-          - image: /images/ccelect/diagrams/cwl.svg
+          - image: /images/ccelect/products/cwl/diagram.svg
             imageAlt: CWL 接続図
-          - image: /images/ccelect/diagrams/cwe.svg
+          - image: /images/ccelect/products/cwe/diagram.svg
             imageAlt: CWE 接続図
         specifications:
           - CSHEA

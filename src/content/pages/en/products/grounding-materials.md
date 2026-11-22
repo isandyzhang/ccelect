@@ -17,8 +17,8 @@ pageSections:
         category: Electrodes
         title: Ground rods
         description: Ionic and copper-clad steel rods for different soil and resistance targets.
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/products/iea/photo-hero.jpg
+        imageAlt: Ionic ground rod
         specifications:
           - IEA ionic
           - G series
@@ -28,8 +28,8 @@ pageSections:
         category: Conductors
         title: Copper busbars
         description: High-conductivity busbars for grounding buses and equipotential bonding.
-        image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/products/copper-busbar/photo-hero.jpg
+        imageAlt: Copper busbar
         specifications:
           - C1020BB
           - C1100BB
@@ -38,8 +38,8 @@ pageSections:
         category: Connectors
         title: C-type connectors
         description: Compression connectors for copper conductor taps and splices.
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/products/c-connector/photo-hero.jpg
+        imageAlt: C-type compression connector
         specifications:
           - C-type
           - Terminals
@@ -48,8 +48,8 @@ pageSections:
         category: Clamps
         title: Cable clamps
         description: Clamps for positioning grounding conductors on walls and structures.
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: Product placeholder
+        image: /images/ccelect/products/gbs/photo-hero.jpg
+        imageAlt: GBS grounding clamp
         specifications:
           - GBS series
           - GCS series
@@ -58,8 +58,8 @@ pageSections:
         category: Accessories
         title: Other materials
         description: Waterproofing and soil-improvement materials for grounding works.
-        image: /images/ccelect/accessories/ground-plate.jpg
-        imageAlt: EXOWELD AG ground plate and lugs
+        image: /images/ccelect/products/sealing-plate/photo-hero.jpg
+        imageAlt: Sealing plate
         specifications:
           - Waterproof boards
           - Bentonite

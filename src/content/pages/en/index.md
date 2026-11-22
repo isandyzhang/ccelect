@@ -40,7 +40,7 @@ pageSections:
         variant: tertiary
         size: md
     image:
-      source: /src/assets/images/hero-1.svg
+      source: /src/assets/images/template/hero-1.svg
       alt: CCElect Industrial
       rounded: true
     icons: []

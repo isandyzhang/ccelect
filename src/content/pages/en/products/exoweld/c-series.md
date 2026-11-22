@@ -17,7 +17,7 @@ pageSections:
         category: Exoweld / C series
         title: CSHEA
         description: CSHEA is an Exoweld C series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/cshea.svg
+        image: /images/ccelect/products/cshea/diagram.svg
         imageAlt: CSHEA connection diagram
         specifications:
           - CSHEA
@@ -26,7 +26,7 @@ pageSections:
         category: Exoweld / C series
         title: CSHTA
         description: CSHTA is an Exoweld C series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/cshta.svg
+        image: /images/ccelect/products/cshta/diagram.svg
         imageAlt: CSHTA connection diagram
         specifications:
           - CSHTA
@@ -35,7 +35,7 @@ pageSections:
         category: Exoweld / C series
         title: CSVES
         description: CSVES is an Exoweld C series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/csves.svg
+        image: /images/ccelect/products/csves/diagram.svg
         imageAlt: CSVES connection diagram
         specifications:
           - CSVES
@@ -44,7 +44,7 @@ pageSections:
         category: Exoweld / C series
         title: CWL
         description: CWL is an Exoweld C series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/cwl.svg
+        image: /images/ccelect/products/cwl/diagram.svg
         imageAlt: CWL connection diagram
         specifications:
           - CWL
@@ -53,7 +53,7 @@ pageSections:
         category: Exoweld / C series
         title: CWE
         description: CWE is an Exoweld C series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/cwe.svg
+        image: /images/ccelect/products/cwe/diagram.svg
         imageAlt: CWE connection diagram
         specifications:
           - CWE

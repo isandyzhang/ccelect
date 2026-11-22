@@ -324,7 +324,7 @@ pageSections:
                     alignmentHorizontal: center
                     text: ISO 9001:2015
                   - _component: building-blocks/core-elements/image
-                    source: /src/assets/images/ccelect/legacy/iso-9001-2015-certificate.jpg
+                    source: /src/assets/images/ccelect/certifications/iso-9001-2015-certificate.jpg
                     alt: 集集電工業 ISO 9001:2015 品質管理系統證書
                     aspectRatio: landscape
                     rounded: true
@@ -346,7 +346,7 @@ pageSections:
                       title: 1981 台電型式試驗
                       description: 於桃園大東電線電纜完成熔接產品 type test，台電相關人員參與。
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-taipower-1.jpg
+                        source: /src/assets/images/ccelect/testing/taipower-1.jpg
                         alt: 1981 年台電型式試驗歷史照片
                         rounded: true
                       eyebrowIcon:
@@ -359,7 +359,7 @@ pageSections:
                       title: 1981 台電型式試驗（二）
                       description: 型式試驗現場紀錄照片。
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-taipower-2.jpg
+                        source: /src/assets/images/ccelect/testing/taipower-2.jpg
                         alt: 1981 年台電型式試驗歷史照片
                         rounded: true
                       eyebrowIcon:
@@ -372,7 +372,7 @@ pageSections:
                       title: 1999 UL 熔接試樣檢驗
                       description: 舊站記載共 54 種接頭接受大電流試驗，UL File E305374。
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-ul-1.jpg
+                        source: /src/assets/images/ccelect/testing/ul-1.jpg
                         alt: UL 熔接試樣大電流試驗歷史照片
                         rounded: true
                       eyebrowIcon:
@@ -385,7 +385,7 @@ pageSections:
                       title: 1999 UL 熔接試樣檢驗（二）
                       description: UL 大電流試驗現場紀錄。
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-ul-2.jpg
+                        source: /src/assets/images/ccelect/testing/ul-2.jpg
                         alt: UL 熔接試樣大電流試驗歷史照片
                         rounded: true
                       eyebrowIcon:
@@ -398,7 +398,7 @@ pageSections:
                       title: 2000 年大電流試驗
                       description: AWG 4/0 電纜與螺栓熱熔接試樣固定於試驗台架後進行大電流測試。
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-high-current-1.jpg
+                        source: /src/assets/images/ccelect/testing/high-current-1.jpg
                         alt: 熱熔接接點大電流試驗歷史照片
                         rounded: true
                       eyebrowIcon:
@@ -411,7 +411,7 @@ pageSections:
                       title: 2000 年大電流試驗（二）
                       description: 大電流試驗台架與試樣特寫。
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-high-current-2.jpg
+                        source: /src/assets/images/ccelect/testing/high-current-2.jpg
                         alt: 熱熔接接點大電流試驗歷史照片
                         rounded: true
                       eyebrowIcon:

@@ -325,7 +325,7 @@ pageSections:
             secondColumnContentSections:
               - _component: building-blocks/core-elements/image
                 id: ''
-                source: /src/assets/images/card-1.svg
+                source: /src/assets/images/template/card-1.svg
                 alt: ''
                 rounded: true
                 aspectRatio: none
@@ -378,7 +378,7 @@ pageSections:
             secondColumnContentSections:
               - _component: building-blocks/core-elements/image
                 id: ''
-                source: /src/assets/images/card-2.svg
+                source: /src/assets/images/template/card-2.svg
                 alt: ''
                 rounded: true
                 aspectRatio: none
@@ -432,7 +432,7 @@ pageSections:
             secondColumnContentSections:
               - _component: building-blocks/core-elements/image
                 id: ''
-                source: /src/assets/images/fin-trust.png
+                source: /src/assets/images/template/fin-trust.png
                 alt: ''
                 rounded: true
                 aspectRatio: none

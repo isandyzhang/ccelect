@@ -41,7 +41,7 @@ blocks:
           firstColumnContentSections:
             - _component: building-blocks/core-elements/image
               id: ''
-              source: /src/assets/images/medi-connect.png
+              source: /src/assets/images/template/medi-connect.png
               alt: Person thinking
               rounded: false
               aspectRatio: none
@@ -104,7 +104,7 @@ blocks:
           firstColumnContentSections:
             - _component: building-blocks/core-elements/image
               id: ''
-              source: /src/assets/images/fin-trust.png
+              source: /src/assets/images/template/fin-trust.png
               alt: Fintrust dashboard
               rounded: false
               aspectRatio: none

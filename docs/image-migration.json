@@ -1,0 +1,2590 @@
+[
+  {
+    "old": "public/images/ccelect/.brighten-bak/project-fab.jpg",
+    "new": "assets/archive/ccelect/public/before-brightening/project-fab.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "320772dd816b98260afe90ca0a29edc44c1b94c3a77e7f4fce64a0de76deca55",
+    "bytes": 214357
+  },
+  {
+    "old": "public/images/ccelect/.brighten-bak/project-hsr-enhanced.png",
+    "new": "assets/archive/ccelect/public/before-brightening/project-hsr-enhanced.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "06c80b40d07a67527fabe210a51ee1939fba1699431936818d76d2ea5fd4428d",
+    "bytes": 2077087
+  },
+  {
+    "old": "public/images/ccelect/.brighten-bak/project-incinerator.jpg",
+    "new": "assets/archive/ccelect/public/before-brightening/project-incinerator.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "954277dbdbb8667dfe000210a278afd94a024e10fff55b370d9580fde34286e2",
+    "bytes": 234416
+  },
+  {
+    "old": "public/images/ccelect/.brighten-bak/project-metro-enhanced.png",
+    "new": "assets/archive/ccelect/public/before-brightening/project-metro-enhanced.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "b53188d19457dae82eef59b6f62c49264fee73dcdd1e0ed1ed977e1efaa4d9c1",
+    "bytes": 2389178
+  },
+  {
+    "old": "public/images/ccelect/.brighten-bak/project-taipower-enhanced.png",
+    "new": "assets/archive/ccelect/public/before-brightening/project-taipower-enhanced.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "222bda3e279e2856bf9007331198349dcc5ff67263c952aa335553f1fa07eb4d",
+    "bytes": 1812840
+  },
+  {
+    "old": "public/images/ccelect/.brighten-bak/we/00-we-enhanced.jpg",
+    "new": "assets/archive/ccelect/public/before-brightening/we/00-we-enhanced.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "c332cf034ac0110e91c40687079d0e5ee1e20be7b34a03f7851509ee3ccd2be0",
+    "bytes": 130551
+  },
+  {
+    "old": "public/images/ccelect/.brighten-bak/we/04-joint-held-enhanced.jpg",
+    "new": "assets/archive/ccelect/public/before-brightening/we/04-joint-held-enhanced.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "ab313210878e8bbe6128fa50cbfd38afd073f903c0fb7bb42318c6cb78bc116e",
+    "bytes": 212280
+  },
+  {
+    "old": "public/images/ccelect/.brighten-bak/we/05-joint-enhanced.jpg",
+    "new": "assets/archive/ccelect/public/before-brightening/we/05-joint-enhanced.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "e05fdccffd8f10705621461c2a93e0a0a1d6e19d2a674a2028832d49b9c6412c",
+    "bytes": 170053
+  },
+  {
+    "old": "public/images/ccelect/.brighten-bak/wt/00-wt-enhanced.jpg",
+    "new": "assets/archive/ccelect/public/before-brightening/wt/00-wt-enhanced.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "fb0aadcce48082ee3d6e3034d5b4595c2b796de1aa8358b679dfc9732fc24bec",
+    "bytes": 147844
+  },
+  {
+    "old": "public/images/ccelect/.brighten-bak/wx/00-wx-enhanced.jpg",
+    "new": "assets/archive/ccelect/public/before-brightening/wx/00-wx-enhanced.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "7bdef4d408fa76c87c2fc3e6bdb46ae1f7cf34000953f9ef50ac8c50409b059f",
+    "bytes": 214505
+  },
+  {
+    "old": "public/images/ccelect/.brighten-bak/wxl/00-wxl-enhanced.jpg",
+    "new": "assets/archive/ccelect/public/before-brightening/wxl/00-wxl-enhanced.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "e1fa7b98f389aff357ffb56cf15b7f746475fa27484597174665e66b929d1cfd",
+    "bytes": 176165
+  },
+  {
+    "old": "public/images/ccelect/accessories/clamps-ignitor-source.jpg",
+    "new": "assets/source/ccelect/accessories/clamps-ignitor-source.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "437c5d059e55756a991aabe55b1ce12fe2d22eaa20decd1e1ed77fde80111b04",
+    "bytes": 30237
+  },
+  {
+    "old": "public/images/ccelect/accessories/clamps-ignitor.jpg",
+    "new": "public/images/ccelect/accessories/clamps-ignitor.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/ja/products/welding-tools.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/zh-tw/products/welding-tools.md",
+      "src/content/pages/en/products.md",
+      "src/content/pages/en/products/welding-tools.md"
+    ],
+    "sha256": "dd19635096b73da12f3c222825820a7fb7cbcbedf57153d1e3e8da8f6c652479",
+    "bytes": 219938
+  },
+  {
+    "old": "public/images/ccelect/accessories/field-tools.jpg",
+    "new": "public/images/ccelect/accessories/field-tools.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/ja/products/welding-tools.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/zh-tw/products/welding-tools.md",
+      "src/content/pages/en/products.md",
+      "src/content/pages/en/products/welding-tools.md"
+    ],
+    "sha256": "c996d53bc3a4ae76c8551d4f23c83f64b465e5a7d7d6510a5622ed96cbc4eeeb",
+    "bytes": 256283
+  },
+  {
+    "old": "public/images/ccelect/accessories/ground-plate-source.jpg",
+    "new": "assets/source/ccelect/accessories/ground-plate-source.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "ef1386157a41b4dc508d0638f2da5ab3bd239198409e62d351132503bd5db6a7",
+    "bytes": 31156
+  },
+  {
+    "old": "public/images/ccelect/accessories/ground-plate.jpg",
+    "new": "public/images/ccelect/accessories/ground-plate.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/grounding-materials.md",
+      "src/content/pages/zh-tw/products/grounding-materials.md",
+      "src/content/pages/en/products/grounding-materials.md"
+    ],
+    "sha256": "413b3b41879d7c0fb73adf0c23989f24ada6aed43d49e49b551b63daaf596704",
+    "bytes": 242436
+  },
+  {
+    "old": "public/images/ccelect/accessories/mold-powder-source.jpg",
+    "new": "assets/source/ccelect/accessories/mold-powder-source.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "005d4a3caaecb1e2915edaf7be477a07a698f6293c69ec2803fb2bdaf5d8f1f0",
+    "bytes": 40098
+  },
+  {
+    "old": "public/images/ccelect/accessories/mold-powder.jpg",
+    "new": "public/images/ccelect/accessories/mold-powder.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/ja/products/welding-tools.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/zh-tw/products/welding-tools.md",
+      "src/content/pages/en/products.md",
+      "src/content/pages/en/products/welding-tools.md"
+    ],
+    "sha256": "41c64a37f44fd1172d7918171e7b5a58029f12400ff8fbf8473ca12059e85aa1",
+    "bytes": 339697
+  },
+  {
+    "old": "public/images/ccelect/banner-ignition.jpg",
+    "new": "public/images/ccelect/home/ignition-poster.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/zh-tw/index.md"
+    ],
+    "sha256": "76913ada988b1dc0a40ce15eb215921dc210fc31ff4c0ad1e748e0f6fd71b8fc",
+    "bytes": 73075
+  },
+  {
+    "old": "public/images/ccelect/banner.png",
+    "new": "assets/archive/ccelect/public/banner.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "d63199867081efeb5bf733ee51032e7cfda4aaa06c3c3a88bb247f63b79f4e92",
+    "bytes": 1383473
+  },
+  {
+    "old": "public/images/ccelect/brush/IMG_0376.JPG",
+    "new": "assets/source/ccelect/accessories/brush/brush-0376.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "30fb55b2002a0f72551590c0dba536f3848c59a1116109eaa75394fe10a9872e",
+    "bytes": 3083164
+  },
+  {
+    "old": "public/images/ccelect/brush/IMG_0377.JPG",
+    "new": "assets/source/ccelect/accessories/brush/brush-0377.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "117c4b8be8e8af01257b82054108bde13fe81e456379ce58b57b3efdaee9f4e9",
+    "bytes": 1885083
+  },
+  {
+    "old": "public/images/ccelect/brush/IMG_0378.JPG",
+    "new": "assets/source/ccelect/accessories/brush/brush-0378.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "ceec065700ac5defb1d36a6a53742b733ceb8649999fd5ced0c1bd4914b015b1",
+    "bytes": 2910668
+  },
+  {
+    "old": "public/images/ccelect/brush/IMG_0379.JPG",
+    "new": "assets/source/ccelect/accessories/brush/brush-0379.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "5f215004898787864264afabb8ed42d4253486e4521211d2958350be29dea424",
+    "bytes": 2491800
+  },
+  {
+    "old": "public/images/ccelect/clean-shave/IMG_0387.JPG",
+    "new": "assets/source/ccelect/accessories/clean-shave/clean-shave-0387.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "7e9580034bf700d6e11c155a460dc64a7e2ee9f12fbd94b179c3d2fcf53a6e8d",
+    "bytes": 4166444
+  },
+  {
+    "old": "public/images/ccelect/clean-shave/IMG_0388.JPG",
+    "new": "assets/source/ccelect/accessories/clean-shave/clean-shave-0388.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "a102bcda5951bf20d87ac21c1e0f550f033b10bc67ee346f7ce8cee96adb2065",
+    "bytes": 4992241
+  },
+  {
+    "old": "public/images/ccelect/diagrams/be.svg",
+    "new": "public/images/ccelect/products/be/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/b-series.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/b-series.md",
+      "src/content/pages/en/products.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/b-series.md"
+    ],
+    "sha256": "f72caa8b641508b4bdcb5dbd6d63bdee2bf8c9c971a8951a416e287d041fa16b",
+    "bytes": 43356
+  },
+  {
+    "old": "public/images/ccelect/diagrams/beh.svg",
+    "new": "public/images/ccelect/products/beh/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/b-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/b-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/b-series.md"
+    ],
+    "sha256": "dc0e8db8e2de5188907504e7de5a9a1d249707f91a560c8594fa0b479ff3527e",
+    "bytes": 43360
+  },
+  {
+    "old": "public/images/ccelect/diagrams/bs.svg",
+    "new": "public/images/ccelect/products/bs/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/b-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/b-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/b-series.md"
+    ],
+    "sha256": "6ebcf4d9c1965ef8168cad6d8ddefdc73ec5d3abc8b61572d57a532944ce0185",
+    "bytes": 63742
+  },
+  {
+    "old": "public/images/ccelect/diagrams/bt.svg",
+    "new": "public/images/ccelect/products/bt/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/b-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/b-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/b-series.md"
+    ],
+    "sha256": "6708658f9b75cd17c6a3675c6ab44d4a06591ed4e567c60225006992d43db1e3",
+    "bytes": 55126
+  },
+  {
+    "old": "public/images/ccelect/diagrams/btv.svg",
+    "new": "public/images/ccelect/products/btv/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/b-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/b-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/b-series.md"
+    ],
+    "sha256": "c81e0264e858e30e69445b9f114079ee341dca34258fc0efce13f8d3d7d37245",
+    "bytes": 55126
+  },
+  {
+    "old": "public/images/ccelect/diagrams/bves.svg",
+    "new": "public/images/ccelect/products/bves/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/b-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/b-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/b-series.md"
+    ],
+    "sha256": "b1cbcd7b0aae74c1047a6297a0c4788c1941a89b1b9cb48bfdbc46699917194d",
+    "bytes": 10340
+  },
+  {
+    "old": "public/images/ccelect/diagrams/bx.svg",
+    "new": "public/images/ccelect/products/bx/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/b-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/b-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/b-series.md"
+    ],
+    "sha256": "b367e14c4c21be0d823b8b662f4e2f2654c9ad67b9229bbee23c205439555302",
+    "bytes": 63746
+  },
+  {
+    "old": "public/images/ccelect/diagrams/cshea.svg",
+    "new": "public/images/ccelect/products/cshea/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/c-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/c-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/c-series.md"
+    ],
+    "sha256": "a7e8f20574dd4518b1f005626e7b12fee89d96413a67bef63ee59902eaf45728",
+    "bytes": 121506
+  },
+  {
+    "old": "public/images/ccelect/diagrams/cshta.svg",
+    "new": "public/images/ccelect/products/cshta/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/c-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/c-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/c-series.md"
+    ],
+    "sha256": "3774163e68dbbdcbd04ba9e90984b6432e2d504b0a937027219d742939b0e83b",
+    "bytes": 121508
+  },
+  {
+    "old": "public/images/ccelect/diagrams/csves.svg",
+    "new": "public/images/ccelect/products/csves/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/c-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/c-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/c-series.md"
+    ],
+    "sha256": "92f7988457268387eba3d542600f902dec680dd18aeaa45d5844c191d69f8447",
+    "bytes": 121508
+  },
+  {
+    "old": "public/images/ccelect/diagrams/cwe.svg",
+    "new": "public/images/ccelect/products/cwe/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/c-series.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/c-series.md",
+      "src/content/pages/en/products.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/c-series.md"
+    ],
+    "sha256": "b473b1c4064675896073ec8fd806d15ddf0280c4d0c92d6f8b1749484ca0d8ec",
+    "bytes": 33588
+  },
+  {
+    "old": "public/images/ccelect/diagrams/cwl.svg",
+    "new": "public/images/ccelect/products/cwl/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/c-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/c-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/c-series.md"
+    ],
+    "sha256": "0e30cdb2bc7aba314f50609c66a72e262cbd43df2d99cc985df15341e3b60c62",
+    "bytes": 33586
+  },
+  {
+    "old": "public/images/ccelect/diagrams/erb.svg",
+    "new": "public/images/ccelect/products/erb/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/e-series.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/e-series.md",
+      "src/content/pages/en/products.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/e-series.md"
+    ],
+    "sha256": "98a1f6807306f6695e3ee31bdf1b9567f891275c70a7546b4da311efd11661cf",
+    "bytes": 128386
+  },
+  {
+    "old": "public/images/ccelect/diagrams/ert.svg",
+    "new": "public/images/ccelect/products/ert/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/e-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/e-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/e-series.md"
+    ],
+    "sha256": "0fe9b3474a585a649ea3e712e079ab2213adf6b25db2a3de3e879c880abab3b7",
+    "bytes": 128388
+  },
+  {
+    "old": "public/images/ccelect/diagrams/erw.svg",
+    "new": "public/images/ccelect/products/erw/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/e-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/e-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/e-series.md"
+    ],
+    "sha256": "84b40b1c2c5af75372c64f403f195e09cfd404552a7a583ad3bd0214ba680394",
+    "bytes": 128388
+  },
+  {
+    "old": "public/images/ccelect/diagrams/gee.jpg",
+    "new": "public/images/ccelect/products/gee/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/en/products.md",
+      "src/content/pages/en/products/exoweld.md"
+    ],
+    "sha256": "e859f41f94b1416b9014f90710a52d71d154bdc4b9dad26fdc4f883afa854a1f",
+    "bytes": 81364
+  },
+  {
+    "old": "public/images/ccelect/diagrams/gep.jpg",
+    "new": "public/images/ccelect/products/gep/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/en/products/exoweld.md"
+    ],
+    "sha256": "0f13d13e5c9a5b07d7f820723daff28046a45028750907d64d3d593580edcecd",
+    "bytes": 91505
+  },
+  {
+    "old": "public/images/ccelect/diagrams/get.jpg",
+    "new": "public/images/ccelect/products/get/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/en/products/exoweld.md"
+    ],
+    "sha256": "f650454a7c2e2b2f14bed0eeff30426137db9fae63dc31f49519fb5605a8f1e6",
+    "bytes": 56945
+  },
+  {
+    "old": "public/images/ccelect/diagrams/gey.jpg",
+    "new": "public/images/ccelect/products/gey/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/en/products/exoweld.md"
+    ],
+    "sha256": "e2bdbf2cb5ea558112689a4e40847460300345db61583e54172235d68418a4bf",
+    "bytes": 76229
+  },
+  {
+    "old": "public/images/ccelect/diagrams/gst.jpg",
+    "new": "public/images/ccelect/products/gst/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/en/products/exoweld.md"
+    ],
+    "sha256": "98d20e85eccc3260f9ba2e898855318cef85ab0d6d09dfe1755ba1bb363f5659",
+    "bytes": 85057
+  },
+  {
+    "old": "public/images/ccelect/diagrams/pk.svg",
+    "new": "public/images/ccelect/products/pk/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/p-series.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/p-series.md",
+      "src/content/pages/en/products.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/p-series.md"
+    ],
+    "sha256": "f5b3219ec1f348a0737cc42485f444e95f4954faf6a771153a501e884cad6952",
+    "bytes": 19596
+  },
+  {
+    "old": "public/images/ccelect/diagrams/pt.svg",
+    "new": "public/images/ccelect/products/pt/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/p-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/p-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/p-series.md"
+    ],
+    "sha256": "a388a5c42c7c6c6a56c2c61de4fd70002daf6dee0255ba2e9317b4c34c6ca716",
+    "bytes": 35952
+  },
+  {
+    "old": "public/images/ccelect/diagrams/pv.svg",
+    "new": "public/images/ccelect/products/pv/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/p-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/p-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/p-series.md"
+    ],
+    "sha256": "49257efc2f37f004e9b5d79159dc7b8546e53223cc78fede624b17a5fba1fe33",
+    "bytes": 27712
+  },
+  {
+    "old": "public/images/ccelect/diagrams/py.svg",
+    "new": "public/images/ccelect/products/py/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/p-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/p-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/p-series.md"
+    ],
+    "sha256": "e38b941afb4865601821d345abbac93d808450d75047e95bbc0fe21d6d28eed4",
+    "bytes": 27714
+  },
+  {
+    "old": "public/images/ccelect/diagrams/rheh.jpg",
+    "new": "public/images/ccelect/products/rheh/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/en/products.md",
+      "src/content/pages/en/products/exoweld.md"
+    ],
+    "sha256": "78a0f9dc586e4eefd0c8399080ba4c01c9b3923b61d9ae2720c0d42b760b6324",
+    "bytes": 106014
+  },
+  {
+    "old": "public/images/ccelect/diagrams/rhxh.jpg",
+    "new": "public/images/ccelect/products/rhxh/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/en/products/exoweld.md"
+    ],
+    "sha256": "f98f039925eae86119fa1b992e8bd0772d6bad15d0429042ad6ff1188beed968",
+    "bytes": 115009
+  },
+  {
+    "old": "public/images/ccelect/diagrams/shea.jpg",
+    "new": "public/images/ccelect/products/shea/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/en/products.md",
+      "src/content/pages/en/products/exoweld.md"
+    ],
+    "sha256": "1fc8abf6578c73d1af9cf728874e7ae32b6c15ebabb8e54f3225924f54cf74bd",
+    "bytes": 90918
+  },
+  {
+    "old": "public/images/ccelect/diagrams/sheb.jpg",
+    "new": "public/images/ccelect/products/sheb/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/en/products/exoweld.md"
+    ],
+    "sha256": "9c5a15fac00204e1cdeac46ba24185a0ad690ecee02df2848c3c1ae6c54a29ce",
+    "bytes": 86320
+  },
+  {
+    "old": "public/images/ccelect/diagrams/sves.jpg",
+    "new": "public/images/ccelect/products/sves/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/en/products/exoweld.md"
+    ],
+    "sha256": "d3acabc5e3fc8bbcc1584a8d4af641d09ae26e6c3afec9c0da84b0514d65b44e",
+    "bytes": 72116
+  },
+  {
+    "old": "public/images/ccelect/diagrams/we-conductors.png",
+    "new": "public/images/ccelect/products/we/diagram-conductors.png",
+    "category": "published",
+    "references": [
+      "src/data/exoweld/mold-options.json"
+    ],
+    "sha256": "49750029d8959b28ec2785a2b61c8448f526ce3a4d727f7f416b126a187377af",
+    "bytes": 20449
+  },
+  {
+    "old": "public/images/ccelect/diagrams/we.jpg",
+    "new": "public/images/ccelect/products/we/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/en/products.md"
+    ],
+    "sha256": "ef15a1b83c14b58fb7db896ec3e8f8731d80f1260e24d1f888a157f3da7df305",
+    "bytes": 89358
+  },
+  {
+    "old": "public/images/ccelect/diagrams/we.svg",
+    "new": "public/images/ccelect/products/we/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/w-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/w-series.md"
+    ],
+    "sha256": "f83f9d3078ce6ef85329c4e700cc94b460d2267d9cb1ec15101f77090a54fb7a",
+    "bytes": 119619
+  },
+  {
+    "old": "public/images/ccelect/diagrams/wl.jpg",
+    "new": "public/images/ccelect/products/wl/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/w-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/w-series.md"
+    ],
+    "sha256": "637d2ee02e3cf478627eeafd5b6f1ff7d62989102f03fe63a2c0ed89a1d462cb",
+    "bytes": 85074
+  },
+  {
+    "old": "public/images/ccelect/diagrams/wp.jpg",
+    "new": "public/images/ccelect/products/wp/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/w-series.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/w-series.md"
+    ],
+    "sha256": "e4bb6095a03be6bbb26e867c0a1d15832843e8f9951159cb28a2a7942a9b605a",
+    "bytes": 109599
+  },
+  {
+    "old": "public/images/ccelect/diagrams/wt.jpg",
+    "new": "public/images/ccelect/products/wt/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/w-series.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series.md",
+      "src/content/pages/en/products.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/w-series.md"
+    ],
+    "sha256": "506e8c290c2c52a805b3551ccad6d0b2aa434b36d28ba8b8f56a02106d91a1a5",
+    "bytes": 101378
+  },
+  {
+    "old": "public/images/ccelect/diagrams/wx.jpg",
+    "new": "assets/archive/ccelect/public/diagrams/wx.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "df92af4dfa80f096c57d128edab61af170035007c256594c1c44523c90f5963b",
+    "bytes": 111180
+  },
+  {
+    "old": "public/images/ccelect/diagrams/wx.svg",
+    "new": "public/images/ccelect/products/wx/diagram.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/w-series.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series.md",
+      "src/content/pages/en/products.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/w-series.md"
+    ],
+    "sha256": "a2bd11a5a42dd135be8fd7183a36a8891095379d0b877516ea86716b776bcac9",
+    "bytes": 148715
+  },
+  {
+    "old": "public/images/ccelect/diagrams/wxl.jpg",
+    "new": "public/images/ccelect/products/wxl/diagram.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/ja/products/exoweld.md",
+      "src/content/pages/ja/products/exoweld/w-series.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/zh-tw/products/exoweld.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series.md",
+      "src/content/pages/en/products.md",
+      "src/content/pages/en/products/exoweld.md",
+      "src/content/pages/en/products/exoweld/w-series.md"
+    ],
+    "sha256": "1f3600b96fa10e1a37ce068b8b51d5bc6203403c929a8931f5435e31875f228b",
+    "bytes": 109493
+  },
+  {
+    "old": "public/images/ccelect/grounding/grounding-ascii-concept.png",
+    "new": "assets/archive/ccelect/public/grounding/grounding-ascii-concept.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "78a5710c1290b06a0ecc626d8310b085b0d60878d09b74efab44c8547e8cab54",
+    "bytes": 2398417
+  },
+  {
+    "old": "public/images/ccelect/grounding/grounding-scene-clean.png",
+    "new": "assets/archive/ccelect/public/grounding/grounding-scene-clean.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "77b5fb703540af9a0b599befe02a3b6a3a183a7c252d10bb22f561ea73c04089",
+    "bytes": 1621511
+  },
+  {
+    "old": "public/images/ccelect/grounding/grounding-scene-copper.jpg",
+    "new": "public/images/ccelect/grounding/scene-copper.jpg",
+    "category": "published",
+    "references": [
+      "src/components/page-sections/features/grounding-experience/GroundingExperience.astro"
+    ],
+    "sha256": "36a52d9bc130ab28d9ed6c209522346d2de3fca68a42d000bbdf4dbeae2132d1",
+    "bytes": 206352
+  },
+  {
+    "old": "public/images/ccelect/grounding/grounding-scene-powered.jpg",
+    "new": "public/images/ccelect/grounding/scene-powered.jpg",
+    "category": "published",
+    "references": [
+      "src/components/page-sections/features/grounding-experience/GroundingExperience.astro"
+    ],
+    "sha256": "415c0d5fc0cabd0fbcfa5b6c6804996b4dd0fa39c885f5d6f2cf6ed80c5ddab5",
+    "bytes": 170118
+  },
+  {
+    "old": "public/images/ccelect/grounding/grounding-scene-structures.jpg",
+    "new": "public/images/ccelect/grounding/scene-structures.jpg",
+    "category": "published",
+    "references": [
+      "src/components/page-sections/features/grounding-experience/GroundingExperience.astro"
+    ],
+    "sha256": "429210e59ff0ef167cd993cb29ac064c85aaa972b5fc32fbf9708e2a20422f27",
+    "bytes": 149526
+  },
+  {
+    "old": "public/images/ccelect/handle/IMG_0380.JPG",
+    "new": "assets/source/ccelect/accessories/handle/handle-0380.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "c3b7ce5124b5b5ded2c09f64ccd008d10d985dcebe6449d599391edf85df8a77",
+    "bytes": 4913253
+  },
+  {
+    "old": "public/images/ccelect/handle/IMG_0381.JPG",
+    "new": "assets/source/ccelect/accessories/handle/handle-0381.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "52caa7735c49b075536f09e7f1d7e419c53c6c65904c0bab184ed1931b6c80c6",
+    "bytes": 2384871
+  },
+  {
+    "old": "public/images/ccelect/handle/IMG_0382.JPG",
+    "new": "assets/source/ccelect/accessories/handle/handle-0382.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "8958d9566404f63ae7164d702167bbf0e123f896446068b926d6847c81487705",
+    "bytes": 2181355
+  },
+  {
+    "old": "public/images/ccelect/handle/IMG_0383.JPG",
+    "new": "assets/source/ccelect/accessories/handle/handle-0383.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "f8f9f348b8899bd67e36142023edde3b2700cf07ae977042e817d27882a13795",
+    "bytes": 2606538
+  },
+  {
+    "old": "public/images/ccelect/handle/IMG_0389.JPG",
+    "new": "assets/source/ccelect/accessories/handle/handle-0389.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "94949859598422012df78793f2ba8c4d96a4cb3e3d542600e31430d63e93dc69",
+    "bytes": 4653468
+  },
+  {
+    "old": "public/images/ccelect/handle/IMG_0390.JPG",
+    "new": "assets/source/ccelect/accessories/handle/handle-0390.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "5cd45ffbe96022b09cc0910939de711c0fe3c0838c3e4e547e61e6517573ee39",
+    "bytes": 2340843
+  },
+  {
+    "old": "public/images/ccelect/handle/IMG_0391.JPG",
+    "new": "assets/source/ccelect/accessories/handle/handle-0391.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "f39d796985047f47ec83cef2086734685dac0bc1b1b6448322eae6b8eba50d26",
+    "bytes": 3856387
+  },
+  {
+    "old": "public/images/ccelect/handle/IMG_0392.JPG",
+    "new": "assets/source/ccelect/accessories/handle/handle-0392.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "4b0529b893e72f5f606e2c45e5c93def541773db5cf6532e1e9336a302860a6d",
+    "bytes": 4809999
+  },
+  {
+    "old": "public/images/ccelect/handle/IMG_0393.JPG",
+    "new": "assets/source/ccelect/accessories/handle/handle-0393.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "e54956b015741ab76088b5b85ae8affb2c108478d050ccb6a6336477eee9dd00",
+    "bytes": 5006658
+  },
+  {
+    "old": "public/images/ccelect/handle/IMG_0394.JPG",
+    "new": "assets/source/ccelect/accessories/handle/handle-0394.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "d60724636efdc831537eb44945a330508713e1896f30c0a0948eaae1e245e0f4",
+    "bytes": 1359956
+  },
+  {
+    "old": "public/images/ccelect/handle/IMG_0395.JPG",
+    "new": "assets/source/ccelect/accessories/handle/handle-0395.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "425f6012076d1f5b011689ed335e441f4e93d9fe683089cbb6a3451c38a9442c",
+    "bytes": 1878501
+  },
+  {
+    "old": "public/images/ccelect/handle/IMG_0396.JPG",
+    "new": "assets/source/ccelect/accessories/handle/handle-0396.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "46e46db7384247b960efefd63e1999f800d149c2ca470071b8801fba3f463886",
+    "bytes": 4778629
+  },
+  {
+    "old": "public/images/ccelect/lighter/IMG_0384.JPG",
+    "new": "assets/source/ccelect/accessories/lighter/lighter-0384.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "8deb624145ce5911ac4974bdc33d63fcd483981678ed1b8d612380fde0091604",
+    "bytes": 4089487
+  },
+  {
+    "old": "public/images/ccelect/lighter/IMG_0385.JPG",
+    "new": "assets/source/ccelect/accessories/lighter/lighter-0385.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "aa58c019a3bed813a2aaa31ce08fb389f9880d43cde9639a4245802538a13021",
+    "bytes": 1543727
+  },
+  {
+    "old": "public/images/ccelect/lighter/IMG_0386.JPG",
+    "new": "assets/source/ccelect/accessories/lighter/lighter-0386.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "c986aa4d21ed4fb373e538515ca5c7a73da9107fc8aa28e5dae38ffa0b0b1d4a",
+    "bytes": 1587155
+  },
+  {
+    "old": "public/images/ccelect/lineup/we-cut.png",
+    "new": "public/images/ccelect/products/we/cutout.png",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/en/products.md"
+    ],
+    "sha256": "feeddca16c7ca56156af79feab48d1c5b896441f58221677262e94bef1ed6b67",
+    "bytes": 395857
+  },
+  {
+    "old": "public/images/ccelect/lineup/wl-cut-v2.png",
+    "new": "public/images/ccelect/products/wl/cutout.png",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/en/products.md"
+    ],
+    "sha256": "2db8b26717b5587c42c79cfec0bae061c9c4a5a6d5dcb591adb327ce59a11021",
+    "bytes": 895825
+  },
+  {
+    "old": "public/images/ccelect/lineup/wl-joint.png",
+    "new": "assets/archive/ccelect/public/lineup/wl-joint.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "f307312be6cb6f43d0e5943513cdaeed034b86e6f49eb43908a883416de41fb7",
+    "bytes": 135739
+  },
+  {
+    "old": "public/images/ccelect/lineup/wp-cut-v2.png",
+    "new": "public/images/ccelect/products/wp/cutout.png",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/en/products.md"
+    ],
+    "sha256": "1bcc42fb07113188f05fe7cf5eacefb4778864b9443302da0bf82edfdcced735",
+    "bytes": 807747
+  },
+  {
+    "old": "public/images/ccelect/lineup/wp-cut.png",
+    "new": "assets/archive/ccelect/public/lineup/wp-cut.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "4b7b78192d869cf3a50f08e410e56069925430c30b532f2d9d93e515fc066bed",
+    "bytes": 580295
+  },
+  {
+    "old": "public/images/ccelect/lineup/wp-joint-ai.jpg",
+    "new": "assets/archive/ccelect/public/lineup/wp-joint-ai.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "e656186fab4f189ff775511fe8aa5eb2e1d4a644e0b0e76a4e524eb91a5221f4",
+    "bytes": 160428
+  },
+  {
+    "old": "public/images/ccelect/lineup/wp-joint.png",
+    "new": "assets/archive/ccelect/public/lineup/wp-joint.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "cb2cc3f59c37992e38623fb00c4e846bc1f86f3c789a63204eaade0e9e32ffe1",
+    "bytes": 206371
+  },
+  {
+    "old": "public/images/ccelect/lineup/wt-cut.png",
+    "new": "public/images/ccelect/products/wt/cutout.png",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/en/products.md"
+    ],
+    "sha256": "3b5dd4e85fc0f9a5435053d32212da0b1015541f757a6e12bb4abe16574b34af",
+    "bytes": 352772
+  },
+  {
+    "old": "public/images/ccelect/lineup/wx-cut.png",
+    "new": "public/images/ccelect/products/wx/cutout.png",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/en/products.md"
+    ],
+    "sha256": "85df0f9824a22d9bce9d3df7a92ba5d0f65127c2a7f701ab3a4548b44c4559b8",
+    "bytes": 545605
+  },
+  {
+    "old": "public/images/ccelect/lineup/wxl-cut-v2.png",
+    "new": "public/images/ccelect/products/wxl/cutout.png",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/en/products.md"
+    ],
+    "sha256": "1a6e9e6c24a97f13e49f45f5aa888db2fe9fcf28e387cd144800e99a8aed8fd7",
+    "bytes": 1008822
+  },
+  {
+    "old": "public/images/ccelect/lineup/wxl-cut.png",
+    "new": "assets/archive/ccelect/public/lineup/wxl-cut.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "5d3c104873ad8107c2f756b5a18939ea1224d442746f312569f26de1d2af2cdb",
+    "bytes": 579167
+  },
+  {
+    "old": "public/images/ccelect/logo-black.png",
+    "new": "public/images/ccelect/brand/logo-black.png",
+    "category": "published",
+    "references": [
+      "src/data/ja/footer.json",
+      "src/data/ja/mainNav.json",
+      "src/data/ja/seo.json",
+      "src/data/zh-tw/footer.json",
+      "src/data/zh-tw/mainNav.json",
+      "src/data/zh-tw/seo.json",
+      "src/data/en/footer.json",
+      "src/data/en/mainNav.json",
+      "src/data/en/seo.json"
+    ],
+    "sha256": "171cd1b8a7bdc6376c88bf375c035ed27b9937d8ce41217c2399be447bd99765",
+    "bytes": 29763
+  },
+  {
+    "old": "public/images/ccelect/logo-white.png",
+    "new": "public/images/ccelect/brand/logo-white.png",
+    "category": "published",
+    "references": [
+      "src/data/ja/footer.json",
+      "src/data/ja/mainNav.json",
+      "src/data/zh-tw/footer.json",
+      "src/data/zh-tw/mainNav.json",
+      "src/data/en/footer.json",
+      "src/data/en/mainNav.json"
+    ],
+    "sha256": "e2b4616628b9eac4add1c7417b26265f90132a834eb86a9eee7b5639d0903e49",
+    "bytes": 29702
+  },
+  {
+    "old": "public/images/ccelect/prd-display-enhanced.png",
+    "new": "public/images/ccelect/home/product-display.png",
+    "category": "published",
+    "references": [
+      "src/content/pages/zh-tw/index.md"
+    ],
+    "sha256": "19d326274c7548691d764d1448811398200ed7334723f8357e7e7a4cfaf4589e",
+    "bytes": 213930
+  },
+  {
+    "old": "public/images/ccelect/project-fab.jpg",
+    "new": "public/images/ccelect/projects/fab.jpg",
+    "category": "published",
+    "references": [
+      "scripts/build-project-hover-videos.mjs",
+      "src/content/pages/zh-tw/index.md"
+    ],
+    "sha256": "10ebfe5945a1899239cd0b5f473a205b37c5c1e57ecde4b29ab89b5762518636",
+    "bytes": 249330
+  },
+  {
+    "old": "public/images/ccelect/project-hsr-enhanced.png",
+    "new": "assets/archive/ccelect/public/project-hsr-enhanced.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "86bd6787f416baaf6cc72b4ae851fded338d310651fda857cc4668087186ec68",
+    "bytes": 2542447
+  },
+  {
+    "old": "public/images/ccelect/project-hsr-retouched.webp",
+    "new": "public/images/ccelect/projects/hsr.webp",
+    "category": "published",
+    "references": [
+      "src/content/pages/zh-tw/index.md"
+    ],
+    "sha256": "76b8b4272a3c7d871ba8a53656293345395adc92a5b35d422f398bf2765288a3",
+    "bytes": 487040
+  },
+  {
+    "old": "public/images/ccelect/project-incinerator.jpg",
+    "new": "public/images/ccelect/projects/incinerator.jpg",
+    "category": "published",
+    "references": [
+      "scripts/build-project-hover-videos.mjs",
+      "src/content/pages/zh-tw/index.md"
+    ],
+    "sha256": "e49d0d2315106ff8bd2b7eb216c512ac40188141e90180ccee391f997f6379e5",
+    "bytes": 279139
+  },
+  {
+    "old": "public/images/ccelect/project-metro-enhanced.png",
+    "new": "assets/archive/ccelect/public/project-metro-enhanced.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "0f908e227d4f1e41d1417a4c006348dbfa77c4fea3b58344d23ac29f4811590c",
+    "bytes": 2280042
+  },
+  {
+    "old": "public/images/ccelect/project-metro-retouched.webp",
+    "new": "public/images/ccelect/projects/metro.webp",
+    "category": "published",
+    "references": [
+      "scripts/build-project-hover-videos.mjs",
+      "src/content/pages/zh-tw/index.md"
+    ],
+    "sha256": "d593e369377d4eb0381d705d5b1763b17ca422be2f71023dfa815b36a247ef23",
+    "bytes": 427290
+  },
+  {
+    "old": "public/images/ccelect/project-taipower-enhanced.png",
+    "new": "assets/archive/ccelect/public/project-taipower-enhanced.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "2491adb6e0befd4179b331c07340707c1d91e672ca0bc776ab08e5b7c10a5a2a",
+    "bytes": 2200631
+  },
+  {
+    "old": "public/images/ccelect/project-taipower-retouched.webp",
+    "new": "public/images/ccelect/projects/taipower.webp",
+    "category": "published",
+    "references": [
+      "src/content/pages/zh-tw/index.md"
+    ],
+    "sha256": "cf19bd17d1933180940c06557a8349fc764f57aba237796283d6fad2539f5aae",
+    "bytes": 329458
+  },
+  {
+    "old": "public/images/ccelect/we/00-we-enhanced.jpg",
+    "new": "public/images/ccelect/products/we/photo-hero.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series.md",
+      "src/content/pages/ja/products/exoweld/w-series/we.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/we.md",
+      "src/content/pages/en/products/exoweld/w-series.md",
+      "src/content/pages/en/products/exoweld/w-series/we.md"
+    ],
+    "sha256": "cced960a2ec993c716f50c65b871678c72e3a3c8424875683d1dc683d95f85d0",
+    "bytes": 70033
+  },
+  {
+    "old": "public/images/ccelect/we/00-we.JPG",
+    "new": "assets/source/ccelect/products/we/00-we.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "db7def53ce933e0e94c1995b912e2b4d76b3e3ac85e65d8e54da8719fefb6fc8",
+    "bytes": 2000716
+  },
+  {
+    "old": "public/images/ccelect/we/01-mold-enhanced.jpg",
+    "new": "public/images/ccelect/products/we/photo-mold.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series/we.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/we.md",
+      "src/content/pages/en/products/exoweld/w-series/we.md"
+    ],
+    "sha256": "e56f3a138a18d7669464788ce9ea2205912386b113d93c9a098f8eb7ab93c0a3",
+    "bytes": 197765
+  },
+  {
+    "old": "public/images/ccelect/we/01-mold.jpg",
+    "new": "assets/source/ccelect/products/we/01-mold.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "3422f652eb4ce3fb479cfe5961c27b19512abcae66acbed55f8e2291fc427b77",
+    "bytes": 2439023
+  },
+  {
+    "old": "public/images/ccelect/we/02-mold-open-enhanced.jpg",
+    "new": "public/images/ccelect/products/we/photo-mold-open.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series.md",
+      "src/content/pages/ja/products/exoweld/w-series/we.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/we.md",
+      "src/content/pages/en/products/exoweld/w-series.md",
+      "src/content/pages/en/products/exoweld/w-series/we.md"
+    ],
+    "sha256": "e21fc154926a124115f355bd1845cd4f26d210c0e2ce790fc8c0ca29811c6e1b",
+    "bytes": 175261
+  },
+  {
+    "old": "public/images/ccelect/we/02-mold-open.jpg",
+    "new": "assets/source/ccelect/products/we/02-mold-open.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "82ec15b574e20a8baffeced5db8d8a932da25f667645e1879ab587cc228a60d1",
+    "bytes": 2571960
+  },
+  {
+    "old": "public/images/ccelect/we/03-setup-enhanced.jpg",
+    "new": "public/images/ccelect/products/we/photo-setup.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series/we.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/we.md",
+      "src/content/pages/en/products/exoweld/w-series/we.md"
+    ],
+    "sha256": "dd7d757ab350281bf531e00a94d84c60236c0c3f04058ebf819373036f25899e",
+    "bytes": 218255
+  },
+  {
+    "old": "public/images/ccelect/we/03-setup.jpg",
+    "new": "assets/source/ccelect/products/we/03-setup.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "89104f5de0294c2d9604248b705a590bc053b859446c485782dc5d2d8c0e0327",
+    "bytes": 722023
+  },
+  {
+    "old": "public/images/ccelect/we/04-joint-held-enhanced.jpg",
+    "new": "assets/archive/ccelect/public/we/04-joint-held-enhanced.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "dcb92da497689d2998af4233f00445421b14fb32e9aa629bc85b390eeea3cae4",
+    "bytes": 142596
+  },
+  {
+    "old": "public/images/ccelect/we/04-joint-held.jpg",
+    "new": "assets/source/ccelect/products/we/04-joint-held.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "58d718a7a0753b1b4688d8721c764dc2645fdcf3b64c2622e54127445737515d",
+    "bytes": 609922
+  },
+  {
+    "old": "public/images/ccelect/we/05-joint-enhanced.jpg",
+    "new": "assets/archive/ccelect/public/we/05-joint-enhanced.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "46a4649ae901c1eaa66d14b5d1b05ed5b21c87d9dba03dc1c9e8988856fe17ad",
+    "bytes": 86324
+  },
+  {
+    "old": "public/images/ccelect/we/05-joint.jpg",
+    "new": "assets/source/ccelect/products/we/05-joint.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "45b1e6c653aa4d4d64439400ff461ebde3519ca618214743fd40d3488f58a4a3",
+    "bytes": 550708
+  },
+  {
+    "old": "public/images/ccelect/we/we-cad.svg",
+    "new": "assets/archive/ccelect/public/we/we-cad.svg",
+    "category": "archive",
+    "references": [],
+    "sha256": "a5ea40c09aa8ab26e15ee6ef47b21b0c114a88575fd4a1c2e65c420183d45631",
+    "bytes": 1289
+  },
+  {
+    "old": "public/images/ccelect/we/we-wes-cad.jpg",
+    "new": "public/images/ccelect/products/we/diagram.jpg",
+    "category": "duplicate",
+    "references": [],
+    "sha256": "ef15a1b83c14b58fb7db896ec3e8f8731d80f1260e24d1f888a157f3da7df305",
+    "bytes": 89358
+  },
+  {
+    "old": "public/images/ccelect/wt/00-wt-enhanced.jpg",
+    "new": "public/images/ccelect/products/wt/photo-hero.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series.md",
+      "src/content/pages/ja/products/exoweld/w-series/wt.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wt.md",
+      "src/content/pages/en/products/exoweld/w-series.md",
+      "src/content/pages/en/products/exoweld/w-series/wt.md"
+    ],
+    "sha256": "faebafc1a45e3b0501e26024b689f629c904ab6f65b4d63696e32efa3ad898da",
+    "bytes": 75443
+  },
+  {
+    "old": "public/images/ccelect/wt/00-wt.JPG",
+    "new": "assets/source/ccelect/products/wt/00-wt.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "9e9aadf2517525eea064dab47af454fe224e06413dad69caa1a4ff7a8a3571b7",
+    "bytes": 2253717
+  },
+  {
+    "old": "public/images/ccelect/wt/01-mold-open-enhanced.jpg",
+    "new": "public/images/ccelect/products/wt/photo-mold-open.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series.md",
+      "src/content/pages/ja/products/exoweld/w-series/wt.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wt.md",
+      "src/content/pages/en/products/exoweld/w-series.md",
+      "src/content/pages/en/products/exoweld/w-series/wt.md"
+    ],
+    "sha256": "86551c0031f0786e085f48b260580b8ff73bff9f26ec3c725fe9ff1124d2d147",
+    "bytes": 222152
+  },
+  {
+    "old": "public/images/ccelect/wt/01-mold-open.jpg",
+    "new": "assets/source/ccelect/products/wt/01-mold-open.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "c507216fd46f5cc74738f5b76b35916ae697903546cca190082898dcad99e387",
+    "bytes": 3546346
+  },
+  {
+    "old": "public/images/ccelect/wt/02-mold-open-side-enhanced.jpg",
+    "new": "public/images/ccelect/products/wt/photo-mold-open-side.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series/wt.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wt.md",
+      "src/content/pages/en/products/exoweld/w-series/wt.md"
+    ],
+    "sha256": "0cd9b3c8922554985a62f9e0deed34c0bf950356cdd7bd916d7cbd489f02661d",
+    "bytes": 204165
+  },
+  {
+    "old": "public/images/ccelect/wt/02-mold-open-side.jpg",
+    "new": "assets/source/ccelect/products/wt/02-mold-open-side.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "0b79432971c0698faaee0247be5ff878c66891be0af5b4abf92bc2b875862116",
+    "bytes": 2774639
+  },
+  {
+    "old": "public/images/ccelect/wt/03-setup-enhanced.jpg",
+    "new": "public/images/ccelect/products/wt/photo-setup.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series/wt.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wt.md",
+      "src/content/pages/en/products/exoweld/w-series/wt.md"
+    ],
+    "sha256": "ebd0f6aafcce6dea9a9cbeab9051a300ecacc1da85d492b41e01b49798546246",
+    "bytes": 224586
+  },
+  {
+    "old": "public/images/ccelect/wt/03-setup.jpg",
+    "new": "assets/source/ccelect/products/wt/03-setup.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "fd803447b3625e9c4efc6b9dd086da6f1669f60f11d6d70c0ec310392f0a443d",
+    "bytes": 735140
+  },
+  {
+    "old": "public/images/ccelect/wt/04-process-enhanced.jpg",
+    "new": "public/images/ccelect/products/wt/photo-process.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series/wt.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wt.md",
+      "src/content/pages/en/products/exoweld/w-series/wt.md"
+    ],
+    "sha256": "8188f688aa2a9cc29020024cc0fb31a943f51d58de4f16979066971fea97a8a4",
+    "bytes": 202739
+  },
+  {
+    "old": "public/images/ccelect/wt/04-process.jpg",
+    "new": "assets/source/ccelect/products/wt/04-process.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "a392910ae66fdd573649ed300ab5061e9da94bf89f4bf1cefa9b2c6359acfd87",
+    "bytes": 549280
+  },
+  {
+    "old": "public/images/ccelect/wt/05-mold-opening-enhanced.jpg",
+    "new": "public/images/ccelect/products/wt/photo-mold-opening.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series/wt.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wt.md",
+      "src/content/pages/en/products/exoweld/w-series/wt.md"
+    ],
+    "sha256": "3e6aaf1505d75aa7e0d8d39224f9a338d9386f3173407f6f70cb00c764b53060",
+    "bytes": 258337
+  },
+  {
+    "old": "public/images/ccelect/wt/05-mold-opening.jpg",
+    "new": "assets/source/ccelect/products/wt/05-mold-opening.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "dcbb5e460ea35f0717caab2dc21fa71dceb5b98e326bcfe5460eb87fe6ca7450",
+    "bytes": 619328
+  },
+  {
+    "old": "public/images/ccelect/wt/06-joint-enhanced.jpg",
+    "new": "assets/archive/ccelect/public/wt/06-joint-enhanced.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "f8923e0ea1ed0e7e6aa1fc588dc8d251844e1390e3519bdcc8e301995df00291",
+    "bytes": 154715
+  },
+  {
+    "old": "public/images/ccelect/wt/06-joint.jpg",
+    "new": "assets/source/ccelect/products/wt/06-joint.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "a46e40d22163c625b44109f3d3bccec2c5cbb7f4756f4399d47f9857603292bf",
+    "bytes": 607158
+  },
+  {
+    "old": "public/images/ccelect/wt/07-joint-closeup-enhanced.jpg",
+    "new": "public/images/ccelect/products/wt/photo-joint-closeup.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/en/products.md"
+    ],
+    "sha256": "b940762e18254a443939257398ef79fd54ac14ea80985daddc50198518a03b8c",
+    "bytes": 236241
+  },
+  {
+    "old": "public/images/ccelect/wt/07-joint-closeup.jpg",
+    "new": "assets/source/ccelect/products/wt/07-joint-closeup.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "32d80419122fbd7b45617d106e02c99f49cb236b25716135109961a258119304",
+    "bytes": 2243395
+  },
+  {
+    "old": "public/images/ccelect/wx/00-wx-enhanced.jpg",
+    "new": "public/images/ccelect/products/wx/photo-hero.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series.md",
+      "src/content/pages/ja/products/exoweld/w-series/wx.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wx.md",
+      "src/content/pages/en/products/exoweld/w-series.md",
+      "src/content/pages/en/products/exoweld/w-series/wx.md"
+    ],
+    "sha256": "8d5a6710a3eee21ff56a76f47d04325e2ed4967f915c7a9afd0038ccda56bc8e",
+    "bytes": 117782
+  },
+  {
+    "old": "public/images/ccelect/wx/00-wx.JPG",
+    "new": "assets/source/ccelect/products/wx/00-wx.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "d417232dcb1ead8545abd5e87cfd376b12896dfef4ab49eae12ab9138bab60ed",
+    "bytes": 2459824
+  },
+  {
+    "old": "public/images/ccelect/wx/01-mold-open-enhanced.jpg",
+    "new": "public/images/ccelect/products/wx/photo-mold-open.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series.md",
+      "src/content/pages/ja/products/exoweld/w-series/wx.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wx.md",
+      "src/content/pages/en/products/exoweld/w-series.md",
+      "src/content/pages/en/products/exoweld/w-series/wx.md"
+    ],
+    "sha256": "710ff36718a16948e0455cfbe49d023fcf20dc0c4ff3f474d1a96a54e8d1bb57",
+    "bytes": 185747
+  },
+  {
+    "old": "public/images/ccelect/wx/01-mold-open.jpg",
+    "new": "assets/source/ccelect/products/wx/01-mold-open.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "8bfede488897ae4ba52c7a06a8b0218b175887b64243d178ce41544b0c53f3c1",
+    "bytes": 3449751
+  },
+  {
+    "old": "public/images/ccelect/wx/02-preheat-enhanced.jpg",
+    "new": "public/images/ccelect/products/wx/photo-preheat.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series/wx.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wx.md",
+      "src/content/pages/en/products/exoweld/w-series/wx.md"
+    ],
+    "sha256": "adfc136f4332b614f08f58e82dfacb151e87220aaa9e6e2aa9ee20f2597e2efa",
+    "bytes": 188643
+  },
+  {
+    "old": "public/images/ccelect/wx/02-preheat.jpg",
+    "new": "assets/source/ccelect/products/wx/02-preheat.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "95b054c319f488ec619f85b2e6a2260753054590303150eb5740e3d28ed85aa2",
+    "bytes": 4644974
+  },
+  {
+    "old": "public/images/ccelect/wx/03-setup-enhanced.jpg",
+    "new": "public/images/ccelect/products/wx/photo-setup.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series/wx.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wx.md",
+      "src/content/pages/en/products/exoweld/w-series/wx.md"
+    ],
+    "sha256": "cf0e97532d6ee43d090393a2289ca291141258db9b96030c76b1d7904b7574c5",
+    "bytes": 204607
+  },
+  {
+    "old": "public/images/ccelect/wx/03-setup.jpg",
+    "new": "assets/source/ccelect/products/wx/03-setup.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "17acb35edcf407763732e7a133300e1e711e45026518519a41316b1bcf6ae907",
+    "bytes": 859798
+  },
+  {
+    "old": "public/images/ccelect/wx/04-setup-top-enhanced.jpg",
+    "new": "public/images/ccelect/products/wx/photo-setup-top.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series/wx.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wx.md",
+      "src/content/pages/en/products/exoweld/w-series/wx.md"
+    ],
+    "sha256": "897f907f0e5055de020701954c1612cb2de5c3444cd75e9f7b89254e0b96a1e0",
+    "bytes": 247500
+  },
+  {
+    "old": "public/images/ccelect/wx/04-setup-top.jpg",
+    "new": "assets/source/ccelect/products/wx/04-setup-top.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "bcd78b1ee4f343f90f784e575424be215537895222538232d42a279b10831923",
+    "bytes": 2479463
+  },
+  {
+    "old": "public/images/ccelect/wx/05-process-enhanced.jpg",
+    "new": "public/images/ccelect/products/wx/photo-process.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series/wx.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wx.md",
+      "src/content/pages/en/products/exoweld/w-series/wx.md"
+    ],
+    "sha256": "5ac14409000d40b00b89855f4651989ffad824dd5e736445eef8bf4a3b805621",
+    "bytes": 176142
+  },
+  {
+    "old": "public/images/ccelect/wx/05-process.jpg",
+    "new": "assets/source/ccelect/products/wx/05-process.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "2d886d0086adb04533aace2743f1395d9ddaac510e4f76f5b93e68fa467686e8",
+    "bytes": 793579
+  },
+  {
+    "old": "public/images/ccelect/wx/06-joint-enhanced.jpg",
+    "new": "public/images/ccelect/products/wx/photo-joint.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/en/products.md"
+    ],
+    "sha256": "585fe9250b27242bce90014899fa7d7d978b546776d2ebc07cd4afda7f8125b3",
+    "bytes": 155975
+  },
+  {
+    "old": "public/images/ccelect/wx/06-joint.jpg",
+    "new": "assets/source/ccelect/products/wx/06-joint.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "cdaed911d1f1fda6a112b4fdcbba1f2897f8cf643fa4cda5b129f59e16518cd5",
+    "bytes": 2822837
+  },
+  {
+    "old": "public/images/ccelect/wx/07-joint-angle-enhanced.jpg",
+    "new": "public/images/ccelect/products/wx/photo-joint-angle.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/en/products.md"
+    ],
+    "sha256": "56801ab643544199e64dc445bc82c1ef4f357e778cc1dcc7f7c4671ae6b24776",
+    "bytes": 151681
+  },
+  {
+    "old": "public/images/ccelect/wx/07-joint-angle.jpg",
+    "new": "assets/source/ccelect/products/wx/07-joint-angle.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "c412bd55ab6e0db87db5ad2242f63687c8c9536e88430bd97273d3e30f9a313b",
+    "bytes": 3718640
+  },
+  {
+    "old": "public/images/ccelect/wxl/00-wxl-enhanced.jpg",
+    "new": "public/images/ccelect/products/wxl/photo-hero.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series.md",
+      "src/content/pages/ja/products/exoweld/w-series/wxl.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wxl.md",
+      "src/content/pages/en/products/exoweld/w-series.md",
+      "src/content/pages/en/products/exoweld/w-series/wxl.md"
+    ],
+    "sha256": "fce306dcd918687be5c6b142390814f759c0cabe3358530153d1b8c6481ae4a8",
+    "bytes": 107331
+  },
+  {
+    "old": "public/images/ccelect/wxl/00-wxl.jpg",
+    "new": "assets/source/ccelect/products/wxl/00-wxl.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "ecee08cafe9d059abd8890ffc757a1cacd5563b3f92aba44ec689882632aebdf",
+    "bytes": 2144639
+  },
+  {
+    "old": "public/images/ccelect/wxl/01-mold-open-enhanced.jpg",
+    "new": "public/images/ccelect/products/wxl/photo-mold-open.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series.md",
+      "src/content/pages/ja/products/exoweld/w-series/wxl.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wxl.md",
+      "src/content/pages/en/products/exoweld/w-series.md",
+      "src/content/pages/en/products/exoweld/w-series/wxl.md"
+    ],
+    "sha256": "7df8702a0aa6366cb203f9a08b899ab0bc3c4a3686c839f997682740508858c9",
+    "bytes": 218662
+  },
+  {
+    "old": "public/images/ccelect/wxl/01-mold-open.jpg",
+    "new": "assets/source/ccelect/products/wxl/01-mold-open.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "c3f572f8846cca6618ccc18dc64698ff550711911ec048e7d9ad8527ef173da7",
+    "bytes": 1881128
+  },
+  {
+    "old": "public/images/ccelect/wxl/02-mold-closeup-enhanced.jpg",
+    "new": "public/images/ccelect/products/wxl/photo-mold-closeup.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series/wxl.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wxl.md",
+      "src/content/pages/en/products/exoweld/w-series/wxl.md"
+    ],
+    "sha256": "bbb68de32c034bb40de87513211d3b5e5e75f69af9706dc2ab16617e3dcd8809",
+    "bytes": 247348
+  },
+  {
+    "old": "public/images/ccelect/wxl/02-mold-closeup.jpg",
+    "new": "assets/source/ccelect/products/wxl/02-mold-closeup.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "9fc37b70cd89676ce6949d10e9a7ae2a233a935ed46b5a2521ea279effca97b5",
+    "bytes": 2371855
+  },
+  {
+    "old": "public/images/ccelect/wxl/03-setup-enhanced.jpg",
+    "new": "public/images/ccelect/products/wxl/photo-setup.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series/wxl.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wxl.md",
+      "src/content/pages/en/products/exoweld/w-series/wxl.md"
+    ],
+    "sha256": "b655138793e0620ec264ed6dfcdac1efbf8eedf2f27a15412ea48ade2e4e0e48",
+    "bytes": 195068
+  },
+  {
+    "old": "public/images/ccelect/wxl/03-setup.jpg",
+    "new": "assets/source/ccelect/products/wxl/03-setup.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "258a7e2fad42f8c8a71b06a5ac6d795f1b046e1cbf1c3ac6fad98017fe2e6a6a",
+    "bytes": 3664572
+  },
+  {
+    "old": "public/images/ccelect/wxl/04-setup-clamp-enhanced.jpg",
+    "new": "public/images/ccelect/products/wxl/photo-setup-clamp.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series/wxl.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wxl.md",
+      "src/content/pages/en/products/exoweld/w-series/wxl.md"
+    ],
+    "sha256": "3aeb7bf7b43532f65f7e00d0e5d4916f55e5acdbc6957ca17b11144db6834e10",
+    "bytes": 145159
+  },
+  {
+    "old": "public/images/ccelect/wxl/04-setup-clamp.jpg",
+    "new": "assets/source/ccelect/products/wxl/04-setup-clamp.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "81b56f22ab7172894defb812a8c829bbeac7cb78083c8b338806a814ab35e952",
+    "bytes": 897977
+  },
+  {
+    "old": "public/images/ccelect/wxl/05-powder-enhanced.jpg",
+    "new": "public/images/ccelect/products/wxl/photo-powder.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/exoweld/w-series/wxl.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wxl.md",
+      "src/content/pages/en/products/exoweld/w-series/wxl.md"
+    ],
+    "sha256": "050828431e3b1fecd20619a87e095388c07211a38c97927913ef79412fb004d0",
+    "bytes": 216806
+  },
+  {
+    "old": "public/images/ccelect/wxl/05-powder.jpg",
+    "new": "assets/source/ccelect/products/wxl/05-powder.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "d6c65359dbee1f39c09f2fed20225118b710aae6546bda7a639f14eeace6b21e",
+    "bytes": 782706
+  },
+  {
+    "old": "public/images/ccelect/wxl/06-joint-enhanced.jpg",
+    "new": "public/images/ccelect/products/wxl/photo-joint.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/en/products.md"
+    ],
+    "sha256": "7c7e8510d95ba30e8f2823ed6f62696e7ef3df4df020163ec5c379c71b5afc69",
+    "bytes": 203997
+  },
+  {
+    "old": "public/images/ccelect/wxl/06-joint.jpg",
+    "new": "assets/source/ccelect/products/wxl/06-joint.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "6430eddcc5cfb2ae4f54e1e9ad2e8c16096abb1ebac26b2efea1af258f6cd47a",
+    "bytes": 717324
+  },
+  {
+    "old": "public/images/ccelect/wxl/07-joint-closeup-enhanced.jpg",
+    "new": "public/images/ccelect/products/wxl/photo-joint-closeup.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/en/products.md"
+    ],
+    "sha256": "9395e77e87af66e15ac15c454ae4a810560e079dc23b87295e8fc7c0f879b3ec",
+    "bytes": 183294
+  },
+  {
+    "old": "public/images/ccelect/wxl/07-joint-closeup.jpg",
+    "new": "assets/source/ccelect/products/wxl/00-wxl.jpg",
+    "category": "duplicate",
+    "references": [],
+    "sha256": "ecee08cafe9d059abd8890ffc757a1cacd5563b3f92aba44ec689882632aebdf",
+    "bytes": 2144639
+  },
+  {
+    "old": "public/images/ccelect/wxl/08-joint-angle-enhanced.jpg",
+    "new": "public/images/ccelect/products/wxl/photo-joint-angle.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products.md",
+      "src/content/pages/zh-tw/products.md",
+      "src/content/pages/en/products.md"
+    ],
+    "sha256": "aadb1019600fd77e22b871cc3c06d75c3b6df93e3bf1e6c8d9ba8c48ddbb6670",
+    "bytes": 180438
+  },
+  {
+    "old": "public/images/ccelect/wxl/08-joint-angle.jpg",
+    "new": "assets/source/ccelect/products/wxl/08-joint-angle.jpg",
+    "category": "source",
+    "references": [],
+    "sha256": "e8f57ed7d6e11ed4297958373aade19c1fe6803dfed1eb412ba8719dff91ced8",
+    "bytes": 2151589
+  },
+  {
+    "old": "src/assets/images/ccelect/dummy/product-1.svg",
+    "new": "src/assets/images/ccelect/placeholders/product-1.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/grounding-materials.md",
+      "src/content/pages/ja/products/lightning-protection.md",
+      "src/content/pages/ja/products/exoweld/s-series.md",
+      "src/content/pages/ja/products/exoweld/g-series.md",
+      "src/content/pages/ja/products/exoweld/r-series.md",
+      "src/content/pages/zh-tw/products/grounding-materials.md",
+      "src/content/pages/zh-tw/products/lightning-protection.md",
+      "src/content/pages/zh-tw/products/exoweld/s-series.md",
+      "src/content/pages/zh-tw/products/exoweld/g-series.md",
+      "src/content/pages/zh-tw/products/exoweld/r-series.md",
+      "src/content/pages/en/products/grounding-materials.md",
+      "src/content/pages/en/products/lightning-protection.md",
+      "src/content/pages/en/products/exoweld/s-series.md",
+      "src/content/pages/en/products/exoweld/g-series.md",
+      "src/content/pages/en/products/exoweld/r-series.md"
+    ],
+    "sha256": "49b4f70ca09869695438f61cac8de655d615cf9b2743c3a5b0e885be02e8706e",
+    "bytes": 1372
+  },
+  {
+    "old": "src/assets/images/ccelect/dummy/product-2.svg",
+    "new": "src/assets/images/ccelect/placeholders/product-2.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/grounding-materials.md",
+      "src/content/pages/ja/products/lightning-protection.md",
+      "src/content/pages/ja/products/exoweld/s-series.md",
+      "src/content/pages/ja/products/exoweld/g-series.md",
+      "src/content/pages/ja/products/exoweld/r-series.md",
+      "src/content/pages/zh-tw/products/grounding-materials.md",
+      "src/content/pages/zh-tw/products/lightning-protection.md",
+      "src/content/pages/zh-tw/products/exoweld/s-series.md",
+      "src/content/pages/zh-tw/products/exoweld/g-series.md",
+      "src/content/pages/zh-tw/products/exoweld/r-series.md",
+      "src/content/pages/en/products/grounding-materials.md",
+      "src/content/pages/en/products/lightning-protection.md",
+      "src/content/pages/en/products/exoweld/s-series.md",
+      "src/content/pages/en/products/exoweld/g-series.md",
+      "src/content/pages/en/products/exoweld/r-series.md"
+    ],
+    "sha256": "221a76d1b6bc571b523dcbe3d5cefa7884c6cbab1c713de595e6b718252b75c0",
+    "bytes": 1184
+  },
+  {
+    "old": "src/assets/images/ccelect/dummy/product-3.svg",
+    "new": "src/assets/images/ccelect/placeholders/product-3.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/grounding-components.md",
+      "src/content/pages/ja/products/exoweld/s-series.md",
+      "src/content/pages/ja/products/exoweld/g-series.md",
+      "src/content/pages/zh-tw/products/grounding-components.md",
+      "src/content/pages/zh-tw/products/exoweld/s-series.md",
+      "src/content/pages/zh-tw/products/exoweld/g-series.md",
+      "src/content/pages/en/products/grounding-components.md",
+      "src/content/pages/en/products/exoweld/s-series.md",
+      "src/content/pages/en/products/exoweld/g-series.md"
+    ],
+    "sha256": "faba343dcba8f4255d0f74ee7409cd031a2135425df5c2df62f3703969f951a8",
+    "bytes": 1200
+  },
+  {
+    "old": "src/assets/images/ccelect/dummy/product-4.svg",
+    "new": "src/assets/images/ccelect/placeholders/product-4.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/grounding-materials.md",
+      "src/content/pages/ja/products/grounding-components.md",
+      "src/content/pages/ja/products/lightning-protection.md",
+      "src/content/pages/ja/products/exoweld/g-series.md",
+      "src/content/pages/ja/products/exoweld/w-series/wp.md",
+      "src/content/pages/zh-tw/products/grounding-materials.md",
+      "src/content/pages/zh-tw/products/grounding-components.md",
+      "src/content/pages/zh-tw/products/lightning-protection.md",
+      "src/content/pages/zh-tw/products/exoweld/g-series.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wp.md",
+      "src/content/pages/en/products/grounding-materials.md",
+      "src/content/pages/en/products/grounding-components.md",
+      "src/content/pages/en/products/lightning-protection.md",
+      "src/content/pages/en/products/exoweld/g-series.md",
+      "src/content/pages/en/products/exoweld/w-series/wp.md"
+    ],
+    "sha256": "f9a2d2951356df344d988c50ce6cb7b2bb003bcd789156815e8bbd3a49d6a8f2",
+    "bytes": 1199
+  },
+  {
+    "old": "src/assets/images/ccelect/dummy/product-5.svg",
+    "new": "src/assets/images/ccelect/placeholders/product-5.svg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/products/grounding-materials.md",
+      "src/content/pages/ja/products/lightning-protection.md",
+      "src/content/pages/ja/products/exoweld/g-series.md",
+      "src/content/pages/ja/products/exoweld/w-series/wl.md",
+      "src/content/pages/zh-tw/products/grounding-materials.md",
+      "src/content/pages/zh-tw/products/lightning-protection.md",
+      "src/content/pages/zh-tw/products/exoweld/g-series.md",
+      "src/content/pages/zh-tw/products/exoweld/w-series/wl.md",
+      "src/content/pages/en/products/grounding-materials.md",
+      "src/content/pages/en/products/lightning-protection.md",
+      "src/content/pages/en/products/exoweld/g-series.md",
+      "src/content/pages/en/products/exoweld/w-series/wl.md",
+      "src/components/page-sections/products/product-series/ProductSeries.astro"
+    ],
+    "sha256": "bf38d6f8cfdf5589ecff21a450d2b012be52b240a76e81492dc5c6692a3d3f0e",
+    "bytes": 1297
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/iso-9001-2015-certificate.jpg",
+    "new": "src/assets/images/ccelect/certifications/iso-9001-2015-certificate.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/about.md",
+      "src/content/pages/zh-tw/about.md",
+      "src/content/pages/en/about.md"
+    ],
+    "sha256": "d5698e0eea8136e7c91b6952a8c19019a4e3b1bdbee48dc77ec589baac0b8054",
+    "bytes": 399069
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/product-exoweld-we.jpg",
+    "new": "assets/archive/ccelect/astro/legacy/product-exoweld-we.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "1e718799caf6292f8548a212af9da5349f012b75f752824703f14d9a8da87bbc",
+    "bytes": 99090
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/product-ground-plate.jpg",
+    "new": "assets/archive/ccelect/astro/legacy/product-ground-plate.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "024cc47560159f40f1ee9807834f11bd9bb2ea11d04967f9faf0216376ca28e5",
+    "bytes": 4252
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/product-investment-casting.jpg",
+    "new": "assets/archive/ccelect/astro/legacy/product-investment-casting.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "62c9930f0a9ddc7953289302792e75816be18724b44a82b1373c1a6d17947844",
+    "bytes": 8808
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/product-ion-ground-rod.jpg",
+    "new": "src/assets/images/ccelect/products/ion-ground-rod.jpg",
+    "category": "published",
+    "references": [
+      "src/content/blog/zh-tw/grounding-system-design.mdx"
+    ],
+    "sha256": "22f6698089dd9b7464262ccf43eff8df1423812cf08027ce31050dfc6c20de56",
+    "bytes": 273037
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/product-terminal-support.jpg",
+    "new": "assets/archive/ccelect/astro/legacy/product-terminal-support.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "2f61f58fc075949a7703930e2925b578baf01388ce8a8c39ac07906b457915aa",
+    "bytes": 11479
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/site-installation-1.jpg",
+    "new": "src/assets/images/ccelect/projects/site-installation-1.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/zh-tw/projects.md"
+    ],
+    "sha256": "8d7bfbe2b0ca0e14dc69280fa159bbb9f049c92e4854c311adfffcb7d2723bca",
+    "bytes": 10142
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/site-installation-2.jpg",
+    "new": "src/assets/images/ccelect/projects/site-installation-2.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/zh-tw/projects.md"
+    ],
+    "sha256": "3ac7b4023c0f5a86935d4221979ccb4151aafc221954be69f04f8fcb9857f994",
+    "bytes": 9395
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/site-installation-3.jpg",
+    "new": "src/assets/images/ccelect/projects/site-installation-3.jpg",
+    "category": "published",
+    "references": [
+      "src/content/blog/zh-tw/exothermic-welding-process.mdx",
+      "src/content/pages/zh-tw/projects.md"
+    ],
+    "sha256": "7c93caee89dde46d82539c78495952461781328f380016a6e7960208d55649fa",
+    "bytes": 8590
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/site-installation-4.jpg",
+    "new": "src/assets/images/ccelect/projects/site-installation-4.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/zh-tw/projects.md"
+    ],
+    "sha256": "c7bb979c89fb7b99f2737eaf456ab316e423ad6ce67362e5110bdf5d5db22f94",
+    "bytes": 7522
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/test-high-current-1.jpg",
+    "new": "src/assets/images/ccelect/testing/high-current-1.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/about.md",
+      "src/content/pages/zh-tw/about.md",
+      "src/content/pages/en/about.md"
+    ],
+    "sha256": "9227e6912cd3574268011d1e2d963728024df69b6f3db17946bdd5769601e660",
+    "bytes": 5231
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/test-high-current-2.jpg",
+    "new": "src/assets/images/ccelect/testing/high-current-2.jpg",
+    "category": "published",
+    "references": [
+      "src/content/blog/zh-tw/exothermic-welding-properties.mdx",
+      "src/content/pages/ja/about.md",
+      "src/content/pages/zh-tw/about.md",
+      "src/content/pages/en/about.md"
+    ],
+    "sha256": "4020aa05af330d83aecf7e50db4b6c268e346f7c431ff20beed0980a946aa73c",
+    "bytes": 4882
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/test-taipower-1.jpg",
+    "new": "src/assets/images/ccelect/testing/taipower-1.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/about.md",
+      "src/content/pages/zh-tw/about.md",
+      "src/content/pages/en/about.md"
+    ],
+    "sha256": "4b8a306d3aaa69cba07bfeca4e7c142349506c8782241ef520de89a90bceb4f7",
+    "bytes": 6634
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/test-taipower-2.jpg",
+    "new": "src/assets/images/ccelect/testing/taipower-2.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/about.md",
+      "src/content/pages/zh-tw/about.md",
+      "src/content/pages/en/about.md"
+    ],
+    "sha256": "e0099bff2bc848afa446d069d3cd73736647f011b92085e5545fda735187f3f8",
+    "bytes": 5740
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/test-ul-1.jpg",
+    "new": "src/assets/images/ccelect/testing/ul-1.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/about.md",
+      "src/content/pages/zh-tw/about.md",
+      "src/content/pages/en/about.md"
+    ],
+    "sha256": "2d1e43c770d6bc0b5600b8e8521775570472c803663f56354ced3be9d44ac4ea",
+    "bytes": 7780
+  },
+  {
+    "old": "src/assets/images/ccelect/legacy/test-ul-2.jpg",
+    "new": "src/assets/images/ccelect/testing/ul-2.jpg",
+    "category": "published",
+    "references": [
+      "src/content/pages/ja/about.md",
+      "src/content/pages/zh-tw/about.md",
+      "src/content/pages/en/about.md"
+    ],
+    "sha256": "289d2450ed2907169bb873c1607e17b675c480bbe865012133f945610fd6d298",
+    "bytes": 6017
+  },
+  {
+    "old": "src/assets/images/ccelect/we/we-finish.jpg",
+    "new": "assets/archive/ccelect/astro/we/we-finish.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "1094ba58660e4ba3d3fea49dc1c71f4a095aaf28ae42f7578e009b77b3e6961a",
+    "bytes": 236444
+  },
+  {
+    "old": "src/assets/images/ccelect/we/we-hero.jpg",
+    "new": "assets/archive/ccelect/astro/we/we-hero.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "006b4644250c2bb661675bdd0956fe406d4c1b038791ed21331ae70dae034f0d",
+    "bytes": 711461
+  },
+  {
+    "old": "src/assets/images/ccelect/we/we-joint-cut.png",
+    "new": "assets/archive/ccelect/astro/we/we-joint-cut.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "1cd09d8b11d703f4a1b79e66b1a833bcfbd705ca5703a3ca322f951e5f5ae378",
+    "bytes": 402447
+  },
+  {
+    "old": "src/assets/images/ccelect/we/we-joint.jpg",
+    "new": "assets/archive/ccelect/astro/we/we-joint.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "e65cefdbecbf7b413c5087b60e38d5ae271454e92ed102af59a761dc384c081e",
+    "bytes": 337451
+  },
+  {
+    "old": "src/assets/images/ccelect/we/we-mold-open.jpg",
+    "new": "assets/archive/ccelect/astro/we/we-mold-open.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "a68bd206496b7d044a9ff8e960131ddd86e864383ca3b62c50e27802525a0406",
+    "bytes": 890646
+  },
+  {
+    "old": "src/assets/images/ccelect/we/we-setup.jpg",
+    "new": "assets/archive/ccelect/astro/we/we-setup.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "10a319f2ecf0992afb5e19f4c9c59921846709631c5458c9bedd2571dcf9d0bd",
+    "bytes": 331633
+  },
+  {
+    "old": "src/assets/images/ccelect/wt/wt-hero.jpg",
+    "new": "assets/archive/ccelect/astro/wt/wt-hero.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "3ec8b4d34b16b201b1d74f6ca4173c6daeb5fd04dbed5368241adc1dc3389c88",
+    "bytes": 1042374
+  },
+  {
+    "old": "src/assets/images/ccelect/wt/wt-joint-cut.png",
+    "new": "assets/archive/ccelect/astro/wt/wt-joint-cut.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "2c7bf378d145ff94c7e8facc71bf15fabea11a27cf141ea5a114ef5a6ef120f3",
+    "bytes": 1121160
+  },
+  {
+    "old": "src/assets/images/ccelect/wt/wt-joint.jpg",
+    "new": "assets/archive/ccelect/astro/wt/wt-joint.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "8e830da331819526b920fc8f39f636464391c6d54f40077061441a990679971c",
+    "bytes": 806729
+  },
+  {
+    "old": "src/assets/images/ccelect/wt/wt-open.jpg",
+    "new": "assets/archive/ccelect/astro/wt/wt-open.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "1a0c86a16fdb5db82fa2e88c2da3a2097da8e57bbac6f87f2081360645118288",
+    "bytes": 630673
+  },
+  {
+    "old": "src/assets/images/ccelect/wt/wt-process.jpg",
+    "new": "assets/archive/ccelect/astro/wt/wt-process.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "1f3cb78eb54b446e0387cb80868c115fb3288318c8505b1284f4a663c3d8e4bf",
+    "bytes": 278099
+  },
+  {
+    "old": "src/assets/images/ccelect/wt/wt-setup.jpg",
+    "new": "assets/archive/ccelect/astro/wt/wt-setup.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "36035cdca283b8704e513da5ef0d85da1c4a5a01707de7f52a29d17df8d7642c",
+    "bytes": 344162
+  },
+  {
+    "old": "src/assets/images/ccelect/wx/wx-hero.jpg",
+    "new": "assets/archive/ccelect/astro/wx/wx-hero.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "e6366dbc0dc1f6bddfc01dad30cc720d04036bd8d276ce7e47a01acbc62e5d3c",
+    "bytes": 658814
+  },
+  {
+    "old": "src/assets/images/ccelect/wx/wx-joint-cut.png",
+    "new": "assets/archive/ccelect/astro/wx/wx-joint-cut.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "8d9cb5b88e32d8dd40aa3d8d9c4aeb9ebb89a42fe9f659d86e7801c6ff65d31b",
+    "bytes": 779132
+  },
+  {
+    "old": "src/assets/images/ccelect/wx/wx-joint.jpg",
+    "new": "assets/archive/ccelect/astro/wx/wx-joint.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "a7be9c453eb0475667ad32c026b4f6b3ed30b4d3e071b8b7c1e1f5e249c43662",
+    "bytes": 1088837
+  },
+  {
+    "old": "src/assets/images/ccelect/wx/wx-process.jpg",
+    "new": "assets/archive/ccelect/astro/wx/wx-process.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "c89fc1fdb2333400d808e038d10ca85b7652545e0f4dcde366efba6110798366",
+    "bytes": 392092
+  },
+  {
+    "old": "src/assets/images/ccelect/wx/wx-setup.jpg",
+    "new": "assets/archive/ccelect/astro/wx/wx-setup.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "65669871fb5b4ebe8763b6b64dedc28a28f7317e39852a191d75c1f2ef7b10a9",
+    "bytes": 398422
+  },
+  {
+    "old": "src/assets/images/ccelect/wx/wx-top.jpg",
+    "new": "assets/archive/ccelect/astro/wx/wx-top.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "4ae70af5b74b374e26681735bd05d93926cd1cfb24ae64d99635718006e2f95f",
+    "bytes": 851763
+  },
+  {
+    "old": "src/assets/images/ccelect/wxl/wxl-hero.jpg",
+    "new": "assets/archive/ccelect/astro/wxl/wxl-hero.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "0447dd4e2c52b2e76227ab8f26c18ae7b362b238b0aacffff19ae719d4ea4c69",
+    "bytes": 726191
+  },
+  {
+    "old": "src/assets/images/ccelect/wxl/wxl-joint-cut.png",
+    "new": "assets/archive/ccelect/astro/wxl/wxl-joint-cut.png",
+    "category": "archive",
+    "references": [],
+    "sha256": "aed1adfd80e94cabfbeae8e20477e82400402d17ba9e87131162338cbf65f440",
+    "bytes": 1246142
+  },
+  {
+    "old": "src/assets/images/ccelect/wxl/wxl-joint.jpg",
+    "new": "assets/archive/ccelect/astro/wxl/wxl-joint.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "63f341e55a76e0b99752bf5b326bf3f06c7a11023ffec5802e86c239ef500a04",
+    "bytes": 803219
+  },
+  {
+    "old": "src/assets/images/ccelect/wxl/wxl-open.jpg",
+    "new": "assets/archive/ccelect/astro/wxl/wxl-open.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "357937f49afe5f79e61cdc05f74823f54819751f04d35ede4a210feed2dbf3f3",
+    "bytes": 817619
+  },
+  {
+    "old": "src/assets/images/ccelect/wxl/wxl-process.jpg",
+    "new": "assets/archive/ccelect/astro/wxl/wxl-process.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "9c42cb4601084481bd3599406f6e914e5251215507e238dd72c6dd71dfdfdfb6",
+    "bytes": 409610
+  },
+  {
+    "old": "src/assets/images/ccelect/wxl/wxl-setup.jpg",
+    "new": "assets/archive/ccelect/astro/wxl/wxl-setup.jpg",
+    "category": "archive",
+    "references": [],
+    "sha256": "5dc9d2429ffad3d45c655cd4e8219a35a4bac407faf5506757f2b7bda65fa78e",
+    "bytes": 417557
+  },
+  {
+    "old": "src/assets/images/.DS_Store",
+    "new": "src/assets/images/template/.DS_Store",
+    "category": "template",
+    "sha256": "b023f15b82c6d7025d09d2672bb701bccdc786d789e6d78e0ee7a5404138b772",
+    "bytes": 6148
+  },
+  {
+    "old": "src/assets/images/about-hero.png",
+    "new": "src/assets/images/template/about-hero.png",
+    "category": "template",
+    "sha256": "c0ef076f56f9e1e16d611cbef13ec2e31c88001212ab91970a152f9bc36b41f0",
+    "bytes": 2993248
+  },
+  {
+    "old": "src/assets/images/apex.svg",
+    "new": "src/assets/images/template/apex.svg",
+    "category": "template",
+    "sha256": "f24b750c9a4e7289dda80fefa73b373e01299e1b7766b07ab2479aee57c92d47",
+    "bytes": 5768
+  },
+  {
+    "old": "src/assets/images/aura.svg",
+    "new": "src/assets/images/template/aura.svg",
+    "category": "template",
+    "sha256": "d97181479dd033bde9964443fddcd7afc1aa1dbcd1df28088c850f38e6000156",
+    "bytes": 3200
+  },
+  {
+    "old": "src/assets/images/blog-cdn.png",
+    "new": "src/assets/images/template/blog-cdn.png",
+    "category": "template",
+    "sha256": "ae45eb1aed870ad1f6adf88043e29782461d079e20d443025a21e0b87186b910",
+    "bytes": 630764
+  },
+  {
+    "old": "src/assets/images/blog-country.png",
+    "new": "src/assets/images/template/blog-country.png",
+    "category": "template",
+    "sha256": "433e99cc9228caa47d7a320972c495cd962a7525fcd4fc682d97f0ce90f23a1e",
+    "bytes": 1884185
+  },
+  {
+    "old": "src/assets/images/blog-ddos.png",
+    "new": "src/assets/images/template/blog-ddos.png",
+    "category": "template",
+    "sha256": "cb3e63fa0dd1cb1cab93d4c2e839715cd016efaa09011941e95ea99b34eef8a6",
+    "bytes": 1715120
+  },
+  {
+    "old": "src/assets/images/blog-dns-resolver.png",
+    "new": "src/assets/images/template/blog-dns-resolver.png",
+    "category": "template",
+    "sha256": "0fd9241767e62f3459409f6fbd0f8a64e872243d8523dfc33562ca035a2dceed",
+    "bytes": 3192818
+  },
+  {
+    "old": "src/assets/images/blog-downtime.png",
+    "new": "src/assets/images/template/blog-downtime.png",
+    "category": "template",
+    "sha256": "6098ade971b4baffd37b6cd9a3e887068ba8695a962381d076b8b00a7a0e0391",
+    "bytes": 709177
+  },
+  {
+    "old": "src/assets/images/blog-edge-nodes.png",
+    "new": "src/assets/images/template/blog-edge-nodes.png",
+    "category": "template",
+    "sha256": "6f58725405f96a8053112392152c1714fd59a4a65a32aa28ed815cc19b9653e6",
+    "bytes": 1181354
+  },
+  {
+    "old": "src/assets/images/blog-fiberoptic.png",
+    "new": "src/assets/images/template/blog-fiberoptic.png",
+    "category": "template",
+    "sha256": "52a45d2f894f9e1c9a4b7b12e75cb08c54ee15d93d3572b7dd67a6804171ac57",
+    "bytes": 1712520
+  },
+  {
+    "old": "src/assets/images/blog-markdown.png",
+    "new": "src/assets/images/template/blog-markdown.png",
+    "category": "template",
+    "sha256": "16faf23ae3a59aa7130321df73e79ee09deac0c65d45fa3df8d58bf07b431110",
+    "bytes": 3347675
+  },
+  {
+    "old": "src/assets/images/blog-ping-1.png",
+    "new": "src/assets/images/template/blog-ping-1.png",
+    "category": "template",
+    "sha256": "de3cd0f7e96331eab396a515de5f27fa185072c7cbbe61c1ebe847df956ea8bc",
+    "bytes": 1712446
+  },
+  {
+    "old": "src/assets/images/blog-ping.png",
+    "new": "src/assets/images/template/blog-ping.png",
+    "category": "template",
+    "sha256": "de3cd0f7e96331eab396a515de5f27fa185072c7cbbe61c1ebe847df956ea8bc",
+    "bytes": 1712446
+  },
+  {
+    "old": "src/assets/images/blog-snippets.png",
+    "new": "src/assets/images/template/blog-snippets.png",
+    "category": "template",
+    "sha256": "49c03ac26e750a11649a73593f25ed2cf545c20c7742400f5f06f5ed274a5898",
+    "bytes": 3890321
+  },
+  {
+    "old": "src/assets/images/blog-ssl.png",
+    "new": "src/assets/images/template/blog-ssl.png",
+    "category": "template",
+    "sha256": "4ff20f1ca32e689beac9c23a7a827763ab5f9600773d8db46578587e2d5287e3",
+    "bytes": 1722577
+  },
+  {
+    "old": "src/assets/images/blog-traffic.png",
+    "new": "src/assets/images/template/blog-traffic.png",
+    "category": "template",
+    "sha256": "0748adc23d993bccbe6d9a6e975fb84b99ef35befcb99c94aede43f33e625c22",
+    "bytes": 2251883
+  },
+  {
+    "old": "src/assets/images/blog-uptime.png",
+    "new": "src/assets/images/template/blog-uptime.png",
+    "category": "template",
+    "sha256": "9ed45db0e4d9fc82da67a45040ca5518cb948955c295077fc7bf8dfe46fe1f8c",
+    "bytes": 977907
+  },
+  {
+    "old": "src/assets/images/business2.svg",
+    "new": "src/assets/images/template/business2.svg",
+    "category": "template",
+    "sha256": "0448b9bafc5bea926973b90a8950f9df6927ab39dec40b2dfac2124b422e40ec",
+    "bytes": 1907
+  },
+  {
+    "old": "src/assets/images/businesss.svg",
+    "new": "src/assets/images/template/businesss.svg",
+    "category": "template",
+    "sha256": "b8c12375b877bfb566f9e1b382a2ce9f58418a52f0859e6511d6659a197c7414",
+    "bytes": 236
+  },
+  {
+    "old": "src/assets/images/card-1.svg",
+    "new": "src/assets/images/template/card-1.svg",
+    "category": "template",
+    "sha256": "0ac7d47269d9f016067f585738d3931f5669d271c841b4b47f1de1dd5a99929b",
+    "bytes": 9448
+  },
+  {
+    "old": "src/assets/images/card-2.svg",
+    "new": "src/assets/images/template/card-2.svg",
+    "category": "template",
+    "sha256": "543e8a28e827f0d8223957fb9ae609968530724f0110e8e708465b24227955ff",
+    "bytes": 5831
+  },
+  {
+    "old": "src/assets/images/card-3.svg",
+    "new": "src/assets/images/template/card-3.svg",
+    "category": "template",
+    "sha256": "eff1b94e9c634d58c7cf3b72d8fe87887b254c85687cf76f961d633035c51d44",
+    "bytes": 38557
+  },
+  {
+    "old": "src/assets/images/card-4.svg",
+    "new": "src/assets/images/template/card-4.svg",
+    "category": "template",
+    "sha256": "d676ed67731694f6959322bfa6c3623720c7a8ffaae8ec76487f9284a455b7e8",
+    "bytes": 24551
+  },
+  {
+    "old": "src/assets/images/dental.svg",
+    "new": "src/assets/images/template/dental.svg",
+    "category": "template",
+    "sha256": "17ae41b2409d95435eecfd86b2a2baba68ef75ef9af7d177b89b9197553715bc",
+    "bytes": 3242
+  },
+  {
+    "old": "src/assets/images/fake-uni.svg",
+    "new": "src/assets/images/template/fake-uni.svg",
+    "category": "template",
+    "sha256": "821c4fb5bf3524f3ffcfda5ca1d2490609377688db447dbb5aa545613f367288",
+    "bytes": 2835
+  },
+  {
+    "old": "src/assets/images/fin-trust.png",
+    "new": "src/assets/images/template/fin-trust.png",
+    "category": "template",
+    "sha256": "6f3337bb36f491ed05141d8c24133efcfe890a3630d2e36258a83f4a9351bc73",
+    "bytes": 486826
+  },
+  {
+    "old": "src/assets/images/fintech.svg",
+    "new": "src/assets/images/template/fintech.svg",
+    "category": "template",
+    "sha256": "b5190684ed20b81f9340927c2a7fdba9b65784d2f59ae900c8912b92631692d0",
+    "bytes": 4556
+  },
+  {
+    "old": "src/assets/images/hero-1.svg",
+    "new": "src/assets/images/template/hero-1.svg",
+    "category": "template",
+    "sha256": "c02bf79d3b0d746dfda6690e896e534c1aa3c47b7381554c37dfb30bc2b3c35b",
+    "bytes": 143711
+  },
+  {
+    "old": "src/assets/images/jetstream-dark-theme.svg",
+    "new": "src/assets/images/template/jetstream-dark-theme.svg",
+    "category": "template",
+    "sha256": "5c17413795871197f5f391cc4dea31415fc97aca2fc72bc039742bf3467db671",
+    "bytes": 6331
+  },
+  {
+    "old": "src/assets/images/jetstream-logo.svg",
+    "new": "src/assets/images/template/jetstream-logo.svg",
+    "category": "template",
+    "sha256": "ac855a487fac3d9a8be647663995c59433387655a28ae9bcb76e43d8482a4239",
+    "bytes": 4388
+  },
+  {
+    "old": "src/assets/images/medi-connect.png",
+    "new": "src/assets/images/template/medi-connect.png",
+    "category": "template",
+    "sha256": "ea5de5d8b09e35d7b215f12c0361833247fa20b16ca81fa2005dd16d6c38fe44",
+    "bytes": 730922
+  },
+  {
+    "old": "src/assets/images/medical.svg",
+    "new": "src/assets/images/template/medical.svg",
+    "category": "template",
+    "sha256": "b057c4808004d6b99883117cb0ed0a1c03aa4f181d528c80cf64457951c0b0ee",
+    "bytes": 7164
+  },
+  {
+    "old": "src/assets/images/staff-1.png",
+    "new": "src/assets/images/template/staff-1.png",
+    "category": "template",
+    "sha256": "0690ac1eaeb11a4dc1b4cae1440e738bd9d6c08f442cd6ba855281e4146a5614",
+    "bytes": 412103
+  },
+  {
+    "old": "src/assets/images/staff-2-1.png",
+    "new": "src/assets/images/template/staff-2-1.png",
+    "category": "template",
+    "sha256": "b11c91adf7ab2f632db57e69f3a653698009d27c6f8d9b3845e1895eadf4a610",
+    "bytes": 460362
+  },
+  {
+    "old": "src/assets/images/staff-3-1.png",
+    "new": "src/assets/images/template/staff-3-1.png",
+    "category": "template",
+    "sha256": "da155e57470e2cf7f68b98efbc36b79126e8e93064ad2363fe22ccf079f5e5d0",
+    "bytes": 468616
+  },
+  {
+    "old": "src/assets/images/staff-4.png",
+    "new": "src/assets/images/template/staff-4.png",
+    "category": "template",
+    "sha256": "d68beff5b686ed517a8a511d74595c7236256a43b7519f308f51a13bc6d9bd9d",
+    "bytes": 437088
+  },
+  {
+    "old": "src/assets/images/staff-5.png",
+    "new": "src/assets/images/template/staff-5.png",
+    "category": "template",
+    "sha256": "004cba4b1c7891d85c1c28901750e87fa1dcd50b1412e91cb58bf152d7a82804",
+    "bytes": 445716
+  },
+  {
+    "old": "src/assets/images/staff-6.png",
+    "new": "src/assets/images/template/staff-6.png",
+    "category": "template",
+    "sha256": "dd64c4ef1b3f749de59c594f5df0d06b5c35c0e0d0fe5497d7a26396712504c7",
+    "bytes": 405223
+  },
+  {
+    "old": "src/assets/images/testimonial.png",
+    "new": "src/assets/images/template/testimonial.png",
+    "category": "template",
+    "sha256": "2e8a297a83d2c2c57edd068102fe5d700b4cabb5116c69752493fa6777f22c34",
+    "bytes": 34154
+  }
+]

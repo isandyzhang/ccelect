@@ -17,7 +17,7 @@ pageSections:
         category: Exoweld ／ C シリーズ
         title: CSHEA
         description: CSHEA は Exoweld C シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/cshea.svg
+        image: /images/ccelect/products/cshea/diagram.svg
         imageAlt: CSHEA 接続図
         specifications:
           - CSHEA
@@ -26,7 +26,7 @@ pageSections:
         category: Exoweld ／ C シリーズ
         title: CSHTA
         description: CSHTA は Exoweld C シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/cshta.svg
+        image: /images/ccelect/products/cshta/diagram.svg
         imageAlt: CSHTA 接続図
         specifications:
           - CSHTA
@@ -35,7 +35,7 @@ pageSections:
         category: Exoweld ／ C シリーズ
         title: CSVES
         description: CSVES は Exoweld C シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/csves.svg
+        image: /images/ccelect/products/csves/diagram.svg
         imageAlt: CSVES 接続図
         specifications:
           - CSVES
@@ -44,7 +44,7 @@ pageSections:
         category: Exoweld ／ C シリーズ
         title: CWL
         description: CWL は Exoweld C シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/cwl.svg
+        image: /images/ccelect/products/cwl/diagram.svg
         imageAlt: CWL 接続図
         specifications:
           - CWL
@@ -53,7 +53,7 @@ pageSections:
         category: Exoweld ／ C シリーズ
         title: CWE
         description: CWE は Exoweld C シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/cwe.svg
+        image: /images/ccelect/products/cwe/diagram.svg
         imageAlt: CWE 接続図
         specifications:
           - CWE

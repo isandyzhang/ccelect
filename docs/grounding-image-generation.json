@@ -1,0 +1,67 @@
+{
+  "generator": "Built-in imagegen",
+  "type": "AI product illustrations",
+  "notes": "Reference photos retained. Bentonite photo was blank: generic unbranded sack illustration, not actual packaging. IEA shows only visible upper section.",
+  "assets": [
+    {
+      "name": "iea",
+      "reference": "public/images/ccelect/products/iea/photo-hero.jpg",
+      "output": "public/images/ccelect/products/iea/cutout.png",
+      "prompt": "Use case: product-mockup. Create a premium photorealistic industrial catalog product cutout based on the reference, preserving visible engineering shape and number of components. Neutral soft studio light, crisp realistic material texture, subtle controlled highlights. Square canvas, whole subject centered with at least 10% clear margin, genuine transparent alpha background including holes and gaps, no floor or ground shadow. No captions, specifications, diagrams, watermark, or invented branding. Remove original background completely. Subject: the visible above-ground section of a copper ionic earthing electrode, upright cylindrical copper tube with dark charcoal rounded cap and short curved stranded copper lead at right as in reference. Retain seams and surface details, remove rubble, soil, construction tape and debris. Present a clean standalone upper-section product illustration; do not invent underground assembly, fins or internal parts. Cap has no readable label."
+    },
+    {
+      "name": "ground-rod-g",
+      "reference": "public/images/ccelect/products/ground-rod-g/photo-hero.jpg",
+      "output": "public/images/ccelect/products/ground-rod-g/cutout.png",
+      "prompt": "Use case: product-mockup. Create a premium photorealistic industrial catalog product cutout based on the reference, preserving visible engineering shape and number of components. Neutral soft studio light, crisp realistic material texture, subtle controlled highlights. Square canvas, whole subject centered with at least 10% clear margin, genuine transparent alpha background including holes and gaps, no floor or ground shadow. No captions, specifications, diagrams, watermark, or invented branding. Remove original background completely. Subject: ONE long slender smooth copper-clad steel grounding rod, plain flat end at left and tapered pointed tip at right, matching reference. Position diagonally from lower left to upper right so its thin long proportions remain visible. Copper brown metallic surface, no threading or accessories. Both ends fully contained. No text."
+    },
+    {
+      "name": "ground-rod-bne",
+      "reference": "public/images/ccelect/products/ground-rod-bne/photo-hero.jpg",
+      "output": "public/images/ccelect/products/ground-rod-bne/cutout.png",
+      "prompt": "Use case: product-mockup. Create a premium photorealistic industrial catalog product cutout based on the reference, preserving visible engineering shape and number of components. Neutral soft studio light, crisp realistic material texture, subtle controlled highlights. Square canvas, whole subject centered with at least 10% clear margin, genuine transparent alpha background including holes and gaps, no floor or ground shadow. No captions, specifications, diagrams, watermark, or invented branding. Remove original background completely. Subject: TWO long slender copper-plated grounding rods standing side by side diagonally lower-left to upper-right; preserve reference difference: one has visible short external threading at top, the other smooth top; both pointed bottoms. Warm copper metal surface, both full rods inside canvas, no labels."
+    },
+    {
+      "name": "copper-busbar",
+      "reference": "public/images/ccelect/products/copper-busbar/photo-hero.jpg",
+      "output": "public/images/ccelect/products/copper-busbar/cutout.png",
+      "prompt": "Use case: product-mockup. Create a premium photorealistic industrial catalog product cutout based on the reference, preserving visible engineering shape and number of components. Neutral soft studio light, crisp realistic material texture, subtle controlled highlights. Square canvas, whole subject centered with at least 10% clear margin, genuine transparent alpha background including holes and gaps, no floor or ground shadow. No captions, specifications, diagrams, watermark, or invented branding. Remove original background completely. Subject: turn reference engineering sketch into photoreal assembled copper ground busbar: rectangular flat copper bar across foreground with two rows of circular connection holes and a bolt at each end; behind it exactly two cylindrical dark brown insulating standoffs mounted to bent galvanized silver metal brackets with mounting holes. Preserve oblique three-quarter perspective and exact arrangement from drawing. Copper colored bar, silver hardware. No extra wires."
+    },
+    {
+      "name": "c-connector",
+      "reference": "public/images/ccelect/products/c-connector/photo-hero.jpg",
+      "output": "public/images/ccelect/products/c-connector/cutout.png",
+      "prompt": "Use case: product-mockup. Create a premium photorealistic industrial catalog product cutout based on the reference, preserving visible engineering shape and number of components. Neutral soft studio light, crisp realistic material texture, subtle controlled highlights. Square canvas, whole subject centered with at least 10% clear margin, genuine transparent alpha background including holes and gaps, no floor or ground shadow. No captions, specifications, diagrams, watermark, or invented branding. Remove original background completely. Subject: copper C-type compression connector sleeve surrounding two overlapping stranded copper conductor bundles angled bottom-left to top-right exactly like reference. Preserve simple short thick curved copper sleeve, fine strand texture, warm copper finish. No molten weld blob, no bolts. Remove green circular backdrop, center connector and complete short conductor ends."
+    },
+    {
+      "name": "compression-terminal",
+      "reference": "public/images/ccelect/products/compression-terminal/photo-hero.jpg",
+      "output": "public/images/ccelect/products/compression-terminal/cutout.png",
+      "prompt": "Use case: product-mockup. Create a premium photorealistic industrial catalog product cutout based on the reference, preserving visible engineering shape and number of components. Neutral soft studio light, crisp realistic material texture, subtle controlled highlights. Square canvas, whole subject centered with at least 10% clear margin, genuine transparent alpha background including holes and gaps, no floor or ground shadow. No captions, specifications, diagrams, watermark, or invented branding. Remove original background completely. Subject: ONLY the THREE silver tinned-copper crimp ring terminals shown in top left reference photo, arranged side by side smallest to largest. Each has cylindrical cable barrel below and flattened rounded palm above with one circular bolt hole. Retain geometry, slight three-quarter angle, brushed silver finish. Remove ALL catalog text, specification table, blue backdrop, drawings. No stamped numbers or invented labels."
+    },
+    {
+      "name": "gbs",
+      "reference": "public/images/ccelect/products/gbs/photo-hero.jpg",
+      "output": "public/images/ccelect/products/gbs/cutout.png",
+      "prompt": "Use case: product-mockup. Create a premium photorealistic industrial catalog product cutout based on the reference, preserving visible engineering shape and number of components. Neutral soft studio light, crisp realistic material texture, subtle controlled highlights. Square canvas, whole subject centered with at least 10% clear margin, genuine transparent alpha background including holes and gaps, no floor or ground shadow. No captions, specifications, diagrams, watermark, or invented branding. Remove original background completely. Subject: ONE GBS grounding wire clamp matching photo: compact bronze/rose brass rounded arch saddle with open conductor cavity and curved hook at right, central threaded silver fastening stud extends downward with hexagonal nut, bolt head above. Preserve asymmetric arch and openings. Same upright front three-quarter view. Do not invent wires."
+    },
+    {
+      "name": "gcs",
+      "reference": "public/images/ccelect/products/gcs/photo-hero.jpg",
+      "output": "public/images/ccelect/products/gcs/cutout.png",
+      "prompt": "Use case: product-mockup. Create a premium photorealistic industrial catalog product cutout based on the reference, preserving visible engineering shape and number of components. Neutral soft studio light, crisp realistic material texture, subtle controlled highlights. Square canvas, whole subject centered with at least 10% clear margin, genuine transparent alpha background including holes and gaps, no floor or ground shadow. No captions, specifications, diagrams, watermark, or invented branding. Remove original background completely. Subject: ONE GCS grounding conductor clamp, using the RIGHT-HAND view from the two-view reference. Compact silver galvanized angled square saddle clamp with visible jaw and top hex bolt, downward copper-brown threaded stud and silver hex nut beneath. Preserve right-reference shape and slight three-quarter angle, do not show two items or dividing line, no added wire."
+    },
+    {
+      "name": "sealing-plate",
+      "reference": "public/images/ccelect/products/sealing-plate/photo-hero.jpg",
+      "output": "public/images/ccelect/products/sealing-plate/cutout.png",
+      "prompt": "Use case: product-mockup. Create a premium photorealistic industrial catalog product cutout based on the reference, preserving visible engineering shape and number of components. Neutral soft studio light, crisp realistic material texture, subtle controlled highlights. Square canvas, whole subject centered with at least 10% clear margin, genuine transparent alpha background including holes and gaps, no floor or ground shadow. No captions, specifications, diagrams, watermark, or invented branding. Remove original background completely. Subject: TWO square copper water sealing plates, each with a copper cylindrical rod passing perpendicularly through center and a circular brazed collar. Preserve reference arrangement: left plate nearly face-on with rod pointing toward viewer, right plate at an oblique angle with rod extending both sides. Warm reddish copper/brass surfaces, natural fine scratches, remove green floor. All parts fully in frame."
+    },
+    {
+      "name": "bentonite",
+      "reference": null,
+      "output": "public/images/ccelect/products/bentonite/cutout.png",
+      "prompt": "Use case: product-mockup. Create a premium photorealistic industrial catalog product cutout based on the reference, preserving visible engineering shape and number of components. Neutral soft studio light, crisp realistic material texture, subtle controlled highlights. Square canvas, whole subject centered with at least 10% clear margin, genuine transparent alpha background including holes and gaps, no floor or ground shadow. No captions, specifications, diagrams, watermark, or invented branding. Remove original background completely. No product photo is available; create an explicitly generic unbranded bentonite soil enhancement material illustration: one plain kraft paper industrial sack with softly folded open top containing fine gray-beige clay powder, small amount visible at the opening only. No text, no logo, no weight claims, no tools, no packaging graphics. Single bag, isolated centered full object on transparent background. Photorealistic catalog presentation, neutral colors."
+    }
+  ]
+}

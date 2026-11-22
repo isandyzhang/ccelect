@@ -17,7 +17,7 @@ pageSections:
         category: Exoweld / E series
         title: ERB
         description: ERB is an Exoweld E series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/erb.svg
+        image: /images/ccelect/products/erb/diagram.svg
         imageAlt: ERB connection diagram
         specifications:
           - ERB
@@ -26,7 +26,7 @@ pageSections:
         category: Exoweld / E series
         title: ERW
         description: ERW is an Exoweld E series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/erw.svg
+        image: /images/ccelect/products/erw/diagram.svg
         imageAlt: ERW connection diagram
         specifications:
           - ERW
@@ -35,7 +35,7 @@ pageSections:
         category: Exoweld / E series
         title: ERT
         description: ERT is an Exoweld E series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/ert.svg
+        image: /images/ccelect/products/ert/diagram.svg
         imageAlt: ERT connection diagram
         specifications:
           - ERT

@@ -12,7 +12,7 @@ pageSections:
       - WL 屬於 W 系列銅導體接點形式，可依現場導體尺寸與接點需求搭配對應熔模與熔接劑。
       - 本頁為單品詳情公版 Demo。正式規格、模具編號與焊接劑用量請以業務確認資料為準。
       - 施工前請確認導體清潔、模具乾燥與安全防護，並依操作手冊完成點火與冷卻程序。
-    image: /src/assets/images/ccelect/dummy/product-5.svg
+    image: /src/assets/images/ccelect/placeholders/product-5.svg
     imageAlt: WL 產品示意照片
     imageHint: 點擊圖片可放大檢視（Demo）
     primaryCta:

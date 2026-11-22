@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" fill="none" role="img" aria-labelledby="title">
+<title id="title">Mold handle clamp</title>
+<g stroke="#242424" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<g transform="translate(47 0) scale(.8 1)">
+<path fill="white" d="m179 97-14-52q-2-7-9-5t-5 10l15 53m92-6 4-57q0-7 7-7t7 7l-4 59"/>
+<path fill="white" d="m160 106 25-7 10 18-28 8z M248 107l29-2 1 19-29 3z"/>
+<path fill="white" d="m169 128 25-7 22 80-16 18-18-8z M215 141l30-13 31 1-4 78q-3 18-21 13l-14-38z"/>
+<path d="m194 145 22-4 M204 218l19 20 26-23 13 6-28 31-21-1-23-27z"/>
+<path fill="white" d="m185 211 12 10-30 28-12-12z M262 217l11-8 37 25-9 14z"/>
+<path fill="white" d="m151 231 23 18-49 54q-6 6-15-1l-13-10q-7-7-1-14z M305 230l-17 22 62 47q7 5 13-2l11-15q5-7-2-13z"/>
+<path d="m154 242-49 48 M302 246l59 42 M163 102l25-7 M251 98l26-1"/>
+<circle cx="196" cy="204" r="6"/><circle cx="258" cy="206" r="6"/><circle cx="225" cy="150" r="6"/>
+<path d="m194 204 4 0m58 2h4m-33-56h-4 M223 239q-15-7-16 3t14 4l8-5 12 3"/>
+<path fill="white" d="m251 87-10-6q-10-11-11-4t7 15l-5 13q-2 9 5 6l11-13 9-4z"/>
+<ellipse cx="174" cy="112" rx="5" ry="3"/><ellipse cx="264" cy="115" rx="5" ry="3"/>
+</g>
+</g>
+</svg>

@@ -17,7 +17,7 @@ pageSections:
         category: Exoweld ／ E シリーズ
         title: ERB
         description: ERB は Exoweld E シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/erb.svg
+        image: /images/ccelect/products/erb/diagram.svg
         imageAlt: ERB 接続図
         specifications:
           - ERB
@@ -26,7 +26,7 @@ pageSections:
         category: Exoweld ／ E シリーズ
         title: ERW
         description: ERW は Exoweld E シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/erw.svg
+        image: /images/ccelect/products/erw/diagram.svg
         imageAlt: ERW 接続図
         specifications:
           - ERW
@@ -35,7 +35,7 @@ pageSections:
         category: Exoweld ／ E シリーズ
         title: ERT
         description: ERT は Exoweld E シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/ert.svg
+        image: /images/ccelect/products/ert/diagram.svg
         imageAlt: ERT 接続図
         specifications:
           - ERT

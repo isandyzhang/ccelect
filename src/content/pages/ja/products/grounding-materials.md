@@ -17,8 +17,8 @@ pageSections:
         category: 電極
         title: 接地棒
         description: 土壌条件と接地抵抗目標に応じて、イオン式または銅被覆鋼棒を選択。
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/products/iea/photo-hero.jpg
+        imageAlt: イオン式接地棒
         specifications:
           - IEA イオン式
           - G シリーズ
@@ -28,8 +28,8 @@ pageSections:
         category: 導体
         title: 接地銅バー
         description: 接地母線や等電位接続向けの高導電銅バー。
-        image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/products/copper-busbar/photo-hero.jpg
+        imageAlt: 接地銅バー
         specifications:
           - C1020BB
           - C1100BB
@@ -38,8 +38,8 @@ pageSections:
         category: 接続
         title: C 型圧着端子
         description: 銅導体の分岐・接続用圧着端子。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/products/c-connector/photo-hero.jpg
+        imageAlt: C 型圧着端子
         specifications:
           - C 型
           - 圧着端子
@@ -48,8 +48,8 @@ pageSections:
         category: 固定
         title: 接地線固定夾
         description: 壁面・構造体などへの接地導体固定用。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/products/gbs/photo-hero.jpg
+        imageAlt: 接地線固定夾 GBS
         specifications:
           - GBS シリーズ
           - GCS シリーズ
@@ -58,8 +58,8 @@ pageSections:
         category: 付属
         title: その他付属材料
         description: 止水・土壌改良など接地工事用付属材料。
-        image: /images/ccelect/accessories/ground-plate.jpg
-        imageAlt: EXOWELD AG 接地板と端子部品
+        image: /images/ccelect/products/sealing-plate/photo-hero.jpg
+        imageAlt: 止水板
         specifications:
           - 止水板
           - Bentonite

@@ -17,7 +17,7 @@ pageSections:
         category: Exoweld / B series
         title: BE
         description: BE is an Exoweld B series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/be.svg
+        image: /images/ccelect/products/be/diagram.svg
         imageAlt: BE connection diagram
         specifications:
           - BE
@@ -26,7 +26,7 @@ pageSections:
         category: Exoweld / B series
         title: BEH
         description: BEH is an Exoweld B series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/beh.svg
+        image: /images/ccelect/products/beh/diagram.svg
         imageAlt: BEH connection diagram
         specifications:
           - BEH
@@ -35,7 +35,7 @@ pageSections:
         category: Exoweld / B series
         title: BT
         description: BT is an Exoweld B series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/bt.svg
+        image: /images/ccelect/products/bt/diagram.svg
         imageAlt: BT connection diagram
         specifications:
           - BT
@@ -44,7 +44,7 @@ pageSections:
         category: Exoweld / B series
         title: BTV
         description: BTV is an Exoweld B series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/btv.svg
+        image: /images/ccelect/products/btv/diagram.svg
         imageAlt: BTV connection diagram
         specifications:
           - BTV
@@ -53,7 +53,7 @@ pageSections:
         category: Exoweld / B series
         title: BS
         description: BS is an Exoweld B series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/bs.svg
+        image: /images/ccelect/products/bs/diagram.svg
         imageAlt: BS connection diagram
         specifications:
           - BS
@@ -62,7 +62,7 @@ pageSections:
         category: Exoweld / B series
         title: BX
         description: BX is an Exoweld B series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/bx.svg
+        image: /images/ccelect/products/bx/diagram.svg
         imageAlt: BX connection diagram
         specifications:
           - BX
@@ -71,7 +71,7 @@ pageSections:
         category: Exoweld / B series
         title: BVES
         description: BVES is an Exoweld B series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/bves.svg
+        image: /images/ccelect/products/bves/diagram.svg
         imageAlt: BVES connection diagram
         specifications:
           - BVES

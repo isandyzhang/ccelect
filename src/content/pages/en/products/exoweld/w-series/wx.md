@@ -12,7 +12,7 @@ pageSections:
       - WX belongs to the W series copper conductor joint family and can be paired with matching molds and welding powder by conductor size.
       - This page is a product-detail template demo. Confirm final specs, mold numbers, and powder amounts with sales.
       - Before welding, clean conductors, dry the mold, follow safety procedures, and complete ignition and cooling per the manual.
-    image: /images/ccelect/wx/00-wx-enhanced.jpg
+    image: /images/ccelect/products/wx/photo-hero.jpg
     imageAlt: WX completed copper conductor joint
     imageHint: Completed copper conductor joint
     videoHeading: Welding video
@@ -42,22 +42,22 @@ pageSections:
         value: Demo
     applicationHeading: Application photos
     applicationImages:
-      - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
+      - image: /images/ccelect/products/wx/photo-mold-open.jpg
         imageAlt: WX Mold interior
         caption: Mold interior
-      - image: /images/ccelect/wx/02-preheat-enhanced.jpg
+      - image: /images/ccelect/products/wx/photo-preheat.jpg
         imageAlt: WX Preheat step
         caption: Preheat step
-      - image: /images/ccelect/wx/03-setup-enhanced.jpg
+      - image: /images/ccelect/products/wx/photo-setup.jpg
         imageAlt: WX Copper conductors positioned in the mold
         caption: Copper conductors positioned in the mold
-      - image: /images/ccelect/wx/04-setup-top-enhanced.jpg
+      - image: /images/ccelect/products/wx/photo-setup-top.jpg
         imageAlt: WX Top view of mold setup
         caption: Top view of mold setup
-      - image: /images/ccelect/wx/05-process-enhanced.jpg
+      - image: /images/ccelect/products/wx/photo-process.jpg
         imageAlt: WX Welding process
         caption: Welding process
-      - image: /images/ccelect/wx/00-wx-enhanced.jpg
+      - image: /images/ccelect/products/wx/photo-hero.jpg
         imageAlt: WX Completed copper conductor joint
         caption: Completed copper conductor joint
     note: Demo product detail for Exoweld W series. Confirm final specs with sales.

@@ -413,7 +413,7 @@ async function buildSpark(file, outName) {
 
 await mkdir(outDir, { recursive: true });
 if (previewOnly) await mkdir(previewDir, { recursive: true });
-await buildClouds("public/images/ccelect/project-fab.jpg", "project-fab-clouds", "edge");
-await buildClouds("public/images/ccelect/project-incinerator.jpg", "project-incinerator-clouds", "global");
-await buildSpark("public/images/ccelect/project-metro-retouched.webp", "project-metro-spark");
+await buildClouds("public/images/ccelect/projects/fab.jpg", "project-fab-clouds", "edge");
+await buildClouds("public/images/ccelect/projects/incinerator.jpg", "project-incinerator-clouds", "global");
+await buildSpark("public/images/ccelect/projects/metro.webp", "project-metro-spark");
 console.log(previewOnly ? "previews ready" : "videos ready");

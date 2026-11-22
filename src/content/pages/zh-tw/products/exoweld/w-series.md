@@ -9,28 +9,28 @@ pageSections:
     heading: W 系列-線對線
     summary: Exoweld 石墨熔模設計與建造，適用於多種線對線連接方式與導體組合。
     images:
-      - image: /images/ccelect/we/00-we-enhanced.jpg
+      - image: /images/ccelect/products/we/photo-hero.jpg
         imageAlt: WE 熔接完成的銅導體接點
         caption: WE
-      - image: /images/ccelect/we/02-mold-open-enhanced.jpg
+      - image: /images/ccelect/products/we/photo-mold-open.jpg
         imageAlt: WE 開啟的石墨熔模
         caption: WE 熔模
-      - image: /images/ccelect/wt/00-wt-enhanced.jpg
+      - image: /images/ccelect/products/wt/photo-hero.jpg
         imageAlt: WT 熔接完成的銅導體接點
         caption: WT
-      - image: /images/ccelect/wt/01-mold-open-enhanced.jpg
+      - image: /images/ccelect/products/wt/photo-mold-open.jpg
         imageAlt: WT 開啟的石墨熔模
         caption: WT 熔模
-      - image: /images/ccelect/wx/00-wx-enhanced.jpg
+      - image: /images/ccelect/products/wx/photo-hero.jpg
         imageAlt: WX 熔接完成的銅導體接點
         caption: WX
-      - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
+      - image: /images/ccelect/products/wx/photo-mold-open.jpg
         imageAlt: WX 開啟的石墨熔模
         caption: WX 熔模
-      - image: /images/ccelect/wxl/00-wxl-enhanced.jpg
+      - image: /images/ccelect/products/wxl/photo-hero.jpg
         imageAlt: WXL 熔接完成的銅導體接點
         caption: WXL
-      - image: /images/ccelect/wxl/01-mold-open-enhanced.jpg
+      - image: /images/ccelect/products/wxl/photo-mold-open.jpg
         imageAlt: WXL 開啟的石墨熔模
         caption: WXL 熔模
     featuresHeading: 功能
@@ -79,7 +79,7 @@ pageSections:
         category: 線對線
         title: WE
         description: WE 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/we.svg
+        image: /images/ccelect/products/we/diagram.svg
         imageAlt: WE 線對線直通示意圖
         specifications:
           - WE
@@ -88,7 +88,7 @@ pageSections:
         category: 線對線
         title: WT
         description: WT 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/wt.jpg
+        image: /images/ccelect/products/wt/diagram.jpg
         imageAlt: WT 線對線 T 接示意圖
         specifications:
           - WT
@@ -97,7 +97,7 @@ pageSections:
         category: 線對線
         title: WX
         description: WX 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/wx.svg
+        image: /images/ccelect/products/wx/diagram.svg
         imageAlt: WX 線對線交叉示意圖
         specifications:
           - WX
@@ -106,7 +106,7 @@ pageSections:
         category: 線對線
         title: WP
         description: WP 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/wp.jpg
+        image: /images/ccelect/products/wp/diagram.jpg
         imageAlt: WP 線對線平行示意圖
         specifications:
           - WP
@@ -115,7 +115,7 @@ pageSections:
         category: 線對線
         title: WL
         description: WL 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/wl.jpg
+        image: /images/ccelect/products/wl/diagram.jpg
         imageAlt: WL 線對線 L 接示意圖
         specifications:
           - WL
@@ -124,7 +124,7 @@ pageSections:
         category: 線對線
         title: WXL
         description: WXL 線對線銅導體接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/wxl.jpg
+        image: /images/ccelect/products/wxl/diagram.jpg
         imageAlt: WXL 線對線交叉示意圖
         specifications:
           - WXL

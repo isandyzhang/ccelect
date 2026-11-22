@@ -17,7 +17,7 @@ pageSections:
         category: Exoweld ／ C 系列
         title: CSHEA
         description: CSHEA 為 Exoweld C 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/cshea.svg
+        image: /images/ccelect/products/cshea/diagram.svg
         imageAlt: CSHEA 接點示意圖
         specifications:
           - CSHEA
@@ -26,7 +26,7 @@ pageSections:
         category: Exoweld ／ C 系列
         title: CSHTA
         description: CSHTA 為 Exoweld C 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/cshta.svg
+        image: /images/ccelect/products/cshta/diagram.svg
         imageAlt: CSHTA 接點示意圖
         specifications:
           - CSHTA
@@ -35,7 +35,7 @@ pageSections:
         category: Exoweld ／ C 系列
         title: CSVES
         description: CSVES 為 Exoweld C 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/csves.svg
+        image: /images/ccelect/products/csves/diagram.svg
         imageAlt: CSVES 接點示意圖
         specifications:
           - CSVES
@@ -44,7 +44,7 @@ pageSections:
         category: Exoweld ／ C 系列
         title: CWL
         description: CWL 為 Exoweld C 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/cwl.svg
+        image: /images/ccelect/products/cwl/diagram.svg
         imageAlt: CWL 接點示意圖
         specifications:
           - CWL
@@ -53,7 +53,7 @@ pageSections:
         category: Exoweld ／ C 系列
         title: CWE
         description: CWE 為 Exoweld C 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/cwe.svg
+        image: /images/ccelect/products/cwe/diagram.svg
         imageAlt: CWE 接點示意圖
         specifications:
           - CWE

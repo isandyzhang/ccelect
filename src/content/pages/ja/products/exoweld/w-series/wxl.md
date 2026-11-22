@@ -12,7 +12,7 @@ pageSections:
       - WXL は W シリーズ銅導体接点形式で、線径と接点条件に応じた溶模・溶接剤と組み合わせます。
       - 本ページは製品詳細テンプレートの Demo です。正式仕様、型番、溶接剤量は営業確認資料に従ってください。
       - 施工前に導体清掃、溶模乾燥、安全対策を確認し、手順書どおり点火と冷却を行ってください。
-    image: /images/ccelect/wxl/00-wxl-enhanced.jpg
+    image: /images/ccelect/products/wxl/photo-hero.jpg
     imageAlt: WXL 熔接完了後の銅導体接点
     imageHint: 熔接完了後の銅導体接点
     videoHeading: 熔接動画
@@ -42,22 +42,22 @@ pageSections:
         value: Demo
     applicationHeading: 施工例
     applicationImages:
-      - image: /images/ccelect/wxl/01-mold-open-enhanced.jpg
+      - image: /images/ccelect/products/wxl/photo-mold-open.jpg
         imageAlt: WXL 溶模の内部構造
         caption: 溶模の内部構造
-      - image: /images/ccelect/wxl/02-mold-closeup-enhanced.jpg
+      - image: /images/ccelect/products/wxl/photo-mold-closeup.jpg
         imageAlt: WXL 溶模の近接
         caption: 溶模の近接
-      - image: /images/ccelect/wxl/03-setup-enhanced.jpg
+      - image: /images/ccelect/products/wxl/photo-setup.jpg
         imageAlt: WXL 銅導体を溶模にセット
         caption: 銅導体を溶模にセット
-      - image: /images/ccelect/wxl/04-setup-clamp-enhanced.jpg
+      - image: /images/ccelect/products/wxl/photo-setup-clamp.jpg
         imageAlt: WXL 溶模のクランプ固定
         caption: 溶模のクランプ固定
-      - image: /images/ccelect/wxl/05-powder-enhanced.jpg
+      - image: /images/ccelect/products/wxl/photo-powder.jpg
         imageAlt: WXL 溶接剤の装填
         caption: 溶接剤の装填
-      - image: /images/ccelect/wxl/00-wxl-enhanced.jpg
+      - image: /images/ccelect/products/wxl/photo-hero.jpg
         imageAlt: WXL 熔接完了後の銅導体接点
         caption: 熔接完了後の銅導体接点
     note: Exoweld W シリーズ製品詳細の Demo です。正式仕様は営業確認に従ってください。

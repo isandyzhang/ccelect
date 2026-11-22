@@ -17,7 +17,7 @@ pageSections:
         category: Exoweld ／ R 系列
         title: RHEH
         description: RHEH 為 Exoweld R 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
+        image: /src/assets/images/ccelect/placeholders/product-1.svg
         imageAlt: 產品示意照片
         specifications:
           - RHEH
@@ -26,7 +26,7 @@ pageSections:
         category: Exoweld ／ R 系列
         title: RHXH
         description: RHXH 為 Exoweld R 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
+        image: /src/assets/images/ccelect/placeholders/product-2.svg
         imageAlt: 產品示意照片
         specifications:
           - RHXH

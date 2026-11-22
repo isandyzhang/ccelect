@@ -13,7 +13,7 @@ pageSections:
       - WE は W シリーズ銅導体接点形式で、線径と接点条件に応じた溶模・溶接剤と組み合わせます。
       - 本ページは製品詳細テンプレートの Demo です。正式仕様、型番、溶接剤量は営業確認資料に従ってください。
       - 施工前に導体清掃、溶模乾燥、安全対策を確認し、手順書どおり点火と冷却を行ってください。
-    image: /images/ccelect/we/00-we-enhanced.jpg
+    image: /images/ccelect/products/we/photo-hero.jpg
     imageAlt: WE 熔接完了後の銅導体接点
     imageHint: 熔接完了後の銅導体接点
     videoHeading: 熔接動画
@@ -43,16 +43,16 @@ pageSections:
         value: Demo
     applicationHeading: 施工例
     applicationImages:
-      - image: /images/ccelect/we/01-mold-enhanced.jpg
+      - image: /images/ccelect/products/we/photo-mold.jpg
         imageAlt: WE 黒鉛溶模
         caption: 黒鉛溶模
-      - image: /images/ccelect/we/02-mold-open-enhanced.jpg
+      - image: /images/ccelect/products/we/photo-mold-open.jpg
         imageAlt: 開いた WE 黒鉛溶模
         caption: 溶模を開いた状態。溶室が見える
-      - image: /images/ccelect/we/03-setup-enhanced.jpg
+      - image: /images/ccelect/products/we/photo-setup.jpg
         imageAlt: 銅導体を WE 溶模にセット
         caption: 銅導体を溶模へセット
-      - image: /images/ccelect/we/00-we-enhanced.jpg
+      - image: /images/ccelect/products/we/photo-hero.jpg
         imageAlt: WE 熔接完了後の銅導体接点
         caption: 完成接点
     note: Exoweld W シリーズ製品詳細の Demo です。正式仕様は営業確認に従ってください。

@@ -17,8 +17,8 @@ pageSections:
         category: Molds
         title: Molds & split molds
         description: Graphite molds, split molds, and wear plates.
-        image: /images/ccelect/accessories/mold-powder.jpg
-        imageAlt: EXOWELD graphite mold with weld metal kit
+        image: /images/ccelect/accessories/split-mold/diagram.jpg
+        imageAlt: Split graphite mold
         specifications:
           - Graphite molds
           - Split molds
@@ -28,8 +28,8 @@ pageSections:
         category: Clamps
         title: Mold clamps
         description: Universal clamps, chain clamps, and ML-3 clamps.
-        image: /images/ccelect/accessories/clamps-ignitor.jpg
-        imageAlt: EXOWELD mold clamps and ignitor
+        image: /src/assets/images/ccelect/accessories/handle/photo-hero.jpg
+        imageAlt: Black mold clamp with two handles photograph
         specifications:
           - Universal
           - Chain
@@ -39,8 +39,8 @@ pageSections:
         category: Consumables
         title: Powder & cleaning
         description: Foil-packed powder, igniters, cleaning plates, and brushes.
-        image: /images/ccelect/accessories/mold-powder.jpg
-        imageAlt: EXOWELD weld metal packets and cleaning brush
+        image: /images/ccelect/accessories/foil-pack/diagram.jpg
+        imageAlt: Foil-packed weld metal
         specifications:
           - Powder
           - Igniter
@@ -50,11 +50,32 @@ pageSections:
         category: Field tools
         title: Accessories
         description: Cable cutters, cartridge torches, and tool kits.
-        image: /images/ccelect/accessories/field-tools.jpg
+        image: /src/assets/images/ccelect/accessories/field-tools.jpg
         imageAlt: EXOWELD field welding tool kit
         specifications:
           - Cutters
           - Torches
           - Tool kits
+        href: /en/contact/
+      - id: igniter
+        category: Ignition tools
+        title: Igniter
+        description: Handheld ignition tool for exothermic welding.
+        image: /src/assets/images/ccelect/accessories/lighter/photo-hero.jpg
+        imageAlt: Metal handheld igniter photograph
+        href: /en/contact/
+      - id: brush
+        category: Cleaning tools
+        title: Cleaning brush
+        description: Wooden-handled brush for mold cleaning.
+        image: /src/assets/images/ccelect/accessories/brush/photo-hero.jpg
+        imageAlt: Wooden-handled cleaning brush photograph
+        href: /en/contact/
+      - id: scraper
+        category: Cleaning tools
+        title: Mold scraper
+        description: Scraper for mold cleaning.
+        image: /src/assets/images/ccelect/accessories/clean-shave/photo-hero.jpg
+        imageAlt: Black mold scraper photograph
         href: /en/contact/
 ---

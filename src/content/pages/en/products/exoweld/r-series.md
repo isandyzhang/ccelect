@@ -17,7 +17,7 @@ pageSections:
         category: Exoweld / R series
         title: RHEH
         description: RHEH is an Exoweld R series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-1.svg
+        image: /src/assets/images/ccelect/placeholders/product-1.svg
         imageAlt: Product placeholder
         specifications:
           - RHEH
@@ -26,7 +26,7 @@ pageSections:
         category: Exoweld / R series
         title: RHXH
         description: RHXH is an Exoweld R series copper exothermic joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /src/assets/images/ccelect/dummy/product-2.svg
+        image: /src/assets/images/ccelect/placeholders/product-2.svg
         imageAlt: Product placeholder
         specifications:
           - RHXH

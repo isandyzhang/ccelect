@@ -17,7 +17,7 @@ pageSections:
         category: Exoweld ／ E 系列
         title: ERB
         description: ERB 為 Exoweld E 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/erb.svg
+        image: /images/ccelect/products/erb/diagram.svg
         imageAlt: ERB 接點示意圖
         specifications:
           - ERB
@@ -26,7 +26,7 @@ pageSections:
         category: Exoweld ／ E 系列
         title: ERW
         description: ERW 為 Exoweld E 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/erw.svg
+        image: /images/ccelect/products/erw/diagram.svg
         imageAlt: ERW 接點示意圖
         specifications:
           - ERW
@@ -35,7 +35,7 @@ pageSections:
         category: Exoweld ／ E 系列
         title: ERT
         description: ERT 為 Exoweld E 系列銅熱熔接接點型號（Demo）。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/diagrams/ert.svg
+        image: /images/ccelect/products/ert/diagram.svg
         imageAlt: ERT 接點示意圖
         specifications:
           - ERT

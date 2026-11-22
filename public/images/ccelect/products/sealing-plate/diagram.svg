@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" fill="none" role="img" aria-labelledby="title">
+<title id="title">Copper water sealing plates</title>
+<g stroke="#242424" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path fill="white" d="m43 87 145-5v155l-145 5Z"/>
+<path d="m43 242 5 4 145-5V85l-5-3"/>
+<ellipse cx="118" cy="164" rx="17" ry="19"/>
+<path fill="white" d="m111 154-39 14v18l42-14q8-7-3-18Z"/><ellipse fill="white" cx="72" cy="177" rx="7" ry="10"/>
+<path fill="white" d="m352 197 65 45q10 2 13-9l-61-48Z"/><ellipse cx="424" cy="238" rx="6" ry="8"/>
+<path fill="white" d="m278 125 107-72 44 155-108 75Z"/><path d="m385 53 5 3 44 155-108 75-5-3 M429 208l5 3"/>
+<ellipse cx="351" cy="169" rx="15" ry="20" transform="rotate(-22 351 169)"/>
+<path fill="white" d="m351 158-75-49-10 13 75 53q15 4 10-17Z"/><ellipse fill="white" cx="271" cy="116" rx="6" ry="9" transform="rotate(29 271 116)"/>
+
+</g>
+</svg>

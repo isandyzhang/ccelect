@@ -324,7 +324,7 @@ pageSections:
                     alignmentHorizontal: center
                     text: ISO 9001:2015
                   - _component: building-blocks/core-elements/image
-                    source: /src/assets/images/ccelect/legacy/iso-9001-2015-certificate.jpg
+                    source: /src/assets/images/ccelect/certifications/iso-9001-2015-certificate.jpg
                     alt: 集集電工業 ISO 9001:2015 品質マネジメントシステム証書
                     aspectRatio: landscape
                     rounded: true
@@ -346,7 +346,7 @@ pageSections:
                       title: 1981 台電タイプ試験
                       description: 桃園にて台湾電力関係者立会いの type test を実施。
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-taipower-1.jpg
+                        source: /src/assets/images/ccelect/testing/taipower-1.jpg
                         alt: 1981 年台電タイプ試験の歴史写真
                         rounded: true
                       eyebrowIcon:
@@ -359,7 +359,7 @@ pageSections:
                       title: 1981 台電タイプ試験（2）
                       description: 試験現場の記録写真。
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-taipower-2.jpg
+                        source: /src/assets/images/ccelect/testing/taipower-2.jpg
                         alt: 1981 年台電タイプ試験の歴史写真
                         rounded: true
                       eyebrowIcon:
@@ -372,7 +372,7 @@ pageSections:
                       title: 1999 UL 溶接試験
                       description: 旧サイト記載：54 種類の接続部を大電流試験。UL File E305374。
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-ul-1.jpg
+                        source: /src/assets/images/ccelect/testing/ul-1.jpg
                         alt: UL 溶接試験の歴史写真
                         rounded: true
                       eyebrowIcon:
@@ -385,7 +385,7 @@ pageSections:
                       title: 1999 UL 溶接試験（2）
                       description: 大電流試験の記録。
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-ul-2.jpg
+                        source: /src/assets/images/ccelect/testing/ul-2.jpg
                         alt: UL 溶接試験の歴史写真
                         rounded: true
                       eyebrowIcon:
@@ -398,7 +398,7 @@ pageSections:
                       title: 2000 年大電流試験
                       description: AWG 4/0 ケーブルとボルト溶接試料の台架試験。
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-high-current-1.jpg
+                        source: /src/assets/images/ccelect/testing/high-current-1.jpg
                         alt: 大電流試験の歴史写真
                         rounded: true
                       eyebrowIcon:
@@ -411,7 +411,7 @@ pageSections:
                       title: 2000 年大電流試験（2）
                       description: 試験台と試料の特写。
                       image:
-                        source: /src/assets/images/ccelect/legacy/test-high-current-2.jpg
+                        source: /src/assets/images/ccelect/testing/high-current-2.jpg
                         alt: 大電流試験の歴史写真
                         rounded: true
                       eyebrowIcon:

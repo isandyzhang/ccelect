@@ -17,8 +17,8 @@ pageSections:
         category: 接地極
         title: 接地棒
         description: 適用於不同土壤條件與接地電阻需求，可依施工環境選擇離子式或銅包鋼系列。
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: 離子式接地棒施工現場
+        image: /images/ccelect/products/iea/photo-hero.jpg
+        imageAlt: 離子式接地棒
         specifications:
           - IEA 離子式
           - G 系列
@@ -28,8 +28,8 @@ pageSections:
         category: 接地導體
         title: 接地銅排
         description: 高導電性銅排，適用於接地匯流、配電盤與設備等電位連接。
-        image: /src/assets/images/ccelect/dummy/product-5.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/products/copper-busbar/photo-hero.jpg
+        imageAlt: 接地銅排
         iconName: bars-3
         specifications:
           - C1020BB
@@ -39,8 +39,8 @@ pageSections:
         category: 導體接續
         title: C 型壓接頭
         description: 用於銅導體分歧與接續，依導體尺寸選擇對應規格並搭配專用壓接工具。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/products/c-connector/photo-hero.jpg
+        imageAlt: C 型壓接頭
         iconName: link
         specifications:
           - C 型接頭
@@ -50,8 +50,8 @@ pageSections:
         category: 固定配件
         title: 接地線固定夾
         description: 提供接地導體定位與固定，適用於牆面、結構體及各類接地工程配置。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
-        imageAlt: 產品示意照片
+        image: /images/ccelect/products/gbs/photo-hero.jpg
+        imageAlt: 接地線固定夾 GBS
         iconName: wrench
         specifications:
           - GBS 系列
@@ -61,8 +61,8 @@ pageSections:
         category: 工程材料
         title: 其他附屬材料
         description: 接地工程所需的止水與土壤改善材料，可依現場條件搭配主要接地系統使用。
-        image: /images/ccelect/accessories/ground-plate.jpg
-        imageAlt: EXOWELD 接地板 AG 型與端子配件
+        image: /images/ccelect/products/sealing-plate/photo-hero.jpg
+        imageAlt: 止水板
         iconName: archive-box
         specifications:
           - 止水板

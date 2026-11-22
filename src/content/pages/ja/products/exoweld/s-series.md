@@ -17,7 +17,7 @@ pageSections:
         category: Exoweld ／ S シリーズ
         title: SHEA
         description: SHEA は Exoweld S シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/dummy/product-1.svg
+        image: /src/assets/images/ccelect/placeholders/product-1.svg
         imageAlt: 製品プレースホルダー
         specifications:
           - SHEA
@@ -26,7 +26,7 @@ pageSections:
         category: Exoweld ／ S シリーズ
         title: SHEB
         description: SHEB は Exoweld S シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/dummy/product-2.svg
+        image: /src/assets/images/ccelect/placeholders/product-2.svg
         imageAlt: 製品プレースホルダー
         specifications:
           - SHEB
@@ -35,7 +35,7 @@ pageSections:
         category: Exoweld ／ S シリーズ
         title: SVES
         description: SVES は Exoweld S シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /src/assets/images/ccelect/dummy/product-3.svg
+        image: /src/assets/images/ccelect/placeholders/product-3.svg
         imageAlt: 製品プレースホルダー
         specifications:
           - SVES

@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 
 const root = "c:/github/ccelect/src/content/pages";
-const dummy = (n) => `/src/assets/images/ccelect/dummy/product-${n}.svg`;
+const dummy = (n) => `/src/assets/images/ccelect/placeholders/product-${n}.svg`;
 
 const seriesMeta = {
   w: { codes: ["WE", "WT", "WX", "WP", "WL", "WXL"], img: 1 },

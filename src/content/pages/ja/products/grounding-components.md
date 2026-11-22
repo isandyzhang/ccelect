@@ -17,8 +17,8 @@ pageSections:
         category: 埋込部品
         title: Ground Plate
         description: 埋込型接地板。旧カタログには AG201-100、AG401-100、AG401-250 があります。
-        image: /src/assets/images/ccelect/dummy/product-3.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/products/ground-plate/diagram.jpg
+        imageAlt: 埋込型接地板 AG201-100、AG401-100、AG401-250
         specifications:
           - AG201-100
           - AG401-100
@@ -28,8 +28,8 @@ pageSections:
         category: 端子部品
         title: 接地端子板
         description: KS・KZ 接地端子板シリーズ。接地引込みに使用します。
-        image: /src/assets/images/ccelect/dummy/product-4.svg
-        imageAlt: 製品プレースホルダー
+        image: /images/ccelect/products/terminal-plate/diagram.jpg
+        imageAlt: 接地端子板 KS、KZ
         specifications:
           - KS シリーズ
           - KZ シリーズ

@@ -13,7 +13,7 @@ heroSections:
     subtext: Practical notes to align procurement and field teams on grounding terminology.
     buttonSections: []
     image:
-      source: /src/assets/images/hero-1.svg
+      source: /src/assets/images/template/hero-1.svg
       alt: Technical notes
       rounded: true
     icons: []

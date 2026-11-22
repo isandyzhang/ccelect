@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" fill="none" role="img" aria-labelledby="title">
+<title id="title">GBS grounding conductor clamp</title>
+<g stroke="#242424" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path fill="white" d="m216 46 13-8h29l12 8v20l-12 7h-29l-13-8Z"/>
+<path d="m216 46 13 8h29l12-8 M229 54v19m29-19v19"/>
+<path fill="white" d="M225 102h32v174q-16 12-32 0Z"/>
+<path d="m226 113 30-4" stroke-width="1.2"/><path d="m226 120 30-4" stroke-width="1.2"/><path d="m226 127 30-4" stroke-width="1.2"/><path d="m226 134 30-4" stroke-width="1.2"/><path d="m226 141 30-4" stroke-width="1.2"/><path d="m226 148 30-4" stroke-width="1.2"/><path d="m226 155 30-4" stroke-width="1.2"/><path d="m226 162 30-4" stroke-width="1.2"/><path d="m226 169 30-4" stroke-width="1.2"/><path d="m226 176 30-4" stroke-width="1.2"/><path d="m226 183 30-4" stroke-width="1.2"/><path d="m226 190 30-4" stroke-width="1.2"/><path d="m226 197 30-4" stroke-width="1.2"/><path d="m226 204 30-4" stroke-width="1.2"/><path d="m226 211 30-4" stroke-width="1.2"/><path d="m226 218 30-4" stroke-width="1.2"/><path d="m226 225 30-4" stroke-width="1.2"/><path d="m226 232 30-4" stroke-width="1.2"/><path d="m226 239 30-4" stroke-width="1.2"/><path d="m226 246 30-4" stroke-width="1.2"/><path d="m226 253 30-4" stroke-width="1.2"/><path d="m226 260 30-4" stroke-width="1.2"/><path d="m226 267 30-4" stroke-width="1.2"/><path d="m226 274 30-4" stroke-width="1.2"/>
+<path fill="white" d="M153 133q-13-8-6-26 20-51 83-50 59 0 89 46 8 15-4 17l-24-13-17 17-11-19h-57l-29 28Z"/>
+<path fill="white" d="m149 146 17-15 15 17h88l22-17 19 12q22-14 25-35 7-17 15-4 10 29-9 54-15 21-45 22H143v-22Z"/>
+<path d="M149 167h147q36-1 47-31 M156 113q29-43 74-43 44-1 70 29" stroke-width="1.4"/>
+<path fill="white" d="M210 181h62v13q-31 12-62 0Z"/>
+<path fill="white" d="m207 205 14-8h40l15 8v27l-15 9h-40l-14-9Z"/>
+<path d="m207 205 14 9h40l15-9 M221 214v27m40-27v27"/>
+</g>
+</svg>

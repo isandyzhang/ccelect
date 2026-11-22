@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" fill="none" role="img" aria-labelledby="title">
+<title id="title">Ionic grounding electrode</title>
+<g stroke="#242424" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M258 140q89 24 13 70l-15 6 M258 149q68 20 9 52l-11 6"/>
+<path d="M266 145q56 22 10 55m-4-53q50 22 9 49m-1-46q42 23 6 43" stroke-width="1.2"/>
+<path fill="white" d="M205 63v218c0 15 55 15 55 0V63Z"/>
+<ellipse cx="232.5" cy="63" rx="27.5" ry="10"/>
+<path d="M205 179c4 13 50 13 55 0 M205 185c4 13 50 13 55 0 M205 256c4 13 50 13 55 0 M205 263c4 13 50 13 55 0 M214 76v99m0 19v58m0 20v11 M251 76v99" stroke-width="1.5"/>
+<path fill="white" d="m200 48 8-17q24-15 48 0l9 17-5 19q-25 13-56-1Z"/>
+<path d="M200 48q32 20 65 0 M208 31q24 17 48 0 M205 51l5 16m47-16-3 17"/>
+<ellipse cx="213" cy="218" rx="2" ry="3"/><ellipse cx="253" cy="219" rx="2" ry="3"/>
+</g>
+</svg>

@@ -17,7 +17,7 @@ pageSections:
         category: Exoweld ／ B シリーズ
         title: BE
         description: BE は Exoweld B シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/be.svg
+        image: /images/ccelect/products/be/diagram.svg
         imageAlt: BE 接続図
         specifications:
           - BE
@@ -26,7 +26,7 @@ pageSections:
         category: Exoweld ／ B シリーズ
         title: BEH
         description: BEH は Exoweld B シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/beh.svg
+        image: /images/ccelect/products/beh/diagram.svg
         imageAlt: BEH 接続図
         specifications:
           - BEH
@@ -35,7 +35,7 @@ pageSections:
         category: Exoweld ／ B シリーズ
         title: BT
         description: BT は Exoweld B シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/bt.svg
+        image: /images/ccelect/products/bt/diagram.svg
         imageAlt: BT 接続図
         specifications:
           - BT
@@ -44,7 +44,7 @@ pageSections:
         category: Exoweld ／ B シリーズ
         title: BTV
         description: BTV は Exoweld B シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/btv.svg
+        image: /images/ccelect/products/btv/diagram.svg
         imageAlt: BTV 接続図
         specifications:
           - BTV
@@ -53,7 +53,7 @@ pageSections:
         category: Exoweld ／ B シリーズ
         title: BS
         description: BS は Exoweld B シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/bs.svg
+        image: /images/ccelect/products/bs/diagram.svg
         imageAlt: BS 接続図
         specifications:
           - BS
@@ -62,7 +62,7 @@ pageSections:
         category: Exoweld ／ B シリーズ
         title: BX
         description: BX は Exoweld B シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/bx.svg
+        image: /images/ccelect/products/bx/diagram.svg
         imageAlt: BX 接続図
         specifications:
           - BX
@@ -71,7 +71,7 @@ pageSections:
         category: Exoweld ／ B シリーズ
         title: BVES
         description: BVES は Exoweld B シリーズの銅熱熔接接点型番です（Demo）。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/diagrams/bves.svg
+        image: /images/ccelect/products/bves/diagram.svg
         imageAlt: BVES 接続図
         specifications:
           - BVES

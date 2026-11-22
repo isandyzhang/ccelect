@@ -17,8 +17,8 @@ pageSections:
         category: 金型
         title: 溶模と分割型溶模
         description: 火泥溶模、分割型溶模、耐磨板などの黒鉛金型関連品。
-        image: /images/ccelect/accessories/mold-powder.jpg
-        imageAlt: EXOWELD 黒鉛溶模と溶接剤セット
+        image: /images/ccelect/accessories/split-mold/diagram.jpg
+        imageAlt: 分割型溶模
         specifications:
           - 火泥溶模
           - 分割型溶模
@@ -28,8 +28,8 @@ pageSections:
         category: 固定工具
         title: 模夾
         description: 汎用模夾、チェーン模夾、ML-3 模夾など。
-        image: /images/ccelect/accessories/clamps-ignitor.jpg
-        imageAlt: EXOWELD 模夾と点火工具
+        image: /src/assets/images/ccelect/accessories/handle/photo-hero.jpg
+        imageAlt: 黒い金型クランプの実物写真
         specifications:
           - 汎用模夾
           - チェーン模夾
@@ -39,8 +39,8 @@ pageSections:
         category: 消耗品
         title: 溶接剤と点火・清模
         description: アルミ箔包溶接剤、点火機、清模板、ブラシなど。
-        image: /images/ccelect/accessories/mold-powder.jpg
-        imageAlt: EXOWELD 溶接剤と清模ブラシ
+        image: /images/ccelect/accessories/foil-pack/diagram.jpg
+        imageAlt: アルミ箔包溶接剤
         specifications:
           - 溶接剤
           - 点火機
@@ -50,11 +50,32 @@ pageSections:
         category: 現場用品
         title: 施工付属工具
         description: ケーブルカッター、カセットトーチ、工具箱など。
-        image: /images/ccelect/accessories/field-tools.jpg
+        image: /src/assets/images/ccelect/accessories/field-tools.jpg
         imageAlt: EXOWELD 現場施工工具セット
         specifications:
           - カッター
           - トーチ
           - 工具箱
+        href: /ja/contact/
+      - id: igniter
+        category: 点火工具
+        title: 点火器
+        description: 発熱溶接作業に使用する手持ち式点火器。
+        image: /src/assets/images/ccelect/accessories/lighter/photo-hero.jpg
+        imageAlt: 手持ち式金属点火器の実物写真
+        href: /ja/contact/
+      - id: brush
+        category: 清掃工具
+        title: 清掃ブラシ
+        description: 金型の清掃に使用する木柄ブラシ。
+        image: /src/assets/images/ccelect/accessories/brush/photo-hero.jpg
+        imageAlt: 木柄清掃ブラシの実物写真
+        href: /ja/contact/
+      - id: scraper
+        category: 清掃工具
+        title: 金型スクレーパー
+        description: 金型の清掃に使用するスクレーパー。
+        image: /src/assets/images/ccelect/accessories/clean-shave/photo-hero.jpg
+        imageAlt: 黒い金型スクレーパーの実物写真
         href: /ja/contact/
 ---

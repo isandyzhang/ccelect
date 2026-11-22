@@ -17,20 +17,20 @@ pageSections:
         category: Exoweld
         title: W series - wire to wire
         description: 'Copper conductor-to-conductor joints: WE, WT, WX, WP, WL, WXL.'
-        image: /images/ccelect/diagrams/we.svg
+        image: /images/ccelect/products/we/diagram.svg
         imageAlt: WE wire-to-wire splice diagram
         images:
-          - image: /images/ccelect/diagrams/we.svg
+          - image: /images/ccelect/products/we/diagram.svg
             imageAlt: WE wire-to-wire splice diagram
-          - image: /images/ccelect/diagrams/wt.jpg
+          - image: /images/ccelect/products/wt/diagram.jpg
             imageAlt: WT wire-to-wire tee diagram
-          - image: /images/ccelect/diagrams/wx.svg
+          - image: /images/ccelect/products/wx/diagram.svg
             imageAlt: WX wire-to-wire cross diagram
-          - image: /images/ccelect/diagrams/wp.jpg
+          - image: /images/ccelect/products/wp/diagram.jpg
             imageAlt: WP parallel wire diagram
-          - image: /images/ccelect/diagrams/wl.jpg
+          - image: /images/ccelect/products/wl/diagram.jpg
             imageAlt: WL wire-to-wire L diagram
-          - image: /images/ccelect/diagrams/wxl.jpg
+          - image: /images/ccelect/products/wxl/diagram.jpg
             imageAlt: WXL wire-to-wire cross diagram
         specifications:
           - WE
@@ -44,18 +44,18 @@ pageSections:
         category: Exoweld
         title: G series - wire to ground rod
         description: 'Conductor-to-ground-rod joints: GEE, GET, GST, GEY, GEP.'
-        image: /images/ccelect/diagrams/gee.jpg
+        image: /images/ccelect/products/gee/diagram.jpg
         imageAlt: GEE wire-to-ground-rod diagram
         images:
-          - image: /images/ccelect/diagrams/gee.jpg
+          - image: /images/ccelect/products/gee/diagram.jpg
             imageAlt: GEE wire-to-ground-rod diagram
-          - image: /images/ccelect/diagrams/get.jpg
+          - image: /images/ccelect/products/get/diagram.jpg
             imageAlt: GET wire-to-ground-rod diagram
-          - image: /images/ccelect/diagrams/gst.jpg
+          - image: /images/ccelect/products/gst/diagram.jpg
             imageAlt: GST wire-to-ground-rod diagram
-          - image: /images/ccelect/diagrams/gey.jpg
+          - image: /images/ccelect/products/gey/diagram.jpg
             imageAlt: GEY wire-to-ground-rod diagram
-          - image: /images/ccelect/diagrams/gep.jpg
+          - image: /images/ccelect/products/gep/diagram.jpg
             imageAlt: GEP wire-to-ground-rod diagram
         specifications:
           - GEE
@@ -68,14 +68,14 @@ pageSections:
         category: Exoweld
         title: S series
         description: Special joint forms such as SHEA, SHEB, and SVES.
-        image: /images/ccelect/diagrams/shea.jpg
+        image: /images/ccelect/products/shea/diagram.jpg
         imageAlt: SHEA steel-plate-to-wire diagram
         images:
-          - image: /images/ccelect/diagrams/shea.jpg
+          - image: /images/ccelect/products/shea/diagram.jpg
             imageAlt: SHEA steel-plate-to-wire diagram
-          - image: /images/ccelect/diagrams/sheb.jpg
+          - image: /images/ccelect/products/sheb/diagram.jpg
             imageAlt: SHEB steel-plate-to-wire diagram
-          - image: /images/ccelect/diagrams/sves.jpg
+          - image: /images/ccelect/products/sves/diagram.jpg
             imageAlt: SVES pipe-to-wire diagram
         specifications:
           - SHEA
@@ -86,12 +86,12 @@ pageSections:
         category: Exoweld
         title: R series
         description: RHEH and RHXH joint forms.
-        image: /images/ccelect/diagrams/rheh.jpg
+        image: /images/ccelect/products/rheh/diagram.jpg
         imageAlt: RHEH rebar-to-wire diagram
         images:
-          - image: /images/ccelect/diagrams/rheh.jpg
+          - image: /images/ccelect/products/rheh/diagram.jpg
             imageAlt: RHEH rebar-to-wire diagram
-          - image: /images/ccelect/diagrams/rhxh.jpg
+          - image: /images/ccelect/products/rhxh/diagram.jpg
             imageAlt: RHXH rebar-to-wire diagram
         specifications:
           - RHEH
@@ -101,16 +101,16 @@ pageSections:
         category: Exoweld
         title: P series
         description: PK, PV, PY, and PT joint forms.
-        image: /images/ccelect/diagrams/pk.svg
+        image: /images/ccelect/products/pk/diagram.svg
         imageAlt: PK connection diagram
         images:
-          - image: /images/ccelect/diagrams/pk.svg
+          - image: /images/ccelect/products/pk/diagram.svg
             imageAlt: PK connection diagram
-          - image: /images/ccelect/diagrams/pv.svg
+          - image: /images/ccelect/products/pv/diagram.svg
             imageAlt: PV connection diagram
-          - image: /images/ccelect/diagrams/py.svg
+          - image: /images/ccelect/products/py/diagram.svg
             imageAlt: PY connection diagram
-          - image: /images/ccelect/diagrams/pt.svg
+          - image: /images/ccelect/products/pt/diagram.svg
             imageAlt: PT connection diagram
         specifications:
           - PK
@@ -122,22 +122,22 @@ pageSections:
         category: Exoweld
         title: B series
         description: BE, BEH, BT, BTV, BS, BX, and BVES joint forms.
-        image: /images/ccelect/diagrams/be.svg
+        image: /images/ccelect/products/be/diagram.svg
         imageAlt: BE connection diagram
         images:
-          - image: /images/ccelect/diagrams/be.svg
+          - image: /images/ccelect/products/be/diagram.svg
             imageAlt: BE connection diagram
-          - image: /images/ccelect/diagrams/beh.svg
+          - image: /images/ccelect/products/beh/diagram.svg
             imageAlt: BEH connection diagram
-          - image: /images/ccelect/diagrams/bt.svg
+          - image: /images/ccelect/products/bt/diagram.svg
             imageAlt: BT connection diagram
-          - image: /images/ccelect/diagrams/btv.svg
+          - image: /images/ccelect/products/btv/diagram.svg
             imageAlt: BTV connection diagram
-          - image: /images/ccelect/diagrams/bs.svg
+          - image: /images/ccelect/products/bs/diagram.svg
             imageAlt: BS connection diagram
-          - image: /images/ccelect/diagrams/bx.svg
+          - image: /images/ccelect/products/bx/diagram.svg
             imageAlt: BX connection diagram
-          - image: /images/ccelect/diagrams/bves.svg
+          - image: /images/ccelect/products/bves/diagram.svg
             imageAlt: BVES connection diagram
         specifications:
           - BE
@@ -152,14 +152,14 @@ pageSections:
         category: Exoweld
         title: E series
         description: ERB, ERW, ERT joint forms.
-        image: /images/ccelect/diagrams/erb.svg
+        image: /images/ccelect/products/erb/diagram.svg
         imageAlt: ERB connection diagram
         images:
-          - image: /images/ccelect/diagrams/erb.svg
+          - image: /images/ccelect/products/erb/diagram.svg
             imageAlt: ERB connection diagram
-          - image: /images/ccelect/diagrams/erw.svg
+          - image: /images/ccelect/products/erw/diagram.svg
             imageAlt: ERW connection diagram
-          - image: /images/ccelect/diagrams/ert.svg
+          - image: /images/ccelect/products/ert/diagram.svg
             imageAlt: ERT connection diagram
         specifications:
           - ERB
@@ -170,18 +170,18 @@ pageSections:
         category: Exoweld
         title: C series
         description: CSHEA, CSHTA, CSVES, CWL, CWE joint forms.
-        image: /images/ccelect/diagrams/cshea.svg
+        image: /images/ccelect/products/cshea/diagram.svg
         imageAlt: CSHEA connection diagram
         images:
-          - image: /images/ccelect/diagrams/cshea.svg
+          - image: /images/ccelect/products/cshea/diagram.svg
             imageAlt: CSHEA connection diagram
-          - image: /images/ccelect/diagrams/cshta.svg
+          - image: /images/ccelect/products/cshta/diagram.svg
             imageAlt: CSHTA connection diagram
-          - image: /images/ccelect/diagrams/csves.svg
+          - image: /images/ccelect/products/csves/diagram.svg
             imageAlt: CSVES connection diagram
-          - image: /images/ccelect/diagrams/cwl.svg
+          - image: /images/ccelect/products/cwl/diagram.svg
             imageAlt: CWL connection diagram
-          - image: /images/ccelect/diagrams/cwe.svg
+          - image: /images/ccelect/products/cwe/diagram.svg
             imageAlt: CWE connection diagram
         specifications:
           - CSHEA

@@ -36,7 +36,7 @@ pageSections:
         variant: tertiary
         size: md
     image:
-      source: /src/assets/images/hero-1.svg
+      source: /src/assets/images/template/hero-1.svg
       alt: 集集電工業
       rounded: true
     icons: []

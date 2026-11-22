@@ -9,28 +9,28 @@ pageSections:
     heading: W series - wire to wire
     summary: Exoweld graphite molds are designed for many wire-to-wire connection styles and conductor combinations.
     images:
-      - image: /images/ccelect/we/00-we-enhanced.jpg
+      - image: /images/ccelect/products/we/photo-hero.jpg
         imageAlt: WE completed copper conductor joint
         caption: WE
-      - image: /images/ccelect/we/02-mold-open-enhanced.jpg
+      - image: /images/ccelect/products/we/photo-mold-open.jpg
         imageAlt: WE open graphite mold
         caption: WE mold
-      - image: /images/ccelect/wt/00-wt-enhanced.jpg
+      - image: /images/ccelect/products/wt/photo-hero.jpg
         imageAlt: WT completed copper conductor joint
         caption: WT
-      - image: /images/ccelect/wt/01-mold-open-enhanced.jpg
+      - image: /images/ccelect/products/wt/photo-mold-open.jpg
         imageAlt: WT open graphite mold
         caption: WT mold
-      - image: /images/ccelect/wx/00-wx-enhanced.jpg
+      - image: /images/ccelect/products/wx/photo-hero.jpg
         imageAlt: WX completed copper conductor joint
         caption: WX
-      - image: /images/ccelect/wx/01-mold-open-enhanced.jpg
+      - image: /images/ccelect/products/wx/photo-mold-open.jpg
         imageAlt: WX open graphite mold
         caption: WX mold
-      - image: /images/ccelect/wxl/00-wxl-enhanced.jpg
+      - image: /images/ccelect/products/wxl/photo-hero.jpg
         imageAlt: WXL completed copper conductor joint
         caption: WXL
-      - image: /images/ccelect/wxl/01-mold-open-enhanced.jpg
+      - image: /images/ccelect/products/wxl/photo-mold-open.jpg
         imageAlt: WXL open graphite mold
         caption: WXL mold
     featuresHeading: Features
@@ -79,7 +79,7 @@ pageSections:
         category: Wire to wire
         title: WE
         description: WE wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/we.svg
+        image: /images/ccelect/products/we/diagram.svg
         imageAlt: WE straight wire-to-wire diagram
         specifications:
           - WE
@@ -88,7 +88,7 @@ pageSections:
         category: Wire to wire
         title: WT
         description: WT wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/wt.jpg
+        image: /images/ccelect/products/wt/diagram.jpg
         imageAlt: WT wire-to-wire tee diagram
         specifications:
           - WT
@@ -97,7 +97,7 @@ pageSections:
         category: Wire to wire
         title: WX
         description: WX wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/wx.svg
+        image: /images/ccelect/products/wx/diagram.svg
         imageAlt: WX wire-to-wire cross diagram
         specifications:
           - WX
@@ -106,7 +106,7 @@ pageSections:
         category: Wire to wire
         title: WP
         description: WP wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/wp.jpg
+        image: /images/ccelect/products/wp/diagram.jpg
         imageAlt: WP parallel wire-to-wire diagram
         specifications:
           - WP
@@ -115,7 +115,7 @@ pageSections:
         category: Wire to wire
         title: WL
         description: WL wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/wl.jpg
+        image: /images/ccelect/products/wl/diagram.jpg
         imageAlt: WL wire-to-wire L diagram
         specifications:
           - WL
@@ -124,7 +124,7 @@ pageSections:
         category: Wire to wire
         title: WXL
         description: WXL wire-to-wire copper joint model (Demo). Confirm mold and conductor specs with sales.
-        image: /images/ccelect/diagrams/wxl.jpg
+        image: /images/ccelect/products/wxl/diagram.jpg
         imageAlt: WXL wire-to-wire cross diagram
         specifications:
           - WXL

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" fill="none" role="img" aria-labelledby="title">
+<title id="title">Flint igniter</title>
+<g stroke="#242424" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path fill="white" d="M122 143 Q125 133 137 129 L355 72 Q369 68 373 80 L379 102 Q382 115 370 119 L196 168 Q176 175 175 194 L182 245 Q185 268 163 276 Q137 284 126 265 L108 227 Q103 216 106 201Z"/>
+<path d="M111 230 130 267 Q140 283 162 280 Q188 276 186 252 L180 195 Q178 178 198 173 L371 124 Q383 120 382 106 L377 86"/>
+<ellipse cx="151" cy="253" rx="14" ry="13"/><ellipse cx="151" cy="253" rx="9" ry="8"/>
+<path d="M239 156 Q245 177 258 182 L264 178 Q251 164 249 153 M334 76 338 62 351 57 355 62 344 69 343 74"/>
+<circle cx="204" cy="128" r="3.5"/><circle cx="321" cy="95" r="3.5"/><circle cx="359" cy="92" r="3.5"/>
+<path d="m214 164 27-8 2 5-27 8"/>
+</g>
+</svg>
