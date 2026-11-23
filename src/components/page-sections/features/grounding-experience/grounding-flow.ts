@@ -367,9 +367,11 @@ class GroundingFlow extends HTMLElement {
 
       if (decoded(structuresImage) && decoded(poweredImage)) markStructuresReady();
       else {
-        Promise.all([structuresPromise, poweredPromise]).then(() => {
-          if (!signal.aborted) markStructuresReady();
-        });
+        Promise.all([structuresPromise, poweredPromise])
+          .then(() => {
+            if (!signal.aborted) markStructuresReady();
+          })
+          .catch(() => {});
       }
 
       if (decoded(copperImage)) initialize();

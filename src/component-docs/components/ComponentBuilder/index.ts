@@ -122,7 +122,9 @@ function initializeBuilder(): void {
   exportBtn.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
-    handleExport();
+    handleExport().catch((error) => {
+      console.error("[ComponentBuilder] Export error:", error);
+    });
   });
 
   // Reset button handler
