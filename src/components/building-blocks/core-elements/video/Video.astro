@@ -23,10 +23,27 @@ const trimmedIntroSource =
 
 const posterUrl = trimmedThumbnail ? await resolveVideoPosterSource(trimmedThumbnail) : undefined;
 
+/** Narrow-viewport companion: /videos/foo.mp4 → /videos/foo-sm.mp4 when that file exists. */
+const smallViewportSource = async (src: string) => {
+  if (!import.meta.env.SSR) return "";
+  const match = src.match(/^(.*?)(\.[^.]+)$/);
+  if (!match) return "";
+  const candidate = `${match[1]}-sm${match[2]}`;
+  try {
+    const [{ existsSync }, path] = await Promise.all([import("node:fs"), import("node:path")]);
+    const absolute = path.join(process.cwd(), "public", candidate.replace(/^\//, ""));
+    return existsSync(absolute) ? candidate : "";
+  } catch {
+    return "";
+  }
+};
+
 let localVideoSources: VideoSource[] = [];
 let introVideoSources: VideoSource[] = [];
 let backgroundIntroSrc = "";
 let backgroundLoopSrc = "";
+let backgroundIntroSrcSm = "";
+let backgroundLoopSrcSm = "";
 
 if (type === "local-source" && source) {
   const { discoverVideoSources } = await import("@component-utils/discoverVideoSources");
@@ -39,6 +56,7 @@ if (type === "local-source" && source) {
 
     if (mp4) localVideoSources = [mp4];
     backgroundLoopSrc = localVideoSources[0]?.src ?? "";
+    backgroundLoopSrcSm = backgroundLoopSrc ? await smallViewportSource(backgroundLoopSrc) : "";
   }
 
   if (background && trimmedIntroSource) {
@@ -47,6 +65,7 @@ if (type === "local-source" && source) {
 
     if (introMp4) introVideoSources = [introMp4];
     backgroundIntroSrc = introVideoSources[0]?.src ?? "";
+    backgroundIntroSrcSm = backgroundIntroSrc ? await smallViewportSource(backgroundIntroSrc) : "";
   }
 }
 
@@ -99,7 +118,9 @@ const backgroundInitialSources = backgroundHasIntro ? introVideoSources : localV
         disableremoteplayback
         poster={posterUrl}
         data-bg-intro-src={backgroundHasIntro ? backgroundIntroSrc : undefined}
-        data-bg-loop-src={backgroundHasIntro ? backgroundLoopSrc : undefined}
+        data-bg-intro-src-sm={backgroundHasIntro && backgroundIntroSrcSm ? backgroundIntroSrcSm : undefined}
+        data-bg-loop-src={backgroundLoopSrc || undefined}
+        data-bg-loop-src-sm={backgroundLoopSrcSm || undefined}
       >
         {backgroundInitialSources.map(({ src, type: sourceType }) => (
           <source
@@ -213,10 +234,13 @@ const backgroundInitialSources = backgroundHasIntro ? introVideoSources : localV
         if (!video.paused) return;
         if (video.dataset.bgVideoLoaded !== "true") {
           // Load only the active phase (intro first; loop after intro ends).
-          const activeSrc =
-            (!loop && video.dataset.bgIntroSrc) ||
-            video.dataset.bgLoopSrc ||
-            undefined;
+          // Narrow viewports prefer *-sm.mp4 when present.
+          const narrow = window.matchMedia("(max-width: 760px)").matches;
+          const introSrc =
+            (narrow && video.dataset.bgIntroSrcSm) || video.dataset.bgIntroSrc || undefined;
+          const loopSrc =
+            (narrow && video.dataset.bgLoopSrcSm) || video.dataset.bgLoopSrc || undefined;
+          const activeSrc = (!loop && introSrc) || loopSrc || undefined;
           video.querySelectorAll<HTMLSourceElement>("source").forEach((source) => {
             source.src = activeSrc || source.dataset.src || source.src;
           });
