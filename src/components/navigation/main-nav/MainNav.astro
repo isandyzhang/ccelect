@@ -35,6 +35,7 @@ const productsLabel = (experienceText[locale] ?? experienceText[defaultLocale]).
 
 function isProductsShowcaseItem(item: { name?: string; path?: string }) {
   const path = item.path ?? "";
+
   if (/\/products\/?$/.test(path)) return true;
   if (/\/products\/exoweld\/?$/.test(path)) return true;
   return item.name === productsLabel;
