@@ -2,7 +2,7 @@
 _schema: default
 permalink:
 title: 会社概要
-description: 集集電工業の会社概要、品質認証、認証機関試験の記録。1979 年創業の接地・テルミット溶接専門メーカー。
+description: 集集電工業は 1979 年創業。接地用テルミット溶接材料と金型を製造し、測定と設計コンサルティングを提供します。
 keywords:
   - 集集電工業
   - 会社沿革
@@ -17,9 +17,9 @@ pageSections:
       color: brand
       background: true
     eyebrowText: 集集電について
-    heading: 接地材料と技術に専念<br /><span class="highlight-text">1979 年創業</span>
+    heading: 接地材料と技術<br /><span class="highlight-text">1979 年創業</span>
     headingSize: 3xl
-    subtext: アルミテルミット溶接システム、接地・避雷材料、現場施工、土壌・接地抵抗測定、接地システム設計コンサルティングを提供しています。
+    subtext: テルミット溶接システム、接地・避雷材料、現場測定と設計コンサルティング。
     buttonSections:
       - _component: building-blocks/core-elements/button
         text: 商品を見る
@@ -89,18 +89,12 @@ pageSections:
                   - _component: building-blocks/core-elements/text
                     alignmentHorizontal: start
                     text: >-
-                      1979 年（民国 68 年 1 月）創業。接地銅線用テルミット溶接材料・金型の専門メーカーとして、1981 年に台湾電力関連部署によるタイプ試験（Type Test）に合格。国内外の大型インフラ向けに製品を供給してきました。
-
-
-                      1987 年に米国 ERICO と技術提携し、東南アジアへ輸出拡大。接地設計コンサルティング、土壌抵抗測定、現場施工・完工後測定も行っています。1993 年に化学式接地極（Chemical Rod）工法を導入。1999 年に UL 試験合格（File E305374）、ロサンゼルスに ATI NA CO を設立。2000 年 ISO 9002、2003 年 ISO 9001 取得（UL–ISO9001-A9061）。
-
-
-                      お客様に最良のサービスを提供することを宗旨とし、接地技術・施工・測定の経験を蓄積しています。
+                      集集電工業は 1979 年に創業し、接地用テルミット溶接材料と黒鉛金型を製造しています。1981 年に台湾電力のタイプ試験に合格。1987 年に米国 ERICO と技術提携し、接地設計、土壌抵抗率測定、現場施工を提供しています。1999 年に溶接試料が UL 試験に合格（File E305374）。品質システムは 2003 年から ISO 9001 で運用しています。
               - _component: page-sections/info-blocks/timeline
                 eyebrowIcon: {}
                 eyebrowText: 沿革
                 heading: 接地分野での歩み
-                subtext: 旧公式サイトに基づく要約。認証・試験は各種証書および当時の記録を優先します。
+                subtext: 主な沿革。認証と試験は正式文書を優先します。
                 maxContentWidth: 2xl
                 backgroundColor: surface-linear-gradient
                 colorScheme: light
@@ -141,7 +135,7 @@ pageSections:
                       color: brand
                     date: '1999'
                     heading: UL 試験
-                    text: 溶接サンプルを UL に提出・合格。旧サイト記載 UL File E305374。
+                    text: 溶接試料が UL 試験に合格。File E305374。
                   - icon:
                       name: document-check
                       color: brand
@@ -157,29 +151,29 @@ pageSections:
               - _component: page-sections/features/business-scope
                 eyebrowText: 営業項目
                 heading: 4 つの事業領域
-                subtext: 旧公式サイトの会社紹介に基づく。
+                subtext: 材料、施工、現場試験。
                 items:
                   - id: weld
-                    figure: "01"
+                    figure: '01'
                     title: テルミット溶接材料・金型
                     description: 銅導体を恒久的に接続するテルミット溶接剤と黒鉛金型の製造・販売。
                   - id: rod
-                    figure: "02"
+                    figure: '02'
                     title: 電解式接地棒
                     description: 土壌条件が厳しい現場に、電解式接地棒の供給と施工を行います。
                   - id: lightning
-                    figure: "03"
+                    figure: '03'
                     title: 避雷材料
                     description: 避雷針と関連部品の製造・販売。
                   - id: test
-                    figure: "04"
+                    figure: '04'
                     title: 接地試験
                     description: 現場での接地抵抗および土壌抵抗率の測定。
               - _component: page-sections/info-blocks/table
                 eyebrowIcon: {}
                 eyebrowText: 会社基本データ
                 heading: 企業概要
-                subtext: 旧サプライヤーページに基づく。
+                subtext: 会社データ。
                 maxContentWidth: 2xl
                 paddingVertical: 4xl
                 colorScheme: light
@@ -219,12 +213,12 @@ pageSections:
                       - title: 主要取引先（抜粋）
                         contentSections:
                           - _component: building-blocks/core-elements/text
-                            text: 台湾電力公司、中鋼、TSMC、台湾鉄路、台北・高雄 MRT、香港中華電力、香港空港、台塑、DuPont、NASA、PG&E、台湾高速鉄道、AUO ほか多数。詳細は旧サイト記載を参照。
+                            text: 台湾電力、中国鋼鉄、TSMC、UMC、台塑、台湾中油、台湾高速鉄道、台北・高雄 MRT、台湾鉄路、香港中華電力、香港国際空港、および米国の SRP、Southern Power、NASA、PG&E など。
               - _component: page-sections/features/feature-grid
                 eyebrowIcon: {}
                 eyebrowText: 技術サポート
                 heading: 工程段階に応じた支援
-                subtext: 製品選定から現場検証まで。
+                subtext: 選定、測定、研修、供給。
                 featureGrid:
                   features:
                     - _component: page-sections/features/feature-grid/feature-item
@@ -277,7 +271,7 @@ pageSections:
                 eyebrowIcon: {}
                 eyebrowText: 認証
                 heading: 品質証書と関連規格
-                subtext: 旧認証ページの一覧。UL 467、IEEE 837、IEEE 80、IEEE 1100、NEC Article 250 は設計・評価の参考規格であり、個別の会社認証ではありません。採用版はプロジェクト仕様で確認してください。
+                subtext: ISO 9001:2015 は当社の品質マネジメント認証です。UL 467、IEEE 837、IEEE 80、IEEE 1100、NEC Article 250 は設計上の参照規格です。適用版は案件仕様で確認してください。
                 maxContentWidth: 2xl
                 paddingVertical: 4xl
                 colorScheme: light
@@ -330,7 +324,7 @@ pageSections:
                     rounded: true
                   - _component: building-blocks/core-elements/text
                     alignmentHorizontal: center
-                    text: テルミット接続システムの設計・製造に関する品質マネジメント。最新状態は証書 QR コードで確認してください。
+                    text: テルミット接続システムの設計・製造が対象です。証書の状態は QR コードで確認してください。
           - _component: building-blocks/wrappers/content-selector/content-selector-item
             title: 認証機関試験
             hashId: agency-tests
@@ -339,7 +333,7 @@ pageSections:
                 eyebrowIcon: {}
                 eyebrowText: 認証機関試験
                 heading: 歴史的試験記録と写真
-                subtext: 旧「認証機関試験」ページに基づく。詳細は当時の試験記録を優先します。
+                subtext: 過去の試験写真。結論は当時の試験記録を優先します。
                 featureGrid:
                   features:
                     - _component: page-sections/features/feature-grid/feature-item
@@ -370,7 +364,7 @@ pageSections:
                         background: true
                     - _component: page-sections/features/feature-grid/feature-item
                       title: 1999 UL 溶接試験
-                      description: 旧サイト記載：54 種類の接続部を大電流試験。UL File E305374。
+                      description: 54 種類の接続部を大電流試験。UL File E305374。
                       image:
                         source: /src/assets/images/ccelect/testing/ul-1.jpg
                         alt: UL 溶接試験の歴史写真
@@ -431,7 +425,7 @@ pageSections:
     eyebrowIcon: {}
     eyebrowText: 営業部へ
     heading: 現場条件からご相談ください
-    subtext: 台北市雲和街 2-2 号 · Tel 886-2-23632992 · cce@ccelect.com.tw
+    subtext: "[ee48dacc-ccelect.isandyzhang.workers.dev](https://ee48dacc-ccelect.isandyzhang.workers.dev/) · 台北市雲和街 2-2 号 · Tel 886-2-23632992 · cce@ccelect.com.tw"
     buttonSections:
       - _component: building-blocks/core-elements/button
         text: お問い合わせ

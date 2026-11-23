@@ -39,6 +39,7 @@ pageSections:
           image:
             source: /src/assets/images/ccelect/home/product-display.webp
             alt: Exoweld 火泥熔模、熔接成品與銅導體接點
+            quality: 92
             rounded: false
       gridMaxWidth: none
     maxContentWidth: 2xl

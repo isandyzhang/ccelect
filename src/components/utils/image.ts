@@ -87,10 +87,12 @@ const getResponsiveWidths = (candidates: unknown, maxWidth?: number) => {
 
   const maxCandidateWidth = Math.max(1, Math.round(maxWidth));
   const filteredWidths = normalizedWidths.filter(
-    (candidateWidth) => candidateWidth <= maxCandidateWidth
+    (candidateWidth) => candidateWidth < maxCandidateWidth
   );
 
-  return filteredWidths.length > 0 ? filteredWidths : [maxCandidateWidth];
+  filteredWidths.push(maxCandidateWidth);
+
+  return filteredWidths;
 };
 
 export function resolveImageSource(source: string) {

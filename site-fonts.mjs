@@ -1,6 +1,6 @@
 /**
  * Site font registration — 集集電
- * 主字體 Noto Sans TC：建置時自 Google 下載並自架（僅 400／700）
+ * 主字體 Noto Sans TC：建置時自 Google 下載並自架（400／600）
  * 等寬：JetBrains Mono 本地
  */
 import { fontProviders } from "astro/config";
@@ -10,7 +10,7 @@ export const siteFonts = [
     name: "Noto Sans TC",
     cssVariable: "--font-noto-sans-tc",
     provider: fontProviders.google(),
-    weights: [400, 700],
+    weights: [400, 600],
     styles: ["normal"],
     subsets: ["latin", "chinese-traditional"],
     fallbacks: ["PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", "sans-serif"],

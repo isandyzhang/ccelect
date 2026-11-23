@@ -2,7 +2,7 @@
 _schema: default
 permalink:
 title: 關於我們
-description: 集集電工業自 1979 年以來的公司沿革、接地技術經驗、測試紀錄與品質認證。
+description: 集集電工業成立於 1979 年，製造接地用鋁熱熔接材料與模具，並提供測量與設計諮詢。
 keywords:
   - 集集電工業
   - 公司沿革
@@ -17,9 +17,9 @@ pageSections:
       color: brand
       background: true
     eyebrowText: 關於集集電
-    heading: 專注接地工程材料與技術<br /><span class="highlight-text">始於 1979</span>
+    heading: 接地材料與技術<br /><span class="highlight-text">始於 1979</span>
     headingSize: 3xl
-    subtext: 集集電工業長期投入鋁熱熔接系統、接地與避雷材料、現場施工、土壤與接地電阻測量，以及接地系統設計諮詢。
+    subtext: 鋁熱熔接系統、接地與避雷材料，以及現場測量與設計諮詢。
     buttonSections:
       - _component: building-blocks/core-elements/button
         text: 查看產品
@@ -89,18 +89,12 @@ pageSections:
                   - _component: building-blocks/core-elements/text
                     alignmentHorizontal: start
                     text: >-
-                      本公司成立於 1979 年（民國 68 年 1 月），初為集集有限公司，後改組為集集電工業有限公司，1993 年 12 月改為集集電工業股份有限公司。為接地銅線熔接器材與鋁熱劑（火泥熔接）專業製造廠，1981 年產品經台電各單位會同完成型式試驗（Type Test）認證通過，供應國內外重大工程建設。
-
-
-                      1987 年與美國 ERICO 公司進行技術移轉，產品外銷東南亞，業務擴展至接地技術設計諮詢、土壤電阻測量及現場施工與完工測量。1993 年引進化學式接地極（Chemical Rod）工法，支援複雜環境的接地改善與工程評估。1999 年熔接樣品送 UL 安規檢驗通過（UL File E305374），並成立 ATI NA CO 於美國洛杉磯。2000 年取得 ISO 9002、2003 年轉換 ISO 9001 品質系統認證（UL–ISO9001-A9061）。
-
-
-                      提供客戶最好的服務是我們一貫的宗旨；累積接地技術、施工與測量經驗，並持續汲取各國最新發展趨勢。
+                      集集電工業股份有限公司成立於 1979 年，製造接地用鋁熱熔接材料與石墨模具。1981 年通過台電型式試驗。1987 年與美國 ERICO 技術合作，並提供接地設計、土壤電阻測量與現場施工。1999 年熔接試樣通過 UL 檢驗（File E305374）。品質系統自 2003 年起依 ISO 9001 運作。
               - _component: page-sections/info-blocks/timeline
                 eyebrowIcon: {}
                 eyebrowText: 公司沿革
                 heading: 接地專業的累積
-                subtext: 以下沿革依公司舊官網整理，認證與測試內容以當時紀錄及正式文件為準。
+                subtext: 主要里程碑。認證與測試以正式文件為準。
                 maxContentWidth: 2xl
                 backgroundColor: surface-linear-gradient
                 colorScheme: light
@@ -141,7 +135,7 @@ pageSections:
                       color: brand
                     date: '1999'
                     heading: UL 熔接試樣檢驗
-                    text: 熔接樣品送交 UL 安規檢驗，舊站記載 UL File E305374。
+                    text: 熔接樣品通過 UL 安規檢驗，File E305374。
                   - icon:
                       name: document-check
                       color: brand
@@ -157,29 +151,29 @@ pageSections:
               - _component: page-sections/features/business-scope
                 eyebrowText: 營業項目
                 heading: 四大業務範圍
-                subtext: 依舊官網公司介紹整理。
+                subtext: 材料、施工與現場測試。
                 items:
                   - id: weld
-                    figure: "01"
+                    figure: '01'
                     title: 接地用鋁熱熔接劑與模具
                     description: 製造與銷售鋁熱熔接劑及石墨模具，用於銅導體的永久接合。
                   - id: rod
-                    figure: "02"
+                    figure: '02'
                     title: 電解式接地棒
                     description: 供應並施作電解式接地棒，對應土壤條件較差時的長期接地需求。
                   - id: lightning
-                    figure: "03"
+                    figure: '03'
                     title: 避雷材料
                     description: 製造與銷售避雷針與相關組件。
                   - id: test
-                    figure: "04"
+                    figure: '04'
                     title: 接地測試
                     description: 現場接地電阻與土壤電阻率測量。
               - _component: page-sections/info-blocks/table
                 eyebrowIcon: {}
                 eyebrowText: 公司基本資料
                 heading: 企業概況
-                subtext: 依舊官網供應商頁面整理。
+                subtext: 公司資料。
                 maxContentWidth: 2xl
                 paddingVertical: 4xl
                 colorScheme: light
@@ -219,12 +213,12 @@ pageSections:
                       - title: 主要客戶（節錄）
                         contentSections:
                           - _component: building-blocks/core-elements/text
-                            text: 台灣電力公司、廣輝電子、中國鋼鐵、漢宇彩晶、中國石油、中美和石化、台塑集團、杜邦觀音廠、台灣鐵路局、民視、台北捷運、高雄捷運、香港中華電力、香港機場、台積電、北崙發電廠、秦山核電廠、天荒坪抽蓄電廠、聯華電子、德碁半導體、友達光電、奇美、台灣高鐵，以及美國 SRP、Southern Power、NASA、PG&E 等；其它客戶眾多，無法詳列。
+                            text: 台灣電力公司、中國鋼鐵、台積電、聯華電子、台塑集團、中國石油、台灣高鐵、台北捷運、高雄捷運、台灣鐵路局、香港中華電力、香港機場，以及美國 SRP、Southern Power、NASA、PG&E 等。
               - _component: page-sections/features/feature-grid
                 eyebrowIcon: {}
                 eyebrowText: 技術支援
                 heading: 對應不同階段的工程需求
-                subtext: 從產品選型到現場驗證，依需求提供適合的資料與技術支援。
+                subtext: 選型、測量、訓練與供貨。
                 featureGrid:
                   features:
                     - _component: page-sections/features/feature-grid/feature-item
@@ -277,7 +271,7 @@ pageSections:
                 eyebrowIcon: {}
                 eyebrowText: 認證
                 heading: 品質證書與相關標準
-                subtext: 舊官網認證頁所列項目如下。其中 UL 467、IEEE 837、IEEE 80、IEEE 1100 與 NEC Article 250 為工程設計與產品評估的參考標準，不等同於公司逐項取得各項認證；實際採用版本依專案規範確認。
+                subtext: ISO 9001:2015 為公司品質管理系統認證。UL 467、IEEE 837、IEEE 80、IEEE 1100 與 NEC Article 250 為工程參考標準，適用版本依專案規範確認。
                 maxContentWidth: 2xl
                 paddingVertical: 4xl
                 colorScheme: light
@@ -330,7 +324,7 @@ pageSections:
                     rounded: true
                   - _component: building-blocks/core-elements/text
                     alignmentHorizontal: center
-                    text: 熱熔接連接系統之設計與製造品質管理系統；最新狀態應以證書 QR 碼驗證為準。
+                    text: 適用於熱熔接連接系統之設計與製造。證書狀態以 QR 碼驗證為準。
           - _component: building-blocks/wrappers/content-selector/content-selector-item
             title: 認證機構測試
             hashId: agency-tests
@@ -339,7 +333,7 @@ pageSections:
                 eyebrowIcon: {}
                 eyebrowText: 認證機構測試
                 heading: 歷史試驗紀錄與照片
-                subtext: 依舊官網「認證機構測試」頁面整理；詳細報告以當時試驗紀錄為準。
+                subtext: 歷史試驗照片。結論以原始試驗紀錄為準。
                 featureGrid:
                   features:
                     - _component: page-sections/features/feature-grid/feature-item
@@ -370,7 +364,7 @@ pageSections:
                         background: true
                     - _component: page-sections/features/feature-grid/feature-item
                       title: 1999 UL 熔接試樣檢驗
-                      description: 舊站記載共 54 種接頭接受大電流試驗，UL File E305374。
+                      description: 54 種接頭接受大電流試驗，UL File E305374。
                       image:
                         source: /src/assets/images/ccelect/testing/ul-1.jpg
                         alt: UL 熔接試樣大電流試驗歷史照片
@@ -431,7 +425,7 @@ pageSections:
     eyebrowIcon: {}
     eyebrowText: 與業務部討論
     heading: 從需求與現場條件開始
-    subtext: 106 台北市雲和街 2-2 號 · 886-2-23632992 · cce@ccelect.com.tw
+    subtext: "[ee48dacc-ccelect.isandyzhang.workers.dev](https://ee48dacc-ccelect.isandyzhang.workers.dev/) · 106 台北市雲和街 2-2 號 · 886-2-23632992 · cce@ccelect.com.tw"
     buttonSections:
       - _component: building-blocks/core-elements/button
         text: 聯絡我們

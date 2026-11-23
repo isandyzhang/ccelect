@@ -8,6 +8,7 @@ const {
   alt,
   sizes = "(max-width: 1280px) 100vw, 1280px",
   widths = [640, 1280, 2560],
+  quality,
   rounded = false,
   priority = false,
   aspectRatio = null,
@@ -115,6 +116,7 @@ if (hasAlternate) {
               widths={prepared.filteredWidths}
               sizes={effectiveSizes}
               formats={["webp"]}
+              quality={quality}
               width={prepared.finalWidth}
               height={prepared.finalHeight}
               fit={prepared.useFit}

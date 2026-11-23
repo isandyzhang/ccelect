@@ -2,7 +2,7 @@
 _schema: default
 permalink:
 title: About
-description: CCElect Industrial Co., Ltd. — company profile, quality certifications, and historical agency test records since 1979.
+description: CCElect, founded in 1979, manufactures exothermic grounding materials and molds, and provides measurement and design consulting.
 keywords:
   - CCElect
   - company history
@@ -19,7 +19,7 @@ pageSections:
     eyebrowText: About CCElect
     heading: Grounding materials &amp; technology<br /><span class="highlight-text">since 1979</span>
     headingSize: 3xl
-    subtext: We focus on exothermic welding systems, grounding and lightning materials, field installation, soil and earth-resistance measurement, and grounding system design consulting.
+    subtext: Exothermic welding systems, grounding and lightning materials, field measurement, and design consulting.
     buttonSections:
       - _component: building-blocks/core-elements/button
         text: View products
@@ -89,18 +89,12 @@ pageSections:
                   - _component: building-blocks/core-elements/text
                     alignmentHorizontal: start
                     text: >-
-                      Founded in January 1979, CCElect began as Chi Chi Co., Ltd., was reorganized in 1983, and became CCElect Industrial Co., Ltd. in December 1993. We manufacture copper-conductor exothermic welding materials and molds. In 1981 our products passed type tests with Taiwan Power Company units and have since supplied major public and private infrastructure projects.
-
-
-                      In 1987 we partnered with ERICO (USA) for technology transfer, expanded exports to Southeast Asia, and added grounding design consulting, soil resistivity measurement, and field installation services. In 1993 we introduced chemical grounding rod methods for complex sites. Welding samples were approved by UL in 1999 (File E305374); ATI NA CO was established in Los Angeles. ISO 9002 was achieved in 2000 and ISO 9001 in 2003 (UL–ISO9001-A9061).
-
-
-                      Serving customers with quality grounding products and technical support remains our core commitment.
+                      CCElect Industrial Co., Ltd. was founded in 1979 and manufactures exothermic welding materials and graphite molds for grounding conductors. Products passed Taiwan Power Company type tests in 1981. A technology partnership with ERICO began in 1987, together with grounding design, soil-resistivity measurement, and field installation. Welding samples passed UL testing in 1999 (File E305374). The quality system has operated under ISO 9001 since 2003.
               - _component: page-sections/info-blocks/timeline
                 eyebrowIcon: {}
                 eyebrowText: Company history
                 heading: Milestones
-                subtext: Summarized from our legacy website. Formal claims follow certificates and test records.
+                subtext: Key milestones. Certificates and test records govern formal claims.
                 maxContentWidth: 2xl
                 backgroundColor: surface-linear-gradient
                 colorScheme: light
@@ -141,7 +135,7 @@ pageSections:
                       color: brand
                     date: '1999'
                     heading: UL sample testing
-                    text: Welding samples submitted to UL; legacy site lists UL File E305374.
+                    text: Welding samples passed UL testing. File E305374.
                   - icon:
                       name: document-check
                       color: brand
@@ -157,29 +151,29 @@ pageSections:
               - _component: page-sections/features/business-scope
                 eyebrowText: Business scope
                 heading: Four business areas
-                subtext: From our public company profile.
+                subtext: Materials, installation, and field testing.
                 items:
                   - id: weld
-                    figure: "01"
+                    figure: '01'
                     title: Exothermic welding materials and molds
                     description: Manufacture and sale of exothermic welding materials and graphite molds for permanent copper joints.
                   - id: rod
-                    figure: "02"
+                    figure: '02'
                     title: Electrolytic grounding rods
                     description: Supply and installation of electrolytic grounding rods where soil conditions are difficult.
                   - id: lightning
-                    figure: "03"
+                    figure: '03'
                     title: Lightning protection
                     description: Manufacture and sale of air terminals and related lightning protection equipment.
                   - id: test
-                    figure: "04"
+                    figure: '04'
                     title: Earthing tests
                     description: On-site earthing resistance and soil resistivity measurement.
               - _component: page-sections/info-blocks/table
                 eyebrowIcon: {}
                 eyebrowText: Company profile
                 heading: At a glance
-                subtext: From our legacy supplier page.
+                subtext: Company profile.
                 maxContentWidth: 2xl
                 paddingVertical: 4xl
                 colorScheme: light
@@ -219,12 +213,12 @@ pageSections:
                       - title: Selected customers
                         contentSections:
                           - _component: building-blocks/core-elements/text
-                            text: Taiwan Power Company, CPC Corporation, Taiwan Steel, TSMC, Taiwan Railways, Taipei & Kaohsiung MRT, Hong Kong CLP, Hong Kong Airport, Formosa Plastics, DuPont, NASA, PG&E, Taiwan High Speed Rail, AU Optronics, and many others worldwide.
+                            text: Taiwan Power Company, China Steel, TSMC, UMC, Formosa Plastics, CPC Corporation, Taiwan High Speed Rail, Taipei and Kaohsiung MRT, Taiwan Railways, CLP Power Hong Kong, Hong Kong International Airport, and SRP, Southern Power, NASA, and PG&E in the United States.
               - _component: page-sections/features/feature-grid
                 eyebrowIcon: {}
                 eyebrowText: Technical support
                 heading: Support across project stages
-                subtext: From product selection to field verification.
+                subtext: Selection, measurement, training, and supply.
                 featureGrid:
                   features:
                     - _component: page-sections/features/feature-grid/feature-item
@@ -277,7 +271,7 @@ pageSections:
                 eyebrowIcon: {}
                 eyebrowText: Certifications
                 heading: Quality certificates & related standards
-                subtext: Items listed on our legacy certifications page. UL 467, IEEE 837, IEEE 80, IEEE 1100, and NEC Article 250 are engineering reference standards — not individual company certifications. Confirm applicable editions per project.
+                subtext: ISO 9001:2015 is the company quality-management certification. UL 467, IEEE 837, IEEE 80, IEEE 1100, and NEC Article 250 are engineering reference standards. Confirm the applicable edition for each project.
                 maxContentWidth: 2xl
                 paddingVertical: 4xl
                 colorScheme: light
@@ -330,7 +324,7 @@ pageSections:
                     rounded: true
                   - _component: building-blocks/core-elements/text
                     alignmentHorizontal: center
-                    text: Quality management for design and manufacture of exothermic welding connection systems. Verify current status via certificate QR code.
+                    text: Covers design and manufacture of exothermic connection systems. Verify status with the certificate QR code.
           - _component: building-blocks/wrappers/content-selector/content-selector-item
             title: Agency tests
             hashId: agency-tests
@@ -339,7 +333,7 @@ pageSections:
                 eyebrowIcon: {}
                 eyebrowText: Agency tests
                 heading: Historical test records & photos
-                subtext: From our legacy agency-test page. Detailed reports follow original test documentation.
+                subtext: Historical test photographs. Conclusions follow the original test records.
                 featureGrid:
                   features:
                     - _component: page-sections/features/feature-grid/feature-item
@@ -370,7 +364,7 @@ pageSections:
                         background: true
                     - _component: page-sections/features/feature-grid/feature-item
                       title: 1999 UL weld sample test
-                      description: Legacy site records 54 joint types under high-current testing; UL File E305374.
+                      description: 54 joint types subjected to high-current testing. UL File E305374.
                       image:
                         source: /src/assets/images/ccelect/testing/ul-1.jpg
                         alt: UL weld sample high-current test photo
@@ -431,7 +425,7 @@ pageSections:
     eyebrowIcon: {}
     eyebrowText: Contact sales
     heading: Start with your site requirements
-    subtext: 2-2 Yunhe St., Taipei 106 · Tel 886-2-23632992 · cce@ccelect.com.tw
+    subtext: "[ee48dacc-ccelect.isandyzhang.workers.dev](https://ee48dacc-ccelect.isandyzhang.workers.dev/) · 2-2 Yunhe St., Taipei 106 · Tel 886-2-23632992 · cce@ccelect.com.tw"
     buttonSections:
       - _component: building-blocks/core-elements/button
         text: Contact us
