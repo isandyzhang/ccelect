@@ -42,22 +42,22 @@ pageSections:
         value: Demo
     applicationHeading: 施工例
     applicationImages:
-      - image: /images/ccelect/products/wx/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-mold-open.jpg
         imageAlt: WX 溶模の内部構造
         caption: 溶模の内部構造
-      - image: /images/ccelect/products/wx/photo-preheat.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-preheat.jpg
         imageAlt: WX 予熱作業
         caption: 予熱作業
-      - image: /images/ccelect/products/wx/photo-setup.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-setup.jpg
         imageAlt: WX 銅導体を溶模にセット
         caption: 銅導体を溶模にセット
-      - image: /images/ccelect/products/wx/photo-setup-top.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-setup-top.jpg
         imageAlt: WX 溶模配置（上面）
         caption: 溶模配置（上面）
-      - image: /images/ccelect/products/wx/photo-process.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-process.jpg
         imageAlt: WX 熔接作業の様子
         caption: 熔接作業の様子
-      - image: /images/ccelect/products/wx/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-hero.jpg
         imageAlt: WX 熔接完了後の銅導体接点
         caption: 熔接完了後の銅導体接点
     note: Exoweld W シリーズ製品詳細の Demo です。正式仕様は営業確認に従ってください。

@@ -22,15 +22,15 @@ pageSections:
         images:
           - image: /images/ccelect/products/we/diagram.svg
             imageAlt: WE 直通示意圖
-          - image: /images/ccelect/products/wt/diagram.jpg
+          - image: /src/assets/images/ccelect/products/wt/diagram.jpg
             imageAlt: WT T 接示意圖
           - image: /images/ccelect/products/wx/diagram.svg
             imageAlt: WX 交叉示意圖
-          - image: /images/ccelect/products/wp/diagram.jpg
+          - image: /src/assets/images/ccelect/products/wp/diagram.jpg
             imageAlt: WP 平行示意圖
-          - image: /images/ccelect/products/wl/diagram.jpg
+          - image: /src/assets/images/ccelect/products/wl/diagram.jpg
             imageAlt: WL L 接示意圖
-          - image: /images/ccelect/products/wxl/diagram.jpg
+          - image: /src/assets/images/ccelect/products/wxl/diagram.jpg
             imageAlt: WXL 交叉示意圖
         specifications:
           - WE
@@ -44,18 +44,18 @@ pageSections:
         category: Exoweld
         title: G 系列
         description: 導體接點：GEE、GET、GST、GEY、GEP。
-        image: /images/ccelect/products/gee/cutout.png
+        image: /src/assets/images/ccelect/products/gee/cutout.png
         imageAlt: GEE 示意圖
         images:
-          - image: /images/ccelect/products/gee/diagram.jpg
+          - image: /src/assets/images/ccelect/products/gee/diagram.jpg
             imageAlt: GEE 示意圖
-          - image: /images/ccelect/products/get/diagram.jpg
+          - image: /src/assets/images/ccelect/products/get/diagram.jpg
             imageAlt: GET 示意圖
-          - image: /images/ccelect/products/gst/diagram.jpg
+          - image: /src/assets/images/ccelect/products/gst/diagram.jpg
             imageAlt: GST 示意圖
-          - image: /images/ccelect/products/gey/diagram.jpg
+          - image: /src/assets/images/ccelect/products/gey/diagram.jpg
             imageAlt: GEY 示意圖
-          - image: /images/ccelect/products/gep/diagram.jpg
+          - image: /src/assets/images/ccelect/products/gep/diagram.jpg
             imageAlt: GEP 示意圖
         specifications:
           - GEE
@@ -68,14 +68,14 @@ pageSections:
         category: Exoweld
         title: S 系列
         description: SHEA、SHEB、SVES 等特殊接點形式與對應型錄。
-        image: /images/ccelect/products/shea/cutout.png
+        image: /src/assets/images/ccelect/products/shea/cutout.png
         imageAlt: SHEA 鋼板對線示意圖
         images:
-          - image: /images/ccelect/products/shea/diagram.jpg
+          - image: /src/assets/images/ccelect/products/shea/diagram.jpg
             imageAlt: SHEA 鋼板對線示意圖
-          - image: /images/ccelect/products/sheb/diagram.jpg
+          - image: /src/assets/images/ccelect/products/sheb/diagram.jpg
             imageAlt: SHEB 鋼板對線示意圖
-          - image: /images/ccelect/products/sves/diagram.jpg
+          - image: /src/assets/images/ccelect/products/sves/diagram.jpg
             imageAlt: SVES 鋼管對線示意圖
         specifications:
           - SHEA
@@ -86,12 +86,12 @@ pageSections:
         category: Exoweld
         title: R 系列
         description: RHEH、RHXH 系列接點形式。
-        image: /images/ccelect/products/rheh/cutout.png
+        image: /src/assets/images/ccelect/products/rheh/cutout.png
         imageAlt: RHEH 鋼筋對線示意圖
         images:
-          - image: /images/ccelect/products/rheh/diagram.jpg
+          - image: /src/assets/images/ccelect/products/rheh/diagram.jpg
             imageAlt: RHEH 鋼筋對線示意圖
-          - image: /images/ccelect/products/rhxh/diagram.jpg
+          - image: /src/assets/images/ccelect/products/rhxh/diagram.jpg
             imageAlt: RHXH 鋼筋對線示意圖
         specifications:
           - RHEH

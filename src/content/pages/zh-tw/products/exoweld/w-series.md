@@ -9,28 +9,28 @@ pageSections:
     heading: W 系列
     summary: Exoweld 石墨熔模設計與建造，適用於多種連接方式與導體組合。
     images:
-      - image: /images/ccelect/products/we/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-hero.jpg
         imageAlt: WE 熔接完成的銅導體接點
         caption: WE
-      - image: /images/ccelect/products/we/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-mold-open.jpg
         imageAlt: WE 開啟的石墨熔模
         caption: WE 熔模
-      - image: /images/ccelect/products/wt/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/wt/photo-hero.jpg
         imageAlt: WT 熔接完成的銅導體接點
         caption: WT
-      - image: /images/ccelect/products/wt/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/wt/photo-mold-open.jpg
         imageAlt: WT 開啟的石墨熔模
         caption: WT 熔模
-      - image: /images/ccelect/products/wx/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-hero.jpg
         imageAlt: WX 熔接完成的銅導體接點
         caption: WX
-      - image: /images/ccelect/products/wx/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-mold-open.jpg
         imageAlt: WX 開啟的石墨熔模
         caption: WX 熔模
-      - image: /images/ccelect/products/wxl/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-hero.jpg
         imageAlt: WXL 熔接完成的銅導體接點
         caption: WXL
-      - image: /images/ccelect/products/wxl/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-mold-open.jpg
         imageAlt: WXL 開啟的石墨熔模
         caption: WXL 熔模
     featuresHeading: 功能

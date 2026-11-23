@@ -43,16 +43,16 @@ pageSections:
         value: Demo
     applicationHeading: 應用示意
     applicationImages:
-      - image: /images/ccelect/products/we/photo-mold.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-mold.jpg
         imageAlt: WE 石墨熔模
         caption: 石墨熔模
-      - image: /images/ccelect/products/we/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-mold-open.jpg
         imageAlt: 開啟的 WE 石墨熔模
         caption: 熔模開啟，可見熔接腔
-      - image: /images/ccelect/products/we/photo-setup.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-setup.jpg
         imageAlt: 銅導體置入 WE 熔模
         caption: 銅導體置入熔模
-      - image: /images/ccelect/products/we/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-hero.jpg
         imageAlt: WE 熔接完成的銅導體接點
         caption: 成品接點
     note: 本頁為 Exoweld W 系列單品詳情 Demo。正式規格請以業務確認為準。

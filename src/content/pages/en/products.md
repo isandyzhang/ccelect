@@ -18,13 +18,13 @@ pageSections:
             image: /images/ccelect/products/we/diagram.svg
             href: /en/products/exoweld/w-series/
           - title: G series
-            image: /images/ccelect/products/gee/diagram.jpg
+            image: /src/assets/images/ccelect/products/gee/diagram.jpg
             href: /en/products/exoweld/g-series/
           - title: S series
-            image: /images/ccelect/products/shea/diagram.jpg
+            image: /src/assets/images/ccelect/products/shea/diagram.jpg
             href: /en/products/exoweld/s-series/
           - title: R series
-            image: /images/ccelect/products/rheh/diagram.jpg
+            image: /src/assets/images/ccelect/products/rheh/diagram.jpg
             href: /en/products/exoweld/r-series/
           - title: P series
             image: /images/ccelect/products/pk/diagram.svg
@@ -98,24 +98,24 @@ pageSections:
             imageAlt: Mold scraper
             href: /en/products/welding-tools/#scraper
           - title: Molds
-            image: /images/ccelect/accessories/split-mold/diagram.jpg
+            image: /src/assets/images/ccelect/accessories/split-mold/diagram.jpg
             imageAlt: Split graphite mold
             href: /en/products/welding-tools/#molds
           - title: Powder
-            image: /images/ccelect/accessories/foil-pack/diagram.jpg
+            image: /src/assets/images/ccelect/accessories/foil-pack/diagram.jpg
             imageAlt: Foil-packed weld metal
             href: /en/products/welding-tools/#powder
         items:
           - title: Graphite mold
             description: Graphite mold matched to the joint form.
-            image: /images/ccelect/accessories/investment-casting/cutout.png
+            image: /src/assets/images/ccelect/accessories/investment-casting/cutout.png
             imageAlt: Graphite investment mold
             href: /en/products/welding-tools/#molds
             secondaryHref: /en/products/welding-tools/
             secondaryText: View all tools
           - title: Foil pack
             description: Foil-packed weld metal for use with the mold and igniter.
-            image: /images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
+            image: /src/assets/images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
             imageAlt: Foil-packed weld metal
             href: /en/products/welding-tools/#powder
             secondaryHref: /en/products/welding-tools/
@@ -146,28 +146,28 @@ pageSections:
             secondaryText: View all tools
           - title: Split mold
             description: Split graphite mold that opens for the joint form.
-            image: /images/ccelect/accessories/split-mold/diagram.jpg
+            image: /src/assets/images/ccelect/accessories/split-mold/diagram.jpg
             imageAlt: Split graphite mold
             href: /en/products/welding-tools/#molds
             secondaryHref: /en/products/welding-tools/
             secondaryText: View all tools
           - title: Wear plate
             description: Wear plate used with the graphite mold.
-            image: /images/ccelect/accessories/wear-plate/diagram.jpg
+            image: /src/assets/images/ccelect/accessories/wear-plate/diagram.jpg
             imageAlt: Mold wear plate
             href: /en/products/welding-tools/#molds
             secondaryHref: /en/products/welding-tools/
             secondaryText: View all tools
           - title: Chain clamp
             description: Chain clamp, including CL-3CH and CL-3CV.
-            image: /images/ccelect/accessories/clamp-chain/diagram.jpg
+            image: /src/assets/images/ccelect/accessories/clamp-chain/diagram.jpg
             imageAlt: Chain mold clamp
             href: /en/products/welding-tools/#clamps
             secondaryHref: /en/products/welding-tools/
             secondaryText: View all tools
           - title: ML-3 clamp
             description: ML-3 clamp for securing the mold.
-            image: /images/ccelect/accessories/clamp-ml3/diagram.jpg
+            image: /src/assets/images/ccelect/accessories/clamp-ml3/diagram.jpg
             imageAlt: ML-3 mold clamp
             href: /en/products/welding-tools/#clamps
             secondaryHref: /en/products/welding-tools/
@@ -179,22 +179,22 @@ pageSections:
         catalogLabel: Browse all
         navItems:
           - title: Ground Plate
-            image: /images/ccelect/products/ground-plate/diagram.jpg
+            image: /src/assets/images/ccelect/products/ground-plate/diagram.jpg
             imageAlt: Embedded ground plate
             href: /en/products/grounding-components/#ground-plate
           - title: Terminals
-            image: /images/ccelect/products/terminal-plate/diagram.jpg
+            image: /src/assets/images/ccelect/products/terminal-plate/diagram.jpg
             imageAlt: KS and KZ terminal plates
             href: /en/products/grounding-components/#terminal-plate
         items:
           - title: Ground Plate
             description: Embedded ground plates. Legacy catalog includes AG201-100, AG401-100, and AG401-250.
-            image: /images/ccelect/products/ground-plate/cutout.png
+            image: /src/assets/images/ccelect/products/ground-plate/cutout.png
             imageAlt: Embedded ground plates AG201-100, AG401-100, and AG401-250 (AI product illustration)
             href: /en/products/grounding-components/#ground-plate
           - title: Terminal plates
             description: KS and KZ terminal plate series for grounding lead-ins.
-            image: /images/ccelect/products/terminal-plate/cutout.png
+            image: /src/assets/images/ccelect/products/terminal-plate/cutout.png
             imageAlt: KS and KZ terminal plates (AI product illustration)
             href: /en/products/grounding-components/#terminal-plate
       - id: grounding-materials
@@ -226,52 +226,52 @@ pageSections:
         items:
           - title: IEA ionic rod
             description: Ionic ground rod for different soil conditions and resistance targets.
-            image: /images/ccelect/products/iea/cutout.png
+            image: /src/assets/images/ccelect/products/iea/cutout.png
             imageAlt: IEA ionic ground rod (AI product illustration)
             href: /en/products/grounding-materials/#grounding-rods
           - title: G copper-clad rod
             description: Copper-clad steel rod for different soil conditions and resistance targets.
-            image: /images/ccelect/products/ground-rod-g/cutout.png
+            image: /src/assets/images/ccelect/products/ground-rod-g/cutout.png
             imageAlt: G series copper-clad ground rod (AI product illustration)
             href: /en/products/grounding-materials/#grounding-rods
           - title: B/NE copper-plated rod
             description: Steel-core copper-plated rod for different soil conditions and resistance targets.
-            image: /images/ccelect/products/ground-rod-bne/cutout.png
+            image: /src/assets/images/ccelect/products/ground-rod-bne/cutout.png
             imageAlt: B and NE series copper-plated ground rod (AI product illustration)
             href: /en/products/grounding-materials/#grounding-rods
           - title: Copper busbar
             description: High-conductivity busbar for grounding buses and equipotential bonding.
-            image: /images/ccelect/products/copper-busbar/cutout.png
+            image: /src/assets/images/ccelect/products/copper-busbar/cutout.png
             imageAlt: C1020BB and C1100BB copper busbar (AI product illustration)
             href: /en/products/grounding-materials/#copper-busbars
           - title: C-type connector
             description: Compression connector for copper conductor taps and splices, sized to the conductor.
-            image: /images/ccelect/products/c-connector/cutout.png
+            image: /src/assets/images/ccelect/products/c-connector/cutout.png
             imageAlt: C-type compression connector (AI product illustration)
             href: /en/products/grounding-materials/#compression-connectors
           - title: Compression terminal
             description: Terminal sized to the conductor and used with a matching compression tool.
-            image: /images/ccelect/products/compression-terminal/cutout.png
+            image: /src/assets/images/ccelect/products/compression-terminal/cutout.png
             imageAlt: Compression terminal (AI product illustration)
             href: /en/products/grounding-materials/#compression-connectors
           - title: GBS clamp
             description: Clamp for positioning grounding conductors on walls and structures.
-            image: /images/ccelect/products/gbs/cutout.png
+            image: /src/assets/images/ccelect/products/gbs/cutout.png
             imageAlt: GBS grounding clamp (AI product illustration)
             href: /en/products/grounding-materials/#grounding-clamps
           - title: GCS clamp
             description: Clamp for positioning grounding conductors on walls and structures.
-            image: /images/ccelect/products/gcs/cutout.png
+            image: /src/assets/images/ccelect/products/gcs/cutout.png
             imageAlt: GCS grounding clamp (AI product illustration)
             href: /en/products/grounding-materials/#grounding-clamps
           - title: Sealing plate
             description: Waterproofing board for grounding works, used with the main grounding system.
-            image: /images/ccelect/products/sealing-plate/cutout.png
+            image: /src/assets/images/ccelect/products/sealing-plate/cutout.png
             imageAlt: Sealing plate (AI product illustration)
             href: /en/products/grounding-materials/#accessories
           - title: Bentonite
             description: Soil-improvement material for grounding works, matched to site conditions. Generic bag illustration; not actual packaging.
-            image: /images/ccelect/products/bentonite/cutout.png
+            image: /src/assets/images/ccelect/products/bentonite/cutout.png
             imageAlt: Bentonite soil conditioner (AI product illustration)
             href: /en/products/grounding-materials/#accessories
       - id: lightning-protection
@@ -298,49 +298,49 @@ pageSections:
             href: /en/products/lightning-protection/#multi-clamps
         items:
           - title: "Pressure T-Type Cable Splicer 304A／304B"
-            image: /images/ccelect/products/lightning-304/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-304/cutout.png
             imageAlt: "Pressure T-Type Cable Splicer 304A／304B (AI product illustration)"
             href: /en/products/lightning-protection/#cable-splicers
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"
           - title: "Bronze Cross Run Clamp 119"
-            image: /images/ccelect/products/lightning-119/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-119/cutout.png
             imageAlt: "Bronze Cross Run Clamp 119 (AI product illustration)"
             href: /en/products/lightning-protection/#cross-run-clamp
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"
           - title: "Parallel Wire Flat Surface Point Base 62"
-            image: /images/ccelect/products/lightning-62/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-62/cutout.png
             imageAlt: "Parallel Wire Flat Surface Point Base 62 (AI product illustration)"
             href: /en/products/lightning-protection/#point-base
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"
           - title: "Bronze Adjustable Point Adapter 63A"
-            image: /images/ccelect/products/lightning-63a/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-63a/cutout.png
             imageAlt: "Bronze Adjustable Point Adapter 63A (AI product illustration)"
             href: /en/products/lightning-protection/#point-adapter
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"
           - title: "Flat Surface Point Base 60A／60B、61A／61B"
-            image: /images/ccelect/products/lightning-60-61/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-60-61/cutout.png
             imageAlt: "Flat Surface Point Base 60A／60B、61A／61B (AI product illustration)"
             href: /en/products/lightning-protection/#flat-surface-base
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"
           - title: "Terminal Support 67A／67B"
-            image: /images/ccelect/products/lightning-67/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-67/cutout.png
             imageAlt: "Terminal Support 67A／67B (AI product illustration)"
             href: /en/products/lightning-protection/#terminal-support
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"
           - title: "Bronze Large Multi Purpose Clamp 297"
-            image: /images/ccelect/products/lightning-297/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-297/cutout.png
             imageAlt: "Bronze Large Multi Purpose Clamp 297 (AI product illustration)"
             href: /en/products/lightning-protection/#multi-clamps
             secondaryHref: /en/products/lightning-protection/
             secondaryText: "View all lightning components"
           - title: "Clamp to Flat Surface 298A"
-            image: /images/ccelect/products/lightning-298a/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-298a/cutout.png
             imageAlt: "Clamp to Flat Surface 298A (AI product illustration)"
             href: /en/products/lightning-protection/#flat-surface-clamp
             secondaryHref: /en/products/lightning-protection/

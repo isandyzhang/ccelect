@@ -22,15 +22,15 @@ pageSections:
         images:
           - image: /images/ccelect/products/we/diagram.svg
             imageAlt: WE wire-to-wire splice diagram
-          - image: /images/ccelect/products/wt/diagram.jpg
+          - image: /src/assets/images/ccelect/products/wt/diagram.jpg
             imageAlt: WT wire-to-wire tee diagram
           - image: /images/ccelect/products/wx/diagram.svg
             imageAlt: WX wire-to-wire cross diagram
-          - image: /images/ccelect/products/wp/diagram.jpg
+          - image: /src/assets/images/ccelect/products/wp/diagram.jpg
             imageAlt: WP parallel wire diagram
-          - image: /images/ccelect/products/wl/diagram.jpg
+          - image: /src/assets/images/ccelect/products/wl/diagram.jpg
             imageAlt: WL wire-to-wire L diagram
-          - image: /images/ccelect/products/wxl/diagram.jpg
+          - image: /src/assets/images/ccelect/products/wxl/diagram.jpg
             imageAlt: WXL wire-to-wire cross diagram
         specifications:
           - WE
@@ -44,18 +44,18 @@ pageSections:
         category: Exoweld
         title: G series
         description: 'Conductor-to-ground-rod joints: GEE, GET, GST, GEY, GEP.'
-        image: /images/ccelect/products/gee/cutout.png
+        image: /src/assets/images/ccelect/products/gee/cutout.png
         imageAlt: GEE wire-to-ground-rod diagram
         images:
-          - image: /images/ccelect/products/gee/diagram.jpg
+          - image: /src/assets/images/ccelect/products/gee/diagram.jpg
             imageAlt: GEE wire-to-ground-rod diagram
-          - image: /images/ccelect/products/get/diagram.jpg
+          - image: /src/assets/images/ccelect/products/get/diagram.jpg
             imageAlt: GET wire-to-ground-rod diagram
-          - image: /images/ccelect/products/gst/diagram.jpg
+          - image: /src/assets/images/ccelect/products/gst/diagram.jpg
             imageAlt: GST wire-to-ground-rod diagram
-          - image: /images/ccelect/products/gey/diagram.jpg
+          - image: /src/assets/images/ccelect/products/gey/diagram.jpg
             imageAlt: GEY wire-to-ground-rod diagram
-          - image: /images/ccelect/products/gep/diagram.jpg
+          - image: /src/assets/images/ccelect/products/gep/diagram.jpg
             imageAlt: GEP wire-to-ground-rod diagram
         specifications:
           - GEE
@@ -68,14 +68,14 @@ pageSections:
         category: Exoweld
         title: S series
         description: Special joint forms such as SHEA, SHEB, and SVES.
-        image: /images/ccelect/products/shea/cutout.png
+        image: /src/assets/images/ccelect/products/shea/cutout.png
         imageAlt: SHEA steel-plate-to-wire diagram
         images:
-          - image: /images/ccelect/products/shea/diagram.jpg
+          - image: /src/assets/images/ccelect/products/shea/diagram.jpg
             imageAlt: SHEA steel-plate-to-wire diagram
-          - image: /images/ccelect/products/sheb/diagram.jpg
+          - image: /src/assets/images/ccelect/products/sheb/diagram.jpg
             imageAlt: SHEB steel-plate-to-wire diagram
-          - image: /images/ccelect/products/sves/diagram.jpg
+          - image: /src/assets/images/ccelect/products/sves/diagram.jpg
             imageAlt: SVES pipe-to-wire diagram
         specifications:
           - SHEA
@@ -86,12 +86,12 @@ pageSections:
         category: Exoweld
         title: R series
         description: RHEH and RHXH joint forms.
-        image: /images/ccelect/products/rheh/cutout.png
+        image: /src/assets/images/ccelect/products/rheh/cutout.png
         imageAlt: RHEH rebar-to-wire diagram
         images:
-          - image: /images/ccelect/products/rheh/diagram.jpg
+          - image: /src/assets/images/ccelect/products/rheh/diagram.jpg
             imageAlt: RHEH rebar-to-wire diagram
-          - image: /images/ccelect/products/rhxh/diagram.jpg
+          - image: /src/assets/images/ccelect/products/rhxh/diagram.jpg
             imageAlt: RHXH rebar-to-wire diagram
         specifications:
           - RHEH

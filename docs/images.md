@@ -1,27 +1,29 @@
 # 圖片管理
 
-## 正式網站圖片
+## 頁面點陣圖（Astro 優化）
 
-`public/images/ccelect/` 放網站直接使用、網址固定的成品，依用途分類：
+`src/assets/images/ccelect/` 放頁面實際引用的 jpg／png／webp。建置時由 Astro `Picture` 產出 WebP 與響應式 `srcset`。內容與元件路徑寫成 `/src/assets/images/ccelect/...`。
 
 | 目錄 | 用途與命名 |
 | --- | --- |
-| `brand/` | 品牌標誌：`logo-black.png`、`logo-white.png` |
-| `home/` | 首頁：`ignition-poster.jpg`、`product-display.png` |
-| `projects/` | 工程實績：`fab.jpg`、`hsr.webp`、`metro.webp` 等 |
+| `home/` | 首頁：`ignition-poster.jpg`、`product-display.webp` |
+| `projects/` | 工程實績與施工照片 |
 | `products/<model>/` | 各型號的去背圖、圖面、實拍照片 |
 | `accessories/` | 配件與工具情境成品 |
 | `grounding/` | 接地互動展示場景 |
+| `certifications/` | 證書 |
+| `testing/` | 試驗照片 |
+| `placeholders/` | 尚未提供正式圖的產品佔位圖 |
 
 每個產品的命名規則：
 
 - `cutout.png`：商品列表使用的透明去背成品。
-- `diagram.svg` 或 `diagram.jpg`：接點圖面。不同格式可能有不同內容，不以副檔名判斷重複。
+- `diagram.svg` 或 `diagram.jpg`：接點圖面。不同格式可能有不同內容，不以副檔名判斷重複。SVG 放在 `public`（見下節）。
 - `diagram-conductors.png`：有明確用途的圖面變體。
 - `photo-hero.jpg`：產品主實拍照。
 - `photo-mold-open.jpg`、`photo-setup.jpg`、`photo-joint.jpg`：依拍攝內容命名。
 
-例如 WP 的正式網址是 `/images/ccelect/products/wp/cutout.png`。
+例如 WP 去背圖的內容路徑是 `/src/assets/images/ccelect/products/wp/cutout.png`。
 工具實拍成品使用 `accessories/<tool>/photo-hero.jpg`。目前選圖來源為
 `lighter-0384.jpg`、`handle-0389.jpg`、`brush-0376.jpg`、`clean-shave-0387.jpg`，
 原檔保留在 `assets/source/ccelect/accessories/`；網站版依 EXIF 轉正並縮至最長邊 1200px。
@@ -37,19 +39,18 @@
 WP、WL、WXL 的 `cutout.png` 是參照 WX 材質生成的 AI 示意圖，不是原始實拍。
 產品型號放在資料夾，檔名不再重複型號，也不使用 `v2`、`enhanced`、`final-final` 等製作歷程名稱。
 
-## Astro 處理的圖片
+`template/` 與 `component-docs/` 仍放在 `src/assets/images/`，與集集電正式素材分開。
 
-`src/assets/images/` 中的圖片由現有 Astro 圖片載入流程處理，保留此機制：
+## 公開目錄（固定網址）
 
-- `ccelect/certifications/`：證書。
-- `ccelect/testing/`：試驗照片。
-- `ccelect/projects/`：施工照片。
-- `ccelect/products/`：現有文章使用的產品照片。
-- `ccelect/placeholders/`：尚未提供正式圖的產品佔位圖。
-- `template/`：Jetstream 模板素材，與集集電的正式素材分開。
-- `component-docs/`：元件文件示例素材。
+`public/images/ccelect/` 只放不需 Astro 縮圖、或需要固定公開網址的檔案：
 
-不要為同一張圖同時在 `public` 與 `src/assets` 新增副本；依消費端原本使用的載入方式選擇一個位置。
+| 目錄 | 用途 |
+| --- | --- |
+| `brand/` | 品牌標誌：`logo-black.png`、`logo-white.png`（導覽與 SEO） |
+| `products/`、`accessories/` 等 | 僅 SVG 圖面與線稿 |
+
+不要為同一張圖同時在 `public` 與 `src/assets` 新增副本。頁面點陣圖一律放 `src/assets`。
 
 ## 原始素材與封存
 
@@ -68,8 +69,8 @@ WP、WL、WXL 的 `cutout.png` 是參照 WX 材質生成的 AI 示意圖，不�
 
 ## 後續新增或更換圖片
 
-1. 原始照片先放 `assets/source/`，製作中的圖不要放入 `public/`。
-2. 選定正式版本後，依用途與型號放入成品目錄，使用小寫英文字母與連字號。
+1. 原始照片先放 `assets/source/`，製作中的圖不要放入成品目錄。
+2. 選定正式版本後，點陣圖放入 `src/assets/images/ccelect/`，SVG 與 logo 放入 `public/images/ccelect/`，使用小寫英文字母與連字號。
 3. 替換圖片前，仍需留存的舊版放入 `assets/archive/`；正式檔名保持穩定。
 4. 若更動路徑，同步更新三種語言內容、元件、CMS 設定及素材產生腳本。
 5. 執行 `npm run build`，並檢查相關頁面。部署後如使用 CDN，需配合清除圖片快取。

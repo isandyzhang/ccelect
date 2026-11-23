@@ -17,7 +17,7 @@ pageSections:
         category: Exoweld ／ R シリーズ
         title: RHEH
         description: RHEH は Exoweld R シリーズの銅熱熔接接点型番です。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/products/rheh/cutout.png
+        image: /src/assets/images/ccelect/products/rheh/cutout.png
         imageAlt: RHEH (AI product illustration)
         specifications:
           - RHEH
@@ -26,7 +26,7 @@ pageSections:
         category: Exoweld ／ R シリーズ
         title: RHXH
         description: RHXH は Exoweld R シリーズの銅熱熔接接点型番です。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/products/rhxh/cutout.png
+        image: /src/assets/images/ccelect/products/rhxh/cutout.png
         imageAlt: RHXH (AI product illustration)
         specifications:
           - RHXH

@@ -9,19 +9,19 @@ pageSections:
     heading: G シリーズ
     summary: Exoweld グラファイト溶模は、さまざまな接続形式と組合せ向けに設計されています。
     images:
-      - image: /images/ccelect/products/gee/cutout.png
+      - image: /src/assets/images/ccelect/products/gee/cutout.png
         imageAlt: GEE (AI product illustration)
         caption: GEE (AI product illustration)
-      - image: /images/ccelect/products/get/cutout.png
+      - image: /src/assets/images/ccelect/products/get/cutout.png
         imageAlt: GET (AI product illustration)
         caption: GET (AI product illustration)
-      - image: /images/ccelect/products/gst/cutout.png
+      - image: /src/assets/images/ccelect/products/gst/cutout.png
         imageAlt: GST (AI product illustration)
         caption: GST (AI product illustration)
-      - image: /images/ccelect/products/gey/cutout.png
+      - image: /src/assets/images/ccelect/products/gey/cutout.png
         imageAlt: GEY (AI product illustration)
         caption: GEY (AI product illustration)
-      - image: /images/ccelect/products/gep/cutout.png
+      - image: /src/assets/images/ccelect/products/gep/cutout.png
         imageAlt: GEP (AI product illustration)
         caption: GEP (AI product illustration)
     featuresHeading: 機能
@@ -37,19 +37,19 @@ pageSections:
     countLabel: 全 {count} 製品
     applicationsLabel: 接続形状イメージ
     applicationImages:
-      - image: /images/ccelect/products/gee/diagram.jpg
+      - image: /src/assets/images/ccelect/products/gee/diagram.jpg
         imageAlt: GEE
         caption: GEE
-      - image: /images/ccelect/products/get/diagram.jpg
+      - image: /src/assets/images/ccelect/products/get/diagram.jpg
         imageAlt: GET
         caption: GET
-      - image: /images/ccelect/products/gst/diagram.jpg
+      - image: /src/assets/images/ccelect/products/gst/diagram.jpg
         imageAlt: GST
         caption: GST
-      - image: /images/ccelect/products/gey/diagram.jpg
+      - image: /src/assets/images/ccelect/products/gey/diagram.jpg
         imageAlt: GEY
         caption: GEY
-      - image: /images/ccelect/products/gep/diagram.jpg
+      - image: /src/assets/images/ccelect/products/gep/diagram.jpg
         imageAlt: GEP
         caption: GEP
     helpHeading: 技術サポートやお見積りが必要ですか？お手伝いします。
@@ -65,7 +65,7 @@ pageSections:
         category: Exoweld ／ G シリーズ
         title: GEE
         description: GEE 接点型番。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/products/gee/cutout.png
+        image: /src/assets/images/ccelect/products/gee/cutout.png
         imageAlt: GEE (AI product illustration)
         specifications:
           - GEE
@@ -74,7 +74,7 @@ pageSections:
         category: Exoweld ／ G シリーズ
         title: GET
         description: GET 接点型番。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/products/get/cutout.png
+        image: /src/assets/images/ccelect/products/get/cutout.png
         imageAlt: GET (AI product illustration)
         specifications:
           - GET
@@ -83,7 +83,7 @@ pageSections:
         category: Exoweld ／ G シリーズ
         title: GST
         description: GST 接点型番。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/products/gst/cutout.png
+        image: /src/assets/images/ccelect/products/gst/cutout.png
         imageAlt: GST (AI product illustration)
         specifications:
           - GST
@@ -92,7 +92,7 @@ pageSections:
         category: Exoweld ／ G シリーズ
         title: GEY
         description: GEY 接点型番。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/products/gey/cutout.png
+        image: /src/assets/images/ccelect/products/gey/cutout.png
         imageAlt: GEY (AI product illustration)
         specifications:
           - GEY
@@ -101,7 +101,7 @@ pageSections:
         category: Exoweld ／ G シリーズ
         title: GEP
         description: GEP 接点型番。溶模と導体仕様は営業へご確認ください。
-        image: /images/ccelect/products/gep/cutout.png
+        image: /src/assets/images/ccelect/products/gep/cutout.png
         imageAlt: GEP (AI product illustration)
         specifications:
           - GEP

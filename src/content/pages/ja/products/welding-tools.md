@@ -17,12 +17,12 @@ pageSections:
         category: 金型
         title: 溶模と分割型溶模
         description: 火泥溶模、分割型溶模、耐磨板などの黒鉛金型関連品。
-        image: /images/ccelect/accessories/investment-casting/cutout.png
+        image: /src/assets/images/ccelect/accessories/investment-casting/cutout.png
         imageAlt: 黒鉛鋳型の製品写真（WE型）
         images:
-          - image: /images/ccelect/accessories/investment-casting/cutout.png
+          - image: /src/assets/images/ccelect/accessories/investment-casting/cutout.png
             imageAlt: 黒鉛鋳型の製品写真（WE型）
-          - image: /images/ccelect/accessories/split-mold/diagram.jpg
+          - image: /src/assets/images/ccelect/accessories/split-mold/diagram.jpg
             imageAlt: 分割型鋳型の図
         specifications:
           - 火泥溶模
@@ -33,12 +33,12 @@ pageSections:
         category: 消耗品
         title: 溶接剤と点火・清模
         description: アルミ箔包溶接剤、点火機、清模板、ブラシなど。
-        image: /images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
+        image: /src/assets/images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
         imageAlt: アルミ箔包溶接剤
         images:
-          - image: /images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
+          - image: /src/assets/images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
             imageAlt: EXOWELD #45 アルミ箔包溶接剤の製品写真
-          - image: /images/ccelect/accessories/foil-pack/diagram.jpg
+          - image: /src/assets/images/ccelect/accessories/foil-pack/diagram.jpg
             imageAlt: アルミ箔包溶接剤
         specifications:
           - 溶接剤

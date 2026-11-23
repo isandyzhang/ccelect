@@ -13,5 +13,5 @@
     "298a": "Use case: product-mockup. Convert supplied lightning protection hardware reference into a high resolution photoreal studio product cutout. Preserve exact visible mechanical geometry, openings, bolt count and component arrangement; improve realism not design. Warm natural cast bronze with subtle machining and fine texture, neutral soft lighting, realistic silver steel fasteners where shown, no yellow plastic CGI look. One complete product centered square canvas with generous clear margins. True transparent background including all holes. No floor or shadow, no labels, dimensions, arrows, CAD axes, watermark or text. Bronze cable-to-flat-surface clamp: compact rounded upper saddle arch with ONE central silver hex bolt and washer, curved lower cable jaw and side flat clamping section with cross-hatched gripping texture. Convert black-and-white drawing into realistic bronze metal, retaining its outline and mechanical arrangement. No extra parts."
   },
   "background": "transparent",
-  "outputPattern": "public/images/ccelect/products/lightning-{model}/cutout.png"
+  "outputPattern": "src/assets/images/ccelect/products/lightning-{model}/cutout.png"
 }

@@ -1,9 +1,10 @@
-/* Font families: 思源黑體 Noto Sans TC（stylesheet）；JetBrains Mono via Astro Font */
+/* Font families: 思源黑體 Noto Sans TC（Astro 自架 400／700）；JetBrains Mono via Astro Font */
 
 :where(:root) {
-  --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", sans-serif;
-  --font-headings:
-    "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", sans-serif;
+  --font-body: var(--font-noto-sans-tc, "Noto Sans TC"), "PingFang TC", "Microsoft JhengHei",
+    "Noto Sans CJK TC", sans-serif;
+  --font-headings: var(--font-noto-sans-tc, "Noto Sans TC"), "PingFang TC", "Microsoft JhengHei",
+    "Noto Sans CJK TC", sans-serif;
   --font-mono: var(--font-mono-face, "JetBrains Mono"), ui-monospace, monospace;
 
   --font-size-xs: 0.75rem;
@@ -26,11 +27,11 @@
   --font-size-heading-4xl: 5.75rem;
   --font-size-heading-5xl: 6.375rem;
 
-  /* One step heavier site-wide — Noto Sans TC reads thin at 400 */
-  --font-weight-regular: 500;
-  --font-weight-normal: 500;
-  --font-weight-medium: 600;
-  --font-weight-semibold: 600;
+  /* Only 400 and 700 are self-hosted; map former 500/600 onto those faces */
+  --font-weight-regular: 400;
+  --font-weight-normal: 400;
+  --font-weight-medium: 700;
+  --font-weight-semibold: 700;
   --font-weight-bold: 700;
 
   --font-letter-spacing-xs: 2px;

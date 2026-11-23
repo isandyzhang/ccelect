@@ -9,28 +9,28 @@ pageSections:
     heading: W シリーズ
     summary: Exoweld グラファイト溶模は、さまざまな接続形式と導体組合せ向けに設計されています。
     images:
-      - image: /images/ccelect/products/we/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-hero.jpg
         imageAlt: WE 熔接完了後の銅導体接点
         caption: WE
-      - image: /images/ccelect/products/we/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-mold-open.jpg
         imageAlt: WE 開放グラファイト溶模
         caption: WE 溶模
-      - image: /images/ccelect/products/wt/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/wt/photo-hero.jpg
         imageAlt: WT 熔接完了後の銅導体接点
         caption: WT
-      - image: /images/ccelect/products/wt/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/wt/photo-mold-open.jpg
         imageAlt: WT 開放グラファイト溶模
         caption: WT 溶模
-      - image: /images/ccelect/products/wx/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-hero.jpg
         imageAlt: WX 熔接完了後の銅導体接点
         caption: WX
-      - image: /images/ccelect/products/wx/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-mold-open.jpg
         imageAlt: WX 開放グラファイト溶模
         caption: WX 溶模
-      - image: /images/ccelect/products/wxl/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-hero.jpg
         imageAlt: WXL 熔接完了後の銅導体接点
         caption: WXL
-      - image: /images/ccelect/products/wxl/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-mold-open.jpg
         imageAlt: WXL 開放グラファイト溶模
         caption: WXL 溶模
     featuresHeading: 機能

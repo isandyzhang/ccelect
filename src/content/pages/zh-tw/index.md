@@ -18,10 +18,10 @@ pageSections:
     videoIntroSource: /videos/ccelect/hero-ignition-intro.mp4
     videoSource: /videos/ccelect/hero-loop.mp4
     scrollMask: true
-    heading: © 集集電工業<br />以鋁熱熔接技術<br />建構可靠的<br />接地與避雷系統
-    metaLeft: 每一個接地專案<br />都需要可靠連接
-    metaRight: EST. 1979<br />→ EXOWELD
-    subtext: ""
+    heading: 集集電工業 / CCElect
+    subtext: 以鋁熱熔接技術，設計與製造接地、避雷系統所需的材料與工程支援。
+    metaLeft: 鋁熱熔接
+    metaRight: 接地與避雷
     buttonSections: []
   - _component: page-sections/features/grounding-experience
     id: grounding-experience

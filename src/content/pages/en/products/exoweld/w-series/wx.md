@@ -42,22 +42,22 @@ pageSections:
         value: Demo
     applicationHeading: Application photos
     applicationImages:
-      - image: /images/ccelect/products/wx/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-mold-open.jpg
         imageAlt: WX Mold interior
         caption: Mold interior
-      - image: /images/ccelect/products/wx/photo-preheat.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-preheat.jpg
         imageAlt: WX Preheat step
         caption: Preheat step
-      - image: /images/ccelect/products/wx/photo-setup.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-setup.jpg
         imageAlt: WX Copper conductors positioned in the mold
         caption: Copper conductors positioned in the mold
-      - image: /images/ccelect/products/wx/photo-setup-top.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-setup-top.jpg
         imageAlt: WX Top view of mold setup
         caption: Top view of mold setup
-      - image: /images/ccelect/products/wx/photo-process.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-process.jpg
         imageAlt: WX Welding process
         caption: Welding process
-      - image: /images/ccelect/products/wx/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-hero.jpg
         imageAlt: WX Completed copper conductor joint
         caption: Completed copper conductor joint
     note: Demo product detail for Exoweld W series. Confirm final specs with sales.

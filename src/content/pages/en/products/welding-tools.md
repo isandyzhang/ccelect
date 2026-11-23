@@ -17,12 +17,12 @@ pageSections:
         category: Molds
         title: Molds & split molds
         description: Graphite molds, split molds, and wear plates.
-        image: /images/ccelect/accessories/investment-casting/cutout.png
+        image: /src/assets/images/ccelect/accessories/investment-casting/cutout.png
         imageAlt: Graphite mold product photo (WE type)
         images:
-          - image: /images/ccelect/accessories/investment-casting/cutout.png
+          - image: /src/assets/images/ccelect/accessories/investment-casting/cutout.png
             imageAlt: Graphite mold product photo (WE type)
-          - image: /images/ccelect/accessories/split-mold/diagram.jpg
+          - image: /src/assets/images/ccelect/accessories/split-mold/diagram.jpg
             imageAlt: Split mold diagram
         specifications:
           - Graphite molds
@@ -33,12 +33,12 @@ pageSections:
         category: Consumables
         title: Powder & cleaning
         description: Foil-packed powder, igniters, cleaning plates, and brushes.
-        image: /images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
+        image: /src/assets/images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
         imageAlt: Foil-packed weld metal
         images:
-          - image: /images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
+          - image: /src/assets/images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
             imageAlt: EXOWELD #45 foil-packed weld metal product photo
-          - image: /images/ccelect/accessories/foil-pack/diagram.jpg
+          - image: /src/assets/images/ccelect/accessories/foil-pack/diagram.jpg
             imageAlt: Foil-packed weld metal
         specifications:
           - Powder

@@ -42,22 +42,22 @@ pageSections:
         value: Demo
     applicationHeading: Application photos
     applicationImages:
-      - image: /images/ccelect/products/wxl/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-mold-open.jpg
         imageAlt: WXL Mold interior
         caption: Mold interior
-      - image: /images/ccelect/products/wxl/photo-mold-closeup.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-mold-closeup.jpg
         imageAlt: WXL Mold close-up
         caption: Mold close-up
-      - image: /images/ccelect/products/wxl/photo-setup.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-setup.jpg
         imageAlt: WXL Copper conductors positioned in the mold
         caption: Copper conductors positioned in the mold
-      - image: /images/ccelect/products/wxl/photo-setup-clamp.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-setup-clamp.jpg
         imageAlt: WXL Mold clamped in place
         caption: Mold clamped in place
-      - image: /images/ccelect/products/wxl/photo-powder.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-powder.jpg
         imageAlt: WXL Weld powder loaded
         caption: Weld powder loaded
-      - image: /images/ccelect/products/wxl/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-hero.jpg
         imageAlt: WXL Completed copper conductor joint
         caption: Completed copper conductor joint
     note: Demo product detail for Exoweld W series. Confirm final specs with sales.

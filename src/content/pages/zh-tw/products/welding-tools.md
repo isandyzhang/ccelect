@@ -17,12 +17,12 @@ pageSections:
         category: 模具
         title: 熔模與分割型熔模
         description: 火泥熔模、分割型熔模及耐磨板等石墨模具相關品項。
-        image: /images/ccelect/accessories/investment-casting/cutout.png
+        image: /src/assets/images/ccelect/accessories/investment-casting/cutout.png
         imageAlt: 火泥石墨熔模實拍（WE 型）
         images:
-          - image: /images/ccelect/accessories/investment-casting/cutout.png
+          - image: /src/assets/images/ccelect/accessories/investment-casting/cutout.png
             imageAlt: 火泥石墨熔模實拍（WE 型）
-          - image: /images/ccelect/accessories/split-mold/diagram.jpg
+          - image: /src/assets/images/ccelect/accessories/split-mold/diagram.jpg
             imageAlt: 分割型熔模示意圖
         specifications:
           - 火泥熔模
@@ -33,12 +33,12 @@ pageSections:
         category: 耗材
         title: 熔接劑與點火清模
         description: 鋁箔包熔接劑、點火機、清模板及毛刷等品項。
-        image: /images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
+        image: /src/assets/images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
         imageAlt: 鋁箔包熔接劑
         images:
-          - image: /images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
+          - image: /src/assets/images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
             imageAlt: EXOWELD #45 鋁箔包熔接劑去背實拍
-          - image: /images/ccelect/accessories/foil-pack/diagram.jpg
+          - image: /src/assets/images/ccelect/accessories/foil-pack/diagram.jpg
             imageAlt: 鋁箔包熔接劑
         specifications:
           - 熔接劑

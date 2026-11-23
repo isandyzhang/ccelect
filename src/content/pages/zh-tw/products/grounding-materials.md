@@ -17,7 +17,7 @@ pageSections:
         category: 接地極
         title: 接地棒
         description: 適用於不同土壤條件與接地電阻需求，可依施工環境選擇離子式或銅包鋼系列。
-        image: /images/ccelect/products/iea/cutout.png
+        image: /src/assets/images/ccelect/products/iea/cutout.png
         imageAlt: 離子式接地棒
         specifications:
           - IEA 離子式
@@ -28,7 +28,7 @@ pageSections:
         category: 接地導體
         title: 接地銅排
         description: 高導電性銅排，適用於接地匯流、配電盤與設備等電位連接。
-        image: /images/ccelect/products/copper-busbar/cutout.png
+        image: /src/assets/images/ccelect/products/copper-busbar/cutout.png
         imageAlt: 接地銅排
         iconName: bars-3
         specifications:
@@ -39,7 +39,7 @@ pageSections:
         category: 導體接續
         title: C 型壓接頭
         description: 用於銅導體分歧與接續，依導體尺寸選擇對應規格並搭配專用壓接工具。
-        image: /images/ccelect/products/c-connector/cutout.png
+        image: /src/assets/images/ccelect/products/c-connector/cutout.png
         imageAlt: C 型壓接頭
         iconName: link
         specifications:
@@ -50,7 +50,7 @@ pageSections:
         category: 固定配件
         title: 接地線固定夾
         description: 提供接地導體定位與固定，適用於牆面、結構體及各類接地工程配置。
-        image: /images/ccelect/products/gbs/cutout.png
+        image: /src/assets/images/ccelect/products/gbs/cutout.png
         imageAlt: 接地線固定夾 GBS
         iconName: wrench
         specifications:
@@ -61,7 +61,7 @@ pageSections:
         category: 工程材料
         title: 其他附屬材料
         description: 接地工程所需的止水與土壤改善材料，可依現場條件搭配主要接地系統使用。
-        image: /images/ccelect/products/sealing-plate/cutout.png
+        image: /src/assets/images/ccelect/products/sealing-plate/cutout.png
         imageAlt: 止水板
         iconName: archive-box
         specifications:

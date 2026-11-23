@@ -9,19 +9,19 @@ pageSections:
     heading: G 系列
     summary: Exoweld 石墨熔模設計與建造，適用於多種連接方式與導體／接地極組合。
     images:
-      - image: /images/ccelect/products/gee/cutout.png
+      - image: /src/assets/images/ccelect/products/gee/cutout.png
         imageAlt: GEE (AI product illustration)
         caption: GEE (AI product illustration)
-      - image: /images/ccelect/products/get/cutout.png
+      - image: /src/assets/images/ccelect/products/get/cutout.png
         imageAlt: GET (AI product illustration)
         caption: GET (AI product illustration)
-      - image: /images/ccelect/products/gst/cutout.png
+      - image: /src/assets/images/ccelect/products/gst/cutout.png
         imageAlt: GST (AI product illustration)
         caption: GST (AI product illustration)
-      - image: /images/ccelect/products/gey/cutout.png
+      - image: /src/assets/images/ccelect/products/gey/cutout.png
         imageAlt: GEY (AI product illustration)
         caption: GEY (AI product illustration)
-      - image: /images/ccelect/products/gep/cutout.png
+      - image: /src/assets/images/ccelect/products/gep/cutout.png
         imageAlt: GEP (AI product illustration)
         caption: GEP (AI product illustration)
     featuresHeading: 功能
@@ -37,19 +37,19 @@ pageSections:
     countLabel: 共 {count} 個商品
     applicationsLabel: 接點形式示意
     applicationImages:
-      - image: /images/ccelect/products/gee/diagram.jpg
+      - image: /src/assets/images/ccelect/products/gee/diagram.jpg
         imageAlt: GEE
         caption: GEE
-      - image: /images/ccelect/products/get/diagram.jpg
+      - image: /src/assets/images/ccelect/products/get/diagram.jpg
         imageAlt: GET
         caption: GET
-      - image: /images/ccelect/products/gst/diagram.jpg
+      - image: /src/assets/images/ccelect/products/gst/diagram.jpg
         imageAlt: GST
         caption: GST
-      - image: /images/ccelect/products/gey/diagram.jpg
+      - image: /src/assets/images/ccelect/products/gey/diagram.jpg
         imageAlt: GEY
         caption: GEY
-      - image: /images/ccelect/products/gep/diagram.jpg
+      - image: /src/assets/images/ccelect/products/gep/diagram.jpg
         imageAlt: GEP
         caption: GEP
     helpHeading: 需要技術支援或報價嗎？我們隨時為您服務。
@@ -65,7 +65,7 @@ pageSections:
         category: Exoweld ／ G 系列
         title: GEE
         description: GEE 接點型號。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/products/gee/cutout.png
+        image: /src/assets/images/ccelect/products/gee/cutout.png
         imageAlt: GEE (AI product illustration)
         specifications:
           - GEE
@@ -74,7 +74,7 @@ pageSections:
         category: Exoweld ／ G 系列
         title: GET
         description: GET 接點型號。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/products/get/cutout.png
+        image: /src/assets/images/ccelect/products/get/cutout.png
         imageAlt: GET (AI product illustration)
         specifications:
           - GET
@@ -83,7 +83,7 @@ pageSections:
         category: Exoweld ／ G 系列
         title: GST
         description: GST 接點型號。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/products/gst/cutout.png
+        image: /src/assets/images/ccelect/products/gst/cutout.png
         imageAlt: GST (AI product illustration)
         specifications:
           - GST
@@ -92,7 +92,7 @@ pageSections:
         category: Exoweld ／ G 系列
         title: GEY
         description: GEY 接點型號。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/products/gey/cutout.png
+        image: /src/assets/images/ccelect/products/gey/cutout.png
         imageAlt: GEY (AI product illustration)
         specifications:
           - GEY
@@ -101,7 +101,7 @@ pageSections:
         category: Exoweld ／ G 系列
         title: GEP
         description: GEP 接點型號。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/products/gep/cutout.png
+        image: /src/assets/images/ccelect/products/gep/cutout.png
         imageAlt: GEP (AI product illustration)
         specifications:
           - GEP

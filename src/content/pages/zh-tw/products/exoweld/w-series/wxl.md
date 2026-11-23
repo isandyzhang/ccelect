@@ -42,22 +42,22 @@ pageSections:
         value: Demo
     applicationHeading: 應用示意
     applicationImages:
-      - image: /images/ccelect/products/wxl/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-mold-open.jpg
         imageAlt: WXL 熔模內部構造
         caption: 熔模內部構造
-      - image: /images/ccelect/products/wxl/photo-mold-closeup.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-mold-closeup.jpg
         imageAlt: WXL 熔模近拍
         caption: 熔模近拍
-      - image: /images/ccelect/products/wxl/photo-setup.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-setup.jpg
         imageAlt: WXL 銅導體置入熔模
         caption: 銅導體置入熔模
-      - image: /images/ccelect/products/wxl/photo-setup-clamp.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-setup-clamp.jpg
         imageAlt: WXL 熔模夾持固定
         caption: 熔模夾持固定
-      - image: /images/ccelect/products/wxl/photo-powder.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-powder.jpg
         imageAlt: WXL 熔接劑装填
         caption: 熔接劑裝填
-      - image: /images/ccelect/products/wxl/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-hero.jpg
         imageAlt: WXL 熔接完成的銅導體接點
         caption: 熔接完成的銅導體接點
     note: 本頁為 Exoweld W 系列單品詳情 Demo。正式規格請以業務確認為準。

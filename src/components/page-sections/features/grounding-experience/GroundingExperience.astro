@@ -1,8 +1,16 @@
 ---
+import { Picture } from "astro:assets";
+import sceneStructures from "@assets/images/ccelect/grounding/scene-structures.jpg";
+import scenePowered from "@assets/images/ccelect/grounding/scene-powered.jpg";
+import sceneCopper from "@assets/images/ccelect/grounding/scene-copper.jpg";
+
 interface Props {
   id?: string;
 }
 const { id = "grounding-experience" } = Astro.props;
+
+const sceneWidths = [640, 960, 1280];
+const sceneSizes = "100vw";
 
 // Anchors sit on copper routes in grounding-scene-copper.jpg (1280 × 720).
 const annotations = [
@@ -53,33 +61,42 @@ const annotations = [
   <div class="grounding-track">
     <div class="grounding-sticky">
       <grounding-flow>
-        <img
+        <Picture
           class="scene-structures"
-          src="/images/ccelect/grounding/scene-structures.jpg"
+          src={sceneStructures}
           alt="工廠、變電設備、鐵塔與地下接地網的線框示意；光點僅為連接概念示意，不代表實際電流方向或工程計算"
-          width="1280"
-          height="720"
+          widths={sceneWidths}
+          sizes={sceneSizes}
+          formats={["webp"]}
+          width={1280}
+          height={720}
           loading="eager"
           fetchpriority="low"
           decoding="async"
         />
-        <img
+        <Picture
           class="scene-powered"
-          src="/images/ccelect/grounding/scene-powered.jpg"
+          src={scenePowered}
           alt=""
-          width="1280"
-          height="720"
+          widths={sceneWidths}
+          sizes={sceneSizes}
+          formats={["webp"]}
+          width={1280}
+          height={720}
           loading="eager"
           fetchpriority="low"
           decoding="async"
           aria-hidden="true"
         />
-        <img
+        <Picture
           class="scene-copper"
-          src="/images/ccelect/grounding/scene-copper.jpg"
+          src={sceneCopper}
           alt=""
-          width="1280"
-          height="720"
+          widths={sceneWidths}
+          sizes={sceneSizes}
+          formats={["webp"]}
+          width={1280}
+          height={720}
           loading="eager"
           fetchpriority="low"
           decoding="async"
@@ -196,6 +213,7 @@ const annotations = [
     aspect-ratio: 1280 / 720;
     margin-inline: auto;
   }
+  grounding-flow > picture,
   grounding-flow > img,
   .copper-canvas,
   .anno-overlay,
@@ -205,7 +223,11 @@ const annotations = [
     width: 100%;
     height: 100%;
   }
+  grounding-flow > picture > img,
   grounding-flow > img {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     pointer-events: none;
   }

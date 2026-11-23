@@ -2,6 +2,7 @@
 import catalog from "@data/exoweld/mold-options.json";
 import usWireSizes from "@data/exoweld/us-wire-sizes.json";
 import { localeFromPath } from "@i18n/experience";
+import Image from "@core-elements/image/Image.astro";
 
 interface Props {
   product: string;
@@ -97,12 +98,13 @@ const sizes = config
       </header>
       <div class="mold-selector-layout">
         <figure>
-          <img
-            src={config.diagram}
+          <Image
+            source={config.diagram}
             alt={text.diagram}
-            width="214"
-            height="194"
-            loading="lazy"
+            width={214}
+            height={194}
+            sizes="214px"
+            widths={[214, 428]}
           />
         </figure>
         <div class="mold-selector-controls">

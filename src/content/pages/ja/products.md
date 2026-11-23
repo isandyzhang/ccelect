@@ -18,13 +18,13 @@ pageSections:
             image: /images/ccelect/products/we/diagram.svg
             href: /ja/products/exoweld/w-series/
           - title: G シリーズ
-            image: /images/ccelect/products/gee/diagram.jpg
+            image: /src/assets/images/ccelect/products/gee/diagram.jpg
             href: /ja/products/exoweld/g-series/
           - title: S シリーズ
-            image: /images/ccelect/products/shea/diagram.jpg
+            image: /src/assets/images/ccelect/products/shea/diagram.jpg
             href: /ja/products/exoweld/s-series/
           - title: R シリーズ
-            image: /images/ccelect/products/rheh/diagram.jpg
+            image: /src/assets/images/ccelect/products/rheh/diagram.jpg
             href: /ja/products/exoweld/r-series/
           - title: P シリーズ
             image: /images/ccelect/products/pk/diagram.svg
@@ -98,24 +98,24 @@ pageSections:
             imageAlt: 金型スクレーパー
             href: /ja/products/welding-tools/#scraper
           - title: 溶模
-            image: /images/ccelect/accessories/split-mold/diagram.jpg
+            image: /src/assets/images/ccelect/accessories/split-mold/diagram.jpg
             imageAlt: 分割型溶模
             href: /ja/products/welding-tools/#molds
           - title: 溶接剤
-            image: /images/ccelect/accessories/foil-pack/diagram.jpg
+            image: /src/assets/images/ccelect/accessories/foil-pack/diagram.jpg
             imageAlt: アルミ箔包溶接剤
             href: /ja/products/welding-tools/#powder
         items:
           - title: 火泥溶模
             description: 接点形式に合わせて選ぶ黒鉛の火泥溶模。
-            image: /images/ccelect/accessories/investment-casting/cutout.png
+            image: /src/assets/images/ccelect/accessories/investment-casting/cutout.png
             imageAlt: 火泥溶模
             href: /ja/products/welding-tools/#molds
             secondaryHref: /ja/products/welding-tools/
             secondaryText: すべての工具を見る
           - title: アルミ箔包溶接剤
             description: 溶模と点火器と併用するアルミ箔包溶接剤。
-            image: /images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
+            image: /src/assets/images/ccelect/accessories/foil-pack/foil-pack-45-cutout.png
             imageAlt: アルミ箔包溶接剤
             href: /ja/products/welding-tools/#powder
             secondaryHref: /ja/products/welding-tools/
@@ -146,28 +146,28 @@ pageSections:
             secondaryText: すべての工具を見る
           - title: 分割型溶模
             description: 接点形式に応じて開閉できる分割型溶模。
-            image: /images/ccelect/accessories/split-mold/diagram.jpg
+            image: /src/assets/images/ccelect/accessories/split-mold/diagram.jpg
             imageAlt: 分割型溶模
             href: /ja/products/welding-tools/#molds
             secondaryHref: /ja/products/welding-tools/
             secondaryText: すべての工具を見る
           - title: 耐磨板
             description: 黒鉛溶模と併用する耐磨板。
-            image: /images/ccelect/accessories/wear-plate/diagram.jpg
+            image: /src/assets/images/ccelect/accessories/wear-plate/diagram.jpg
             imageAlt: 耐磨板
             href: /ja/products/welding-tools/#molds
             secondaryHref: /ja/products/welding-tools/
             secondaryText: すべての工具を見る
           - title: チェーン模夾
             description: チェーン模夾。CL-3CH、CL-3CV を含みます。
-            image: /images/ccelect/accessories/clamp-chain/diagram.jpg
+            image: /src/assets/images/ccelect/accessories/clamp-chain/diagram.jpg
             imageAlt: チェーン模夾
             href: /ja/products/welding-tools/#clamps
             secondaryHref: /ja/products/welding-tools/
             secondaryText: すべての工具を見る
           - title: ML-3 模夾
             description: 溶模を固定する ML-3 模夾。
-            image: /images/ccelect/accessories/clamp-ml3/diagram.jpg
+            image: /src/assets/images/ccelect/accessories/clamp-ml3/diagram.jpg
             imageAlt: ML-3 模夾
             href: /ja/products/welding-tools/#clamps
             secondaryHref: /ja/products/welding-tools/
@@ -179,22 +179,22 @@ pageSections:
         catalogLabel: すべて見る
         navItems:
           - title: Ground Plate
-            image: /images/ccelect/products/ground-plate/diagram.jpg
+            image: /src/assets/images/ccelect/products/ground-plate/diagram.jpg
             imageAlt: 埋込型接地板
             href: /ja/products/grounding-components/#ground-plate
           - title: 端子板
-            image: /images/ccelect/products/terminal-plate/diagram.jpg
+            image: /src/assets/images/ccelect/products/terminal-plate/diagram.jpg
             imageAlt: 接地端子板 KS、KZ
             href: /ja/products/grounding-components/#terminal-plate
         items:
           - title: 埋込型接地板
             description: 埋込型接地板。旧カタログには AG201-100、AG401-100、AG401-250 があります。
-            image: /images/ccelect/products/ground-plate/cutout.png
+            image: /src/assets/images/ccelect/products/ground-plate/cutout.png
             imageAlt: 埋込型接地板 AG201-100、AG401-100、AG401-250 (AI product illustration)
             href: /ja/products/grounding-components/#ground-plate
           - title: 接地端子板
             description: KS・KZ 接地端子板シリーズ。接地引込みに使用します。
-            image: /images/ccelect/products/terminal-plate/cutout.png
+            image: /src/assets/images/ccelect/products/terminal-plate/cutout.png
             imageAlt: 接地端子板 KS、KZ (AI product illustration)
             href: /ja/products/grounding-components/#terminal-plate
       - id: grounding-materials
@@ -226,52 +226,52 @@ pageSections:
         items:
           - title: イオン式接地棒 IEA
             description: 土壌条件と接地抵抗目標に応じて選ぶイオン式接地棒。
-            image: /images/ccelect/products/iea/cutout.png
+            image: /src/assets/images/ccelect/products/iea/cutout.png
             imageAlt: イオン式接地棒 IEA（AI 製品イメージ）
             href: /ja/products/grounding-materials/#grounding-rods
           - title: 銅被覆鋼接地棒 G
             description: 土壌条件と接地抵抗目標に応じて選ぶ銅被覆鋼棒。
-            image: /images/ccelect/products/ground-rod-g/cutout.png
+            image: /src/assets/images/ccelect/products/ground-rod-g/cutout.png
             imageAlt: 銅被覆鋼接地棒 G シリーズ（AI 製品イメージ）
             href: /ja/products/grounding-materials/#grounding-rods
           - title: 鋼芯銅めっき接地棒 B／NE
             description: 土壌条件と接地抵抗目標に応じて選ぶ鋼芯銅めっき棒。
-            image: /images/ccelect/products/ground-rod-bne/cutout.png
+            image: /src/assets/images/ccelect/products/ground-rod-bne/cutout.png
             imageAlt: 鋼芯銅めっき接地棒 B、NE シリーズ（AI 製品イメージ）
             href: /ja/products/grounding-materials/#grounding-rods
           - title: 接地銅バー
             description: 接地母線や等電位接続向けの高導電銅バー。
-            image: /images/ccelect/products/copper-busbar/cutout.png
+            image: /src/assets/images/ccelect/products/copper-busbar/cutout.png
             imageAlt: 接地銅バー C1020BB、C1100BB（AI 製品イメージ）
             href: /ja/products/grounding-materials/#copper-busbars
           - title: C 型圧着端子
             description: 銅導体の分岐・接続用。導体サイズに合わせて圧着工具と併用。
-            image: /images/ccelect/products/c-connector/cutout.png
+            image: /src/assets/images/ccelect/products/c-connector/cutout.png
             imageAlt: C 型圧着端子（AI 製品イメージ）
             href: /ja/products/grounding-materials/#compression-connectors
           - title: 圧着端子
             description: 導体サイズに合わせて選び、専用圧着工具と併用。
-            image: /images/ccelect/products/compression-terminal/cutout.png
+            image: /src/assets/images/ccelect/products/compression-terminal/cutout.png
             imageAlt: 圧着端子（AI 製品イメージ）
             href: /ja/products/grounding-materials/#compression-connectors
           - title: 接地線固定夾 GBS
             description: 壁面・構造体などへの接地導体固定用。
-            image: /images/ccelect/products/gbs/cutout.png
+            image: /src/assets/images/ccelect/products/gbs/cutout.png
             imageAlt: 接地線固定夾 GBS（AI 製品イメージ）
             href: /ja/products/grounding-materials/#grounding-clamps
           - title: 接地線固定夾 GCS
             description: 壁面・構造体などへの接地導体固定用。
-            image: /images/ccelect/products/gcs/cutout.png
+            image: /src/assets/images/ccelect/products/gcs/cutout.png
             imageAlt: 接地線固定夾 GCS（AI 製品イメージ）
             href: /ja/products/grounding-materials/#grounding-clamps
           - title: 止水板
             description: 接地工事用の止水材料。現場条件に合わせて主接地系統と併用。
-            image: /images/ccelect/products/sealing-plate/cutout.png
+            image: /src/assets/images/ccelect/products/sealing-plate/cutout.png
             imageAlt: 止水板（AI 製品イメージ）
             href: /ja/products/grounding-materials/#accessories
           - title: 土壌改良剤
             description: 接地工事用の土壌改良材料。現場条件に合わせて主接地系統と併用。 袋入り材料のイメージであり、実際の包装ではありません。
-            image: /images/ccelect/products/bentonite/cutout.png
+            image: /src/assets/images/ccelect/products/bentonite/cutout.png
             imageAlt: 土壌改良剤 Bentonite（AI 製品イメージ）
             href: /ja/products/grounding-materials/#accessories
       - id: lightning-protection
@@ -298,49 +298,49 @@ pageSections:
             href: /ja/products/lightning-protection/#multi-clamps
         items:
           - title: "T形導線接続クランプ 304A／304B"
-            image: /images/ccelect/products/lightning-304/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-304/cutout.png
             imageAlt: "Pressure T-Type Cable Splicer 304A／304B (AI product illustration)"
             href: /ja/products/lightning-protection/#cable-splicers
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"
           - title: "交差導線クランプ 119"
-            image: /images/ccelect/products/lightning-119/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-119/cutout.png
             imageAlt: "Bronze Cross Run Clamp 119 (AI product illustration)"
             href: /ja/products/lightning-protection/#cross-run-clamp
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"
           - title: "平行導線用平面ベース 62"
-            image: /images/ccelect/products/lightning-62/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-62/cutout.png
             imageAlt: "Parallel Wire Flat Surface Point Base 62 (AI product illustration)"
             href: /ja/products/lightning-protection/#point-base
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"
           - title: "可変式受雷部アダプター 63A"
-            image: /images/ccelect/products/lightning-63a/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-63a/cutout.png
             imageAlt: "Bronze Adjustable Point Adapter 63A (AI product illustration)"
             href: /ja/products/lightning-protection/#point-adapter
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"
           - title: "平面取付ベース 60A／60B、61A／61B"
-            image: /images/ccelect/products/lightning-60-61/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-60-61/cutout.png
             imageAlt: "Flat Surface Point Base 60A／60B、61A／61B (AI product illustration)"
             href: /ja/products/lightning-protection/#flat-surface-base
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"
           - title: "受雷部支持金具 67A／67B"
-            image: /images/ccelect/products/lightning-67/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-67/cutout.png
             imageAlt: "Terminal Support 67A／67B (AI product illustration)"
             href: /ja/products/lightning-protection/#terminal-support
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"
           - title: "大型多目的クランプ 297"
-            image: /images/ccelect/products/lightning-297/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-297/cutout.png
             imageAlt: "Bronze Large Multi Purpose Clamp 297 (AI product illustration)"
             href: /ja/products/lightning-protection/#multi-clamps
             secondaryHref: /ja/products/lightning-protection/
             secondaryText: "避雷部品をすべて見る"
           - title: "平面固定クランプ 298A"
-            image: /images/ccelect/products/lightning-298a/cutout.png
+            image: /src/assets/images/ccelect/products/lightning-298a/cutout.png
             imageAlt: "Clamp to Flat Surface 298A (AI product illustration)"
             href: /ja/products/lightning-protection/#flat-surface-clamp
             secondaryHref: /ja/products/lightning-protection/

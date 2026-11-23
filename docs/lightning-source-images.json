@@ -7,7 +7,7 @@
       "page": "http://www.ccelect.com.tw/chinese/pressure-t-type-cable-splicer.html?CID=5",
       "imageUrl": "http://www.ccelect.com.tw/chinese/pressure-t-type-cable-splicer-l.jpg",
       "source": "assets/source/ccelect/products/lightning-304/pressure-t-type-cable-splicer-l.jpg",
-      "output": "public/images/ccelect/products/lightning-304/photo-hero.jpg",
+      "output": "src/assets/images/ccelect/products/lightning-304/photo-hero.jpg",
       "sha256": "42d19c442e0e6a4a1ecc2ed77fc91f91b8223f4a49fb20f52a4fb2200d829ae3",
       "detailImageUrl": "http://www.ccelect.com.tw/chinese/pressure-t-type-cable-splicer.jpg",
       "detailSource": "assets/source/ccelect/products/lightning-304/pressure-t-type-cable-splicer.jpg"
@@ -18,7 +18,7 @@
       "page": "http://www.ccelect.com.tw/chinese/Bronze-Cross-Run-Clamp.html?CID=5",
       "imageUrl": "http://www.ccelect.com.tw/chinese/Bronze-Cross-Run-Clamp-l.jpg",
       "source": "assets/source/ccelect/products/lightning-119/Bronze-Cross-Run-Clamp-l.jpg",
-      "output": "public/images/ccelect/products/lightning-119/photo-hero.jpg",
+      "output": "src/assets/images/ccelect/products/lightning-119/photo-hero.jpg",
       "sha256": "42d19c442e0e6a4a1ecc2ed77fc91f91b8223f4a49fb20f52a4fb2200d829ae3",
       "detailImageUrl": "http://www.ccelect.com.tw/chinese/Bronze-Cross-Run-Clamp.jpg",
       "detailSource": "assets/source/ccelect/products/lightning-119/Bronze-Cross-Run-Clamp.jpg"
@@ -29,7 +29,7 @@
       "page": "http://www.ccelect.com.tw/chinese/Parallel-Wire-Flat-Surface-Point-Base.html?CID=5",
       "imageUrl": "http://www.ccelect.com.tw/chinese/Parallel-Wire-Flat-Surface-Point-Base.jpg",
       "source": "assets/source/ccelect/products/lightning-62/Parallel-Wire-Flat-Surface-Point-Base.jpg",
-      "output": "public/images/ccelect/products/lightning-62/photo-hero.jpg",
+      "output": "src/assets/images/ccelect/products/lightning-62/photo-hero.jpg",
       "sha256": "4e9d0ba2b58355f22db8f149fcdfeca7e4ffcd177750614793c3f833de92cda6",
       "detailImageUrl": "http://www.ccelect.com.tw/chinese/Parallel-Wire-Flat-Surface-Point-Base.jpg",
       "detailSource": "assets/source/ccelect/products/lightning-62/Parallel-Wire-Flat-Surface-Point-Base.jpg"
@@ -40,7 +40,7 @@
       "page": "http://www.ccelect.com.tw/chinese/Bronze-Adjustable-Point-Adapter.html?CID=5",
       "imageUrl": "http://www.ccelect.com.tw/chinese/Bronze-Adjustable-Point-Adapter-l.jpg",
       "source": "assets/source/ccelect/products/lightning-63a/Bronze-Adjustable-Point-Adapter-l.jpg",
-      "output": "public/images/ccelect/products/lightning-63a/photo-hero.jpg",
+      "output": "src/assets/images/ccelect/products/lightning-63a/photo-hero.jpg",
       "sha256": "728eb1bceadc4d50d4725a9363ac1a8abb3528c8623dbbb08da04a9d3ca08eef",
       "detailImageUrl": "http://www.ccelect.com.tw/chinese/Bronze-Adjustable-Point-Adapter.jpg",
       "detailSource": "assets/source/ccelect/products/lightning-63a/Bronze-Adjustable-Point-Adapter.jpg"
@@ -51,7 +51,7 @@
       "page": "http://www.ccelect.com.tw/chinese/Flat-Surface-Point-Base.html?CID=5",
       "imageUrl": "http://www.ccelect.com.tw/chinese/Flat-Surface-Point-Base-l.jpg",
       "source": "assets/source/ccelect/products/lightning-60-61/Flat-Surface-Point-Base-l.jpg",
-      "output": "public/images/ccelect/products/lightning-60-61/photo-hero.jpg",
+      "output": "src/assets/images/ccelect/products/lightning-60-61/photo-hero.jpg",
       "sha256": "42d19c442e0e6a4a1ecc2ed77fc91f91b8223f4a49fb20f52a4fb2200d829ae3",
       "detailImageUrl": "http://www.ccelect.com.tw/chinese/Flat-Surface-Point-Base.jpg",
       "detailSource": "assets/source/ccelect/products/lightning-60-61/Flat-Surface-Point-Base.jpg"
@@ -62,7 +62,7 @@
       "page": "http://www.ccelect.com.tw/chinese/Terminal-Support.html?CID=5",
       "imageUrl": "http://www.ccelect.com.tw/chinese/Terminal-Support-l.jpg",
       "source": "assets/source/ccelect/products/lightning-67/Terminal-Support-l.jpg",
-      "output": "public/images/ccelect/products/lightning-67/photo-hero.jpg",
+      "output": "src/assets/images/ccelect/products/lightning-67/photo-hero.jpg",
       "sha256": "42d19c442e0e6a4a1ecc2ed77fc91f91b8223f4a49fb20f52a4fb2200d829ae3",
       "detailImageUrl": "http://www.ccelect.com.tw/chinese/Terminal-Support.jpg",
       "detailSource": "assets/source/ccelect/products/lightning-67/Terminal-Support.jpg"
@@ -73,7 +73,7 @@
       "page": "http://www.ccelect.com.tw/chinese/Bronze-Large-Multi-Purpose-Clamp.html?CID=5",
       "imageUrl": "http://www.ccelect.com.tw/chinese/Bronze-Large-Multi-Purpose-Clamp-l.jpg",
       "source": "assets/source/ccelect/products/lightning-297/Bronze-Large-Multi-Purpose-Clamp-l.jpg",
-      "output": "public/images/ccelect/products/lightning-297/photo-hero.jpg",
+      "output": "src/assets/images/ccelect/products/lightning-297/photo-hero.jpg",
       "sha256": "42d19c442e0e6a4a1ecc2ed77fc91f91b8223f4a49fb20f52a4fb2200d829ae3",
       "detailImageUrl": "http://www.ccelect.com.tw/chinese/Bronze-Large-Multi-Purpose-Clamp.jpg",
       "detailSource": "assets/source/ccelect/products/lightning-297/Bronze-Large-Multi-Purpose-Clamp.jpg"
@@ -84,7 +84,7 @@
       "page": "http://www.ccelect.com.tw/chinese/Clamp-to-Flat-Surface.html?CID=5",
       "imageUrl": "http://www.ccelect.com.tw/chinese/Clamp-to-Flat-Surface-l.jpg",
       "source": "assets/source/ccelect/products/lightning-298a/Clamp-to-Flat-Surface-l.jpg",
-      "output": "public/images/ccelect/products/lightning-298a/photo-hero.jpg",
+      "output": "src/assets/images/ccelect/products/lightning-298a/photo-hero.jpg",
       "sha256": "42d19c442e0e6a4a1ecc2ed77fc91f91b8223f4a49fb20f52a4fb2200d829ae3",
       "detailImageUrl": "http://www.ccelect.com.tw/chinese/Clamp-to-Flat-Surface.jpg",
       "detailSource": "assets/source/ccelect/products/lightning-298a/Clamp-to-Flat-Surface.jpg"

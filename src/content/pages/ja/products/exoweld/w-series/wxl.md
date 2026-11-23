@@ -42,22 +42,22 @@ pageSections:
         value: Demo
     applicationHeading: 施工例
     applicationImages:
-      - image: /images/ccelect/products/wxl/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-mold-open.jpg
         imageAlt: WXL 溶模の内部構造
         caption: 溶模の内部構造
-      - image: /images/ccelect/products/wxl/photo-mold-closeup.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-mold-closeup.jpg
         imageAlt: WXL 溶模の近接
         caption: 溶模の近接
-      - image: /images/ccelect/products/wxl/photo-setup.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-setup.jpg
         imageAlt: WXL 銅導体を溶模にセット
         caption: 銅導体を溶模にセット
-      - image: /images/ccelect/products/wxl/photo-setup-clamp.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-setup-clamp.jpg
         imageAlt: WXL 溶模のクランプ固定
         caption: 溶模のクランプ固定
-      - image: /images/ccelect/products/wxl/photo-powder.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-powder.jpg
         imageAlt: WXL 溶接剤の装填
         caption: 溶接剤の装填
-      - image: /images/ccelect/products/wxl/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-hero.jpg
         imageAlt: WXL 熔接完了後の銅導体接点
         caption: 熔接完了後の銅導体接点
     note: Exoweld W シリーズ製品詳細の Demo です。正式仕様は営業確認に従ってください。

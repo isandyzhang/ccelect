@@ -43,16 +43,16 @@ pageSections:
         value: Demo
     applicationHeading: Applications
     applicationImages:
-      - image: /images/ccelect/products/we/photo-mold.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-mold.jpg
         imageAlt: WE graphite mold
         caption: Graphite mold
-      - image: /images/ccelect/products/we/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-mold-open.jpg
         imageAlt: Opened WE graphite mold
         caption: Mold opened to show the weld cavity
-      - image: /images/ccelect/products/we/photo-setup.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-setup.jpg
         imageAlt: Copper conductor seated in the WE mold
         caption: Copper conductor seated in the mold
-      - image: /images/ccelect/products/we/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-hero.jpg
         imageAlt: WE completed copper conductor joint
         caption: Finished product joint
     note: Demo product detail for Exoweld W series. Confirm final specs with sales.

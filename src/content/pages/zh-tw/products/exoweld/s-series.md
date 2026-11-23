@@ -17,7 +17,7 @@ pageSections:
         category: Exoweld ／ S 系列
         title: SHEA
         description: SHEA 為 Exoweld S 系列銅熱熔接接點型號。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/products/shea/cutout.png
+        image: /src/assets/images/ccelect/products/shea/cutout.png
         imageAlt: SHEA (AI product illustration)
         specifications:
           - SHEA
@@ -26,7 +26,7 @@ pageSections:
         category: Exoweld ／ S 系列
         title: SHEB
         description: SHEB 為 Exoweld S 系列銅熱熔接接點型號。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/products/sheb/cutout.png
+        image: /src/assets/images/ccelect/products/sheb/cutout.png
         imageAlt: SHEB (AI product illustration)
         specifications:
           - SHEB
@@ -35,7 +35,7 @@ pageSections:
         category: Exoweld ／ S 系列
         title: SVES
         description: SVES 為 Exoweld S 系列銅熱熔接接點型號。實際熔模與導體規格請洽業務。
-        image: /images/ccelect/products/sves/cutout.png
+        image: /src/assets/images/ccelect/products/sves/cutout.png
         imageAlt: SVES (AI product illustration)
         specifications:
           - SVES

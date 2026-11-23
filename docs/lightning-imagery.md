@@ -2,7 +2,7 @@
 
 來源：[原網站避雷組件](http://www.ccelect.com.tw/chinese/series5.html)，原始檔與來源網址記錄於 `lightning-source-images.json`。
 
-- `public/images/ccelect/products/lightning-{型號}/photo-hero.jpg`：保留原網站參考圖。
+- `src/assets/images/ccelect/products/lightning-{型號}/photo-hero.jpg`：保留原網站參考圖。
 - 同目錄 `diagram.svg`：304、62、67、297 四類導覽使用的可編輯黑白向量示意圖。
 - 同目錄 `cutout.png`：304、119、62、63a、60-61、67、297、298a 八款 AI 寫實去背示意圖，供商品櫥窗使用；不是實拍照片或尺寸工程圖。
 

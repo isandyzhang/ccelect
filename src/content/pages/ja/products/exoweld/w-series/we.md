@@ -43,16 +43,16 @@ pageSections:
         value: Demo
     applicationHeading: 施工例
     applicationImages:
-      - image: /images/ccelect/products/we/photo-mold.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-mold.jpg
         imageAlt: WE 黒鉛溶模
         caption: 黒鉛溶模
-      - image: /images/ccelect/products/we/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-mold-open.jpg
         imageAlt: 開いた WE 黒鉛溶模
         caption: 溶模を開いた状態。溶室が見える
-      - image: /images/ccelect/products/we/photo-setup.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-setup.jpg
         imageAlt: 銅導体を WE 溶模にセット
         caption: 銅導体を溶模へセット
-      - image: /images/ccelect/products/we/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-hero.jpg
         imageAlt: WE 熔接完了後の銅導体接点
         caption: 完成接点
     note: Exoweld W シリーズ製品詳細の Demo です。正式仕様は営業確認に従ってください。

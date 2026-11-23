@@ -9,28 +9,28 @@ pageSections:
     heading: W series
     summary: Exoweld graphite molds are designed for many wire-to-wire connection styles and conductor combinations.
     images:
-      - image: /images/ccelect/products/we/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-hero.jpg
         imageAlt: WE completed copper conductor joint
         caption: WE
-      - image: /images/ccelect/products/we/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/we/photo-mold-open.jpg
         imageAlt: WE open graphite mold
         caption: WE mold
-      - image: /images/ccelect/products/wt/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/wt/photo-hero.jpg
         imageAlt: WT completed copper conductor joint
         caption: WT
-      - image: /images/ccelect/products/wt/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/wt/photo-mold-open.jpg
         imageAlt: WT open graphite mold
         caption: WT mold
-      - image: /images/ccelect/products/wx/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-hero.jpg
         imageAlt: WX completed copper conductor joint
         caption: WX
-      - image: /images/ccelect/products/wx/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/wx/photo-mold-open.jpg
         imageAlt: WX open graphite mold
         caption: WX mold
-      - image: /images/ccelect/products/wxl/photo-hero.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-hero.jpg
         imageAlt: WXL completed copper conductor joint
         caption: WXL
-      - image: /images/ccelect/products/wxl/photo-mold-open.jpg
+      - image: /src/assets/images/ccelect/products/wxl/photo-mold-open.jpg
         imageAlt: WXL open graphite mold
         caption: WXL mold
     featuresHeading: Features
