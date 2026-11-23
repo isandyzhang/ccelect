@@ -12,6 +12,7 @@
     "build": "cross-env DISABLE_COMPONENT_DOCS=true astro build && npm run search:index",
     "build:with-docs": "astro build && npm run search:index",
     "preview": "astro preview",
+    "deploy": "npm run build && wrangler deploy",
     "astro": "astro",
     "check": "npm run lint && npm run format",
     "check:fix": "npm run lint:fix && npm run format:fix",
@@ -77,6 +78,7 @@
     "stylelint": "^17.9.1",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-order": "^8.1.1",
+    "wrangler": "^4.166.0",
     "yaml-eslint-parser": "^2.0.0"
   },
   "engines": {

@@ -1,0 +1,10 @@
+{
+  // 靜態網站。此檔必須存在，否則 wrangler deploy 會自動執行 astro add cloudflare，
+  // 並安裝只支援 Astro 7 的 @astrojs/cloudflare，導致部署失敗。
+  "name": "ccelect",
+  "compatibility_date": "2026-11-23",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
