@@ -37,10 +37,10 @@ const splitLines = (value: unknown) =>
 
 const hasButtons = Array.isArray(buttonSections) && buttonSections.length > 0;
 const headingLines = splitLines(heading);
-const leftMetaLines = splitLines(metaLeft || subtext);
-const rightMetaLines = splitLines(metaRight);
-const hasMeta = leftMetaLines.length > 0 || rightMetaLines.length > 0;
-const hasCopy = Boolean(headingLines.length || hasMeta || hasButtons);
+const description =
+  typeof subtext === "string" && subtext.trim() !== "" ? subtext.trim() : "";
+const tags = [...splitLines(metaLeft), ...splitLines(metaRight)];
+const hasCopy = Boolean(headingLines.length || description || tags.length || hasButtons);
 const hasVideo = typeof videoSource === "string" && videoSource.trim() !== "";
 const trimmedVideoIntro =
   typeof videoIntroSource === "string" && videoIntroSource.trim() !== ""
@@ -51,7 +51,8 @@ const imageDataAttributes = useDefaultEditableBinding
   : {};
 const Track = scrollMask ? "div" : Fragment;
 const trackProps = scrollMask ? { class: "hero-image-banner-track", "data-hero-track": "" } : {};
-const metaEnterIndex = headingLines.length;
+const descriptionEnterIndex = headingLines.length;
+const tagsEnterIndex = headingLines.length + (description ? 1 : 0);
 ---
 
 <Track {...trackProps}>
@@ -118,60 +119,30 @@ const metaEnterIndex = headingLines.length;
           )}
 
           {
-            hasMeta && (
-              <div
-                class="hero-image-banner__meta"
-                style={`--enter-index: ${metaEnterIndex}`}
+            description && (
+              <p
+                class="hero-image-banner__description"
+                style={`--enter-index: ${descriptionEnterIndex}`}
+                data-editable={useDefaultEditableBinding ? "text" : undefined}
+                data-type={useDefaultEditableBinding ? "text" : undefined}
+                data-prop={useDefaultEditableBinding ? "subtext" : undefined}
+                set:html={description}
+              />
+            )
+          }
+
+          {
+            tags.length > 0 && (
+              <ul
+                class="hero-image-banner__tags"
+                style={`--enter-index: ${tagsEnterIndex}`}
               >
-                <p
-                  class="hero-image-banner__meta-side hero-image-banner__meta-side--left"
-                  data-editable={useDefaultEditableBinding ? "text" : undefined}
-                  data-type={useDefaultEditableBinding ? "text" : undefined}
-                  data-prop={useDefaultEditableBinding ? (metaLeft ? "metaLeft" : "subtext") : undefined}
-                >
-                  {leftMetaLines.map((line) => (
-                    <span
-                      class="hero-image-banner__meta-line"
-                      set:html={line}
-                    />
-                  ))}
-                </p>
-
-                <div
-                  class="hero-image-banner__mark"
-                  aria-hidden="true"
-                >
-                  <svg
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      class="hero-image-banner__mark-path"
-                      d="M24 4 L40 14 V34 L24 44 L8 34 V14 Z"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      class="hero-image-banner__mark-path hero-image-banner__mark-path--delay"
-                      d="M24 14 L32 19 V29 L24 34 L16 29 V19 Z"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-
-                <p class="hero-image-banner__meta-side hero-image-banner__meta-side--right">
-                  {rightMetaLines.map((line) => (
-                    <span
-                      class="hero-image-banner__meta-line"
-                      set:html={line}
-                    />
-                  ))}
-                </p>
-              </div>
+                {tags.map((tag) => (
+                  <li class="hero-image-banner__tag">
+                    <span set:html={tag} />
+                  </li>
+                ))}
+              </ul>
             )
           }
 
@@ -180,7 +151,7 @@ const metaEnterIndex = headingLines.length;
               <ButtonGroup
                 class="hero-image-banner__actions"
                 buttonSections={buttonSections}
-                alignmentHorizontal="center"
+                alignmentHorizontal="start"
                 useDefaultEditableBinding={useDefaultEditableBinding}
                 data-children-prop="buttonSections"
               />
@@ -253,18 +224,6 @@ const metaEnterIndex = headingLines.length;
       }
     }
 
-    @keyframes hero-image-banner-mark-draw {
-      from {
-        stroke-dashoffset: 1;
-        opacity: 0.35;
-      }
-
-      to {
-        stroke-dashoffset: 0;
-        opacity: 1;
-      }
-    }
-
     .hero-image-banner {
       background: #000;
       isolation: isolate;
@@ -310,9 +269,8 @@ const metaEnterIndex = headingLines.length;
 
       .hero-image-banner__frame > .hero-image-banner__overlay {
         background:
-          radial-gradient(ellipse 70% 55% at 50% 45%, transparent 20%, rgba(0, 0, 0, 0.45) 100%),
-          linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, transparent 28%),
-          linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, transparent 45%);
+          linear-gradient(90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.28) 48%, transparent 78%),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, transparent 42%);
         inset: 0;
         pointer-events: none;
         position: absolute;
@@ -354,34 +312,35 @@ const metaEnterIndex = headingLines.length;
         }
       }
 
-      /* Centered Anduril-style type stack */
+      /* Left-aligned editorial type stack */
       > .hero-image-banner__copy {
-        align-items: center;
+        align-items: flex-start;
         bottom: 11vh;
         display: flex;
         flex-direction: column;
-        gap: clamp(1.35rem, 2.8vh, 2.25rem);
-        justify-content: center;
+        gap: clamp(1.25rem, 2.4vh, 1.85rem);
+        justify-content: flex-end;
         left: clamp(0.75rem, 3.5vw, 2.75rem);
         margin: 0;
-        max-width: none;
-        padding: clamp(1rem, 3vh, 2rem) clamp(1rem, 3vw, 2.5rem);
+        max-width: min(40rem, 100%);
+        padding: clamp(1.5rem, 4vh, 3rem) clamp(1.25rem, 3.5vw, 2.75rem);
         position: absolute;
-        right: clamp(0.75rem, 3.5vw, 2.75rem);
-        text-align: center;
+        right: auto;
+        text-align: left;
         top: calc(var(--spacing-nav-height) + 3.5vh);
+        width: min(40rem, calc(100% - 2 * clamp(0.75rem, 3.5vw, 2.75rem)));
         z-index: var(--layer-2);
       }
 
       .hero-image-banner__title {
         color: #fff !important;
         font-family: var(--font-headings);
-        font-size: clamp(2.5rem, 7.4vw, 6.75rem);
+        font-size: clamp(2rem, 4.6vw, 3.75rem);
         font-weight: 700;
-        letter-spacing: -0.035em;
-        line-height: 0.9;
+        letter-spacing: -0.03em;
+        line-height: 1.05;
         margin: 0;
-        max-width: min(14ch, 100%);
+        max-width: 18ch;
         text-shadow: none;
         white-space: normal;
       }
@@ -389,7 +348,7 @@ const metaEnterIndex = headingLines.length;
       .hero-image-banner__line {
         display: block;
         overflow: hidden;
-        padding-bottom: 0.06em;
+        padding-bottom: 0.04em;
       }
 
       .hero-image-banner__line-inner {
@@ -399,78 +358,53 @@ const metaEnterIndex = headingLines.length;
         font-weight: inherit;
       }
 
-      .hero-image-banner__meta {
-        align-items: center;
+      .hero-image-banner__description {
         animation: hero-image-banner-meta-in 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
         animation-delay: calc(280ms + var(--enter-index, 0) * 120ms);
-        color: rgba(255, 255, 255, 0.88);
-        display: grid;
-        gap: clamp(1rem, 4vw, 3rem);
-        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-        margin: 0;
-        max-width: min(52rem, 100%);
-        width: min(52rem, 100%);
-      }
-
-      .hero-image-banner__meta-side {
-        display: grid;
+        color: rgba(255, 255, 255, 0.78);
         font-family: var(--font-body);
-        font-size: clamp(0.68rem, 1.05vw, 0.82rem);
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        line-height: 1.35;
+        font-size: clamp(0.95rem, 1.35vw, 1.125rem);
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        line-height: 1.55;
         margin: 0;
-        text-transform: uppercase;
+        max-width: 34ch;
       }
 
-      .hero-image-banner__meta-side--left {
-        justify-items: start;
-        text-align: left;
+      .hero-image-banner__tags {
+        animation: hero-image-banner-meta-in 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+        animation-delay: calc(360ms + var(--enter-index, 0) * 120ms);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
       }
 
-      .hero-image-banner__meta-side--right {
-        justify-items: end;
-        text-align: right;
-      }
-
-      .hero-image-banner__meta-line {
-        display: block;
-      }
-
-      .hero-image-banner__mark {
-        color: #fff;
-        height: clamp(1.75rem, 3.2vw, 2.35rem);
-        width: clamp(1.75rem, 3.2vw, 2.35rem);
-      }
-
-      .hero-image-banner__mark svg {
-        display: block;
-        height: 100%;
-        width: 100%;
-      }
-
-      .hero-image-banner__mark-path {
-        animation: hero-image-banner-mark-draw 1200ms cubic-bezier(0.22, 1, 0.36, 1) both;
-        animation-delay: calc(420ms + var(--enter-index, 0) * 80ms);
-        stroke-dasharray: 1;
-        stroke-dashoffset: 1;
-        pathLength: 1;
-      }
-
-      .hero-image-banner__mark-path--delay {
-        animation-delay: calc(620ms + var(--enter-index, 0) * 80ms);
+      .hero-image-banner__tag {
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 999px;
+        color: rgba(255, 255, 255, 0.88);
+        font-family: var(--font-body);
+        font-size: clamp(0.72rem, 1vw, 0.82rem);
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        line-height: 1;
+        padding: 0.55rem 0.9rem;
       }
 
       .hero-image-banner__actions {
         animation: hero-image-banner-meta-in 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
         animation-delay: calc(520ms + var(--enter-index, 0) * 120ms);
-        margin-top: 0;
+        margin-top: 0.25rem;
         width: auto;
       }
 
       .hero-image-banner__actions > .button-group__items {
         gap: var(--spacing-md);
-        justify-content: center;
+        justify-content: flex-start;
       }
 
       .hero-image-banner__actions .button-inner.variant-secondary {
@@ -508,27 +442,23 @@ const metaEnterIndex = headingLines.length;
 
         > .hero-image-banner__copy {
           bottom: 7vh;
-          gap: 1.35rem;
+          gap: 1.1rem;
           left: 0.75rem;
-          padding: 1rem 0.85rem;
+          max-width: none;
+          padding: 1rem 0.85rem 1.25rem;
           right: 0.75rem;
           top: calc(var(--spacing-nav-height) + 2vh);
+          width: auto;
         }
 
         .hero-image-banner__title {
-          font-size: clamp(1.85rem, 9.5vw, 2.65rem);
-          max-width: 12ch;
+          font-size: clamp(1.75rem, 8vw, 2.35rem);
+          max-width: 14ch;
         }
 
-        .hero-image-banner__meta {
-          gap: 0.75rem;
-          max-width: 100%;
-          width: 100%;
-        }
-
-        .hero-image-banner__meta-side {
-          font-size: 0.62rem;
-          letter-spacing: 0.06em;
+        .hero-image-banner__description {
+          font-size: 0.95rem;
+          max-width: 28ch;
         }
 
         .hero-image-banner__actions .button-inner {
@@ -539,15 +469,10 @@ const metaEnterIndex = headingLines.length;
 
       @media (prefers-reduced-motion: reduce) {
         .hero-image-banner__line-inner,
-        .hero-image-banner__meta,
-        .hero-image-banner__actions,
-        .hero-image-banner__mark-path {
+        .hero-image-banner__description,
+        .hero-image-banner__tags,
+        .hero-image-banner__actions {
           animation: none;
-        }
-
-        .hero-image-banner__mark-path {
-          opacity: 1;
-          stroke-dashoffset: 0;
         }
       }
     }

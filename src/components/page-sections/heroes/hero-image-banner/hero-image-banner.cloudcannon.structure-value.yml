@@ -9,8 +9,8 @@ value:
   videoSource: ""
   videoIntroSource: ""
   scrollMask: false
-  heading: Heading placeholder
-  metaLeft: Left meta
-  metaRight: Right meta
-  subtext: ""
+  heading: Brand / Name
+  subtext: Short supporting description for the industrial offer.
+  metaLeft: Tag one
+  metaRight: Tag two
   buttonSections: []

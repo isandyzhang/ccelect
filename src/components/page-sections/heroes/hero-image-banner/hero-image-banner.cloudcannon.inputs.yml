@@ -22,16 +22,16 @@ scrollMask:
   comment: Pin the banner while scrolling and shrink the media into a rounded window.
 heading:
   type: markdown
-  comment: Centered stacked headline. Use line breaks for each title line (Anduril-style).
-metaLeft:
-  type: textarea
-  comment: Small left meta under the title. Use a line break for two lines.
-metaRight:
-  type: textarea
-  comment: Small right meta under the title. Use a line break for two lines.
+  comment: Left-aligned headline. Prefer a single brand line; line breaks still stack.
 subtext:
   type: textarea
-  comment: Fallback for metaLeft when metaLeft is empty.
+  comment: Supporting description under the headline.
+metaLeft:
+  type: textarea
+  comment: Tag pills under the description. One tag per line.
+metaRight:
+  type: textarea
+  comment: Extra tag pills under the description. One tag per line.
 buttonSections:
   type: array
   comment: Call-to-action buttons under the copy.
