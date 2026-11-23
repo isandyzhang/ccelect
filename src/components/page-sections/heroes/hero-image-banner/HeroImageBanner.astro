@@ -236,12 +236,9 @@ const tagsEnterIndex = headingLines.length + (description ? 1 : 0);
 
       > .hero-image-banner__frame {
         background: #000;
-        bottom: 11vh;
-        left: clamp(0.75rem, 3.5vw, 2.75rem);
+        inset: 0;
         overflow: hidden;
         position: absolute;
-        right: clamp(0.75rem, 3.5vw, 2.75rem);
-        top: calc(var(--spacing-nav-height) + 3.5vh);
         z-index: 0;
       }
 
@@ -289,12 +286,14 @@ const tagsEnterIndex = headingLines.length + (description ? 1 : 0);
         top: 0;
 
         > .hero-image-banner__frame {
-          bottom: calc(11vh + var(--hero-mask) * 5vh);
+          bottom: calc(var(--hero-mask) * 16vh);
           clip-path: inset(
             calc(var(--hero-mask) * 3vh) calc(var(--hero-mask) * 3vw) calc(var(--hero-mask) * 3vh)
               round calc(var(--hero-mask) * 10px)
           );
-          top: calc(var(--spacing-nav-height) + 3.5vh + var(--hero-mask) * 3vh);
+          left: calc(var(--hero-mask) * 3vw);
+          right: calc(var(--hero-mask) * 3vw);
+          top: calc(var(--hero-mask) * (var(--spacing-nav-height) + 3.5vh));
         }
 
         .hero-image-banner__frame > .hero-image-banner__media,
@@ -423,20 +422,19 @@ const tagsEnterIndex = headingLines.length + (description ? 1 : 0);
         min-height: 100dvh;
 
         > .hero-image-banner__frame {
-          bottom: 7vh;
-          left: 0.75rem;
-          right: 0.75rem;
-          top: calc(var(--spacing-nav-height) + 2vh);
+          inset: 0;
         }
 
         &.is-scroll-mask {
           > .hero-image-banner__frame {
-            bottom: calc(7vh + var(--hero-mask) * 3vh);
+            bottom: calc(var(--hero-mask) * 12vh);
             clip-path: inset(
               calc(var(--hero-mask) * 2.5vh) calc(var(--hero-mask) * 2.5vw)
                 calc(var(--hero-mask) * 2.5vh) round calc(var(--hero-mask) * 8px)
             );
-            top: calc(var(--spacing-nav-height) + 2vh + var(--hero-mask) * 2.5vh);
+            left: calc(var(--hero-mask) * 2.5vw);
+            right: calc(var(--hero-mask) * 2.5vw);
+            top: calc(var(--hero-mask) * (var(--spacing-nav-height) + 2vh));
           }
         }
 

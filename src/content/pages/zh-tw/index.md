@@ -13,10 +13,10 @@ keywords:
 pageSections:
   - _component: page-sections/heroes/hero-image-banner
     id: homepage-banner
-    imageSource: /src/assets/images/ccelect/home/ignition-stills-poster.jpg
+    imageSource: /src/assets/images/ccelect/home/ignition-poster.jpg
     imageAlt: 接地鋁熱熔接與接地／避雷解決方案
-    videoIntroSource: /videos/ccelect/hero-stills-intro.mp4
-    videoSource: /videos/ccelect/hero-stills-loop.mp4
+    videoIntroSource: /videos/ccelect/hero-ignition-intro.mp4
+    videoSource: /videos/ccelect/hero-loop.mp4
     scrollMask: true
     heading: EXOWELD
     subtext: 火泥®熔接劑<br />The Perfect Electrical Connector
