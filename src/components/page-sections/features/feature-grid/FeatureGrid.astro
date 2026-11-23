@@ -250,13 +250,21 @@ const {
 
       > .outer-content > .content {
         display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(16.5rem, 24rem);
         padding-block: 0;
 
-        > .feature-grid-content,
         > .feature-grid-background {
-          grid-area: 1 / 1;
+          grid-column: 1;
+          grid-row: 1;
           min-width: 0;
-          width: 100%;
+        }
+
+        > .feature-grid-content {
+          align-self: stretch;
+          background: #090c0d;
+          grid-column: 2;
+          grid-row: 1;
+          min-width: 0;
         }
       }
 
@@ -302,16 +310,22 @@ const {
       }
 
       &[data-showcase-stick] > .outer-content {
+        align-items: center;
         background: #050505;
+        display: flex;
         height: auto;
         min-height: 100dvh;
         position: sticky;
         top: 0;
       }
 
+      &[data-showcase-stick] > .outer-content > .content {
+        width: 100%;
+      }
+
       &[data-showcase-stick] product-showcase .showcase-media {
-        aspect-ratio: auto;
-        height: min(75vw, 100dvh);
+        aspect-ratio: 4 / 3;
+        height: auto;
       }
 
       product-showcase.feature-item-showcase::after,
@@ -360,34 +374,25 @@ const {
         > .outer-content,
         > .outer-content > .content {
           height: 100%;
+          max-width: none;
           min-width: 0;
           width: 100%;
         }
 
         > .outer-content > .content {
-          align-content: end;
+          align-content: center;
           box-sizing: border-box;
-          column-gap: clamp(1.75rem, 5vw, 4.5rem);
-          display: grid;
-          grid-template-columns: minmax(min-content, 0.72fr) minmax(0, 1.4fr);
-          padding: clamp(1.5rem, 4vw, 3.25rem);
-          row-gap: 0.7rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.85rem;
+          justify-content: center;
+          padding: 5.25rem clamp(1.35rem, 2.5vw, 2rem) clamp(1.25rem, 2.5vw, 2rem);
         }
 
-        > .outer-content > .content > .eyebrow {
-          grid-column: 1;
-          grid-row: 1;
-        }
-
-        > .outer-content > .content > .heading {
-          grid-column: 1;
-          grid-row: 2;
-        }
-
+        > .outer-content > .content > .eyebrow,
+        > .outer-content > .content > .heading,
         > .outer-content > .content > .feature-grid-subtext {
-          align-self: end;
-          grid-column: 2;
-          grid-row: 2;
+          writing-mode: horizontal-tb;
         }
 
         .eyebrow,
@@ -401,10 +406,10 @@ const {
         }
 
         .heading-inner {
-          font-size: clamp(2.35rem, 4.4vw, 4.5rem);
+          font-size: clamp(1.85rem, 2.6vw, 2.5rem);
           font-weight: var(--font-weight-semibold);
-          letter-spacing: -0.035em;
-          line-height: 0.98;
+          letter-spacing: -0.03em;
+          line-height: 1.12;
         }
 
         .eyebrow,
@@ -431,7 +436,7 @@ const {
         .feature-grid-subtext {
           margin-inline: 0;
           max-width: none;
-          width: max-content;
+          width: auto;
         }
 
         .feature-grid-subtext,
@@ -441,23 +446,7 @@ const {
         }
 
         .feature-grid-subtext p {
-          white-space: nowrap;
-        }
-
-        @media (width < 72rem) {
-          .feature-grid-subtext {
-            max-width: 100%;
-            min-width: 0;
-            width: auto;
-          }
-
-          .feature-grid-subtext p {
-            white-space: normal;
-          }
-
-          > .outer-content > .content > .feature-grid-subtext {
-            min-width: 0;
-          }
+          white-space: normal;
         }
       }
 
@@ -467,8 +456,13 @@ const {
           display: none;
         }
 
+        > .outer-content > .content {
+          grid-template-columns: 1fr;
+        }
+
         > .outer-content > .content > .feature-grid-background {
-          grid-area: 1 / 1;
+          grid-column: 1;
+          grid-row: 1;
         }
 
         > .outer-content > .content > .feature-grid-content {
@@ -483,15 +477,14 @@ const {
 
           > .outer-content > .content {
             align-content: start;
-            grid-template-columns: 1fr;
+            justify-content: start;
             padding: 1.75rem 1.25rem 2rem;
           }
 
           > .outer-content > .content > .eyebrow,
           > .outer-content > .content > .heading,
           > .outer-content > .content > .feature-grid-subtext {
-            grid-column: 1;
-            grid-row: auto;
+            writing-mode: horizontal-tb;
           }
 
           .heading-inner {

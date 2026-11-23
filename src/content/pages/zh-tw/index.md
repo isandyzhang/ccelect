@@ -13,15 +13,15 @@ keywords:
 pageSections:
   - _component: page-sections/heroes/hero-image-banner
     id: homepage-banner
-    imageSource: /src/assets/images/ccelect/home/ignition-poster.jpg
+    imageSource: /src/assets/images/ccelect/home/ignition-stills-poster.jpg
     imageAlt: 接地鋁熱熔接與接地／避雷解決方案
-    videoIntroSource: /videos/ccelect/hero-ignition-intro.mp4
-    videoSource: /videos/ccelect/hero-loop.mp4
+    videoIntroSource: /videos/ccelect/hero-stills-intro.mp4
+    videoSource: /videos/ccelect/hero-stills-loop.mp4
     scrollMask: true
-    heading: 集集電工業 / CCElect
-    subtext: 以鋁熱熔接技術，設計與製造接地、避雷系統所需的材料與工程支援。
-    metaLeft: 鋁熱熔接
-    metaRight: 接地與避雷
+    heading: EXOWELD
+    subtext: 火泥®熔接劑<br />The Perfect Electrical Connector
+    metaLeft: 集集電工業
+    metaRight: CHI CHI Electric
     buttonSections: []
   - _component: page-sections/features/grounding-experience
     id: grounding-experience
