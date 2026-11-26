@@ -4,7 +4,7 @@
 
 |          |                                                                 |
 | -------- | --------------------------------------------------------------- |
-| 網站     | https://ee48dacc-ccelect.isandyzhang.workers.dev/               |
+| 網站     | https://ccelect.isandyzhang.workers.dev/                       |
 | 正式網域 | https://www.ccelect.com.tw                                      |
 | 技術     | Astro 6，靜態輸出                                               |
 | 語系     | 繁體中文（預設）、English、日本語                               |

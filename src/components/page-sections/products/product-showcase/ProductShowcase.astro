@@ -1,5 +1,7 @@
 ---
 import Image from "@core-elements/image/Image.astro";
+import { Picture } from "astro:assets";
+import productCad from "@assets/images/ccelect/home/product-display-cad.webp";
 import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
 const {
   image,
@@ -33,8 +35,25 @@ const chapters = [
         class="product-photo"
         href={link}
         aria-label="查看 Exoweld 產品型錄"
-        ><Image {...image} /></a
       >
+        <Picture
+          class="product-cad"
+          src={productCad}
+          alt=""
+          aria-hidden="true"
+          widths={[640, 960, 1152]}
+          sizes="(max-width: 768px) 100vw, 70vw"
+          formats={["webp"]}
+          loading="eager"
+          fetchpriority="low"
+        />
+        <Image
+          {...image}
+          class="product-photo-real"
+          priority={true}
+          imageElementAttributes={{ fetchpriority: "low" }}
+        />
+      </a>
       <div
         class="weld-experience"
         hidden
@@ -504,6 +523,17 @@ const chapters = [
     </div>
   </product-showcase>
 </BentoBoxGridItem>
+<noscript>
+  <style is:global>
+    product-showcase .product-photo,
+    product-showcase .product-photo-real {
+      opacity: 1 !important;
+    }
+    product-showcase .product-cad {
+      display: none;
+    }
+  </style>
+</noscript>
 <script>
   import "./product-showcase";
 </script>
@@ -527,6 +557,43 @@ const chapters = [
   }
   .product-photo {
     display: block;
+    background: #000;
+    opacity: 0;
+    --photo-reveal: clamp(0, (var(--showcase-p, 0) - 0.4) / 0.32, 1);
+  }
+  .product-cad {
+    position: absolute;
+    inset: 0;
+    opacity: calc(
+      (0.35 + 0.65 * clamp(0, var(--showcase-p, 0) / 0.18, 1)) * (1 - var(--photo-reveal))
+    );
+    pointer-events: none;
+  }
+  .product-photo :global(.product-photo-real) {
+    opacity: var(--photo-reveal);
+  }
+  product-showcase[data-media-ready] .product-photo {
+    opacity: 1;
+    transition: opacity 350ms ease-out;
+  }
+  product-showcase[data-media-ready]:not([data-photo-ready]) .product-cad {
+    opacity: 0.65;
+  }
+  product-showcase[data-media-ready]:not([data-cad-ready])
+    .product-photo
+    :global(.product-photo-real) {
+    opacity: 1;
+  }
+  product-showcase[data-media-ready]:not([data-cad-ready]) .product-cad,
+  product-showcase[data-media-ready]:not([data-photo-ready])
+    .product-photo
+    :global(.product-photo-real) {
+    visibility: hidden;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    product-showcase[data-media-ready] .product-photo {
+      transition: none;
+    }
   }
   .product-photo :global(img),
   video {

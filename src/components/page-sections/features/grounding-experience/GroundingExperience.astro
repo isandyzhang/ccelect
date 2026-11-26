@@ -15,18 +15,6 @@ const sceneSizes = "100vw";
 // Anchors sit on copper routes in grounding-scene-copper.jpg (1280 × 720).
 const annotations = [
   {
-    id: "lightning",
-    x: 152,
-    y: 300,
-    midX: 60,
-    midY: 300,
-    labelX: 60,
-    labelY: 210,
-    align: "start",
-    label: "避雷組件",
-    href: "/products/lightning-protection/",
-  },
-  {
     id: "wt",
     x: 290,
     y: 430,
@@ -39,18 +27,6 @@ const annotations = [
     href: "/products/exoweld/w-series/wt/",
   },
   {
-    id: "joint",
-    x: 400,
-    y: 470,
-    midX: 400,
-    midY: 680,
-    labelX: 400,
-    labelY: 680,
-    align: "center",
-    label: "熱熔接型接地組件",
-    href: "/products/grounding-components/",
-  },
-  {
     id: "we",
     x: 780,
     y: 380,
@@ -61,18 +37,6 @@ const annotations = [
     align: "start",
     label: "WE 直通熔接",
     href: "/products/exoweld/w-series/we/",
-  },
-  {
-    id: "rod",
-    x: 680,
-    y: 590,
-    midX: 680,
-    midY: 680,
-    labelX: 680,
-    labelY: 680,
-    align: "center",
-    label: "一般接地用材料",
-    href: "/products/grounding-materials/",
   },
 ];
 ---
@@ -116,7 +80,7 @@ const annotations = [
           class="scene-copper"
           src={sceneCopper}
           alt=""
-          widths={sceneWidths}
+          widths={[1280]}
           sizes={sceneSizes}
           formats={["webp"]}
           width={1280}
@@ -202,6 +166,14 @@ const annotations = [
     </div>
   </div>
 </section>
+<noscript>
+  <style is:global>
+    grounding-flow {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  </style>
+</noscript>
 <script>
   import "./grounding-flow";
 </script>
@@ -236,6 +208,21 @@ const annotations = [
     width: min(100%, 1440px);
     aspect-ratio: 1280 / 720;
     margin-inline: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 350ms ease-out;
+  }
+  grounding-flow[data-media-ready] {
+    opacity: 1;
+    visibility: visible;
+  }
+  grounding-flow img[data-load-error] {
+    visibility: hidden;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    grounding-flow {
+      transition: none;
+    }
   }
   grounding-flow > picture,
   grounding-flow > img,

@@ -58,10 +58,7 @@ const { class: className, ...htmlAttributes } = Astro.props;
   }
 
   function getPreferredTheme(): string {
-    return (
-      localStorage.getItem("theme") ||
-      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
-    );
+    return localStorage.getItem("theme") || "light";
   }
 
   function initThemeToggle() {
@@ -93,12 +90,6 @@ const { class: className, ...htmlAttributes } = Astro.props;
       btn.addEventListener("click", () => {
         setTheme(getTheme() === "dark" ? "light" : "dark");
       });
-    });
-
-    matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-      if (!localStorage.getItem("theme")) {
-        setTheme(e.matches ? "dark" : "light");
-      }
     });
   }
 

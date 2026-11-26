@@ -31,6 +31,30 @@ const buildField = (image: HTMLImageElement): CopperField => {
   const context = scratch.getContext("2d", { willReadFrequently: true })!;
 
   context.drawImage(image, 0, 0, W, H);
+  // The front cross-connection is gray in the plate. Include its existing route
+  // in the copper field so it draws and pulses with the other conductors.
+  // Reuse the plate's conductor texture, including its copper core and soft edges.
+  // This avoids introducing a flat, differently colored stroke into the scene.
+  const material = document.createElement("canvas");
+
+  material.width = 6;
+  material.height = 120;
+  const materialContext = material.getContext("2d")!;
+
+  materialContext.drawImage(image, 489, 300, 6, 120, 0, 0, 6, 120);
+  const materialPixels = materialContext.getImageData(0, 0, 6, 120);
+
+  for (let i = 0; i < materialPixels.data.length; i += 4) {
+    const [r, g, b] = materialPixels.data.subarray(i, i + 3);
+
+    if (!isSoft(r, g, b)) materialPixels.data[i + 3] = 0;
+  }
+  materialContext.putImageData(materialPixels, 0, 0);
+  context.save();
+  context.translate(222, 524);
+  context.rotate(Math.atan2(-69, 318) - Math.PI / 2);
+  context.drawImage(material, -3, 0, 6, Math.hypot(318, 69));
+  context.restore();
   const data = context.getImageData(0, 0, W, H).data;
   const size = W * H;
   const soft = new Uint8Array(size);
@@ -218,9 +242,7 @@ class GroundingFlow extends HTMLElement {
     const events = new AbortController();
     const { signal } = events;
     let field: CopperField | undefined;
-    let structuresReady = false;
-    /** Scroll already consumed when the scene decoded; the sequence plays across what remains. */
-    let progressOrigin = 0;
+    let mediaReady = false;
     let visible = false;
     let paused = false;
     let frame = 0;
@@ -294,9 +316,10 @@ class GroundingFlow extends HTMLElement {
 
     const apply = (value: number) => {
       progress = value;
-      // 0–0.18 structures, 0.18–0.40 power lines, 0.40–0.46 copper base, 0.46–0.80 copper routes light up, 0.82–0.95 annotations
+      // Start with a dim factory; 0–0.18 brightens it, then the remaining layers follow.
+      // 0.18–0.40 power lines, 0.40–0.46 copper base, 0.46–0.80 copper routes, 0.82–0.95 annotations
       copperDraw = remap(value, 0.46, 0.8);
-      setVar("--structures-opacity", remap(value, 0, 0.18));
+      setVar("--structures-opacity", 0.35 + 0.65 * remap(value, 0, 0.18));
       setVar("--power-draw", remap(value, 0.18, 0.4));
       setVar("--copper-base", remap(value, 0.4, 0.46));
       setVar("--copper-gray", field ? 1 : 1 - copperDraw);
@@ -313,14 +336,13 @@ class GroundingFlow extends HTMLElement {
     };
 
     const measure = () => {
-      if (!structuresReady) {
+      if (!mediaReady) {
         apply(0);
         return;
       }
       const { travel, scrolled } = trackScroll();
-      const span = Math.max(1, travel - progressOrigin);
 
-      apply(clamp((scrolled - progressOrigin) / span));
+      apply(scrolled / travel);
     };
 
     const onScroll = () => {
@@ -332,57 +354,28 @@ class GroundingFlow extends HTMLElement {
       });
     };
 
-    const initialize = () => {
-      if (field || signal.aborted || !copperImage.naturalWidth) return;
-      try {
-        field = buildField(copperImage);
-        this.dataset.ready = "true";
-      } catch {
-        field = undefined;
+    const images = [structuresImage, poweredImage, copperImage];
+
+    // Decode even cached images, then prepare the first frame before revealing any layer.
+    const armMedia = async () => {
+      const results = await Promise.allSettled(images.map((image) => image.decode()));
+
+      if (signal.aborted) return;
+      results.forEach((result, index) => {
+        // A failed layer must not leave the entire scene hidden or show a broken-image icon.
+        images[index].toggleAttribute("data-load-error", result.status === "rejected");
+      });
+      if (results[2].status === "fulfilled") {
+        try {
+          field = buildField(copperImage);
+          this.dataset.ready = "true";
+        } catch {
+          field = undefined;
+        }
       }
+      mediaReady = true;
       measure();
-    };
-
-    let mediaArmed = false;
-
-    const decoded = (image: HTMLImageElement) => image.complete && image.naturalWidth > 0;
-
-    const decodeImage = (image: HTMLImageElement) =>
-      decoded(image) ? Promise.resolve() : image.decode().catch(() => {});
-
-    const markStructuresReady = () => {
-      if (signal.aborted || structuresReady) return;
-      structuresReady = true;
-      progressOrigin = trackScroll().scrolled;
-      measure();
-    };
-
-    /** Start while the hero is still on screen; fetchpriority=low keeps it behind the hero. */
-    const armMedia = () => {
-      if (mediaArmed || signal.aborted) return;
-      mediaArmed = true;
-
-      const structuresPromise = decodeImage(structuresImage);
-      const poweredPromise = decodeImage(poweredImage);
-
-      if (decoded(structuresImage) && decoded(poweredImage)) markStructuresReady();
-      else {
-        Promise.all([structuresPromise, poweredPromise])
-          .then(() => {
-            if (!signal.aborted) markStructuresReady();
-          })
-          .catch(() => {});
-      }
-
-      if (decoded(copperImage)) initialize();
-      else {
-        copperImage
-          .decode()
-          .then(() => {
-            if (!signal.aborted) initialize();
-          })
-          .catch(() => {});
-      }
+      this.dataset.mediaReady = "true";
     };
 
     const observer = new IntersectionObserver(([entry]) => {
@@ -402,7 +395,7 @@ class GroundingFlow extends HTMLElement {
     document.addEventListener("visibilitychange", sync, { signal });
     window.addEventListener("scroll", onScroll, { passive: true, signal });
     window.addEventListener("resize", onScroll, { passive: true, signal });
-    armMedia();
+    void armMedia();
     observer.observe(track);
     measure();
 
@@ -412,6 +405,8 @@ class GroundingFlow extends HTMLElement {
       observer.disconnect();
       field = undefined;
       delete this.dataset.ready;
+      delete this.dataset.mediaReady;
+      images.forEach((image) => image.removeAttribute("data-load-error"));
       for (const name of [
         "--structures-opacity",
         "--power-draw",

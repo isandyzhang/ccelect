@@ -6,6 +6,73 @@ class ProductShowcase extends HTMLElement {
     const events = new AbortController();
     const { signal } = events;
     const photo = this.querySelector<HTMLElement>(".product-photo")!;
+    const cadImage = photo.querySelector<HTMLImageElement>("img.product-cad")!;
+    const realImage = photo.querySelector<HTMLImageElement>(".product-photo-real img")!;
+    const section = this.closest<HTMLElement>(".feature-grid")!;
+    let scrollFrame = 0;
+
+    const measure = () => {
+      const outer = section.querySelector<HTMLElement>(":scope > .outer-content");
+      const frame = Math.min(this.offsetHeight || window.innerHeight, window.innerHeight);
+
+      section.toggleAttribute("data-showcase-stick", frame > 0);
+      if (outer) outer.style.top = "0px";
+      section.style.minHeight = `${frame + window.innerHeight * 2.4}px`;
+      const rect = section.getBoundingClientRect();
+      const value = Math.min(
+        1,
+        Math.max(0, -rect.top / Math.max(1, rect.height - window.innerHeight))
+      );
+
+      section.style.setProperty("--showcase-p", value.toFixed(4));
+      // Set the photo blend directly as well, so it is updated by this component's lifecycle.
+      photo.style.setProperty(
+        "--photo-reveal",
+        String(Math.min(1, Math.max(0, (value - 0.4) / 0.32)))
+      );
+    };
+    const requestMeasure = () => {
+      if (scrollFrame) return;
+      scrollFrame = requestAnimationFrame(() => {
+        scrollFrame = 0;
+        if (!signal.aborted) measure();
+      });
+    };
+    const resizeObserver = new ResizeObserver(requestMeasure);
+
+    resizeObserver.observe(this);
+    window.addEventListener("scroll", requestMeasure, { passive: true, signal });
+    window.addEventListener("resize", requestMeasure, { passive: true, signal });
+    window.addEventListener("pageshow", requestMeasure, { signal });
+    requestMeasure();
+
+    const images = [cadImage, realImage];
+    let mediaRequest = 0;
+
+    // A responsive source change can cancel decode(). Retry on load rather than
+    // permanently hiding the real photo after that transient cancellation.
+    const prepareImages = async () => {
+      const request = ++mediaRequest;
+      const results = await Promise.allSettled(images.map((image) => image.decode()));
+
+      if (signal.aborted || request !== mediaRequest) return;
+      const ready = results.map(
+        (result, index) =>
+          result.status === "fulfilled" ||
+          (images[index].complete && images[index].naturalWidth > 0)
+      );
+
+      this.toggleAttribute("data-cad-ready", ready[0]);
+      this.toggleAttribute("data-photo-ready", ready[1]);
+      measure();
+      this.setAttribute("data-media-ready", "");
+    };
+
+    images.forEach((image) => {
+      image.addEventListener("load", prepareImages, { signal });
+      image.addEventListener("error", prepareImages, { signal });
+    });
+    void prepareImages();
     const panel = this.querySelector<HTMLElement>(".product-video")!;
     const experience = this.querySelector<HTMLElement>(".weld-experience")!;
     const video = this.querySelector("video")!;
@@ -126,8 +193,13 @@ class ProductShowcase extends HTMLElement {
     observer.observe(this);
     this.cleanup = () => {
       events.abort();
+      cancelAnimationFrame(scrollFrame);
+      resizeObserver.disconnect();
       observer.disconnect();
       suspend();
+      this.removeAttribute("data-media-ready");
+      this.removeAttribute("data-cad-ready");
+      this.removeAttribute("data-photo-ready");
     };
   }
 

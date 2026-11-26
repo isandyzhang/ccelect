@@ -6,9 +6,7 @@
 
     var root = document.documentElement;
     var defaultTheme = root.getAttribute("data-theme") || "light";
-    var theme =
-      localStorage.getItem("theme") ||
-      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var theme = localStorage.getItem("theme") || "light";
     var isToggled = theme !== defaultTheme;
 
     Array.from(
