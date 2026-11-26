@@ -13,6 +13,9 @@ export const siteFonts = [
     weights: [400, 600],
     styles: ["normal"],
     subsets: ["latin", "chinese-traditional"],
+    // CJK metrics can generate an almost 2× Arial fallback. Keep native system metrics.
+    optimizedFallbacks: false,
+    display: "swap",
     fallbacks: ["PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", "sans-serif"],
   },
   {

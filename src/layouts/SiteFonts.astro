@@ -8,16 +8,29 @@ import { Font } from "astro:assets";
 import { componentDataByCssVariable } from "virtual:astro:assets/fonts/internal";
 import { siteFonts } from "../../site-fonts.mjs";
 
-const readyFonts = siteFonts.filter((entry) =>
-  componentDataByCssVariable.has(entry.cssVariable)
-);
+const readyFonts = siteFonts.filter((entry) => componentDataByCssVariable.has(entry.cssVariable));
 
 if (readyFonts.length !== siteFonts.length && import.meta.env.DEV) {
   const missing = siteFonts
     .filter((entry) => !componentDataByCssVariable.has(entry.cssVariable))
     .map((entry) => entry.cssVariable);
+
   console.warn(`[SiteFonts] Skipping unavailable font families: ${missing.join(", ")}`);
 }
 ---
 
-{readyFonts.map((entry) => <Font cssVariable={entry.cssVariable} />)}
+{
+  readyFonts.map((entry) => (
+    <Font
+      cssVariable={entry.cssVariable}
+      preload={
+        entry.cssVariable === "--font-noto-sans-tc"
+          ? [
+              { subset: "latin", weight: 400 },
+              { subset: "latin", weight: 600 },
+            ]
+          : false
+      }
+    />
+  ))
+}
